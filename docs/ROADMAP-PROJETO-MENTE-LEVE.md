@@ -1,0 +1,259 @@
+# ROADMAP - Projeto Mente Leve (Light Copy Generator)
+## Gerador de Roteiros de Vídeo para Instagram com DNA da Gaby
+
+**Data de Início:** 10 de Fevereiro de 2026
+**Status:** Em Coleta de Dados Epistêmica
+**Agente:** @aios-master (Orion)
+
+---
+
+## 🎯 OBJETIVO FINAL
+
+Criar um **sistema CLI (terminal)** que gera roteiros de vídeo para Instagram que:
+- Seguem a filosofia de **light copy** (não parecem venda)
+- Refletem o **tom e essência de Gaby**
+- Ressoa com os **3 avatares** (Marina, Júlia, Camila)
+- Misturam **branding com arte**
+- Toque em dores e desejos reais
+- Baseados em referências de **creators internacionais**
+
+---
+
+## 📊 AVATARES DEFINIDOS
+
+### ✅ Avatar 1: Marina - A Sobrecarregada
+- Idade: 34 anos | Coordenadora Pedagógica
+- Dor: Sobrecarga, culpa, exaustão
+- Desejo: Tempo só dela, leveza, parar piloto automático
+- Solução: Práticas curtas (10-15 min), sem culpa, estrutura clara
+- Validação: 67% sentem falta de "momentos só para mim"
+
+### ✅ Avatar 2: Júlia - A Iniciante Insegura
+- Idade: 28 anos | Assistente Administrativa
+- Dor: Medo de não conseguir, insegurança física
+- Desejo: Se sentir capaz, confiança corporal
+- Solução: Acolhimento explícito, módulo para iniciantes, zero julgamento
+- Validação: 22% nunca participaram mas têm interesse
+
+### ✅ Avatar 3: Camila - A Inconsistente
+- Idade: 31 anos | Publicitária Freelancer
+- Dor: Frustração com si mesma, ciclos de parar/começar
+- Desejo: Provar que consegue ser constante
+- Solução: Estrutura sem decisão, direção externa, grupo de suporte
+- Validação: 22% tentam mas não conseguem manter rotina
+
+---
+
+## 📈 DADOS DE PESQUISA
+
+**Pesquisa com 55 leads reais:**
+- 32/55 participam dos aulões mensais
+- 12/55 nunca participaram mas têm interesse
+- 15/55 praticam APENAS com Gaby (prova social)
+- 67% sentem falta de "momentos só para mim"
+- 58% querem "práticas curtas que encaixem no dia a dia"
+- 47% sentem leveza NA PRIMEIRA prática
+- 80% não conhecem bem a plataforma online
+
+---
+
+## 🏗️ ESTRUTURA DO PRODUTO EXISTENTE
+
+**Plataforma Online da Gaby:**
+- 7 aulas sequenciadas base
+- 40+ aulas Vinyasa (30-60 min)
+- 5+ aulas Yin Yoga (30-60 min)
+- Aulas por fases da lua (4 ciclos)
+- Pranayamas (9 técnicas diferentes)
+- Meditações guiadas
+- Conteúdo educacional (yoga, chakras, estilos)
+- Tutoriais de posturas
+
+---
+
+## 📚 DOCUMENTOS CRIADOS
+
+### ✅ CONCLUÍDO
+
+**Pasta:** `C:\Users\carol\OneDrive\SYSTEM - CLAUDE CODE\projeto-yoga\docs\analise-gaby\`
+
+1. ✅ **`01-Contexto-Pessoal-Gaby.md`**
+   - Análise de WhatsApp pessoal
+   - Tom coloquial, informal, real
+   - NOT tom de aula (diferença importante!)
+
+2. ✅ **`02-Instagram-Posts-Gaby.md`**
+   - Post "ouro" com análise de light copy
+   - Estrutura de 6 passos
+   - Vocabulário recorrente (presença, sentir, se escutar, etc)
+   - Por que NÃO parece venda
+
+3. ✅ **`03-Analise-Epistemica-Gaby.md`**
+   - **O QUE Gaby PENSA e ACREDITA**
+   - 6 premissas filosóficas
+   - Cadeia causal da fuga do sentir
+   - Cosmovisão completa
+   - **Mantras consolidados:**
+     - "Não há expansão sem desconforto."
+     - "O perigoso não é viver perigosamente, é viver distraído."
+     - "A vida é aqui e agora."
+     - "O importante é o processo, não o resultado."
+     - "Começando de dentro pra fora."
+
+---
+
+## 🔄 PRÓXIMOS PASSOS (Em Ordem)
+
+### FASE 1: EXTRAÇÃO DE TOM (60% CONCLUÍDO)
+
+- [x] Análise de WhatsApp pessoal
+- [x] Análise de posts Instagram
+- [x] Análise epistêmica (filosofia)
+- [ ] **Transcrições de 3-5 aulas (AGUARDANDO):**
+  - 1 aula Vinyasa (energética)
+  - 1 aula Yin (introspectiva)
+  - 1 aula lunar (ex: lua cheia vs lua nova)
+  - 1 meditação guiada (se possível)
+
+**Entrega esperada:** `04-Transcrições-Aulas-Gaby.md`
+
+---
+
+### FASE 2: PESQUISA DE CREATORS INTERNACIONAIS (0% - PRÓXIMA)
+
+Será feita por Orion (após receber transcrições).
+
+**A pesquisar:**
+- Top 5-7 yoga creators nos EUA (Instagram/YouTube)
+- Top 3-5 criadores de light copy (qualquer nicho)
+- **Incluir:** Leandro Ladeira (criador do conceito light copy)
+
+**Para cada creator:**
+- URL de 1-2 posts exemplares
+- Por que eles são bons em light copy
+- Padrões de linguagem
+
+**Entrega esperada:** `05-Pesquisa-Creators-Internacionais.md`
+
+---
+
+### FASE 3: ANÁLISE COMPARATIVA (0% - DEPOIS)
+
+Será feita por Orion (após pesquisa).
+
+**Padrões a extrair:**
+- Vocabulário recorrente (Gaby vs criadores)
+- Estrutura de frase
+- Gatilhos emocionais
+- Como evitam "parecer venda"
+- Tom + ritmo + presença
+
+**Entrega esperada:** `06-Analise-Comparativa-Padroes.md`
+
+---
+
+### FASE 4: FRAMEWORK DE LIGHT COPY (0% - FINAL)
+
+Será criado por Orion (após análise comparativa).
+
+**Output:**
+```
+LIGHT COPY FRAMEWORK - MENTE LEVE
+
+1. Princípios (como/por quê)
+2. Padrões de linguagem (o quê usar)
+3. Estruturas de post (templates)
+4. Exemplos por avatar (Marina vs Júlia vs Camila)
+5. Checklist (isso é light copy? sim/não?)
+6. Prompts para IA (como gerar roteiros)
+```
+
+**Entrega esperada:** `07-Framework-Light-Copy-Mente-Leve.md`
+
+---
+
+## 🗂️ ESTRUTURA DE PASTAS
+
+```
+projeto-yoga/
+├── docs/
+│   ├── analise-gaby/                    ← ANÁLISE EPISTÊMICA
+│   │   ├── 01-Contexto-Pessoal-Gaby.md ✅
+│   │   ├── 02-Instagram-Posts-Gaby.md  ✅
+│   │   ├── 03-Analise-Epistemica-Gaby.md ✅
+│   │   ├── 04-Transcrições-Aulas-Gaby.md (AGUARDANDO)
+│   │   ├── 05-Pesquisa-Creators-Internacionais.md (PRÓXIMO)
+│   │   ├── 06-Analise-Comparativa-Padroes.md (DEPOIS)
+│   │   └── 07-Framework-Light-Copy-Mente-Leve.md (FINAL)
+│   ├── stories/                        ← STORIES ÁGEIS (DEPOIS)
+│   ├── prd/                            ← PRD PRODUTO (DEPOIS)
+│   └── architecture/                   ← ARQUITETURA (DEPOIS)
+├── src/                                ← CÓDIGO (DEPOIS)
+└── ROADMAP-PROJETO-MENTE-LEVE.md      ← ESTE ARQUIVO
+```
+
+---
+
+## ⏳ TIMELINE ESTIMADA
+
+| Fase | Tarefas | Status | Estimado |
+|------|---------|--------|----------|
+| 1. Extração Tom | WhatsApp + Instagram + Aulas | 60% | ~2h (falta transcrições) |
+| 2. Pesquisa Creators | Coleta + Análise | 0% | ~3h |
+| 3. Análise Comparativa | Padrões + Síntese | 0% | ~2h |
+| 4. Framework | Templates + Exemplos | 0% | ~3h |
+| 5. Stories & Planning | Planning (com @pm) | 0% | ~4h |
+| 6. Desenvolvimento | Código CLI | 0% | ~10-15h |
+| 7. Testing & Deploy | QA + Documentação | 0% | ~5h |
+
+**Total estimado:** ~30-40h de trabalho
+
+---
+
+## 📋 CHECKLIST IMEDIATO
+
+- [ ] **Você:** Extrair transcrições de 3-5 aulas (prioritário)
+- [ ] **Orion:** Pesquisa de creators internacionais (após transcrições)
+- [ ] **Orion:** Análise comparativa (após pesquisa)
+- [ ] **Orion:** Framework de light copy (após análise)
+- [ ] **Você + Orion:** Planning formal com stories (após framework)
+
+---
+
+## 🎯 COMO RETOMAR SE CONTEXTO FECHAR
+
+1. Ler este arquivo (ROADMAP)
+2. Verificar status em "FASE 1: EXTRAÇÃO DE TOM"
+3. Pedir transcrições das aulas (se ainda não feito)
+4. Continuar de onde parou
+
+**Documentos de referência sempre disponíveis em:**
+`C:\Users\carol\OneDrive\SYSTEM - CLAUDE CODE\projeto-yoga\docs\analise-gaby\`
+
+---
+
+## 🔑 KEY INSIGHTS
+
+### A Essência de Gaby
+- **Epistemologia:** A verdade está DENTRO, não fora
+- **Ontologia:** Você é ok como está
+- **Prática:** Escuta antes de ação, presença antes de mudança
+- **Mantra Central:** "O maior risco é viver distraído"
+
+### Light Copy Pattern
+1. Abertura (gancho sensorial)
+2. Diagnóstico (toca a dor)
+3. Reframe (inverte solução)
+4. Validação (sem culpa)
+5. Convite (não impõe)
+6. Encerramento (reforço emocional)
+
+### Para Cada Avatar
+- **Marina:** Parar de resolver, começar a sentir
+- **Júlia:** Ouvir a si mesma, não buscar perfeição fora
+- **Camila:** Aceitar ritmo, não lutar contra si mesma
+
+---
+
+**Última atualização:** 10 de Fevereiro de 2026
+**Próximo check:** Após receber transcrições das aulas
