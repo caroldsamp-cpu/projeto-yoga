@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mente Leve: O Próximo Passo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --cream: #FDF8F4;
+      --white: #FFFFFF;
+      --text: #3D3A38;
+      --text-light: #6B6560;
+      --green: #6B7B5E;
+      --green-light: #8A9A7D;
+      --gold: #C4A882;
+      --gold-light: #D4C4A8;
+      --card-bg: #F5EDE4;
+      --border: #E8DDD2;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.8;
+      font-size: 17px;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(253, 248, 244, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+      transition: transform 0.3s ease;
+    }
+    nav .nav-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--green);
+    }
+    nav .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    nav .nav-links a {
+      font-size: 13px;
+      text-decoration: none;
+      color: var(--text-light);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav .nav-links a:hover { color: var(--green); }
+
+    @media (max-width: 640px) {
+      nav .nav-links { display: none; }
+    }
+
+    /* SECTIONS */
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 24px 80px;
+    }
+    section:first-of-type { padding-top: 160px; }
+
+    .section-inner {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    .bg-cream { background: var(--cream); }
+    .bg-white { background: var(--white); }
+
+    /* TYPOGRAPHY */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4.5vw, 40px);
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 32px;
+    }
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 16px;
+      margin-top: 48px;
+    }
+    h3:first-child { margin-top: 0; }
+
+    .subtitle {
+      font-size: 20px;
+      color: var(--text-light);
+      font-weight: 300;
+      line-height: 1.6;
+      margin-bottom: 48px;
+    }
+
+    p { margin-bottom: 20px; }
+
+    .lead {
+      font-size: 19px;
+      color: var(--text-light);
+      font-weight: 300;
+    }
+
+    strong { font-weight: 500; color: var(--text); }
+
+    .section-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    /* HIGHLIGHT CARD */
+    .highlight {
+      background: var(--card-bg);
+      border-left: 3px solid var(--gold);
+      padding: 28px 32px;
+      margin: 40px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .highlight p {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-style: italic;
+      color: var(--text);
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* QUOTE */
+    blockquote {
+      border-left: 3px solid var(--green);
+      padding: 20px 28px;
+      margin: 32px 0;
+      background: rgba(107, 123, 94, 0.06);
+      border-radius: 0 8px 8px 0;
+    }
+    blockquote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-style: italic;
+      margin: 0;
+      color: var(--text);
+    }
+
+    /* DATA STATS */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+    .stat {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--green);
+      display: block;
+    }
+    .stat-label {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    /* SADHANA ECHO LIST */
+    .echo-list {
+      list-style: none;
+      margin: 32px 0;
+    }
+    .echo-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 17px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .echo-list li:last-child { border-bottom: none; }
+    .echo-list .echo-quote {
+      color: var(--text-light);
+      font-style: italic;
+    }
+    .echo-list .echo-result {
+      color: var(--green);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    /* PRINCIPLE CARDS */
+    .principles {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin: 48px 0;
+    }
+    .principle {
+      padding: 32px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .principle-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .principle h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .principle p { color: var(--text-light); margin: 0; }
+
+    /* COMPARISON TABLE */
+    .comparison {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 32px 0;
+    }
+    .comparison thead th {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 2px solid var(--border);
+    }
+    .comparison tbody td {
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison .before { color: var(--text-light); }
+    .comparison .after { color: var(--green); font-weight: 500; }
+    .comparison .why { color: var(--text-light); font-size: 15px; }
+
+    /* RECIPE CARDS */
+    .recipes {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin: 40px 0;
+    }
+    .recipe {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      transition: border-color 0.2s;
+    }
+    .recipe:hover { border-color: var(--gold); }
+    .recipe-icon {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      background: var(--card-bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .recipe-icon svg { width: 28px; height: 28px; }
+    .recipe-content { flex: 1; }
+    .recipe-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .recipe-meta {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: var(--gold);
+      font-weight: 500;
+    }
+    .recipe-desc { color: var(--text-light); font-size: 15px; }
+    .recipe-result {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 15px;
+      color: var(--green);
+      font-style: italic;
+    }
+
+    @media (max-width: 540px) {
+      .recipe { flex-direction: column; align-items: center; text-align: center; }
+      .recipe-meta { justify-content: center; }
+    }
+
+    /* TRAIL CARDS */
+    .trails {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin: 40px 0;
+    }
+    .trail {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      position: relative;
+    }
+    .trail-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .trail-num {
+      width: 36px;
+      height: 36px;
+      background: var(--green);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .trail-names {
+      flex: 1;
+    }
+    .trail-old {
+      font-size: 14px;
+      color: var(--text-light);
+      text-decoration: line-through;
+      text-decoration-color: var(--gold-light);
+    }
+    .trail-new {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--green);
+    }
+    .trail-details {
+      font-size: 15px;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+    .trail-narrative {
+      font-style: italic;
+      color: var(--text);
+      font-size: 15px;
+    }
+    .trail-badge {
+      display: inline-block;
+      background: rgba(107, 123, 94, 0.1);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-top: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* MODULE NOVO */
+    .new-module {
+      background: linear-gradient(135deg, rgba(107, 123, 94, 0.08), rgba(196, 168, 130, 0.08));
+      border: 2px solid var(--green);
+      border-radius: 16px;
+      padding: 40px;
+      margin: 40px 0;
+    }
+    .new-module-tag {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .new-module h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .new-module ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+    .new-module li {
+      padding: 8px 0;
+      padding-left: 24px;
+      position: relative;
+      color: var(--text-light);
+    }
+    .new-module li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 16px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    /* JOURNEY / TIMELINE */
+    .journey {
+      position: relative;
+      margin: 40px 0;
+      padding-left: 40px;
+    }
+    .journey::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), var(--green));
+    }
+    .journey-step {
+      position: relative;
+      margin-bottom: 40px;
+      padding: 24px 28px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .journey-step:last-child { margin-bottom: 0; }
+    .journey-step::before {
+      content: '';
+      position: absolute;
+      left: -33px;
+      top: 28px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 3px solid var(--cream);
+    }
+    .journey-step-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .journey-step p { font-size: 15px; color: var(--text-light); margin: 0; }
+
+    /* BENEFITS */
+    .benefits-group {
+      margin: 40px 0;
+    }
+    .benefits-group h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .benefits-list {
+      list-style: none;
+    }
+    .benefits-list li {
+      padding: 12px 0;
+      padding-left: 28px;
+      position: relative;
+      color: var(--text-light);
+      border-bottom: 1px solid var(--border);
+    }
+    .benefits-list li:last-child { border-bottom: none; }
+    .benefits-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 18px;
+      width: 12px;
+      height: 2px;
+      background: var(--green);
+    }
+
+    /* SCENARIO CARDS */
+    .scenarios {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin: 40px 0;
+    }
+    .scenario {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+    }
+    .scenario-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .scenario h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .scenario p { color: var(--text-light); margin-bottom: 12px; }
+    .scenario ul {
+      list-style: none;
+      margin-top: 16px;
+    }
+    .scenario li {
+      padding: 8px 0 8px 24px;
+      position: relative;
+      color: var(--text-light);
+      font-size: 15px;
+    }
+    .scenario li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 16px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    /* INSTAGRAM SECTION */
+    .instagram-importance {
+      background: var(--card-bg);
+      border-left: 3px solid var(--green);
+      padding: 32px;
+      margin: 40px 0;
+      border-radius: 0 12px 12px 0;
+    }
+    .instagram-importance h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    /* CLOSING */
+    .closing {
+      text-align: center;
+      padding: 80px 24px 120px;
+    }
+    .closing-text {
+      max-width: 600px;
+      margin: 0 auto 48px;
+      font-size: 18px;
+      color: var(--text-light);
+      line-height: 1.9;
+    }
+    .closing-phrase {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.4;
+      max-width: 500px;
+      margin: 0 auto 48px;
+    }
+    .closing-signature {
+      font-size: 15px;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    /* DIVIDER */
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 48px 0;
+    }
+
+    /* FADE IN ANIMATION */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <span class="nav-brand">Mente Leve</span>
+    <ul class="nav-links">
+      <li><a href="#sadhana">Sadhana</a></li>
+      <li><a href="#rituais">Rituais</a></li>
+      <li><a href="#trilhas">Trilhas</a></li>
+      <li><a href="#jornada">Jornada</a></li>
+      <li><a href="#passos">Passos</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- SEÇÃO 1: ABERTURA -->
+<section class="bg-cream" id="abertura">
+  <div class="section-inner fade-in">
+    <h1>Mente Leve:<br>O Próximo Passo</h1>
+    <p class="subtitle">Uma proposta de reposicionamento para transformar o que você já construiu em algo ainda mais poderoso, claro e bonito.</p>
+    <div class="divider"></div>
+    <p>Gaby, este documento é pra você.</p>
+    <p>Não é um relatório de marketing. Não é um plano cheio de termos que ninguém entende. É uma conversa sobre o futuro da sua comunidade de yoga — escrita com o mesmo cuidado que você coloca em cada aula.</p>
+    <p>Tudo que está aqui respeita o que você já construiu. Nenhuma aula muda. Nenhum conteúdo é descartado. O que muda é a história que a gente conta sobre tudo isso — e essa história vai fazer as mulheres certas encontrarem você.</p>
+
+    <div class="divider"></div>
+
+    <p><strong>Você construiu algo raro.</strong></p>
+    <p>Mais de 80 aulas gravadas com presença. 700 mulheres interessadas no seu aulão presencial. Uma abordagem única que conecta regulação emocional, movimento consciente e ciclos lunares de um jeito que ninguém mais está fazendo.</p>
+    <p>O yoga transformou sua vida. E agora, há anos, você guia outras mulheres nessa mesma transformação — com uma naturalidade, uma leveza e uma profundidade que são completamente suas.</p>
+    <p>Isso que você criou não é só um curso. É um convite para uma outra forma de viver. E esse convite pode alcançar muito mais mulheres do que alcançou até agora.</p>
+
+    <p class="lead">Leia no seu ritmo. Respire entre as seções. E no final, me diga o que sentiu.</p>
+  </div>
+</section>
+
+<!-- SEÇÃO 2: POR QUE MUDAR -->
+<section class="bg-white" id="porque">
+  <div class="section-inner fade-in">
+    <span class="section-number">O Contexto</span>
+    <h2>O que está acontecendo hoje</h2>
+    <p>Você tem um curso incrível. 5 trilhas, 14 módulos, mais de 80 aulas. Tudo organizado com carinho, com profundidade, com a sua presença em cada vídeo.</p>
+    <p>Mas a maioria das mulheres que poderiam se transformar com o seu trabalho não sabe que você existe. E as que sabem, muitas vezes não entendem exatamente o que você oferece.</p>
+    <p>Isso não é um problema do seu trabalho — é um problema de comunicação. Você ainda não está contando essa história pro mundo digital. E é exatamente isso que a gente vai resolver juntas.</p>
+    <p>O mercado de yoga está cheio de ofertas diferentes — cada uma com sua beleza, cada uma servindo alguém. O desafio é: quando alguém olha pra fora, tem dificuldade de distinguir o que você faz de único. E o que você faz é muito específico, muito especial.</p>
+
+    <div class="highlight">
+      <p>O que você faz é diferente. A gente só precisa deixar isso claro.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-number">700</span>
+        <span class="stat-label">leads interessadas no aulão presencial</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">80%</span>
+        <span class="stat-label">ainda não conhecem a plataforma</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">47%</span>
+        <span class="stat-label">sentiram leveza na 1ª prática (pesquisa com 55 leads)</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">51%</span>
+        <span class="stat-label">amam a abordagem lunar/cíclica</span>
+      </div>
+    </div>
+    <p class="lead" style="font-size: 15px; margin-top: -20px;">Dados baseados em pesquisa qualitativa com 55 leads da comunidade</p>
+    <p>O terreno está fértil. O que falta é a semente certa — uma história que faça sentido.</p>
+  </div>
+</section>
+
+<!-- SEÇÃO 3: O QUE É SADHANA -->
+<section class="bg-cream" id="sadhana">
+  <div class="section-inner fade-in">
+    <span class="section-number">O Conceito</span>
+    <h2>Sadhana: a conexão que faltava</h2>
+    <p>Gaby, você conhece esse conceito. Sadhana — a prática diária com intenção, a dedicação consistente, o compromisso consigo mesma. Faz parte da tradição que você estuda e ensina.</p>
+    <p>O que talvez você ainda não tenha percebido é o quanto o seu produto já é Sadhana na prática. Quando a gente analisou profundamente o seu trabalho — suas aulas, suas palavras, o jeito como você guia cada prática — percebemos algo poderoso:</p>
+    <p><strong>Tudo que você ensina já é Sadhana. A gente só precisa dar esse nome e construir a ponte entre o conceito e o seu produto.</strong></p>
+
+    <div class="divider"></div>
+
+    <h3>Por que usar Sadhana como identidade do produto</h3>
+    <p>Você já sabe o que Sadhana significa na tradição. O que queremos mostrar é por que essa palavra é perfeita para posicionar o seu produto no mercado:</p>
+    <ul class="benefits-list">
+      <li>Conecta o que você ensina com a tradição que você carrega — é coerente, não é forçado</li>
+      <li>Diferencia de "comunidade de yoga" ou "plataforma de práticas" — sai do genérico e entra no significativo</li>
+      <li>Cria uma identidade de marca única — ninguém mais está usando Sadhana dessa forma no Brasil</li>
+      <li>Dá às suas alunas uma palavra para descrever o que vivem com você — e o que tem nome se espalha</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3>Veja como seu trabalho já é Sadhana</h3>
+    <p>Olha o que você diz nas suas aulas — e repara como cada frase é, na essência, um convite ao Sadhana:</p>
+
+    <ul class="echo-list">
+      <li>
+        <span class="echo-quote">Quando você diz "5 minutos já é suficiente"</span>
+        <span class="echo-result">isso é Sadhana.</span>
+      </li>
+      <li>
+        <span class="echo-quote">Quando você diz "pode fazer de pijama, na cama"</span>
+        <span class="echo-result">isso é Sadhana.</span>
+      </li>
+      <li>
+        <span class="echo-quote">Quando você diz "voltar já é ser constante"</span>
+        <span class="echo-result">isso é Sadhana.</span>
+      </li>
+      <li>
+        <span class="echo-quote">Quando você diz "presença, não performance"</span>
+        <span class="echo-result">isso é Sadhana.</span>
+      </li>
+      <li>
+        <span class="echo-quote">"Se observando, se sentindo, se permitindo, se entregando"</span>
+        <span class="echo-result">isso é Sadhana.</span>
+      </li>
+      <li>
+        <span class="echo-quote">"Parar, respirar e desacelerar"</span>
+        <span class="echo-result">isso é Sadhana.</span>
+      </li>
+      <li>
+        <span class="echo-quote">"O yoga real é aquele que ninguém pode ver, mas todos podem sentir"</span>
+        <span class="echo-result">isso é Sadhana.</span>
+      </li>
+      <li>
+        <span class="echo-quote">"O importante é o processo, não o resultado"</span>
+        <span class="echo-result">isso é Sadhana.</span>
+      </li>
+      <li>
+        <span class="echo-quote">"A prática que tem que se adaptar a você e não você que tem que se adaptar à prática"</span>
+        <span class="echo-result">isso é Sadhana.</span>
+      </li>
+    </ul>
+
+    <p>A diferença é que agora a gente vai dar nome a isso. E quando algo tem nome, as pessoas conseguem encontrar, entender e compartilhar.</p>
+
+    <div class="highlight">
+      <p>Sadhana não é algo novo que a gente está inventando. É o nome do que você já faz — e que o mundo precisa ouvir.</p>
+    </div>
+
+    <h3>A conexão com o que suas alunas pedem</h3>
+    <p>Na pesquisa com 55 mulheres da sua comunidade, descobrimos que:</p>
+    <ul class="benefits-list">
+      <li>58% querem "práticas curtas que encaixem no dia a dia"</li>
+      <li>67% sentem falta de "momentos só pra mim"</li>
+      <li>51% amam a abordagem lunar e cíclica</li>
+    </ul>
+    <p><strong>Sadhana é exatamente a resposta.</strong> Um compromisso diário pequeno, que se adapta aos ciclos da vida, e que cria um espaço sagrado no meio do caos.</p>
+
+    <h3>Os 3 princípios</h3>
+
+    <div class="principles">
+      <div class="principle">
+        <div class="principle-number">Princípio 1</div>
+        <h4>Consistência pequena transforma mais que intensidade ocasional</h4>
+        <p>5 minutos todo dia muda mais do que 1 hora uma vez por semana. Isso não é opinião — é neurociência. O cérebro cria novas vias neurais através de repetição, não de intensidade. Quando alguém pratica todo dia, mesmo que pouco, o corpo começa a reconhecer aquele momento como "seu". Vira hábito. Hábito vira identidade. E identidade é a coisa mais poderosa que existe. Isso não significa que práticas mais longas não sejam valiosas — são. Sadhana é complementar ao yoga tradicional, não superior a ele.</p>
+      </div>
+      <div class="principle">
+        <div class="principle-number">Princípio 2</div>
+        <h4>A presença expande para além do tapete</h4>
+        <p>O tapete é importante — é onde aprofundamos, onde estudamos, onde nos conectamos com a tradição milenar do yoga. Sadhana convida a expandir essa presença para a vida como ela é. A mulher que lava louça com atenção está praticando. A que respira fundo antes de uma reunião está praticando. A que senta na beira da cama e faz 3 respirações antes de pegar o celular está praticando. O tapete e a vida não competem — se complementam.</p>
+      </div>
+      <div class="principle">
+        <div class="principle-number">Princípio 3</div>
+        <h4>O caos não é obstáculo — é material</h4>
+        <p>Aquela reunião chata, aquele trânsito, aquela criança gritando — não são impedimentos ao yoga. São o yoga. Porque transformação não vem de escapar da vida. Vem de estar presente nela. Como você mesma diz, Gaby: "Não existe esse julgamento do que é bom e do que é ruim. Existe o que fizer sentido pra você."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 4: A GRANDE IDEIA -->
+<section class="bg-white" id="ideia">
+  <div class="section-inner fade-in">
+    <span class="section-number">A Proposta</span>
+    <h2>De comunidade de yoga para ritual de presença</h2>
+
+    <p>Hoje, sua comunidade se apresenta assim:</p>
+    <blockquote><p>"Comunidade Online de Yoga. Regulação emocional através do movimento e da respiração."</p></blockquote>
+    <p>Isso é verdade. Mas é genérico. Qualquer plataforma de yoga poderia dizer isso.</p>
+
+    <p>Com o reposicionamento Sadhana, passa a ser:</p>
+    <blockquote><p>"Mente Leve — Ritual Diário de Presença. 5 minutos todos os dias transformam mais que 1 hora ocasional."</p></blockquote>
+
+    <h3>Por que isso é mais forte</h3>
+    <table class="comparison">
+      <thead>
+        <tr>
+          <th>Antes</th>
+          <th>Depois</th>
+          <th>Por que melhora</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="before">"Comunidade de yoga"</td>
+          <td class="after">"Seu ritual de presença"</td>
+          <td class="why">Sai do genérico, entra no pessoal</td>
+        </tr>
+        <tr>
+          <td class="before">"Regulação emocional"</td>
+          <td class="after">"Presença no dia real"</td>
+          <td class="why">Sai do clínico, entra no humano</td>
+        </tr>
+        <tr>
+          <td class="before">Sem tempo claro</td>
+          <td class="after">"5 minutos todos os dias"</td>
+          <td class="why">Reduz a barreira, aumenta a consistência</td>
+        </tr>
+        <tr>
+          <td class="before">"Através do movimento e da respiração"</td>
+          <td class="after">"Também na vida como ela é"</td>
+          <td class="why">Expande do tapete para a cozinha, sem abandonar o tapete</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight">
+      <p>Não estamos mudando o que você ensina. Estamos mudando como o mundo entende o que você ensina.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 5: RITUAIS -->
+<section class="bg-cream" id="rituais">
+  <div class="section-inner fade-in">
+    <span class="section-number">O Coração</span>
+    <h2>Os 5 Rituais Sadhana</h2>
+    <p>Rituais Sadhana são formatos simples de prática que qualquer mulher pode fazer no seu dia real. Não exigem tapete, roupa especial ou silêncio. Cada ritual dura entre 3 e 5 minutos e se encaixa em um momento específico do dia.</p>
+    <p>A ideia é que a aluna escolha <strong>um</strong> ritual e faça todo dia por 7 dias. Depois pode variar, combinar, criar sua própria rotina. Mas começa simples.</p>
+
+    <div class="recipes">
+      <!-- O Despertar -->
+      <div class="recipe">
+        <div class="recipe-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#6B7B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </div>
+        <div class="recipe-content">
+          <div class="recipe-title">O Despertar</div>
+          <div class="recipe-meta">
+            <span>Ao acordar, antes do celular</span>
+            <span>5 min</span>
+          </div>
+          <p class="recipe-desc">Sentar na beira da cama. 3 respirações profundas. Perguntar: "como eu quero me sentir hoje?"</p>
+          <p class="recipe-result">Você conecta com seu corpo antes de qualquer pressão do dia te atingir.</p>
+        </div>
+      </div>
+
+      <!-- A Transição -->
+      <div class="recipe">
+        <div class="recipe-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#6B7B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 4l-5 5-5-5"/>
+            <path d="M7 20l5-5 5 5"/>
+            <line x1="12" y1="9" x2="12" y2="15"/>
+          </svg>
+        </div>
+        <div class="recipe-content">
+          <div class="recipe-title">A Transição</div>
+          <div class="recipe-meta">
+            <span>No intervalo ou mudança de atividade</span>
+            <span>3 min</span>
+          </div>
+          <p class="recipe-desc">Pausar tudo. Alongar o pescoço lentamente. Respirar fundo sentindo cada movimento.</p>
+          <p class="recipe-result">Você quebra o ciclo de estresse. Seu corpo descomprime. Você volta com mais clareza.</p>
+        </div>
+      </div>
+
+      <!-- O Nutrir -->
+      <div class="recipe">
+        <div class="recipe-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#6B7B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 010 8h-1"/>
+            <path d="M3 8h14v9a4 4 0 01-4 4H7a4 4 0 01-4-4V8z"/>
+            <path d="M6 2v3M10 2v3M14 2v3"/>
+          </svg>
+        </div>
+        <div class="recipe-content">
+          <div class="recipe-title">O Nutrir</div>
+          <div class="recipe-meta">
+            <span>Ao tomar café, água ou chá</span>
+            <span>5 min</span>
+          </div>
+          <p class="recipe-desc">Sentir a temperatura da xícara nas mãos. Respirar o aroma. Beber lentamente, sentada. Como você ensina: "Se conseguir fazer em jejum, vai ser incrível. Se não, optar por coisas leves. Quer praticar de pijama, pode."</p>
+          <p class="recipe-result">Uma ação automática vira ritual. Presença em algo que você já estava fazendo.</p>
+        </div>
+      </div>
+
+      <!-- O Purificar -->
+      <div class="recipe">
+        <div class="recipe-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#6B7B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/>
+          </svg>
+        </div>
+        <div class="recipe-content">
+          <div class="recipe-title">O Purificar</div>
+          <div class="recipe-meta">
+            <span>Lavando louça, dobrando roupa, limpando</span>
+            <span>5 min</span>
+          </div>
+          <p class="recipe-desc">Focar na sensação. Sentir a água nas mãos, a textura do pano. Sincronizar respiração com movimento. Se observando, se sentindo, se permitindo, se entregando.</p>
+          <p class="recipe-result">Tarefa entediante vira ritual meditativo.</p>
+        </div>
+      </div>
+
+      <!-- O Encerrar -->
+      <div class="recipe">
+        <div class="recipe-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#6B7B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </div>
+        <div class="recipe-content">
+          <div class="recipe-title">O Encerrar</div>
+          <div class="recipe-meta">
+            <span>Na cama, antes de dormir</span>
+            <span>5 min</span>
+          </div>
+          <p class="recipe-desc">Repassar o dia rapidamente. Observar sem julgar. Respirar fundo e soltar tudo. Parar, respirar e desacelerar.</p>
+          <p class="recipe-result">Seu corpo integra o aprendizado do dia. Você dorme mais profundo.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <p>Os Rituais não substituem suas aulas. Eles complementam. São a ponte entre o tapete e a vida real. A aluna faz o ritual no dia a dia e aprofunda nas trilhas quando quer ir além.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 6: TRILHAS -->
+<section class="bg-white" id="trilhas">
+  <div class="section-inner fade-in">
+    <span class="section-number">A Plataforma</span>
+    <h2>Suas trilhas reorganizadas</h2>
+    <p class="subtitle" style="margin-bottom: 24px">O mesmo conteúdo, uma história melhor</p>
+
+    <p>Gaby, esta é a parte mais importante para você entender:</p>
+    <p><strong>Nenhuma aula muda. Nenhum módulo muda de lugar.</strong> É apenas uma mudança de nome e de narrativa.</p>
+    <p>O que muda é o nome de cada trilha e a descrição que a aluna lê quando entra. Isso é tudo. O conteúdo que você gravou com tanto carinho permanece exatamente como está, na mesma ordem, na mesma estrutura.</p>
+    <p>A razão da mudança é simples: os nomes atuais não contam uma história. Eles descrevem funções. Com o reposicionamento, cada trilha ganha um nome que faz a aluna sentir que está numa jornada — não numa grade de aulas.</p>
+
+    <div class="trails">
+      <div class="trail">
+        <div class="trail-header">
+          <div class="trail-num">1</div>
+          <div class="trail-names">
+            <div class="trail-old">Regular — Comece por aqui</div>
+            <div class="trail-new">Fundação do Sadhana</div>
+          </div>
+        </div>
+        <div class="trail-details">13 aulas (Comece por aqui + Para quem nunca praticou)</div>
+        <div class="trail-narrative">"Aprenda a trazer presença para sua vida diária. Em 15 dias, você entende como yoga de 5 minutos realmente funciona."</div>
+        <span class="trail-badge">Nada muda no conteúdo</span>
+      </div>
+
+      <div class="trail">
+        <div class="trail-header">
+          <div class="trail-num">2</div>
+          <div class="trail-names">
+            <div class="trail-old">Abrir Espaço — Lua Minguante e Lua Nova</div>
+            <div class="trail-new">Sadhana Minguante & Nova</div>
+          </div>
+        </div>
+        <div class="trail-details">14 aulas (9 Minguante + 5 Nova)</div>
+        <div class="trail-narrative">"Nem todo dia é para crescer. Alguns dias são para soltar. Seu Sadhana muda com seus ciclos — e isso é sabedoria, não fraqueza."</div>
+        <span class="trail-badge">Nada muda no conteúdo</span>
+      </div>
+
+      <div class="trail">
+        <div class="trail-header">
+          <div class="trail-num">3</div>
+          <div class="trail-names">
+            <div class="trail-old">Expandir — Lua Crescente, Cheia e Tutorials</div>
+            <div class="trail-new">Sadhana Crescente & Cheia</div>
+          </div>
+        </div>
+        <div class="trail-details">32 aulas (11 Crescente + 9 Cheia + 12 Tutorials)</div>
+        <div class="trail-narrative">"Quando sua energia sobe, seu Sadhana evolui. Aqui você não está subindo uma montanha — está florescendo."</div>
+        <span class="trail-badge">Nada muda no conteúdo</span>
+      </div>
+
+      <div class="trail">
+        <div class="trail-header">
+          <div class="trail-num">4</div>
+          <div class="trail-names">
+            <div class="trail-old">Integrar — Pranayamas e Meditações</div>
+            <div class="trail-new">Respiração & Presença</div>
+          </div>
+        </div>
+        <div class="trail-details">19 aulas (9 Pranayamas + 10 Meditações)</div>
+        <div class="trail-narrative">"Você já sabe respirar. Você já tem momentos de presença. Vamos apenas perceber juntas."</div>
+        <span class="trail-badge">Nada muda no conteúdo</span>
+      </div>
+
+      <div class="trail">
+        <div class="trail-header">
+          <div class="trail-num">5</div>
+          <div class="trail-names">
+            <div class="trail-old">Consciência — Aulas bônus, materiais, Zoom</div>
+            <div class="trail-new">Evolução do Sadhana</div>
+          </div>
+        </div>
+        <div class="trail-details">Aulas bônus + Materiais + Gravações das aulas ao vivo</div>
+        <div class="trail-narrative">"Quando Sadhana vira identidade, você naturalmente quer ir mais fundo. Aqui está a profundidade."</div>
+        <span class="trail-badge">Nada muda no conteúdo</span>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <p>Resumindo: mesmo conteúdo, nova história. Suas aulas permanecem intactas. O que muda é como a aluna entende o caminho que percorre.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 7: MÓDULO NOVO -->
+<section class="bg-cream" id="modulo">
+  <div class="section-inner fade-in">
+    <span class="section-number">O Novo</span>
+    <h2>A porta de entrada</h2>
+    <p>Aqui sim tem algo novo. E é pequeno, mas faz toda a diferença.</p>
+    <p>Você já tem um vídeo de boas-vindas e um módulo "Comece por aqui" com 5 aulas introdutórias. Isso é ótimo. Mas quando uma mulher chega pela primeira vez e vê mais de 80 aulas disponíveis, a quantidade pode parecer intimidante — mesmo com a orientação inicial.</p>
+    <p>A "Entrada Sadhana" resolve isso de outra forma. Não é sobre ensinar o básico do yoga (isso o "Comece por aqui" já faz lindamente). É sobre dar contexto, filosofia, intenção — um abraço antes de tudo.</p>
+
+    <div class="new-module">
+      <div class="new-module-tag">Entrada Sadhana</div>
+      <h4>O que é</h4>
+      <p>Um módulo curto que acontece antes das trilhas. É como uma sala de estar acolhedora onde você:</p>
+      <ul>
+        <li>Explica o que é Sadhana de forma simples e bonita</li>
+        <li>Apresenta os 5 Rituais</li>
+        <li>Convida a aluna a escolher um ritual e fazer por 7 dias</li>
+        <li>Depois, naturalmente, ela entra na trilha "Fundação do Sadhana" (que inclui o "Comece por aqui")</li>
+      </ul>
+    </div>
+
+    <h3>Por que precisa existir</h3>
+    <p>Sem essa porta de entrada, a aluna chega e pensa: "uau, tem muito aqui. Por onde começo?" Com a Entrada Sadhana, ela tem um caminho claro: "começa aqui, escolhe um ritual, faz por 7 dias, depois a gente conversa sobre yoga."</p>
+    <p>É como quando você recebe alguém em casa: você não mostra todos os cômodos de uma vez. Você oferece um chá, senta no sofá, conversa um pouco. Depois vem o resto.</p>
+
+    <h3>O que você precisa gravar</h3>
+    <p>Este módulo pode ser simples:</p>
+    <ul class="benefits-list">
+      <li>1 vídeo de boas-vindas atualizado com a narrativa Sadhana (você falando, estilo conversa, 3-5 minutos) — ou podemos adaptar o vídeo atual</li>
+      <li>1 vídeo curto ou texto explicando os 5 Rituais (2-3 minutos)</li>
+      <li>Texto de orientação dentro da plataforma (a gente escreve pra você)</li>
+    </ul>
+
+    <div class="highlight">
+      <p>A Entrada Sadhana é a única coisa nova a ser criada. Todo o resto já existe no seu curso. A gente não está recomeçando — está organizando.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 8: JORNADA DA ALUNA -->
+<section class="bg-white" id="jornada">
+  <div class="section-inner fade-in">
+    <span class="section-number">A Experiência</span>
+    <h2>Como a mulher vai viver tudo isso</h2>
+    <p>Vamos ver como fica a experiência completa de uma mulher que encontra o Mente Leve após o reposicionamento. Vamos chamá-la de Marina — uma nutricionista de 33 anos, mãe, exausta, que já tentou yoga e parou porque "não tinha tempo."</p>
+
+    <div class="journey">
+      <div class="journey-step">
+        <div class="journey-step-title">Semana 0 — Descoberta</div>
+        <p>Marina vê um reel no Instagram. Uma mulher (você, Gaby) dizendo: "Você não precisa de 1 hora. Precisa de 5 minutos. E pode ser na cozinha." Marina pensa: "isso é pra mim." Clica no perfil. Lê a bio: "Sadhana — Ritual diário de presença." Algo ressoa. Ela salva o post.</p>
+      </div>
+      <div class="journey-step">
+        <div class="journey-step-title">Semana 1 — Entrada</div>
+        <p>Marina entra na comunidade. A primeira coisa que vê é a Entrada Sadhana. Não 80+ aulas. Uma mensagem acolhedora, uma explicação simples, e um convite: "Escolha um ritual. Faça por 7 dias." Marina escolhe "O Despertar" — 5 minutos ao acordar. Ela começa no dia seguinte.</p>
+      </div>
+      <div class="journey-step">
+        <div class="journey-step-title">Semana 2-3 — Fundação</div>
+        <p>Marina fez 7 dias de Despertar. Algumas manhãs esqueceu. Voltou sem culpa. Agora ela quer entender melhor. Entra na trilha "Fundação do Sadhana". Assiste às primeiras aulas. Entende que não precisa ser perfeita. Começa a se sentir "alguém que pratica."</p>
+      </div>
+      <div class="journey-step">
+        <div class="journey-step-title">Semana 4-6 — Descobrindo seu ritmo</div>
+        <p>Marina percebe que em alguns dias se sente mais enérgica e em outros mais recolhida. Descobre as trilhas lunares. Começa a sincronizar sua prática com como ela se sente — não com o que "deveria" fazer.</p>
+      </div>
+      <div class="journey-step">
+        <div class="journey-step-title">Semana 7-9 — Aprofundando</div>
+        <p>Marina inclui pranayamas na rotina da manhã. Troca o café apressado por "O Nutrir" — 5 minutos de presença com a xícara. Suas colegas de trabalho percebem algo diferente nela. Ela não sabe explicar, mas se sente mais centrada.</p>
+      </div>
+      <div class="journey-step">
+        <div class="journey-step-title">Semana 10-12 — Identidade</div>
+        <p>Marina não "faz yoga." Marina "vive Sadhana." É diferente. Não é algo que ela faz — é algo que ela é. Quando uma amiga pergunta, ela diz: "é um ritual de presença de 5 minutos. Mudou minha vida."</p>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <p>Essa é a jornada. De leiga a praticante a multiplicadora. E ela acontece naturalmente — sem pressão, sem culpa, sem performance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 9: BENEFÍCIOS -->
+<section class="bg-cream" id="beneficios">
+  <div class="section-inner fade-in">
+    <span class="section-number">O Resultado</span>
+    <h2>Por que vale a pena</h2>
+
+    <div class="benefits-group">
+      <h4>Para você, Gaby</h4>
+      <ul class="benefits-list">
+        <li>Seu trabalho ganha uma narrativa clara e única (ninguém mais faz "Sadhana da vida real")</li>
+        <li>Você não precisa gravar dezenas de aulas novas (só 1-2 vídeos curtos para a Entrada)</li>
+        <li>Sua mensagem fica mais fácil de comunicar: "5 minutos, todo dia, na sua vida real"</li>
+        <li>As mulheres que te encontram vêm já sabendo o que você faz — menos explicação, mais conexão</li>
+      </ul>
+    </div>
+
+    <div class="benefits-group">
+      <h4>Para suas alunas</h4>
+      <ul class="benefits-list">
+        <li>Elas entendem por onde começar (não ficam perdidas em 80+ aulas)</li>
+        <li>Elas se sentem autorizadas a fazer pouco (5 minutos basta)</li>
+        <li>Elas pertencem a algo (uma tribo de mulheres que vivem Sadhana, não que fazem yoga)</li>
+        <li>Elas voltam sem culpa quando param (porque "voltar já é ser constante")</li>
+      </ul>
+    </div>
+
+    <div class="benefits-group">
+      <h4>Para o negócio</h4>
+      <ul class="benefits-list">
+        <li>As 700 leads interessadas recebem uma mensagem clara e acolhedora de convite</li>
+        <li>O Instagram ganha direção: conteúdo organizado em categorias que fazem sentido</li>
+        <li>O funil de conversão fica natural (descoberta, entrada, acolhimento, experiência)</li>
+        <li>Retenção aumenta porque Sadhana é hábito de identidade, não "assinatura de app de yoga"</li>
+      </ul>
+    </div>
+
+    <div class="instagram-importance">
+      <h3>A importância do Instagram</h3>
+      <p>Gaby, tem uma verdade que a gente precisa falar com carinho: você ainda não está produzindo conteúdo regularmente no Instagram. E isso é crucial para o crescimento.</p>
+      <p>As 700 leads que se inscreveram para o aulão vieram do seu trabalho presencial — das suas aulas, da sua presença física, do boca a boca. Isso é lindo. Mas para alcançar mais mulheres além dessas, você precisa de audiência digital.</p>
+      <p><strong>E você não precisa virar influencer.</strong> Você só precisa compartilhar o que já faz. Um reel de 30 segundos mostrando uma respiração. Um story falando sobre ciclos lunares. Um carrossel explicando o que é Sadhana.</p>
+      <p>Com o reposicionamento, o Instagram fica mais fácil — porque agora você tem categorias claras:</p>
+      <ul class="benefits-list">
+        <li>Conteúdo sobre os 5 Rituais (5 temas infinitos)</li>
+        <li>Conteúdo sobre ciclos lunares (4 fases = 4 narrativas)</li>
+        <li>Bastidores das suas aulas presenciais</li>
+        <li>Depoimentos de alunas que vivem Sadhana</li>
+      </ul>
+      <p class="lead">A gente vai te ajudar com roteiros, ideias, calendário. Mas o rosto, a voz, a presença — isso precisa ser seu. E você já sabe fazer isso. Só precisa fazer na frente da câmera do celular também.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 10: PRÓXIMOS PASSOS -->
+<section class="bg-white" id="passos">
+  <div class="section-inner fade-in">
+    <span class="section-number">O Caminho</span>
+    <h2>Os próximos passos</h2>
+    <p>Agora vem a parte prática. Você tem um aulão presencial marcado para daqui a 7 dias, onde vai apresentar a plataforma para os leads. Isso muda o timing. Então vamos apresentar dois cenários possíveis — e decidir juntas qual faz mais sentido.</p>
+
+    <div class="scenarios">
+      <div class="scenario">
+        <div class="scenario-label">Cenário A</div>
+        <h4>Força-tarefa: lançar reposicionado no aulão (7 dias)</h4>
+        <p>Se você quiser aproveitar o momento do aulão para já lançar com a nova narrativa Sadhana, é possível — mas vai exigir trabalho concentrado nos próximos dias.</p>
+        <ul>
+          <li>Você grava 1-2 vídeos curtos da Entrada Sadhana</li>
+          <li>A gente renomeia as trilhas na plataforma</li>
+          <li>Criamos um roteiro simples para você apresentar o Sadhana no aulão</li>
+          <li>Lançamento acontece já no final da semana</li>
+        </ul>
+        <p><strong>Vantagem:</strong> Momentum imediato. As leads do aulão já recebem a nova narrativa.</p>
+        <p><strong>Desafio:</strong> Pouco tempo para validação. Vamos com base na pesquisa de 55 leads, mas sem testar a narrativa completa antes.</p>
+      </div>
+
+      <div class="scenario">
+        <div class="scenario-label">Cenário B</div>
+        <h4>Aulão como está + lançamento estruturado em 1.5 meses</h4>
+        <p>Fazer o aulão da forma como estava planejado (apresentar a plataforma atual) e usar as próximas semanas para construir o reposicionamento com calma e profundidade.</p>
+        <ul>
+          <li>Aulão acontece normalmente, sem mudanças</li>
+          <li>Nas semanas seguintes: validamos a narrativa Sadhana com 10-15 mulheres</li>
+          <li>Você grava os vídeos com calma, testamos os Rituais, ajustamos o que precisar</li>
+          <li>Fazemos um lançamento de verdade: live no Instagram, convite especial, experiência completa</li>
+        </ul>
+        <p><strong>Vantagem:</strong> Tempo para validar, ajustar, fazer bem feito. Lançamento com mais estrutura.</p>
+        <p><strong>Desafio:</strong> Você perde o momentum do aulão (mas pode recuperar depois com a live).</p>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <p>Gaby, não existe resposta certa. Existe o que faz sentido para você neste momento. Se você sente que está pronta para acelerar, a gente acelera. Se você prefere respirar, validar e construir com calma, a gente vai com calma. Vamos decidir juntas.</p>
+    </div>
+
+    <h3>Sobre validação</h3>
+    <p>Idealmente, seria importante testar a narrativa Sadhana com algumas mulheres antes de lançar para todas as leads. Mostrar os Rituais, ver se ressoa, ouvir o que elas sentem. Isso pode acontecer antes ou depois do aulão — depende do cenário que escolhermos.</p>
+  </div>
+</section>
+
+<!-- SEÇÃO 11: ENCERRAMENTO -->
+<section class="bg-cream closing" id="final">
+  <div class="section-inner fade-in">
+    <div class="divider" style="margin: 0 auto 48px;"></div>
+    <div class="closing-text">
+      <p>Gaby,</p>
+      <p>O yoga transformou sua vida. E desde então, você tem guiado outras mulheres nessa mesma transformação. Com presença. Com leveza. Com uma profundidade que não precisa de pose.</p>
+      <p>Tudo que está aqui nasceu do seu trabalho. Das suas aulas. Das suas palavras. Da forma como você guia cada respiração, cada movimento, cada silêncio.</p>
+      <p>A gente não inventou nada. A gente organizou, deu nome e criou um caminho para que mais mulheres — mulheres que você talvez nunca conheça pessoalmente — possam encontrar o que você já oferece.</p>
+      <p>Sadhana não é uma estratégia de marketing. É a verdade do que você ensina, traduzida para o mundo poder entender.</p>
+      <p>O curso continua o mesmo. As aulas continuam as mesmas. O que muda é a história que a gente conta — e essa história vai fazer as mulheres certas pararem o scroll, respirarem fundo e pensarem: "isso é pra mim."</p>
+      <p>O que você construiu pode alcançar muito além das paredes do seu estúdio. Pode chegar na casa de uma mulher em outro estado, em outro país, em outro momento da vida.</p>
+    </div>
+    <div class="closing-phrase">
+      Seu trabalho já transforma vidas.<br>
+      Agora vamos deixar o mundo saber disso.
+    </div>
+    <div class="divider" style="margin: 0 auto 32px;"></div>
+    <p class="closing-signature">Com carinho,<br>Sua equipe de marketing</p>
+  </div>
+</section>
+
+<script>
+  // Fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

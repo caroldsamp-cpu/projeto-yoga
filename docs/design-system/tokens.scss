@@ -1,0 +1,396 @@
+/**
+ * Mente Leve Design System - SCSS Tokens + Mixins
+ * Extraído de: docs/reposicionamento/index.html
+ *
+ * Uso: Importe este arquivo em seu projeto SCSS
+ * Acesso: $colors, $typography, $spacing, mixins (responsive, flex, etc)
+ */
+
+/* ============================================
+   COLORS
+   ============================================ */
+
+$colors: (
+  /* Primary Palette */
+  'cream': #FDF8F4,
+  'white': #FFFFFF,
+  'text': #3D3A38,
+  'text-light': #6B6560,
+
+  /* Accent Colors */
+  'green': #6B7B5E,
+  'green-light': #8A9A7D,
+  'gold': #C4A882,
+  'gold-light': #D4C4A8,
+
+  /* UI Tokens */
+  'card-bg': #F5EDE4,
+  'border': #E8DDD2,
+);
+
+/* Semantic color aliases */
+$color-background: map-get($colors, 'cream');
+$color-surface: map-get($colors, 'white');
+$color-primary: map-get($colors, 'green');
+$color-primary-light: map-get($colors, 'green-light');
+$color-secondary: map-get($colors, 'gold');
+$color-secondary-light: map-get($colors, 'gold-light');
+$color-text: map-get($colors, 'text');
+$color-text-light: map-get($colors, 'text-light');
+$color-border: map-get($colors, 'border');
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+$font-serif: 'Playfair Display', serif;
+$font-sans: 'Inter', sans-serif;
+
+$font-weights: (
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semibold': 600,
+);
+
+$font-sizes: (
+  'h1': clamp(36px, 6vw, 56px),
+  'h2': clamp(28px, 4.5vw, 40px),
+  'h3': 22px,
+  'h4': 20px,
+  'h5': 18px,
+  'lg': 19px,
+  'base': 17px,
+  'sm': 15px,
+  'xs': 14px,
+  'xxs': 13px,
+);
+
+$line-heights: (
+  'tight': 1.2,
+  'snug': 1.3,
+  'normal': 1.6,
+  'relaxed': 1.7,
+  'loose': 1.8,
+  'extra': 1.9,
+);
+
+$letter-spacings: (
+  'tight': -0.02em,
+  'normal': 0,
+  'wide': 0.5px,
+  'wider': 1px,
+  'widest': 2px,
+  'ultra': 3px,
+);
+
+/* ============================================
+   SPACING SCALE (4px base)
+   ============================================ */
+
+$spacings: (
+  '1': 4px,
+  '2': 8px,
+  '3': 12px,
+  '4': 16px,
+  '5': 20px,
+  '6': 24px,
+  '7': 28px,
+  '8': 32px,
+  '10': 40px,
+  '12': 48px,
+  '20': 80px,
+  '30': 120px,
+);
+
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 20px;
+$space-6: 24px;
+$space-7: 28px;
+$space-8: 32px;
+$space-10: 40px;
+$space-12: 48px;
+$space-20: 80px;
+$space-30: 120px;
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+$container-widths: (
+  'sm': 540px,
+  'md': 720px,
+  'lg': 800px,
+  'xl': 1200px,
+);
+
+$section-padding-top: 120px;
+$section-padding-bottom: 80px;
+$section-padding-x: 24px;
+
+/* ============================================
+   BORDER & RADIUS
+   ============================================ */
+
+$border-widths: (
+  'sm': 1px,
+  'md': 2px,
+  '3px': 3px,
+);
+
+$radii: (
+  'sm': 8px,
+  'md': 12px,
+  'lg': 16px,
+  'full': 50%,
+);
+
+/* ============================================
+   SHADOWS
+   ============================================ */
+
+$shadows: (
+  'sm': 0 1px 2px rgba(0, 0, 0, 0.05),
+  'md': 0 4px 6px rgba(0, 0, 0, 0.1),
+  'lg': 0 10px 15px rgba(0, 0, 0, 0.1),
+);
+
+/* ============================================
+   TRANSITIONS & ANIMATIONS
+   ============================================ */
+
+$transitions: (
+  'fast': 0.2s ease,
+  'normal': 0.3s ease,
+  'slow': 0.7s ease,
+);
+
+/* ============================================
+   BREAKPOINTS
+   ============================================ */
+
+$breakpoints: (
+  'sm': 540px,
+  'md': 640px,
+  'lg': 768px,
+  'xl': 1024px,
+  '2xl': 1280px,
+);
+
+/* ============================================
+   FUNCTIONS
+   ============================================ */
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+@function spacing($key) {
+  @return map-get($spacings, $key);
+}
+
+@function font-size($key) {
+  @return map-get($font-sizes, $key);
+}
+
+@function font-weight($key) {
+  @return map-get($font-weights, $key);
+}
+
+@function line-height($key) {
+  @return map-get($line-heights, $key);
+}
+
+@function radius($key) {
+  @return map-get($radii, $key);
+}
+
+@function shadow($key) {
+  @return map-get($shadows, $key);
+}
+
+@function transition($key) {
+  @return map-get($transitions, $key);
+}
+
+@function breakpoint($key) {
+  @return map-get($breakpoints, $key);
+}
+
+/* ============================================
+   MIXINS
+   ============================================ */
+
+/* Responsive Design */
+@mixin respond-to($breakpoint) {
+  @media (max-width: breakpoint($breakpoint)) {
+    @content;
+  }
+}
+
+/* Flexbox */
+@mixin flex($justify: center, $align: center, $direction: row, $gap: null) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  @if $gap {
+    gap: $gap;
+  }
+}
+
+@mixin flex-center {
+  @include flex(center, center);
+}
+
+@mixin flex-between {
+  @include flex(space-between, center);
+}
+
+@mixin flex-col {
+  @include flex(flex-start, flex-start, column);
+}
+
+/* Grid */
+@mixin grid($columns: auto-fit, $min: 200px, $gap: $space-6) {
+  display: grid;
+  grid-template-columns: repeat($columns, minmax($min, 1fr));
+  gap: $gap;
+}
+
+/* Text Utilities */
+@mixin text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin text-clamp($min-size, $vw, $max-size) {
+  font-size: clamp($min-size, $vw, $max-size);
+}
+
+/* Heading Styles */
+@mixin heading($level: 1) {
+  font-family: $font-serif;
+  font-weight: font-weight('regular');
+
+  @if $level == 1 {
+    font-size: font-size('h1');
+    line-height: line-height('tight');
+  } @else if $level == 2 {
+    font-size: font-size('h2');
+    line-height: line-height('snug');
+  } @else if $level == 3 {
+    font-size: font-size('h3');
+    line-height: line-height('snug');
+    font-weight: font-weight('semibold');
+    color: color('green');
+  } @else if $level == 4 {
+    font-size: font-size('h4');
+    font-weight: font-weight('semibold');
+  } @else if $level == 5 {
+    font-size: font-size('h5');
+    font-weight: font-weight('semibold');
+  }
+}
+
+/* Body Text */
+@mixin body-text($size: 'base', $weight: 'regular', $line-height: 'loose') {
+  font-family: $font-sans;
+  font-size: font-size($size);
+  font-weight: font-weight($weight);
+  line-height: line-height($line-height);
+}
+
+/* Cards */
+@mixin card($padding: $space-8, $radius: radius('md')) {
+  background: color('white');
+  border: map-get($border-widths, 'sm') solid color('border');
+  border-radius: $radius;
+  padding: $padding;
+  transition: border-color transition('normal');
+
+  &:hover {
+    border-color: color('gold');
+  }
+}
+
+/* Highlights/Callouts */
+@mixin highlight($bg: color('card-bg'), $border-color: color('gold')) {
+  background: $bg;
+  border-left: map-get($border-widths, '3px') solid $border-color;
+  padding: $space-8 $space-8;
+  margin: $space-10 0;
+  border-radius: 0 radius('sm') radius('sm') 0;
+
+  p {
+    font-family: $font-serif;
+    font-size: font-size('lg');
+    font-style: italic;
+    color: color('text');
+    margin: 0;
+    line-height: line-height('relaxed');
+  }
+}
+
+/* Borders */
+@mixin border-color($color-key) {
+  border-color: color($color-key);
+}
+
+@mixin border-top($width: map-get($border-widths, 'sm'), $color-key: 'border') {
+  border-top: $width solid color($color-key);
+}
+
+@mixin border-bottom($width: map-get($border-widths, 'sm'), $color-key: 'border') {
+  border-bottom: $width solid color($color-key);
+}
+
+@mixin border-left($width: map-get($border-widths, 'sm'), $color-key: 'border') {
+  border-left: $width solid color($color-key);
+}
+
+/* Shadows */
+@mixin shadow($level: 'md') {
+  box-shadow: shadow($level);
+}
+
+/* Transitions */
+@mixin transition($duration: 'normal') {
+  transition: transition($duration);
+}
+
+@mixin transition-all($duration: 'normal') {
+  transition: all transition($duration);
+}
+
+/* Animations */
+@mixin fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity transition('slow'), transform transition('slow');
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Container Queries Helper */
+@mixin container-width($key: 'md') {
+  max-width: map-get($container-widths, $key);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Spacing utilities generator */
+@mixin generate-spacing-utilities {
+  @each $key, $value in $spacings {
+    .p-#{$key} { padding: $value; }
+    .m-#{$key} { margin: $value; }
+    .gap-#{$key} { gap: $value; }
+  }
+}

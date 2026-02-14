@@ -1,0 +1,277 @@
+/**
+ * Mente Leve Design System - CSS Tokens
+ * Extraído de: docs/reposicionamento/index.html
+ *
+ * Uso: Importe este arquivo em qualquer projeto para acessar:
+ * - Color palette (10 cores)
+ * - Typography system
+ * - Spacing scale
+ * - Component patterns
+ */
+
+:root {
+  /* ============================================
+     COLOR TOKENS
+     ============================================ */
+
+  /* Primary Palette */
+  --color-cream: #FDF8F4;
+  --color-white: #FFFFFF;
+  --color-text: #3D3A38;
+  --color-text-light: #6B6560;
+
+  /* Accent Colors */
+  --color-green: #6B7B5E;
+  --color-green-light: #8A9A7D;
+  --color-gold: #C4A882;
+  --color-gold-light: #D4C4A8;
+
+  /* UI Tokens */
+  --color-card-bg: #F5EDE4;
+  --color-border: #E8DDD2;
+
+  /* Semantic Colors */
+  --color-background: var(--color-cream);
+  --color-surface: var(--color-white);
+  --color-primary: var(--color-green);
+  --color-primary-light: var(--color-green-light);
+  --color-secondary: var(--color-gold);
+  --color-secondary-light: var(--color-gold-light);
+  --color-text-primary: var(--color-text);
+  --color-text-secondary: var(--color-text-light);
+
+  /* ============================================
+     TYPOGRAPHY TOKENS
+     ============================================ */
+
+  /* Font Families */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* Font Sizes - Heading Scales */
+  --font-size-h1: clamp(36px, 6vw, 56px);
+  --font-size-h2: clamp(28px, 4.5vw, 40px);
+  --font-size-h3: 22px;
+  --font-size-h4: 20px;
+  --font-size-h5: 18px;
+
+  /* Font Sizes - Body */
+  --font-size-lg: 19px;
+  --font-size-base: 17px;
+  --font-size-sm: 15px;
+  --font-size-xs: 14px;
+  --font-size-xxs: 13px;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.3;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.7;
+  --line-height-loose: 1.8;
+  --line-height-extra: 1.9;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.5px;
+  --letter-spacing-wider: 1px;
+  --letter-spacing-widest: 2px;
+  --letter-spacing-ultra: 3px;
+
+  /* ============================================
+     SPACING SCALE (4px base)
+     ============================================ */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-20: 80px;
+  --space-30: 120px;
+
+  /* Common Gaps */
+  --gap-sm: var(--space-4);
+  --gap-md: var(--space-6);
+  --gap-lg: var(--space-8);
+  --gap-xl: var(--space-10);
+  --gap-xxl: var(--space-12);
+
+  /* Padding Scales */
+  --pad-xs: var(--space-2);
+  --pad-sm: var(--space-3);
+  --pad-md: var(--space-4);
+  --pad-lg: var(--space-6);
+  --pad-xl: var(--space-8);
+  --pad-2xl: var(--space-10);
+  --pad-3xl: var(--space-12);
+
+  /* ============================================
+     LAYOUT TOKENS
+     ============================================ */
+
+  /* Container Widths */
+  --max-width-sm: 540px;
+  --max-width-md: 720px;
+  --max-width-lg: 800px;
+  --max-width-xl: 1200px;
+
+  /* Section Padding */
+  --section-padding-top: 120px;
+  --section-padding-bottom: 80px;
+  --section-padding-y: var(--section-padding-top) var(--section-padding-bottom);
+  --section-padding-x: 24px;
+
+  /* ============================================
+     BORDER & RADIUS TOKENS
+     ============================================ */
+
+  --border-width: 1px;
+  --border-width-thick: 2px;
+  --border-width-3px: 3px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 50%;
+
+  /* ============================================
+     SHADOW & ELEVATION TOKENS
+     ============================================ */
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* ============================================
+     TRANSITION & ANIMATION TOKENS
+     ============================================ */
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.7s ease;
+
+  --animation-fade-in: opacity 0.7s ease, transform 0.7s ease;
+
+  /* ============================================
+     BREAKPOINTS (Mobile First)
+     ============================================ */
+
+  /* Use em: @media (max-width: 33.75em) */
+  --breakpoint-sm: 540px;    /* 33.75em */
+  --breakpoint-md: 640px;    /* 40em */
+  --breakpoint-lg: 768px;    /* 48em */
+  --breakpoint-xl: 1024px;   /* 64em */
+  --breakpoint-2xl: 1280px;  /* 80em */
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-accent-green {
+  color: var(--color-green);
+}
+
+.text-accent-gold {
+  color: var(--color-gold);
+}
+
+.bg-cream {
+  background: var(--color-cream);
+}
+
+.bg-white {
+  background: var(--color-white);
+}
+
+.bg-card {
+  background: var(--color-card-bg);
+}
+
+/* Typography Utilities */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-light {
+  font-weight: var(--font-weight-light);
+}
+
+.font-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Spacing Utilities */
+.gap-sm { gap: var(--gap-sm); }
+.gap-md { gap: var(--gap-md); }
+.gap-lg { gap: var(--gap-lg); }
+.gap-xl { gap: var(--gap-xl); }
+
+.p-sm { padding: var(--pad-sm); }
+.p-md { padding: var(--pad-md); }
+.p-lg { padding: var(--pad-lg); }
+.p-xl { padding: var(--pad-xl); }
+
+.m-sm { margin: var(--space-sm); }
+.m-md { margin: var(--space-md); }
+.m-lg { margin: var(--space-lg); }
+
+/* Border Utilities */
+.border {
+  border: var(--border-width) solid var(--color-border);
+}
+
+.border-green {
+  border: var(--border-width) solid var(--color-green);
+}
+
+.border-gold {
+  border: var(--border-width) solid var(--color-gold);
+}
+
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-full { border-radius: var(--radius-full); }
+
+/* Shadow Utilities */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+
+/* Transition Utilities */
+.transition-fast { transition: var(--transition-fast); }
+.transition-normal { transition: var(--transition-normal); }
+.transition-slow { transition: var(--transition-slow); }
