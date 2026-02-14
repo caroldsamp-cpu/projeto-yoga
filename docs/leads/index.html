@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mente Leve: Seu Ritual Diário de Presença</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens-gaby-leads.css">
+  <style>
+    /* ============================================
+       PAGE LAYOUT
+       ============================================ */
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(253, 248, 244, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+
+    nav .nav-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav .nav-brand {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    nav .nav-logo {
+      width: 40px;
+      height: 40px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    /* HERO SECTION */
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 160px 24px 120px;
+      flex: 1;
+    }
+
+    .section-inner {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    .hero-content {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .hero-content h1 {
+      margin-bottom: 16px;
+      color: var(--color-primary);
+    }
+
+    .hero-content p {
+      font-size: var(--font-size-lg);
+      color: var(--text-light);
+      line-height: var(--line-height-relaxed);
+      margin-bottom: 0;
+    }
+
+    /* FORM SECTION */
+    .form-container {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-sm);
+      margin-top: 40px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: var(--space-6);
+      color: var(--color-primary);
+    }
+
+    .form-group {
+      margin-bottom: var(--space-6);
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: var(--font-weight-medium);
+      color: var(--text);
+      margin-bottom: var(--space-2);
+      font-size: var(--font-size-base);
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: var(--space-3) var(--space-4);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-size-base);
+      transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+      font-family: var(--font-sans);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(27, 90, 107, 0.1);
+    }
+
+    .form-group-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6);
+    }
+
+    @media (max-width: 640px) {
+      .form-group-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .checkbox-group {
+      display: flex;
+      gap: var(--space-3);
+      align-items: flex-start;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      cursor: pointer;
+      accent-color: var(--color-primary);
+    }
+
+    .checkbox-group label {
+      margin: 0;
+      cursor: pointer;
+      font-size: var(--font-size-base);
+      color: var(--text-light);
+    }
+
+    /* SUBMIT BUTTON */
+    .form-submit {
+      width: 100%;
+      margin-top: var(--space-8);
+      padding: var(--space-4) var(--space-6);
+      background: var(--color-primary);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius-md);
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-semibold);
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      font-family: var(--font-sans);
+    }
+
+    .form-submit:hover {
+      background: #0f3d4d;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .form-submit:active {
+      transform: translateY(0);
+    }
+
+    /* MESSAGE */
+    .form-message {
+      text-align: center;
+      margin-top: var(--space-6);
+      padding: var(--space-4);
+      border-radius: var(--radius-sm);
+      display: none;
+    }
+
+    .form-message.success {
+      background: #E8F5E9;
+      color: #2E7D32;
+      border: 1px solid #C8E6C9;
+      display: block;
+    }
+
+    .form-message.error {
+      background: #FFEBEE;
+      color: #C62828;
+      border: 1px solid #FFCDD2;
+      display: block;
+    }
+
+    /* SECONDARY TEXT */
+    .form-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      font-size: var(--font-size-sm);
+      margin-top: var(--space-6);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .highlight {
+      color: var(--color-secondary);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      section {
+        padding: 120px 20px 80px;
+      }
+
+      .form-container {
+        padding: var(--space-6);
+      }
+
+      .hero-content h1 {
+        font-size: 32px;
+      }
+
+      .hero-content p {
+        font-size: var(--font-size-base);
+      }
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .form-container {
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    /* DIVIDER */
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--color-secondary);
+      margin: 0 auto 24px;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-brand">Mente Leve</div>
+      <div class="nav-logo">Y</div>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <section>
+    <div class="section-inner">
+      <!-- HERO -->
+      <div class="hero-content">
+        <div class="divider"></div>
+        <h1>Seu Ritual Diário de Presença</h1>
+        <p>
+          5 minutos todos os dias transformam mais que 1 hora ocasional.<br>
+          Comece agora sua jornada Sadhana.
+        </p>
+      </div>
+
+      <!-- FORM -->
+      <div class="form-container">
+        <h2>Quero começar</h2>
+
+        <form id="leadForm">
+          <!-- NAME -->
+          <div class="form-group">
+            <label for="name">Seu nome *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Como você se chama?"
+              required
+              minlength="2"
+            >
+          </div>
+
+          <!-- EMAIL & PHONE -->
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="seu.email@exemplo.com"
+                required
+              >
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefone (opcional)</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="(11) 99999-9999"
+              >
+            </div>
+          </div>
+
+          <!-- RITUAL PREFERENCE -->
+          <div class="form-group">
+            <label>Qual ritmo combina mais com você? *</label>
+            <select id="ritual" name="ritual" required>
+              <option value="">Escolha uma opção</option>
+              <option value="morning">Manhã (logo ao acordar)</option>
+              <option value="afternoon">Tarde (pausa do dia)</option>
+              <option value="evening">Noite (antes de dormir)</option>
+              <option value="flexible">Flexível (depende do dia)</option>
+            </select>
+          </div>
+
+          <!-- EXPERIENCE -->
+          <div class="form-group">
+            <label>Você já pratica yoga? *</label>
+            <select id="experience" name="experience" required>
+              <option value="">Escolha uma opção</option>
+              <option value="beginner">Iniciante (nunca pratiquei)</option>
+              <option value="intermediate">Intermediário (pratico ocasionalmente)</option>
+              <option value="advanced">Avançado (pratico regularmente)</option>
+            </select>
+          </div>
+
+          <!-- CHECKBOX -->
+          <div class="form-group">
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                required
+              >
+              <label for="terms">
+                Li e concordo em receber conteúdos sobre Sadhana e a jornada no curso
+              </label>
+            </div>
+          </div>
+
+          <!-- SUBMIT -->
+          <button type="submit" class="form-submit">
+            Começar meus 7 dias
+          </button>
+
+          <!-- MESSAGE -->
+          <div class="form-message" id="formMessage"></div>
+        </form>
+
+        <!-- SUBTITLE -->
+        <p class="form-subtitle">
+          Você receberá um email com os próximos passos.<br>
+          <span class="highlight">Presença, não performance.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('leadForm');
+    const message = document.getElementById('formMessage');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Collect form data
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        ritual: document.getElementById('ritual').value,
+        experience: document.getElementById('experience').value,
+        timestamp: new Date().toISOString()
+      };
+
+      try {
+        // TODO: Conectar com Google Sheets via Zapier ou API
+        // Por enquanto, vamos simular o envio
+
+        console.log('Lead data:', formData);
+
+        // Show success message
+        message.textContent = '✨ Bem-vinda! Você receberá um email em poucos minutos com seus primeiros passos.';
+        message.className = 'form-message success';
+
+        // Reset form
+        form.reset();
+
+        // Hide message after 5 seconds
+        setTimeout(() => {
+          message.className = 'form-message';
+        }, 5000);
+
+      } catch (error) {
+        console.error('Error:', error);
+        message.textContent = 'Oops! Algo deu errado. Tente novamente.';
+        message.className = 'form-message error';
+      }
+    });
+  </script>
+</body>
+</html>
