@@ -1,0 +1,597 @@
+/**
+ * Mente Leve - Premium MaaS Design System
+ * Tokens & Component Library
+ *
+ * Design System: MaaS Hub (dark premium) + Yoga Acolhedor
+ * Date: 2026-02-14
+ * Version: 1.0.0
+ */
+
+/* ============================================================================
+   DESIGN TOKENS
+   ============================================================================ */
+
+:root {
+  /* ============================================================================
+     COLORS - Premium Dark Theme with Yoga Identity
+     ============================================================================ */
+
+  /* Background Colors - Dark Premium */
+  --color-bg-app: #0F0E0C;
+  --color-bg-sidebar: #111111;
+  --color-bg-main: #131210;
+  --color-bg-card: #1B1916;
+  --color-bg-card-hover: #232019;
+  --color-bg-elevated: #262320;
+  --color-bg-hero: #191715;
+
+  /* Text Colors */
+  --color-text-primary: #F5F1ED;
+  --color-text-secondary: #B8B0A8;
+  --color-text-muted: #8A8278;
+
+  /* Accent Colors - Gold (Warmth) */
+  --color-accent-gold: #D4A574;
+  --color-accent-gold-light: #E5D4A1;
+  --color-accent-gold-muted: rgba(212, 165, 116, 0.15);
+  --color-accent-gold-glow: rgba(212, 165, 116, 0.2);
+
+  /* Accent Colors - Blue (Gaby Logo) */
+  --color-accent-blue: #1B5A6B;
+  --color-accent-blue-light: #5ECFD8;
+  --color-accent-blue-muted: rgba(27, 90, 107, 0.15);
+  --color-accent-blue-glow: rgba(27, 90, 107, 0.15);
+
+  /* Accent Colors - Green (Sadhana) */
+  --color-accent-green: #6B7B5E;
+  --color-accent-green-light: #8A9A7D;
+  --color-accent-green-muted: rgba(107, 123, 94, 0.15);
+  --color-accent-green-glow: rgba(107, 123, 94, 0.2);
+
+  /* Border Colors */
+  --color-border-subtle: #252320;
+  --color-border-default: #2F2B27;
+  --color-border-hover: #3A3530;
+
+  /* Semantic Colors */
+  --color-primary: var(--color-accent-gold);
+  --color-secondary: var(--color-accent-blue);
+  --color-tertiary: var(--color-accent-green);
+
+  /* ============================================================================
+     TYPOGRAPHY
+     ============================================================================ */
+
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+  --font-family-serif: 'Playfair Display', serif;
+
+  /* Font Sizes */
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-body: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-hero: clamp(2rem, 4vw, 3rem);
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+
+  /* ============================================================================
+     SPACING - 4px Base Scale
+     ============================================================================ */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* ============================================================================
+     BORDER RADIUS
+     ============================================================================ */
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ============================================================================
+     SHADOWS & EFFECTS
+     ============================================================================ */
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+
+  --shadow-glow-gold: 0 0 20px rgba(212, 165, 116, 0.2);
+  --shadow-glow-blue: 0 0 20px rgba(27, 90, 107, 0.15);
+  --shadow-glow-green: 0 0 20px rgba(107, 123, 94, 0.2);
+
+  --shadow-focus-gold: 0 0 0 3px rgba(212, 165, 116, 0.2);
+  --shadow-focus-blue: 0 0 0 3px rgba(27, 90, 107, 0.2);
+  --shadow-focus-green: 0 0 0 3px rgba(107, 123, 94, 0.2);
+
+  /* ============================================================================
+     TRANSITIONS & ANIMATIONS
+     ============================================================================ */
+
+  --transition-fast: all 0.15s ease;
+  --transition-normal: all 0.2s ease;
+  --transition-slow: all 0.3s ease;
+
+  /* ============================================================================
+     LAYOUT TOKENS
+     ============================================================================ */
+
+  --layout-sidebar-width: 260px;
+  --layout-max-width: 1400px;
+  --layout-max-width-sm: 720px;
+  --layout-section-padding-x: 24px;
+  --layout-section-padding-y: 48px;
+
+  /* ============================================================================
+     BREAKPOINTS
+     ============================================================================ */
+
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+}
+
+/* ============================================================================
+   BASE STYLES
+   ============================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  color: var(--color-text-primary);
+  background: var(--color-bg-app);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================================
+   TYPOGRAPHY STYLES
+   ============================================================================ */
+
+h1 {
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+h3 {
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+}
+
+p {
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+label {
+  display: block;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-2);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================================
+   COMPONENT LIBRARY
+   ============================================================================ */
+
+/* ============================================================================
+   BUTTONS
+   ============================================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4) var(--space-6);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  text-decoration: none;
+  gap: var(--space-2);
+  letter-spacing: 0.05em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-accent-blue), var(--color-accent-blue-light));
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow-blue), 0 12px 32px rgba(27, 90, 107, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--color-accent-gold);
+  color: var(--color-bg-app);
+  box-shadow: var(--shadow-glow-gold);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow-gold), 0 12px 32px rgba(212, 165, 116, 0.3);
+}
+
+.btn-tertiary {
+  background: var(--color-accent-green);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-glow-green);
+}
+
+.btn-tertiary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow-green), 0 12px 32px rgba(107, 123, 94, 0.3);
+}
+
+/* ============================================================================
+   FORM INPUTS
+   ============================================================================ */
+
+input,
+select,
+textarea {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* ============================================================================
+   CARDS & CONTAINERS
+   ============================================================================ */
+
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(10px);
+  transition: var(--transition-normal);
+}
+
+.card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-gold);
+}
+
+.card-elevated {
+  background: var(--color-bg-elevated);
+  border-color: var(--color-border-subtle);
+}
+
+/* ============================================================================
+   BADGES
+   ============================================================================ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-accent-gold-muted);
+  color: var(--color-accent-gold);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-blue {
+  background: var(--color-accent-blue-muted);
+  color: var(--color-accent-blue-light);
+}
+
+.badge-green {
+  background: var(--color-accent-green-muted);
+  color: var(--color-accent-green-light);
+}
+
+/* ============================================================================
+   GRADIENTS
+   ============================================================================ */
+
+.gradient-gold-blue {
+  background: linear-gradient(135deg, var(--color-accent-gold), var(--color-accent-blue));
+}
+
+.gradient-blue-green {
+  background: linear-gradient(135deg, var(--color-accent-blue), var(--color-accent-green));
+}
+
+.gradient-gold-green {
+  background: linear-gradient(135deg, var(--color-accent-gold), var(--color-accent-green));
+}
+
+/* Text gradients */
+.text-gradient-gold-blue {
+  background: linear-gradient(135deg, var(--color-accent-gold), var(--color-accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-blue-green {
+  background: linear-gradient(135deg, var(--color-accent-blue), var(--color-accent-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================================================
+   UTILITIES
+   ============================================================================ */
+
+.container {
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  padding: 0 var(--layout-section-padding-x);
+}
+
+.container-sm {
+  max-width: var(--layout-max-width-sm);
+  margin: 0 auto;
+  padding: 0 var(--layout-section-padding-x);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-gold {
+  color: var(--color-accent-gold);
+}
+
+.text-blue {
+  color: var(--color-accent-blue);
+}
+
+.text-green {
+  color: var(--color-accent-green);
+}
+
+/* ============================================================================
+   SPACING UTILITIES
+   ============================================================================ */
+
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+.mt-12 { margin-top: var(--space-12); }
+
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
+.mb-8 { margin-bottom: var(--space-8); }
+.mb-12 { margin-bottom: var(--space-12); }
+
+.p-4 { padding: var(--space-4); }
+.p-6 { padding: var(--space-6); }
+.p-8 { padding: var(--space-8); }
+.p-12 { padding: var(--space-12); }
+
+.gap-sm { gap: var(--space-4); }
+.gap-md { gap: var(--space-6); }
+.gap-lg { gap: var(--space-8); }
+
+/* ============================================================================
+   ANIMATIONS
+   ============================================================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: -1000px 0;
+  }
+  50% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(212, 165, 116, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(212, 165, 116, 0.4);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-glow {
+  animation: glow 2s infinite;
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  :root {
+    --layout-section-padding-x: 16px;
+    --layout-section-padding-y: 32px;
+  }
+
+  .card {
+    padding: var(--space-8);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --layout-section-padding-x: 12px;
+    --font-size-hero: 24px;
+  }
+
+  .card {
+    padding: var(--space-6);
+  }
+}
+
+/* ============================================================================
+   ACCESSIBILITY
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Already dark theme, no changes needed */
+}
+
+/* ============================================================================
+   DARK MODE (for comparison)
+   ============================================================================ */
+
+@supports (color: oklch(0 0 0)) {
+  :root {
+    /* Future-proof color space support */
+  }
+}
