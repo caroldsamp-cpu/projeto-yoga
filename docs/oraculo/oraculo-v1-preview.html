@@ -1,0 +1,420 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oráculo do Sadhana - Preview V1.4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fdf8f4;
+      --paper: #f7efe6;
+      --paper-2: #f3e8dc;
+      --ink: #3f3a36;
+      --ink-soft: #6a625c;
+      --line: #d9ccbe;
+      --ornament: #8f7551;
+      --title: #6f8562;
+      --primary: #1b5a6b;
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: var(--ink);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(143,117,81,.12), transparent 40%),
+        radial-gradient(circle at 82% 0%, rgba(27,90,107,.09), transparent 38%),
+        var(--bg);
+    }
+
+    .wrap {
+      width: min(900px, 100%);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(34px, 5vw, 52px);
+      font-weight: 500;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      max-width: 620px;
+      margin: 10px auto 20px;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    .actions {
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: 0;
+      border-radius: 12px;
+      padding: 13px 18px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .18s ease;
+    }
+
+    .btn-primary { color: #fff; background: linear-gradient(135deg, var(--primary), #2b6f82); }
+    .btn-secondary { color: var(--primary); background: #fff; border: 1px solid #e5dbcf; }
+    button:hover { transform: translateY(-1px); }
+
+    .ritual {
+      min-height: 52px;
+      margin-bottom: 10px;
+      display: grid;
+      place-items: center;
+    }
+
+    .ritual-step {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #8d7b67;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity .3s ease, transform .3s ease;
+    }
+
+    .ritual-dots {
+      display: inline-flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .ritual-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(141,123,103,.28);
+      transition: all .25s ease;
+    }
+
+    .ritual-dot.active {
+      background: rgba(141,123,103,.82);
+      transform: scale(1.08);
+    }
+
+    .ritual-step.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-frame {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0;
+      border-radius: var(--radius-xl);
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      display: none;
+    }
+
+    .card-frame.visible {
+      display: block;
+    }
+
+    .card-frame.reveal-pop {
+      animation: revealPop .42s ease;
+    }
+
+    @keyframes revealPop {
+      from { transform: translateY(8px); opacity: .88; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .card {
+      min-height: clamp(420px, 62vh, 560px);
+      text-align: left;
+      border-radius: 22px 22px 14px 14px;
+      border: 1.5px solid var(--line);
+      box-shadow: inset 0 0 0 1px rgba(143,117,81,.15);
+      padding: 22px 22px 20px;
+      position: relative;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(143,117,81,.08), transparent 35%),
+        repeating-linear-gradient(0deg, rgba(0,0,0,.012) 0 1px, transparent 1px 4px),
+        linear-gradient(180deg, var(--paper), var(--paper-2));
+      overflow: hidden;
+    }
+
+    .orn-top,
+    .orn-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--ornament);
+      opacity: .9;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .orn-top {
+      margin-bottom: 12px;
+    }
+
+    .orn-top::before,
+    .orn-top::after,
+    .orn-bottom::before,
+    .orn-bottom::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(143,117,81,.55), transparent);
+    }
+
+    .orn-mark {
+      display: none;
+      width: 92px;
+      height: 16px;
+    }
+
+    .virtude {
+      margin: 0 0 16px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(42px, 8vw, 60px);
+      color: var(--title);
+      line-height: .95;
+      font-weight: 500;
+      text-transform: lowercase;
+      text-align: center;
+    }
+
+    .texto {
+      margin: 0;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(19px, 2.2vw, 22px);
+      line-height: 1.58;
+      letter-spacing: .01em;
+      color: var(--ink);
+      max-width: 98%;
+    }
+
+    .parte {
+      opacity: 0;
+      transform: translateY(5px);
+      transition: opacity .35s ease, transform .35s ease;
+      margin-bottom: 10px;
+    }
+
+    .parte.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .parte.init {
+      color: var(--ink-soft);
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .orn-bottom {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 14px;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .seal {
+      border: 0;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 11px;
+      letter-spacing: .07em;
+      color: var(--ink-soft);
+      background: rgba(255,255,255,.45);
+    }
+
+    .credit {
+      margin-top: 34px;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #9b8c7a;
+      letter-spacing: .12em;
+      display: none;
+    }
+
+    .credit.visible {
+      display: block;
+    }
+
+    @media (max-width: 640px) {
+      .card { min-height: clamp(430px, 70vh, 540px); padding: 18px 16px 18px; }
+      .virtude { font-size: clamp(38px, 12vw, 52px); }
+      .texto { font-size: 20px; line-height: 1.52; }
+      .orn-bottom { left: 16px; right: 16px; }
+      .ritual { min-height: 44px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Oráculo do Sadhana</h1>
+    <p class="subtitle">Respira. Solta. Um gesto simples de presença.</p>
+
+    <div class="actions">
+      <button id="tirarCarta" class="btn-primary">Tirar carta</button>
+      <button id="copiar" class="btn-secondary" disabled>Copiar carta</button>
+    </div>
+
+    <div class="ritual" id="ritualStatus"></div>
+
+    <section class="card-frame" id="cardFrame" aria-live="polite">
+      <article class="card">
+        <div class="orn-top">
+          <svg class="orn-mark" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M5 10C20 10 20 3 35 3C50 3 50 17 65 17C80 17 80 10 95 10C104 10 109 12 115 14" stroke="#8f7551" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span>ritual diário</span>
+        </div>
+        <h2 class="virtude" id="virtude">oráculo</h2>
+        <div class="texto" id="texto">
+          <p class="parte" id="p1"></p>
+          <p class="parte" id="p2"></p>
+          <p class="parte" id="p3"></p>
+        </div>
+        <div class="orn-bottom"><span class="seal">ciclos de presença</span></div>
+      </article>
+    </section>
+
+    <p class="credit">Inspirado no Oráculo do Pão</p>
+  </main>
+
+  <script>
+    const cartas = [
+      {
+        virtude: "presença",
+        partes: [
+          "Hoje, você não precisa acelerar para merecer paz.",
+          "Em vez de começar o dia tentando resolver tudo de uma vez, experimente voltar para o corpo e para o instante que existe agora.",
+          "Há uma força silenciosa em escolher o ritmo que te respeita. Qual é o ritmo mais verdadeiro para o seu dia de hoje?"
+        ]
+      },
+      {
+        virtude: "desapego",
+        partes: [
+          "Nem tudo precisa ser carregado até o fim.",
+          "Algumas preocupações só parecem urgentes porque você está cansada, e soltar não é desistir de si: é abrir espaço para o que importa.",
+          "Hoje, deixe uma cobrança antiga ir embora com gentileza. O que você pode soltar agora para caminhar com mais leveza?"
+        ]
+      },
+      {
+        virtude: "confiança",
+        partes: [
+          "Confiar em você não começa em dias perfeitos, começa no ordinário.",
+          "É na respiração entre uma tarefa e outra, no respeito ao seu limite, e na escolha de um passo possível.",
+          "Existe sabedoria no seu tempo. Em que parte da sua rotina você pode confiar mais em si mesma hoje?"
+        ]
+      }
+    ];
+
+    const tirarCartaBtn = document.getElementById("tirarCarta");
+    const copiarBtn = document.getElementById("copiar");
+    const cardFrame = document.getElementById("cardFrame");
+    const credit = document.querySelector(".credit");
+    const ritualStatus = document.getElementById("ritualStatus");
+    const virtudeEl = document.getElementById("virtude");
+    const p1 = document.getElementById("p1");
+    const p2 = document.getElementById("p2");
+    const p3 = document.getElementById("p3");
+
+    function wait(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function showRitualLabel(label, activeDot) {
+      ritualStatus.innerHTML = `<span class="ritual-step"><span class="ritual-dots"><span class="ritual-dot ${activeDot===0?'active':''}"></span><span class="ritual-dot ${activeDot===1?'active':''}"></span><span class="ritual-dot ${activeDot===2?'active':''}"></span></span>${label}</span>`;
+      const el = ritualStatus.querySelector(".ritual-step");
+      requestAnimationFrame(() => el.classList.add("show"));
+    }
+
+    async function ritual321() {
+      tirarCartaBtn.disabled = true;
+      await showRitualLabel("Respira", 0);
+      await wait(1400);
+      await showRitualLabel("Solta", 1);
+      await wait(1400);
+      await showRitualLabel("Observa", 2);
+      await wait(1400);
+      await wait(400);
+      ritualStatus.innerHTML = "";
+      tirarCartaBtn.disabled = false;
+    }
+
+    function animateCardFrame() {
+      cardFrame.classList.remove("reveal-pop");
+      void cardFrame.offsetWidth;
+      cardFrame.classList.add("reveal-pop");
+    }
+
+    async function sortearCarta() {
+      await ritual321();
+      const idx = Math.floor(Math.random() * cartas.length);
+      const carta = cartas[idx];
+
+      cardFrame.classList.add("visible");
+      credit.classList.add("visible");
+      virtudeEl.textContent = carta.virtude;
+      p1.textContent = carta.partes[0];
+      p2.textContent = carta.partes[1];
+      p3.textContent = carta.partes[2];
+
+      [p1, p2, p3].forEach(p => p.classList.remove("show"));
+      animateCardFrame();
+
+      setTimeout(() => p1.classList.add("show"), 140);
+      setTimeout(() => p2.classList.add("show"), 640);
+      setTimeout(() => p3.classList.add("show"), 1240);
+
+      copiarBtn.disabled = false;
+    }
+
+    function copiarCarta() {
+      const texto = `Oráculo do Sadhana\n\n${virtudeEl.textContent.toUpperCase()}\n\n${p1.textContent} ${p2.textContent} ${p3.textContent}`;
+      navigator.clipboard.writeText(texto.trim());
+      copiarBtn.textContent = "Copiado";
+      setTimeout(() => { copiarBtn.textContent = "Copiar carta"; }, 1200);
+    }
+
+    tirarCartaBtn.addEventListener("click", sortearCarta);
+    copiarBtn.addEventListener("click", copiarCarta);
+  </script>
+</body>
+</html>
+
+
+
