@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NamaSer | Aula de Entrada Sadhana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./tokens-gaby-leads.css">
+  <style>
+    :root {
+      --max-content: 920px;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 85% 10%, rgba(94, 207, 216, 0.14), transparent 38%),
+        radial-gradient(circle at 10% 90%, rgba(107, 123, 94, 0.12), transparent 42%),
+        var(--cream);
+    }
+
+    .page {
+      max-width: var(--max-content);
+      margin: 0 auto;
+      padding: var(--space-10) var(--section-padding-x) var(--space-12);
+    }
+
+    .hero {
+      background: rgba(255, 255, 255, 0.82);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: var(--space-10);
+      margin-bottom: var(--space-10);
+      backdrop-filter: blur(4px);
+    }
+
+    .kicker {
+      margin: 0 0 var(--space-3);
+      color: var(--color-primary);
+      font-size: var(--font-size-xs);
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .hero h1 {
+      margin: 0 0 var(--space-4);
+      max-width: 20ch;
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: var(--font-size-lg);
+      color: var(--text-light);
+    }
+
+    .phase {
+      background: var(--white);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      margin-bottom: var(--space-6);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .phase-header {
+      margin-bottom: var(--space-5);
+      padding-bottom: var(--space-4);
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .phase-title {
+      margin: 0 0 var(--space-2);
+      font-size: var(--font-size-h4);
+      color: var(--color-primary);
+      font-family: var(--font-serif);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .phase p {
+      margin-top: 0;
+      margin-bottom: var(--space-4);
+    }
+
+    .ritual-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-4);
+      margin-top: var(--space-5);
+      margin-bottom: var(--space-6);
+    }
+
+    .ritual {
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      background: #fffdfa;
+    }
+
+    .ritual h4 {
+      margin: 0 0 var(--space-2);
+      color: var(--green);
+      font-family: var(--font-serif);
+      font-size: var(--font-size-h5);
+    }
+
+    .ritual p {
+      margin: 0 0 var(--space-3);
+      font-size: var(--font-size-sm);
+    }
+
+    .ritual strong {
+      color: var(--color-primary);
+    }
+
+    .journal {
+      background: var(--white);
+      border: 1px solid var(--green-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-sm);
+      margin-top: var(--space-10);
+    }
+
+    .journal h3 {
+      margin-top: 0;
+      color: var(--color-primary);
+    }
+
+    .save-warning {
+      margin: 0 0 var(--space-5);
+      padding: var(--space-4);
+      border-radius: var(--radius-md);
+      background: rgba(196, 168, 130, 0.18);
+      border-left: 3px solid var(--green);
+      font-size: var(--font-size-sm);
+      color: var(--text);
+    }
+
+    .journal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: var(--space-4);
+    }
+
+    .prompt {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .prompt label {
+      font-size: var(--font-size-sm);
+      color: var(--text-light);
+      font-weight: var(--font-weight-medium);
+    }
+
+    .prompt textarea {
+      min-height: 110px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: var(--space-3);
+      resize: vertical;
+      font-family: var(--font-sans);
+      background: #fff;
+    }
+
+    .reminder {
+      margin-top: var(--space-5);
+      padding: var(--space-4);
+      border-radius: var(--radius-md);
+      background: rgba(107, 123, 94, 0.08);
+      border-left: 3px solid var(--green);
+      font-size: var(--font-size-sm);
+    }
+
+    .video-note {
+      margin-top: var(--space-8);
+      padding: var(--space-5);
+      background: var(--card-bg);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+    }
+
+    .video-note p {
+      margin: 0 0 var(--space-3);
+    }
+
+    .video-note a {
+      color: var(--color-primary);
+      font-weight: var(--font-weight-semibold);
+      text-decoration: none;
+    }
+
+    .video-note a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding-top: var(--space-6);
+      }
+
+      .hero,
+      .phase,
+      .journal {
+        padding: var(--space-6);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="kicker">Primeiro passo da jornada</p>
+      <h1>Aula de Entrada Sadhana</h1>
+    </section>
+
+    <section class="phase">
+      <header class="phase-header">
+        <h2 class="phase-title">Boas-vindas e reconhecimento</h2>
+      </header>
+      <p>Bem-vinda ao seu espaço de reconexão.</p>
+      <p>Antes de explorar as aulas e práticas da comunidade, comece por aquilo que trouxe você até aqui.</p>
+      <p>Você chegou aqui porque sente: no seu dia existe cansaço, desconexão e uma sensação de piloto automático.</p>
+      <p>Existe um caminho simples para mudar isso, sem complicar sua rotina.</p>
+    </section>
+
+    <section class="phase">
+      <header class="phase-header">
+        <h2 class="phase-title">O que é Sadhana</h2>
+      </header>
+      <p>Esse nome é <strong>Sadhana</strong>.</p>
+      <p>Sadhana é uma palavra sânscrita que significa caminho para realizar algo. No yoga, é uma prática diária de presença.</p>
+      <p>Sadhana não é performance. Não é yoga perfeito. Não é postura complicada.</p>
+      <p>Sadhana é voltar para si mesma, todos os dias, mesmo que por poucos minutos, com presença e intenção.</p>
+      <p>Quando você faz Sadhana, você transforma a rotina corrida em caminho de aprendizagem e reconexão.</p>
+    </section>
+
+    <section class="phase">
+      <header class="phase-header">
+        <h2 class="phase-title">Por que isso funciona na vida real</h2>
+      </header>
+      <p>Imagine ter 5 minutos por dia totalmente presentes com você mesma.</p>
+      <p>Não é virar a vida de cabeça para baixo. É abrir um espaço pequeno e intencional.</p>
+      <p>Consistência pequena transforma mais do que intensidade ocasional.</p>
+      <p>Se você falhar um dia e voltar no outro, voltar já é ser constante. Sem culpa.</p>
+      <p>A sua vida real é o tapete. O caos não é obstáculo. É material de prática.</p>
+    </section>
+
+    <section class="phase">
+      <header class="phase-header">
+        <h2 class="phase-title">Prática guiada de presença</h2>
+      </header>
+      <p>Faça uma pequena pausa antes de continuar a leitura.</p>
+      <p>Sente-se de um jeito confortável, do jeito que estiver. Não precisa de tapete nem roupa especial.</p>
+      <p>Respire fundo 3 vezes, soltando o ar devagar.</p>
+      <p>Depois, se pergunte com calma: <strong>como eu quero me sentir nos próximos dias?</strong></p>
+      <p>Guarde a resposta. Essa intenção já é o começo do seu Sadhana.</p>
+    </section>
+
+    <section class="phase">
+      <header class="phase-header">
+        <h2 class="phase-title">Seu desafio de 7 dias</h2>
+      </header>
+      <p>Agora vem a parte prática: escolha <strong>1 ritual</strong> e pratique por <strong>7 dias</strong>.</p>
+      <p>Cada ritual leva de 3 a 5 minutos, em momentos reais do seu dia.</p>
+
+      <div class="ritual-grid">
+        <article class="ritual">
+          <h4>1. O Despertar</h4>
+          <p>Ao acordar, antes do celular. Sente na beira da cama, respire e pergunte: "Como eu quero me sentir hoje?"</p>
+          <p><strong>Resultado:</strong> conexão com seu corpo antes da pressão do dia.</p>
+        </article>
+        <article class="ritual">
+          <h4>2. A Transição</h4>
+          <p>No intervalo entre atividades. Pare tudo, alongue o pescoço lentamente e respire sentindo o movimento.</p>
+          <p><strong>Resultado:</strong> quebra do ciclo de estresse.</p>
+        </article>
+        <article class="ritual">
+          <h4>3. O Nutrir</h4>
+          <p>Enquanto toma café, água ou chá. Sinta a temperatura, respire o aroma e beba devagar.</p>
+          <p><strong>Resultado:</strong> presença em algo que você já faz.</p>
+        </article>
+        <article class="ritual">
+          <h4>4. O Purificar</h4>
+          <p>Na louça, roupa ou limpeza. Sincronize respiração e movimento com atenção.</p>
+          <p><strong>Resultado:</strong> tarefa comum vira ritual meditativo.</p>
+        </article>
+        <article class="ritual">
+          <h4>5. O Encerrar</h4>
+          <p>Na cama, antes de dormir. Relembre o dia sem julgamento, respire fundo e solte.</p>
+          <p><strong>Resultado:</strong> integração do dia e descanso mais profundo.</p>
+        </article>
+      </div>
+
+      <p>Escolha um ritual e mantenha por 7 dias. Se falhar um dia, volte no outro. Sem culpa.</p>
+      <p>Depois, registre como você se sentiu e acompanhe sua evolução ao longo do tempo.</p>
+    </section>
+
+    <section class="journal">
+      <h3>Registro de evolução</h3>
+      <p>Escreva como você se sente hoje e como quer se sentir depois de construir seu Sadhana.</p>
+      <p class="save-warning"><strong>Aviso:</strong> este espaço não salva automaticamente. Escreva e salve no bloco de notas/caderno (ou tire print) para acompanhar sua evolução.</p>
+
+      <div class="journal-grid">
+        <div class="prompt">
+          <label for="hoje">Como você se sente hoje?</label>
+          <textarea id="hoje" placeholder="Ex.: cansada, acelerada, desconectada..."></textarea>
+        </div>
+        <div class="prompt">
+          <label for="meta">Como você quer se sentir?</label>
+          <textarea id="meta" placeholder="Ex.: mais presente, mais calma, mais centrada..."></textarea>
+        </div>
+        <div class="prompt">
+          <label for="d7">Daqui 7 dias: o que mudou?</label>
+          <textarea id="d7"></textarea>
+        </div>
+        <div class="prompt">
+          <label for="d30">Daqui 30 dias: o que mudou?</label>
+          <textarea id="d30"></textarea>
+        </div>
+        <div class="prompt">
+          <label for="d60">Daqui 60 dias: o que mudou?</label>
+          <textarea id="d60"></textarea>
+        </div>
+        <div class="prompt">
+          <label for="d90">Daqui 90 dias: o que mudou?</label>
+          <textarea id="d90"></textarea>
+        </div>
+      </div>
+
+      <p class="reminder"><strong>Mostre seu Sadhana.</strong> Vou amar saber qual ritual você escolheu e como está se sentindo. Você pode compartilhar comigo por mensagem, no grupo, ou postar no Instagram e me marcar.</p>
+
+      <div class="video-note">
+        <p><strong>Ideia de ritual extra:</strong> sempre que perceber que está fazendo tarefas comuns com velocidade, pare e refaça lentamente.</p>
+        <p>Referência em vídeo: <a href="https://x.com/itsme_urstruly/status/2019409071900938544?s=46" target="_blank" rel="noopener noreferrer">abrir inspiração de ritual</a></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

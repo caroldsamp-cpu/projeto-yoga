@@ -1,29 +1,29 @@
-# 🧘 Setup: Logo Gaby na Página Mente Leve
+﻿# ðŸ§˜ Setup: Logo Gaby na PÃ¡gina Mente Leve
 
-## Versões Criadas
+## VersÃµes Criadas
 
-1. **`index-yoga-light.html`** ✨ (Com SVG da logo integrado)
+1. **`index-yoga-light.html`** âœ¨ (Com SVG da logo integrado)
    - Logo em SVG simplificado dentro do HTML
-   - Pronto para usar, sem dependências
-   - Funcionará offline
+   - Pronto para usar, sem dependÃªncias
+   - FuncionarÃ¡ offline
 
-2. **`index-yoga-light-com-logo.html`** 📷 (Para sua logo real)
+2. **`index-yoga-light-com-logo.html`** ðŸ“· (Para sua logo real)
    - Preparado para sua logo PNG/SVG real
    - Muda o arquivo em 1 linha
    - Melhor qualidade visual
 
 ---
 
-## 🚀 Como Usar a Logo Real da Gaby
+## ðŸš€ Como Usar a Logo Real da Gaby
 
-### Opção 1: Usar a Logo PNG (Recomendado)
+### OpÃ§Ã£o 1: Usar a Logo PNG (Recomendado)
 
 1. **Salve a logo na mesma pasta:**
    ```
-   C:\Users\carol\OneDrive\SYSTEM - CLAUDE CODE\projeto-yoga\docs\leads\
-   ├── index-yoga-light-com-logo.html
-   ├── logo-gaby.png          ← Salve aqui
-   └── ...
+   C:\Users\carol\code\PROJETOS\projeto-yoga\docs\leads\
+   â”œâ”€â”€ index-yoga-light-com-logo.html
+   â”œâ”€â”€ logo-gaby.png          â† Salve aqui
+   â””â”€â”€ ...
    ```
 
 2. **Abra `index-yoga-light-com-logo.html` e encontre esta linha:**
@@ -33,27 +33,27 @@
 
 3. **Se a logo tiver um nome diferente, troque:**
    ```html
-   <!-- Se é logo-gaby-drummond.png -->
+   <!-- Se Ã© logo-gaby-drummond.png -->
    <img src="logo-gaby-drummond.png" alt="Gaby Drummond Yoga" />
 
-   <!-- Se está em uma pasta específica -->
+   <!-- Se estÃ¡ em uma pasta especÃ­fica -->
    <img src="../assets/logo-gaby.png" alt="Gaby Drummond Yoga" />
    ```
 
-### Opção 2: Usar Logo de URL (Se hospedada online)
+### OpÃ§Ã£o 2: Usar Logo de URL (Se hospedada online)
 
 ```html
-<!-- Se sua logo está na web -->
+<!-- Se sua logo estÃ¡ na web -->
 <img src="https://seu-site.com/logo-gaby.png" alt="Gaby Drummond Yoga" />
 ```
 
-### Opção 3: Converter Logo para Base64 (Sem arquivo externo)
+### OpÃ§Ã£o 3: Converter Logo para Base64 (Sem arquivo externo)
 
-Se quer que tudo funcione sem dependências externas:
+Se quer que tudo funcione sem dependÃªncias externas:
 
 1. Abra: https://www.base64-image.de/
 2. Upload sua logo
-3. Copie o código base64
+3. Copie o cÃ³digo base64
 4. Cole assim:
 
 ```html
@@ -62,32 +62,32 @@ Se quer que tudo funcione sem dependências externas:
 
 ---
 
-## 🎨 Estilos da Logo
+## ðŸŽ¨ Estilos da Logo
 
-A logo está dentro da bolinha com esses estilos:
+A logo estÃ¡ dentro da bolinha com esses estilos:
 
 ```css
 .nav-logo {
   width: 50px;
   height: 50px;
   background: var(--bg-card);        /* Fundo branco/claro */
-  border-radius: 50%;                /* Círculo */
+  border-radius: 50%;                /* CÃ­rculo */
   border: 1px solid var(--border-default);
-  overflow: hidden;                  /* Recorta a logo no círculo */
+  overflow: hidden;                  /* Recorta a logo no cÃ­rculo */
   box-shadow: var(--shadow-md);      /* Sombra suave */
 }
 
 nav .nav-logo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;              /* Encaixa mantendo proporção */
-  padding: 4px;                     /* Espaço dentro do círculo */
+  object-fit: contain;              /* Encaixa mantendo proporÃ§Ã£o */
+  padding: 4px;                     /* EspaÃ§o dentro do cÃ­rculo */
 }
 ```
 
 ---
 
-## 📐 Dica: Tamanho da Logo
+## ðŸ“ Dica: Tamanho da Logo
 
 Para melhor resultado:
 - **Tamanho recomendado:** 200x200px (ou maior, sem problema)
@@ -98,27 +98,27 @@ Se a sua logo tem fundo colorido, pode deixar mesmo assim que o CSS cuida do enc
 
 ---
 
-## 🔄 Comparação: Versões Light
+## ðŸ”„ ComparaÃ§Ã£o: VersÃµes Light
 
 | Aspecto | index-yoga-light.html | index-yoga-light-com-logo.html |
 |---------|----------------------|--------------------------------|
-| **Background** | Branco ✅ | Branco ✅ |
+| **Background** | Branco âœ… | Branco âœ… |
 | **Logo** | SVG inline | Arquivo externo |
 | **Tamanho arquivo** | Menor | Depende da logo |
-| **Requer arquivo externo** | Não | Sim (logo) |
+| **Requer arquivo externo** | NÃ£o | Sim (logo) |
 | **Qualidade logo** | Boa (SVG) | Melhor (original) |
-| **Pronto para usar** | Sim ✅ | Requer setup |
+| **Pronto para usar** | Sim âœ… | Requer setup |
 
 ---
 
-## 🎯 Passo a Passo Completo
+## ðŸŽ¯ Passo a Passo Completo
 
-### Se sua logo é PNG e está em "Yoga Gaby - DRIVE"
+### Se sua logo Ã© PNG e estÃ¡ em "Yoga Gaby - DRIVE"
 
 1. **Copie a logo para a pasta leads:**
    ```
    De: C:\Users\carol\OneDrive\Yoga Gaby - DRIVE\Identidade visual - Yoga\
-   Para: C:\Users\carol\OneDrive\SYSTEM - CLAUDE CODE\projeto-yoga\docs\leads\
+   Para: C:\Users\carol\code\PROJETOS\projeto-yoga\docs\leads\
    ```
 
 2. **Abra `index-yoga-light-com-logo.html`**
@@ -136,27 +136,27 @@ Se a sua logo tem fundo colorido, pode deixar mesmo assim que o CSS cuida do enc
 
 5. **Salve (Ctrl+S)**
 
-6. **Abra no browser e veja funcionando! 🎉**
+6. **Abra no browser e veja funcionando! ðŸŽ‰**
 
 ---
 
-## ✨ Resultado Esperado
+## âœ¨ Resultado Esperado
 
 ```
-┌─────────────────────────────────────────┐
-│  ✧ Mente Leve          🧘 [Logo Gaby] │  ← Logo em círculo
-├─────────────────────────────────────────┤
-│                                         │
-│         Seu Ritual Diário de Presença   │
-│                                         │
-│              [Formulário]               │
-│                                         │
-└─────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚  âœ§ Mente Leve          ðŸ§˜ [Logo Gaby] â”‚  â† Logo em cÃ­rculo
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚                                         â”‚
+â”‚         Seu Ritual DiÃ¡rio de PresenÃ§a   â”‚
+â”‚                                         â”‚
+â”‚              [FormulÃ¡rio]               â”‚
+â”‚                                         â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ---
 
-## 🎨 Se Quiser Customizar Mais
+## ðŸŽ¨ Se Quiser Customizar Mais
 
 ### Mudar tamanho da logo:
 ```css
@@ -182,49 +182,49 @@ nav .nav-logo {
 
 ---
 
-## 🐛 Se a Logo Não Aparecer
+## ðŸ› Se a Logo NÃ£o Aparecer
 
 1. **Verificar nome do arquivo:**
-   - Windows é case-sensitive em alguns contextos
-   - Use exatamente o nome: `logo-gaby.png` ≠ `logo-Gaby.PNG`
+   - Windows Ã© case-sensitive em alguns contextos
+   - Use exatamente o nome: `logo-gaby.png` â‰  `logo-Gaby.PNG`
 
 2. **Verificar se o arquivo existe:**
    ```
-   ✅ Logo deve estar em:
-   C:\Users\carol\OneDrive\SYSTEM - CLAUDE CODE\projeto-yoga\docs\leads\logo-gaby.png
+   âœ… Logo deve estar em:
+   C:\Users\carol\code\PROJETOS\projeto-yoga\docs\leads\logo-gaby.png
    ```
 
 3. **Abrir o console do browser:**
    - Pressione F12
-   - Vá em "Console"
+   - VÃ¡ em "Console"
    - Se houver erro como "404 logo-gaby.png not found"
-   - Significa que o arquivo não está no lugar certo
+   - Significa que o arquivo nÃ£o estÃ¡ no lugar certo
 
-4. **Solução rápida:**
+4. **SoluÃ§Ã£o rÃ¡pida:**
    - Copie o caminho completo na hora:
    ```html
-   <img src="C:\Users\carol\OneDrive\SYSTEM - CLAUDE CODE\projeto-yoga\docs\leads\logo-gaby.png" alt="Gaby Drummond Yoga" />
+   <img src="C:\Users\carol\code\PROJETOS\projeto-yoga\docs\leads\logo-gaby.png" alt="Gaby Drummond Yoga" />
    ```
 
 ---
 
-## 🌍 Qual Versão Escolher?
+## ðŸŒ Qual VersÃ£o Escolher?
 
 ### Use `index-yoga-light.html` se:
-- ✅ Quer algo pronto agora
-- ✅ Não quer lidar com arquivos
-- ✅ Quer funcionar offline
-- ✅ Logo SVG é bom o suficiente
+- âœ… Quer algo pronto agora
+- âœ… NÃ£o quer lidar com arquivos
+- âœ… Quer funcionar offline
+- âœ… Logo SVG Ã© bom o suficiente
 
 ### Use `index-yoga-light-com-logo.html` se:
-- ✅ Tem a logo Gaby real
-- ✅ Quer máxima qualidade
-- ✅ Logo é em alta resolução
-- ✅ Quer identidade visual completa
+- âœ… Tem a logo Gaby real
+- âœ… Quer mÃ¡xima qualidade
+- âœ… Logo Ã© em alta resoluÃ§Ã£o
+- âœ… Quer identidade visual completa
 
 ---
 
-## 📱 Cores da Página (Light Theme)
+## ðŸ“± Cores da PÃ¡gina (Light Theme)
 
 ```css
 /* Branco acolhedor */
@@ -233,7 +233,7 @@ nav .nav-logo {
 /* Azul Gaby (principal) */
 --text-primary: #1B5A6B
 
-/* Azul claro (secundário) */
+/* Azul claro (secundÃ¡rio) */
 --accent-blue-light: #5ECFD8
 
 /* Verde Sadhana */
@@ -245,7 +245,7 @@ nav .nav-logo {
 
 ---
 
-## 🚀 Próximos Passos
+## ðŸš€ PrÃ³ximos Passos
 
 - [ ] Copie a logo para a pasta
 - [ ] Abra `index-yoga-light-com-logo.html`
@@ -257,5 +257,6 @@ nav .nav-logo {
 
 Generated: 2026-02-14
 Theme: Light + Yoga Acolhedor
-Background: Branco ✨
-Logo: Gaby Drummond Integration Ready 🧘
+Background: Branco âœ¨
+Logo: Gaby Drummond Integration Ready ðŸ§˜
+

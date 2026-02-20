@@ -1,0 +1,897 @@
+﻿ M .agent/workflows/squad-creator.md
+ M .aios-core/cli/commands/generate/index.js
+ M .aios-core/cli/commands/manifest/index.js
+ M .aios-core/cli/commands/manifest/regenerate.js
+ M .aios-core/cli/commands/manifest/validate.js
+ M .aios-core/cli/commands/mcp/add.js
+ M .aios-core/cli/commands/mcp/index.js
+ M .aios-core/cli/commands/mcp/link.js
+ M .aios-core/cli/commands/mcp/setup.js
+ M .aios-core/cli/commands/mcp/status.js
+ M .aios-core/cli/commands/metrics/cleanup.js
+ M .aios-core/cli/commands/metrics/index.js
+ M .aios-core/cli/commands/metrics/record.js
+ M .aios-core/cli/commands/metrics/seed.js
+ M .aios-core/cli/commands/metrics/show.js
+ M .aios-core/cli/commands/migrate/analyze.js
+ M .aios-core/cli/commands/migrate/backup.js
+ M .aios-core/cli/commands/migrate/execute.js
+ M .aios-core/cli/commands/migrate/index.js
+ M .aios-core/cli/commands/migrate/rollback.js
+ M .aios-core/cli/commands/migrate/update-imports.js
+ M .aios-core/cli/commands/migrate/validate.js
+ M .aios-core/cli/commands/qa/index.js
+ M .aios-core/cli/commands/qa/run.js
+ M .aios-core/cli/commands/qa/status.js
+ M .aios-core/cli/commands/validate/index.js
+ M .aios-core/cli/commands/workers/formatters/info-formatter.js
+ M .aios-core/cli/commands/workers/formatters/list-table.js
+ M .aios-core/cli/commands/workers/formatters/list-tree.js
+ M .aios-core/cli/commands/workers/index.js
+ M .aios-core/cli/commands/workers/info.js
+ M .aios-core/cli/commands/workers/list.js
+ M .aios-core/cli/commands/workers/search-filters.js
+ M .aios-core/cli/commands/workers/search-keyword.js
+ M .aios-core/cli/commands/workers/search-semantic.js
+ M .aios-core/cli/commands/workers/search.js
+ M .aios-core/cli/commands/workers/utils/pagination.js
+ M .aios-core/cli/index.js
+ M .aios-core/cli/utils/output-formatter-cli.js
+ M .aios-core/cli/utils/score-calculator.js
+ M .aios-core/core-config.yaml
+ M .aios-core/core/README.md
+ M .aios-core/core/config/config-cache.js
+ M .aios-core/core/config/config-loader.js
+ M .aios-core/core/docs/SHARD-TRANSLATION-GUIDE.md
+ M .aios-core/core/docs/component-creation-guide.md
+ M .aios-core/core/docs/session-update-pattern.md
+ M .aios-core/core/docs/template-syntax.md
+ M .aios-core/core/docs/troubleshooting-guide.md
+ M .aios-core/core/elicitation/agent-elicitation.js
+ M .aios-core/core/elicitation/elicitation-engine.js
+ M .aios-core/core/elicitation/session-manager.js
+ M .aios-core/core/elicitation/task-elicitation.js
+ M .aios-core/core/elicitation/workflow-elicitation.js
+ M .aios-core/core/events/dashboard-emitter.js
+ M .aios-core/core/events/index.js
+ M .aios-core/core/events/types.js
+ M .aios-core/core/execution/autonomous-build-loop.js
+ M .aios-core/core/execution/build-orchestrator.js
+ M .aios-core/core/execution/build-state-manager.js
+ M .aios-core/core/execution/context-injector.js
+ M .aios-core/core/execution/parallel-monitor.js
+ M .aios-core/core/execution/rate-limit-manager.js
+ M .aios-core/core/execution/result-aggregator.js
+ M .aios-core/core/execution/semantic-merge-engine.js
+ M .aios-core/core/execution/subagent-dispatcher.js
+ M .aios-core/core/execution/wave-executor.js
+ M .aios-core/core/health-check/base-check.js
+ M .aios-core/core/health-check/check-registry.js
+ M .aios-core/core/health-check/checks/deployment/build-config.js
+ M .aios-core/core/health-check/checks/deployment/ci-config.js
+ M .aios-core/core/health-check/checks/deployment/deployment-readiness.js
+ M .aios-core/core/health-check/checks/deployment/docker-config.js
+ M .aios-core/core/health-check/checks/deployment/env-file.js
+ M .aios-core/core/health-check/checks/deployment/index.js
+ M .aios-core/core/health-check/checks/index.js
+ M .aios-core/core/health-check/checks/local/disk-space.js
+ M .aios-core/core/health-check/checks/local/environment-vars.js
+ M .aios-core/core/health-check/checks/local/git-install.js
+ M .aios-core/core/health-check/checks/local/ide-detection.js
+ M .aios-core/core/health-check/checks/local/index.js
+ M .aios-core/core/health-check/checks/local/memory.js
+ M .aios-core/core/health-check/checks/local/network.js
+ M .aios-core/core/health-check/checks/local/npm-install.js
+ M .aios-core/core/health-check/checks/local/shell-environment.js
+ M .aios-core/core/health-check/checks/project/agent-config.js
+ M .aios-core/core/health-check/checks/project/aios-directory.js
+ M .aios-core/core/health-check/checks/project/dependencies.js
+ M .aios-core/core/health-check/checks/project/framework-config.js
+ M .aios-core/core/health-check/checks/project/index.js
+ M .aios-core/core/health-check/checks/project/node-version.js
+ M .aios-core/core/health-check/checks/project/package-json.js
+ M .aios-core/core/health-check/checks/project/task-definitions.js
+ M .aios-core/core/health-check/checks/project/workflow-dependencies.js
+ M .aios-core/core/health-check/checks/repository/branch-protection.js
+ M .aios-core/core/health-check/checks/repository/commit-history.js
+ M .aios-core/core/health-check/checks/repository/conflicts.js
+ M .aios-core/core/health-check/checks/repository/git-repo.js
+ M .aios-core/core/health-check/checks/repository/git-status.js
+ M .aios-core/core/health-check/checks/repository/gitignore.js
+ M .aios-core/core/health-check/checks/repository/index.js
+ M .aios-core/core/health-check/checks/repository/large-files.js
+ M .aios-core/core/health-check/checks/repository/lockfile-integrity.js
+ M .aios-core/core/health-check/checks/services/api-endpoints.js
+ M .aios-core/core/health-check/checks/services/claude-code.js
+ M .aios-core/core/health-check/checks/services/github-cli.js
+ M .aios-core/core/health-check/checks/services/index.js
+ M .aios-core/core/health-check/checks/services/mcp-integration.js
+ M .aios-core/core/health-check/engine.js
+ M .aios-core/core/health-check/healers/backup-manager.js
+ M .aios-core/core/health-check/healers/index.js
+ M .aios-core/core/health-check/index.js
+ M .aios-core/core/health-check/reporters/console.js
+ M .aios-core/core/health-check/reporters/index.js
+ M .aios-core/core/health-check/reporters/json.js
+ M .aios-core/core/health-check/reporters/markdown.js
+ M .aios-core/core/ideation/ideation-engine.js
+ M .aios-core/core/index.esm.js
+ M .aios-core/core/index.js
+ M .aios-core/core/manifest/manifest-generator.js
+ M .aios-core/core/manifest/manifest-validator.js
+ M .aios-core/core/mcp/config-migrator.js
+ M .aios-core/core/mcp/global-config-manager.js
+ M .aios-core/core/mcp/index.js
+ M .aios-core/core/mcp/os-detector.js
+ M .aios-core/core/mcp/symlink-manager.js
+ M .aios-core/core/memory/gotchas-memory.js
+ M .aios-core/core/migration/migration-config.yaml
+ M .aios-core/core/migration/module-mapping.yaml
+ M .aios-core/core/orchestration/agent-invoker.js
+ M .aios-core/core/orchestration/checklist-runner.js
+ M .aios-core/core/orchestration/cli-commands.js
+ M .aios-core/core/orchestration/condition-evaluator.js
+ M .aios-core/core/orchestration/context-manager.js
+ M .aios-core/core/orchestration/dashboard-integration.js
+ M .aios-core/core/orchestration/executors/epic-3-executor.js
+ M .aios-core/core/orchestration/executors/epic-4-executor.js
+ M .aios-core/core/orchestration/executors/epic-5-executor.js
+ M .aios-core/core/orchestration/executors/epic-6-executor.js
+ M .aios-core/core/orchestration/executors/epic-executor.js
+ M .aios-core/core/orchestration/executors/index.js
+ M .aios-core/core/orchestration/gate-evaluator.js
+ M .aios-core/core/orchestration/index.js
+ M .aios-core/core/orchestration/master-orchestrator.js
+ M .aios-core/core/orchestration/parallel-executor.js
+ M .aios-core/core/orchestration/recovery-handler.js
+ M .aios-core/core/orchestration/skill-dispatcher.js
+ M .aios-core/core/orchestration/subagent-prompt-builder.js
+ M .aios-core/core/orchestration/tech-stack-detector.js
+ M .aios-core/core/orchestration/workflow-orchestrator.js
+ M .aios-core/core/permissions/__tests__/permission-mode.test.js
+ M .aios-core/core/permissions/index.js
+ M .aios-core/core/permissions/operation-guard.js
+ M .aios-core/core/permissions/permission-mode.js
+ M .aios-core/core/quality-gates/base-layer.js
+ M .aios-core/core/quality-gates/checklist-generator.js
+ M .aios-core/core/quality-gates/focus-area-recommender.js
+ M .aios-core/core/quality-gates/human-review-orchestrator.js
+ M .aios-core/core/quality-gates/layer1-precommit.js
+ M .aios-core/core/quality-gates/layer2-pr-automation.js
+ M .aios-core/core/quality-gates/layer3-human-review.js
+ M .aios-core/core/quality-gates/notification-manager.js
+ M .aios-core/core/quality-gates/quality-gate-config.yaml
+ M .aios-core/core/quality-gates/quality-gate-manager.js
+ M .aios-core/core/registry/README.md
+ M .aios-core/core/registry/build-registry.js
+ M .aios-core/core/registry/registry-loader.js
+ M .aios-core/core/registry/service-registry.json
+ M .aios-core/core/registry/validate-registry.js
+ M .aios-core/core/session/context-detector.js
+ M .aios-core/core/session/context-loader.js
+ M .aios-core/core/utils/output-formatter.js
+ M .aios-core/core/utils/security-utils.js
+ M .aios-core/core/utils/yaml-validator.js
+ M .aios-core/data/agent-config-requirements.yaml
+ M .aios-core/data/aios-kb.md
+ M .aios-core/data/learned-patterns.yaml
+ M .aios-core/data/tech-presets/_template.md
+ M .aios-core/data/tech-presets/nextjs-react.md
+ M .aios-core/data/technical-preferences.md
+ M .aios-core/data/workflow-patterns.yaml
+ M .aios-core/data/workflow-state-schema.yaml
+ M .aios-core/development/README.md
+ M .aios-core/development/agent-teams/team-all.yaml
+ M .aios-core/development/agent-teams/team-fullstack.yaml
+ M .aios-core/development/agent-teams/team-ide-minimal.yaml
+ M .aios-core/development/agent-teams/team-no-ui.yaml
+ M .aios-core/development/agent-teams/team-qa-focused.yaml
+ M .aios-core/development/agents/aios-master.md
+ M .aios-core/development/agents/analyst.md
+ M .aios-core/development/agents/architect.md
+ M .aios-core/development/agents/data-engineer.md
+ M .aios-core/development/agents/dev.md
+ M .aios-core/development/agents/devops.md
+ M .aios-core/development/agents/pm.md
+ M .aios-core/development/agents/po.md
+ M .aios-core/development/agents/qa.md
+ M .aios-core/development/agents/sm.md
+ M .aios-core/development/agents/squad-creator.md
+ M .aios-core/development/agents/ux-design-expert.md
+ M .aios-core/development/checklists/self-critique-checklist.md
+ M .aios-core/development/scripts/agent-assignment-resolver.js
+ M .aios-core/development/scripts/agent-config-loader.js
+ M .aios-core/development/scripts/agent-exit-hooks.js
+ M .aios-core/development/scripts/apply-inline-greeting-all-agents.js
+ M .aios-core/development/scripts/audit-agent-config.js
+ M .aios-core/development/scripts/backlog-manager.js
+ M .aios-core/development/scripts/batch-update-agents-session-context.js
+ M .aios-core/development/scripts/decision-context.js
+ M .aios-core/development/scripts/decision-log-generator.js
+ M .aios-core/development/scripts/decision-log-indexer.js
+ M .aios-core/development/scripts/decision-recorder.js
+ M .aios-core/development/scripts/dev-context-loader.js
+ M .aios-core/development/scripts/generate-greeting.js
+ M .aios-core/development/scripts/greeting-builder.js
+ M .aios-core/development/scripts/greeting-config-cli.js
+ M .aios-core/development/scripts/greeting-preference-manager.js
+ M .aios-core/development/scripts/migrate-task-to-v2.js
+ M .aios-core/development/scripts/squad/README.md
+ M .aios-core/development/scripts/squad/index.js
+ M .aios-core/development/scripts/squad/squad-analyzer.js
+ M .aios-core/development/scripts/squad/squad-designer.js
+ M .aios-core/development/scripts/squad/squad-downloader.js
+ M .aios-core/development/scripts/squad/squad-extender.js
+ M .aios-core/development/scripts/squad/squad-generator.js
+ M .aios-core/development/scripts/squad/squad-loader.js
+ M .aios-core/development/scripts/squad/squad-migrator.js
+ M .aios-core/development/scripts/squad/squad-publisher.js
+ M .aios-core/development/scripts/squad/squad-validator.js
+ M .aios-core/development/scripts/story-index-generator.js
+ M .aios-core/development/scripts/story-manager.js
+ M .aios-core/development/scripts/story-update-hook.js
+ M .aios-core/development/scripts/task-identifier-resolver.js
+ M .aios-core/development/scripts/test-greeting-system.js
+ M .aios-core/development/scripts/validate-task-v2.js
+ M .aios-core/development/scripts/verify-workflow-gaps.js
+ M .aios-core/development/scripts/workflow-navigator.js
+ M .aios-core/development/scripts/workflow-state-manager.js
+ M .aios-core/development/scripts/workflow-validator.js
+ M .aios-core/development/tasks/add-mcp.md
+ M .aios-core/development/tasks/advanced-elicitation.md
+ M .aios-core/development/tasks/analyst-facilitate-brainstorming.md
+ M .aios-core/development/tasks/analyze-brownfield.md
+ M .aios-core/development/tasks/analyze-cross-artifact.md
+ M .aios-core/development/tasks/analyze-framework.md
+ M .aios-core/development/tasks/analyze-performance.md
+ M .aios-core/development/tasks/analyze-project-structure.md
+ M .aios-core/development/tasks/apply-qa-fixes.md
+ M .aios-core/development/tasks/architect-analyze-impact.md
+ M .aios-core/development/tasks/audit-codebase.md
+ M .aios-core/development/tasks/audit-tailwind-config.md
+ M .aios-core/development/tasks/audit-utilities.md
+ M .aios-core/development/tasks/bootstrap-shadcn-library.md
+ M .aios-core/development/tasks/brownfield-create-epic.md
+ M .aios-core/development/tasks/brownfield-create-story.md
+ M .aios-core/development/tasks/build-autonomous.md
+ M .aios-core/development/tasks/build-component.md
+ M .aios-core/development/tasks/build-resume.md
+ M .aios-core/development/tasks/build-status.md
+ M .aios-core/development/tasks/build.md
+ M .aios-core/development/tasks/calculate-roi.md
+ M .aios-core/development/tasks/check-docs-links.md
+ M .aios-core/development/tasks/ci-cd-configuration.md
+ M .aios-core/development/tasks/cleanup-utilities.md
+ M .aios-core/development/tasks/cleanup-worktrees.md
+ M .aios-core/development/tasks/collaborative-edit.md
+ M .aios-core/development/tasks/compose-molecule.md
+ M .aios-core/development/tasks/consolidate-patterns.md
+ M .aios-core/development/tasks/correct-course.md
+ M .aios-core/development/tasks/create-agent.md
+ M .aios-core/development/tasks/create-brownfield-story.md
+ M .aios-core/development/tasks/create-deep-research-prompt.md
+ M .aios-core/development/tasks/create-doc.md
+ M .aios-core/development/tasks/create-next-story.md
+ M .aios-core/development/tasks/create-service.md
+ M .aios-core/development/tasks/create-suite.md
+ M .aios-core/development/tasks/create-task.md
+ M .aios-core/development/tasks/create-workflow.md
+ M .aios-core/development/tasks/create-worktree.md
+ M .aios-core/development/tasks/db-analyze-hotpaths.md
+ M .aios-core/development/tasks/db-apply-migration.md
+ M .aios-core/development/tasks/db-bootstrap.md
+ M .aios-core/development/tasks/db-domain-modeling.md
+ M .aios-core/development/tasks/db-dry-run.md
+ M .aios-core/development/tasks/db-env-check.md
+ M .aios-core/development/tasks/db-explain.md
+ M .aios-core/development/tasks/db-impersonate.md
+ M .aios-core/development/tasks/db-load-csv.md
+ M .aios-core/development/tasks/db-policy-apply.md
+ M .aios-core/development/tasks/db-rls-audit.md
+ M .aios-core/development/tasks/db-rollback.md
+ M .aios-core/development/tasks/db-run-sql.md
+ M .aios-core/development/tasks/db-schema-audit.md
+ M .aios-core/development/tasks/db-seed.md
+ M .aios-core/development/tasks/db-smoke-test.md
+ M .aios-core/development/tasks/db-snapshot.md
+ M .aios-core/development/tasks/db-supabase-setup.md
+ M .aios-core/development/tasks/db-verify-order.md
+ M .aios-core/development/tasks/deprecate-component.md
+ M .aios-core/development/tasks/dev-apply-qa-fixes.md
+ M .aios-core/development/tasks/dev-backlog-debt.md
+ M .aios-core/development/tasks/dev-develop-story.md
+ M .aios-core/development/tasks/dev-improve-code-quality.md
+ M .aios-core/development/tasks/dev-optimize-performance.md
+ M .aios-core/development/tasks/dev-suggest-refactoring.md
+ M .aios-core/development/tasks/dev-validate-next-story.md
+ M .aios-core/development/tasks/document-gotchas.md
+ M .aios-core/development/tasks/document-project.md
+ M .aios-core/development/tasks/environment-bootstrap.md
+ M .aios-core/development/tasks/execute-checklist.md
+ M .aios-core/development/tasks/export-design-tokens-dtcg.md
+ M .aios-core/development/tasks/extend-pattern.md
+ M .aios-core/development/tasks/extract-patterns.md
+ M .aios-core/development/tasks/extract-tokens.md
+ M .aios-core/development/tasks/facilitate-brainstorming-session.md
+ M .aios-core/development/tasks/generate-ai-frontend-prompt.md
+ M .aios-core/development/tasks/generate-documentation.md
+ M .aios-core/development/tasks/generate-migration-strategy.md
+ M .aios-core/development/tasks/generate-shock-report.md
+ M .aios-core/development/tasks/github-devops-github-pr-automation.md
+ M .aios-core/development/tasks/github-devops-pre-push-quality-gate.md
+ M .aios-core/development/tasks/github-devops-repository-cleanup.md
+ M .aios-core/development/tasks/github-devops-version-management.md
+ M .aios-core/development/tasks/gotcha.md
+ M .aios-core/development/tasks/gotchas.md
+ M .aios-core/development/tasks/health-check.yaml
+ M .aios-core/development/tasks/improve-self.md
+ M .aios-core/development/tasks/index-docs.md
+ M .aios-core/development/tasks/init-project-status.md
+ M .aios-core/development/tasks/kb-mode-interaction.md
+ M .aios-core/development/tasks/learn-patterns.md
+ M .aios-core/development/tasks/list-mcps.md
+ M .aios-core/development/tasks/list-worktrees.md
+ M .aios-core/development/tasks/mcp-workflow.md
+ M .aios-core/development/tasks/merge-worktree.md
+ M .aios-core/development/tasks/modify-agent.md
+ M .aios-core/development/tasks/modify-task.md
+ M .aios-core/development/tasks/modify-workflow.md
+ M .aios-core/development/tasks/next.md
+ M .aios-core/development/tasks/orchestrate-resume.md
+ M .aios-core/development/tasks/orchestrate-status.md
+ M .aios-core/development/tasks/orchestrate-stop.md
+ M .aios-core/development/tasks/orchestrate.md
+ M .aios-core/development/tasks/patterns.md
+ M .aios-core/development/tasks/plan-create-context.md
+ M .aios-core/development/tasks/plan-create-implementation.md
+ M .aios-core/development/tasks/plan-execute-subtask.md
+ M .aios-core/development/tasks/po-backlog-add.md
+ M .aios-core/development/tasks/po-manage-story-backlog.md
+ M .aios-core/development/tasks/po-pull-story-from-clickup.md
+ M .aios-core/development/tasks/po-pull-story.md
+ M .aios-core/development/tasks/po-stories-index.md
+ M .aios-core/development/tasks/po-sync-story-to-clickup.md
+ M .aios-core/development/tasks/po-sync-story.md
+ M .aios-core/development/tasks/pr-automation.md
+ M .aios-core/development/tasks/propose-modification.md
+ M .aios-core/development/tasks/qa-backlog-add-followup.md
+ M .aios-core/development/tasks/qa-browser-console-check.md
+ M .aios-core/development/tasks/qa-create-fix-request.md
+ M .aios-core/development/tasks/qa-evidence-requirements.md
+ M .aios-core/development/tasks/qa-false-positive-detection.md
+ M .aios-core/development/tasks/qa-fix-issues.md
+ M .aios-core/development/tasks/qa-gate.md
+ M .aios-core/development/tasks/qa-generate-tests.md
+ M .aios-core/development/tasks/qa-library-validation.md
+ M .aios-core/development/tasks/qa-migration-validation.md
+ M .aios-core/development/tasks/qa-nfr-assess.md
+ M .aios-core/development/tasks/qa-review-build.md
+ M .aios-core/development/tasks/qa-review-proposal.md
+ M .aios-core/development/tasks/qa-review-story.md
+ M .aios-core/development/tasks/qa-risk-profile.md
+ M .aios-core/development/tasks/qa-run-tests.md
+ M .aios-core/development/tasks/qa-security-checklist.md
+ M .aios-core/development/tasks/qa-test-design.md
+ M .aios-core/development/tasks/qa-trace-requirements.md
+ M .aios-core/development/tasks/release-management.md
+ M .aios-core/development/tasks/remove-mcp.md
+ M .aios-core/development/tasks/remove-worktree.md
+ M .aios-core/development/tasks/run-design-system-pipeline.md
+ M .aios-core/development/tasks/run-workflow-engine.md
+ M .aios-core/development/tasks/run-workflow.md
+ M .aios-core/development/tasks/search-mcp.md
+ M .aios-core/development/tasks/security-audit.md
+ M .aios-core/development/tasks/security-scan.md
+ M .aios-core/development/tasks/setup-database.md
+ M .aios-core/development/tasks/setup-design-system.md
+ M .aios-core/development/tasks/setup-github.md
+ M .aios-core/development/tasks/setup-llm-routing.md
+ M .aios-core/development/tasks/setup-mcp-docker.md
+ M .aios-core/development/tasks/setup-project-docs.md
+ M .aios-core/development/tasks/shard-doc.md
+ M .aios-core/development/tasks/sm-create-next-story.md
+ M .aios-core/development/tasks/spec-assess-complexity.md
+ M .aios-core/development/tasks/spec-critique.md
+ M .aios-core/development/tasks/spec-gather-requirements.md
+ M .aios-core/development/tasks/spec-research-dependencies.md
+ M .aios-core/development/tasks/spec-write-spec.md
+ M .aios-core/development/tasks/squad-creator-analyze.md
+ M .aios-core/development/tasks/squad-creator-create.md
+ M .aios-core/development/tasks/squad-creator-design.md
+ M .aios-core/development/tasks/squad-creator-download.md
+ M .aios-core/development/tasks/squad-creator-extend.md
+ M .aios-core/development/tasks/squad-creator-list.md
+ M .aios-core/development/tasks/squad-creator-migrate.md
+ M .aios-core/development/tasks/squad-creator-publish.md
+ M .aios-core/development/tasks/squad-creator-sync-ide-command.md
+ M .aios-core/development/tasks/squad-creator-sync-synkra.md
+ M .aios-core/development/tasks/squad-creator-validate.md
+ M .aios-core/development/tasks/sync-documentation.md
+ M .aios-core/development/tasks/tailwind-upgrade.md
+ M .aios-core/development/tasks/test-as-user.md
+ M .aios-core/development/tasks/test-validation-task.md
+ M .aios-core/development/tasks/undo-last.md
+ M .aios-core/development/tasks/update-manifest.md
+ M .aios-core/development/tasks/ux-create-wireframe.md
+ M .aios-core/development/tasks/ux-ds-scan-artifact.md
+ M .aios-core/development/tasks/ux-user-research.md
+ M .aios-core/development/tasks/validate-next-story.md
+ M .aios-core/development/tasks/validate-tech-preset.md
+ M .aios-core/development/tasks/validate-workflow.md
+ M .aios-core/development/tasks/verify-subtask.md
+ M .aios-core/development/tasks/waves.md
+ M .aios-core/development/templates/aios-doc-template.md
+ M .aios-core/development/templates/service-template/jest.config.js
+ M .aios-core/development/templates/service-template/tsconfig.json
+ M .aios-core/development/templates/squad-template/README.md
+ M .aios-core/development/templates/squad-template/agents/example-agent.yaml
+ M .aios-core/development/templates/squad-template/package.json
+ M .aios-core/development/templates/squad-template/squad.yaml
+ M .aios-core/development/templates/squad-template/tasks/example-task.yaml
+ M .aios-core/development/templates/squad-template/templates/example-template.md
+ M .aios-core/development/templates/squad-template/tests/example-agent.test.js
+ M .aios-core/development/templates/squad-template/workflows/example-workflow.yaml
+ M .aios-core/development/templates/squad/agent-template.md
+ M .aios-core/development/templates/squad/checklist-template.md
+ M .aios-core/development/templates/squad/data-template.yaml
+ M .aios-core/development/templates/squad/script-template.js
+ M .aios-core/development/templates/squad/task-template.md
+ M .aios-core/development/templates/squad/template-template.md
+ M .aios-core/development/templates/squad/tool-template.js
+ M .aios-core/development/templates/squad/workflow-template.yaml
+ M .aios-core/development/templates/subagent-step-prompt.md
+ M .aios-core/development/workflows/README.md
+ M .aios-core/development/workflows/auto-worktree.yaml
+ M .aios-core/development/workflows/brownfield-discovery.yaml
+ M .aios-core/development/workflows/brownfield-fullstack.yaml
+ M .aios-core/development/workflows/brownfield-service.yaml
+ M .aios-core/development/workflows/brownfield-ui.yaml
+ M .aios-core/development/workflows/design-system-build-quality.yaml
+ M .aios-core/development/workflows/greenfield-fullstack.yaml
+ M .aios-core/development/workflows/greenfield-service.yaml
+ M .aios-core/development/workflows/greenfield-ui.yaml
+ M .aios-core/development/workflows/qa-loop.yaml
+ M .aios-core/development/workflows/spec-pipeline.yaml
+ M .aios-core/development/workflows/story-development-cycle.yaml
+ M .aios-core/docs/standards/AGENT-PERSONALIZATION-STANDARD-V1.md
+ M .aios-core/docs/standards/AIOS-COLOR-PALETTE-QUICK-REFERENCE.md
+ M .aios-core/docs/standards/AIOS-COLOR-PALETTE-V2.1.md
+ M .aios-core/docs/standards/AIOS-LIVRO-DE-OURO-V2.1-COMPLETE.md
+ M .aios-core/docs/standards/AIOS-LIVRO-DE-OURO-V2.2-SUMMARY.md
+ M .aios-core/docs/standards/EXECUTOR-DECISION-TREE.md
+ M .aios-core/docs/standards/OPEN-SOURCE-VS-SERVICE-DIFFERENCES.md
+ M .aios-core/docs/standards/QUALITY-GATES-SPECIFICATION.md
+ M .aios-core/docs/standards/STANDARDS-INDEX.md
+ M .aios-core/docs/standards/STORY-TEMPLATE-V2-SPECIFICATION.md
+ M .aios-core/docs/standards/TASK-FORMAT-SPECIFICATION-V1.md
+ M .aios-core/elicitation/agent-elicitation.js
+ M .aios-core/elicitation/task-elicitation.js
+ M .aios-core/elicitation/workflow-elicitation.js
+ M .aios-core/index.esm.js
+ M .aios-core/index.js
+ M .aios-core/infrastructure/README.md
+ M .aios-core/infrastructure/index.js
+ M .aios-core/infrastructure/integrations/pm-adapters/README.md
+ M .aios-core/infrastructure/integrations/pm-adapters/clickup-adapter.js
+ M .aios-core/infrastructure/integrations/pm-adapters/github-adapter.js
+ M .aios-core/infrastructure/integrations/pm-adapters/jira-adapter.js
+ M .aios-core/infrastructure/integrations/pm-adapters/local-adapter.js
+ M .aios-core/infrastructure/schemas/agent-v3-schema.json
+ M .aios-core/infrastructure/schemas/build-state.schema.json
+ M .aios-core/infrastructure/schemas/task-v3-schema.json
+ M .aios-core/infrastructure/scripts/aios-validator.js
+ M .aios-core/infrastructure/scripts/approach-manager.js
+ M .aios-core/infrastructure/scripts/approval-workflow.js
+ M .aios-core/infrastructure/scripts/asset-inventory.js
+ M .aios-core/infrastructure/scripts/atomic-layer-classifier.js
+ M .aios-core/infrastructure/scripts/backup-manager.js
+ M .aios-core/infrastructure/scripts/batch-creator.js
+ M .aios-core/infrastructure/scripts/branch-manager.js
+ M .aios-core/infrastructure/scripts/capability-analyzer.js
+ M .aios-core/infrastructure/scripts/changelog-generator.js
+ M .aios-core/infrastructure/scripts/cicd-discovery.js
+ M .aios-core/infrastructure/scripts/clickup-helpers.js
+ M .aios-core/infrastructure/scripts/code-quality-improver.js
+ M .aios-core/infrastructure/scripts/codebase-mapper.js
+ M .aios-core/infrastructure/scripts/commit-message-generator.js
+ M .aios-core/infrastructure/scripts/component-generator.js
+ M .aios-core/infrastructure/scripts/component-metadata.js
+ M .aios-core/infrastructure/scripts/component-search.js
+ M .aios-core/infrastructure/scripts/config-cache.js
+ M .aios-core/infrastructure/scripts/config-loader.js
+ M .aios-core/infrastructure/scripts/conflict-resolver.js
+ M .aios-core/infrastructure/scripts/coverage-analyzer.js
+ M .aios-core/infrastructure/scripts/dashboard-status-writer.js
+ M .aios-core/infrastructure/scripts/dependency-analyzer.js
+ M .aios-core/infrastructure/scripts/dependency-impact-analyzer.js
+ M .aios-core/infrastructure/scripts/diff-generator.js
+ M .aios-core/infrastructure/scripts/documentation-integrity/brownfield-analyzer.js
+ M .aios-core/infrastructure/scripts/documentation-integrity/config-generator.js
+ M .aios-core/infrastructure/scripts/documentation-integrity/deployment-config-loader.js
+ M .aios-core/infrastructure/scripts/documentation-integrity/doc-generator.js
+ M .aios-core/infrastructure/scripts/documentation-integrity/gitignore-generator.js
+ M .aios-core/infrastructure/scripts/documentation-integrity/index.js
+ M .aios-core/infrastructure/scripts/documentation-integrity/mode-detector.js
+ M .aios-core/infrastructure/scripts/documentation-synchronizer.js
+ M .aios-core/infrastructure/scripts/framework-analyzer.js
+ M .aios-core/infrastructure/scripts/git-config-detector.js
+ M .aios-core/infrastructure/scripts/git-wrapper.js
+ M .aios-core/infrastructure/scripts/gotchas-documenter.js
+ M .aios-core/infrastructure/scripts/ide-sync/README.md
+ M .aios-core/infrastructure/scripts/ide-sync/agent-parser.js
+ M .aios-core/infrastructure/scripts/ide-sync/index.js
+ M .aios-core/infrastructure/scripts/ide-sync/redirect-generator.js
+ M .aios-core/infrastructure/scripts/ide-sync/transformers/antigravity.js
+ M .aios-core/infrastructure/scripts/ide-sync/transformers/claude-code.js
+ M .aios-core/infrastructure/scripts/ide-sync/transformers/cursor.js
+ M .aios-core/infrastructure/scripts/ide-sync/validator.js
+ M .aios-core/infrastructure/scripts/improvement-engine.js
+ M .aios-core/infrastructure/scripts/improvement-validator.js
+ M .aios-core/infrastructure/scripts/llm-routing/install-llm-routing.js
+ M .aios-core/infrastructure/scripts/llm-routing/templates/claude-free-tracked.sh
+ M .aios-core/infrastructure/scripts/llm-routing/templates/claude-free.sh
+ M .aios-core/infrastructure/scripts/llm-routing/templates/claude-max.sh
+ M .aios-core/infrastructure/scripts/llm-routing/templates/deepseek-proxy.sh
+ M .aios-core/infrastructure/scripts/llm-routing/templates/deepseek-usage.sh
+ M .aios-core/infrastructure/scripts/llm-routing/usage-tracker/index.js
+ M .aios-core/infrastructure/scripts/migrate-agent.js
+ M .aios-core/infrastructure/scripts/modification-risk-assessment.js
+ M .aios-core/infrastructure/scripts/modification-validator.js
+ M .aios-core/infrastructure/scripts/output-formatter.js
+ M .aios-core/infrastructure/scripts/path-analyzer.js
+ M .aios-core/infrastructure/scripts/pattern-extractor.js
+ M .aios-core/infrastructure/scripts/performance-analyzer.js
+ M .aios-core/infrastructure/scripts/performance-and-error-resolver.js
+ M .aios-core/infrastructure/scripts/performance-optimizer.js
+ M .aios-core/infrastructure/scripts/performance-tracker.js
+ M .aios-core/infrastructure/scripts/plan-tracker.js
+ M .aios-core/infrastructure/scripts/pm-adapter-factory.js
+ M .aios-core/infrastructure/scripts/pm-adapter.js
+ M .aios-core/infrastructure/scripts/pr-review-ai.js
+ M .aios-core/infrastructure/scripts/project-status-loader.js
+ M .aios-core/infrastructure/scripts/qa-loop-orchestrator.js
+ M .aios-core/infrastructure/scripts/qa-report-generator.js
+ M .aios-core/infrastructure/scripts/recovery-tracker.js
+ M .aios-core/infrastructure/scripts/refactoring-suggester.js
+ M .aios-core/infrastructure/scripts/repository-detector.js
+ M .aios-core/infrastructure/scripts/rollback-manager.js
+ M .aios-core/infrastructure/scripts/sandbox-tester.js
+ M .aios-core/infrastructure/scripts/security-checker.js
+ M .aios-core/infrastructure/scripts/spot-check-validator.js
+ M .aios-core/infrastructure/scripts/status-mapper.js
+ M .aios-core/infrastructure/scripts/story-worktree-hooks.js
+ M .aios-core/infrastructure/scripts/stuck-detector.js
+ M .aios-core/infrastructure/scripts/subtask-verifier.js
+ M .aios-core/infrastructure/scripts/template-engine.js
+ M .aios-core/infrastructure/scripts/template-validator.js
+ M .aios-core/infrastructure/scripts/test-discovery.js
+ M .aios-core/infrastructure/scripts/test-generator.js
+ M .aios-core/infrastructure/scripts/test-quality-assessment.js
+ M .aios-core/infrastructure/scripts/test-utilities-fast.js
+ M .aios-core/infrastructure/scripts/test-utilities.js
+ M .aios-core/infrastructure/scripts/tool-resolver.js
+ M .aios-core/infrastructure/scripts/transaction-manager.js
+ M .aios-core/infrastructure/scripts/usage-analytics.js
+ M .aios-core/infrastructure/scripts/validate-agents.js
+ M .aios-core/infrastructure/scripts/validate-output-pattern.js
+ M .aios-core/infrastructure/scripts/visual-impact-generator.js
+ M .aios-core/infrastructure/scripts/worktree-manager.js
+ M .aios-core/infrastructure/scripts/yaml-validator.js
+ M .aios-core/infrastructure/templates/aios-sync.yaml.template
+ M .aios-core/infrastructure/templates/core-config/core-config-brownfield.tmpl.yaml
+ M .aios-core/infrastructure/templates/core-config/core-config-greenfield.tmpl.yaml
+ M .aios-core/infrastructure/templates/github-workflows/README.md
+ M .aios-core/infrastructure/templates/project-docs/coding-standards-tmpl.md
+ M .aios-core/infrastructure/templates/project-docs/source-tree-tmpl.md
+ M .aios-core/infrastructure/templates/project-docs/tech-stack-tmpl.md
+ M .aios-core/infrastructure/tests/project-status-loader.test.js
+ M .aios-core/infrastructure/tests/regression-suite-v2.md
+ M .aios-core/infrastructure/tests/validate-module.js
+ M .aios-core/infrastructure/tests/worktree-manager.test.js
+ M .aios-core/infrastructure/tools/README.md
+ M .aios-core/infrastructure/tools/cli/github-cli.yaml
+ M .aios-core/infrastructure/tools/cli/llm-routing.yaml
+ M .aios-core/infrastructure/tools/cli/railway-cli.yaml
+ M .aios-core/infrastructure/tools/cli/supabase-cli.yaml
+ M .aios-core/infrastructure/tools/local/ffmpeg.yaml
+ M .aios-core/infrastructure/tools/mcp/21st-dev-magic.yaml
+ M .aios-core/infrastructure/tools/mcp/browser.yaml
+ M .aios-core/infrastructure/tools/mcp/clickup.yaml
+ M .aios-core/infrastructure/tools/mcp/context7.yaml
+ M .aios-core/infrastructure/tools/mcp/desktop-commander.yaml
+ M .aios-core/infrastructure/tools/mcp/exa.yaml
+ M .aios-core/infrastructure/tools/mcp/google-workspace.yaml
+ M .aios-core/infrastructure/tools/mcp/n8n.yaml
+ M .aios-core/infrastructure/tools/mcp/supabase.yaml
+ M .aios-core/install-manifest.yaml
+ M .aios-core/package.json
+ M .aios-core/product/README.md
+ M .aios-core/product/checklists/accessibility-wcag-checklist.md
+ M .aios-core/product/checklists/architect-checklist.md
+ M .aios-core/product/checklists/change-checklist.md
+ M .aios-core/product/checklists/component-quality-checklist.md
+ M .aios-core/product/checklists/database-design-checklist.md
+ M .aios-core/product/checklists/dba-predeploy-checklist.md
+ M .aios-core/product/checklists/dba-rollback-checklist.md
+ M .aios-core/product/checklists/migration-readiness-checklist.md
+ M .aios-core/product/checklists/pattern-audit-checklist.md
+ M .aios-core/product/checklists/pm-checklist.md
+ M .aios-core/product/checklists/po-master-checklist.md
+ M .aios-core/product/checklists/pre-push-checklist.md
+ M .aios-core/product/checklists/release-checklist.md
+ M .aios-core/product/checklists/self-critique-checklist.md
+ M .aios-core/product/checklists/story-dod-checklist.md
+ M .aios-core/product/checklists/story-draft-checklist.md
+ M .aios-core/product/data/atomic-design-principles.md
+ M .aios-core/product/data/brainstorming-techniques.md
+ M .aios-core/product/data/consolidation-algorithms.md
+ M .aios-core/product/data/database-best-practices.md
+ M .aios-core/product/data/design-token-best-practices.md
+ M .aios-core/product/data/elicitation-methods.md
+ M .aios-core/product/data/integration-patterns.md
+ M .aios-core/product/data/migration-safety-guide.md
+ M .aios-core/product/data/mode-selection-best-practices.md
+ M .aios-core/product/data/postgres-tuning-guide.md
+ M .aios-core/product/data/rls-security-patterns.md
+ M .aios-core/product/data/roi-calculation-guide.md
+ M .aios-core/product/data/supabase-patterns.md
+ M .aios-core/product/data/test-levels-framework.md
+ M .aios-core/product/data/test-priorities-matrix.md
+ M .aios-core/product/data/wcag-compliance-guide.md
+ M .aios-core/product/templates/activation-instructions-inline-greeting.yaml
+ M .aios-core/product/templates/activation-instructions-template.md
+ M .aios-core/product/templates/agent-template.yaml
+ M .aios-core/product/templates/architecture-tmpl.yaml
+ M .aios-core/product/templates/brainstorming-output-tmpl.yaml
+ M .aios-core/product/templates/brownfield-architecture-tmpl.yaml
+ M .aios-core/product/templates/brownfield-prd-tmpl.yaml
+ M .aios-core/product/templates/changelog-template.md
+ M .aios-core/product/templates/command-rationalization-matrix.md
+ M .aios-core/product/templates/competitor-analysis-tmpl.yaml
+ M .aios-core/product/templates/current-approach-tmpl.md
+ M .aios-core/product/templates/design-story-tmpl.yaml
+ M .aios-core/product/templates/ds-artifact-analysis.md
+ M .aios-core/product/templates/engine/elicitation.js
+ M .aios-core/product/templates/engine/index.js
+ M .aios-core/product/templates/engine/loader.js
+ M .aios-core/product/templates/engine/renderer.js
+ M .aios-core/product/templates/engine/validator.js
+ M .aios-core/product/templates/front-end-architecture-tmpl.yaml
+ M .aios-core/product/templates/front-end-spec-tmpl.yaml
+ M .aios-core/product/templates/fullstack-architecture-tmpl.yaml
+ M .aios-core/product/templates/github-pr-template.md
+ M .aios-core/product/templates/gordon-mcp.yaml
+ M .aios-core/product/templates/ide-rules/antigravity-rules.md
+ M .aios-core/product/templates/ide-rules/claude-rules.md
+ M .aios-core/product/templates/ide-rules/copilot-rules.md
+ M .aios-core/product/templates/ide-rules/cursor-rules.md
+ M .aios-core/product/templates/index-strategy-tmpl.yaml
+ M .aios-core/product/templates/market-research-tmpl.yaml
+ M .aios-core/product/templates/mcp-workflow.js
+ M .aios-core/product/templates/migration-plan-tmpl.yaml
+ M .aios-core/product/templates/migration-strategy-tmpl.md
+ M .aios-core/product/templates/personalized-agent-template.md
+ M .aios-core/product/templates/personalized-checklist-template.md
+ M .aios-core/product/templates/personalized-task-template-v2.md
+ M .aios-core/product/templates/personalized-task-template.md
+ M .aios-core/product/templates/personalized-template-file.yaml
+ M .aios-core/product/templates/personalized-workflow-template.yaml
+ M .aios-core/product/templates/prd-tmpl.yaml
+ M .aios-core/product/templates/project-brief-tmpl.yaml
+ M .aios-core/product/templates/qa-gate-tmpl.yaml
+ M .aios-core/product/templates/qa-report-tmpl.md
+ M .aios-core/product/templates/rls-policies-tmpl.yaml
+ M .aios-core/product/templates/schema-design-tmpl.yaml
+ M .aios-core/product/templates/spec-tmpl.md
+ M .aios-core/product/templates/state-persistence-tmpl.yaml
+ M .aios-core/product/templates/story-tmpl.yaml
+ M .aios-core/product/templates/task-execution-report.md
+ M .aios-core/product/templates/task-template.md
+ M .aios-core/product/templates/token-exports-tailwind-tmpl.js
+ M .aios-core/product/templates/tokens-schema-tmpl.yaml
+ M .aios-core/product/templates/workflow-template.yaml
+ M .aios-core/scripts/README.md
+ M .aios-core/scripts/aios-doc-template.md
+ M .aios-core/scripts/command-execution-hook.js
+ M .aios-core/scripts/diagnostics/diagnose-installation.js
+ M .aios-core/scripts/diagnostics/health-dashboard/README.md
+ M .aios-core/scripts/diagnostics/health-dashboard/index.html
+ M .aios-core/scripts/diagnostics/health-dashboard/package-lock.json
+ M .aios-core/scripts/diagnostics/health-dashboard/package.json
+ M .aios-core/scripts/diagnostics/health-dashboard/public/favicon.svg
+ M .aios-core/scripts/diagnostics/health-dashboard/src/App.jsx
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/AutoFixLog.css
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/AutoFixLog.jsx
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/DomainCard.css
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/DomainCard.jsx
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/HealthScore.css
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/HealthScore.jsx
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/IssuesList.css
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/IssuesList.jsx
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/TechDebtList.css
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/TechDebtList.jsx
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/index.js
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/shared/Card.css
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/shared/Card.jsx
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/shared/Chart.css
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/shared/Chart.jsx
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/shared/Header.css
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/shared/Header.jsx
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/shared/StatusBadge.css
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/shared/StatusBadge.jsx
+ M .aios-core/scripts/diagnostics/health-dashboard/src/components/shared/index.js
+ M .aios-core/scripts/diagnostics/health-dashboard/src/hooks/index.js
+ M .aios-core/scripts/diagnostics/health-dashboard/src/hooks/useAutoRefresh.js
+ M .aios-core/scripts/diagnostics/health-dashboard/src/hooks/useHealthData.js
+ M .aios-core/scripts/diagnostics/health-dashboard/src/main.jsx
+ M .aios-core/scripts/diagnostics/health-dashboard/src/pages/Dashboard.css
+ M .aios-core/scripts/diagnostics/health-dashboard/src/pages/Dashboard.jsx
+ M .aios-core/scripts/diagnostics/health-dashboard/src/pages/DomainDetail.css
+ M .aios-core/scripts/diagnostics/health-dashboard/src/pages/DomainDetail.jsx
+ M .aios-core/scripts/diagnostics/health-dashboard/src/pages/index.js
+ M .aios-core/scripts/diagnostics/health-dashboard/src/styles/App.css
+ M .aios-core/scripts/diagnostics/health-dashboard/src/styles/index.css
+ M .aios-core/scripts/diagnostics/health-dashboard/vite.config.js
+ M .aios-core/scripts/session-context-loader.js
+ M .aios-core/scripts/test-template-system.js
+ M .aios-core/scripts/workflow-management.md
+ M .aios-core/user-guide.md
+ M .aios-core/version.json
+ M .aios-core/working-in-the-brownfield.md
+ M .claude/commands/AIOS/agents/squad-creator.md
+ M .env.example
+ M docs/antigo/ROADMAP-PROJETO-MENTE-LEVE.md
+ M docs/guides/BLUEPRINT-MARKETING-YOG.md
+ M docs/leads/SETUP-LOGO-GABY.md
+ D squads/marketing-yog/assets/avatar-jose.jpg
+ M squads/marketing-yog/data/voice-dna-gaby.yaml
+?? .agent/workflows/squad-creator.md.pre-premium.bak
+?? .aios-core/cli/commands/config/
+?? .aios-core/cli/commands/pro/
+?? .aios-core/constitution.md
+?? .aios-core/core/code-intel/
+?? .aios-core/core/config/config-resolver.js
+?? .aios-core/core/config/env-interpolator.js
+?? .aios-core/core/config/merge-utils.js
+?? .aios-core/core/config/migrate-config.js
+?? .aios-core/core/config/schemas/
+?? .aios-core/core/config/templates/
+?? .aios-core/core/execution/parallel-executor.js
+?? .aios-core/core/health-check/checks/services/gemini-cli.js
+?? .aios-core/core/ids/
+?? .aios-core/core/memory/__tests__/active-modules.verify.js
+?? .aios-core/core/orchestration/bob-orchestrator.js
+?? .aios-core/core/orchestration/bob-status-writer.js
+?? .aios-core/core/orchestration/bob-surface-criteria.yaml
+?? .aios-core/core/orchestration/brownfield-handler.js
+?? .aios-core/core/orchestration/data-lifecycle-manager.js
+?? .aios-core/core/orchestration/epic-context-accumulator.js
+?? .aios-core/core/orchestration/execution-profile-resolver.js
+?? .aios-core/core/orchestration/executor-assignment.js
+?? .aios-core/core/orchestration/gemini-model-selector.js
+?? .aios-core/core/orchestration/greenfield-handler.js
+?? .aios-core/core/orchestration/lock-manager.js
+?? .aios-core/core/orchestration/message-formatter.js
+?? .aios-core/core/orchestration/session-state.js
+?? .aios-core/core/orchestration/surface-checker.js
+?? .aios-core/core/orchestration/task-complexity-classifier.js
+?? .aios-core/core/orchestration/terminal-spawner.js
+?? .aios-core/core/orchestration/workflow-executor.js
+?? .aios-core/core/synapse/
+?? .aios-core/core/ui/
+?? .aios-core/data/entity-registry.yaml
+?? .aios-core/data/registry-update-log.jsonl
+?? .aios-core/development/agents/oalanicolas.md
+?? .aios-core/development/agents/pedro-valerio.md
+?? .aios-core/development/agents/squad-chief.md
+?? .aios-core/development/agents/squad-creator.md.pre-premium.bak
+?? .aios-core/development/checklists/agent-quality-gate.md
+?? .aios-core/development/checklists/brownfield-compatibility-checklist.md
+?? .aios-core/development/data/
+?? .aios-core/development/scripts/activation-runtime.js
+?? .aios-core/development/scripts/approval-workflow.js
+?? .aios-core/development/scripts/backup-manager.js
+?? .aios-core/development/scripts/branch-manager.js
+?? .aios-core/development/scripts/code-quality-improver.js
+?? .aios-core/development/scripts/commit-message-generator.js
+?? .aios-core/development/scripts/conflict-resolver.js
+?? .aios-core/development/scripts/dependency-analyzer.js
+?? .aios-core/development/scripts/diff-generator.js
+?? .aios-core/development/scripts/elicitation-engine.js
+?? .aios-core/development/scripts/elicitation-session-manager.js
+?? .aios-core/development/scripts/git-wrapper.js
+?? .aios-core/development/scripts/manifest-preview.js
+?? .aios-core/development/scripts/metrics-tracker.js
+?? .aios-core/development/scripts/modification-validator.js
+?? .aios-core/development/scripts/pattern-learner.js
+?? .aios-core/development/scripts/performance-analyzer.js
+?? .aios-core/development/scripts/populate-entity-registry.js
+?? .aios-core/development/scripts/refactoring-suggester.js
+?? .aios-core/development/scripts/rollback-handler.js
+?? .aios-core/development/scripts/security-checker.js
+?? .aios-core/development/scripts/skill-validator.js
+?? .aios-core/development/scripts/template-engine.js
+?? .aios-core/development/scripts/template-validator.js
+?? .aios-core/development/scripts/test-generator.js
+?? .aios-core/development/scripts/transaction-manager.js
+?? .aios-core/development/scripts/unified-activation-pipeline.js
+?? .aios-core/development/scripts/usage-tracker.js
+?? .aios-core/development/scripts/validate-filenames.js
+?? .aios-core/development/scripts/version-tracker.js
+?? .aios-core/development/scripts/yaml-validator.js
+?? .aios-core/development/tasks/blocks/
+?? .aios-core/development/tasks/db-squad-integration.md
+?? .aios-core/development/tasks/execute-epic-plan.md
+?? .aios-core/development/tasks/ids-governor.md
+?? .aios-core/development/tasks/ids-health.md
+?? .aios-core/development/tasks/ids-query.md
+?? .aios-core/development/tasks/integrate-squad.md
+?? .aios-core/development/tasks/po-close-story.md
+?? .aios-core/development/tasks/publish-npm.md
+?? .aios-core/development/tasks/qa-after-creation.md
+?? .aios-core/development/tasks/session-resume.md
+?? .aios-core/development/tasks/story-checkpoint.md
+?? .aios-core/development/tasks/sync-registry-intel.md
+?? .aios-core/development/tasks/update-aios.md
+?? .aios-core/development/tasks/update-source-tree.md
+?? .aios-core/development/tasks/validate-agents.md
+?? .aios-core/development/tasks/yolo-toggle.md
+?? .aios-core/development/templates/research-prompt-tmpl.md
+?? .aios-core/development/workflows/development-cycle.yaml
+?? .aios-core/development/workflows/epic-orchestration.yaml
+?? .aios-core/docs/SHARD-TRANSLATION-GUIDE.md
+?? .aios-core/docs/component-creation-guide.md
+?? .aios-core/docs/session-update-pattern.md
+?? .aios-core/docs/standards/AIOS-FRAMEWORK-MASTER.md
+?? .aios-core/docs/standards/AIOS-LIVRO-DE-OURO-V2.1-SUMMARY.md
+?? .aios-core/docs/standards/AIOS-LIVRO-DE-OURO-V2.1.md
+?? .aios-core/docs/standards/AIOS-LIVRO-DE-OURO.md
+?? .aios-core/docs/standards/V3-ARCHITECTURAL-DECISIONS.md
+?? .aios-core/docs/template-syntax.md
+?? .aios-core/docs/troubleshooting-guide.md
+?? .aios-core/infrastructure/contracts/
+?? .aios-core/infrastructure/integrations/ai-providers/
+?? .aios-core/infrastructure/integrations/gemini-extensions/
+?? .aios-core/infrastructure/scripts/codex-skills-sync/
+?? .aios-core/infrastructure/scripts/git-hooks/
+?? .aios-core/infrastructure/scripts/ide-sync/gemini-commands.js
+?? .aios-core/infrastructure/scripts/validate-claude-integration.js
+?? .aios-core/infrastructure/scripts/validate-codex-integration.js
+?? .aios-core/infrastructure/scripts/validate-gemini-integration.js
+?? .aios-core/infrastructure/scripts/validate-parity.js
+?? .aios-core/infrastructure/scripts/validate-paths.js
+?? .aios-core/infrastructure/scripts/validate-user-profile.js
+?? .aios-core/infrastructure/tests/utilities-audit-results.json
+?? .aios-core/manifests/agents.csv
+?? .aios-core/manifests/tasks.csv
+?? .aios-core/manifests/workers.csv
+?? .aios-core/monitor/
+?? .aios-core/presets/
+?? .aios-core/product/templates/aios-ai-config.yaml
+?? .aios-core/product/templates/brownfield-risk-report-tmpl.yaml
+?? .aios-core/product/templates/gemini/
+?? .aios-core/product/templates/ide-rules/codex-rules.md
+?? .aios-core/product/templates/ide-rules/gemini-rules.md
+?? .aios-core/product/templates/statusline/
+?? .aios-core/schemas/
+?? .aios-core/scripts/pm.sh
+?? .aios-core/scripts/update-aios.sh
+?? .aios-core/workflow-intelligence/
+?? .aios/
+?? .claude/commands/AIOS/agents/oalanicolas.md
+?? .claude/commands/AIOS/agents/pedro-valerio.md
+?? .claude/commands/AIOS/agents/squad-chief.md
+?? .claude/commands/AIOS/agents/squad-creator.md.pre-premium.bak
+?? .claude/settings.json
+?? .npm-cache/
+?? README.md
+?? docs/assets/
+?? docs/framework/
+?? docs/leads/aula-entrada-sadhana.html
+?? docs/tmp-pending-files-full.txt
+?? package-lock.json
+?? package.json
+?? squads/marketing-yog/assets/carousels/
+?? squads/marketing-yog/docs/manual-uso-squad-marketing-yog.md
+?? squads/marketing-yog/scripts/generate_carousel_mosaico.py
+?? squads/squad-creator/

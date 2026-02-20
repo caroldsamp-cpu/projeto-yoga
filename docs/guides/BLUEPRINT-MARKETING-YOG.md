@@ -1,4 +1,4 @@
-# Blueprint Oficial - marketing-yog
+﻿# Blueprint Oficial - marketing-yog
 
 Status: Aprovado para planejamento
 Data: 2026-02-20
@@ -15,7 +15,7 @@ Owner: Projeto Mente Leve (Gaby)
 
 Fontes primarias:
 - `C:\Users\carol\OneDrive\Yoga Gaby - DRIVE\Aulas antigas\transcricoes`
-- `C:\Users\carol\OneDrive\SYSTEM - CLAUDE CODE\projeto-yoga\docs\analise-gaby`
+- `C:\Users\carol\code\PROJETOS\projeto-yoga\docs\analise-gaby`
 
 Regra:
 - Nenhum prompt de agente pode definir voz sem referencia explicita a essas fontes.
@@ -148,3 +148,4 @@ Mitigacao: revisar toda taxonomia, temas e CTA antes de go-live.
 ## 12) Proximo passo imediato
 
 Executar Sprint 0 de voz e produzir os 4 artefatos obrigatorios antes de qualquer migracao tecnica do squad.
+

@@ -1,19 +1,23 @@
 markdownExploder: true
 project:
-  type: greenfield
-  installedAt: '2026-02-10T21:15:49.450Z'
+  type: brownfield
+  installedAt: '2026-02-20T14:09:40.976Z'
   version: 2.1.0
+user_profile: advanced
 ide:
   selected:
     - claude-code
-    - antigravity
+    - codex
   configs:
-    vscode: false
+    vscode: true
+    codex: false
+    gemini: false
     cursor: false
-    windsurf: false
+    github-copilot: false
+    antigravity: false
     zed: false
     claude-desktop: false
-    claude-code: true
+    claude-code: false
 mcp:
   enabled: false
   configLocation: .claude/mcp.json
@@ -49,7 +53,7 @@ lazyLoading:
   enabled: true
   heavySections:
     - pvMindContext
-    - expansionPacks
+    - squads
     - registry
 git:
   showConfigWarning: true
@@ -66,7 +70,7 @@ toolsLocation: .aios-core/tools
 scriptsLocation: .aios-core/scripts
 dataLocation: .aios-core/data
 elicitationLocation: .aios-core/elicitation
-expansionPacksLocation: expansion-packs
+squadsLocation: squads
 mindsLocation: outputs/minds
 projectStatus:
   enabled: true

@@ -1,0 +1,12 @@
+﻿{
+  "name": "projeto-yoga-root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Root scripts for projeto-yoga",
+  "scripts": {
+    "lint": "npm --prefix ./.aios-core run lint",
+    "typecheck": "npm --prefix ./.aios-core run typecheck",
+    "test": "npm --prefix ./.aios-core test",
+    "verify": "npm --prefix ./.aios-core run lint && npm --prefix ./.aios-core run typecheck && npm --prefix ./.aios-core test"
+  }
+}

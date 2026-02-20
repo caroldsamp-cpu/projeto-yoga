@@ -1,0 +1,9 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="148mm" height="210mm" viewBox="0 0 1240 1754" role="img" aria-labelledby="title desc">
+  <title id="title">NamaSer QR Card</title>
+  <desc id="desc">Card minimalista com titulo NamaSer e QR code</desc>
+
+  <rect width="1240" height="1754" fill="#FFFFFF" />
+  <text x="620" y="330" text-anchor="middle" fill="#0F5A7A" style="font-family:'Playfair Display',Georgia,serif; font-size:112px; letter-spacing:0.8px;">NamaSer</text>
+
+  <image href="./namaser-qr-lightblue.png" x="320" y="430" width="600" height="600" preserveAspectRatio="xMidYMid meet" />
+</svg>

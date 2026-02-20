@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2000" viewBox="0 0 1600 2000" role="img" aria-labelledby="title desc">
+  <title id="title">QR Code NamaSer</title>
+  <desc id="desc">QR code estilizado para https://inlead.digital/namaser</desc>
+
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF8F4" />
+      <stop offset="100%" stop-color="#F5EDE4" />
+    </linearGradient>
+    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5ECFD8" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="#5ECFD8" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#5ECFD8" stop-opacity="0.15" />
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#1B5A6B" flood-opacity="0.13" />
+    </filter>
+  </defs>
+
+  <rect width="1600" height="2000" fill="url(#bgGradient)" />
+
+  <circle cx="210" cy="220" r="140" fill="#5ECFD8" opacity="0.08" />
+  <circle cx="1420" cy="320" r="180" fill="#5ECFD8" opacity="0.08" />
+  <circle cx="1320" cy="1780" r="220" fill="#D4A574" opacity="0.08" />
+
+  <rect x="200" y="180" width="1200" height="1640" rx="48" fill="#FFFFFF" stroke="#E8DDD2" stroke-width="4" filter="url(#softShadow)" />
+
+  <text x="800" y="360" text-anchor="middle" fill="#1B5A6B" style="font-family:'Playfair Display',Georgia,serif; font-size:110px; letter-spacing:0.5px;">NamaSer</text>
+  <text x="800" y="432" text-anchor="middle" fill="#6B6560" style="font-family:'Inter',Arial,sans-serif; font-size:36px; letter-spacing:0.8px;">Escaneie para acessar</text>
+
+  <rect x="440" y="520" width="720" height="720" rx="32" fill="#FDF8F4" stroke="#E8DDD2" stroke-width="3" />
+  <image href="./namaser-qr-lightblue.png" x="500" y="580" width="600" height="600" preserveAspectRatio="xMidYMid meet" />
+
+  <rect x="370" y="1328" width="860" height="2" fill="url(#lineGradient)" />
+
+  <text x="800" y="1460" text-anchor="middle" fill="#3D3A38" style="font-family:'Inter',Arial,sans-serif; font-size:34px;">
+    https://inlead.digital/namaser
+  </text>
+  <text x="800" y="1540" text-anchor="middle" fill="#6B6560" style="font-family:'Inter',Arial,sans-serif; font-size:28px; letter-spacing:0.7px;">
+    Projeto Yoga
+  </text>
+</svg>
