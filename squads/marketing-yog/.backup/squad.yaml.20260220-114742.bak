@@ -1,0 +1,32 @@
+﻿name: "marketing-yog"
+version: "1.0.0"
+description: "Squad de operacao de conteudo Sadhana com publicacao manual"
+author: "Projeto Mente Leve"
+license: "MIT"
+
+aios:
+  minVersion: "2.1.0"
+  type: squad
+
+components:
+  agents:
+    - agents/*.md
+  tasks:
+    - tasks/*.md
+  workflows:
+    - workflows/*.md
+  templates:
+    - templates/*.md
+  checklists:
+    - checklists/*.md
+  data:
+    - data/*.yaml
+
+dependencies: []
+
+keywords:
+  - aios
+  - squad
+  - marketing
+  - sadhana
+  - yoga

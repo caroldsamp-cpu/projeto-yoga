@@ -1,0 +1,9 @@
+﻿{
+  "name": "marketing-yog",
+  "version": "1.0.0",
+  "description": "Squad de operacao de conteudo Sadhana com publicacao manual",
+  "main": "index.js",
+  "keywords": ["aios", "aios-squad", "marketing", "sadhana", "yoga"],
+  "author": "Projeto Mente Leve",
+  "license": "MIT"
+}

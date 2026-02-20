@@ -1,0 +1,37 @@
+﻿brand:
+  name: "Sadhana"
+  project: "projeto-yoga"
+  promise: "Pratica simples para a vida real"
+
+voice:
+  owner: "Gaby"
+  tone:
+    - "acolhedor"
+    - "direto"
+    - "pratico"
+    - "calmo"
+  avoid:
+    - "promessa milagrosa"
+    - "agressividade comercial"
+    - "jargao vazio"
+
+visual:
+  palette:
+    background: "#F7F4EE"
+    text: "#1E1E1E"
+    accent_primary: "#C86B4A"
+    accent_secondary: "#6A8C73"
+    support: "#D8C9B5"
+  typography:
+    heading: "Playfair Display"
+    body: "Lato"
+  principles:
+    - "alto contraste e leitura facil"
+    - "poucos elementos por tela"
+    - "espaco em branco como recurso"
+
+ethics:
+  principles:
+    - "convite sem pressao"
+    - "clareza sobre limites da pratica"
+    - "resultado como processo, nao milagre"

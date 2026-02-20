@@ -1,0 +1,36 @@
+﻿instagram:
+  primary: true
+  format_preferences:
+    - "carousel"
+    - "reel curto"
+    - "story sequencial"
+  caption:
+    max_chars: 2200
+    ideal_chars: 700
+  cta_examples:
+    - "Se fizer sentido, testa hoje e me conta."
+    - "Salva para lembrar na proxima pausa."
+    - "Me responde com a tua maior dificuldade agora."
+
+secondary_channels:
+  whatsapp:
+    enabled: true
+    style: "mensagem curta e pessoal"
+  email:
+    enabled: false
+  linkedin:
+    enabled: false
+
+weekly_theme_calendar:
+  monday: "Presenca"
+  tuesday: "Mobilidade"
+  wednesday: "Rotina"
+  thursday: "Pratica guiada"
+  friday: "Comunidade"
+  saturday: "Bastidores"
+  sunday: "Fechamento da semana"
+
+publishing_mode:
+  automated_posting: false
+  api_tokens_required: false
+  human_review_required: true

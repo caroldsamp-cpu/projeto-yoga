@@ -1,0 +1,26 @@
+﻿frameworks:
+  prioritization:
+    criteria:
+      - impact
+      - effort
+      - strategic_fit
+      - voice_fit
+
+  partnership_evaluation:
+    criteria:
+      - value_for_audience
+      - brand_alignment
+      - execution_cost
+      - reputational_risk
+
+  content_decision:
+    criteria:
+      - practical_utility
+      - distinctiveness
+      - emotional_safety
+      - clarity
+
+rules:
+  if_voice_fit_low: "rework before publish"
+  if_risk_high_and_value_low: "no_go"
+  if_impact_high_and_effort_low: "prioritize"

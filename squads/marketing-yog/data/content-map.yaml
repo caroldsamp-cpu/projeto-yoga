@@ -1,0 +1,59 @@
+﻿pillars:
+  - id: presenca
+    name: "Presenca e respiracao"
+    objective: "Ajudar a desacelerar e criar foco no agora"
+  - id: mobilidade
+    name: "Mobilidade e postura"
+    objective: "Melhorar conforto corporal na rotina"
+  - id: rotina
+    name: "Rotina real"
+    objective: "Transformar pratica em habito possivel"
+  - id: comunidade
+    name: "Comunidade e pertencimento"
+    objective: "Fortalecer constancia por relacao"
+
+weekly_queue:
+  - day: monday
+    pillar: presenca
+    big_idea: "2 minutos de respiracao para reduzir ruido mental antes do trabalho"
+    angle: "micro ritual de inicio de dia"
+    proof: "trecho de aula antiga sobre respiracao"
+  - day: tuesday
+    pillar: mobilidade
+    big_idea: "3 movimentos para aliviar tensao de quem passa horas sentada"
+    angle: "alivio imediato sem equipamento"
+    proof: "sequencia aplicada em aula"
+  - day: wednesday
+    pillar: rotina
+    big_idea: "como manter pratica curta mesmo em semana caotica"
+    angle: "consistencia minima viavel"
+    proof: "caso real de aluna"
+  - day: thursday
+    pillar: presenca
+    big_idea: "pausa guiada de 5 minutos no meio da tarde"
+    angle: "retomar energia sem cafe extra"
+    proof: "roteiro de aula"
+  - day: friday
+    pillar: comunidade
+    big_idea: "o que muda quando voce pratica com grupo"
+    angle: "apoio social e continuidade"
+    proof: "depoimentos internos"
+  - day: saturday
+    pillar: mobilidade
+    big_idea: "sequencia leve para soltar lombar no fim de semana"
+    angle: "autocuidado pratico"
+    proof: "roteiro de pratica"
+  - day: sunday
+    pillar: rotina
+    big_idea: "planejamento de pratica da semana em 10 minutos"
+    angle: "intencao e agenda"
+    proof: "metodo usado no projeto"
+
+guardrails:
+  must_have:
+    - "acao pratica aplicavel hoje"
+    - "linguagem simples"
+    - "convite sem urgencia artificial"
+  avoid:
+    - "comparacoes moralizantes"
+    - "promessas absolutas"

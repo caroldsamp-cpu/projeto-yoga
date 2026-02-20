@@ -1,0 +1,155 @@
+﻿name: marketing-yog
+version: 1.1.0
+title: "Marketing YOG - Sadhana Content Ops"
+short-title: "YOG"
+description: |
+  Squad oficial de marketing de conteudo do projeto-yoga.
+  Foco: operacao editorial semanal com voz da Gaby e publicacao manual.
+
+  Pipeline: ideacao -> validacao CMO -> producao -> direcao visual -> distribuicao.
+  Fora do escopo: automacoes de postagem e preenchimento de tokens API.
+
+author: "Projeto Yoga"
+created: 2026-02-20
+slash_prefix: "MarketingYog"
+
+domain: "Marketing de Conteudo / Instagram / Comunidade Sadhana"
+target_users:
+  - "Gaby Drummond"
+
+positioning:
+  tagline: "Sadhana: ritual simples para vida real"
+  identity: "Conteudo com presenca, clareza e consistencia"
+  category: "Operacao editorial humanizada"
+
+key_capabilities:
+  - "Planejamento semanal de conteudo"
+  - "Producao diaria com gate de qualidade"
+  - "Direcao visual por formato"
+  - "Adaptacao por canal"
+  - "Metricas semanais com feedback loop"
+  - "Publicacao manual orientada"
+
+agents:
+  - id: board-orchestrator
+    file: agents/board-orchestrator.md
+    name: "Board Orchestrator"
+    role: "Orquestrar advisory estrategico e handoff para tom da Gaby"
+
+  - id: marketing-cmo
+    file: agents/marketing-cmo.md
+    name: "Marketing CMO"
+    role: "Direcao estrategica, filtros de qualidade e coerencia"
+
+  - id: marketing-ideation-ig
+    file: agents/marketing-ideation-ig.md
+    name: "Marketing Ideation - Instagram"
+    role: "Ideacao nativa para Instagram no contexto Sadhana"
+
+  - id: marketing-production
+    file: agents/marketing-production.md
+    name: "Marketing Production"
+    role: "Escrita de conteudo com voz da Gaby"
+
+  - id: marketing-designer
+    file: agents/marketing-designer.md
+    name: "Marketing Designer"
+    role: "Direcao visual por formato e consistencia de marca"
+
+  - id: marketing-distribution
+    file: agents/marketing-distribution.md
+    name: "Marketing Distribution"
+    role: "Adaptacao do conteudo por canal"
+
+  - id: marketing-metrics
+    file: agents/marketing-metrics.md
+    name: "Marketing Metrics"
+    role: "Analise semanal e ajustes no content map"
+
+tasks:
+  - id: consult-board
+    file: tasks/consult-board.md
+    name: "Consult Board"
+    purpose: "Consolidar decisao estrategica com lentes de mentes"
+
+  - id: evaluate-deal
+    file: tasks/evaluate-deal.md
+    name: "Evaluate Deal"
+    purpose: "Avaliar parcerias sem comprometer marca e tom"
+
+  - id: daily-content
+    file: tasks/daily-content.md
+    name: "Daily Content"
+    purpose: "Pipeline diario sem publicacao automatica"
+
+  - id: weekly-content-plan
+    file: tasks/weekly-content-plan.md
+    name: "Weekly Content Plan"
+    purpose: "Planejar 7 dias e atualizar queue"
+
+  - id: metrics-weekly
+    file: tasks/metrics-weekly.md
+    name: "Metrics Weekly"
+    purpose: "Analise semanal e feedback loop"
+
+  - id: strategic-review
+    file: tasks/strategic-review.md
+    name: "Strategic Review"
+    purpose: "Fechar prioridades semanais de estrategia"
+
+  - id: weekly-story-sequence
+    file: tasks/weekly-story-sequence.md
+    name: "Weekly Story Sequence"
+    purpose: "Gerar sequencias semanais de stories"
+
+templates:
+  - id: board-session-report
+    file: templates/board-session-report.md
+    name: "Board Session Report"
+  - id: daily-content-output
+    file: templates/daily-content-output.md
+    name: "Output Diario de Conteudo"
+  - id: story-sequence-output
+    file: templates/story-sequence-output.md
+    name: "Story Sequence Output"
+  - id: voice-qa-scorecard
+    file: templates/voice-qa-scorecard.md
+    name: "Voice QA Scorecard"
+
+workflows:
+  - id: board-consultation
+    file: workflows/board-consultation.md
+    name: "Board Consultation"
+    purpose: "Fluxo de advisory estrategico com handoff para voz da Gaby"
+
+  - id: daily-content-pipeline
+    file: workflows/daily-content-pipeline.md
+    name: "Daily Content Pipeline"
+    purpose: "Fluxo diario ate conteudo pronto para publicacao manual"
+
+  - id: weekly-marketing-cycle
+    file: workflows/weekly-marketing-cycle.md
+    name: "Weekly Marketing Cycle"
+    purpose: "Planejamento, execucao e metricas com feedback loop"
+  - id: voice-calibration-weekly
+    file: workflows/voice-calibration-weekly.md
+    name: "Voice Calibration Weekly"
+    purpose: "Calibrar e manter o tom da Gaby semanalmente"
+  - id: story-sequence-pipeline
+    file: workflows/story-sequence-pipeline.md
+    name: "Story Sequence Pipeline"
+    purpose: "Pipeline semanal de stories com estrategia e voz"
+
+data:
+  - id: voice-dna-gaby
+    file: data/voice-dna-gaby.yaml
+    name: "Voice DNA Gaby"
+    purpose: "Fonte de tom de voz operacional para todos os agentes"
+  - id: strategic-minds
+    file: data/strategic-minds.yaml
+    name: "Strategic Minds"
+    purpose: "Lentes de estrategia (Hormozi/Godin/Koe/Thiel) com handoff obrigatorio para voz da Gaby"
+  - id: decision-frameworks
+    file: data/decision-frameworks.yaml
+    name: "Decision Frameworks"
+    purpose: "Criterios de priorizacao e avaliacao de decisoes"

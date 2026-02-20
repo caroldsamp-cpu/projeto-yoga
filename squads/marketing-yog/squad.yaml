@@ -1,0 +1,54 @@
+﻿name: "marketing-yog"
+version: "1.1.0"
+description: "Squad de marketing de conteudo para o projeto-yoga com voz da Gaby e publicacao manual"
+author: "Projeto Yoga"
+license: "MIT"
+
+aios:
+  minVersion: "2.1.0"
+  type: squad
+
+components:
+  agents:
+    - board-orchestrator.md
+    - marketing-cmo.md
+    - marketing-ideation-ig.md
+    - marketing-production.md
+    - marketing-designer.md
+    - marketing-distribution.md
+    - marketing-metrics.md
+  tasks:
+    - consult-board.md
+    - evaluate-deal.md
+    - daily-content.md
+    - weekly-content-plan.md
+    - metrics-weekly.md
+    - strategic-review.md
+    - weekly-story-sequence.md
+  workflows:
+    - board-consultation.md
+    - daily-content-pipeline.md
+    - story-sequence-pipeline.md
+    - weekly-marketing-cycle.md
+    - voice-calibration-weekly.md
+  templates:
+    - board-session-report.md
+    - daily-content-output.md
+    - story-sequence-output.md
+    - voice-qa-scorecard.md
+  checklists:
+    - board-decision-quality.md
+    - voice-gate-gaby.md
+
+dependencies:
+  node: []
+  python: []
+  squads: []
+
+keywords:
+  - aios
+  - squad
+  - marketing
+  - yoga
+  - sadhana
+  - instagram

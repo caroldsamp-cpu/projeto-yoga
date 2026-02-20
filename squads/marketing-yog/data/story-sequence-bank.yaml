@@ -1,0 +1,29 @@
+﻿story_sequences:
+  - id: breath-reset
+    title: "Reset em 3 stories"
+    objective: "diminuir ansiedade rapida"
+    slides:
+      - "Story 1: voce esta respirando curto sem perceber?"
+      - "Story 2: pratica guiada de 4 ciclos lentos"
+      - "Story 3: convite para repetir no fim do dia"
+
+  - id: desk-mobility
+    title: "Mobilidade para quem trabalha sentada"
+    objective: "aliviar tensao de pescoco e lombar"
+    slides:
+      - "Story 1: sinal de tensao acumulada"
+      - "Story 2: 2 movimentos de 30 segundos"
+      - "Story 3: pergunta de engajamento sobre dor principal"
+
+  - id: weekly-intention
+    title: "Intencao de semana"
+    objective: "aumentar consistencia"
+    slides:
+      - "Story 1: qual foi seu ritmo na semana passada?"
+      - "Story 2: escolher meta minima viavel"
+      - "Story 3: convite para responder compromisso"
+
+guardrails:
+  - "sequencia curta e objetiva"
+  - "cada story com uma ideia"
+  - "fechar com convite leve"

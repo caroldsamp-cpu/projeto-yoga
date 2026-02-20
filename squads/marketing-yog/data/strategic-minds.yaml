@@ -1,0 +1,48 @@
+minds:
+  - id: alex-hormozi
+    role: "clareza de oferta e valor percebido"
+    use_for:
+      - "deixar proposta concreta"
+      - "reduzir friccao de entendimento"
+      - "definir promessa realista"
+    never_copy_tone:
+      - "agressividade de venda"
+      - "linguagem de dominacao"
+
+  - id: seth-godin
+    role: "permission marketing e relevancia de nicho"
+    use_for:
+      - "ajustar mensagem para publico certo"
+      - "reforcar convite sem interrupcao"
+      - "consistencia editorial"
+    never_copy_tone:
+      - "abstracao excessiva sem pratica"
+
+  - id: dan-koe
+    role: "sistema de conteudo e alavancagem editorial"
+    use_for:
+      - "transformar 1 ideia em variacoes"
+      - "organizar cadencia semanal"
+      - "maximizar reaproveitamento sem repeticao"
+    never_copy_tone:
+      - "linguagem auto-centrada"
+
+  - id: peter-thiel
+    role: "diferenciacao e posicionamento unico"
+    use_for:
+      - "evitar mensagem comoditizada"
+      - "reforcar tese proprietaria da marca"
+      - "priorizar escolhas estrategicas"
+    never_copy_tone:
+      - "tom confrontativo"
+
+handoff_rules:
+  mandatory:
+    - "insight estrategico sai em linguagem neutra"
+    - "texto final obrigatoriamente passa por `data/voice-dna-gaby.yaml`"
+    - "production traduz estrategia para tom da Gaby"
+    - "se conflito: tom da Gaby vence"
+  output_format:
+    - "insight_estrategico"
+    - "implicacao_editorial"
+    - "traducao_para_tom_gaby"
