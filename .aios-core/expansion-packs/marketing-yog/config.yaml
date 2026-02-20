@@ -1,0 +1,100 @@
+﻿name: marketing-yog
+version: 1.0.0
+title: "Marketing YOG - Sadhana Content Ops"
+short-title: "YOG"
+description: |
+  Adaptacao do Marketing OPES para o projeto Mente Leve / Sadhana.
+  Foco: operacao editorial com voz da Gaby e publicacao manual.
+
+  Pipeline: ideacao -> validacao CMO -> producao -> direcao visual -> distribuicao.
+  Fora do escopo v1: publicacao automatica, credencials e integracoes integracao.
+
+author: "Projeto Mente Leve"
+created: 2026-02-20
+slash_prefix: "MarketingYog"
+
+domain: "Marketing de Conteudo / Instagram / Comunidade Sadhana"
+target_users:
+  - "Gaby Drummond"
+
+positioning:
+  tagline: "Sadhana: o ritual da vida real"
+  identity: "Conteudo com presenca, permissao e processo"
+  category: "Operacao editorial humanizada"
+
+key_capabilities:
+  - "Planejamento semanal de conteudo"
+  - "Producao diaria com gate de qualidade"
+  - "Direcao visual por formato"
+  - "Adaptacao por canal"
+  - "Metricas semanais com feedback loop"
+  - "Publicacao manual orientada"
+
+agents:
+  - id: marketing-cmo
+    file: agents/marketing-cmo.md
+    name: "Marketing CMO"
+    role: "Direcao estrategica, filtros de qualidade e coerencia"
+
+  - id: marketing-ideation-ig
+    file: agents/marketing-ideation-ig.md
+    name: "Marketing Ideation - Instagram"
+    role: "Ideacao nativa para Instagram no contexto Sadhana"
+
+  - id: marketing-production
+    file: agents/marketing-production.md
+    name: "Marketing Production"
+    role: "Escrita de conteudo com voz da Gaby"
+
+  - id: marketing-designer
+    file: agents/marketing-designer.md
+    name: "Marketing Designer"
+    role: "Direcao visual por formato e consistencia de marca"
+
+  - id: marketing-distribution
+    file: agents/marketing-distribution.md
+    name: "Marketing Distribution"
+    role: "Adaptacao do conteudo por canal"
+
+  - id: marketing-metrics
+    file: agents/marketing-metrics.md
+    name: "Marketing Metrics"
+    role: "Analise semanal e ajustes no content map"
+
+tasks:
+  - id: daily-content
+    file: tasks/daily-content.md
+    name: "Daily Content"
+    purpose: "Pipeline diario sem publicacao automatica"
+
+  - id: weekly-content-plan
+    file: tasks/weekly-content-plan.md
+    name: "Weekly Content Plan"
+    purpose: "Planejar 7 dias e atualizar queue"
+
+  - id: metrics-weekly
+    file: tasks/metrics-weekly.md
+    name: "Metrics Weekly"
+    purpose: "Analise semanal e feedback loop"
+
+  - id: weekly-story-sequence
+    file: tasks/weekly-story-sequence.md
+    name: "Weekly Story Sequence"
+    purpose: "Gerar sequencias semanais de stories"
+
+templates:
+  - id: daily-content-output
+    file: templates/daily-content-output.md
+    name: "Output Diario de Conteudo"
+
+workflows:
+  - id: daily-content-pipeline
+    file: workflows/daily-content-pipeline.md
+    name: "Daily Content Pipeline"
+    purpose: "Fluxo diario ate conteudo pronto para publicacao manual"
+
+  - id: weekly-marketing-cycle
+    file: workflows/weekly-marketing-cycle.md
+    name: "Weekly Marketing Cycle"
+    purpose: "Planejamento, execucao e metricas com feedback loop"
+
