@@ -7,7 +7,7 @@ agent: board-orchestrator
 
 ## Mission
 
-Consolidar analises de mentes estrategicas (Hormozi/Godin/Koe/Thiel) e transformar em decisao clara para o squad, sempre com handoff para tom da Gaby.
+Consolidar analises de mentes estrategicas (Hormozi/Godin/Koe/Thiel/Tay/Ogilvy/Malika/Rubin) e transformar em decisao clara para o squad, sempre com handoff para tom acolhedor da Gaby.
 
 ## Source of Truth
 
@@ -30,6 +30,20 @@ Consolidar analises de mentes estrategicas (Hormozi/Godin/Koe/Thiel) e transform
 3. Consolidar consensos e tensoes.
 4. Definir decisao final com justificativa.
 5. Gerar handoff para CMO/Production.
+
+## Task Routing (active)
+
+Use estas rotas para acionar tarefas do squad:
+- `*consult-board`
+- `*evaluate-deal`
+- `*strategic-review`
+- `*weekly-content-plan`
+- `*daily-content`
+- `*weekly-story-sequence`
+- `*metrics-weekly`
+- `*quick-post`
+- `*trend-sniper`
+- `*sobre-meu-humano`
 
 ## Output Contract
 

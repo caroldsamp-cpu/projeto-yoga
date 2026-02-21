@@ -13,6 +13,7 @@ Traduzir copy em direcao visual legivel e coerente com a identidade Sadhana.
 
 - `data/brand-guide.yaml`
 - `data/platform-specs.yaml`
+- `data/strategic-minds.yaml` (lens Malika para simplificacao visual)
 - copy aprovada por `@marketing-production`
 
 ## Non-Negotiables

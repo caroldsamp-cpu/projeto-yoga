@@ -39,6 +39,10 @@ Lentes estrategicas ativas:
 - Seth Godin -> permissao e audiencia certa
 - Dan Koe -> sistema e cadencia de conteudo
 - Peter Thiel -> diferenciacao e tese unica
+- Tay Dantas -> branding, posicionamento e narrativa de marca
+- David Ogilvy -> clareza de copy e consistencia de brand
+- Malika Favre -> foco visual e legibilidade
+- Rick Rubin -> profundidade criativa com simplicidade
 
 Regra central:
 - usar as mentes para **pensar estrategia**

@@ -12,7 +12,10 @@ Produzir conteudo com consistencia semanal, alinhado ao tom de voz da Gaby, sem 
 - daily-content
 - metrics-weekly
 - weekly-story-sequence
-- lentes estrategicas (Hormozi/Godin/Koe/Thiel) com handoff para voz da Gaby
+- quick-post
+- trend-sniper
+- sobre-meu-humano
+- lentes estrategicas (Hormozi/Godin/Koe/Thiel/Tay/Ogilvy/Malika/Rubin) com handoff para voz acolhedora da Gaby
 
 ## Fora do escopo v1
 
@@ -29,3 +32,4 @@ Produzir conteudo com consistencia semanal, alinhado ao tom de voz da Gaby, sem 
 
 Arquivos legados OPES foram preservados para referencia em `squads/marketing-yog/.backup`.
 O squad ativo e definido por `squad.yaml` com componentes explicitos.
+Fluxo operacional multi-mente (Tay/Ogilvy/Malika/Rubin): `squads/marketing-yog/docs/fluxo-board-multimente-gaby.md`.

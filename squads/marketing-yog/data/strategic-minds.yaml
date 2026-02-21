@@ -36,11 +36,53 @@ minds:
     never_copy_tone:
       - "tom confrontativo"
 
+  - id: tay-dantas
+    role: "branding, posicionamento e narrativa de marca"
+    use_for:
+      - "diagnosticar forca da marca (fundamento, personalidade, narrativa, desejo)"
+      - "definir diferenciais de marca com linguagem simples"
+      - "estruturar storytelling com cliente como heroi"
+    never_copy_tone:
+      - "provocacao agressiva"
+      - "frases de confronto"
+      - "linguagem que gere culpa"
+
+  - id: david-ogilvy
+    role: "copy clara, headlines fortes e construcao de brand no longo prazo"
+    use_for:
+      - "refinar headline e promessa sem exagero"
+      - "aumentar especificidade e clareza da mensagem"
+      - "garantir consistencia de brand em cada peca"
+    never_copy_tone:
+      - "tom frio e distante"
+      - "formalismo rigido sem calor humano"
+
+  - id: malika-favre
+    role: "direcao visual minimalista e hierarquia de informacao"
+    use_for:
+      - "simplificar layouts e reduzir ruido visual"
+      - "melhorar legibilidade em carrosseis e artes"
+      - "definir foco visual por peca"
+    never_copy_tone:
+      - "estetica sobre clareza"
+      - "visual dramatico ou sensacionalista"
+
+  - id: rick-rubin
+    role: "profundidade criativa, ritmo e autenticidade narrativa"
+    use_for:
+      - "refinar nucleo emocional da mensagem"
+      - "melhorar cadencia e respiracao do texto"
+      - "remover excesso e manter o essencial"
+    never_copy_tone:
+      - "abstracao sem aplicacao pratica"
+      - "mistificacao ou linguagem esoterica"
+
 handoff_rules:
   mandatory:
     - "insight estrategico sai em linguagem neutra"
     - "texto final obrigatoriamente passa por `data/voice-dna-gaby.yaml`"
     - "production traduz estrategia para tom da Gaby"
+    - "traducao final deve manter tom acolhedor, humano e sem julgamento"
     - "se conflito: tom da Gaby vence"
   output_format:
     - "insight_estrategico"

@@ -41,6 +41,26 @@ agents:
     name: "Marketing CMO"
     role: "Direcao estrategica, filtros de qualidade e coerencia"
 
+  - id: marketing-brand-tay
+    file: agents/marketing-brand-tay.md
+    name: "Marketing Brand Tay"
+    role: "Lens de branding/posicionamento com handoff obrigatorio para tom acolhedor da Gaby"
+
+  - id: marketing-copy-ogilvy
+    file: agents/marketing-copy-ogilvy.md
+    name: "Marketing Copy Ogilvy"
+    role: "Lens de copy e clareza de mensagem com handoff obrigatorio para tom acolhedor da Gaby"
+
+  - id: marketing-visual-malika
+    file: agents/marketing-visual-malika.md
+    name: "Marketing Visual Malika"
+    role: "Lens de direcao visual minimalista e legibilidade no contexto Sadhana"
+
+  - id: marketing-creative-rubin
+    file: agents/marketing-creative-rubin.md
+    name: "Marketing Creative Rubin"
+    role: "Lens de profundidade criativa e narrativa contemplativa com traducao para voz da Gaby"
+
   - id: marketing-ideation-ig
     file: agents/marketing-ideation-ig.md
     name: "Marketing Ideation - Instagram"
@@ -102,6 +122,21 @@ tasks:
     name: "Weekly Story Sequence"
     purpose: "Gerar sequencias semanais de stories"
 
+  - id: quick-post
+    file: tasks/quick-post.md
+    name: "Quick Post"
+    purpose: "Converter insight direto da Gaby em post pronto para revisao"
+
+  - id: trend-sniper
+    file: tasks/trend-sniper.md
+    name: "Trend Sniper"
+    purpose: "Avaliar tendencia e decidir entrada editorial com criterio"
+
+  - id: sobre-meu-humano
+    file: tasks/sobre-meu-humano.md
+    name: "Sobre Meu Humano"
+    purpose: "Conteudo de bastidor com narrativa humana e guardrails de privacidade"
+
 templates:
   - id: board-session-report
     file: templates/board-session-report.md
@@ -112,9 +147,23 @@ templates:
   - id: story-sequence-output
     file: templates/story-sequence-output.md
     name: "Story Sequence Output"
+  - id: reels-script-data-driven
+    file: templates/reels-script-data-driven.md
+    name: "Reels Script Data-Driven"
   - id: voice-qa-scorecard
     file: templates/voice-qa-scorecard.md
     name: "Voice QA Scorecard"
+
+checklists:
+  - id: board-decision-quality
+    file: checklists/board-decision-quality.md
+    name: "Board Decision Quality"
+  - id: voice-gate-gaby
+    file: checklists/voice-gate-gaby.md
+    name: "Voice Gate Gaby"
+  - id: reels-data-driven-gate
+    file: checklists/reels-data-driven-gate.md
+    name: "Reels Data-Driven Gate"
 
 workflows:
   - id: board-consultation
@@ -148,7 +197,7 @@ data:
   - id: strategic-minds
     file: data/strategic-minds.yaml
     name: "Strategic Minds"
-    purpose: "Lentes de estrategia (Hormozi/Godin/Koe/Thiel) com handoff obrigatorio para voz da Gaby"
+    purpose: "Lentes de estrategia (Hormozi/Godin/Koe/Thiel/Tay/Ogilvy/Malika/Rubin) com handoff obrigatorio para voz da Gaby"
   - id: decision-frameworks
     file: data/decision-frameworks.yaml
     name: "Decision Frameworks"

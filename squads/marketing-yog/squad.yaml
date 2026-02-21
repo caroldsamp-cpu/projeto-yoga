@@ -12,6 +12,10 @@ components:
   agents:
     - board-orchestrator.md
     - marketing-cmo.md
+    - marketing-brand-tay.md
+    - marketing-copy-ogilvy.md
+    - marketing-visual-malika.md
+    - marketing-creative-rubin.md
     - marketing-ideation-ig.md
     - marketing-production.md
     - marketing-designer.md
@@ -25,6 +29,9 @@ components:
     - metrics-weekly.md
     - strategic-review.md
     - weekly-story-sequence.md
+    - quick-post.md
+    - trend-sniper.md
+    - sobre-meu-humano.md
   workflows:
     - board-consultation.md
     - daily-content-pipeline.md
@@ -34,10 +41,12 @@ components:
   templates:
     - board-session-report.md
     - daily-content-output.md
+    - reels-script-data-driven.md
     - story-sequence-output.md
     - voice-qa-scorecard.md
   checklists:
     - board-decision-quality.md
+    - reels-data-driven-gate.md
     - voice-gate-gaby.md
 
 dependencies:
