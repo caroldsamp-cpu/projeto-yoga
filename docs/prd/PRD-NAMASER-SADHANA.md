@@ -440,10 +440,10 @@ Este projeto e estruturado em **7 Epics independentes** porque abrange dominios 
 ### 12.3 Documentos de Posicionamento Anterior
 | Documento | Caminho | Conteudo |
 |-----------|---------|----------|
-| Roadmap Original | `docs/antigo/ROADMAP-PROJETO-NAMASER.md` | Roadmap do gerador de roteiros |
-| Relatorio Completo | `docs/antigo/RELATORIO_COMPLETO_NAMASER.md` | Dados de produto e mercado |
-| Relatorio Sessao | `docs/antigo/RELATORIO_SESSAO_PRODUTO_NAMASER.md` | Sessao de produto detalhada |
-| Sequencia WhatsApp | `docs/antigo/SEQUENCIA_WHATSAPP_COMPLETA.md` | Mensagens de conversao |
+| Roadmap Original | `docs/_historico/antigo/ROADMAP-PROJETO-NAMASER.md` | Roadmap do gerador de roteiros |
+| Relatorio Completo | `docs/_historico/antigo/RELATORIO_COMPLETO_NAMASER.md` | Dados de produto e mercado |
+| Relatorio Sessao | `docs/_historico/antigo/RELATORIO_SESSAO_PRODUTO_NAMASER.md` | Sessao de produto detalhada |
+| Sequencia WhatsApp | `[removido no projeto]` | Mensagens de conversao |
 
 ### 12.4 Definition of Done (DoD) Global
 | Documento | Caminho | Conteudo |
@@ -486,5 +486,6 @@ Este projeto e estruturado em **7 Epics independentes** porque abrange dominios 
 ---
 
 *â€” Morgan, planejando o futuro*
+
 
 

@@ -1,0 +1,100 @@
+{
+  "total": 50,
+  "reels": 36,
+  "images": 1,
+  "carousels": 13,
+  "reels_metrics": {
+    "avg_views": 324298,
+    "median_views": 58825,
+    "avg_likes": 17417,
+    "median_likes": 2423,
+    "avg_comments": 2834,
+    "median_comments": 534,
+    "avg_duration_sec": 87.3,
+    "median_duration_sec": 89.1,
+    "original_audio_rate": 86.1
+  },
+  "cta_count": {
+    "comenta": 17,
+    "coment?rio": 0,
+    "direct": 5,
+    "dm": 2,
+    "bio": 0,
+    "link": 3,
+    "salva": 0,
+    "compartilha": 3,
+    "me chama": 1,
+    "chama no direct": 1
+  },
+  "top_opening_lines": [
+    [
+      "surgiu uma categoria de trabalho que nem tem nome ainda.",
+      1
+    ],
+    [
+      "ai-first: modelo tendo ia como pilar central do negócio — não usada apenas em pr",
+      1
+    ],
+    [
+      "isso é product-market-story fit — o novo santo graal dos negócios.",
+      1
+    ],
+    [
+      "mira murati levantou us$ 2 bilhões e chegou a us$ 12 bilhões de valuation sem pr",
+      1
+    ],
+    [
+      "comenta “burry” e corre pro direct 🍿",
+      1
+    ],
+    [
+      "hello, world. 🍿",
+      1
+    ],
+    [
+      "“ads are coming to ai. but not to claude.” @claudeai",
+      1
+    ],
+    [
+      "se você tem um negócio e vende seu conhecimento no digital:",
+      1
+    ],
+    [
+      "hailey bieber vendeu a rhode por 1 bilhão aparecendo em todo lugar. as gêmeas ol",
+      1
+    ],
+    [
+      "sim, aquele martin scorsese do lobo de wall street acabou dirigiu uma campanha p",
+      1
+    ]
+  ],
+  "month_distribution": {
+    "2025-08": 2,
+    "2025-12": 1,
+    "2025-04": 4,
+    "2025-11": 3,
+    "2025-10": 3,
+    "2026-02": 2,
+    "2024-08": 8,
+    "2025-07": 1,
+    "2025-01": 1,
+    "2025-03": 3,
+    "2024-12": 2,
+    "2025-06": 1,
+    "2024-09": 1,
+    "2024-11": 3,
+    "2024-10": 3,
+    "2024-07": 9,
+    "2024-06": 3
+  },
+  "seth_keyword_hits": {
+    "permiss?o": 0,
+    "nicho": 4,
+    "mercado": 9,
+    "posi??o": 0,
+    "diferencia": 1,
+    "remarkable": 0,
+    "tribo": 0,
+    "audi?ncia": 0
+  }
+}

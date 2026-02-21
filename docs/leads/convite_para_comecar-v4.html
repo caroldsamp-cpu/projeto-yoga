@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Convite para Começar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./tokens-gaby-leads.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #2F2F2F;
+            background: radial-gradient(circle at 100% 0%, rgba(94, 207, 216, 0.12), transparent 40%), #F9F7F5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #EAF6F8 0%, #F9F7F5 100%);
+            border-radius: 20px;
+            margin-bottom: 50px;
+            border: 1px solid #DCECEE;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #1B5A6B;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            color: #4E6E77;
+            font-style: italic;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Seções */
+        .section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 24px rgba(27, 90, 107, 0.08);
+            border: 1px solid #E5EDE6;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #1B5A6B;
+            margin-bottom: 25px;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        /* Carta da Gaby */
+        .carta {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.05em;
+            line-height: 2;
+            color: #4A4A4A;
+        }
+
+        .carta p {
+            margin-bottom: 20px;
+        }
+
+        .assinatura {
+            margin-top: 40px;
+            text-align: right;
+            font-style: italic;
+            color: #1B5A6B;
+            font-size: 1.1em;
+        }
+
+        /* Caminho dos 7 dias */
+        .dia {
+            background: #F9F7F5;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #6B7B5E;
+        }
+
+        .dia-numero {
+            display: inline-block;
+            background: #1B5A6B;
+            color: white;
+            min-width: 64px;
+            padding: 0 10px;
+            height: 50px;
+            border-radius: 999px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .dia h3 {
+            color: #1B5A6B;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .dia p {
+            color: #5A5A5A;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .aula-nome {
+            display: block;
+            background: #ffffff;
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-style: normal;
+            color: #1B5A6B;
+            border: 1px solid #D9E8EB;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .aula-nome:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(27, 90, 107, 0.12);
+            border-color: #BFDADF;
+        }
+
+        .entry-box {
+            background: #F2F8F9;
+            border: 1px solid #DCECEE;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 26px;
+            text-align: center;
+        }
+
+        .entry-box p {
+            color: #39545C;
+            margin-bottom: 14px;
+        }
+
+        .entry-link {
+            display: inline-block;
+            background: #1B5A6B;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 26px;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        /* Mantras */
+        .mantras-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .mantra-card {
+            background: #fff;
+            border: 1px solid #E3ECEE;
+            box-shadow: 0 5px 14px rgba(27, 90, 107, 0.06);
+            padding: 30px 25px;
+            border-radius: 12px;
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mantra-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 4em;
+            color: rgba(139, 123, 158, 0.15);
+            font-family: Georgia, serif;
+        }
+
+        .mantra-card p {
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.15em;
+            color: #5A4A6A;
+            font-style: italic;
+            line-height: 1.75;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Spotify */
+        .spotify-box {
+            background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .spotify-box h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .spotify-box p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+
+        .spotify-link {
+            display: inline-block;
+            background: white;
+            color: #1DB954;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .spotify-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #4E6E77;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+
+        .inline-icon {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .help-box {
+            background: #F7FBF7;
+            border: 1px solid #DDE9DD;
+            border-left: 4px solid #6B7B5E;
+            border-radius: 12px;
+            padding: 26px;
+            margin-top: 24px;
+        }
+
+        .help-box h3 {
+            margin-bottom: 12px;
+            color: #1B5A6B;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .help-link {
+            display: inline-block;
+            margin-top: 14px;
+            text-decoration: none;
+            background: #25D366;
+            color: #fff;
+            padding: 12px 22px;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .section {
+                padding: 25px 20px;
+            }
+
+            .mantras-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+            }
+
+            .spotify-box {
+                background: #E8D5E8;
+                color: #2F2F2F;
+            }
+
+            .spotify-link {
+                background: #8B7B9E;
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🌙 Seu Convite para Começar</h1>
+            <p>Bem-vinda &agrave; comunidade NamaSer, seu espa&ccedil;o de reconex&atilde;o, leveza e presen&ccedil;a</p>
+        </div>
+
+        <!-- Carta da Gaby -->
+        <div class="section">
+            <h2>Uma carta pra você</h2>
+            <div class="carta">
+                <p>Oiii! 💜</p>
+
+                <p>Que alegria ter você aqui comigo.</p>
+
+                <p>Sei que começar algo novo pode trazer aquela mistura de empolgação e um friozinho na barriga. É normal sentir isso. Respira fundo. Você tá no lugar certo.</p>
+
+                <p>Criei esse espaço pra ser um refúgio seu. Um lugar onde você pode voltar sempre que precisar, nos dias leves e nos dias que pesam. Aqui você pode começar do seu jeito, no seu ritmo, sem cobrança de perfeição.</p>
+
+                <p>Aqui você vai encontrar práticas que respeitam seu corpo, seu tempo e suas fases. Não vou te cobrar flexibilidade, performance ou constância forçada. Vou te oferecer presença, acolhimento e um caminho possível.</p>
+
+                <p>O yoga que eu te convido a sentir é um caminho para o corpo voltar a ser seu. É respirar fundo quando tudo aperta. É criar leveza como forma de vida.</p>
+
+                <p>Nos próximos dias, vou te guiar pelos primeiros passos. Vai com calma. Explora. Sente. Não tenha pressa. O importante não é onde você vai chegar, mas como você vai se sentir no caminho.</p>
+
+                <p>E lembra: você merece esse momento. Você merece essa pausa. Você merece voltar pra você.</p>
+
+                <p>A gente se encontra no tapetinho.</p>
+
+                <div class="assinatura">Com carinho,<br>Gaby</div>
+            </div>
+        </div>
+
+        <!-- Caminho dos 30 Dias -->
+        <div class="section">
+            <h2>Seu caminho dos primeiros 30 dias</h2>
+            <p style="text-align: center; color: #6B5B7E; margin-bottom: 30px; font-style: italic;">
+                Uma trilha leve para você conseguir manter constância: no máximo duas aulas por semana, no seu ritmo.
+            </p>
+            <div class="entry-box">
+                <p><strong>Primeiro passo:</strong> faça a Aula de Entrada Sadhana e escolha o seu ritual para os próximos 7 dias.</p>
+                <a class="entry-link" href="https://entrada-sadhana.vercel.app" target="_blank">Abrir Entrada Sadhana</a>
+            </div>
+
+            <p style="text-align: center; color: #6F8890; margin-top: -10px; margin-bottom: 24px; font-size: 0.82em; letter-spacing: 0.1px;">
+                Toque no nome de cada aula para abrir o conteúdo.
+            </p>
+
+            <div class="dia">
+                <div class="dia-numero">1-7</div>
+                <h3>Semana de chegada</h3>
+                <p>Foco em ritual diário (3 a 5 minutos), sem pressão. Nessa semana, inclua uma prática curta de respiração e faça o primeiro módulo para entender o caminho.</p>
+                <a class="aula-nome" href="https://hotmart.com/pt-BR/club/comunidade-de-yogaonline-gabydrummond/products/2635136/content/K4kZNa9JOY?from=EditProductPage" target="_blank">Ritual Diário (dias 1 a 7) + MÓDULO: COMECE POR AQUI + START - O PODER DA SUA RESPIRAÇÃO (2 min)</a>
+            </div>
+
+            <div class="dia">
+                <div class="dia-numero">8-14</div>
+                <h3>Semana 2: base de prática</h3>
+                <p>Duas aulas na semana. Primeiro, sua prática completa. Depois, saudação ao sol para construir ritmo no corpo.</p>
+                <a class="aula-nome" href="https://hotmart.com/pt-BR/club/comunidade-de-yogaonline-gabydrummond/products/2635136/content/94J8ymwd7g?from=EditProductPage" target="_blank">AULA 1 - SUA PRIMEIRA PRÁTICA</a>
+                <a class="aula-nome" href="https://hotmart.com/pt-BR/club/comunidade-de-yogaonline-gabydrummond/products/2635136/content/k45dBxkZOl?from=EditProductPage" target="_blank">AULA 2 - SAUDAÇÃO AO SOL A E B</a>
+            </div>
+
+            <div class="dia">
+                <div class="dia-numero">15-21</div>
+                <h3>Semana 3: estabilidade e abertura</h3>
+                <p>Duas aulas na semana para acordar força com consciência e abrir espaço no corpo com suavidade.</p>
+                <a class="aula-nome" href="https://hotmart.com/pt-BR/club/comunidade-de-yogaonline-gabydrummond/products/2635136/content/RO9daEQv7P?from=EditProductPage" target="_blank">AULA 3 - SEQUENCIA DOS GUERREIROS</a>
+                <a class="aula-nome" href="https://hotmart.com/pt-BR/club/comunidade-de-yogaonline-gabydrummond/products/2635136/content/RO9daEVK7P?from=EditProductPage" target="_blank">AULA 4 - FLEXIBILIDADE</a>
+            </div>
+
+            <div class="dia">
+                <div class="dia-numero">22-28</div>
+                <h3>Semana 4: centro e potência</h3>
+                <p>Duas aulas na semana para fortalecer seu centro e cultivar força com leveza.</p>
+                <a class="aula-nome" href="https://hotmart.com/pt-BR/club/comunidade-de-yogaonline-gabydrummond/products/2635136/content/z7r5KGvEej?from=EditProductPage" target="_blank">AULA 5 - EQUILÍBRIO</a>
+                <a class="aula-nome" href="https://hotmart.com/pt-BR/club/comunidade-de-yogaonline-gabydrummond/products/2635136/content/YOmwPG0Xed?from=EditProductPage" target="_blank">AULA 6 - FORÇA</a>
+            </div>
+
+            <div class="dia">
+                <div class="dia-numero">29-30</div>
+                <h3>Fechamento do ciclo</h3>
+                <p>Última aula para integrar tudo e fluir com mais autonomia. Depois disso, você segue para os próximos módulos com mais clareza sobre seu ritmo e sua prática.</p>
+                <a class="aula-nome" href="https://hotmart.com/pt-BR/club/comunidade-de-yogaonline-gabydrummond/products/2635136/content/BeZEv53R4w?from=EditProductPage" target="_blank">AULA 7 - APRENDENDO A FLUIR</a>
+            </div>
+
+            <div style="background: #E8D5E8; padding: 25px; border-radius: 12px; margin-top: 30px; text-align: center;">
+                <p style="font-size: 1.1em; color: #5A4A6A; line-height: 1.8;">
+                    <strong>Lembre-se:</strong> não existe atraso aqui. Se você levar mais de 30 dias, tudo bem. O importante é manter seu caminho vivo, no seu tempo.
+                </p>
+            </div>
+        </div>
+
+        <!-- Mantras -->
+        <div class="section">
+            <h2>Mensagens para te acompanhar</h2>
+            <p style="text-align: center; color: #6B5B7E; margin-bottom: 20px; font-style: italic;">
+                Quando a mente acelerar ou a insegurança aparecer, volte pra uma dessas:
+            </p>
+
+            <div class="mantras-grid">
+                <div class="mantra-card">
+                    <p><strong style="color: #D4A574; font-size: 1.3em;">ALEGRIA</strong><br><br>
+                    Cultivar o prazer, o riso, a brincadeira. Cultivar o viver sem medo. Sem restrições. Cultivar o sentir. O sonhar. A imaginação. Resgatar o lúdico em cada gesto. Divertir-se sem culpa. Ser responsável sem peso. Agir conscientemente com o coração. Olhar a vida por um novo ângulo. VIVER LEVE.</p>
+                </div>
+                
+                <div class="mantra-card">
+                    <p><strong style="color: #6B8E9E; font-size: 1.3em;">DESAPEGO</strong><br><br>
+                    Soltar. Entregar. Deixar ir. Deixar partir. Fluir. Viver no presente. Sem o peso do passado, sem expectativas para o futuro. Saber de nossa finitude. Saber que somos passageiros. Sem posses. Sem medo. Sem culpas.</p>
+                </div>
+                
+                <div class="mantra-card">
+                    <p><strong style="color: #C95B6B; font-size: 1.3em;">AMOR</strong><br><br>
+                    Aprendendo a amar a nós mesmos, aprendemos a amar o outro. Cuidando de nós mesmos, cuidamos do outro. Olhando além de nós mesmos, enxergamos o outro. O amor, quando toca nossa alma, cura o que precisa ser curado; transforma o que precisa ser transformado. Nos guia. Nos protege. Nos ilumina.</p>
+                </div>
+                
+                <div class="mantra-card">
+                    <p><strong style="color: #E8A55C; font-size: 1.3em;">HUMOR</strong><br><br>
+                    Ver leveza onde a vida parece pesada. Ver alegria onde a vida parece triste. Ver graça onde a vida parece séria. Ver doçura onde a vida parece amarga. Ver sorrisos onde a vida parece rancor. Ver amor onde a vida parece solidão. Deixar o riso correr solto onde o choro aperta.</p>
+                </div>
+                
+                <div class="mantra-card">
+                    <p><strong style="color: #8AAE6B; font-size: 1.3em;">PACIÊNCIA</strong><br><br>
+                    Entender que tudo tem seu tempo. Que tudo vem a seu tempo. Dar o tempo necessário. Para crescer. Brotar. Florescer. Aceitar o ciclo da vida. Respeitar o fluxo do tempo. Observar o tempo passar. ESPERAR O TEMPO CERTO. Pra plantar. Pra colher. Pra agir. Pra seguir. Pra aprender.</p>
+                </div>
+                
+                <div class="mantra-card">
+                    <p><strong style="color: #C9A86B; font-size: 1.3em;">LIBERAÇÃO</strong><br><br>
+                    Deixar ir. Deixar partir. Desprender-se. Desfazer-se. Desapegar. Abençoar tudo o que já foi e o que já não cabe mais. Dores, amores, mágoas, vitórias. E entregar ao universo. Abrir-se para o novo. Deixar a vida acontecer.</p>
+                </div>
+                
+                <div class="mantra-card">
+                    <p><strong style="color: #E8A03C; font-size: 1.3em;">LEVEZA</strong><br><br>
+                    Encarar a vida sem medo. Sem se prender a mágoas nem rancores. Sem carregar dores passadas. Caminhar com alegria. Seguir em frente. Viver um dia a cada dia. Um momento a cada momento. Com fé. Com confiança. Em paz.</p>
+                </div>
+
+                <div class="mantra-card">
+                    <p><strong style="color: #7A9B78; font-size: 1.3em;">SIMPLICIDADE</strong><br><br>
+                    Livrar-se de todos os excessos. De tudo que é supérfluo. Viver sem desperdício. Encantar-se com a magia escondida na rotina do dia a dia. Enxergar o belo nas pequenas coisas. Viver sem afetação. Compreender as leis do universo. Viver com o coração.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spotify -->
+        <div class="section">
+            <div class="spotify-box">
+                <h3>
+                    <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                        <circle cx="12" cy="12" r="11" fill="#fff" fill-opacity="0.18"/>
+                        <path d="M7 14.6c3.5-1 6.5-.7 9.3 1" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M7.8 11.7c3.8-1.1 7.2-.8 10.3 1.2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M8.6 8.8c4.1-1.1 8-.8 11.2 1.4" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                    Bônus: Reset Mental no Spotify
+                </h3>
+                <p>Você também tem acesso ao Reset Mental: meditações curtas e guiadas para ouvir ao acordar, antes de dormir ou no meio do dia.</p>
+                <a href="https://open.spotify.com/show/5IxJEdzXTgdPpuezPBMzf8" target="_blank" class="spotify-link">
+                    Ouvir no Spotify
+                </a>
+            </div>
+
+            <div class="help-box">
+                <h3>
+                    <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                        <path d="M12 3a9 9 0 1 0 9 9" stroke="#1B5A6B" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M9.4 9.2a2.7 2.7 0 1 1 4.3 2.2c-.9.6-1.4 1.1-1.4 2.1" stroke="#1B5A6B" stroke-width="1.8" stroke-linecap="round"/>
+                        <circle cx="12" cy="17.3" r="1.1" fill="#1B5A6B"/>
+                    </svg>
+                    Se surgir dúvida no caminho, me chama
+                </h3>
+                <p>Se bater dúvida sobre uma posição, sobre como seguir na prática, ou se você só quiser um direcionamento com calma, eu estou aqui. No seu tempo.</p>
+                <a class="help-link" href="https://wa.me/553198531960" target="_blank">Falar comigo no WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Esse é o seu espaço. Volte sempre que precisar. 💜</p>
+        </div>
+    </div>
+</body>
+</html>
+

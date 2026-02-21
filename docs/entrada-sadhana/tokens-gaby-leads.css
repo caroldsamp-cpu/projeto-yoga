@@ -1,0 +1,348 @@
+﻿/**
+ * Gaby Drummond Leads Design System - CSS Tokens
+ * Baseado em: NamaSer Design System
+ * Adaptado para: Logo Gaby (azul) + Vibe Sadhana (verde terra)
+ *
+ * Paleta:
+ * - PrimÃ¡rio: Azul escuro (#1B5A6B) - Logo Gaby, profundidade
+ * - SecundÃ¡rio: Verde terra (#6B7B5E) - Vibe Sadhana, enraizamento
+ * - TerciÃ¡rio: Azul claro (#5ECFD8) - RespiraÃ§Ã£o, leveza
+ */
+
+:root {
+  /* ============================================
+     COLOR TOKENS - IDENTIDADE GABY
+     ============================================ */
+
+  /* Primary Palette */
+  --cream: #FDF8F4;
+  --white: #FFFFFF;
+  --text: #3D3A38;
+  --text-light: #6B6560;
+
+  /* Accent Colors - ADAPTADOS */
+  --blue-dark: #1B5A6B;        /* Logo Gaby primÃ¡rio */
+  --blue-light: #5ECFD8;       /* Logo Gaby respiraÃ§Ã£o */
+  --green: #6B7B5E;            /* Sadhana - enraizamento */
+  --green-light: #8A9A7D;      /* VariaÃ§Ã£o do green */
+
+  /* UI Tokens */
+  --card-bg: #F5EDE4;
+  --border: #E8DDD2;
+
+  /* Semantic Colors */
+  --color-background: var(--cream);
+  --color-surface: var(--white);
+  --color-primary: var(--blue-dark);        /* Azul Gaby */
+  --color-primary-light: var(--blue-light); /* Azul claro */
+  --color-secondary: var(--green);          /* Verde Sadhana */
+  --color-secondary-light: var(--green-light);
+  --color-text-primary: var(--text);
+  --color-text-secondary: var(--text-light);
+
+  /* ============================================
+     TYPOGRAPHY TOKENS
+     ============================================ */
+
+  /* Font Families */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* Font Sizes */
+  --font-size-h1: clamp(36px, 6vw, 56px);
+  --font-size-h2: clamp(28px, 4.5vw, 40px);
+  --font-size-h3: 22px;
+  --font-size-h4: 20px;
+  --font-size-h5: 18px;
+  --font-size-lg: 19px;
+  --font-size-base: 17px;
+  --font-size-sm: 15px;
+  --font-size-xs: 14px;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.3;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.7;
+  --line-height-loose: 1.8;
+  --line-height-extra: 1.9;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.5px;
+
+  /* ============================================
+     SPACING SCALE (4px base)
+     ============================================ */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Gap & Padding */
+  --gap-sm: var(--space-4);
+  --gap-md: var(--space-6);
+  --gap-lg: var(--space-8);
+
+  /* ============================================
+     LAYOUT TOKENS
+     ============================================ */
+
+  --max-width-sm: 540px;
+  --max-width-md: 720px;
+  --max-width-lg: 800px;
+
+  --section-padding-top: 120px;
+  --section-padding-bottom: 80px;
+  --section-padding-x: 24px;
+
+  /* ============================================
+     BORDER & RADIUS
+     ============================================ */
+
+  --border-width: 1px;
+  --border-width-thick: 2px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* ============================================
+     SHADOW & ELEVATION
+     ============================================ */
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* ============================================
+     TRANSITIONS
+     ============================================ */
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.7s ease;
+
+  /* ============================================
+     BREAKPOINTS
+     ============================================ */
+
+  --breakpoint-sm: 540px;
+  --breakpoint-md: 640px;
+  --breakpoint-lg: 768px;
+  --breakpoint-xl: 1024px;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--cream);
+  line-height: var(--line-height-loose);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   ============================================ */
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-tight);
+  color: var(--text);
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-snug);
+  color: var(--text);
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-primary);
+}
+
+p {
+  color: var(--text);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--space-4);
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+
+input,
+textarea,
+select {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  color: var(--text);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-light);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(27, 90, 107, 0.1);
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4) var(--space-6);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  gap: var(--space-2);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: #0f3d4d;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: var(--color-secondary);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background: #556550;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.container {
+  max-width: var(--max-width-md);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+.bg-cream {
+  background: var(--cream);
+}
+
+.bg-white {
+  background: var(--white);
+}
+
+.border {
+  border: var(--border-width) solid var(--border);
+}
+
+.rounded-md {
+  border-radius: var(--radius-md);
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.gap-sm {
+  gap: var(--gap-sm);
+}
+
+.gap-md {
+  gap: var(--gap-md);
+}
+
+.gap-lg {
+  gap: var(--gap-lg);
+}
+
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
+.mb-8 { margin-bottom: var(--space-8); }
+
+.p-4 { padding: var(--space-4); }
+.p-6 { padding: var(--space-6); }
+.p-8 { padding: var(--space-8); }
+

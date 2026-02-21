@@ -1,0 +1,220 @@
+{
+  "total_ok": 35,
+  "top_n": 20,
+  "all_theme_pct": {
+    "dor_estresse": 60.0,
+    "respiracao_presenca": 5.7,
+    "corpo_postura": 0.0,
+    "rotina_consistencia": 17.1,
+    "oferta_convite": 71.4
+  },
+  "top_theme_pct": {
+    "dor_estresse": 75.0,
+    "respiracao_presenca": 5.0,
+    "corpo_postura": 0.0,
+    "rotina_consistencia": 15.0,
+    "oferta_convite": 85.0
+  },
+  "top_items": [
+    {
+      "rank": 1,
+      "shortCode": "C-WKwpjso3s",
+      "url": "https://www.instagram.com/p/C-WKwpjso3s/",
+      "views": 4148731,
+      "likes": 138895,
+      "comments": 4671,
+      "duration_sec": 55.2,
+      "hook": "O Pablo Marçaltai escondendo isso de todo mundo e você nem tá percebendo."
+    },
+    {
+      "rank": 2,
+      "shortCode": "DRTFzTtETer",
+      "url": "https://www.instagram.com/p/DRTFzTtETer/",
+      "views": 1434570,
+      "likes": 125324,
+      "comments": 31885,
+      "duration_sec": 131.1,
+      "hook": "Você provavelmente não sabe no medê-la, né?"
+    },
+    {
+      "rank": 3,
+      "shortCode": "DQK9QLqESlk",
+      "url": "https://www.instagram.com/p/DQK9QLqESlk/",
+      "views": 1295166,
+      "likes": 68099,
+      "comments": 250,
+      "duration_sec": 140.3,
+      "hook": "A Rica sempre vai mudar quando a gente fica parecida com ela."
+    },
+    {
+      "rank": 4,
+      "shortCode": "DDskSFJxHEJ",
+      "url": "https://www.instagram.com/p/DDskSFJxHEJ/",
+      "views": 1244686,
+      "likes": 85226,
+      "comments": 27267,
+      "duration_sec": 90.0,
+      "hook": "Isso que eu vou te contar, vai lugar um triplex na sua cabeça do mesmo jeito que eu vou na minha."
+    },
+    {
+      "rank": 5,
+      "shortCode": "DRnQQ4pkQoZ",
+      "url": "https://www.instagram.com/p/DRnQQ4pkQoZ/",
+      "views": 671415,
+      "likes": 30527,
+      "comments": 5334,
+      "duration_sec": 165.7,
+      "hook": "A Rica sempre erra quando ela tenta parecer gente como a gente."
+    },
+    {
+      "rank": 6,
+      "shortCode": "C-v9N2MM0p0",
+      "url": "https://www.instagram.com/p/C-v9N2MM0p0/",
+      "views": 466115,
+      "likes": 49248,
+      "comments": 2219,
+      "duration_sec": 90.0,
+      "hook": "Você nunca mais vai conseguir ver tequila na sua frente sem lembrar disso."
+    },
+    {
+      "rank": 7,
+      "shortCode": "DKqWtgFsRQF",
+      "url": "https://www.instagram.com/p/DKqWtgFsRQF/",
+      "views": 389792,
+      "likes": 30368,
+      "comments": 4082,
+      "duration_sec": 141.0,
+      "hook": "A verdade sobre a venda bilionária da Routa."
+    },
+    {
+      "rank": 8,
+      "shortCode": "C-D9MKMxqoI",
+      "url": "https://www.instagram.com/p/C-D9MKMxqoI/",
+      "views": 367551,
+      "likes": 26276,
+      "comments": 244,
+      "duration_sec": 87.5,
+      "hook": "A meta pode ter acabado com o chat-appt."
+    },
+    {
+      "rank": 9,
+      "shortCode": "C90plAbs4SE",
+      "url": "https://www.instagram.com/p/C90plAbs4SE/",
+      "views": 324437,
+      "likes": 12600,
+      "comments": 102,
+      "duration_sec": 53.2,
+      "hook": "Essa sou eu usando chat para ter por um dia."
+    },
+    {
+      "rank": 10,
+      "shortCode": "DICBi81Mo4g",
+      "url": "https://www.instagram.com/p/DICBi81Mo4g/",
+      "views": 159648,
+      "likes": 5461,
+      "comments": 6957,
+      "duration_sec": 86.6,
+      "hook": "Já que ninguém tá falando disso, eu vou ter que falar."
+    },
+    {
+      "rank": 11,
+      "shortCode": "DHo5qjes18o",
+      "url": "https://www.instagram.com/p/DHo5qjes18o/",
+      "views": 119824,
+      "likes": 7381,
+      "comments": 1779,
+      "duration_sec": 81.6,
+      "hook": "Esse cara escondeu um cancer raro por dois anos, até o dia que ele morreu em 2021, só 41 anos de idade."
+    },
+    {
+      "rank": 12,
+      "shortCode": "DMlkDLoxhBh",
+      "url": "https://www.instagram.com/p/DMlkDLoxhBh/",
+      "views": 101889,
+      "likes": 5518,
+      "comments": 70,
+      "duration_sec": 124.6,
+      "hook": "A eras de influenciadores está oficialmente morta."
+    },
+    {
+      "rank": 13,
+      "shortCode": "DM-c0sox8g3",
+      "url": "https://www.instagram.com/p/DM-c0sox8g3/",
+      "views": 94464,
+      "likes": 6319,
+      "comments": 526,
+      "duration_sec": 168.5,
+      "hook": "No primeiro episódio da série Founders de sucesso temos as gemas ou sem."
+    },
+    {
+      "rank": 14,
+      "shortCode": "DRdItLJEW7i",
+      "url": "https://www.instagram.com/p/DRdItLJEW7i/",
+      "views": 83955,
+      "likes": 5050,
+      "comments": 1071,
+      "duration_sec": 173.2,
+      "hook": "simplesmente o cara que previo a crise de 2018, e dizendo que a gente estava vendo uma bolha que vai se podia qualquer momento, e gerar uma crise econômica."
+    },
+    {
+      "rank": 15,
+      "shortCode": "DDDT_ylx8Aa",
+      "url": "https://www.instagram.com/p/DDDT_ylx8Aa/",
+      "views": 77447,
+      "likes": 7330,
+      "comments": 1677,
+      "duration_sec": 90.0,
+      "hook": "Só só eu, você também já reparou nessa babação de ovo que a Nike adidas tão com a direção e ultimamente, de oro, tá muito."
+    },
+    {
+      "rank": 16,
+      "shortCode": "DIrDuZhslU_",
+      "url": "https://www.instagram.com/p/DIrDuZhslU_/",
+      "views": 71080,
+      "likes": 2670,
+      "comments": 114,
+      "duration_sec": 123.1,
+      "hook": "Esse vídeo vai me fazer perder um muito seguidor, Suncaram."
+    },
+    {
+      "rank": 17,
+      "shortCode": "C_qOL-fAv0S",
+      "url": "https://www.instagram.com/p/C_qOL-fAv0S/",
+      "views": 70492,
+      "likes": 3131,
+      "comments": 6725,
+      "duration_sec": 67.1,
+      "hook": "Essa manda aqui, precisou, baba, baba, baba, baba, baba, baba, baba, baba, baba, baba, baba, baba, baba."
+    },
+    {
+      "rank": 18,
+      "shortCode": "C-LFms1Mk5M",
+      "url": "https://www.instagram.com/p/C-LFms1Mk5M/",
+      "views": 62242,
+      "likes": 2175,
+      "comments": 541,
+      "duration_sec": 43.1,
+      "hook": "para mim é muito louco, que estamos em 24 pessoas ainda não com o sègne os resultados que elas querem pedir no puxate a peteas coisas."
+    },
+    {
+      "rank": 19,
+      "shortCode": "DCfVrpyxn0s",
+      "url": "https://www.instagram.com/p/DCfVrpyxn0s/",
+      "views": 55407,
+      "likes": 1560,
+      "comments": 665,
+      "duration_sec": 72.8,
+      "hook": "Eu nunca imaginhei que eu ia defender de Jake Paul."
+    },
+    {
+      "rank": 20,
+      "shortCode": "C-_IsoURS7o",
+      "url": "https://www.instagram.com/p/C-_IsoURS7o/",
+      "views": 51676,
+      "likes": 2867,
+      "comments": 1628,
+      "duration_sec": 245.3,
+      "hook": "O programa, nome a Mundo Morel, um suso formado em Generik, que me cacou me biais, me rejeitais, intergista, chimegóis, só pivóis, ele..."
+    }
+  ]
+}

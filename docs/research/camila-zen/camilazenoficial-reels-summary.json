@@ -1,0 +1,97 @@
+{
+  "total_processed": 87,
+  "ok": 86,
+  "failed": 1,
+  "metrics": {
+    "avg_views": 681208,
+    "median_views": 334818,
+    "avg_likes": 31151,
+    "median_likes": 19976,
+    "avg_comments": 1955,
+    "median_comments": 831,
+    "avg_duration_sec": 390.1,
+    "median_duration_sec": 143.9,
+    "avg_caption_chars": 594,
+    "median_caption_chars": 554
+  },
+  "theme_counts": {
+    "ansiedade_estresse": 46,
+    "rotina_consistencia": 38,
+    "dor_corpo": 321,
+    "respiracao_presenca": 242,
+    "autoestima_identidade": 32,
+    "educacao_yoga": 299,
+    "oferta_produto": 131,
+    "prova_social": 86
+  },
+  "hook_signal_counts": {
+    "você": 28,
+    "voce": 0,
+    "se": 43,
+    "como": 4,
+    "pare": 4,
+    "erro": 0,
+    "3": 2,
+    "5": 1,
+    "nunca": 2,
+    "ninguém": 1,
+    "ninguem": 0,
+    "o que": 15,
+    "por que": 0,
+    "porque": 4
+  },
+  "cta_counts": {
+    "comenta": 0,
+    "direct_dm": 2,
+    "link_bio": 8,
+    "salva": 0,
+    "compartilha": 3,
+    "vagas_escassez": 3
+  },
+  "sample_hooks": [
+    "que 2020 se estigue com menos pressa e mais presença.",
+    "A mente pode ser treinada.",
+    "Tem uma coisa que vocês me perdem faz tempo.",
+    "Bem-vindo a sua meditação e a adapância da idade e foco.",
+    "Você sabe o que é yoga?",
+    "Hoje eu quero deixar uma nem-fagem para você.",
+    "Boa noite, boa noite!",
+    "Foi na Índia, na Péra do Rio de Janeiro, que uma professora me disse essa frase.",
+    "Talvez tentar se encaixar, seja só uma forma educada de desaparecer.",
+    "Hoje eu tenho um convite pra você.",
+    "A gente está aqui no site Pena Terra, local onde vai ser o nosso retiro.",
+    "Boa noite, boa noite meus fontinhos de luz.",
+    "Tem um momento na vida em que a gente descobre uma verdade dura.",
+    "O que vai acontecer acontece e talvez a vida seja exatamente isso.",
+    "Eu liu uma vez uma parábola sobre a verdade a mentira e ela nunca mais saiu de mim."
+  ],
+  "failed_items": [
+    {
+      "index": 78,
+      "shortCode": "DFlxZPUJaVA",
+      "status": "transcription_failed"
+    }
+  ],
+  "sample_openings": [
+    "feliz 2026 🧡✨🙏🏽",
+    "você não está quebrado — está cansado de lutar com a própria mente.",
+    "apresentamos lofi yoga, playlist que une o universo do yoga e a sonoridade do lofi. ✨",
+    "você respira todos os dias, mas quantas vezes realmente sente a respiração?",
+    "você sabe o que é yoga? mas de verdade? vem assistir o vídeo e me conta, ficou curioso pra saber mais sobre como o yoga pode te ajudar no seu dia a dia? estou animadíssima pra compartilhar mais com vocês 🧡✨🙏🏼",
+    "a gente fala tanto de sorte",
+    "live de final de ano 🧡✨🙏🏼",
+    "às vezes, a cura não está em falar mais.",
+    "às vezes, tudo o que falta é um instante de silêncio para lembrar quem você sempre foi.",
+    "meditação no pôr do sol com camila zen e música 🎵 @nomadhealers",
+    "retiro transformação de carnaval 🧡✨ nos dias 14,15,16,e 17 de fevereiro vamos nos encontrar num lugar mágico em meio a natureza para nos aprofundar dentro de nós mesmos, entender quem somos, entender como fazer de 2026 um ano bonito, leve e cheio de propósito pra cada um de nós, nos conectar, descansar e nos reenergizar pra voltar pra casa com o coração nutrido e a alma leve.",
+    "está aberta nossa black friday com um combo maravilhoso com um super desconto pra vocês 🧡✨ link na bio ✨",
+    "você já sentiu que o cansaço não vem do mundo, mas do jeito que você está carregando o mundo dentro de você?",
+    "um ano inteiro cuidando da pele de uma mulher que inspira pela calma, pela presença e pela forma leve de viver.",
+    "a vida nem sempre segue o roteiro, e tudo bem.",
+    "às vezes, o que mais nos assusta não é a mentira.",
+    "vagas esgotadas 🧡✨",
+    "criada em parceria entre camila zen e sleep tales, a playlist lofi yoga é uma coleção de músicas que transformam a prática em ritual. 🩵",
+    "você quer ser feliz ou quer estar certo?",
+    "o medo é sutil."
+  ]
+}
