@@ -1,0 +1,428 @@
+﻿{
+    "meta":  {
+                 "source_markdown":  [
+                                         "docs/oraculo/03/editorial/cartas-v2-curadoria-a-melhores-com-b-ui-560.md",
+                                         "docs/oraculo/03/editorial/cartas-v3-lote-c-piloto-10-ui560-estilo-pao-v2.md",
+                                         "docs/oraculo/03/editorial/cartas-v3-lote-d-piloto-10-ui560-estilo-pao.md"
+                                     ],
+                 "generated_on":  "2026-02-21 18:33:48",
+                 "total_cards":  46,
+                 "structure_rule":  "3 blocos por carta (paragraph-based)"
+             },
+    "cards":  [
+                  {
+                      "id":  "001",
+                      "virtude":  "Ritmo",
+                      "partes":  [
+                                     "Há dias de passo curto e dias de expansão. O corpo reconhece essa diferença quando a mente desacelera e observa com honestidade.",
+                                     "Ritmo é escolher entre insistir e reduzir, sem culpa. É respirar antes de responder e respeitar a energia disponível.",
+                                     "Quando você honra o compasso de hoje, o atropelo diminui. O caminho fica mais claro por dentro e mais estável por fora."
+                                 ]
+                  },
+                  {
+                      "id":  "002",
+                      "virtude":  "Pausa",
+                      "partes":  [
+                                     "Uma pausa breve pode reorganizar um dia inteiro. A urgência perde exagero quando a respiração assenta e o olhar volta para o presente.",
+                                     "Pausar não interrompe a vida. Pausar devolve o leme para suas mãos e clareia prioridades.",
+                                     "Nesse intervalo, o corpo sai da defesa. A escolha volta a nascer com firmeza, simplicidade e menos arrependimento."
+                                 ]
+                  },
+                  {
+                      "id":  "003",
+                      "virtude":  "Presença",
+                      "partes":  [
+                                     "O agora parece simples para uma mente acelerada. Ainda assim, é nele que a vida acontece de forma concreta e tocável.",
+                                     "Pés no chão, ar no peito, luz mudando na parede. Presença é tocar o que já está vivo, sem teatro e sem fuga.",
+                                     "Quando você pousa no instante, a ansiedade recua. O dia deixa de ser corrida e vira morada possível."
+                                 ]
+                  },
+                  {
+                      "id":  "004",
+                      "virtude":  "Escuta",
+                      "partes":  [
+                                     "Escutar é abrir espaço antes da resposta. É diminuir o impulso de corrigir tudo e provar alguma coisa.",
+                                     "Quando a escuta é real, ombros relaxam e o olhar suaviza. A conversa ganha chão, ritmo e verdade.",
+                                     "Por dentro vale a mesma regra. Respostas importantes chegam baixinho para quem sustenta atenção."
+                                 ]
+                  },
+                  {
+                      "id":  "014",
+                      "virtude":  "Desapego",
+                      "partes":  [
+                                     "Desapego é mão aberta e peito disponível. É honrar o vivido sem transformar memória em peso diário e identidade fixa.",
+                                     "O que tem raiz permanece. O que concluiu ciclo pede despedida limpa, com respeito e sem dramatização.",
+                                     "Soltar organiza a casa interna. A respiração funda e o afeto volta a circular com leveza e presença."
+                                 ]
+                  },
+                  {
+                      "id":  "016",
+                      "virtude":  "Gratidão",
+                      "partes":  [
+                                     "Gratidão nasce no comum que sustenta o dia. Água, alimento, respiração, luz da tarde e encontros que aquecem.",
+                                     "Esse olhar muda a qualidade da presença. A mente retorna ao que existe agora e reduz a sensação de falta.",
+                                     "Gratidão não nega a dor. Ela devolve calor, direção e firmeza para atravessar o que vier."
+                                 ]
+                  },
+                  {
+                      "id":  "017",
+                      "virtude":  "Ternura",
+                      "partes":  [
+                                     "Ternura é interromper a violência íntima. É trocar castigo por cuidado firme, sem autoengano e sem rigidez cruel.",
+                                     "O corpo floresce em segurança e ritmo possível. Disciplina com respeito dura mais e amadurece melhor.",
+                                     "Quando a voz interna muda de tom, a culpa perde comando. O aprendizado ganha raiz e continuidade."
+                                 ]
+                  },
+                  {
+                      "id":  "018",
+                      "virtude":  "Acolhimento",
+                      "partes":  [
+                                     "Toda emoção chega com um recado. Medo, raiva, tristeza e cansaço também pedem escuta e lugar.",
+                                     "Quando tudo é empurrado para longe, o ruído aumenta. O corpo endurece e a mente se confunde.",
+                                     "Acolher é dar lugar com limite. Assim, a dor perde volume e você volta ao eixo com inteireza."
+                                 ]
+                  },
+                  {
+                      "id":  "020",
+                      "virtude":  "Pertencimento",
+                      "partes":  [
+                                     "Pertencimento começa quando sua pele volta a ser morada. Menos tribunal interno, mais presença e dignidade cotidiana.",
+                                     "Não é preciso performar perfeição para merecer lugar. Existir já tem valor antes de qualquer validação.",
+                                     "Quando isso assenta, o corpo descansa. As relações ficam mais simples, honestas e menos ansiosas."
+                                 ]
+                  },
+                  {
+                      "id":  "029",
+                      "virtude":  "Silêncio",
+                      "partes":  [
+                                     "Silêncio é campo fértil. Nele, os sentidos se reorganizam e a mente reduz o excesso de ruído.",
+                                     "A pressa apaga sinais sutis do corpo e do estado interno. O silêncio devolve esse contato com precisão.",
+                                     "Ele não exige isolamento perfeito. Exige disponibilidade interna para escutar o essencial e agir com clareza."
+                                 ]
+                  },
+                  {
+                      "id":  "031",
+                      "virtude":  "Intervalo",
+                      "partes":  [
+                                     "Intervalo é a fresta entre estímulo e resposta. É ali que a liberdade aparece e a consciência assume o leme.",
+                                     "Sem fresta, o dia vira repetição automática. Com fresta, nasce escolha consciente e gesto mais coerente.",
+                                     "Respiração, pausa e presença devolvem autoria. Pequenos segundos mudam destinos e preservam vínculos importantes."
+                                 ]
+                  },
+                  {
+                      "id":  "034",
+                      "virtude":  "Esperança",
+                      "partes":  [
+                                     "Esperança madura conhece a noite. Ainda assim, protege a chama pequena com constância e realismo.",
+                                     "Ela não promete atalhos. Ela sustenta o próximo passo possível, mesmo em terreno incerto.",
+                                     "Um gesto de cuidado já é caminho. Quem cuida da chama segue firme, mesmo sem mapa completo."
+                                 ]
+                  },
+                  {
+                      "id":  "035",
+                      "virtude":  "Encanto",
+                      "partes":  [
+                                     "Encanto é olhar de novo para o que ficou invisível. Luz da tarde, cheiro do café, um riso breve.",
+                                     "Não exige espetáculo. Exige presença sensível para perceber beleza no que se repete.",
+                                     "Quando o olhar se afina, o dia ganha relevo. A vitalidade retorna com simplicidade e verdade."
+                                 ]
+                  },
+                  {
+                      "id":  "037",
+                      "virtude":  "Paciência",
+                      "partes":  [
+                                     "Paciência é aliança com o tempo orgânico das coisas. Nem tudo responde ao grito ou à pressa.",
+                                     "Ela trabalha, observa, ajusta e continua. Constância lúcida vale mais que impulso momentâneo.",
+                                     "Quem respeita maturação colhe com raiz. O processo fica mais estável, humano e sustentável."
+                                 ]
+                  },
+                  {
+                      "id":  "038",
+                      "virtude":  "Confiança",
+                      "partes":  [
+                                     "Confiança se constrói no cotidiano. Promessas pequenas cumpridas viram base real para o corpo e para a mente.",
+                                     "Ela cresce quando palavra e ação caminham juntas. Também quando você se mantém por perto de si.",
+                                     "Esse acúmulo de coerência acalma o corpo. Mesmo com incerteza, há chão para seguir com firmeza."
+                                 ]
+                  },
+                  {
+                      "id":  "040",
+                      "virtude":  "Presente",
+                      "partes":  [
+                                     "O presente é o único território tocável. Ontem é memória, amanhã é hipótese e imaginação.",
+                                     "Agora é respiração, corpo e escolha. É aqui que a vida se move e pode ser cuidada.",
+                                     "Habitar o instante reduz exageros da ansiedade. A intenção vira experiência concreta, simples e transformadora. --- ## Lote B (Completo)"
+                                 ]
+                  },
+                  {
+                      "id":  "B01",
+                      "virtude":  "Mão aberta",
+                      "partes":  [
+                                     "Soltar é abrir espaço vital. Não é apagar afeto nem diminuir o que foi importante.",
+                                     "Histórias podem ser honradas sem serem carregadas todos os dias. O que tem raiz permanece com naturalidade.",
+                                     "Quando a vigilância ao passado cessa, a energia volta ao presente. O peito desafoga e o olhar clareia."
+                                 ]
+                  },
+                  {
+                      "id":  "B02",
+                      "virtude":  "Cinzas",
+                      "partes":  [
+                                     "Encerrar um ciclo é respeito com o vivido. É colocar cada coisa no seu tempo, com maturidade.",
+                                     "Sem fechamento, a mente tropeça no mesmo ponto. Com fechamento, o terreno limpa para o novo.",
+                                     "As cinzas guardam sabedoria. Delas nasce espaço para recomeçar com presença e menos peso."
+                                 ]
+                  },
+                  {
+                      "id":  "B03",
+                      "virtude":  "Espanto",
+                      "partes":  [
+                                     "Espanto é presença tocada pelo simples. Água fresca, vento na janela, corpo respirando e coração desperto.",
+                                     "Esse estado devolve frescor ao olhar. Impede a anestesia que a rotina costuma impor.",
+                                     "Cultivar espanto é permanecer vivo por dentro. O comum volta a revelar beleza e sentido."
+                                 ]
+                  },
+                  {
+                      "id":  "B04",
+                      "virtude":  "Trégua",
+                      "partes":  [
+                                     "Trégua é desarmar a guerra contra si. Firmeza sem crueldade e cobrança desmedida.",
+                                     "Excesso de exigência exaure e confunde. Cuidado consistente sustenta crescimento de longo prazo.",
+                                     "Com descanso e disciplina possível, o corpo aprende melhor. A mudança passa a durar com suavidade."
+                                 ]
+                  },
+                  {
+                      "id":  "B05",
+                      "virtude":  "Hóspede",
+                      "partes":  [
+                                     "Cada emoção visita com linguagem própria. Algumas chegam suaves, outras derrubam cadeiras dentro da casa interna.",
+                                     "Fechar a porta à força aumenta o tumulto. Acolher com limite reorganiza a casa e o fôlego.",
+                                     "Receber não é ceder comando. É escutar o recado e escolher com consciência."
+                                 ]
+                  },
+                  {
+                      "id":  "B06",
+                      "virtude":  "Poço",
+                      "partes":  [
+                                     "Há coragens silenciosas que quase ninguém vê. Ficar diante do que dói é uma delas.",
+                                     "No fundo do poço emocional existe água limpa. Ela não aparece para quem só foge.",
+                                     "Mergulhar com presença atravessa a verdade. Depois, você retorna mais inteira e com mais eixo."
+                                 ]
+                  },
+                  {
+                      "id":  "B07",
+                      "virtude":  "Templo",
+                      "partes":  [
+                                     "Templo, aqui, é o corpo vivido com dignidade. É sair do julgamento contínuo e voltar a se habitar com respeito.",
+                                     "A solitude saudável recompõe. Ela não abandona, ela reorganiza a casa interna.",
+                                     "Nesse recolhimento, o essencial reaparece. Existir já é pertencimento, mesmo sem aprovação externa."
+                                 ]
+                  },
+                  {
+                      "id":  "B08",
+                      "virtude":  "Espelho",
+                      "partes":  [
+                                     "Escuta generosa funciona como espelho limpo. Sem pressa de rebater, a verdade aparece com delicadeza.",
+                                     "O silêncio entre falas vira solo de compreensão. Espaço também comunica e acolhe.",
+                                     "Assim como um vaso, a conversa é útil pelo espaço que sustenta. Menos ruído, mais encontro."
+                                 ]
+                  },
+                  {
+                      "id":  "B09",
+                      "virtude":  "Fresta",
+                      "partes":  [
+                                     "Fresta é o entre, quase nada onde tudo pode mudar. Entre impulso e resposta, entre queda e recomeço.",
+                                     "Quando essa abertura é percebida, o automático perde força. A escolha volta para suas mãos.",
+                                     "Uma pausa pequena protege vínculos. Também devolve autoria ao viver com mais consciência."
+                                 ]
+                  },
+                  {
+                      "id":  "B10",
+                      "virtude":  "Chama",
+                      "partes":  [
+                                     "Chama é esperança praticada no concreto. Ela depende de cuidado contínuo e de presença diária.",
+                                     "Em dias escuros, pode ficar pequena. Ainda assim, aquece direção e sustenta travessia.",
+                                     "Descansar, pedir ajuda e seguir coerente alimenta a brasa. A vida clareia no tempo certo."
+                                 ]
+                  },
+                  {
+                      "id":  "C01",
+                      "virtude":  "Ritmo",
+                      "partes":  [
+                                     "Andar no tempo possível devolve paz ao corpo cansado e ansioso. Respirar antes de correr muda a qualidade do dia inteiro.",
+                                     "Diminuir quando for preciso também é coragem prática. Avançar quando o corpo pedir também é maturidade silenciosa.",
+                                     "Parar de brigar com o relógio alivia o peito. Voltar pro próprio compasso ajuda você a seguir com presença."
+                                 ]
+                  },
+                  {
+                      "id":  "C02",
+                      "virtude":  "Soltura",
+                      "partes":  [
+                                     "Abrir a mão é um gesto de cuidado com você hoje. Soltar o excesso devolve circulação ao coração e à mente.",
+                                     "Guardar o que virou raiz honra sua história. Deixar partir o que virou peso preserva sua energia.",
+                                     "Desocupar o peito cria espaço real para o novo. Desocupar a cabeça deixa a respiração trabalhar em paz, com suavidade."
+                                 ]
+                  },
+                  {
+                      "id":  "C03",
+                      "virtude":  "Acolhimento",
+                      "partes":  [
+                                     "Receber o que chega evita guerra por dentro e por fora. Nomear o que sente já começa a organizar a casa interna.",
+                                     "Dar lugar ao medo não é obedecer ao medo. Dar limite ao impulso não é sufocar a verdade.",
+                                     "Escutar sem se perder protege seu centro. Respirar sem se fechar devolve clareza para escolher o próximo passo."
+                                 ]
+                  },
+                  {
+                      "id":  "C04",
+                      "virtude":  "Suavidade",
+                      "partes":  [
+                                     "Contornar em vez de quebrar também é força madura. Ceder sem desistir também é a firmeza da água.",
+                                     "Trocar rigidez por presença reduz desgaste nos ossos. Trocar força bruta por constância sustenta resultado real no tempo.",
+                                     "Ser água no caminho ensina inteligência prática. Seguir em movimento transforma bloqueio em passagem possível, sem pressa e sem ruptura."
+                                 ]
+                  },
+                  {
+                      "id":  "C05",
+                      "virtude":  "Encerramento",
+                      "partes":  [
+                                     "Fechar o que terminou é respeito pelo vivido inteiro. Honrar o que foi não exige carregar tudo para frente.",
+                                     "Limpar a casa por dentro reduz tropeços antigos e repetidos. Tirar do centro o que já não sustenta abre horizonte.",
+                                     "Ficar com o aprendizado já basta. Soltar o resto deixa o corpo mais leve para recomeçar."
+                                 ]
+                  },
+                  {
+                      "id":  "C06",
+                      "virtude":  "Sopro",
+                      "partes":  [
+                                     "Parar por um instante pode salvar o seu dia. Respirar de verdade devolve presença para o agora irrepetível.",
+                                     "Sentir o ar entrar acalma o excesso mental. Sentir o ar sair afrouxa o peso dos ombros.",
+                                     "Com esse sopro, a pressa perde comando e volume. Com esse sopro, a escolha volta a nascer com direção e calma."
+                                 ]
+                  },
+                  {
+                      "id":  "C07",
+                      "virtude":  "Fresta",
+                      "partes":  [
+                                     "Criar um segundo entre impulso e resposta muda tudo. Honrar esse vácuo evita repetição automática e desgaste.",
+                                     "Sem pausa, velhos roteiros voltam ao comando. Com pausa, a consciência volta para as suas mãos.",
+                                     "Uma fresta pequena protege o que é delicado. Uma fresta pequena poupa arrependimentos no fim do dia e preserva o afeto."
+                                 ]
+                  },
+                  {
+                      "id":  "C08",
+                      "virtude":  "Recolhimento",
+                      "partes":  [
+                                     "Baixar o volume de fora ajuda a ouvir dentro com honestidade. Recolher-se um pouco pode ser um ato de lucidez.",
+                                     "Sair do desempenho libera o corpo da tensão acumulada. Voltar para a respiração recompõe sua base com paciência.",
+                                     "Nesse silêncio, o essencial reaparece sem esforço e sem pressa. Nesse silêncio, você retorna inteira para a vida comum."
+                                 ]
+                  },
+                  {
+                      "id":  "C09",
+                      "virtude":  "Encanto",
+                      "partes":  [
+                                     "Notar o simples reacende o coração cansado e seco. Notar de novo devolve presença ao cotidiano comum.",
+                                     "A luz da tarde pode abrir uma fresta de beleza inesperada. O cheiro do café pode chamar você de volta para si.",
+                                     "Deixar o comum tocar a alma cura a pressa. Deixar o dia ganhar brilho fortalece o ânimo."
+                                 ]
+                  },
+                  {
+                      "id":  "C10",
+                      "virtude":  "Centro",
+                      "partes":  [
+                                     "Firmar os pés no chão acalma o pensamento disperso e ansioso. Firmar a presença devolve eixo ao dia.",
+                                     "Alinhar o que pensa, fala e faz cria uma fortaleza interna. Sustentar essa coerência dá base nas horas difíceis.",
+                                     "Com esse chão, você atravessa o caos sem endurecer. Com esse chão, a calma deixa de depender do cenário."
+                                 ]
+                  },
+                  {
+                      "id":  "C11",
+                      "virtude":  "Brisa",
+                      "partes":  [
+                                     "Deixar o ar passar muda o que parecia travado. Um suspiro inteiro já abre espaço por dentro.",
+                                     "Afrouxar o maxilar. Soltar os ombros. Dar ao corpo a chance de sair da defesa.",
+                                     "Com menos pressão, a mente clareia. Com mais brisa, o coração volta a escutar. E o dia fica mais habitável, mesmo quando ainda existe muito por resolver."
+                                 ]
+                  },
+                  {
+                      "id":  "C12",
+                      "virtude":  "Raiz",
+                      "partes":  [
+                                     "Apoiar bem os pés no chão muda o dia. O corpo entende segurança antes da mente explicar.",
+                                     "Lembrar do que sustenta. Cuidar do básico. Honrar pequenos rituais que mantêm você inteira.",
+                                     "Quando a raiz aprofunda, o vento assusta menos. O que importa fica no lugar certo. Daí nasce estabilidade para atravessar mudanças sem perder presença."
+                                 ]
+                  },
+                  {
+                      "id":  "C13",
+                      "virtude":  "Horizonte",
+                      "partes":  [
+                                     "Levantar o olhar quebra o ciclo da urgência. Nem tudo precisa ser resolvido no mesmo minuto.",
+                                     "Respirar fundo. Escolher prioridade. Dar um passo possível em vez de prometer dez.",
+                                     "O horizonte não cobra pressa. O horizonte lembra caminho possível e contínuo. E, quando o caminho reaparece, a ansiedade perde parte da força e do ruído."
+                                 ]
+                  },
+                  {
+                      "id":  "C14",
+                      "virtude":  "Abrigo",
+                      "partes":  [
+                                     "Nos dias ásperos, tratar-se com cuidado vira necessidade. Gentileza não é luxo, é base.",
+                                     "Falar consigo sem violência. Reduzir o tom da cobrança. Fazer o que cabe hoje.",
+                                     "Quando existe abrigo por dentro, a tempestade perde domínio. Você continua de pé e respirando melhor. Sem esse abrigo, até o simples pesa mais do que deveria."
+                                 ]
+                  },
+                  {
+                      "id":  "C15",
+                      "virtude":  "Trama",
+                      "partes":  [
+                                     "Cada escolha puxa um fio da sua história. O dia comum também tece destino.",
+                                     "Palavras, silêncios, gestos pequenos. Tudo costura o jeito de viver.",
+                                     "Escolher com presença deixa a trama mais limpa. Escolher no automático repete nó antigo e cansado. Ponto por ponto, você transforma padrão em consciência. E transforma rotina em direção mais clara."
+                                 ]
+                  },
+                  {
+                      "id":  "C16",
+                      "virtude":  "Pulso",
+                      "partes":  [
+                                     "Sentir o próprio pulso devolve realidade. O corpo lembra que você está aqui.",
+                                     "Reduzir estímulo por um momento. Ouvir o ritmo interno antes de decidir.",
+                                     "Quando o pulso acalma, a pressa perde autoridade. A ação sai mais precisa e menos reativa. E aquilo que parecia confuso encontra forma mais nítida. O próximo passo fica mais claro."
+                                 ]
+                  },
+                  {
+                      "id":  "C17",
+                      "virtude":  "Semente",
+                      "partes":  [
+                                     "Nem toda mudança nasce grande. O que transforma, muitas vezes, começa pequeno.",
+                                     "Cinco minutos de presença. Uma escolha mais honesta. Um limite dito no tempo certo.",
+                                     "Semente pede constância, não espetáculo. Com cuidado diário, o invisível começa a brotar. Com o tempo, o pequeno vira estrutura e sustenta uma vida mais inteira, estável e fértil."
+                                 ]
+                  },
+                  {
+                      "id":  "C18",
+                      "virtude":  "Pouso",
+                      "partes":  [
+                                     "Voltar para si é um pouso, não uma fuga. É descanso que prepara travessia.",
+                                     "Baixar o ritmo por dentro. Fechar os olhos por instantes. Ouvir a respiração sem pressa.",
+                                     "Depois do pouso, o corpo responde melhor. Depois do pouso, a vida volta a caber. A partir daí, até decisões difíceis ganham mais lucidez e menos peso."
+                                 ]
+                  },
+                  {
+                      "id":  "C19",
+                      "virtude":  "Vínculo",
+                      "partes":  [
+                                     "Cuidar do vínculo começa no jeito de ouvir. Presença vale mais que resposta perfeita.",
+                                     "Olhar nos olhos. Não interromper. Escolher palavra que aproxima, e não palavra que fere.",
+                                     "Vínculo se fortalece no cotidiano. Um gesto de respeito por vez, com constância e verdade. E essa repetição de cuidado cria confiança onde antes havia distância e defesa."
+                                 ]
+                  },
+                  {
+                      "id":  "C20",
+                      "virtude":  "Clarão",
+                      "partes":  [
+                                     "No meio da confusão, sempre existe um ponto de lucidez. Às vezes ele é breve, mas suficiente.",
+                                     "Parar. Nomear o que importa. Cortar o que é excesso agora.",
+                                     "Esse clarão não resolve tudo. Esse clarão mostra por onde seguir hoje, com mais foco. Quando você o respeita, o passo seguinte vem menos pesado e mais verdadeiro no corpo."
+                                 ]
+                  }
+              ]
+}
