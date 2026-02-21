@@ -893,6 +893,6 @@
 ?? package.json
 ?? squads/marketing-yog/assets/carousels/
 ?? squads/marketing-yog/docs/manual-uso-squad-marketing-yog.md
-?? squads/marketing-yog/scripts/generate_carousel_mosaico.py
+?? squads/marketing-yog/scripts/generate_carousel_namaser.py
 ?? squads/squad-creator/
 
