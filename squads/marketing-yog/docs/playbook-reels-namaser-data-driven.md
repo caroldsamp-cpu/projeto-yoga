@@ -1,4 +1,4 @@
-﻿# Playbook Reels Sadhana (Data-Driven)
+﻿# Playbook Reels NamaSer (Data-Driven)
 
 VersÃ£o: 1.0  
 Data: 2026-02-21  
@@ -38,7 +38,7 @@ Este playbook foi criado a partir de dados reais, nÃ£o de opiniÃ£o:
 2. A dor emocional/fÃ­sica Ã© entrada narrativa dominante.
 3. CTA conversacional converte melhor que CTA puramente institucional.
 
-## 3) O que adotar no Sadhana (e o que nÃ£o adotar)
+## 3) O que adotar no NamaSer (e o que nÃ£o adotar)
 
 ### Adotar
 1. Hook curto com tensÃ£o real do dia.
@@ -68,8 +68,8 @@ AplicaÃ§Ã£o explÃ­cita das minds em cada etapa:
 - transformar uma tese em sÃ©rie de variaÃ§Ãµes (Reels + stories + carrossel).
 - pergunta de controle: como reaproveitar sem repetir?
 4. `peter-thiel`
-- reforÃ§ar diferenciaÃ§Ã£o da tese Sadhana.
-- pergunta de controle: o que aqui sÃ³ a marca Sadhana pode dizer?
+- reforÃ§ar diferenciaÃ§Ã£o da tese NamaSer (promessa: construir seu Sadhana).
+- pergunta de controle: o que aqui sÃ³ a marca NamaSer pode dizer sobre construir seu Sadhana?
 5. `tay-dantas`
 - garantir narrativa de marca e desejo com cliente no centro.
 - pergunta de controle: a marca ficou mais memorÃ¡vel?
@@ -170,5 +170,6 @@ garantir alinhamento com voz da Gaby.
 Este playbook deve ser aplicado como:
 1. sistema de produÃ§Ã£o (nÃ£o peÃ§a isolada),
 2. orientado por mÃ©trica semanal,
-3. protegido pelo gate de voz Sadhana.
+3. protegido pelo gate de voz da Gaby e pela promessa de construir seu Sadhana.
+
 

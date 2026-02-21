@@ -1,9 +1,9 @@
 ﻿{
   "name": "marketing-yog",
-  "version": "1.0.0",
-  "description": "Squad de operacao de conteudo Sadhana com publicacao manual",
+  "version": "1.2.0",
+  "description": "Squad de operacao de conteudo NamaSer com posicionamento em torno de Sadhana e publicacao manual",
   "main": "index.js",
-  "keywords": ["aios", "aios-squad", "marketing", "sadhana", "yoga"],
-  "author": "Projeto Mente Leve",
+  "keywords": ["aios", "aios-squad", "marketing", "namaser", "sadhana", "yoga"],
+  "author": "Projeto NamaSer",
   "license": "MIT"
 }

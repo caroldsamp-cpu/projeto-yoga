@@ -1,7 +1,10 @@
 ﻿brand:
-  name: "Sadhana"
+  name: "NamaSer"
   project: "projeto-yoga"
-  promise: "Pratica simples para a vida real"
+  promise: "Construir seu Sadhana com pratica simples para a vida real"
+  legacy_names:
+    - "Comunidade de Yoga Online"
+    - "Mente Leve"
 
 voice:
   owner: "Gaby"

@@ -1,6 +1,6 @@
 ﻿name: marketing-yog
-version: 1.1.0
-title: "Marketing YOG - Sadhana Content Ops"
+version: 1.2.0
+title: "Marketing YOG - NamaSer Content Ops"
 short-title: "YOG"
 description: |
   Squad oficial de marketing de conteudo do projeto-yoga.
@@ -13,14 +13,20 @@ author: "Projeto Yoga"
 created: 2026-02-20
 slash_prefix: "MarketingYog"
 
-domain: "Marketing de Conteudo / Instagram / Comunidade Sadhana"
+domain: "Marketing de Conteudo / Instagram / Comunidade NamaSer"
 target_users:
   - "Gaby Drummond"
 
 positioning:
-  tagline: "Sadhana: ritual simples para vida real"
+  tagline: "NamaSer: seu caminho para construir seu Sadhana"
   identity: "Conteudo com presenca, clareza e consistencia"
   category: "Operacao editorial humanizada"
+  naming_architecture:
+    course_name: "NamaSer"
+    brand_promise: "Construir seu Sadhana"
+    legacy_names:
+      - "Comunidade de Yoga Online"
+      - "Mente Leve"
 
 key_capabilities:
   - "Planejamento semanal de conteudo"
@@ -54,7 +60,7 @@ agents:
   - id: marketing-visual-malika
     file: agents/marketing-visual-malika.md
     name: "Marketing Visual Malika"
-    role: "Lens de direcao visual minimalista e legibilidade no contexto Sadhana"
+    role: "Lens de direcao visual minimalista e legibilidade no contexto NamaSer"
 
   - id: marketing-creative-rubin
     file: agents/marketing-creative-rubin.md
@@ -64,7 +70,7 @@ agents:
   - id: marketing-ideation-ig
     file: agents/marketing-ideation-ig.md
     name: "Marketing Ideation - Instagram"
-    role: "Ideacao nativa para Instagram no contexto Sadhana"
+    role: "Ideacao nativa para Instagram no contexto NamaSer"
 
   - id: marketing-production
     file: agents/marketing-production.md

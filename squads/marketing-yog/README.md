@@ -1,10 +1,15 @@
 ﻿# marketing-yog
 
-Squad de marketing de conteudo do projeto-yoga, focado em Instagram e comunidade Sadhana.
+Squad de marketing de conteudo do projeto-yoga, focado em Instagram e comunidade NamaSer.
 
 ## Objetivo
 
 Produzir conteudo com consistencia semanal, alinhado ao tom de voz da Gaby, sem automacao de postagem.
+
+Arquitetura de naming:
+- Curso/produto: `NamaSer`
+- Promessa/metodologia: `Construir seu Sadhana`
+- Nomes legados: `Comunidade de Yoga Online` e `Mente Leve`
 
 ## Escopo v1
 
