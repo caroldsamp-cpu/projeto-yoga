@@ -1,4 +1,4 @@
-﻿# Mapa Visual de Fluxo das Stories â€” Mente Leve Sadhana
+﻿# Mapa Visual de Fluxo das Stories â€” NamaSer Sadhana
 
 **Data:** 14/02/2026
 **Total:** 50 stories em 8 Epics
@@ -296,3 +296,4 @@ graph TD
 ### Observação de escopo
 - No MVP, não há salvamento de dados de usuário.
 - Persistência e histórico ficam planejados para fase 2.
+

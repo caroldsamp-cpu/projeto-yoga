@@ -1,13 +1,13 @@
-# 🎨 Design System - MaaS Hub → Mente Leve Premium
+﻿# ðŸŽ¨ Design System - MaaS Hub â†’ NamaSer Premium
 
-## Versões Disponíveis
+## VersÃµes DisponÃ­veis
 
-- ✅ **`index.html`** - Versão atual (light/cream theme)
-- ✅ **`index-premium-maas.html`** - NOVA! Premium dark + yoga acolhedor
+- âœ… **`index.html`** - VersÃ£o atual (light/cream theme)
+- âœ… **`index-premium-maas.html`** - NOVA! Premium dark + yoga acolhedor
 
 ---
 
-## 🌙 O que Mudou? Design System MaaS Hub Adaptado
+## ðŸŒ™ O que Mudou? Design System MaaS Hub Adaptado
 
 ### 1. **Paleta de Cores**
 
@@ -29,13 +29,13 @@
 --accent-green: #6B7B5E   /* Sadhana preserved */
 ```
 
-**Por que?** Mantém identidade Gaby mas com vibe meditativa profunda do MaaS.
+**Por que?** MantÃ©m identidade Gaby mas com vibe meditativa profunda do MaaS.
 
 ---
 
 ### 2. **Estrutura de Componentes**
 
-Mantém a **estrutura MaaS Hub**, mas com adaptações yoga:
+MantÃ©m a **estrutura MaaS Hub**, mas com adaptaÃ§Ãµes yoga:
 
 #### Button
 ```css
@@ -67,8 +67,8 @@ animation: fadeIn 0.6s ease-out 0.2s both;
 
 ### 3. **Tipografia & Hierarquia**
 
-Mantém as **fontes MaaS**:
-- **Serif:** Playfair Display (títulos principais)
+MantÃ©m as **fontes MaaS**:
+- **Serif:** Playfair Display (tÃ­tulos principais)
 - **Sans:** Inter (corpo e forms)
 
 Mas com **gradientes acolhedores**:
@@ -82,7 +82,7 @@ background: linear-gradient(135deg, var(--accent-gold), var(--accent-blue));
 
 ---
 
-### 4. **Espaçamento & Layout**
+### 4. **EspaÃ§amento & Layout**
 
 Usa **escala MaaS** mas otimizado para yoga:
 
@@ -103,18 +103,18 @@ Usa **escala MaaS** mas otimizado para yoga:
 
 ---
 
-### 5. **Animações**
+### 5. **AnimaÃ§Ãµes**
 
 Adiciona vibe **meditativa**:
 
 ```css
-/* Fade In - presença lenta */
+/* Fade In - presenÃ§a lenta */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Shimmer - respiração visual */
+/* Shimmer - respiraÃ§Ã£o visual */
 @keyframes shimmer {
   0%, 100% { background-position: -1000px 0; }
   50% { background-position: 1000px 0; }
@@ -125,14 +125,14 @@ Adiciona vibe **meditativa**:
 
 ### 6. **Elementos Yoga**
 
-Adicionais para experiência acolhedora:
+Adicionais para experiÃªncia acolhedora:
 
 #### Dividers
 ```css
 .divider {
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
-  /* Respiração visual - vai e volta */
+  /* RespiraÃ§Ã£o visual - vai e volta */
 }
 ```
 
@@ -141,21 +141,21 @@ Adicionais para experiência acolhedora:
 .nav-logo {
   background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
   box-shadow: var(--shadow-glow-blue);
-  /* 🧘 Emoji como ícone acolhedor */
+  /* ðŸ§˜ Emoji como Ã­cone acolhedor */
 }
 ```
 
 #### Select Options com Emojis
 ```html
-<option value="morning">🌅 Manhã (logo ao acordar)</option>
-<option value="afternoon">☀️ Tarde (pausa do dia)</option>
-<option value="evening">🌙 Noite (antes de dormir)</option>
-<option value="flexible">🌀 Flexível (depende do dia)</option>
+<option value="morning">ðŸŒ… ManhÃ£ (logo ao acordar)</option>
+<option value="afternoon">â˜€ï¸ Tarde (pausa do dia)</option>
+<option value="evening">ðŸŒ™ Noite (antes de dormir)</option>
+<option value="flexible">ðŸŒ€ FlexÃ­vel (depende do dia)</option>
 ```
 
 ---
 
-## 📊 Comparação Visual
+## ðŸ“Š ComparaÃ§Ã£o Visual
 
 | Aspecto | Antes (index.html) | Depois (index-premium-maas.html) |
 |---------|-------------------|----------------------------------|
@@ -164,29 +164,29 @@ Adicionais para experiência acolhedora:
 | **Cores** | Azul + Verde | Dark + Gold + Blue + Green |
 | **Tipografia** | Standard | Gradientes |
 | **Shadows** | Sutis | Glow effects |
-| **Animações** | Básicas | Meditativas |
+| **AnimaÃ§Ãµes** | BÃ¡sicas | Meditativas |
 | **Emojis** | Nenhum | Contextuais |
 
 ---
 
-## 🎯 Quando Usar Qual?
+## ðŸŽ¯ Quando Usar Qual?
 
 ### Use `index.html` (Atual) Se:
-- ✅ Quer design **light, clean, accessibility first**
-- ✅ Públicos que preferem **light mode**
-- ✅ Testing/development inicial
-- ✅ Mobile-first com pouco poder de processamento
+- âœ… Quer design **light, clean, accessibility first**
+- âœ… PÃºblicos que preferem **light mode**
+- âœ… Testing/development inicial
+- âœ… Mobile-first com pouco poder de processamento
 
 ### Use `index-premium-maas.html` (Novo) Se:
-- ✅ Quer **premium dark theme**
-- ✅ Deseja **brand premium** (tipo MaaS Hub)
-- ✅ Quer **emocional, meditativo, acolhedor**
-- ✅ Público **desktop/tablets**
-- ✅ Quer impressionar em **apresentações**
+- âœ… Quer **premium dark theme**
+- âœ… Deseja **brand premium** (tipo MaaS Hub)
+- âœ… Quer **emocional, meditativo, acolhedor**
+- âœ… PÃºblico **desktop/tablets**
+- âœ… Quer impressionar em **apresentaÃ§Ãµes**
 
 ---
 
-## 🔧 Customizações Fáceis
+## ðŸ”§ CustomizaÃ§Ãµes FÃ¡ceis
 
 ### Trocar Cores Principais
 ```css
@@ -215,9 +215,9 @@ Adicionais para experiência acolhedora:
 
 ---
 
-## 📱 Responsividade
+## ðŸ“± Responsividade
 
-Ambas as versões mantêm **responsive design**:
+Ambas as versÃµes mantÃªm **responsive design**:
 
 ```css
 @media (max-width: 768px) {
@@ -233,53 +233,53 @@ Ambas as versões mantêm **responsive design**:
 
 ---
 
-## ♿ Acessibilidade
+## â™¿ Acessibilidade
 
 ### Ambas Incluem:
-- ✅ Labels semânticas para inputs
-- ✅ Focus states com visual claro
-- ✅ Contraste de cores WCAG AA
-- ✅ `prefers-reduced-motion` respeitado
+- âœ… Labels semÃ¢nticas para inputs
+- âœ… Focus states com visual claro
+- âœ… Contraste de cores WCAG AA
+- âœ… `prefers-reduced-motion` respeitado
 
 ### Premium Version Adiciona:
-- ✅ Gradientes com texto legível
-- ✅ Focus rings dourados bem visíveis
-- ✅ Emojis para context visual
+- âœ… Gradientes com texto legÃ­vel
+- âœ… Focus rings dourados bem visÃ­veis
+- âœ… Emojis para context visual
 
 ---
 
-## 🚀 Próximos Passos
+## ðŸš€ PrÃ³ximos Passos
 
 ### 1. **A/B Testing**
-Compare conversão entre:
+Compare conversÃ£o entre:
 - Light theme (index.html)
 - Premium dark (index-premium-maas.html)
 
-### 2. **Integração**
-Decida qual versão usar como padrão e:
+### 2. **IntegraÃ§Ã£o**
+Decida qual versÃ£o usar como padrÃ£o e:
 - Adapte o CSS ao seu build system
-- Exporte como componente reutilizável
+- Exporte como componente reutilizÃ¡vel
 - Documente para seu time
 
-### 3. **Variações**
-Crie versões para:
-- Diferentes públicos (iniciante vs avançado)
-- Diferentes ritmos (manhã vs noite)
+### 3. **VariaÃ§Ãµes**
+Crie versÃµes para:
+- Diferentes pÃºblicos (iniciante vs avanÃ§ado)
+- Diferentes ritmos (manhÃ£ vs noite)
 - Mobile vs Desktop
 
-### 4. **Métricas**
+### 4. **MÃ©tricas**
 Rastreie:
-- Taxa de conversão
-- Tempo no formulário
-- Experiência mobile vs desktop
+- Taxa de conversÃ£o
+- Tempo no formulÃ¡rio
+- ExperiÃªncia mobile vs desktop
 - Abandonment rate
 
 ---
 
-## 📝 Notas Técnicas
+## ðŸ“ Notas TÃ©cnicas
 
 ### CSS Variables
-Ambas usam **CSS custom properties** para fácil customização:
+Ambas usam **CSS custom properties** para fÃ¡cil customizaÃ§Ã£o:
 ```css
 :root {
   --accent-gold: #D4A574;      /* Mude aqui, afeta tudo */
@@ -287,36 +287,37 @@ Ambas usam **CSS custom properties** para fácil customização:
 ```
 
 ### Performance
-- ✅ Zero JavaScript para estilo
-- ✅ Backdrop-filter bem suportado em modernos
-- ✅ Sem web fonts pesadas (already using Google Fonts)
-- ✅ Animations otimizadas com `will-change`
+- âœ… Zero JavaScript para estilo
+- âœ… Backdrop-filter bem suportado em modernos
+- âœ… Sem web fonts pesadas (already using Google Fonts)
+- âœ… Animations otimizadas com `will-change`
 
 ### Browser Support
-- ✅ Chrome/Edge 88+
-- ✅ Firefox 85+
-- ✅ Safari 15+
-- ✅ Mobile browsers modernos
+- âœ… Chrome/Edge 88+
+- âœ… Firefox 85+
+- âœ… Safari 15+
+- âœ… Mobile browsers modernos
 
 ---
 
-## 🎨 Design System Usado
+## ðŸŽ¨ Design System Usado
 
 **MaaS Hub Design System Tokens:**
 - Cores dark premium
 - Tipografia elegante
-- Espaçamento harmônico
-- Animações sofisticadas
+- EspaÃ§amento harmÃ´nico
+- AnimaÃ§Ãµes sofisticadas
 - Shadows para profundidade
 
 **+ Yoga Acolhedor:**
 - Emojis contextuais
 - Gradientes quentes
 - Vibe meditativa
-- Presença não performance
+- PresenÃ§a nÃ£o performance
 
 ---
 
 Generated: 2026-02-14
-Author: Uma 🎨 (UX Design Expert)
+Author: Uma ðŸŽ¨ (UX Design Expert)
 Format: Design System Documentation
+

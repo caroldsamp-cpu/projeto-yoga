@@ -1,400 +1,400 @@
-# 🌟 REPOSICIONAMENTO SADHANA — NARRATIVA INTEGRADA AO CURSO EXISTENTE
+﻿# ðŸŒŸ REPOSICIONAMENTO SADHANA â€” NARRATIVA INTEGRADA AO CURSO EXISTENTE
 
-**Status**: Mapa estratégico de reposicionamento
+**Status**: Mapa estratÃ©gico de reposicionamento
 **Objetivo**: Usar Sadhana como narrativa central sem quebrar estrutura atual
-**Público**: Gaby + squad para implementação
+**PÃºblico**: Gaby + squad para implementaÃ§Ã£o
 
 ---
 
-## 📌 CONTEXTO ATUAL (O Que Você Já Tem Funcionando)
+## ðŸ“Œ CONTEXTO ATUAL (O Que VocÃª JÃ¡ Tem Funcionando)
 
-### ✅ Estrutura que Funciona
+### âœ… Estrutura que Funciona
 ```
 TRILHAS (5):
-├─ REGULAR: Comece por aqui + Para quem nunca praticou
-├─ ABRIR ESPAÇO: Lua minguante + Lua nova
-├─ EXPANDIR: Lua crescente + Lua cheia + Tutorials
-├─ INTEGRAR: Meditações guiadas + Pranayamas
-├─ CONSCIÊNCIA: Aulas bônus + Materiais + Aulas Zoom
-└─ BÔNUS: Reset Mental (Spotify)
+â”œâ”€ REGULAR: Comece por aqui + Para quem nunca praticou
+â”œâ”€ ABRIR ESPAÃ‡O: Lua minguante + Lua nova
+â”œâ”€ EXPANDIR: Lua crescente + Lua cheia + Tutorials
+â”œâ”€ INTEGRAR: MeditaÃ§Ãµes guiadas + Pranayamas
+â”œâ”€ CONSCIÃŠNCIA: Aulas bÃ´nus + Materiais + Aulas Zoom
+â””â”€ BÃ”NUS: Reset Mental (Spotify)
 
-MÓDULOS (14):
-├─ Comece por aqui (5 aulas)
-├─ Aulas Zoom (10)
-├─ Para nunca praticou (8)
-├─ Lua crescente (11)
-├─ Lua cheia (9)
-├─ Lua minguante (9)
-├─ Lua nova (5)
-├─ Teóricas (2)
-├─ Pranayamas (9)
-├─ Meditações (10)
-├─ Tutorials (12)
-└─ Bônus (6+)
+MÃ“DULOS (14):
+â”œâ”€ Comece por aqui (5 aulas)
+â”œâ”€ Aulas Zoom (10)
+â”œâ”€ Para nunca praticou (8)
+â”œâ”€ Lua crescente (11)
+â”œâ”€ Lua cheia (9)
+â”œâ”€ Lua minguante (9)
+â”œâ”€ Lua nova (5)
+â”œâ”€ TeÃ³ricas (2)
+â”œâ”€ Pranayamas (9)
+â”œâ”€ MeditaÃ§Ãµes (10)
+â”œâ”€ Tutorials (12)
+â””â”€ BÃ´nus (6+)
 
 NARRATIVA ATUAL:
-- ROMA: Regulação emocional em 10 min
-- Convite: 15 dias de progressão
-- Valores: Leveza, presença, humanização
+- ROMA: RegulaÃ§Ã£o emocional em 10 min
+- Convite: 15 dias de progressÃ£o
+- Valores: Leveza, presenÃ§a, humanizaÃ§Ã£o
 - Tom: Acolhedor, sem performance
 ```
 
 ---
 
-## 🔄 O QUE MUDA (SEM QUEBRAR NADA)
+## ðŸ”„ O QUE MUDA (SEM QUEBRAR NADA)
 
-### ANTES → DEPOIS
+### ANTES â†’ DEPOIS
 
-| Elemento | Antes | Depois | Por Quê |
+| Elemento | Antes | Depois | Por QuÃª |
 |----------|-------|--------|--------|
-| **Entrada** | "Seja bem-vinda ao seu espaço" | "Seu Sadhana começa aqui" | Sadhana como ritual central |
-| **Propósito** | Regulação emocional online | Sadhana: ritual diário de presença | Conceitual, não funcional |
-| **Estrutura** | Trilhas (regular → abrir → expandir) | Sadhana como HUB (aulas curtas) + aprofundamento | Mantém trilhas, adiciona narrativa |
-| **Modelos** | "Comece por aqui" → 7 aulas | "Seu Sadhana" (5-15 min) + depois aprofunda | Sadhana é entrada, progressão é evolução |
-| **Ciclos lunares** | "Práticas lua cheia/nova" | "Sincronize seu Sadhana com a natureza" | Mesmo conteúdo, narrativa Sadhana |
-| **Duração** | "10 minutos de regulação" | "5-15 minutos: seu ritual diário Sadhana" | Reposiciona duração dentro da filosofia |
-| **Tone** | Acolhedor, humanizado | Acolhedor + ritualistico + presença | Adiciona profundidade epistemológica |
+| **Entrada** | "Seja bem-vinda ao seu espaÃ§o" | "Seu Sadhana comeÃ§a aqui" | Sadhana como ritual central |
+| **PropÃ³sito** | RegulaÃ§Ã£o emocional online | Sadhana: ritual diÃ¡rio de presenÃ§a | Conceitual, nÃ£o funcional |
+| **Estrutura** | Trilhas (regular â†’ abrir â†’ expandir) | Sadhana como HUB (aulas curtas) + aprofundamento | MantÃ©m trilhas, adiciona narrativa |
+| **Modelos** | "Comece por aqui" â†’ 7 aulas | "Seu Sadhana" (5-15 min) + depois aprofunda | Sadhana Ã© entrada, progressÃ£o Ã© evoluÃ§Ã£o |
+| **Ciclos lunares** | "PrÃ¡ticas lua cheia/nova" | "Sincronize seu Sadhana com a natureza" | Mesmo conteÃºdo, narrativa Sadhana |
+| **DuraÃ§Ã£o** | "10 minutos de regulaÃ§Ã£o" | "5-15 minutos: seu ritual diÃ¡rio Sadhana" | Reposiciona duraÃ§Ã£o dentro da filosofia |
+| **Tone** | Acolhedor, humanizado | Acolhedor + ritualistico + presenÃ§a | Adiciona profundidade epistemolÃ³gica |
 
 ---
 
-## 🎯 NOVA NARRATIVA SADHANA (MANTENDO ESTRUTURA)
+## ðŸŽ¯ NOVA NARRATIVA SADHANA (MANTENDO ESTRUTURA)
 
 ### POSICIONAMENTO NOVO
 
 ```
 ANTES:
-"Mente Leve: comunidade online de yoga"
-Mecanismo: Regulação emocional em 10 minutos
+"NamaSer: NamaSer"
+Mecanismo: RegulaÃ§Ã£o emocional em 10 minutos
 
 DEPOIS:
-"Mente Leve: Seu Sadhana — Ritual Diário de Presença"
+"NamaSer: Seu Sadhana â€” Ritual DiÃ¡rio de PresenÃ§a"
 Mecanismo: 5 minutos todos os dias transformam mais que 1 hora ocasional
-           (Neuroplasticidade através de consistência, não intensidade)
-Promessa: Volte para casa. Dentro de você mesma.
+           (Neuroplasticidade atravÃ©s de consistÃªncia, nÃ£o intensidade)
+Promessa: Volte para casa. Dentro de vocÃª mesma.
 ```
 
 ### SADHANA COMO CAMADAS
 
 ```
-┌────────────────────────────────────────────────────────┐
-│                   SADHANA: SEU RITUAL                  │
-│              (Pequeno, Consistente, Diário)            │
-├────────────────────────────────────────────────────────┤
-│                                                        │
-│  ENTRADA SADHANA (Novo módulo — criar depois)        │
-│  5-15 minutos | Todo dia | Escolha por estado/ciclo   │
-│  └─ O Despertar (morning)                              │
-│  └─ A Transição (midday)                               │
-│  └─ O Nutrir (any time)                                │
-│  └─ O Purificar (tasks)                                │
-│  └─ O Encerrar (night)                                 │
-│                                                        │
-├─ TRILHA REGULAR (Fundação de Sadhana)                 │
-│  Comece por aqui (5) + Para nunca praticou (8)        │
-│  "Aprenda a fazer seu Sadhana com presença"            │
-│                                                        │
-├─ TRILHA ABRIR ESPAÇO (Sadhana Lunar Minguante/Nova)  │
-│  Lua minguante (9) + Lua nova (5)                      │
-│  "Sadhana quando você precisa soltar e descansar"      │
-│                                                        │
-├─ TRILHA EXPANDIR (Sadhana Lunar Crescente/Cheia)     │
-│  Lua crescente (11) + Lua cheia (9) + Tutorials (12)   │
-│  "Sadhana quando você quer fortalecer e explorar"      │
-│                                                        │
-├─ TRILHA INTEGRAR (Ferramentas do Sadhana)            │
-│  Meditações (10) + Pranayamas (9)                      │
-│  "Respiração e presença: o núcleo do seu Sadhana"      │
-│                                                        │
-├─ TRILHA CONSCIÊNCIA (Evoluindo com Sadhana)          │
-│  Aulas bônus (6+) + Materiais + Zoom (10)             │
-│  "Approfunde sua prática Sadhana ao longo do tempo"    │
-│                                                        │
-└─ BÔNUS (Reset Mental Spotify)                          │
-   "Meditações curtas para seu Sadhana em movimento"     │
-│                                                        │
-└────────────────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚                   SADHANA: SEU RITUAL                  â”‚
+â”‚              (Pequeno, Consistente, DiÃ¡rio)            â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚                                                        â”‚
+â”‚  ENTRADA SADHANA (Novo mÃ³dulo â€” criar depois)        â”‚
+â”‚  5-15 minutos | Todo dia | Escolha por estado/ciclo   â”‚
+â”‚  â””â”€ O Despertar (morning)                              â”‚
+â”‚  â””â”€ A TransiÃ§Ã£o (midday)                               â”‚
+â”‚  â””â”€ O Nutrir (any time)                                â”‚
+â”‚  â””â”€ O Purificar (tasks)                                â”‚
+â”‚  â””â”€ O Encerrar (night)                                 â”‚
+â”‚                                                        â”‚
+â”œâ”€ TRILHA REGULAR (FundaÃ§Ã£o de Sadhana)                 â”‚
+â”‚  Comece por aqui (5) + Para nunca praticou (8)        â”‚
+â”‚  "Aprenda a fazer seu Sadhana com presenÃ§a"            â”‚
+â”‚                                                        â”‚
+â”œâ”€ TRILHA ABRIR ESPAÃ‡O (Sadhana Lunar Minguante/Nova)  â”‚
+â”‚  Lua minguante (9) + Lua nova (5)                      â”‚
+â”‚  "Sadhana quando vocÃª precisa soltar e descansar"      â”‚
+â”‚                                                        â”‚
+â”œâ”€ TRILHA EXPANDIR (Sadhana Lunar Crescente/Cheia)     â”‚
+â”‚  Lua crescente (11) + Lua cheia (9) + Tutorials (12)   â”‚
+â”‚  "Sadhana quando vocÃª quer fortalecer e explorar"      â”‚
+â”‚                                                        â”‚
+â”œâ”€ TRILHA INTEGRAR (Ferramentas do Sadhana)            â”‚
+â”‚  MeditaÃ§Ãµes (10) + Pranayamas (9)                      â”‚
+â”‚  "RespiraÃ§Ã£o e presenÃ§a: o nÃºcleo do seu Sadhana"      â”‚
+â”‚                                                        â”‚
+â”œâ”€ TRILHA CONSCIÃŠNCIA (Evoluindo com Sadhana)          â”‚
+â”‚  Aulas bÃ´nus (6+) + Materiais + Zoom (10)             â”‚
+â”‚  "Approfunde sua prÃ¡tica Sadhana ao longo do tempo"    â”‚
+â”‚                                                        â”‚
+â””â”€ BÃ”NUS (Reset Mental Spotify)                          â”‚
+   "MeditaÃ§Ãµes curtas para seu Sadhana em movimento"     â”‚
+â”‚                                                        â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ---
 
-## 📱 COMO REPOSICIONAR CADA TRILHA
+## ðŸ“± COMO REPOSICIONAR CADA TRILHA
 
-### TRILHA 1: REGULAR — "Fundação do Sadhana"
+### TRILHA 1: REGULAR â€” "FundaÃ§Ã£o do Sadhana"
 
-**Mudança Narrativa:**
+**MudanÃ§a Narrativa:**
 ```
 ANTES:
-"Comece aqui. Aprenda o básico de yoga."
+"Comece aqui. Aprenda o bÃ¡sico de yoga."
 
 DEPOIS:
-"Fundação do Sadhana: Aprenda a trazer presença para sua vida diária.
- Em 15 dias, você vai entender como yoga de 5 minutos REALMENTE funciona."
+"FundaÃ§Ã£o do Sadhana: Aprenda a trazer presenÃ§a para sua vida diÃ¡ria.
+ Em 15 dias, vocÃª vai entender como yoga de 5 minutos REALMENTE funciona."
 
-Objetivo: Entender Sadhana como ritual de presença (não performance)
+Objetivo: Entender Sadhana como ritual de presenÃ§a (nÃ£o performance)
 ```
 
-**Descrição dos módulos:**
-- ✅ **Comece por aqui** (5 aulas)
-  - Antes: "Introdução ao yoga"
-  - Depois: "Introdução ao Sadhana — Seu Ritual de 5 Minutos"
-  - Descrição: "Aqui você descobre que yoga não é posturas. É presença. Em 5 aulas curtas, você aprende os fundamentos do Sadhana para começar amanhã."
+**DescriÃ§Ã£o dos mÃ³dulos:**
+- âœ… **Comece por aqui** (5 aulas)
+  - Antes: "IntroduÃ§Ã£o ao yoga"
+  - Depois: "IntroduÃ§Ã£o ao Sadhana â€” Seu Ritual de 5 Minutos"
+  - DescriÃ§Ã£o: "Aqui vocÃª descobre que yoga nÃ£o Ã© posturas. Ã‰ presenÃ§a. Em 5 aulas curtas, vocÃª aprende os fundamentos do Sadhana para comeÃ§ar amanhÃ£."
 
-- ✅ **Para quem nunca praticou** (8 aulas)
+- âœ… **Para quem nunca praticou** (8 aulas)
   - Antes: "Yoga pra iniciantes"
-  - Depois: "Seu Primeiro Sadhana — Do Zero, Sem Culpa"
-  - Descrição: "Nunca fez yoga? Perfeito. Aqui você vai aprender que Sadhana não é pra yoginis flexíveis. É pra mulheres reais que querem presença."
+  - Depois: "Seu Primeiro Sadhana â€” Do Zero, Sem Culpa"
+  - DescriÃ§Ã£o: "Nunca fez yoga? Perfeito. Aqui vocÃª vai aprender que Sadhana nÃ£o Ã© pra yoginis flexÃ­veis. Ã‰ pra mulheres reais que querem presenÃ§a."
 
 ---
 
-### TRILHA 2: ABRIR ESPAÇO — "Sadhana Minguante & Nova"
+### TRILHA 2: ABRIR ESPAÃ‡O â€” "Sadhana Minguante & Nova"
 
-**Mudança Narrativa:**
+**MudanÃ§a Narrativa:**
 ```
 ANTES:
-"Práticas lua minguante/nova"
+"PrÃ¡ticas lua minguante/nova"
 
 DEPOIS:
 "Sadhana em Fases de Repouso
- Quando sua energia cai, seu Sadhana muda. Aqui você aprende a ouvir seu corpo."
+ Quando sua energia cai, seu Sadhana muda. Aqui vocÃª aprende a ouvir seu corpo."
 
-Objetivo: Posicionar ciclos lunares como "inteligência do corpo", não "superstição"
+Objetivo: Posicionar ciclos lunares como "inteligÃªncia do corpo", nÃ£o "superstiÃ§Ã£o"
 ```
 
 **Estrutura:**
 - **Lua Minguante** (9 aulas)
-  - Antes: "Lua minguante — soltar, liberar"
-  - Depois: "Sadhana da Lua Minguante: Soltar sem Força"
-  - Descrição: "Nessa fase seu corpo pede descanso, não intensidade. Seu Sadhana muda. Descubra como fluir COM seu ciclo, não contra ele."
+  - Antes: "Lua minguante â€” soltar, liberar"
+  - Depois: "Sadhana da Lua Minguante: Soltar sem ForÃ§a"
+  - DescriÃ§Ã£o: "Nessa fase seu corpo pede descanso, nÃ£o intensidade. Seu Sadhana muda. Descubra como fluir COM seu ciclo, nÃ£o contra ele."
 
 - **Lua Nova** (5 aulas)
-  - Antes: "Lua nova — repouso"
+  - Antes: "Lua nova â€” repouso"
   - Depois: "Sadhana da Lua Nova: Repouso Sagrado"
-  - Descrição: "Luna nova é para restaurar. Seu Sadhana aqui é sobre yin yoga, respiração, meditação. Feche o ciclo. Prepare-se para recomeçar."
+  - DescriÃ§Ã£o: "Luna nova Ã© para restaurar. Seu Sadhana aqui Ã© sobre yin yoga, respiraÃ§Ã£o, meditaÃ§Ã£o. Feche o ciclo. Prepare-se para recomeÃ§ar."
 
 ---
 
-### TRILHA 3: EXPANDIR — "Sadhana Crescente & Cheia"
+### TRILHA 3: EXPANDIR â€” "Sadhana Crescente & Cheia"
 
-**Mudança Narrativa:**
+**MudanÃ§a Narrativa:**
 ```
 ANTES:
-"Práticas avançadas"
+"PrÃ¡ticas avanÃ§adas"
 
 DEPOIS:
-"Sadhana em Fases de Expansão
- Quando sua energia sobe, seu Sadhana evolui. Aqui você explora e fortalece."
+"Sadhana em Fases de ExpansÃ£o
+ Quando sua energia sobe, seu Sadhana evolui. Aqui vocÃª explora e fortalece."
 
-Objetivo: Posicionar progressão não como "nível", mas como "expansão natural"
+Objetivo: Posicionar progressÃ£o nÃ£o como "nÃ­vel", mas como "expansÃ£o natural"
 ```
 
 **Estrutura:**
 - **Lua Crescente** (11 aulas)
-  - Antes: "Lua crescente — construir energia"
-  - Depois: "Sadhana Crescente: Construindo Presença com Força"
-  - Descrição: "Energia subindo. Seu Sadhana sobe com você. Vinyasas, sequências, força. Mas sempre com presença. Construa do seu jeito."
+  - Antes: "Lua crescente â€” construir energia"
+  - Depois: "Sadhana Crescente: Construindo PresenÃ§a com ForÃ§a"
+  - DescriÃ§Ã£o: "Energia subindo. Seu Sadhana sobe com vocÃª. Vinyasas, sequÃªncias, forÃ§a. Mas sempre com presenÃ§a. Construa do seu jeito."
 
 - **Lua Cheia** (9 aulas)
-  - Antes: "Lua cheia — plenitude"
-  - Depois: "Sadhana Pleno: Presença Total"
-  - Descrição: "Plenitude. Seu Sadhana aqui é intenso, profundo. Você está pronta. Explore o máximo que seu corpo pode nessa fase."
+  - Antes: "Lua cheia â€” plenitude"
+  - Depois: "Sadhana Pleno: PresenÃ§a Total"
+  - DescriÃ§Ã£o: "Plenitude. Seu Sadhana aqui Ã© intenso, profundo. VocÃª estÃ¡ pronta. Explore o mÃ¡ximo que seu corpo pode nessa fase."
 
 - **Tutorials** (12 aulas)
-  - Antes: "Tutorial de posturas e transições"
-  - Depois: "Evolução do Sadhana: Aprenda Asanas, Aprofunde Presença"
-  - Descrição: "Quer aprender posturas específicas? Aqui você descobre COMO fazer com presença, não só técnica correta. Sadhana é sobre sentir, depois entender."
+  - Antes: "Tutorial de posturas e transiÃ§Ãµes"
+  - Depois: "EvoluÃ§Ã£o do Sadhana: Aprenda Asanas, Aprofunde PresenÃ§a"
+  - DescriÃ§Ã£o: "Quer aprender posturas especÃ­ficas? Aqui vocÃª descobre COMO fazer com presenÃ§a, nÃ£o sÃ³ tÃ©cnica correta. Sadhana Ã© sobre sentir, depois entender."
 
 ---
 
-### TRILHA 4: INTEGRAR — "Respiração & Presença"
+### TRILHA 4: INTEGRAR â€” "RespiraÃ§Ã£o & PresenÃ§a"
 
-**Mudança Narrativa:**
+**MudanÃ§a Narrativa:**
 ```
 ANTES:
-"Pranayamas + Meditações = técnicas isoladas"
+"Pranayamas + MeditaÃ§Ãµes = tÃ©cnicas isoladas"
 
 DEPOIS:
-"Núcleo do Sadhana: Respiração e Presença
- Respiration é o bridge entre mente e corpo. Aqui você a domina."
+"NÃºcleo do Sadhana: RespiraÃ§Ã£o e PresenÃ§a
+ Respiration Ã© o bridge entre mente e corpo. Aqui vocÃª a domina."
 
-Objetivo: Posicionar pranayama + meditação como "ferramentas do Sadhana", não disciplinas separadas
+Objetivo: Posicionar pranayama + meditaÃ§Ã£o como "ferramentas do Sadhana", nÃ£o disciplinas separadas
 ```
 
 **Estrutura:**
 - **Pranayamas** (9 aulas)
-  - Antes: "Técnicas de respiração"
-  - Depois: "Respiração Consciente: A Base do Seu Sadhana"
-  - Descrição: "Respiração é a ferramenta mais poderosa do yoga. Aprenda 9 técnicas que transformam seu dia em ritual. Calma quando precisa. Energia quando pede."
+  - Antes: "TÃ©cnicas de respiraÃ§Ã£o"
+  - Depois: "RespiraÃ§Ã£o Consciente: A Base do Seu Sadhana"
+  - DescriÃ§Ã£o: "RespiraÃ§Ã£o Ã© a ferramenta mais poderosa do yoga. Aprenda 9 tÃ©cnicas que transformam seu dia em ritual. Calma quando precisa. Energia quando pede."
 
-- **Meditações** (10 aulas)
-  - Antes: "Meditações guiadas"
-  - Depois: "Presença Guiada: O Coração do Seu Sadhana"
-  - Descrição: "Meditation é presença. Aqui você aprende que meditação não é esvaziar a mente — é estar AQUI mesmo quando mil coisas passam."
+- **MeditaÃ§Ãµes** (10 aulas)
+  - Antes: "MeditaÃ§Ãµes guiadas"
+  - Depois: "PresenÃ§a Guiada: O CoraÃ§Ã£o do Seu Sadhana"
+  - DescriÃ§Ã£o: "Meditation Ã© presenÃ§a. Aqui vocÃª aprende que meditaÃ§Ã£o nÃ£o Ã© esvaziar a mente â€” Ã© estar AQUI mesmo quando mil coisas passam."
 
 ---
 
-### TRILHA 5: CONSCIÊNCIA — "Evoluindo Sadhana"
+### TRILHA 5: CONSCIÃŠNCIA â€” "Evoluindo Sadhana"
 
-**Mudança Narrativa:**
+**MudanÃ§a Narrativa:**
 ```
 ANTES:
-"Aulas bônus + materiais + zoom"
+"Aulas bÃ´nus + materiais + zoom"
 
 DEPOIS:
-"Sabedoria Sadhana: Aprofundando Sua Prática
- Quando você já entende que Sadhana é presença, vem o aprofundamento."
+"Sabedoria Sadhana: Aprofundando Sua PrÃ¡tica
+ Quando vocÃª jÃ¡ entende que Sadhana Ã© presenÃ§a, vem o aprofundamento."
 
-Objetivo: Posicionar como "evolução natural", não "bônus"
+Objetivo: Posicionar como "evoluÃ§Ã£o natural", nÃ£o "bÃ´nus"
 ```
 
 **Estrutura:**
 - **Aulas Gravadas Zoom** (10 aulas)
   - Antes: "Aulas ao vivo gravadas"
-  - Depois: "Sadhana em Comunidade: Sessões Ao Vivo com Gaby"
-  - Descrição: "Quando Sadhana vira comunidade. Aqui você pratica junto (gravado) e sente a energia coletiva transformando sua presença individual."
+  - Depois: "Sadhana em Comunidade: SessÃµes Ao Vivo com Gaby"
+  - DescriÃ§Ã£o: "Quando Sadhana vira comunidade. Aqui vocÃª pratica junto (gravado) e sente a energia coletiva transformando sua presenÃ§a individual."
 
 - **Materiais de Estudo** (inclusos)
   - Antes: "PDFs, guias, etc"
-  - Depois: "Epistemologia Sadhana: Entender O Porquê"
-  - Descrição: "Quer saber POR QUÊ Sadhana funciona? Aqui está a filosofia, ciência e poesia por trás de cada respiration."
+  - Depois: "Epistemologia Sadhana: Entender O PorquÃª"
+  - DescriÃ§Ã£o: "Quer saber POR QUÃŠ Sadhana funciona? Aqui estÃ¡ a filosofia, ciÃªncia e poesia por trÃ¡s de cada respiration."
 
-- **Aulas Bônus** (6+)
+- **Aulas BÃ´nus** (6+)
   - Antes: "Extra content"
-  - Depois: "Sadhana Especial: Práticas para Momentos Específicos"
-  - Descrição: "Quando vida acontece. Sadhana para insônia. Sadhana para ansiedade. Sadhana para alegria. Seu ritual se adapta."
+  - Depois: "Sadhana Especial: PrÃ¡ticas para Momentos EspecÃ­ficos"
+  - DescriÃ§Ã£o: "Quando vida acontece. Sadhana para insÃ´nia. Sadhana para ansiedade. Sadhana para alegria. Seu ritual se adapta."
 
 ---
 
-### BÔNUS: "Sadhana em Movimento"
+### BÃ”NUS: "Sadhana em Movimento"
 
-**Mudança Narrativa:**
+**MudanÃ§a Narrativa:**
 ```
 ANTES:
 "Reset Mental no Spotify"
 
 DEPOIS:
-"Sadhana Portátil: Meditações Curtas no Spotify
- Seu ritual cabe no trabalho, no trânsito, antes de dormir."
+"Sadhana PortÃ¡til: MeditaÃ§Ãµes Curtas no Spotify
+ Seu ritual cabe no trabalho, no trÃ¢nsito, antes de dormir."
 
-Objetivo: Conectar bônus Spotify com ideia de Sadhana em qualquer lugar
+Objetivo: Conectar bÃ´nus Spotify com ideia de Sadhana em qualquer lugar
 ```
 
 ---
 
-## 🎨 VISUAL/MESSAGING CHANGES
+## ðŸŽ¨ VISUAL/MESSAGING CHANGES
 
 ### ENTRADA PRINCIPAL
 
 **ANTES:**
 ```
-"🌙 Seu Convite para Começar
- Bem-vinda ao seu espaço de reconexão, leveza e presença"
+"ðŸŒ™ Seu Convite para ComeÃ§ar
+ Bem-vinda ao seu espaÃ§o de reconexÃ£o, leveza e presenÃ§a"
 ```
 
 **DEPOIS:**
 ```
-"🕉️ SEU SADHANA COMEÇA AQUI
- Ritual diário de 5 minutos que transforma sua vida
+"ðŸ•‰ï¸ SEU SADHANA COMEÃ‡A AQUI
+ Ritual diÃ¡rio de 5 minutos que transforma sua vida
 
- Não é yoga ocasional.
- É presença consistente.
- É voltar para casa."
+ NÃ£o Ã© yoga ocasional.
+ Ã‰ presenÃ§a consistente.
+ Ã‰ voltar para casa."
 ```
 
-### DESCRIÇÃO DO CURSO
+### DESCRIÃ‡ÃƒO DO CURSO
 
 **ANTES:**
 ```
-"Mente Leve — Comunidade Online de Yoga
-Regulação emocional em 10 minutos através do movimento"
+"NamaSer â€” NamaSer
+RegulaÃ§Ã£o emocional em 10 minutos atravÃ©s do movimento"
 ```
 
 **DEPOIS:**
 ```
-"Mente Leve: Seu Sadhana
-Ritual Diário de Presença
+"NamaSer: Seu Sadhana
+Ritual DiÃ¡rio de PresenÃ§a
 
-💜 5 minutos todos os dias transformam mais que 1 hora ocasional
-💜 Sincronizado com seus ciclos (lunares, corporais, emocionais)
-💜 Sem performance. Sem rigidez. Só presença.
+ðŸ’œ 5 minutos todos os dias transformam mais que 1 hora ocasional
+ðŸ’œ Sincronizado com seus ciclos (lunares, corporais, emocionais)
+ðŸ’œ Sem performance. Sem rigidez. SÃ³ presenÃ§a.
 
 Um "sim" quieto para si mesma. Todos os dias."
 ```
 
 ---
 
-## 📊 MAPA DE NAVEGAÇÃO NOVO
+## ðŸ“Š MAPA DE NAVEGAÃ‡ÃƒO NOVO
 
-### Sequência Proposta de Aprendizado (COM NARRATIVA SADHANA)
+### SequÃªncia Proposta de Aprendizado (COM NARRATIVA SADHANA)
 
 ```
-┌─ SEMANA 1-2: FUNDAÇÃO
-│  "O Que É Sadhana? Por Que Funciona?"
-│  └─ Comece por aqui (5 aulas de fundação)
-│  └─ Reset Mental (meditação curta para acalmar)
-│  └─ START: O Poder da Respiração
-│  └─ Video: "Sadhana é diferente de yoga comum"
-│  └─ Resultado: Você entende COMO fazer com presença
-│
-├─ SEMANA 3-4: COMEÇAR SEU SADHANA
-│  "Seu Ritual de 5 Minutos"
-│  └─ Para quem nunca praticou (primeiras 3 aulas)
-│  └─ Escolha sua Sadhana por:
-│     ├─ Ciclo lunar atual (se sabe)
-│     └─ Como você se sente hoje
-│  └─ Faça 7 dias consecutivos
-│  └─ Resultado: Você descobre seu ritmo
-│
-├─ SEMANA 5-8: EVOLUÇÃO NATURAL
-│  "Sadhana Adaptado ao Seu Ciclo"
-│  └─ Explore as fases lunares (minguante/nova/crescente/cheia)
-│  └─ Aprofunde Pranayamas + Meditação
-│  └─ Aprenda Asanas específicas (tutorials)
-│  └─ Resultado: Seu Sadhana respira com você
-│
-└─ SEMANA 9+: MAESTRIA
+â”Œâ”€ SEMANA 1-2: FUNDAÃ‡ÃƒO
+â”‚  "O Que Ã‰ Sadhana? Por Que Funciona?"
+â”‚  â””â”€ Comece por aqui (5 aulas de fundaÃ§Ã£o)
+â”‚  â””â”€ Reset Mental (meditaÃ§Ã£o curta para acalmar)
+â”‚  â””â”€ START: O Poder da RespiraÃ§Ã£o
+â”‚  â””â”€ Video: "Sadhana Ã© diferente de yoga comum"
+â”‚  â””â”€ Resultado: VocÃª entende COMO fazer com presenÃ§a
+â”‚
+â”œâ”€ SEMANA 3-4: COMEÃ‡AR SEU SADHANA
+â”‚  "Seu Ritual de 5 Minutos"
+â”‚  â””â”€ Para quem nunca praticou (primeiras 3 aulas)
+â”‚  â””â”€ Escolha sua Sadhana por:
+â”‚     â”œâ”€ Ciclo lunar atual (se sabe)
+â”‚     â””â”€ Como vocÃª se sente hoje
+â”‚  â””â”€ FaÃ§a 7 dias consecutivos
+â”‚  â””â”€ Resultado: VocÃª descobre seu ritmo
+â”‚
+â”œâ”€ SEMANA 5-8: EVOLUÃ‡ÃƒO NATURAL
+â”‚  "Sadhana Adaptado ao Seu Ciclo"
+â”‚  â””â”€ Explore as fases lunares (minguante/nova/crescente/cheia)
+â”‚  â””â”€ Aprofunde Pranayamas + MeditaÃ§Ã£o
+â”‚  â””â”€ Aprenda Asanas especÃ­ficas (tutorials)
+â”‚  â””â”€ Resultado: Seu Sadhana respira com vocÃª
+â”‚
+â””â”€ SEMANA 9+: MAESTRIA
    "Sadhana Como Forma de Viver"
-   └─ Sessões ao vivo (zoom)
-   └─ Comunidade (partilhar experiências)
-   └─ Aprofundamento filosófico
-   └─ Resultado: Sadhana é identidade, não prática
+   â””â”€ SessÃµes ao vivo (zoom)
+   â””â”€ Comunidade (partilhar experiÃªncias)
+   â””â”€ Aprofundamento filosÃ³fico
+   â””â”€ Resultado: Sadhana Ã© identidade, nÃ£o prÃ¡tica
 ```
 
 ---
 
-## 🔄 COMO IMPLEMENTAR (PASSO A PASSO)
+## ðŸ”„ COMO IMPLEMENTAR (PASSO A PASSO)
 
 ### FASE 1: REPOSICIONAR CONVITE HTML (Semana 1)
 ```
-[ ] Rewrite "Seu Convite para Começar" → "Seu Sadhana Começa"
-[ ] Adicione definição: "Sadhana: ritual diário de 5 minutos de presença"
-[ ] Mude "15 dias de progression" → "7 dias de fundação + depois seu ritmo"
+[ ] Rewrite "Seu Convite para ComeÃ§ar" â†’ "Seu Sadhana ComeÃ§a"
+[ ] Adicione definiÃ§Ã£o: "Sadhana: ritual diÃ¡rio de 5 minutos de presenÃ§a"
+[ ] Mude "15 dias de progression" â†’ "7 dias de fundaÃ§Ã£o + depois seu ritmo"
 [ ] Substitua "aula 1-7" por "seus primeiros 7 sadhanas"
 [ ] Mantenha mantras, adicione epistemologia Sadhana
 ```
 
 ### FASE 2: REPOSICIONAR TRILHAS (Semana 2)
 ```
-[ ] Regular → "Fundação do Sadhana"
-[ ] Abrir Espaço → "Sadhana Minguante & Nova"
-[ ] Expandir → "Sadhana Crescente & Cheia"
-[ ] Integrar → "Respiração & Presença"
-[ ] Consciência → "Evolução do Sadhana"
-[ ] Bônus → "Sadhana em Movimento"
+[ ] Regular â†’ "FundaÃ§Ã£o do Sadhana"
+[ ] Abrir EspaÃ§o â†’ "Sadhana Minguante & Nova"
+[ ] Expandir â†’ "Sadhana Crescente & Cheia"
+[ ] Integrar â†’ "RespiraÃ§Ã£o & PresenÃ§a"
+[ ] ConsciÃªncia â†’ "EvoluÃ§Ã£o do Sadhana"
+[ ] BÃ´nus â†’ "Sadhana em Movimento"
 ```
 
-### FASE 3: REPOSICIONAR MÓDULOS (Semana 2-3)
+### FASE 3: REPOSICIONAR MÃ“DULOS (Semana 2-3)
 ```
-[ ] Cada módulo ganha nova descrição COM narrativa Sadhana
-[ ] Cada módulo começa com "Por que isso faz parte do seu Sadhana?"
-[ ] Adicione tags: #SadhanaFundacao #SadhanaLunar #SadhanaAvançada etc
+[ ] Cada mÃ³dulo ganha nova descriÃ§Ã£o COM narrativa Sadhana
+[ ] Cada mÃ³dulo comeÃ§a com "Por que isso faz parte do seu Sadhana?"
+[ ] Adicione tags: #SadhanaFundacao #SadhanaLunar #SadhanaAvanÃ§ada etc
 ```
 
-### FASE 4: CRIAR "GUIA DE NAVEGAÇÃO" (Semana 3)
+### FASE 4: CRIAR "GUIA DE NAVEGAÃ‡ÃƒO" (Semana 3)
 ```
 [ ] Documento novo dentro da plataforma:
-    "Como Começar Seu Sadhana"
-    - O que é Sadhana?
-    - Qual é o seu Sadhana hoje?
+    "Como ComeÃ§ar Seu Sadhana"
+    - O que Ã© Sadhana?
+    - Qual Ã© o seu Sadhana hoje?
     - Como fazer (passo a passo)
     - FAQ
 ```
@@ -403,60 +403,60 @@ Um "sim" quieto para si mesma. Todos os dias."
 ```
 Email 1: "Bem-vinda ao seu Sadhana"
 Email 2: "Como fazer seu Sadhana em 5 minutos"
-Email 3: "Seu primeiro mês de Sadhana (timeline)"
-Email 4: "Quando Sadhana se torna identidade (história)"
+Email 3: "Seu primeiro mÃªs de Sadhana (timeline)"
+Email 4: "Quando Sadhana se torna identidade (histÃ³ria)"
 Email 5: "Seu Sadhana em ciclos lunares"
 ```
 
 ---
 
-## ✨ O QUE GANHA COM ISSO
+## âœ¨ O QUE GANHA COM ISSO
 
 ### PARA GABY
-- ✅ Narrativa única, não copiável (Sadhana é sua marca)
-- ✅ Posicionamento diferenciado de Marie & Seth
-- ✅ Epistemologia clara (por que isso funciona)
-- ✅ Comunidade tribalizad (praticantes de Sadhana, não yoginis)
+- âœ… Narrativa Ãºnica, nÃ£o copiÃ¡vel (Sadhana Ã© sua marca)
+- âœ… Posicionamento diferenciado de Marie & Seth
+- âœ… Epistemologia clara (por que isso funciona)
+- âœ… Comunidade tribalizad (praticantes de Sadhana, nÃ£o yoginis)
 
 ### PARA ALUNOS
-- ✅ Clareza: Por que estou fazendo isto?
-- ✅ Direção: Qual é meu caminho?
-- ✅ Pertencimento: Sou parte de algo único
-- ✅ Consistência: 5 minutos realmente cabe na vida
+- âœ… Clareza: Por que estou fazendo isto?
+- âœ… DireÃ§Ã£o: Qual Ã© meu caminho?
+- âœ… Pertencimento: Sou parte de algo Ãºnico
+- âœ… ConsistÃªncia: 5 minutos realmente cabe na vida
 
-### PARA NEGÓCIO
-- ✅ Retenção: Sadhana é hábito identitário, não "atividade"
-- ✅ Escalabilidade: Mensagem simples, replicável
-- ✅ Diferenciação: Ninguém mais faz "Sadhana focado"
-- ✅ Comunidade: Mulheres que compartilham valores, não só yoga
+### PARA NEGÃ“CIO
+- âœ… RetenÃ§Ã£o: Sadhana Ã© hÃ¡bito identitÃ¡rio, nÃ£o "atividade"
+- âœ… Escalabilidade: Mensagem simples, replicÃ¡vel
+- âœ… DiferenciaÃ§Ã£o: NinguÃ©m mais faz "Sadhana focado"
+- âœ… Comunidade: Mulheres que compartilham valores, nÃ£o sÃ³ yoga
 
 ---
 
-## 🎯 CONVERGÊNCIA: Marie + Seth + Gaby
+## ðŸŽ¯ CONVERGÃŠNCIA: Marie + Seth + Gaby
 
 | Lente | O Que Diz | Como Aparece em Sadhana |
 |-------|-----------|------------------------|
-| **Marie** | Autenticidade > Tudo | Sadhana não é pra parecer yogini. É pra SENTIR presença. |
-| **Marie** | Permissão > Prescrição | "Escolha seu Sadhana hoje" (não "faça isto") |
-| **Marie** | Warm sempre | Narrativa acolhedora, sem urgência artificial |
-| **Seth** | Diferenciação radical | Ninguém foca em "5 min diários consistentes" — isto é único |
-| **Seth** | Linguagem tribal | Linguagem Sadhana (palavra em sânscrito) cria identidade |
-| **Seth** | Tribo + inimigo comum | Inimigo é "estar distraída da vida" — Sadhana é antídoto |
-| **Gaby** | Presença > Performance | "Yoga é estar aqui, não parecer perfeita" |
-| **Gaby** | Epistemologia interna | "A verdade está dentro — Sadhana ativa isso" |
-| **Gaby** | Ciclos, não rigidez | Sadhana se adapta aos seus ciclos (lunar, corporal) |
+| **Marie** | Autenticidade > Tudo | Sadhana nÃ£o Ã© pra parecer yogini. Ã‰ pra SENTIR presenÃ§a. |
+| **Marie** | PermissÃ£o > PrescriÃ§Ã£o | "Escolha seu Sadhana hoje" (nÃ£o "faÃ§a isto") |
+| **Marie** | Warm sempre | Narrativa acolhedora, sem urgÃªncia artificial |
+| **Seth** | DiferenciaÃ§Ã£o radical | NinguÃ©m foca em "5 min diÃ¡rios consistentes" â€” isto Ã© Ãºnico |
+| **Seth** | Linguagem tribal | Linguagem Sadhana (palavra em sÃ¢nscrito) cria identidade |
+| **Seth** | Tribo + inimigo comum | Inimigo Ã© "estar distraÃ­da da vida" â€” Sadhana Ã© antÃ­doto |
+| **Gaby** | PresenÃ§a > Performance | "Yoga Ã© estar aqui, nÃ£o parecer perfeita" |
+| **Gaby** | Epistemologia interna | "A verdade estÃ¡ dentro â€” Sadhana ativa isso" |
+| **Gaby** | Ciclos, nÃ£o rigidez | Sadhana se adapta aos seus ciclos (lunar, corporal) |
 
 ---
 
-## 📝 PRÓXIMOS PASSOS
+## ðŸ“ PRÃ“XIMOS PASSOS
 
-**Se você quer implementar:**
+**Se vocÃª quer implementar:**
 
-1. ✅ **Reconfirmar estratégia** — Este mapa faz sentido?
-2. ✅ **Reescrever convite HTML** — Adicionar Sadhana como narrativa
-3. ✅ **Reposicionar trilhas** — Renomear + reescrever descrições
-4. ✅ **Criar guia de navegação** — "Como começar seu Sadhana"
-5. ✅ **Depois: Criar módulo novo de Sadhana** — (Quando prioridade)
+1. âœ… **Reconfirmar estratÃ©gia** â€” Este mapa faz sentido?
+2. âœ… **Reescrever convite HTML** â€” Adicionar Sadhana como narrativa
+3. âœ… **Reposicionar trilhas** â€” Renomear + reescrever descriÃ§Ãµes
+4. âœ… **Criar guia de navegaÃ§Ã£o** â€” "Como comeÃ§ar seu Sadhana"
+5. âœ… **Depois: Criar mÃ³dulo novo de Sadhana** â€” (Quando prioridade)
 
 Quer que eu comece com qual desses?
 
@@ -464,11 +464,12 @@ Quer que eu comece com qual desses?
 
 **Gaby,**
 
-Isto NÃO quebra o que funciona.
-Isto AMPIFICA o que você já faz.
-Sadhana é a narrativa que faltava.
+Isto NÃƒO quebra o que funciona.
+Isto AMPIFICA o que vocÃª jÃ¡ faz.
+Sadhana Ã© a narrativa que faltava.
 
-A estrutura fica. A história muda. Tudo fica melhor.
+A estrutura fica. A histÃ³ria muda. Tudo fica melhor.
 
-💜
+ðŸ’œ
+
 

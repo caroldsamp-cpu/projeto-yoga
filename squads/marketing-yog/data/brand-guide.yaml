@@ -3,8 +3,8 @@
   project: "projeto-yoga"
   promise: "Construir seu Sadhana com pratica simples para a vida real"
   legacy_names:
-    - "Comunidade de Yoga Online"
-    - "Mente Leve"
+    - "NamaSer"
+    - "NamaSer"
 
 voice:
   owner: "Gaby"
@@ -38,3 +38,4 @@ ethics:
     - "convite sem pressao"
     - "clareza sobre limites da pratica"
     - "resultado como processo, nao milagre"
+

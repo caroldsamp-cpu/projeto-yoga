@@ -1,7 +1,7 @@
 ﻿# PRD - MVP Oráculo do Sadhana
 ## Product Requirements Document (Feature Add-on)
 
-**Projeto:** Mente Leve - Reposicionamento Sadhana
+**Projeto:** NamaSer - Reposicionamento Sadhana
 **Feature:** Oráculo do Sadhana (Web)
 **Criadora:** Gaby Drummond
 **PM:** Morgan (Strategist) | Synkra AIOS
@@ -162,3 +162,4 @@ Stories:
 |---|---|---|
 | 2026-02-18 | Criação PRD MVP | Morgan (PM) |
 | 2026-02-18 | Ajuste de escopo: MVP sem persistência de dados; fase 2 com histórico/admin | Morgan (PM) |
+

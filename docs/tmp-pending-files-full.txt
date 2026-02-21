@@ -740,7 +740,7 @@
  M .aios-core/working-in-the-brownfield.md
  M .claude/commands/AIOS/agents/squad-creator.md
  M .env.example
- M docs/antigo/ROADMAP-PROJETO-MENTE-LEVE.md
+ M docs/antigo/ROADMAP-PROJETO-NAMASER.md
  M docs/guides/BLUEPRINT-MARKETING-YOG.md
  M docs/leads/SETUP-LOGO-GABY.md
  D squads/marketing-yog/assets/avatar-jose.jpg
@@ -895,3 +895,4 @@
 ?? squads/marketing-yog/docs/manual-uso-squad-marketing-yog.md
 ?? squads/marketing-yog/scripts/generate_carousel_mosaico.py
 ?? squads/squad-creator/
+

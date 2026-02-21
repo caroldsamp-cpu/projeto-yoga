@@ -1,6 +1,6 @@
-/**
- * Mente Leve Design System - CSS Tokens
- * Extraído de: docs/reposicionamento/index.html
+﻿/**
+ * NamaSer Design System - CSS Tokens
+ * ExtraÃ­do de: docs/reposicionamento/index.html
  *
  * Uso: Importe este arquivo em qualquer projeto para acessar:
  * - Color palette (10 cores)
@@ -275,3 +275,4 @@
 .transition-fast { transition: var(--transition-fast); }
 .transition-normal { transition: var(--transition-normal); }
 .transition-slow { transition: var(--transition-slow); }
+

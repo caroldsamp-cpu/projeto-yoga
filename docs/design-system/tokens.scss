@@ -1,6 +1,6 @@
-/**
- * Mente Leve Design System - SCSS Tokens + Mixins
- * Extraído de: docs/reposicionamento/index.html
+﻿/**
+ * NamaSer Design System - SCSS Tokens + Mixins
+ * ExtraÃ­do de: docs/reposicionamento/index.html
  *
  * Uso: Importe este arquivo em seu projeto SCSS
  * Acesso: $colors, $typography, $spacing, mixins (responsive, flex, etc)
@@ -394,3 +394,4 @@ $breakpoints: (
     .gap-#{$key} { gap: $value; }
   }
 }
+

@@ -1,4 +1,4 @@
-﻿# ROADMAP - Projeto Mente Leve (Light Copy Generator)
+﻿# ROADMAP - Projeto NamaSer (Light Copy Generator)
 ## Gerador de Roteiros de VÃ­deo para Instagram com DNA da Gaby
 
 **Data de InÃ­cio:** 10 de Fevereiro de 2026
@@ -158,7 +158,7 @@ SerÃ¡ criado por Orion (apÃ³s anÃ¡lise comparativa).
 
 **Output:**
 ```
-LIGHT COPY FRAMEWORK - MENTE LEVE
+LIGHT COPY FRAMEWORK - NamaSer
 
 1. PrincÃ­pios (como/por quÃª)
 2. PadrÃµes de linguagem (o quÃª usar)
@@ -168,7 +168,7 @@ LIGHT COPY FRAMEWORK - MENTE LEVE
 6. Prompts para IA (como gerar roteiros)
 ```
 
-**Entrega esperada:** `07-Framework-Light-Copy-Mente-Leve.md`
+**Entrega esperada:** `07-Framework-Light-Copy-NamaSer.md`
 
 ---
 
@@ -184,12 +184,12 @@ projeto-yoga/
 â”‚   â”‚   â”œâ”€â”€ 04-TranscriÃ§Ãµes-Aulas-Gaby.md (AGUARDANDO)
 â”‚   â”‚   â”œâ”€â”€ 05-Pesquisa-Creators-Internacionais.md (PRÃ“XIMO)
 â”‚   â”‚   â”œâ”€â”€ 06-Analise-Comparativa-Padroes.md (DEPOIS)
-â”‚   â”‚   â””â”€â”€ 07-Framework-Light-Copy-Mente-Leve.md (FINAL)
+â”‚   â”‚   â””â”€â”€ 07-Framework-Light-Copy-NamaSer.md (FINAL)
 â”‚   â”œâ”€â”€ stories/                        â† STORIES ÃGEIS (DEPOIS)
 â”‚   â”œâ”€â”€ prd/                            â† PRD PRODUTO (DEPOIS)
 â”‚   â””â”€â”€ architecture/                   â† ARQUITETURA (DEPOIS)
 â”œâ”€â”€ src/                                â† CÃ“DIGO (DEPOIS)
-â””â”€â”€ ROADMAP-PROJETO-MENTE-LEVE.md      â† ESTE ARQUIVO
+â””â”€â”€ ROADMAP-PROJETO-NAMASER.md      â† ESTE ARQUIVO
 ```
 
 ---
@@ -257,4 +257,6 @@ projeto-yoga/
 
 **Ãšltima atualizaÃ§Ã£o:** 10 de Fevereiro de 2026
 **PrÃ³ximo check:** ApÃ³s receber transcriÃ§Ãµes das aulas
+
+
 

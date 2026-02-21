@@ -1,4 +1,4 @@
-# Checklist: Brand Positioning Readiness (NamaSer)
+﻿# Checklist: Brand Positioning Readiness (NamaSer)
 
 Use esta checklist para aprovar o estado minimo antes de publicar em escala.
 
@@ -13,7 +13,7 @@ Use esta checklist para aprovar o estado minimo antes de publicar em escala.
 
 - [ ] Curso nomeado como `NamaSer` em todos os materiais novos.
 - [ ] `Sadhana` usado como promessa/metodologia, nao como nome do curso.
-- [ ] Nomes legados (`Comunidade de Yoga Online`, `Mente Leve`) tratados como historico.
+- [ ] Nomes legados (`NamaSer`, `NamaSer`) tratados como historico.
 - [ ] Manifesto e posicionamento publicados.
 
 ## 3) Messaging
@@ -36,3 +36,4 @@ Use esta checklist para aprovar o estado minimo antes de publicar em escala.
 - [ ] Responsaveis por etapa definidos.
 - [ ] Ritual de revisao semanal definido (`metrics-weekly` + `voice-calibration-weekly`).
 - [ ] Risco principal identificado com plano de mitigacao.
+

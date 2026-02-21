@@ -2,7 +2,7 @@
 
 Status: Aprovado para planejamento
 Data: 2026-02-20
-Owner: Projeto Mente Leve (Gaby)
+Owner: Projeto NamaSer (Gaby)
 
 ## 1) Decisoes travadas
 
@@ -148,4 +148,5 @@ Mitigacao: revisar toda taxonomia, temas e CTA antes de go-live.
 ## 12) Proximo passo imediato
 
 Executar Sprint 0 de voz e produzir os 4 artefatos obrigatorios antes de qualquer migracao tecnica do squad.
+
 

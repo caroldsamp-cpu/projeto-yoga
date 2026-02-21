@@ -9,7 +9,7 @@ Produzir conteudo com consistencia semanal, alinhado ao tom de voz da Gaby, sem 
 Arquitetura de naming:
 - Curso/produto: `NamaSer`
 - Promessa/metodologia: `Construir seu Sadhana`
-- Nomes legados: `Comunidade de Yoga Online` e `Mente Leve`
+- Nomes legados: `NamaSer` e `NamaSer`
 
 ## Escopo v1
 
@@ -40,3 +40,4 @@ Arquivos legados OPES foram preservados para referencia em `squads/marketing-yog
 O squad ativo e definido por `squad.yaml` com componentes explicitos.
 Fluxo operacional multi-mente (Tay/Ogilvy/Malika/Rubin): `squads/marketing-yog/docs/fluxo-board-multimente-gaby.md`.
 Fluxo de base de marca: `squads/marketing-yog/workflows/brand-zero-to-positioned.md`.
+

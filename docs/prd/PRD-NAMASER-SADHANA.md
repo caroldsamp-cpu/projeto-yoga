@@ -1,12 +1,12 @@
-# PRD - Mente Leve: Sadhana, O Ritual da Vida Real
+﻿# PRD - NamaSer: Sadhana, O Ritual da Vida Real
 ## Product Requirements Document (Brownfield Enhancement)
 
-**Projeto:** Mente Leve - Reposicionamento & Estratégia de Marketing
-**Produto:** Comunidade Online de Yoga por Gaby Drummond
+**Projeto:** NamaSer - Reposicionamento & EstratÃ©gia de Marketing
+**Produto:** NamaSer por Gaby Drummond
 **Criadora:** Gaby Drummond
 **PM:** Morgan (Strategist) | Synkra AIOS
 **Data:** 14 de Fevereiro de 2026
-**Versão:** 1.0
+**VersÃ£o:** 1.0
 **Status:** Em Elaboracao
 
 ---
@@ -48,7 +48,7 @@
 
 ### 1.3 Descricao do Enhancement
 
-Reposicionar a marca "Mente Leve" usando a narrativa **Sadhana: O Ritual da Vida Real** como conceito central. Criar toda a estrategia de marketing, branding, geracao de audiencia e conversao para transformar 700 leads warm em clientes ativos da comunidade online, e expandir a audiencia organicamente atraves de conteudo Instagram com light copy.
+Reposicionar a marca "NamaSer" usando a narrativa **Sadhana: O Ritual da Vida Real** como conceito central. Criar toda a estrategia de marketing, branding, geracao de audiencia e conversao para transformar 700 leads warm em clientes ativos da comunidade online, e expandir a audiencia organicamente atraves de conteudo Instagram com light copy.
 
 ### 1.4 Avaliacao de Impacto
 
@@ -214,7 +214,7 @@ Este projeto e estruturado em **7 Epics independentes** porque abrange dominios 
 | S-01.2 | Criar "Manifesto de Permissao" visual (7 permissoes explicitas) | Arte pronta para uso em redes sociais |
 | S-01.3 | Criar glossario de termos Sadhana (Alquimista, Yogi Invisivel, etc.) | Lista com 10+ termos definidos |
 | S-01.4 | Documentar as 5 Receitas de Sadhana (Despertar, Transicao, Nutrir, Purificar, Encerrar) | Receitas com formato padrao e instrucoes claras |
-| S-01.5 | Criar "Jornada de Identidade" de 90 dias (Fazer → Praticar → Ser) | Mapa com checkpoints em 7, 21, 56, 90 dias |
+| S-01.5 | Criar "Jornada de Identidade" de 90 dias (Fazer â†’ Praticar â†’ Ser) | Mapa com checkpoints em 7, 21, 56, 90 dias |
 | S-01.6 | Validar narrativa com 10 mulheres (entrevistas) | 80%+ dizem "isto e pra mim" |
 
 ---
@@ -227,11 +227,11 @@ Este projeto e estruturado em **7 Epics independentes** porque abrange dominios 
 | Story | Descricao | Criterio de Aceitacao |
 |-------|-----------|----------------------|
 | S-02.1 | Reescrever convite de entrada: "Seu Sadhana Comeca Aqui" | Texto aprovado, tom validado |
-| S-02.2 | Renomear Trilha Regular → "Fundacao do Sadhana" + novas descricoes | Descricoes de "Comece por aqui" e "Nunca praticou" reescritas |
-| S-02.3 | Renomear Trilha Abrir Espaco → "Sadhana Minguante & Nova" | Descricoes lua minguante e lua nova reescritas |
-| S-02.4 | Renomear Trilha Expandir → "Sadhana Crescente & Cheia" | Descricoes lua crescente, lua cheia e tutorials reescritas |
-| S-02.5 | Renomear Trilha Integrar → "Respiracao & Presenca" | Descricoes pranayamas e meditacoes reescritas |
-| S-02.6 | Renomear Trilha Consciencia → "Evolucao do Sadhana" | Descricoes zoom, materiais e bonus reescritas |
+| S-02.2 | Renomear Trilha Regular â†’ "Fundacao do Sadhana" + novas descricoes | Descricoes de "Comece por aqui" e "Nunca praticou" reescritas |
+| S-02.3 | Renomear Trilha Abrir Espaco â†’ "Sadhana Minguante & Nova" | Descricoes lua minguante e lua nova reescritas |
+| S-02.4 | Renomear Trilha Expandir â†’ "Sadhana Crescente & Cheia" | Descricoes lua crescente, lua cheia e tutorials reescritas |
+| S-02.5 | Renomear Trilha Integrar â†’ "Respiracao & Presenca" | Descricoes pranayamas e meditacoes reescritas |
+| S-02.6 | Renomear Trilha Consciencia â†’ "Evolucao do Sadhana" | Descricoes zoom, materiais e bonus reescritas |
 | S-02.7 | Criar "Guia de Navegacao": Como Comecar Seu Sadhana | Documento com passo a passo para nova aluna |
 
 ---
@@ -310,7 +310,7 @@ Este projeto e estruturado em **7 Epics independentes** porque abrange dominios 
 |-------|-----------|----------------------|
 | S-07.1 | Definir arquitetura do sistema CLI (inputs, outputs, fluxo) | Documento de arquitetura aprovado |
 | S-07.2 | Criar prompts de IA com DNA da Gaby + Light Copy + Avatares | Prompts testados e validados |
-| S-07.3 | Implementar CLI basico (input: tema → output: roteiro) | CLI funcional gerando roteiros |
+| S-07.3 | Implementar CLI basico (input: tema â†’ output: roteiro) | CLI funcional gerando roteiros |
 | S-07.4 | Adicionar selecao de avatar (Marina/Julia/Camila) | Roteiros diferenciados por avatar |
 | S-07.5 | Adicionar selecao de formato (reel, carrossel, story, post) | Formatos diferentes funcionando |
 | S-07.6 | Testes e validacao com Gaby | 80%+ dos roteiros aprovados sem edicao |
@@ -365,25 +365,25 @@ Este projeto e estruturado em **7 Epics independentes** porque abrange dominios 
 ## 9. METRICAS DE SUCESSO
 
 ### Metricas de Presenca (Gaby)
-- % de alunas que relatam "senti presenca durante pratica" → Meta: >85%
+- % de alunas que relatam "senti presenca durante pratica" â†’ Meta: >85%
 - Historias de "momentos de presenca" na vida diaria
 
 ### Metricas de Autenticidade (Marie)
-- % que relatam "senti-me autorizada, nao culpada" → Meta: >90%
+- % que relatam "senti-me autorizada, nao culpada" â†’ Meta: >90%
 - Historias de "permissao" que liberaram pratica
 
 ### Metricas de Diferenciacao (Seth)
-- Crescimento da comunidade → Meta: 20% ao mes (Fase 1)
+- Crescimento da comunidade â†’ Meta: 20% ao mes (Fase 1)
 - Pessoas explicam diferenca em 1 frase
 
 ### Metricas de Emergencia (Jose)
-- % que atingem 21 dias de consistencia → Meta: >70%
-- % que relatam "padrao mudou" → Meta: >60%
+- % que atingem 21 dias de consistencia â†’ Meta: >70%
+- % que relatam "padrao mudou" â†’ Meta: >60%
 
 ### Metricas de Negocio
-- Conversao dos 700 leads → Meta: 10-15% (70-105 clientes)
-- Retencao pos-30 dias → Meta: >80%
-- NPS → Meta: >70
+- Conversao dos 700 leads â†’ Meta: 10-15% (70-105 clientes)
+- Retencao pos-30 dias â†’ Meta: >80%
+- NPS â†’ Meta: >70
 
 ---
 
@@ -440,15 +440,15 @@ Este projeto e estruturado em **7 Epics independentes** porque abrange dominios 
 ### 12.3 Documentos de Posicionamento Anterior
 | Documento | Caminho | Conteudo |
 |-----------|---------|----------|
-| Roadmap Original | `docs/antigo/ROADMAP-PROJETO-MENTE-LEVE.md` | Roadmap do gerador de roteiros |
-| Relatorio Completo | `docs/antigo/RELATORIO_COMPLETO_MENTE_LEVE.md` | Dados de produto e mercado |
-| Relatorio Sessao | `docs/antigo/RELATORIO_SESSAO_PRODUTO_MENTE_LEVE.md` | Sessao de produto detalhada |
+| Roadmap Original | `docs/antigo/ROADMAP-PROJETO-NAMASER.md` | Roadmap do gerador de roteiros |
+| Relatorio Completo | `docs/antigo/RELATORIO_COMPLETO_NAMASER.md` | Dados de produto e mercado |
+| Relatorio Sessao | `docs/antigo/RELATORIO_SESSAO_PRODUTO_NAMASER.md` | Sessao de produto detalhada |
 | Sequencia WhatsApp | `docs/antigo/SEQUENCIA_WHATSAPP_COMPLETA.md` | Mensagens de conversao |
 
 ### 12.4 Definition of Done (DoD) Global
 | Documento | Caminho | Conteudo |
 |-----------|---------|----------|
-| DoD Global | `docs/prd/DOD-GLOBAL-MENTE-LEVE.md` | Criterios de qualidade para todas as stories |
+| DoD Global | `docs/prd/DOD-GLOBAL-NAMASER.md` | Criterios de qualidade para todas as stories |
 
 ---
 
@@ -465,8 +465,8 @@ Este projeto e estruturado em **7 Epics independentes** porque abrange dominios 
 - NFR5 preliminar: >85% relatam presenca, >90% sentem permissao
 
 **Criterios de No-Go (requer ajuste):**
-- 4-6/10 ressoam → Ajustar manifesto e receitas, re-testar com 5 novas mulheres
-- 3-/10 ressoam → Repensar framework Sadhana antes de prosseguir
+- 4-6/10 ressoam â†’ Ajustar manifesto e receitas, re-testar com 5 novas mulheres
+- 3-/10 ressoam â†’ Repensar framework Sadhana antes de prosseguir
 
 **Impacto:**
 - **Go:** Seguir para EP-02 (Reposicionamento) e EP-03 (Light Copy) em paralelo
@@ -485,4 +485,6 @@ Este projeto e estruturado em **7 Epics independentes** porque abrange dominios 
 
 ---
 
-*— Morgan, planejando o futuro*
+*â€” Morgan, planejando o futuro*
+
+

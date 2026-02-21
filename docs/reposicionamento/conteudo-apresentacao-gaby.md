@@ -1,5 +1,5 @@
-# Apresentacao para Gaby — Texto Completo
-# "Mente Leve: O Reposicionamento Sadhana"
+﻿# Apresentacao para Gaby â€” Texto Completo
+# "NamaSer: O Reposicionamento Sadhana"
 
 **Uso:** Este documento contem TODO o texto da pagina web de apresentacao.
 **Proximo passo:** @ux-design-expert ou @dev transforma isso em HTML + CSS + SVG.
@@ -10,7 +10,7 @@
 ## SECAO 1: ABERTURA
 
 ### Titulo principal
-Mente Leve: O Proximo Passo
+NamaSer: O Proximo Passo
 
 ### Subtitulo
 Uma proposta de reposicionamento para transformar o que voce ja construiu
@@ -19,9 +19,9 @@ em algo ainda mais poderoso, claro e bonito.
 ### Texto de abertura
 Gaby, este documento e pra voce.
 
-Nao e um relatorio de marketing. Nao e um plano cheio de termos que ninguem entende. E uma conversa sobre o futuro do Mente Leve — escrita com o mesmo cuidado que voce coloca em cada aula.
+Nao e um relatorio de marketing. Nao e um plano cheio de termos que ninguem entende. E uma conversa sobre o futuro do NamaSer â€” escrita com o mesmo cuidado que voce coloca em cada aula.
 
-Tudo que esta aqui respeita o que voce ja construiu. Nenhuma aula muda. Nenhum conteudo e descartado. O que muda e a historia que a gente conta sobre tudo isso — e essa historia vai fazer as mulheres certas encontrarem voce.
+Tudo que esta aqui respeita o que voce ja construiu. Nenhuma aula muda. Nenhum conteudo e descartado. O que muda e a historia que a gente conta sobre tudo isso â€” e essa historia vai fazer as mulheres certas encontrarem voce.
 
 Leia no seu ritmo. Respire entre as secoes. E no final, me diga o que sentiu.
 
@@ -39,7 +39,7 @@ Mas a maioria das mulheres que poderiam se transformar com o seu trabalho nao sa
 
 Isso nao e culpa do conteudo. O conteudo e excelente.
 
-O problema e que o mercado de yoga esta cheio de ruido. Tem yoga fitness, yoga acrobatico, yoga de retiro em Bali, yoga de performance. E quando alguem olha pra fora, ve tudo igual. Nao consegue distinguir o que voce faz de diferente — que e justamente o que torna o seu trabalho especial.
+O problema e que o mercado de yoga esta cheio de ruido. Tem yoga fitness, yoga acrobatico, yoga de retiro em Bali, yoga de performance. E quando alguem olha pra fora, ve tudo igual. Nao consegue distinguir o que voce faz de diferente â€” que e justamente o que torna o seu trabalho especial.
 
 ### Destaque visual (card ou caixa)
 O que voce faz e diferente. A gente so precisa deixar isso claro.
@@ -50,7 +50,7 @@ O que voce faz e diferente. A gente so precisa deixar isso claro.
 - 47% das que ja praticaram relatam "sentir leveza na primeira pratica"
 - O preco (R$138) esta validado e acessivel
 
-O terreno esta fertil. O que falta e a semente certa — uma historia que faca sentido.
+O terreno esta fertil. O que falta e a semente certa â€” uma historia que faca sentido.
 
 ---
 
@@ -62,7 +62,7 @@ Sadhana: a palavra que muda tudo
 ### Texto introdutorio
 Antes de falar sobre estrategia, preciso te contar sobre uma palavra.
 
-**Sadhana** e um termo em sanscrito que significa "pratica espiritual diaria". Nao e uma tecnica. Nao e uma postura. E um compromisso consigo mesma — pequeno, consistente, todo dia.
+**Sadhana** e um termo em sanscrito que significa "pratica espiritual diaria". Nao e uma tecnica. Nao e uma postura. E um compromisso consigo mesma â€” pequeno, consistente, todo dia.
 
 Na tradicao yogica, Sadhana e o ato de dedicar um tempo, por menor que seja, para estar presente. Pode ser 5 minutos de respiracao. Pode ser lavar a louca com atencao. Pode ser sentar em silencio antes de dormir.
 
@@ -72,7 +72,7 @@ O ponto nao e o que voce faz. E que voce faz todos os dias, com intencao.
 Por que Sadhana e perfeito para o que voce ensina
 
 ### Texto
-Gaby, quando a gente analisou profundamente o seu trabalho — suas aulas, suas palavras, o jeito como voce guia cada pratica — percebemos algo:
+Gaby, quando a gente analisou profundamente o seu trabalho â€” suas aulas, suas palavras, o jeito como voce guia cada pratica â€” percebemos algo:
 
 Voce ja ensina Sadhana. So nao chama assim.
 
@@ -85,21 +85,21 @@ A diferenca e que agora a gente vai dar nome a isso. E quando algo tem nome, as 
 
 ### Destaque visual (card ou caixa)
 Sadhana nao e algo novo que a gente esta inventando.
-E o nome do que voce ja faz — e que o mundo precisa ouvir.
+E o nome do que voce ja faz â€” e que o mundo precisa ouvir.
 
-### Os 3 principios do Sadhana aplicado ao Mente Leve
+### Os 3 principios do Sadhana aplicado ao NamaSer
 
 **Principio 1: Consistencia pequena transforma mais que intensidade ocasional**
 
-5 minutos toda dia muda mais do que 1 hora uma vez por semana. Isso nao e opiniao — e neurociencia. O cerebro cria novas vias neurais atraves de repeticao, nao de intensidade. Quando alguem pratica todo dia, mesmo que pouco, o corpo comeca a reconhecer aquele momento como "seu". Vira habito. Habito vira identidade. E identidade e a coisa mais poderosa que existe.
+5 minutos toda dia muda mais do que 1 hora uma vez por semana. Isso nao e opiniao â€” e neurociencia. O cerebro cria novas vias neurais atraves de repeticao, nao de intensidade. Quando alguem pratica todo dia, mesmo que pouco, o corpo comeca a reconhecer aquele momento como "seu". Vira habito. Habito vira identidade. E identidade e a coisa mais poderosa que existe.
 
 **Principio 2: A vida real e o tapete**
 
 Yoga tradicional diz: "va ao tapete e encontre paz." Sadhana diz: "a vida e o seu tapete. A presenca que voce busca esta aqui, nao la." A mulher que lava louca com atencao esta praticando. A que respira fundo antes de uma reuniao esta praticando. A que senta na beira da cama e faz 3 respiracoes antes de pegar o celular esta praticando.
 
-**Principio 3: O caos nao e obstaculo — e material**
+**Principio 3: O caos nao e obstaculo â€” e material**
 
-Aquela reuniao chata, aquele transito, aquela crianca gritando — nao sao impedimentos ao yoga. Sao o yoga. Porque transformacao nao vem de escapar da vida. Vem de estar presente nela.
+Aquela reuniao chata, aquele transito, aquela crianca gritando â€” nao sao impedimentos ao yoga. Sao o yoga. Porque transformacao nao vem de escapar da vida. Vem de estar presente nela.
 
 ---
 
@@ -109,15 +109,15 @@ Aquela reuniao chata, aquele transito, aquela crianca gritando — nao sao imped
 O reposicionamento: de "comunidade de yoga" para "ritual de presenca"
 
 ### Texto
-Hoje, o Mente Leve se apresenta assim:
+Hoje, o NamaSer se apresenta assim:
 
-> "Mente Leve — Comunidade Online de Yoga. Regulacao emocional em 10 minutos atraves do movimento."
+> "NamaSer â€” NamaSer. Regulacao emocional em 10 minutos atraves do movimento."
 
 Isso e verdade. Mas e generico. Qualquer plataforma de yoga poderia dizer isso.
 
 Com o reposicionamento Sadhana, passa a ser:
 
-> "Mente Leve: Seu Sadhana — Ritual Diario de Presenca. 5 minutos todos os dias transformam mais que 1 hora ocasional."
+> "NamaSer: Seu Sadhana â€” Ritual Diario de Presenca. 5 minutos todos os dias transformam mais que 1 hora ocasional."
 
 ### Por que isso e mais forte
 
@@ -186,7 +186,7 @@ A aluna faz a receita no dia a dia e aprofunda nas trilhas.
 ## SECAO 6: COMO FICAM AS TRILHAS
 
 ### Titulo
-Suas trilhas reorganizadas — o mesmo conteudo, uma historia melhor
+Suas trilhas reorganizadas â€” o mesmo conteudo, uma historia melhor
 
 ### Texto introdutorio
 Gaby, esta e a parte mais importante para voce entender:
@@ -195,40 +195,40 @@ Gaby, esta e a parte mais importante para voce entender:
 
 O que muda e o NOME de cada trilha e a DESCRICAO que a aluna le quando entra. Isso e tudo. O conteudo que voce gravou com tanto carinho permanece exatamente como esta.
 
-A razao da mudanca e simples: os nomes atuais nao contam uma historia. Eles descrevem funcoes ("Regular", "Abrir Espaco", "Expandir"). Com o reposicionamento, cada trilha ganha um nome que faz a aluna sentir que esta numa jornada — nao numa grade de aulas.
+A razao da mudanca e simples: os nomes atuais nao contam uma historia. Eles descrevem funcoes ("Regular", "Abrir Espaco", "Expandir"). Com o reposicionamento, cada trilha ganha um nome que faz a aluna sentir que esta numa jornada â€” nao numa grade de aulas.
 
 ### Mapa visual: Antes e Depois
 
 **Trilha 1: Regular**
-Nome atual: "Regular — Comece por aqui"
+Nome atual: "Regular â€” Comece por aqui"
 Nome novo: "Fundacao do Sadhana"
 O que contem: 13 aulas (Comece por aqui + Para quem nunca praticou)
 Narrativa nova: "Aprenda a trazer presenca para sua vida diaria. Em 15 dias, voce entende como yoga de 5 minutos realmente funciona."
 O que muda no conteudo: Nada.
 
 **Trilha 2: Abrir Espaco**
-Nome atual: "Abrir Espaco — Lua Minguante e Lua Nova"
+Nome atual: "Abrir Espaco â€” Lua Minguante e Lua Nova"
 Nome novo: "Sadhana Minguante & Nova"
 O que contem: 14 aulas (9 Minguante + 5 Nova)
-Narrativa nova: "Nem todo dia e para crescer. Alguns dias sao para soltar. Seu Sadhana muda com seus ciclos — e isso e sabedoria, nao fraqueza."
+Narrativa nova: "Nem todo dia e para crescer. Alguns dias sao para soltar. Seu Sadhana muda com seus ciclos â€” e isso e sabedoria, nao fraqueza."
 O que muda no conteudo: Nada.
 
 **Trilha 3: Expandir**
-Nome atual: "Expandir — Lua Crescente, Cheia e Tutorials"
+Nome atual: "Expandir â€” Lua Crescente, Cheia e Tutorials"
 Nome novo: "Sadhana Crescente & Cheia"
 O que contem: 32 aulas (11 Crescente + 9 Cheia + 12 Tutorials)
-Narrativa nova: "Quando sua energia sobe, seu Sadhana evolui. Aqui voce nao esta subindo uma montanha — esta florescendo."
+Narrativa nova: "Quando sua energia sobe, seu Sadhana evolui. Aqui voce nao esta subindo uma montanha â€” esta florescendo."
 O que muda no conteudo: Nada. Os Tutorials passam a se chamar "Laboratorio do Sadhana" (mesmas aulas).
 
 **Trilha 4: Integrar**
-Nome atual: "Integrar — Pranayamas e Meditacoes"
+Nome atual: "Integrar â€” Pranayamas e Meditacoes"
 Nome novo: "Respiracao & Presenca"
 O que contem: 19 aulas (9 Pranayamas + 10 Meditacoes)
 Narrativa nova: "Voce ja sabe respirar. Voce ja tem momentos de presenca. Vamos apenas perceber juntas."
 O que muda no conteudo: Nada.
 
 **Trilha 5: Consciencia**
-Nome atual: "Consciencia — Aulas bonus, materiais, Zoom"
+Nome atual: "Consciencia â€” Aulas bonus, materiais, Zoom"
 Nome novo: "Evolucao do Sadhana"
 O que contem: Aulas bonus + Materiais + Gravacoes das aulas ao vivo
 Narrativa nova: "Quando Sadhana vira identidade, voce naturalmente quer ir mais fundo. Aqui esta a profundidade."
@@ -241,7 +241,7 @@ O que muda e como a aluna entende o caminho que percorre.
 
 ---
 
-## SECAO 7: O MODULO NOVO — ENTRADA SADHANA
+## SECAO 7: O MODULO NOVO â€” ENTRADA SADHANA
 
 ### Titulo
 O unico conteudo novo: a porta de entrada
@@ -249,9 +249,9 @@ O unico conteudo novo: a porta de entrada
 ### Texto introdutorio
 Aqui sim tem algo novo. E e pequeno, mas faz toda a diferenca.
 
-Hoje, quando uma mulher entra no Mente Leve, ela ve as trilhas e pensa: "por onde comeco?" Muitas se perdem. Algumas desistem antes de comecar.
+Hoje, quando uma mulher entra no NamaSer, ela ve as trilhas e pensa: "por onde comeco?" Muitas se perdem. Algumas desistem antes de comecar.
 
-O modulo "Entrada Sadhana" resolve isso. E a primeira coisa que a aluna ve — antes das trilhas. E como uma porta de entrada acolhedora que diz: "respira. voce esta no lugar certo. vamos comecar juntas."
+O modulo "Entrada Sadhana" resolve isso. E a primeira coisa que a aluna ve â€” antes das trilhas. E como uma porta de entrada acolhedora que diz: "respira. voce esta no lugar certo. vamos comecar juntas."
 
 ### O que e
 Um modulo curto (5 a 10 minutos de conteudo total) que:
@@ -275,7 +275,7 @@ Este modulo pode ser simples:
 A Entrada Sadhana e a unica coisa nova a ser criada.
 Todo o resto ja existe no seu curso.
 E e justamente isso que torna esse reposicionamento tao eficiente:
-a gente nao esta recomeicando — esta organizando.
+a gente nao esta recomeicando â€” esta organizando.
 
 ---
 
@@ -285,31 +285,31 @@ a gente nao esta recomeicando — esta organizando.
 Como a mulher vai viver tudo isso
 
 ### Texto introdutorio
-Vamos ver como fica a experiencia completa de uma mulher que encontra o Mente Leve apos o reposicionamento. Vamos chama-la de Marina — uma coordenadora pedagogica de 34 anos, mae, exausta, que ja tentou yoga e parou porque "nao tinha tempo."
+Vamos ver como fica a experiencia completa de uma mulher que encontra o NamaSer apos o reposicionamento. Vamos chama-la de Marina â€” uma coordenadora pedagogica de 34 anos, mae, exausta, que ja tentou yoga e parou porque "nao tinha tempo."
 
 ### A jornada de Marina
 
 **Semana 0: Descoberta**
-Marina ve um reel no Instagram. Uma mulher (voce, Gaby) dizendo: "Voce nao precisa de 1 hora. Precisa de 5 minutos. E pode ser na cozinha." Marina pensa: "isso e pra mim." Clica no perfil. Le a bio: "Sadhana — Ritual diario de presenca." Algo ressoa. Ela salva o post.
+Marina ve um reel no Instagram. Uma mulher (voce, Gaby) dizendo: "Voce nao precisa de 1 hora. Precisa de 5 minutos. E pode ser na cozinha." Marina pensa: "isso e pra mim." Clica no perfil. Le a bio: "Sadhana â€” Ritual diario de presenca." Algo ressoa. Ela salva o post.
 
 **Semana 1: Entrada**
-Marina entra na comunidade. A primeira coisa que ve e a Entrada Sadhana. Nao 100 aulas. Uma mensagem acolhedora, uma explicacao simples, e um convite: "Escolha uma receita. Faca por 7 dias." Marina escolhe "O Despertar" — 5 minutos ao acordar. Ela comeca no dia seguinte.
+Marina entra na comunidade. A primeira coisa que ve e a Entrada Sadhana. Nao 100 aulas. Uma mensagem acolhedora, uma explicacao simples, e um convite: "Escolha uma receita. Faca por 7 dias." Marina escolhe "O Despertar" â€” 5 minutos ao acordar. Ela comeca no dia seguinte.
 
 **Semana 2-3: Fundacao**
 Marina fez 7 dias de Despertar. Algumas manha esqueceu. Voltou sem culpa. Agora ela quer entender melhor. Entra na trilha "Fundacao do Sadhana". Assiste as primeiras aulas. Entende que nao precisa ser perfeita. Comeca a se sentir "alguem que pratica."
 
 **Semana 4-6: Descobrindo seu ritmo**
-Marina percebe que em alguns dias se sente mais energica (lua crescente) e em outros mais recolhida (lua minguante). Descobre as trilhas lunares. Comeca a sincronizar sua pratica com como ela se sente — nao com o que "deveria" fazer.
+Marina percebe que em alguns dias se sente mais energica (lua crescente) e em outros mais recolhida (lua minguante). Descobre as trilhas lunares. Comeca a sincronizar sua pratica com como ela se sente â€” nao com o que "deveria" fazer.
 
 **Semana 7-9: Aprofundando**
-Marina inclui pranayamas na rotina da manha. Troca o cafe apressado por "O Nutrir" — 5 minutos de presenca com a xicara. Suas colegas de trabalho percebem algo diferente nela. Ela nao sabe explicar, mas se sente mais centrada.
+Marina inclui pranayamas na rotina da manha. Troca o cafe apressado por "O Nutrir" â€” 5 minutos de presenca com a xicara. Suas colegas de trabalho percebem algo diferente nela. Ela nao sabe explicar, mas se sente mais centrada.
 
 **Semana 10-12: Identidade**
-Marina nao "faz yoga." Marina "vive Sadhana." E diferente. Nao e algo que ela faz — e algo que ela e. Quando uma amiga pergunta, ela diz: "e um ritual de presenca de 5 minutos. Mudou minha vida."
+Marina nao "faz yoga." Marina "vive Sadhana." E diferente. Nao e algo que ela faz â€” e algo que ela e. Quando uma amiga pergunta, ela diz: "e um ritual de presenca de 5 minutos. Mudou minha vida."
 
 ### Destaque visual (card ou caixa)
 Essa e a jornada. De leiga a praticante a multiplicadora.
-E ela acontece naturalmente — sem pressao, sem culpa, sem performance.
+E ela acontece naturalmente â€” sem pressao, sem culpa, sem performance.
 
 ---
 
@@ -322,7 +322,7 @@ Por que vale a pena
 - Seu trabalho ganha uma narrativa clara e unica (ninguem mais faz "Sadhana da vida real")
 - Voce nao precisa gravar dezenas de aulas novas (so 1-2 videos curtos para a Entrada)
 - Sua mensagem fica mais facil de comunicar: "5 minutos, todo dia, na sua vida real"
-- As mulheres que te encontram VEM JA SABENDO o que voce faz — menos explicacao, mais conexao
+- As mulheres que te encontram VEM JA SABENDO o que voce faz â€” menos explicacao, mais conexao
 
 ### Para suas alunas
 - Elas entendem por onde comecar (nao ficam perdidas em 100 aulas)
@@ -344,7 +344,7 @@ Por que vale a pena
 Os proximos passos
 
 ### Texto introdutorio
-Se voce gostou do que leu ate aqui, isso e o que vai acontecer nas proximas semanas. Voce nao precisa fazer tudo sozinha — na verdade, a maior parte do trabalho e nossa. Voce so precisa validar, opinar e gravar uns videos curtos.
+Se voce gostou do que leu ate aqui, isso e o que vai acontecer nas proximas semanas. Voce nao precisa fazer tudo sozinha â€” na verdade, a maior parte do trabalho e nossa. Voce so precisa validar, opinar e gravar uns videos curtos.
 
 ### Fase 1: Fundacao (Semanas 1-3)
 O que: Criar o manifesto Sadhana, definir as receitas finais, preparar o glossario.
@@ -387,9 +387,9 @@ Tudo que esta aqui nasceu do seu trabalho. Das suas aulas. Das suas palavras. Da
 
 A gente nao inventou nada. A gente organizou, deu nome e criou um caminho para que mais mulheres encontrem o que voce ja oferece.
 
-Sadhana nao e uma estrategia de marketing. E a verdade do que voce ensina — traduzida para o mundo poder entender.
+Sadhana nao e uma estrategia de marketing. E a verdade do que voce ensina â€” traduzida para o mundo poder entender.
 
-O curso continua o mesmo. As aulas continuam as mesmas. O que muda e a historia que a gente conta — e essa historia vai fazer as mulheres certas pararem o scroll, respirarem fundo e pensarem: "isso e pra mim."
+O curso continua o mesmo. As aulas continuam as mesmas. O que muda e a historia que a gente conta â€” e essa historia vai fazer as mulheres certas pararem o scroll, respirarem fundo e pensarem: "isso e pra mim."
 
 ### Frase final (destaque grande)
 Seu trabalho ja transforma vidas.
@@ -397,7 +397,7 @@ Agora vamos deixar o mundo saber disso.
 
 ### Assinatura
 Com presenca,
-Equipe Mente Leve
+Equipe NamaSer
 
 ---
 
@@ -407,7 +407,7 @@ Equipe Mente Leve
 - Single page com scroll suave
 - Cada secao ocupa pelo menos uma tela inteira (respira)
 - Transicoes suaves entre secoes
-- Sem sidebar, sem menu complexo — e linear, como uma historia
+- Sem sidebar, sem menu complexo â€” e linear, como uma historia
 
 ### Elementos visuais necessarios
 - Cards/caixas para os destaques (fundo levemente diferente, sem borda dura)
@@ -434,7 +434,7 @@ Equipe Mente Leve
 - Scroll suave entre secoes (anchor links se necessario)
 - Cards das receitas podem ter hover sutil
 - Timeline das fases pode ter animacao leve ao entrar na viewport
-- Nada pisca, nada grita, nada e urgente — tudo e sereno
+- Nada pisca, nada grita, nada e urgente â€” tudo e sereno
 
 ---
 
@@ -443,3 +443,4 @@ Equipe Mente Leve
 | Data | Descricao | Autor |
 |------|-----------|-------|
 | 14/02/2026 | Texto completo escrito | Morgan (PM) |
+

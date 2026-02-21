@@ -1,14 +1,14 @@
-# Mente Leve Design System
+﻿# NamaSer Design System
 
-Design system extraído da apresentação Sadhana. Reutilizável em qualquer projeto.
+Design system extraÃ­do da apresentaÃ§Ã£o Sadhana. ReutilizÃ¡vel em qualquer projeto.
 
-**Extraído de:** `docs/reposicionamento/index.html`
+**ExtraÃ­do de:** `docs/reposicionamento/index.html`
 **Data:** 14/02/2026
-**Versão:** 1.0.0
+**VersÃ£o:** 1.0.0
 
 ---
 
-## 📦 Arquivos
+## ðŸ“¦ Arquivos
 
 | Arquivo | Uso | Tamanho |
 |---------|-----|--------|
@@ -18,31 +18,31 @@ Design system extraído da apresentação Sadhana. Reutilizável em qualquer pro
 
 ---
 
-## 🎨 Paleta de Cores
+## ðŸŽ¨ Paleta de Cores
 
 ### Cores Base
-- **Cream** `#FDF8F4` — Fundo principal, muito claro
-- **White** `#FFFFFF` — Cards, superfícies
-- **Text Dark** `#3D3A38` — Texto principal
-- **Text Light** `#6B6560` — Texto secundário
+- **Cream** `#FDF8F4` â€” Fundo principal, muito claro
+- **White** `#FFFFFF` â€” Cards, superfÃ­cies
+- **Text Dark** `#3D3A38` â€” Texto principal
+- **Text Light** `#6B6560` â€” Texto secundÃ¡rio
 
 ### Acentos
-- **Green (Terra)** `#6B7B5E` — Acento primário
-- **Green Light** `#8A9A7D` — Variação clara
-- **Gold** `#C4A882` — Acento secundário
-- **Gold Light** `#D4C4A8` — Variação clara
+- **Green (Terra)** `#6B7B5E` â€” Acento primÃ¡rio
+- **Green Light** `#8A9A7D` â€” VariaÃ§Ã£o clara
+- **Gold** `#C4A882` â€” Acento secundÃ¡rio
+- **Gold Light** `#D4C4A8` â€” VariaÃ§Ã£o clara
 
 ### UI
-- **Card BG** `#F5EDE4` — Fundo de cards
-- **Border** `#E8DDD2` — Linhas, divisórias
+- **Card BG** `#F5EDE4` â€” Fundo de cards
+- **Border** `#E8DDD2` â€” Linhas, divisÃ³rias
 
 ---
 
-## 🔤 Tipografia
+## ðŸ”¤ Tipografia
 
 ### Fonts
 ```css
---font-serif: 'Playfair Display', serif;   /* Headings, títulos */
+--font-serif: 'Playfair Display', serif;   /* Headings, tÃ­tulos */
 --font-sans: 'Inter', sans-serif;          /* Body, UI */
 ```
 
@@ -79,34 +79,34 @@ Extra: 1.9 (quote blocks)
 
 ---
 
-## 📏 Spacing Scale (4px base)
+## ðŸ“ Spacing Scale (4px base)
 
 ```
 --space-1: 4px
 --space-2: 8px
 --space-3: 12px
---space-4: 16px      ← Base unit
+--space-4: 16px      â† Base unit
 --space-5: 20px
---space-6: 24px      ← Common padding
+--space-6: 24px      â† Common padding
 --space-7: 28px
---space-8: 32px      ← Card padding
+--space-8: 32px      â† Card padding
 --space-10: 40px
---space-12: 48px     ← Section spacing
---space-20: 80px     ← Bottom padding
---space-30: 120px    ← Top padding
+--space-12: 48px     â† Section spacing
+--space-20: 80px     â† Bottom padding
+--space-30: 120px    â† Top padding
 ```
 
-**Mnemônico:** Múltiplos de 4px: 4, 8, 12, 16, 20, 24, 28, 32, 40, 48, 80, 120
+**MnemÃ´nico:** MÃºltiplos de 4px: 4, 8, 12, 16, 20, 24, 28, 32, 40, 48, 80, 120
 
 ---
 
-## 🧩 Componentes (Atomic Design)
+## ðŸ§© Componentes (Atomic Design)
 
 ### Atoms
-- Button (implícito, usar card base)
+- Button (implÃ­cito, usar card base)
 - Input/Label (estrutura pronta)
 - Icon (SVG 28x28 ou 36x36)
-- Text (5 níveis: h1-h5 + body)
+- Text (5 nÃ­veis: h1-h5 + body)
 
 ### Molecules
 - Stat Card: number + label
@@ -129,7 +129,7 @@ Extra: 1.9 (quote blocks)
 
 ---
 
-## 🚀 Como Usar
+## ðŸš€ Como Usar
 
 ### Em Projetos HTML + CSS
 
@@ -139,13 +139,13 @@ Extra: 1.9 (quote blocks)
 
 <!-- 2. Use os tokens -->
 <div style="background: var(--color-cream); color: var(--color-text);">
-  <h1 style="font-family: var(--font-serif);">Título</h1>
-  <p style="font-size: var(--font-size-base);">Parágrafo</p>
+  <h1 style="font-family: var(--font-serif);">TÃ­tulo</h1>
+  <p style="font-size: var(--font-size-base);">ParÃ¡grafo</p>
 </div>
 
-<!-- 3. Use as classes utilitárias -->
+<!-- 3. Use as classes utilitÃ¡rias -->
 <div class="bg-cream rounded-md p-lg gap-md">
-  Conteúdo com spacing automático
+  ConteÃºdo com spacing automÃ¡tico
 </div>
 ```
 
@@ -155,7 +155,7 @@ Extra: 1.9 (quote blocks)
 // 1. Importe os tokens
 @import 'tokens.scss';
 
-// 2. Use as funções
+// 2. Use as funÃ§Ãµes
 .card {
   @include card($padding: $space-8);
   background: color('white');
@@ -212,7 +212,7 @@ module.exports = {
       spacing: {
         '4.5': '1.125rem',
         '13': '3.25rem',
-        // ... adicionar mais conforme necessário
+        // ... adicionar mais conforme necessÃ¡rio
       },
     },
   },
@@ -221,7 +221,7 @@ module.exports = {
 
 ---
 
-## 📊 Breakpoints
+## ðŸ“Š Breakpoints
 
 ```
 SM: 540px   (mobile)
@@ -247,7 +247,7 @@ XL: 1024px  (desktop)
 
 ---
 
-## 🎭 Component Examples
+## ðŸŽ­ Component Examples
 
 ### Stat Card
 ```html
@@ -319,35 +319,35 @@ XL: 1024px  (desktop)
       font-size: 20px;
       font-weight: 600;
       margin-bottom: var(--space-3);
-    ">Título</div>
-    <p style="color: var(--color-text-light); margin: 0;">Descrição</p>
+    ">TÃ­tulo</div>
+    <p style="color: var(--color-text-light); margin: 0;">DescriÃ§Ã£o</p>
   </div>
 </div>
 ```
 
 ---
 
-## 🔄 Fluxo de Uso Recomendado
+## ðŸ”„ Fluxo de Uso Recomendado
 
 ### Novo Projeto (Greenfield)
 
 1. **Copie `tokens.css` ou `tokens.scss`** para seu projeto
-2. **Importe** no início do arquivo de estilos
+2. **Importe** no inÃ­cio do arquivo de estilos
 3. **Use os tokens** em vez de hardcoding cores/spacing
-4. **Crie componentes** usando os padrões do design system
-5. **Mantenha consistência** referenciando sempre os tokens
+4. **Crie componentes** usando os padrÃµes do design system
+5. **Mantenha consistÃªncia** referenciando sempre os tokens
 
 ### Projeto Existente (Brownfield)
 
 1. **Importe `tokens.css`** sem remover estilos atuais
 2. **Mude gradualmente** cores hardcoded para tokens
 3. **Identifique componentes repetidos** e consolide
-4. **Aplique mixins SCSS** para reduzir duplicação
-5. **Documente** novos padrões conforme padronizar
+4. **Aplique mixins SCSS** para reduzir duplicaÃ§Ã£o
+5. **Documente** novos padrÃµes conforme padronizar
 
 ---
 
-## 📝 Variáveis em CSS (17 grupos)
+## ðŸ“ VariÃ¡veis em CSS (17 grupos)
 
 ```
 Colors: 10 + 8 aliases
@@ -364,43 +364,44 @@ Breakpoints: 5 responsivos
 
 ---
 
-## 🛠️ Ferramentas Complementares
+## ðŸ› ï¸ Ferramentas Complementares
 
-- **[Figma Design Tokens Plugin](https://www.figma.com/plugin-search/tokens)**: Sincronizar tokens entre Figma e código
+- **[Figma Design Tokens Plugin](https://www.figma.com/plugin-search/tokens)**: Sincronizar tokens entre Figma e cÃ³digo
 - **[Storybook](https://storybook.js.org/)**: Documentar componentes
 - **[Chromatic](https://www.chromatic.com/)**: Testar componentes visualmente
-- **[W3C Design Tokens](https://design-tokens.github.io/)**: Padrão para export
+- **[W3C Design Tokens](https://design-tokens.github.io/)**: PadrÃ£o para export
 
 ---
 
-## 📄 Licença
+## ðŸ“„ LicenÃ§a
 
-Design system extraído do projeto Mente Leve. Livre para uso em projetos Gaby Drummond.
+Design system extraÃ­do do projeto NamaSer. Livre para uso em projetos Gaby Drummond.
 
 ---
 
-## 📞 Manutenção
+## ðŸ“ž ManutenÃ§Ã£o
 
-**Última atualização:** 14/02/2026
-**Mantém:** Design System Team
-**Versão Atual:** 1.0.0
+**Ãšltima atualizaÃ§Ã£o:** 14/02/2026
+**MantÃ©m:** Design System Team
+**VersÃ£o Atual:** 1.0.0
 
 ### Como atualizar
 1. Edite `tokens.css` ou `tokens.scss`
 2. Sincronize entre os dois arquivos
-3. Atualize versão em ambos
-4. Documente mudanças aqui
+3. Atualize versÃ£o em ambos
+4. Documente mudanÃ§as aqui
 
 ---
 
-## ✨ Destaques
+## âœ¨ Destaques
 
-- ✅ **10 cores** cuidadosamente selecionadas
-- ✅ **Typography system** escalável e responsivo
-- ✅ **4px spacing scale** consistente
-- ✅ **5 breakpoints** para mobile-first
-- ✅ **Atomic Design** pronto para componentes
-- ✅ **SCSS mixins** para rápida prototipagem
-- ✅ **86 CSS tokens** cobrem 95% dos casos
-- ✅ **Zero hardcoded values** — tudo é um token
-- ✅ **Reutilizável** em qualquer projeto
+- âœ… **10 cores** cuidadosamente selecionadas
+- âœ… **Typography system** escalÃ¡vel e responsivo
+- âœ… **4px spacing scale** consistente
+- âœ… **5 breakpoints** para mobile-first
+- âœ… **Atomic Design** pronto para componentes
+- âœ… **SCSS mixins** para rÃ¡pida prototipagem
+- âœ… **86 CSS tokens** cobrem 95% dos casos
+- âœ… **Zero hardcoded values** â€” tudo Ã© um token
+- âœ… **ReutilizÃ¡vel** em qualquer projeto
+

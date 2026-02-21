@@ -1,12 +1,12 @@
-/**
+﻿/**
  * Gaby Drummond Leads Design System - CSS Tokens
- * Baseado em: Mente Leve Design System
+ * Baseado em: NamaSer Design System
  * Adaptado para: Logo Gaby (azul) + Vibe Sadhana (verde terra)
  *
  * Paleta:
- * - Primário: Azul escuro (#1B5A6B) - Logo Gaby, profundidade
- * - Secundário: Verde terra (#6B7B5E) - Vibe Sadhana, enraizamento
- * - Terciário: Azul claro (#5ECFD8) - Respiração, leveza
+ * - PrimÃ¡rio: Azul escuro (#1B5A6B) - Logo Gaby, profundidade
+ * - SecundÃ¡rio: Verde terra (#6B7B5E) - Vibe Sadhana, enraizamento
+ * - TerciÃ¡rio: Azul claro (#5ECFD8) - RespiraÃ§Ã£o, leveza
  */
 
 :root {
@@ -21,10 +21,10 @@
   --text-light: #6B6560;
 
   /* Accent Colors - ADAPTADOS */
-  --blue-dark: #1B5A6B;        /* Logo Gaby primário */
-  --blue-light: #5ECFD8;       /* Logo Gaby respiração */
+  --blue-dark: #1B5A6B;        /* Logo Gaby primÃ¡rio */
+  --blue-light: #5ECFD8;       /* Logo Gaby respiraÃ§Ã£o */
   --green: #6B7B5E;            /* Sadhana - enraizamento */
-  --green-light: #8A9A7D;      /* Variação do green */
+  --green-light: #8A9A7D;      /* VariaÃ§Ã£o do green */
 
   /* UI Tokens */
   --card-bg: #F5EDE4;
@@ -345,3 +345,4 @@ select:focus {
 .p-4 { padding: var(--space-4); }
 .p-6 { padding: var(--space-6); }
 .p-8 { padding: var(--space-8); }
+

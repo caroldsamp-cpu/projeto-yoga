@@ -1,155 +1,155 @@
-# SADHANA: O RITUAL DA VIDA REAL
-## Versão Popular — O Que Você Precisa Fazer Agora
+﻿# SADHANA: O RITUAL DA VIDA REAL
+## VersÃ£o Popular â€” O Que VocÃª Precisa Fazer Agora
 
 **Leia em 10 minutos. Comece hoje.**
 
 ---
 
-# O DIAGNÓSTICO (Por Que Isto Importa)
+# O DIAGNÃ“STICO (Por Que Isto Importa)
 
-Você provavelmente já tentou yoga.
+VocÃª provavelmente jÃ¡ tentou yoga.
 
-Talvez tenha entrado em um estúdio bonito, investido em roupa e tapete, se proposto fazer 3x por semana. Talvez tenha durado 2 semanas.
+Talvez tenha entrado em um estÃºdio bonito, investido em roupa e tapete, se proposto fazer 3x por semana. Talvez tenha durado 2 semanas.
 
-Não é culpa sua.
+NÃ£o Ã© culpa sua.
 
-É que o modelo tradicional exige algo que você NÃO TEM: 1 hora livre, energia mental, consistência quando tudo está caótico.
+Ã‰ que o modelo tradicional exige algo que vocÃª NÃƒO TEM: 1 hora livre, energia mental, consistÃªncia quando tudo estÃ¡ caÃ³tico.
 
 **Sadhana oferece outra abordagem:**
 
 5 minutos. Todos os dias. No seu dia real. Sem roupinha especial. Sem tapete. Sem culpa.
 
-E funciona porque respeita como o corpo e mente REALMENTE funcionam (não como gostaríamos que funcionassem).
+E funciona porque respeita como o corpo e mente REALMENTE funcionam (nÃ£o como gostarÃ­amos que funcionassem).
 
 ---
 
 # A BIG IDEA (O Que Isto Muda)
 
-**Yoga tradicional diz**: "Vá ao tapete e encontre paz."
+**Yoga tradicional diz**: "VÃ¡ ao tapete e encontre paz."
 
-**Sadhana diz**: "A vida É o seu tapete. A presença que você busca está aqui, não lá."
+**Sadhana diz**: "A vida Ã‰ o seu tapete. A presenÃ§a que vocÃª busca estÃ¡ aqui, nÃ£o lÃ¡."
 
 Isto muda TUDO porque:
 
-- ✅ Você não precisa de 1h. Precisa de 5 minutos.
-- ✅ Você não precisa de lugar perfeito. O lugar onde está JÁ é perfeito.
-- ✅ Você não precisa de disciplina de ferro. Precisa de consistência simples.
-- ✅ Você não precisa deixar de ser você. Precisa ser mais você.
+- âœ… VocÃª nÃ£o precisa de 1h. Precisa de 5 minutos.
+- âœ… VocÃª nÃ£o precisa de lugar perfeito. O lugar onde estÃ¡ JÃ Ã© perfeito.
+- âœ… VocÃª nÃ£o precisa de disciplina de ferro. Precisa de consistÃªncia simples.
+- âœ… VocÃª nÃ£o precisa deixar de ser vocÃª. Precisa ser mais vocÃª.
 
 ---
 
 # OS 3 INSIGHTS CENTRAIS
 
-## 1. "Consistência Pequena > Intensidade Ocasional"
+## 1. "ConsistÃªncia Pequena > Intensidade Ocasional"
 
 5 minutos TODA DIA transforma mais do que 1 hora UMA VEZ por semana.
 
-Por quê?
-- Seu cérebro cria vias neurais através de repetição, não de intensidade
-- Consistência gera hábito, hábito gera identidade
-- Identidade é a coisa mais poderosa que existe (quando você VIRA presença, tudo muda)
+Por quÃª?
+- Seu cÃ©rebro cria vias neurais atravÃ©s de repetiÃ§Ã£o, nÃ£o de intensidade
+- ConsistÃªncia gera hÃ¡bito, hÃ¡bito gera identidade
+- Identidade Ã© a coisa mais poderosa que existe (quando vocÃª VIRA presenÃ§a, tudo muda)
 
-**Aplicação:**
+**AplicaÃ§Ã£o:**
 Escolha 5 minutos. Pode ser:
-- 5 minutos de respiração ao acordar
+- 5 minutos de respiraÃ§Ã£o ao acordar
 - 5 minutos de alongamento no intervalo
-- 5 minutos de observação antes de dormir
+- 5 minutos de observaÃ§Ã£o antes de dormir
 
-O QUÊ você faz importa menos que QUANDO você faz (consistentemente).
+O QUÃŠ vocÃª faz importa menos que QUANDO vocÃª faz (consistentemente).
 
 ---
 
-## 2. "Autenticidade é Não-Negociável"
+## 2. "Autenticidade Ã© NÃ£o-NegociÃ¡vel"
 
-Você não precisa virar "uma yogini". Precisa ficar mais você.
+VocÃª nÃ£o precisa virar "uma yogini". Precisa ficar mais vocÃª.
 
-Sadhana não é sobre performance. É sobre presença.
+Sadhana nÃ£o Ã© sobre performance. Ã‰ sobre presenÃ§a.
 
-Você pode:
-- Fazer no escritório barulhento
+VocÃª pode:
+- Fazer no escritÃ³rio barulhento
 - Fazer com roupas de trabalho
-- Fazer enquanto está cansada
+- Fazer enquanto estÃ¡ cansada
 - Fazer imperfeito
 
-O importante é estar AQUI, neste momento, REALMENTE. Não fingindo estar.
+O importante Ã© estar AQUI, neste momento, REALMENTE. NÃ£o fingindo estar.
 
-**Aplicação:**
+**AplicaÃ§Ã£o:**
 Nunca comece porque "deveria". Comece porque quer estar PRESENTE na sua vida.
 
 ---
 
-## 3. "O Caos é Material Sagrado"
+## 3. "O Caos Ã© Material Sagrado"
 
-Aquela reunião chata, aquele trânsito, aquela louça — não são obstáculos ao yoga.
+Aquela reuniÃ£o chata, aquele trÃ¢nsito, aquela louÃ§a â€” nÃ£o sÃ£o obstÃ¡culos ao yoga.
 
-SÃO o yoga.
+SÃƒO o yoga.
 
-Porque transformação não vem de escapar da vida. Vem de estar presente NA vida.
+Porque transformaÃ§Ã£o nÃ£o vem de escapar da vida. Vem de estar presente NA vida.
 
-**Aplicação:**
-Não espere por momento perfeito. Use o momento que está acontecendo AGORA.
+**AplicaÃ§Ã£o:**
+NÃ£o espere por momento perfeito. Use o momento que estÃ¡ acontecendo AGORA.
 
 ---
 
 # AS 5 RECEITAS DE SADHANA (Comece Hoje)
 
-## RECEITA 1: O DESPERTAR (5 min — Manhã)
+## RECEITA 1: O DESPERTAR (5 min â€” ManhÃ£)
 
 **Quando:** Assim que acordar (antes do celular)
 
 **O que fazer:**
 1. Sente-se na beira da cama
-2. Faça 3 respirações profundas (conte até 4 ao inalar, até 6 ao exalar)
+2. FaÃ§a 3 respiraÃ§Ãµes profundas (conte atÃ© 4 ao inalar, atÃ© 6 ao exalar)
 3. Pergunte a si mesma: "Como eu QUERO me sentir hoje?"
 
 **O resultado:**
-Você conecta com seu corpo antes de qualquer pressão do dia te atingir.
+VocÃª conecta com seu corpo antes de qualquer pressÃ£o do dia te atingir.
 
 ---
 
-## RECEITA 2: A TRANSIÇÃO (3 min — Meio do Dia)
+## RECEITA 2: A TRANSIÃ‡ÃƒO (3 min â€” Meio do Dia)
 
-**Quando:** No intervalo do trabalho, ou mudança de atividade
+**Quando:** No intervalo do trabalho, ou mudanÃ§a de atividade
 
 **O que fazer:**
 1. Pause tudo por 3 minutos
-2. Alongue o pescoço lentamente (em círculos)
+2. Alongue o pescoÃ§o lentamente (em cÃ­rculos)
 3. Respire fundo enquanto sente cada movimento
 
 **O resultado:**
-Você quebra o ciclo de stress. Seu corpo descomprime. Você volta com mais clareza.
+VocÃª quebra o ciclo de stress. Seu corpo descomprime. VocÃª volta com mais clareza.
 
 ---
 
-## RECEITA 3: O NUTRIR (5 min — Qualquer Momento)
+## RECEITA 3: O NUTRIR (5 min â€” Qualquer Momento)
 
-**Quando:** Ao tomar café, água, chá
+**Quando:** Ao tomar cafÃ©, Ã¡gua, chÃ¡
 
 **O que fazer:**
-1. Sinta a temperatura da xícara nas mãos
+1. Sinta a temperatura da xÃ­cara nas mÃ£os
 2. Respire o aroma
 3. Beba lentamente, sentando
 
 **O resultado:**
-Transformar uma ação automática em ritual. Presença em algo que você já estava fazendo.
+Transformar uma aÃ§Ã£o automÃ¡tica em ritual. PresenÃ§a em algo que vocÃª jÃ¡ estava fazendo.
 
 ---
 
-## RECEITA 4: O PURIFICAR (5 min — Tarefas)
+## RECEITA 4: O PURIFICAR (5 min â€” Tarefas)
 
-**Quando:** Lavando louça, dobrando roupa, limpando
+**Quando:** Lavando louÃ§a, dobrando roupa, limpando
 
 **O que fazer:**
-1. Enquanto faz a tarefa, foque na SENSAÇÃO
-2. Sinta a água nas mãos, a textura do pano
-3. Sincronize sua respiração com o movimento
+1. Enquanto faz a tarefa, foque na SENSAÃ‡ÃƒO
+2. Sinta a Ã¡gua nas mÃ£os, a textura do pano
+3. Sincronize sua respiraÃ§Ã£o com o movimento
 
 **O resultado:**
-Tarefa entediante vira ritual meditativo. Louça suja = tapete de yoga.
+Tarefa entediante vira ritual meditativo. LouÃ§a suja = tapete de yoga.
 
 ---
 
-## RECEITA 5: O ENCERRAR (5 min — Noite)
+## RECEITA 5: O ENCERRAR (5 min â€” Noite)
 
 **Quando:** Na cama, antes de dormir
 
@@ -159,101 +159,101 @@ Tarefa entediante vira ritual meditativo. Louça suja = tapete de yoga.
 3. Respire fundo e solte tudo
 
 **O resultado:**
-Seu corpo integra o aprendizado do dia. Você dorme mais profundo. Próximo dia começa mais leve.
+Seu corpo integra o aprendizado do dia. VocÃª dorme mais profundo. PrÃ³ximo dia comeÃ§a mais leve.
 
 ---
 
-# OS 4 COMPROMISSOS (Isto É Tudo que Você Precisa)
+# OS 4 COMPROMISSOS (Isto Ã‰ Tudo que VocÃª Precisa)
 
-## ✅ Compromisso 1: Escolha UMA Receita
+## âœ… Compromisso 1: Escolha UMA Receita
 
 Comece com uma. Pode ser qualquer uma.
 
-Não tente fazer todas de uma vez. Isto é a armadilha.
+NÃ£o tente fazer todas de uma vez. Isto Ã© a armadilha.
 
 5 minutos, toda dia, com UMA receita.
 
 ---
 
-## ✅ Compromisso 2: Faça 7 Dias
+## âœ… Compromisso 2: FaÃ§a 7 Dias
 
-Apenas 7 dias. Não é muito.
+Apenas 7 dias. NÃ£o Ã© muito.
 
-Após 7 dias, você vai sentir algo mudando. Seu corpo vai pedir mais.
+ApÃ³s 7 dias, vocÃª vai sentir algo mudando. Seu corpo vai pedir mais.
 
 ---
 
-## ✅ Compromisso 3: Fale Para Uma Amiga
+## âœ… Compromisso 3: Fale Para Uma Amiga
 
-Quando você compartilha, você se compromete.
+Quando vocÃª compartilha, vocÃª se compromete.
 
 Diga: "Eu vou fazer 5 minutos de [Receita] todos os dias por 7 dias."
 
-Pronto. Agora é real.
+Pronto. Agora Ã© real.
 
 ---
 
-## ✅ Compromisso 4: Celebre
+## âœ… Compromisso 4: Celebre
 
-Após cada dia, reconheça: "Eu fiz."
+ApÃ³s cada dia, reconheÃ§a: "Eu fiz."
 
-Não precisa de grandiosa. Um sorriso. Um "sim" inaudível.
+NÃ£o precisa de grandiosa. Um sorriso. Um "sim" inaudÃ­vel.
 
-Isto ativa o sistema de recompensa do seu cérebro. Recompensa = repetição = hábito.
+Isto ativa o sistema de recompensa do seu cÃ©rebro. Recompensa = repetiÃ§Ã£o = hÃ¡bito.
 
 ---
 
-# O QUE VOCÊ PODE ESPERAR
+# O QUE VOCÃŠ PODE ESPERAR
 
 ### Semana 1 (Dias 1-7)
-- Você percebe quando está presente vs. quando está no piloto automático
+- VocÃª percebe quando estÃ¡ presente vs. quando estÃ¡ no piloto automÃ¡tico
 - Pequenos momentos de clareza surgem
-- Corpo começa a relaxar
+- Corpo comeÃ§a a relaxar
 
 ### Semana 2-3 (Dias 8-21)
-- A prática fica "normal" (não é mais esforço)
-- Você começa a se ver como "alguém que pratica"
-- Mudanças sutis: dormir melhor, menos reatividade, mais paciência
+- A prÃ¡tica fica "normal" (nÃ£o Ã© mais esforÃ§o)
+- VocÃª comeÃ§a a se ver como "alguÃ©m que pratica"
+- MudanÃ§as sutis: dormir melhor, menos reatividade, mais paciÃªncia
 
 ### Semana 4+ (Dia 22 em diante)
-- Identidade muda ("Eu sou presença" vs. "Eu faço yoga")
+- Identidade muda ("Eu sou presenÃ§a" vs. "Eu faÃ§o yoga")
 - Vida reorganiza ao redor disso
-- Você naturalmente quer aprofundar
+- VocÃª naturalmente quer aprofundar
 
 ---
 
-# VOCÊ ESTÁ AUTORIZADA A...
+# VOCÃŠ ESTÃ AUTORIZADA A...
 
-✅ Fazer 5 minutos (não 60)
+âœ… Fazer 5 minutos (nÃ£o 60)
 
-✅ Fazer imperfeito (sem performance)
+âœ… Fazer imperfeito (sem performance)
 
-✅ Fazer no seu dia real (louça, trabalho, trânsito)
+âœ… Fazer no seu dia real (louÃ§a, trabalho, trÃ¢nsito)
 
-✅ Falhar um dia (e recomeçar sem culpa no dia 2)
+âœ… Falhar um dia (e recomeÃ§ar sem culpa no dia 2)
 
-✅ Ser você mesma (não virar "uma yogini")
+âœ… Ser vocÃª mesma (nÃ£o virar "uma yogini")
 
-✅ Pedir ajuda (pode me chamar anytime)
+âœ… Pedir ajuda (pode me chamar anytime)
 
-✅ Questionar (se algo não faz sentido, a culpa é minha, não sua)
+âœ… Questionar (se algo nÃ£o faz sentido, a culpa Ã© minha, nÃ£o sua)
 
 ---
 
-# OS PRÓXIMOS PASSOS
+# OS PRÃ“XIMOS PASSOS
 
 ### HOJE:
 1. Escolha UMA receita (recomendo: O Despertar)
-2. Faça amanhã de manhã
+2. FaÃ§a amanhÃ£ de manhÃ£
 3. Diga para uma amiga
 
 ### SEMANA 1:
-1. Faça todos os dias (5 min)
-2. Observe o que muda (dormir, clareza, paciência)
+1. FaÃ§a todos os dias (5 min)
+2. Observe o que muda (dormir, clareza, paciÃªncia)
 3. Continue
 
 ### SEMANA 2:
-1. Se tiver questão, me chama
+1. Se tiver questÃ£o, me chama
 2. Se quiser aprofundar, temos comunidade
 
 ---
@@ -261,29 +261,29 @@ Isto ativa o sistema de recompensa do seu cérebro. Recompensa = repetição = h
 # PERGUNTAS FREQUENTES
 
 **P: E se eu esquecer um dia?**
-R: Sem problema. Dia seguinte você volta. Consistência > perfeição.
+R: Sem problema. Dia seguinte vocÃª volta. ConsistÃªncia > perfeiÃ§Ã£o.
 
 **P: Posso fazer mais de 5 minutos?**
-R: Claro! Mas não é necessário. 5 minutos bem feitos > 30 minutos achando que deveria estar fazendo.
+R: Claro! Mas nÃ£o Ã© necessÃ¡rio. 5 minutos bem feitos > 30 minutos achando que deveria estar fazendo.
 
 **P: Preciso de um tapete especial?**
-R: Não. Você está sentada em uma cadeira? Ela já é seu tapete.
+R: NÃ£o. VocÃª estÃ¡ sentada em uma cadeira? Ela jÃ¡ Ã© seu tapete.
 
 **P: Isto realmente funciona?**
-R: Se você fizer consistentemente, sim. Não é mágica. É ciência (seu cérebro criando novas vias). Mas funciona.
+R: Se vocÃª fizer consistentemente, sim. NÃ£o Ã© mÃ¡gica. Ã‰ ciÃªncia (seu cÃ©rebro criando novas vias). Mas funciona.
 
-**P: Qual receita devo começar?**
-R: "O Despertar" é melhor porque já te conecta com seu corpo no começo do dia. Mas qualquer uma funciona se você escolher uma.
+**P: Qual receita devo comeÃ§ar?**
+R: "O Despertar" Ã© melhor porque jÃ¡ te conecta com seu corpo no comeÃ§o do dia. Mas qualquer uma funciona se vocÃª escolher uma.
 
 ---
 
-# UMA ÚLTIMA COISA
+# UMA ÃšLTIMA COISA
 
-Isto que você está lendo? Não é teoria. É convite.
+Isto que vocÃª estÃ¡ lendo? NÃ£o Ã© teoria. Ã‰ convite.
 
-A mudança que você sente faltando — essa leveza, essa presença, esse "voltar pra casa" — está acessível.
+A mudanÃ§a que vocÃª sente faltando â€” essa leveza, essa presenÃ§a, esse "voltar pra casa" â€” estÃ¡ acessÃ­vel.
 
-Não está em retiro. Não está em outro lugar. Está aqui.
+NÃ£o estÃ¡ em retiro. NÃ£o estÃ¡ em outro lugar. EstÃ¡ aqui.
 
 No seu dia. No seu corpo. Agora.
 
@@ -291,12 +291,13 @@ No seu dia. No seu corpo. Agora.
 
 ---
 
-**Você é autorizada.**
+**VocÃª Ã© autorizada.**
 
-💜
+ðŸ’œ
 
 ---
 
 *Sadhana: O Ritual da Vida Real*
-*Gaby Drummond + Mente Leve*
-*Começe agora*
+*Gaby Drummond + NamaSer*
+*ComeÃ§e agora*
+

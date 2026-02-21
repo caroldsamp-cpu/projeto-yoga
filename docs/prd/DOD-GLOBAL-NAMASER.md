@@ -1,4 +1,4 @@
-# Definition of Done (DoD) Global — Mente Leve Sadhana
+﻿# Definition of Done (DoD) Global â€” NamaSer Sadhana
 
 **Versao:** 1.0
 **Data:** 14 de Fevereiro de 2026
@@ -8,7 +8,7 @@
 
 ## Proposito
 
-Este documento define os criterios de qualidade que TODAS as stories do projeto Mente Leve devem atender antes de serem consideradas completas. Funciona como um filtro universal de qualidade, complementando os acceptance criteria especificos de cada story.
+Este documento define os criterios de qualidade que TODAS as stories do projeto NamaSer devem atender antes de serem consideradas completas. Funciona como um filtro universal de qualidade, complementando os acceptance criteria especificos de cada story.
 
 ---
 
@@ -44,7 +44,7 @@ Toda peca de conteudo, comunicacao ou material do projeto deve reforcar estes pi
 | 5 | **Humanizacao > Transacao** | Conexao real entre pessoas | Tratar aluna como numero ou lead |
 
 ### Checklist de Pilares (aplicar a CADA entregavel):
-- [ ] Reforça Regulacao > Forca?
+- [ ] ReforÃ§a Regulacao > Forca?
 - [ ] Respeita Ciclos > Rigidez?
 - [ ] Prioriza Presenca > Performance?
 - [ ] Garante Acessibilidade > Elite?
@@ -139,3 +139,4 @@ Antes de marcar QUALQUER story como concluida, verificar:
 | Data | Versao | Descricao | Autor |
 |------|--------|-----------|-------|
 | 14/02/2026 | 1.0 | Criacao do DoD Global | Pax (PO) |
+

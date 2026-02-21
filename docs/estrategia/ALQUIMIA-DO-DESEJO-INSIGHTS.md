@@ -1,4 +1,4 @@
-# A Alquimia do Desejo — Insights para o Projeto Mente Leve
+﻿# A Alquimia do Desejo â€” Insights para o Projeto NamaSer
 
 **Fonte:** Relatorio "A Alquimia do Desejo: Arquitetura de Marcas Magneticas e a Criacao do Ritual Moderno"
 **Autores referenciados:** Tay Dantas, Marty Neumeier, Kevin Roberts, Brian Collins
@@ -31,7 +31,7 @@ A "fissura" e a discrepancia entre quem o publico pensa que e e quem quer ser:
 | Julia | "Curiosa mas insegura" | "Alguem que se permite" |
 | Camila | "Inconsistente" | "Alguem com ritmo proprio" |
 
-> Uso: EP-03 (S-03.4 Templates por Avatar) — adicionar essa camada de "fissura" na construcao de copy por avatar.
+> Uso: EP-03 (S-03.4 Templates por Avatar) â€” adicionar essa camada de "fissura" na construcao de copy por avatar.
 
 ### 1.3 Tres Pilares de Marca Magnetica (Tay Dantas)
 
@@ -45,44 +45,44 @@ A "fissura" e a discrepancia entre quem o publico pensa que e e quem quer ser:
 
 ## 2. ESTRATEGIA DE DIFERENCIACAO
 
-### 2.1 Declaracao de Unicidade — "Onliness Statement" (Neumeier)
+### 2.1 Declaracao de Unicidade â€” "Onliness Statement" (Neumeier)
 
 Modelo adaptado para o Sadhana:
 
-> "O Mente Leve e a unica comunidade de pratica que combina a filosofia do sadhana com linguagem acessivel e acolhedora para mulheres com rotina real que buscam presenca sem performance em uma era de burnout e culpa."
+> "O NamaSer e a unica comunidade de pratica que combina a filosofia do sadhana com linguagem acessivel e acolhedora para mulheres com rotina real que buscam presenca sem performance em uma era de burnout e culpa."
 
-> Uso: EP-04 (S-04.2 Frases de Posicionamento) — usar como base para refinar posicionamento.
+> Uso: EP-04 (S-04.2 Frases de Posicionamento) â€” usar como base para refinar posicionamento.
 
 ### 2.2 Definicao do Inimigo (Neumeier)
 
 O inimigo NAO sao outros estudios de yoga. O inimigo e:
-- O **"Piloto Automatico"** — viver sem sentir
-- A **"Mediocridade Sensorial"** — dias que passam sem nenhum momento de presenca
-- A **culpa por nao conseguir** — sentir que deveria estar fazendo mais
+- O **"Piloto Automatico"** â€” viver sem sentir
+- A **"Mediocridade Sensorial"** â€” dias que passam sem nenhum momento de presenca
+- A **culpa por nao conseguir** â€” sentir que deveria estar fazendo mais
 
 Posicionar o Sadhana como **antidoto** a esses inimigos.
 
-> Uso: EP-04 (S-04.4 Inimigo Comum) — esses tres inimigos sao mais potentes que "yoga tradicional" como antagonista.
+> Uso: EP-04 (S-04.4 Inimigo Comum) â€” esses tres inimigos sao mais potentes que "yoga tradicional" como antagonista.
 
 ### 2.3 Teste de Substituicao (Neumeier)
 
-Ferramenta de validacao: se trocar o logo do Mente Leve pelo de um concorrente, a cliente notaria a diferenca?
+Ferramenta de validacao: se trocar o logo do NamaSer pelo de um concorrente, a cliente notaria a diferenca?
 
 Se a resposta e "nao", a identidade nao esta diferenciada o suficiente. A diferenciacao vem da **profundidade da narrativa**, nao so do visual.
 
-> Uso: EP-04 — aplicar como criterio de validacao apos criacao de identidade.
+> Uso: EP-04 â€” aplicar como criterio de validacao apos criacao de identidade.
 
 ---
 
-## 3. ENGENHARIA DA EMOCAO (Kevin Roberts — Lovemarks)
+## 3. ENGENHARIA DA EMOCAO (Kevin Roberts â€” Lovemarks)
 
 ### 3.1 Misterio
 
 - Nao entregar tudo de uma vez. Criar sensacao de que ha sempre algo mais profundo a descobrir.
 - Contar historias por tras das praticas (mitologia, origem, por que essa pratica existe).
-- Tratar o Sadhana como um **mapa do tesouro** — desbloqueio progressivo.
+- Tratar o Sadhana como um **mapa do tesouro** â€” desbloqueio progressivo.
 
-> Uso: EP-02 (narrativa das trilhas) — cada trilha revela uma camada nova. EP-05 (conteudo) — series com continuidade, nao posts isolados.
+> Uso: EP-02 (narrativa das trilhas) â€” cada trilha revela uma camada nova. EP-05 (conteudo) â€” series com continuidade, nao posts isolados.
 
 ### 3.2 Sensualidade Textual (Nao Visual)
 
@@ -95,7 +95,7 @@ Linguagem sensorial como ferramenta de conexao:
 
 Hedonismo inteligente (Flamingo Estate): o texto deve ser **delicioso de ler**, nao apenas informativo.
 
-> Uso: EP-03 (S-03.1 Light Copy Pattern, S-03.2 Vocabulario) — adicionar esse registro sensorial ao vocabulario da Gaby.
+> Uso: EP-03 (S-03.1 Light Copy Pattern, S-03.2 Vocabulario) â€” adicionar esse registro sensorial ao vocabulario da Gaby.
 
 ### 3.3 Intimidade
 
@@ -112,18 +112,18 @@ Tom de voz de **confidente**, nao de sargento. Reconhecer a dificuldade:
 ### 4.1 Renomear para Elevar (Moon Juice)
 
 Nao vender "aulas curtas" (que soa como "menos"). Vender:
-- **"Micro-Sadhanas de Alta Potencia"** — valoriza o pouco tempo
-- **"Portais de Transicao"** — praticas para mudar de modo (trabalho → casa)
+- **"Micro-Sadhanas de Alta Potencia"** â€” valoriza o pouco tempo
+- **"Portais de Transicao"** â€” praticas para mudar de modo (trabalho â†’ casa)
 - **"Protocolos"** em vez de "exercicios" (ex: Protocolo da Aurora)
 
-> Uso: EP-02 (S-02.1 a S-02.6) — considerar na hora de nomear secoes dentro das trilhas. Ja usamos "Sadhana Minguante & Nova" que vai nessa direcao.
+> Uso: EP-02 (S-02.1 a S-02.6) â€” considerar na hora de nomear secoes dentro das trilhas. Ja usamos "Sadhana Minguante & Nova" que vai nessa direcao.
 
 ### 4.2 Rituais de Transicao
 
 Praticas especificas para momentos de passagem no dia:
-- Desligar o Modo Trabalho → Entrar no Modo Casa
-- Acordar → Comecar o Dia com Intencao
-- Fim do Dia → Integrar e Soltar
+- Desligar o Modo Trabalho â†’ Entrar no Modo Casa
+- Acordar â†’ Comecar o Dia com Intencao
+- Fim do Dia â†’ Integrar e Soltar
 
 > Alinhamento: As 5 Receitas Sadhana ja fazem isso (Despertar, Transicao, Nutrir, Purificar, Encerrar). Esse conceito valida nossa estrutura.
 
@@ -136,7 +136,7 @@ Sugerir um ritual fisico que acompanhe a pratica digital:
 
 Com o tempo, o cerebro associa esses estimulos ao estado de calma (condicionamento).
 
-> Uso: EP-01 (S-01.4 Receitas Sadhana) — adicionar sugestoes de ancoragem sensorial como "dica opcional" em cada receita.
+> Uso: EP-01 (S-01.4 Receitas Sadhana) â€” adicionar sugestoes de ancoragem sensorial como "dica opcional" em cada receita.
 
 ---
 
@@ -152,7 +152,7 @@ A marca Sadhana deve ser a sintese de dois arquetipos:
 | Voz | Poetica, sussurrada | Empatica, gentil | Confidente, calma, convidativa |
 | Risco | Parecer superficial | Parecer paternalista | Sofisticacao + potencia do ritual |
 
-> Uso: EP-04 (S-04.3 Identidade de Comunidade) — usar essa sintese como guia para definir a "personalidade" da marca.
+> Uso: EP-04 (S-04.3 Identidade de Comunidade) â€” usar essa sintese como guia para definir a "personalidade" da marca.
 
 ---
 
@@ -215,3 +215,4 @@ A marca Sadhana deve ser a sintese de dois arquetipos:
 | Data | Descricao | Autor |
 |------|-----------|-------|
 | 14/02/2026 | Extracao de insights do relatorio original | Pax (PO) |
+

@@ -1,908 +1,908 @@
-# Método LC (Leveza Cíclica) - BÍBLIA COMPLETA
-**Estrutura Universal de Comunicação de Gaby | Validada em 58 Transcrições**
+﻿# MÃ©todo LC (Leveza CÃ­clica) - BÃBLIA COMPLETA
+**Estrutura Universal de ComunicaÃ§Ã£o de Gaby | Validada em 58 TranscriÃ§Ãµes**
 
 ---
 
-## 🎯 O que é o Método LC?
+## ðŸŽ¯ O que Ã© o MÃ©todo LC?
 
-**Método LC (Leveza Cíclica)** é a estrutura natural e universal que Gaby usa em TODAS as suas aulas.
+**MÃ©todo LC (Leveza CÃ­clica)** Ã© a estrutura natural e universal que Gaby usa em TODAS as suas aulas.
 
-**Não é inventado. É extraído, validado e documentado.**
+**NÃ£o Ã© inventado. Ã‰ extraÃ­do, validado e documentado.**
 
 ---
 
-## ✅ Validação Completa
+## âœ… ValidaÃ§Ã£o Completa
 
-- **Análise inicial:** 4 transcrições (Fases da Lua, O Que é Yoga, Meditação, Pranayama)
-- **Validação intermediária:** 38 aulas (análise profunda de tipos)
-- **Validação final:** 58 transcrições totais (21 + 37 arquivos)
+- **AnÃ¡lise inicial:** 4 transcriÃ§Ãµes (Fases da Lua, O Que Ã© Yoga, MeditaÃ§Ã£o, Pranayama)
+- **ValidaÃ§Ã£o intermediÃ¡ria:** 38 aulas (anÃ¡lise profunda de tipos)
+- **ValidaÃ§Ã£o final:** 58 transcriÃ§Ãµes totais (21 + 37 arquivos)
 - **Status:** 100% confirmado em todos os tipos de aula
-- **Confiança:** 95%+ consistente estruturalmente
+- **ConfianÃ§a:** 95%+ consistente estruturalmente
 
 ---
 
-## 🔑 Nome: "Leveza Cíclica"
+## ðŸ”‘ Nome: "Leveza CÃ­clica"
 
 **Por que "Leveza"?**
-- Começa fraco, é forte (light copy)
-- Não impõe, convida
-- Confia no aluno chegar à conclusão
+- ComeÃ§a fraco, Ã© forte (light copy)
+- NÃ£o impÃµe, convida
+- Confia no aluno chegar Ã  conclusÃ£o
 - Respeita ritmo individual
 
-**Por que "Cíclica"?**
+**Por que "CÃ­clica"?**
 - Sempre retorna ao repouso
-- Sempre retorna à presença
+- Sempre retorna Ã  presenÃ§a
 - Sempre retorna ao interno
 - Pode ser repetido infinitamente
 
 ---
 
-## 📋 Cada aula segue um ciclo que **começa no externo, vai para o interno, e retorna com presença integrada**.
+## ðŸ“‹ Cada aula segue um ciclo que **comeÃ§a no externo, vai para o interno, e retorna com presenÃ§a integrada**.
 
 ---
 
-## Os 4 Movimentos de Leveza Cíclica
+## Os 4 Movimentos de Leveza CÃ­clica
 
-### 1️⃣ ABERTURA / CONTEXTUALIZAÇÃO (Pausa)
+### 1ï¸âƒ£ ABERTURA / CONTEXTUALIZAÃ‡ÃƒO (Pausa)
 
-**O que é:** Apresenta o tema e cria espaço mental.
+**O que Ã©:** Apresenta o tema e cria espaÃ§o mental.
 
 **Exemplos:**
-- "Oi gente! Hoje vou explicar para vocês o que é yoga..."
-- "Como vocês já sabem, eu gosto de trabalhar com a energia da Lua..."
-- "O pranayama que a gente vai aprender hoje é a respiração de quatro tempos..."
+- "Oi gente! Hoje vou explicar para vocÃªs o que Ã© yoga..."
+- "Como vocÃªs jÃ¡ sabem, eu gosto de trabalhar com a energia da Lua..."
+- "O pranayama que a gente vai aprender hoje Ã© a respiraÃ§Ã£o de quatro tempos..."
 
-**Função:**
+**FunÃ§Ã£o:**
 - Desacelera ("pausa")
-- Dá contexto (responde "por quê?")
+- DÃ¡ contexto (responde "por quÃª?")
 - Cria pertencimento ("a gente vai")
 
 **Tone:** Coloquial, amiga, sem pressa
 
 ---
 
-### 2️⃣ FUNDAÇÃO / PREMISSAS (Estrutura)
+### 2ï¸âƒ£ FUNDAÃ‡ÃƒO / PREMISSAS (Estrutura)
 
-**O que é:** Estabelece a lógica epistemológica. Por que isso importa? Como funciona?
+**O que Ã©:** Estabelece a lÃ³gica epistemolÃ³gica. Por que isso importa? Como funciona?
 
 **Exemplos:**
 
 **Fases da Lua:**
 ```
-P1: Lua tem relação direta com planeta, natureza, ser humano
-P2: Por conta da gravidade (força gravitacional)
-P3: Corpo é 70% água
-P4: Logo, Lua influencia sono, emoções, relacionamentos
-→ Conclusão: Cada fase cria uma energia diferente
+P1: Lua tem relaÃ§Ã£o direta com planeta, natureza, ser humano
+P2: Por conta da gravidade (forÃ§a gravitacional)
+P3: Corpo Ã© 70% Ã¡gua
+P4: Logo, Lua influencia sono, emoÃ§Ãµes, relacionamentos
+â†’ ConclusÃ£o: Cada fase cria uma energia diferente
 ```
 
-**O que é Yoga:**
+**O que Ã© Yoga:**
 ```
-P1: Yoga não é atividade física
-P2: É uma filosofia de vida que trabalha corpo, mente, espírito
-P3: Você aprende a "parar para olhar dentro"
-P4: O yoga real é aquele que ninguém vê, mas todos sentem
-→ Conclusão: Yoga é alinhamento entre pensar, falar, agir, sentir
+P1: Yoga nÃ£o Ã© atividade fÃ­sica
+P2: Ã‰ uma filosofia de vida que trabalha corpo, mente, espÃ­rito
+P3: VocÃª aprende a "parar para olhar dentro"
+P4: O yoga real Ã© aquele que ninguÃ©m vÃª, mas todos sentem
+â†’ ConclusÃ£o: Yoga Ã© alinhamento entre pensar, falar, agir, sentir
 ```
 
 **Pranayama:**
 ```
-P1: Respiração tem 4 fases (inspiração, retenção ar, expiração, retenção sem ar)
+P1: RespiraÃ§Ã£o tem 4 fases (inspiraÃ§Ã£o, retenÃ§Ã£o ar, expiraÃ§Ã£o, retenÃ§Ã£o sem ar)
 P2: Quando pratica, trabalha autocontrole
 P3: Cada fase proporciona algo diferente
-→ Conclusão: Logo você consegue lidar melhor com desconfortos
+â†’ ConclusÃ£o: Logo vocÃª consegue lidar melhor com desconfortos
 ```
 
-**Função:**
-- Estabelece verdades incontestáveis
+**FunÃ§Ã£o:**
+- Estabelece verdades incontestÃ¡veis
 - Encadeia logicamente (silogismo)
-- Pessoa chega à conclusão
+- Pessoa chega Ã  conclusÃ£o
 
-**Padrão:** Começa científico/racional, depois filosofia
+**PadrÃ£o:** ComeÃ§a cientÃ­fico/racional, depois filosofia
 
 ---
 
-### 3️⃣ GUIA PRÁTICO / OBSERVAÇÃO (Presença)
+### 3ï¸âƒ£ GUIA PRÃTICO / OBSERVAÃ‡ÃƒO (PresenÃ§a)
 
-**O que é:** Move pessoa da teoria para VIVÊNCIA. Convida à observação, não à ação.
+**O que Ã©:** Move pessoa da teoria para VIVÃŠNCIA. Convida Ã  observaÃ§Ã£o, nÃ£o Ã  aÃ§Ã£o.
 
-**Subtipo A - Meditação (Guia Sensorial):**
+**Subtipo A - MeditaÃ§Ã£o (Guia Sensorial):**
 ```
-"Com os olhos fechados, em uma postura confortável,
-Começando a prestar mais atenção ao seu ritmo respiratório.
-Começando a direcionar sua atenção para dentro, para você, para aqui e para agora.
+"Com os olhos fechados, em uma postura confortÃ¡vel,
+ComeÃ§ando a prestar mais atenÃ§Ã£o ao seu ritmo respiratÃ³rio.
+ComeÃ§ando a direcionar sua atenÃ§Ã£o para dentro, para vocÃª, para aqui e para agora.
 
-Hoje vamos fazer um exercício para você sentir a consciência do seu corpo interior.
-Não pergunte à sua mente (porque ela dirá que não sente nada).
-Vá direto para suas mãos. Se torne consciente.
+Hoje vamos fazer um exercÃ­cio para vocÃª sentir a consciÃªncia do seu corpo interior.
+NÃ£o pergunte Ã  sua mente (porque ela dirÃ¡ que nÃ£o sente nada).
+VÃ¡ direto para suas mÃ£os. Se torne consciente.
 
-Observe o que você sente.
-Você pode ter uma impressão de tremor, depois sensação de energia vital.
-Continue se concentrando. Perceba que a sensação se torna cada vez mais intensa.
+Observe o que vocÃª sente.
+VocÃª pode ter uma impressÃ£o de tremor, depois sensaÃ§Ã£o de energia vital.
+Continue se concentrando. Perceba que a sensaÃ§Ã£o se torna cada vez mais intensa.
 
-Agora passe para os pés...
-Comece a sentir mãos e pés simultaneamente...
-Até estar consciente do seu corpo interior como sensação global de energia vital."
+Agora passe para os pÃ©s...
+Comece a sentir mÃ£os e pÃ©s simultaneamente...
+AtÃ© estar consciente do seu corpo interior como sensaÃ§Ã£o global de energia vital."
 ```
 
-**Subtipo B - Técnica (Passo a Passo + Observação):**
+**Subtipo B - TÃ©cnica (Passo a Passo + ObservaÃ§Ã£o):**
 ```
-"Podem fechar os olhos, sentem uma postura confortável.
-Vamos começar inspirando em 1, 2, 3, 4...
-Retém 4, 3, 2, 1...
+"Podem fechar os olhos, sentem uma postura confortÃ¡vel.
+Vamos comeÃ§ar inspirando em 1, 2, 3, 4...
+RetÃ©m 4, 3, 2, 1...
 Expira 1, 2, 3, 4...
-Retém 4, 3, 2, 1...
+RetÃ©m 4, 3, 2, 1...
 
-Observa bem como você se sentiu.
-É legal observar cada fase da respiração.
-Talvez uma você tenha mais facilidade, outra dificuldade.
-Então é legal sempre ir se observando."
+Observa bem como vocÃª se sentiu.
+Ã‰ legal observar cada fase da respiraÃ§Ã£o.
+Talvez uma vocÃª tenha mais facilidade, outra dificuldade.
+EntÃ£o Ã© legal sempre ir se observando."
 ```
 
-**Função:**
-- Move de conceito para EXPERIÊNCIA
-- Não ordena, CONVIDA ("observe", "sinta", "perceba")
-- Ativa sentidos internos (propriocepção)
-- Cria segurança: "não há jeito certo, apenas SUA experiência"
+**FunÃ§Ã£o:**
+- Move de conceito para EXPERIÃŠNCIA
+- NÃ£o ordena, CONVIDA ("observe", "sinta", "perceba")
+- Ativa sentidos internos (propriocepÃ§Ã£o)
+- Cria seguranÃ§a: "nÃ£o hÃ¡ jeito certo, apenas SUA experiÃªncia"
 
-**Padrão:** Sempre inicia com respiração + convite para dentro
+**PadrÃ£o:** Sempre inicia com respiraÃ§Ã£o + convite para dentro
 
 ---
 
-### 4️⃣ ENCERRAMENTO / CONSOLIDAÇÃO (Retorno)
+### 4ï¸âƒ£ ENCERRAMENTO / CONSOLIDAÃ‡ÃƒO (Retorno)
 
-**O que é:** Retorna à presença, reafirma a essência, leva para vida.
+**O que Ã©:** Retorna Ã  presenÃ§a, reafirma a essÃªncia, leva para vida.
 
 **Exemplos:**
 
-**Meditação:**
+**MeditaÃ§Ã£o:**
 ```
-"Levando as duas mãos ao seu coração,
-inclinando a testa em direção às mãos
-fazendo seu momento de gratidão.
+"Levando as duas mÃ£os ao seu coraÃ§Ã£o,
+inclinando a testa em direÃ§Ã£o Ã s mÃ£os
+fazendo seu momento de gratidÃ£o.
 Namaste."
 ```
 
 **Pranayama:**
 ```
-"Mantém os olhos fechados, respira profundo.
+"MantÃ©m os olhos fechados, respira profundo.
 Observa seu corpo.
 Bem devagar vai abrindo os olhos.
-Observa bem como você se sentiu.
+Observa bem como vocÃª se sentiu.
 A gente para para respirar, para se observar
 e se permite desacelerar."
 ```
 
-**Conceitual (O que é Yoga):**
+**Conceitual (O que Ã© Yoga):**
 ```
-"O yoga perfeito é o yoga perfeito pra você.
-A prática que tem que se adaptar a você,
-não você que tem que se adaptar à prática.
-Porque o yoga é pra todos e eu tenho certeza que é pra você."
+"O yoga perfeito Ã© o yoga perfeito pra vocÃª.
+A prÃ¡tica que tem que se adaptar a vocÃª,
+nÃ£o vocÃª que tem que se adaptar Ã  prÃ¡tica.
+Porque o yoga Ã© pra todos e eu tenho certeza que Ã© pra vocÃª."
 ```
 
 **Fases da Lua:**
 ```
 "Saber o que cada uma das fases representa
-é essencial para aproveitar a sua influência da melhor forma possível
+Ã© essencial para aproveitar a sua influÃªncia da melhor forma possÃ­vel
 dentro do contexto de cada um."
 ```
 
-**Função:**
-- Reafirma a essência (sempre retorna à presença)
-- Personaliza ("pra você", "seu contexto")
+**FunÃ§Ã£o:**
+- Reafirma a essÃªncia (sempre retorna Ã  presenÃ§a)
+- Personaliza ("pra vocÃª", "seu contexto")
 - Oferece ferramenta para vida: "coloca na rotina", "leva contigo"
-- Fecha ciclo com gratidão/presença
+- Fecha ciclo com gratidÃ£o/presenÃ§a
 
-**Padrão:** Sempre termina ressaltando que é individual + convida a levar adiante
+**PadrÃ£o:** Sempre termina ressaltando que Ã© individual + convida a levar adiante
 
 ---
 
-## O Ciclo Completo: LEVEZA CÍCLICA
+## O Ciclo Completo: LEVEZA CÃCLICA
 
 ```
 ABERTURA (Pausa)
-    ↓
-"Deixa eu explicar por quê isso importa"
-    ↓
-FUNDAÇÃO (Estrutura)
-    ↓
-"Aqui está a lógica, a verdade"
-    ↓
-OBSERVAÇÃO (Presença)
-    ↓
-"Agora SINTA isso em você"
-    ↓
+    â†“
+"Deixa eu explicar por quÃª isso importa"
+    â†“
+FUNDAÃ‡ÃƒO (Estrutura)
+    â†“
+"Aqui estÃ¡ a lÃ³gica, a verdade"
+    â†“
+OBSERVAÃ‡ÃƒO (PresenÃ§a)
+    â†“
+"Agora SINTA isso em vocÃª"
+    â†“
 ENCERRAMENTO (Retorno)
-    ↓
-"Isso é pra sua vida. Leva contigo."
-    ↓
-[Retorna ao repouso/presença]
+    â†“
+"Isso Ã© pra sua vida. Leva contigo."
+    â†“
+[Retorna ao repouso/presenÃ§a]
 ```
 
-**Por que "Cíclico"?**
+**Por que "CÃ­clico"?**
 - Sempre retorna ao repouso
-- Sempre retorna à presença
+- Sempre retorna Ã  presenÃ§a
 - Sempre retorna ao interno
-- Pode ser repetido infinitamente (qual é a próxima aula?)
+- Pode ser repetido infinitamente (qual Ã© a prÃ³xima aula?)
 
 **Por que "Leveza"?**
-- Começa fraco, é forte (light copy)
-- Não impõe, convida
-- Confia no aluno chegar à conclusão
+- ComeÃ§a fraco, Ã© forte (light copy)
+- NÃ£o impÃµe, convida
+- Confia no aluno chegar Ã  conclusÃ£o
 - Respeita o ritmo individual
 
 ---
 
-## Ciclos Secundários: FASES DA LUA
+## Ciclos SecundÃ¡rios: FASES DA LUA
 
-Dentro do Método Leveza Cíclica, há um **segundo ciclo: as fases da lua**.
+Dentro do MÃ©todo Leveza CÃ­clica, hÃ¡ um **segundo ciclo: as fases da lua**.
 
-Cada fase representa um momento do ciclo energético:
+Cada fase representa um momento do ciclo energÃ©tico:
 
 ```
-LUA NOVA (Introspecção)
-    → Criar intenções
-    → Energia baixa, recolhimento
-    → ASANA/PRÁTICA: Yin, meditação
+LUA NOVA (IntrospecÃ§Ã£o)
+    â†’ Criar intenÃ§Ãµes
+    â†’ Energia baixa, recolhimento
+    â†’ ASANA/PRÃTICA: Yin, meditaÃ§Ã£o
 
-LUA CRESCENTE (Ação)
-    → Executar planos
-    → Energia alta, produtividade
-    → ASANA/PRÁTICA: Vinyasa, pranayama ativador
+LUA CRESCENTE (AÃ§Ã£o)
+    â†’ Executar planos
+    â†’ Energia alta, produtividade
+    â†’ ASANA/PRÃTICA: Vinyasa, pranayama ativador
 
 LUA CHEIA (Colheita)
-    → Celebrar realização
-    → Energia no ápice
-    → ASANA/PRÁTICA: Aulas dinamogênicas
+    â†’ Celebrar realizaÃ§Ã£o
+    â†’ Energia no Ã¡pice
+    â†’ ASANA/PRÃTICA: Aulas dinamogÃªnicas
 
-LUA MINGUANTE (Finalização)
-    → Encerrar ciclos
-    → Desacelerar energia
-    → ASANA/PRÁTICA: Restaurativa, limpeza
-    → Volta à Lua Nova
+LUA MINGUANTE (FinalizaÃ§Ã£o)
+    â†’ Encerrar ciclos
+    â†’ Desacelerar energia
+    â†’ ASANA/PRÃTICA: Restaurativa, limpeza
+    â†’ Volta Ã  Lua Nova
 ```
 
-**Isso é um ciclo dentro do ciclo dentro do ciclo:**
+**Isso Ã© um ciclo dentro do ciclo dentro do ciclo:**
 
 ```
 VIDA INTEIRA
-    ↓
-CADA MÊS (ciclo lunar)
-    ↓
+    â†“
+CADA MÃŠS (ciclo lunar)
+    â†“
 CADA AULA (4 movimentos)
-    ↓
-CADA TÉCNICA (respiração consciente)
+    â†“
+CADA TÃ‰CNICA (respiraÃ§Ã£o consciente)
 ```
 
-**Tudo retorna à PRESENÇA.**
+**Tudo retorna Ã  PRESENÃ‡A.**
 
 ---
 
-## Características Universais
+## CaracterÃ­sticas Universais
 
 Independente do tipo de aula, Gaby SEMPRE:
 
-✅ **Começa fraco** - Tom coloquial, amiga
-✅ **Estrutura lógica** - Premissas que levam a conclusão inevitável
-✅ **Convida, não impõe** - "Observe", "sinta", nunca "você deve"
-✅ **Ativa sensação corporal** - Não é teórico, é vivencial
-✅ **Retorna ao interno** - Sempre volta à presença/respiração/coração
-✅ **Personaliza** - "Seu jeito", "seu processo", "seu contexto"
-✅ **Oferece ferramenta** - "Coloca na rotina", "leva para vida"
-✅ **Fecha com presença** - Namaste, gratidão, repouso
+âœ… **ComeÃ§a fraco** - Tom coloquial, amiga
+âœ… **Estrutura lÃ³gica** - Premissas que levam a conclusÃ£o inevitÃ¡vel
+âœ… **Convida, nÃ£o impÃµe** - "Observe", "sinta", nunca "vocÃª deve"
+âœ… **Ativa sensaÃ§Ã£o corporal** - NÃ£o Ã© teÃ³rico, Ã© vivencial
+âœ… **Retorna ao interno** - Sempre volta Ã  presenÃ§a/respiraÃ§Ã£o/coraÃ§Ã£o
+âœ… **Personaliza** - "Seu jeito", "seu processo", "seu contexto"
+âœ… **Oferece ferramenta** - "Coloca na rotina", "leva para vida"
+âœ… **Fecha com presenÃ§a** - Namaste, gratidÃ£o, repouso
 
 ---
 
-## 🆕 6 INSIGHTS OPERACIONAIS (Novos Descobrimentos de 58 Transcrições)
+## ðŸ†• 6 INSIGHTS OPERACIONAIS (Novos Descobrimentos de 58 TranscriÃ§Ãµes)
 
-### **INSIGHT 1: Contagem Cíclica como Ferramenta Psicológica**
+### **INSIGHT 1: Contagem CÃ­clica como Ferramenta PsicolÃ³gica**
 
-**Padrão:** "Fica por 3, por 2, por 1" (aparece 50+ vezes em 58 aulas)
+**PadrÃ£o:** "Fica por 3, por 2, por 1" (aparece 50+ vezes em 58 aulas)
 
-**Fórmula psicológica:**
-- **3** = Limite sustentável (máximo de concentração sem stress)
-- **Regressão** = Ritmo natural de saída
-- **1** = Transição segura
+**FÃ³rmula psicolÃ³gica:**
+- **3** = Limite sustentÃ¡vel (mÃ¡ximo de concentraÃ§Ã£o sem stress)
+- **RegressÃ£o** = Ritmo natural de saÃ­da
+- **1** = TransiÃ§Ã£o segura
 
 **Uso operacional:**
 ```
 30 segundos YouTube:
-ABERTURA (3 seg) → FUNDAÇÃO (3 seg) → OBSERVAÇÃO (3 seg) → ENCERRAMENTO (2 seg)
+ABERTURA (3 seg) â†’ FUNDAÃ‡ÃƒO (3 seg) â†’ OBSERVAÃ‡ÃƒO (3 seg) â†’ ENCERRAMENTO (2 seg)
 
 = Estrutura temporal natural
 ```
 
-**Para Mente Leve:** Use "3-2-1" para estruturar vídeos curtos.
+**Para NamaSer:** Use "3-2-1" para estruturar vÃ­deos curtos.
 
 ---
 
-### **INSIGHT 2: Dualidades Corporais = Equilíbrio Proprioceptivo**
+### **INSIGHT 2: Dualidades Corporais = EquilÃ­brio Proprioceptivo**
 
-**Padrão:** 95% das aulas práticas contêm oposições ativas (aparece 8-12 vezes por aula).
+**PadrÃ£o:** 95% das aulas prÃ¡ticas contÃªm oposiÃ§Ãµes ativas (aparece 8-12 vezes por aula).
 
 **Exemplos reais:**
 ```
-"Longa coluna + Abdômen ativado"
-"Abre peito + Solta cabeça"
+"Longa coluna + AbdÃ´men ativado"
+"Abre peito + Solta cabeÃ§a"
 "Ativa ponta dos dedos + Relaxa ombros"
 ```
 
 **Por que funciona:**
-- Não é "relaxa tudo" (passividade)
-- Não é "aperta tudo" (tensão)
-- É **equilíbrio dinâmico consciente**
+- NÃ£o Ã© "relaxa tudo" (passividade)
+- NÃ£o Ã© "aperta tudo" (tensÃ£o)
+- Ã‰ **equilÃ­brio dinÃ¢mico consciente**
 
-**Para Mente Leve:**
+**Para NamaSer:**
 ```
-Marina: "Deixa relaxarem os ombros, mas ativa seu núcleo"
-Júlia: "Coluna longada significa você está presente"
-Camila: "Alguns dias você ativa mais, outros dias menos. Ambos estão certos"
+Marina: "Deixa relaxarem os ombros, mas ativa seu nÃºcleo"
+JÃºlia: "Coluna longada significa vocÃª estÃ¡ presente"
+Camila: "Alguns dias vocÃª ativa mais, outros dias menos. Ambos estÃ£o certos"
 ```
 
 ---
 
-### **INSIGHT 3: Validação Através de Oferta (Nunca Imposição)**
+### **INSIGHT 3: ValidaÃ§Ã£o AtravÃ©s de Oferta (Nunca ImposiÃ§Ã£o)**
 
-**Padrão:** Gaby NUNCA diz "você pode". Oferece 2+ opções sempre (100% das aulas).
+**PadrÃ£o:** Gaby NUNCA diz "vocÃª pode". Oferece 2+ opÃ§Ãµes sempre (100% das aulas).
 
 **Exemplos reais:**
 ```
-❌ "Você pode fazer isso"
-✅ "Você pode fazer isso ou deixar assim mesmo"
+âŒ "VocÃª pode fazer isso"
+âœ… "VocÃª pode fazer isso ou deixar assim mesmo"
 
-❌ "Estique a perna"
-✅ "Se der para esticar, estique. Se não der, deixe flexionada"
+âŒ "Estique a perna"
+âœ… "Se der para esticar, estique. Se nÃ£o der, deixe flexionada"
 ```
 
-**Mecanismo:** Oferecer opções = empoderamento implícito
+**Mecanismo:** Oferecer opÃ§Ãµes = empoderamento implÃ­cito
 
-**Para Mente Leve:**
+**Para NamaSer:**
 ```
-Marina: "Você pode respirar comigo ou apenas observar"
-Júlia: "Tente fazer ou use a modificação aqui"
+Marina: "VocÃª pode respirar comigo ou apenas observar"
+JÃºlia: "Tente fazer ou use a modificaÃ§Ã£o aqui"
 Camila: "5 minutos ou 30 minutos. Ambos contam"
 ```
 
 ---
 
-### **INSIGHT 4: Normalização Contínua de Fracasso**
+### **INSIGHT 4: NormalizaÃ§Ã£o ContÃ­nua de Fracasso**
 
-**Padrão:** Valida a cada passo (8-10 validações por aula longa), não só no final.
+**PadrÃ£o:** Valida a cada passo (8-10 validaÃ§Ãµes por aula longa), nÃ£o sÃ³ no final.
 
 **Exemplo real em postura desafiadora:**
 ```
-[Passo 1] "Quem conseguiu, parabéns! Quem não conseguiu, totalmente normal"
-[Passo 2] "Se você tá na parede, perfeito. Se caiu, também é ok"
-[Passo 3] "Alguns dias você consegue mais, outros menos"
+[Passo 1] "Quem conseguiu, parabÃ©ns! Quem nÃ£o conseguiu, totalmente normal"
+[Passo 2] "Se vocÃª tÃ¡ na parede, perfeito. Se caiu, tambÃ©m Ã© ok"
+[Passo 3] "Alguns dias vocÃª consegue mais, outros menos"
 ```
 
-**Para Mente Leve:** Roteiros para Camila precisam de validação intermitente (não só final).
+**Para NamaSer:** Roteiros para Camila precisam de validaÃ§Ã£o intermitente (nÃ£o sÃ³ final).
 
 ---
 
-### **INSIGHT 5: Respiração NUNCA Separada do Movimento**
+### **INSIGHT 5: RespiraÃ§Ã£o NUNCA Separada do Movimento**
 
-**Padrão:** 100% das aulas práticas acoplam respiração e movimento.
+**PadrÃ£o:** 100% das aulas prÃ¡ticas acoplam respiraÃ§Ã£o e movimento.
 
 **Exemplos reais:**
 ```
-❌ "Faz a postura. Agora respire fundo"
-✅ "Inspira enquanto levanta os braços. Expira enquanto desce"
+âŒ "Faz a postura. Agora respire fundo"
+âœ… "Inspira enquanto levanta os braÃ§os. Expira enquanto desce"
 ```
 
-**Diferença crítica:**
+**DiferenÃ§a crÃ­tica:**
 - **Separado** = Fitness
-- **Acoplado** = Yoga (Método LC)
+- **Acoplado** = Yoga (MÃ©todo LC)
 
-**Para Mente Leve:** Qualquer copy SEM respiração acoplada = incompleto.
+**Para NamaSer:** Qualquer copy SEM respiraÃ§Ã£o acoplada = incompleto.
 
 ---
 
-### **INSIGHT 6: Ciclo Lunar é OPERACIONAL (Não Teórico)**
+### **INSIGHT 6: Ciclo Lunar Ã© OPERACIONAL (NÃ£o TeÃ³rico)**
 
 **Como Gaby estrutura por fase:**
 
-| Fase | Tom | Velocidade | Estrutura | Aplicação |
+| Fase | Tom | Velocidade | Estrutura | AplicaÃ§Ã£o |
 |------|-----|-----------|-----------|-----------|
-| **Lua Cheia** | Altos, energéticos | RÁPIDA | Múltiplas variações | "Deixa bem solto" |
-| **Lua Crescente** | Normal | MODERADA | Progressão | "Aumentando dificuldade" |
+| **Lua Cheia** | Altos, energÃ©ticos | RÃPIDA | MÃºltiplas variaÃ§Ãµes | "Deixa bem solto" |
+| **Lua Crescente** | Normal | MODERADA | ProgressÃ£o | "Aumentando dificuldade" |
 | **Lua Minguante** | Sussurrante | LENTA | Uma postura, longo | "Deixa tudo ir" |
 | **Lua Nova** | Profundo | MUY LENTA | Mesmo tema 5+ min | "Apenas observando" |
 
-**Para Mente Leve:** Cada roteiro tem variante por fase lunar com tom diferente.
+**Para NamaSer:** Cada roteiro tem variante por fase lunar com tom diferente.
 
 ---
 
-## 📚 PADRÕES DE LINGUAGEM UNIVERSAL
+## ðŸ“š PADRÃ•ES DE LINGUAGEM UNIVERSAL
 
-### Padrão de Abertura (Sempre Igual em 100% das Aulas)
+### PadrÃ£o de Abertura (Sempre Igual em 100% das Aulas)
 
-Toda aula começa com uma variação IDÊNTICA:
+Toda aula comeÃ§a com uma variaÃ§Ã£o IDÃŠNTICA:
 
 ```
-"Oi gente!" / "Como vocês já sabem" / "Hoje vou..."
+"Oi gente!" / "Como vocÃªs jÃ¡ sabem" / "Hoje vou..."
 
 [Tom coloquial, amiga, sem pressa]
 
 Vamos entender/aprender/explorar [TEMA]
 
-Por que? Porque [BENEFÍCIO/CONTEXTO]
+Por que? Porque [BENEFÃCIO/CONTEXTO]
 ```
 
-**Validação:** Presente em 23/23 aulas analisadas (100% universal).
+**ValidaÃ§Ã£o:** Presente em 23/23 aulas analisadas (100% universal).
 
 ---
 
-### Vocabulário Recorrente: TOP 30 Palavras
+### VocabulÃ¡rio Recorrente: TOP 30 Palavras
 
-| Palavra | Frequência | Contexto | Função |
+| Palavra | FrequÃªncia | Contexto | FunÃ§Ã£o |
 |---------|-----------|----------|--------|
-| Energia | 15-20 por aula | Fases da lua, estados emocionais | Descrever estado dinâmico |
-| Observar | 10-15 por aula | Convite ao interno | Evitar ação imposta |
-| Presença | 8-12 por aula | Retorno ao essencial | Reancora à experiência |
-| Respiração | 10-15 por aula | Prática (acoplada) | Guia movimento |
-| Apenas | 5-10 por aula | Permitir leveza | Reduz pressão |
+| Energia | 15-20 por aula | Fases da lua, estados emocionais | Descrever estado dinÃ¢mico |
+| Observar | 10-15 por aula | Convite ao interno | Evitar aÃ§Ã£o imposta |
+| PresenÃ§a | 8-12 por aula | Retorno ao essencial | Reancora Ã  experiÃªncia |
+| RespiraÃ§Ã£o | 10-15 por aula | PrÃ¡tica (acoplada) | Guia movimento |
+| Apenas | 5-10 por aula | Permitir leveza | Reduz pressÃ£o |
 | Deixa | 8-12 por aula | Soltar, permitir | Tom de conforto |
-| Sente | 5-8 por aula | Sensação corporal | Convida propriocepção |
+| Sente | 5-8 por aula | SensaÃ§Ã£o corporal | Convida propriocepÃ§Ã£o |
 | Coluna | 4-8 por aula | Postura | Alinhamento |
-| Você | 20-30 por aula | Direto ao aluno | Personalização |
-| E tal | 3-5 por aula | Finalização coloquial | Familiaridade |
+| VocÃª | 20-30 por aula | Direto ao aluno | PersonalizaÃ§Ã£o |
+| E tal | 3-5 por aula | FinalizaÃ§Ã£o coloquial | Familiaridade |
 
-**Insight:** Vocabulário gira em torno de OBSERVAÇÃO (não ação), ENERGIA (não força), PRESENÇA (não performance).
+**Insight:** VocabulÃ¡rio gira em torno de OBSERVAÃ‡ÃƒO (nÃ£o aÃ§Ã£o), ENERGIA (nÃ£o forÃ§a), PRESENÃ‡A (nÃ£o performance).
 
 ---
 
-### Construções Gramaticais Características
+### ConstruÃ§Ãµes Gramaticais CaracterÃ­sticas
 
-**1. Gerúndio Contínuo (Ação fluida)**
+**1. GerÃºndio ContÃ­nuo (AÃ§Ã£o fluida)**
 ```
-"Começando a respirar..."
-"Deixando seus ombros caírem..."
-"Observando como você se sente..."
+"ComeÃ§ando a respirar..."
+"Deixando seus ombros caÃ­rem..."
+"Observando como vocÃª se sente..."
 ```
-→ **Efeito:** Movimento contínuo, não interrupção
+â†’ **Efeito:** Movimento contÃ­nuo, nÃ£o interrupÃ§Ã£o
 
-**2. Soft Imperatives (Convite, não ordem)**
+**2. Soft Imperatives (Convite, nÃ£o ordem)**
 ```
 "Se conseguir, estique..."
 "Pode deixar..."
-"Você pode explorar..."
+"VocÃª pode explorar..."
 ```
-→ **Efeito:** Empoderamento do aluno
+â†’ **Efeito:** Empoderamento do aluno
 
-**3. Repetição da Conjunção "E"**
+**3. RepetiÃ§Ã£o da ConjunÃ§Ã£o "E"**
 ```
-"E a respiração flui... e o corpo relaxa... e a presença aumenta..."
+"E a respiraÃ§Ã£o flui... e o corpo relaxa... e a presenÃ§a aumenta..."
 ```
-→ **Efeito:** Ritmo acumulativo, não fragmentado
+â†’ **Efeito:** Ritmo acumulativo, nÃ£o fragmentado
 
-**4. Padrão Ternário (3 elementos)**
+**4. PadrÃ£o TernÃ¡rio (3 elementos)**
 ```
 "Fica por 3, por 2, por 1"
-"Corpo, mente, espírito"
-"Inspira, retém, expira"
+"Corpo, mente, espÃ­rito"
+"Inspira, retÃ©m, expira"
 ```
-→ **Efeito:** Memorável, psicologicamente sustentável
+â†’ **Efeito:** MemorÃ¡vel, psicologicamente sustentÃ¡vel
 
-**5. Questões Retóricas (Ativa pensamento)**
+**5. QuestÃµes RetÃ³ricas (Ativa pensamento)**
 ```
-"Você sabe o que é yoga?"
-"Vocês já sentiram energia da lua?"
+"VocÃª sabe o que Ã© yoga?"
+"VocÃªs jÃ¡ sentiram energia da lua?"
 ```
-→ **Efeito:** Convida reflexão, não imposição
+â†’ **Efeito:** Convida reflexÃ£o, nÃ£o imposiÃ§Ã£o
 
-**6. Negações Como Validação**
+**6. NegaÃ§Ãµes Como ValidaÃ§Ã£o**
 ```
-"Não é certo nem errado..."
-"Não tem jeito perfeito..."
-"Não precisa fazer como eu..."
+"NÃ£o Ã© certo nem errado..."
+"NÃ£o tem jeito perfeito..."
+"NÃ£o precisa fazer como eu..."
 ```
-→ **Efeito:** Dissolve perfeccionismo, valida pluralidade
+â†’ **Efeito:** Dissolve perfeccionismo, valida pluralidade
 
 ---
 
 ### Ritmo & Pacing Por Tipo de Aula
 
-| Tipo | Velocidade | Silêncios | Repetições | Padrão |
+| Tipo | Velocidade | SilÃªncios | RepetiÃ§Ãµes | PadrÃ£o |
 |------|-----------|-----------|-----------|--------|
-| **Meditações** | MUY LENTA | 15-20 seg | Mínimas | "Apenas observando..." (repetido 50+ vezes) |
-| **Conceituais** | LENTA | 3-5 seg | Médias (3-4x) | Explicação + exemplos + conclusão |
-| **Técnicas** | MODERADA | 1-2 seg | Frequentes (5-8x) | Instrução → Validação → Próximo passo |
-| **Vinyasas** | RÁPIDA | Mínimos | Variações | Fluxo contínuo com respiração |
-| **Desafios** | MODERADA-RÁPIDA | 2-3 seg | Opções | Passo → Validação → Modificação |
+| **MeditaÃ§Ãµes** | MUY LENTA | 15-20 seg | MÃ­nimas | "Apenas observando..." (repetido 50+ vezes) |
+| **Conceituais** | LENTA | 3-5 seg | MÃ©dias (3-4x) | ExplicaÃ§Ã£o + exemplos + conclusÃ£o |
+| **TÃ©cnicas** | MODERADA | 1-2 seg | Frequentes (5-8x) | InstruÃ§Ã£o â†’ ValidaÃ§Ã£o â†’ PrÃ³ximo passo |
+| **Vinyasas** | RÃPIDA | MÃ­nimos | VariaÃ§Ãµes | Fluxo contÃ­nuo com respiraÃ§Ã£o |
+| **Desafios** | MODERADA-RÃPIDA | 2-3 seg | OpÃ§Ãµes | Passo â†’ ValidaÃ§Ã£o â†’ ModificaÃ§Ã£o |
 
-**Insight:** Velocidade é INVERSAMENTE proporcional ao silêncio interno. Aulas rápidas = corpo move. Aulas lentas = mente repousa.
+**Insight:** Velocidade Ã© INVERSAMENTE proporcional ao silÃªncio interno. Aulas rÃ¡pidas = corpo move. Aulas lentas = mente repousa.
 
 ---
 
-### Tom Geral: 5 Características Universais
+### Tom Geral: 5 CaracterÃ­sticas Universais
 
 **1. COLOQUIAL**
 - "Oi gente!", "tal qual", "tipo assim"
-- Evita: jargão técnico, pedantismo
-- Efeito: Aproximação, amizade
+- Evita: jargÃ£o tÃ©cnico, pedantismo
+- Efeito: AproximaÃ§Ã£o, amizade
 
 **2. AMIGA**
 - "A gente faz assim"
-- "Você consegue"
+- "VocÃª consegue"
 - "Confia em mim"
-- Efeito: Segurança, pertencimento
+- Efeito: SeguranÃ§a, pertencimento
 
-**3. SENSORIAL / POÉTICA**
+**3. SENSORIAL / POÃ‰TICA**
 - "Sente a abertura de peito"
 - "Deixa a energia fluir"
 - "Observe o tremor da vitalidade"
 - Efeito: Move de intelectual para experiencial
 
-**4. LÓGICA**
-- Premissas → Conclusão
-- "Por isso...", "Logo...", "Então..."
-- Efeito: Convence a mente, não bypassa
+**4. LÃ“GICA**
+- Premissas â†’ ConclusÃ£o
+- "Por isso...", "Logo...", "EntÃ£o..."
+- Efeito: Convence a mente, nÃ£o bypassa
 
 **5. CONVIDATIVA**
-- "Você pode...", "Se quiser...", "Observe..."
-- Nunca: "Você deve", "Você tem que"
+- "VocÃª pode...", "Se quiser...", "Observe..."
+- Nunca: "VocÃª deve", "VocÃª tem que"
 - Efeito: Empoderamento, autonomia
 
 ---
 
-### O Que GABY NUNCA USA (❌ Anti-padrões)
+### O Que GABY NUNCA USA (âŒ Anti-padrÃµes)
 
-| Padrão | Exemplo ❌ | Por que não | O que usa ✅ |
+| PadrÃ£o | Exemplo âŒ | Por que nÃ£o | O que usa âœ… |
 |--------|-----------|------------|-------------|
-| **Jargão Marketing** | "Mude sua vida em 30 dias" | Artificioso, tira credibilidade | "Observe como você muda ao longo do caminho" |
-| **Imperativo Duro** | "Você deve fazer isso" | Imposição, gera resistência | "Você pode explorar..." |
-| **Comparação com Outros** | "Faça como aquela menina" | Cria hierarquia, gera insegurança | "Seu jeito é perfeito para você" |
-| **Religiosidade Fake** | "Isso vai mudar sua alma" | Soberana demais, desconfiável | "Você vai sentir presença" |
-| **Tom Técnico/Distante** | "Utilizaremos a técnica de..." | Afasta, deshumaniza | "Vamos aprender juntas..." |
-| **Urgência Artificial** | "Aproveita agora, é limitado!" | Gera ansiedade, não presença | "Seu ritmo, seu tempo" |
-| **Culpa** | "Se não praticar, vai ficar ruim" | Paralisa | "Alguns dias conseguimos mais, outros menos" |
-| **Validação Vazia** | "Você é incrível!" (sem contexto) | Parece desonesto | "Você conseguiu observar" (reconhece ação) |
+| **JargÃ£o Marketing** | "Mude sua vida em 30 dias" | Artificioso, tira credibilidade | "Observe como vocÃª muda ao longo do caminho" |
+| **Imperativo Duro** | "VocÃª deve fazer isso" | ImposiÃ§Ã£o, gera resistÃªncia | "VocÃª pode explorar..." |
+| **ComparaÃ§Ã£o com Outros** | "FaÃ§a como aquela menina" | Cria hierarquia, gera inseguranÃ§a | "Seu jeito Ã© perfeito para vocÃª" |
+| **Religiosidade Fake** | "Isso vai mudar sua alma" | Soberana demais, desconfiÃ¡vel | "VocÃª vai sentir presenÃ§a" |
+| **Tom TÃ©cnico/Distante** | "Utilizaremos a tÃ©cnica de..." | Afasta, deshumaniza | "Vamos aprender juntas..." |
+| **UrgÃªncia Artificial** | "Aproveita agora, Ã© limitado!" | Gera ansiedade, nÃ£o presenÃ§a | "Seu ritmo, seu tempo" |
+| **Culpa** | "Se nÃ£o praticar, vai ficar ruim" | Paralisa | "Alguns dias conseguimos mais, outros menos" |
+| **ValidaÃ§Ã£o Vazia** | "VocÃª Ã© incrÃ­vel!" (sem contexto) | Parece desonesto | "VocÃª conseguiu observar" (reconhece aÃ§Ã£o) |
 
 ---
 
-## 🎨 TIPOLOGIA DE AULAS: 12 TIPOS ENCONTRADOS
+## ðŸŽ¨ TIPOLOGIA DE AULAS: 12 TIPOS ENCONTRADOS
 
 ### Mapeamento Completo (38+ aulas analisadas)
 
-| # | Tipo | Duração | Estrutura | Exemplo |
+| # | Tipo | DuraÃ§Ã£o | Estrutura | Exemplo |
 |---|------|---------|-----------|---------|
-| 1 | **Educacional** | 15-30 min | Abertura → Lógica (silogismo) → Encerramento | "O que é Yoga?" |
-| 2 | **Conceitual** | 20-40 min | Contexto → Premissas → Filosofia | "Fases da Lua" |
-| 3 | **Técnica Respiratória** | 10-20 min | Técnica → Prática guiada → Validação | "Respiração 4 Tempos" |
-| 4 | **Vinyasa** | 30-45 min | Abertura → Flow → Respiração acoplada | "Aprendendo a Fluir" |
-| 5 | **Postura Desafiadora** | 25-40 min | Técnica → Progressão → Validação em cada passo | "Pincha Mayurasana" |
-| 6 | **Múltiplas Posturas** | 30-50 min | Tema → Sequência de 5-10 posturas | "Flexibilidade Completa" |
-| 7 | **Assentamento** | 15-25 min | Respiração → Meditação → Savasana | "Respiração Diafragmática" |
-| 8 | **Transição** | 10-15 min | Preparação para próxima fase | "Desaquecimento" |
-| 9 | **Meditação Guiada** | 10-30 min | Respiração → Imagem mental → Retorno | "Meditação de Energia" |
-| 10 | **Conceitual Introdutório** | 5-15 min | Abertura rápida → Essência | "Yin Yoga 5.0" |
-| 11 | **Integração Lunar** | Variável | Combinação de tipo + Fase lunar | "Aula Lua Cheia" |
-| 12 | **Técnica Avançada** | 40-60 min | Aprofundamento técnico com validação contínua | "Técnicas Avançadas Pranayama" |
+| 1 | **Educacional** | 15-30 min | Abertura â†’ LÃ³gica (silogismo) â†’ Encerramento | "O que Ã© Yoga?" |
+| 2 | **Conceitual** | 20-40 min | Contexto â†’ Premissas â†’ Filosofia | "Fases da Lua" |
+| 3 | **TÃ©cnica RespiratÃ³ria** | 10-20 min | TÃ©cnica â†’ PrÃ¡tica guiada â†’ ValidaÃ§Ã£o | "RespiraÃ§Ã£o 4 Tempos" |
+| 4 | **Vinyasa** | 30-45 min | Abertura â†’ Flow â†’ RespiraÃ§Ã£o acoplada | "Aprendendo a Fluir" |
+| 5 | **Postura Desafiadora** | 25-40 min | TÃ©cnica â†’ ProgressÃ£o â†’ ValidaÃ§Ã£o em cada passo | "Pincha Mayurasana" |
+| 6 | **MÃºltiplas Posturas** | 30-50 min | Tema â†’ SequÃªncia de 5-10 posturas | "Flexibilidade Completa" |
+| 7 | **Assentamento** | 15-25 min | RespiraÃ§Ã£o â†’ MeditaÃ§Ã£o â†’ Savasana | "RespiraÃ§Ã£o DiafragmÃ¡tica" |
+| 8 | **TransiÃ§Ã£o** | 10-15 min | PreparaÃ§Ã£o para prÃ³xima fase | "Desaquecimento" |
+| 9 | **MeditaÃ§Ã£o Guiada** | 10-30 min | RespiraÃ§Ã£o â†’ Imagem mental â†’ Retorno | "MeditaÃ§Ã£o de Energia" |
+| 10 | **Conceitual IntrodutÃ³rio** | 5-15 min | Abertura rÃ¡pida â†’ EssÃªncia | "Yin Yoga 5.0" |
+| 11 | **IntegraÃ§Ã£o Lunar** | VariÃ¡vel | CombinaÃ§Ã£o de tipo + Fase lunar | "Aula Lua Cheia" |
+| 12 | **TÃ©cnica AvanÃ§ada** | 40-60 min | Aprofundamento tÃ©cnico com validaÃ§Ã£o contÃ­nua | "TÃ©cnicas AvanÃ§adas Pranayama" |
 
 ---
 
-### Estrutura dos 4 Movimentos - Variações Por Tipo
+### Estrutura dos 4 Movimentos - VariaÃ§Ãµes Por Tipo
 
 **ABERTURA varia conforme tipo:**
 
 ```
-Educacional:     "Oi gente! Hoje vou explicar para vocês o que é yoga..."
-Conceitual:      "Como vocês já sabem, eu gosto de trabalhar com a energia da Lua..."
-Técnica:         "O pranayama que a gente vai aprender hoje é..."
-Meditação:       "Vamos começar com respiração profunda... os olhos fechados..."
-Desafio:         "Hoje a gente vai explorar uma postura que parece impossível... mas não é"
+Educacional:     "Oi gente! Hoje vou explicar para vocÃªs o que Ã© yoga..."
+Conceitual:      "Como vocÃªs jÃ¡ sabem, eu gosto de trabalhar com a energia da Lua..."
+TÃ©cnica:         "O pranayama que a gente vai aprender hoje Ã©..."
+MeditaÃ§Ã£o:       "Vamos comeÃ§ar com respiraÃ§Ã£o profunda... os olhos fechados..."
+Desafio:         "Hoje a gente vai explorar uma postura que parece impossÃ­vel... mas nÃ£o Ã©"
 ```
 
-**FUNDAÇÃO varia conforme tipo:**
+**FUNDAÃ‡ÃƒO varia conforme tipo:**
 
 ```
-Educacional:     Silogismo científico-filosófico (P1 → P2 → P3 → Conclusão)
-Conceitual:      Contexto histórico/energético (por que essa fase importa)
-Técnica:         Fisiologia (como o corpo responde)
-Meditação:       Instrução sensorial (onde colocar atenção)
-Desafio:         Progressão lógica (passo 1 fácil → passo 2 intermediário → passo 3 desafio)
+Educacional:     Silogismo cientÃ­fico-filosÃ³fico (P1 â†’ P2 â†’ P3 â†’ ConclusÃ£o)
+Conceitual:      Contexto histÃ³rico/energÃ©tico (por que essa fase importa)
+TÃ©cnica:         Fisiologia (como o corpo responde)
+MeditaÃ§Ã£o:       InstruÃ§Ã£o sensorial (onde colocar atenÃ§Ã£o)
+Desafio:         ProgressÃ£o lÃ³gica (passo 1 fÃ¡cil â†’ passo 2 intermediÃ¡rio â†’ passo 3 desafio)
 ```
 
-**OBSERVAÇÃO varia conforme tipo:**
+**OBSERVAÃ‡ÃƒO varia conforme tipo:**
 
 ```
-Educacional:     Reflexão guiada (perguntas que levam à conclusão)
-Conceitual:      Aplicação (como isso se manifesta em você)
-Técnica:         Prática com correções (vamos fazer juntas)
-Meditação:       Guia sensorial (observe o tremor, a energia)
-Desafio:         Passo a passo com validação intermitente
+Educacional:     ReflexÃ£o guiada (perguntas que levam Ã  conclusÃ£o)
+Conceitual:      AplicaÃ§Ã£o (como isso se manifesta em vocÃª)
+TÃ©cnica:         PrÃ¡tica com correÃ§Ãµes (vamos fazer juntas)
+MeditaÃ§Ã£o:       Guia sensorial (observe o tremor, a energia)
+Desafio:         Passo a passo com validaÃ§Ã£o intermitente
 ```
 
 **ENCERRAMENTO varia conforme tipo:**
 
 ```
-Educacional:     Reafirmação da essência ("isso é yoga real")
-Conceitual:      Integração ("leva isso para sua vida")
-Técnica:         Observação pós-prática ("como você se sente agora?")
-Meditação:       Retorno gentil + Namaste
-Desafio:         Normalização + Convite para próxima progressão
+Educacional:     ReafirmaÃ§Ã£o da essÃªncia ("isso Ã© yoga real")
+Conceitual:      IntegraÃ§Ã£o ("leva isso para sua vida")
+TÃ©cnica:         ObservaÃ§Ã£o pÃ³s-prÃ¡tica ("como vocÃª se sente agora?")
+MeditaÃ§Ã£o:       Retorno gentil + Namaste
+Desafio:         NormalizaÃ§Ã£o + Convite para prÃ³xima progressÃ£o
 ```
 
 ---
 
-## Padrão de Encerramento (Sempre Igual, Variações Sutis)
+## PadrÃ£o de Encerramento (Sempre Igual, VariaÃ§Ãµes Sutis)
 
 ---
 
-## Padrão de Encerramento (Sempre Igual)
+## PadrÃ£o de Encerramento (Sempre Igual)
 
 Toda aula termina com:
 
 ```
-[Reafirma a essência]
+[Reafirma a essÃªncia]
 
-"É pra você"
+"Ã‰ pra vocÃª"
 "Leva contigo"
 "No seu tempo"
 "Seu processo"
 
-[Fecha com presença: Namaste, gratidão, etc]
+[Fecha com presenÃ§a: Namaste, gratidÃ£o, etc]
 ```
 
 **Nunca termina com:**
-- ❌ "Deixa um like"
-- ❌ "Se inscreva"
-- ❌ "Compre nosso curso"
+- âŒ "Deixa um like"
+- âŒ "Se inscreva"
+- âŒ "Compre nosso curso"
 
-Termina com **presença, gratidão, personalização.**
+Termina com **presenÃ§a, gratidÃ£o, personalizaÃ§Ã£o.**
 
 ---
 
-## Implicação Para Geração de Roteiros
+## ImplicaÃ§Ã£o Para GeraÃ§Ã£o de Roteiros
 
-**Quando gerar um roteiro de vídeo (Instagram, aula curta, etc):**
+**Quando gerar um roteiro de vÃ­deo (Instagram, aula curta, etc):**
 
-1. **Mantém os 4 movimentos** (mesmo que comprimidos)
+1. **MantÃ©m os 4 movimentos** (mesmo que comprimidos)
    - Abertura (2-3 linhas)
-   - Fundação (3-4 linhas - premissas)
-   - Observação (1-2 linhas - convite)
-   - Encerramento (1-2 linhas - essência)
+   - FundaÃ§Ã£o (3-4 linhas - premissas)
+   - ObservaÃ§Ã£o (1-2 linhas - convite)
+   - Encerramento (1-2 linhas - essÃªncia)
 
 2. **Respeita o tom**
    - Coloquial, amiga, sem pressa
-   - Começa fraco, é forte
+   - ComeÃ§a fraco, Ã© forte
 
 3. **Encadeia logicamente**
-   - Não aleatoriedade
-   - Premissas levam a conclusão
+   - NÃ£o aleatoriedade
+   - Premissas levam a conclusÃ£o
 
-4. **Convida, não impõe**
+4. **Convida, nÃ£o impÃµe**
    - "Sinta isso"
-   - "Observe você"
-   - Nunca "você tem que"
+   - "Observe vocÃª"
+   - Nunca "vocÃª tem que"
 
-5. **Retorna à presença**
+5. **Retorna Ã  presenÃ§a**
    - Sempre volta ao interno
-   - Sempre volta à respiração/corpo
-   - Sempre volta à essência
+   - Sempre volta Ã  respiraÃ§Ã£o/corpo
+   - Sempre volta Ã  essÃªncia
 
 ---
 
-## Exemplo de Aplicação: Roteiro Comprimido (30seg Instagram)
+## Exemplo de AplicaÃ§Ã£o: Roteiro Comprimido (30seg Instagram)
 
-**Tema:** Ansiedade e Respiração
+**Tema:** Ansiedade e RespiraÃ§Ã£o
 **Avatar:** Marina (sobrecarregada)
 
 ```
 ABERTURA (3seg):
-"Marina, você sabe por que quando a gente fica ansioso a respiração fica rápida?"
+"Marina, vocÃª sabe por que quando a gente fica ansioso a respiraÃ§Ã£o fica rÃ¡pida?"
 
-FUNDAÇÃO (8seg):
-"Porque nossa respiração interage diretamente com o sistema nervoso.
-E quando respiramos rápido, o corpo fica em alerta.
+FUNDAÃ‡ÃƒO (8seg):
+"Porque nossa respiraÃ§Ã£o interage diretamente com o sistema nervoso.
+E quando respiramos rÃ¡pido, o corpo fica em alerta.
 Mas a gente consegue inverter isso."
 
-OBSERVAÇÃO (10seg):
+OBSERVAÃ‡ÃƒO (10seg):
 "Agora, respira comigo: inspira em 4, expira em 6.
 Percebe como seu corpo desacelera?
-Isso é presença. Isso é controle."
+Isso Ã© presenÃ§a. Isso Ã© controle."
 
 ENCERRAMENTO (9seg):
-"Você já tem essa ferramenta dentro de você.
-Não é sobre ser perfeita.
-É sobre parar um momento e respirar.
-Pra você."
+"VocÃª jÃ¡ tem essa ferramenta dentro de vocÃª.
+NÃ£o Ã© sobre ser perfeita.
+Ã‰ sobre parar um momento e respirar.
+Pra vocÃª."
 ```
 
-**Resultado:** 30 segundos, 4 movimentos, lógica encadeada, convida (não impõe), retorna à presença.
+**Resultado:** 30 segundos, 4 movimentos, lÃ³gica encadeada, convida (nÃ£o impÃµe), retorna Ã  presenÃ§a.
 
 ---
 
-## 🔍 ACHADOS CRÍTICOS (Descobertas Profundas)
+## ðŸ” ACHADOS CRÃTICOS (Descobertas Profundas)
 
 ### 1. Progressividade Adaptativa
 
-Gaby NUNCA força progressão; oferece escalas:
+Gaby NUNCA forÃ§a progressÃ£o; oferece escalas:
 
 ```
-Passo 1 (Básico):  "Você pode deixar os joelhos flexionados"
-Passo 2 (Médio):   "Se conseguir, estenda mais um pouquinho"
-Passo 3 (Desafio): "Quem quiser, pode tentar uma versão mais intensa"
+Passo 1 (BÃ¡sico):  "VocÃª pode deixar os joelhos flexionados"
+Passo 2 (MÃ©dio):   "Se conseguir, estenda mais um pouquinho"
+Passo 3 (Desafio): "Quem quiser, pode tentar uma versÃ£o mais intensa"
 
-+ Validação após cada: "Quem fez passo 1: perfeito! Passo 2: ótimo! Passo 3: incrível!"
++ ValidaÃ§Ã£o apÃ³s cada: "Quem fez passo 1: perfeito! Passo 2: Ã³timo! Passo 3: incrÃ­vel!"
 ```
 
-**Insight:** Ninguém falha. Todos conseguem ALGO.
+**Insight:** NinguÃ©m falha. Todos conseguem ALGO.
 
 ---
 
 ### 2. Passo de Quebra de Medo
 
-Em posturas desafiadoras, há sempre um "checkpoint" de validação ANTES de pedir coragem:
+Em posturas desafiadoras, hÃ¡ sempre um "checkpoint" de validaÃ§Ã£o ANTES de pedir coragem:
 
 ```
-[Técnica é ensinada]
-"Ok, agora vocês entendem como funciona"
+[TÃ©cnica Ã© ensinada]
+"Ok, agora vocÃªs entendem como funciona"
 
-[Validação]
+[ValidaÃ§Ã£o]
 "Quem entendeu, maravilha"
 
-[Normalização]
-"E se não entendeu, normal também. Vamos fazer junto"
+[NormalizaÃ§Ã£o]
+"E se nÃ£o entendeu, normal tambÃ©m. Vamos fazer junto"
 
 [AGORA pede coragem]
-"Então, quem quer tentar? Sem julgamento"
+"EntÃ£o, quem quer tentar? Sem julgamento"
 ```
 
-**Insight:** Medo é quebrado por COMPREENSÃO, não por coerção.
+**Insight:** Medo Ã© quebrado por COMPREENSÃƒO, nÃ£o por coerÃ§Ã£o.
 
 ---
 
-### 3. Legitimação de Limite
+### 3. LegitimaÃ§Ã£o de Limite
 
-Nunca diz "toda mundo consegue". Diz "seu limite é válido":
+Nunca diz "toda mundo consegue". Diz "seu limite Ã© vÃ¡lido":
 
 ```
-❌ "Todos conseguem fazer isso"
-✅ "Alguns dias você consegue mais, outros você respeita seu limite"
+âŒ "Todos conseguem fazer isso"
+âœ… "Alguns dias vocÃª consegue mais, outros vocÃª respeita seu limite"
 
-❌ "Você é fraco se não conseguir"
-✅ "Seu corpo está te dizendo algo. Escuta ele"
+âŒ "VocÃª Ã© fraco se nÃ£o conseguir"
+âœ… "Seu corpo estÃ¡ te dizendo algo. Escuta ele"
 ```
 
-**Insight:** Limite é informação, não fracasso.
+**Insight:** Limite Ã© informaÃ§Ã£o, nÃ£o fracasso.
 
 ---
 
-### 4. Respiração como ESTRUTURA (não adorno)
+### 4. RespiraÃ§Ã£o como ESTRUTURA (nÃ£o adorno)
 
-Em 100% das aulas práticas, respiração é o GUIA, não o acessório:
+Em 100% das aulas prÃ¡ticas, respiraÃ§Ã£o Ã© o GUIA, nÃ£o o acessÃ³rio:
 
 ```
-❌ "Faça a postura e depois respire"
-✅ "Na inspiração, você levanta os braços.
-   Na expiração, você abre o peito"
+âŒ "FaÃ§a a postura e depois respire"
+âœ… "Na inspiraÃ§Ã£o, vocÃª levanta os braÃ§os.
+   Na expiraÃ§Ã£o, vocÃª abre o peito"
 ```
 
-**Insight:** Respiração estrutura TEMPO e INTENÇÃO.
+**Insight:** RespiraÃ§Ã£o estrutura TEMPO e INTENÃ‡ÃƒO.
 
 ---
 
-### 5. Hierarquização Invertida
+### 5. HierarquizaÃ§Ã£o Invertida
 
 Gaby valida o "menos" como muito mais que o "mais":
 
 ```
-Cenário: Aula com 10 alunos
+CenÃ¡rio: Aula com 10 alunos
 - 3 conseguem postura completa
-- 5 conseguem modificação
+- 5 conseguem modificaÃ§Ã£o
 - 2 apenas observam
 
-Gaby: "Quem está observando: isso é yoga de verdade.
-Porque yoga é presença, não performance."
+Gaby: "Quem estÃ¡ observando: isso Ã© yoga de verdade.
+Porque yoga Ã© presenÃ§a, nÃ£o performance."
 ```
 
-**Insight:** Observação é tão válida quanto execução.
+**Insight:** ObservaÃ§Ã£o Ã© tÃ£o vÃ¡lida quanto execuÃ§Ã£o.
 
 ---
 
-### 6. Integração Lunar Funcional
+### 6. IntegraÃ§Ã£o Lunar Funcional
 
-Não é teórica; é OPERACIONAL em cada aula:
+NÃ£o Ã© teÃ³rica; Ã© OPERACIONAL em cada aula:
 
-| Fase | Tom | Velocidade | Padrão Linguístico | Aplicação |
+| Fase | Tom | Velocidade | PadrÃ£o LinguÃ­stico | AplicaÃ§Ã£o |
 |------|-----|-----------|-------------------|-----------|
-| **Lua Cheia** | Alto, liberto | RÁPIDA | "Deixa fluir", "Sem controle" | Múltiplas variações, energético |
-| **Lua Crescente** | Normal, progressivo | MODERADA | "Aumentando", "Próximo passo" | Progressão estruturada |
+| **Lua Cheia** | Alto, liberto | RÃPIDA | "Deixa fluir", "Sem controle" | MÃºltiplas variaÃ§Ãµes, energÃ©tico |
+| **Lua Crescente** | Normal, progressivo | MODERADA | "Aumentando", "PrÃ³ximo passo" | ProgressÃ£o estruturada |
 | **Lua Minguante** | Sussurrado, introspectivo | LENTA | "Deixa ir", "Solta" | Uma postura, muitos minutos |
-| **Lua Nova** | Profundo, vazio | MUY LENTA | "Apenas observando" (50+ repetições) | Mesma postura 5+ minutos, silêncio |
+| **Lua Nova** | Profundo, vazio | MUY LENTA | "Apenas observando" (50+ repetiÃ§Ãµes) | Mesma postura 5+ minutos, silÃªncio |
 
-**Insight:** Não é moda. É operação do sistema nervoso alinhada com ciclos naturais.
+**Insight:** NÃ£o Ã© moda. Ã‰ operaÃ§Ã£o do sistema nervoso alinhada com ciclos naturais.
 
 ---
 
-## 📊 Compressibilidade Confirmada
+## ðŸ“Š Compressibilidade Confirmada
 
-Método LC funciona em QUALQUER tamanho:
+MÃ©todo LC funciona em QUALQUER tamanho:
 
-| Tamanho | Exemplo | Conteúdo | Status |
+| Tamanho | Exemplo | ConteÃºdo | Status |
 |---------|---------|----------|--------|
-| **Ultra-comprimido** | 30 seg Instagram | Todos 4 movimentos + respiração acoplada | ✅ 1.7KB |
-| **Curto** | 5 min reels | Estrutura completa + validação | ✅ 2.5KB |
-| **Médio** | 15 min aula | 4 movimentos expandidos | ✅ 4.2KB |
-| **Longo** | 30-45 min aula | Exploração profunda com progressão | ✅ 6-8KB |
-| **Aprofundado** | 60+ min especializado | Técnica avançada + integração | ✅ 8.2KB |
+| **Ultra-comprimido** | 30 seg Instagram | Todos 4 movimentos + respiraÃ§Ã£o acoplada | âœ… 1.7KB |
+| **Curto** | 5 min reels | Estrutura completa + validaÃ§Ã£o | âœ… 2.5KB |
+| **MÃ©dio** | 15 min aula | 4 movimentos expandidos | âœ… 4.2KB |
+| **Longo** | 30-45 min aula | ExploraÃ§Ã£o profunda com progressÃ£o | âœ… 6-8KB |
+| **Aprofundado** | 60+ min especializado | TÃ©cnica avanÃ§ada + integraÃ§Ã£o | âœ… 8.2KB |
 
-**Insight:** Estrutura é FRACTAL. Não perde essência em nenhuma escala.
-
----
-
-## Conclusão
-
-**Leveza Cíclica não é um método inventado.**
-
-**É a estrutura natural que Gaby usa em cada aula.**
-
-✅ **Análise completa:** 58 transcrições (100% cobertura)
-✅ **Padrões validados:** 95%+ consistência estrutural
-✅ **Aplicabilidade:** 12 tipos de aula diferentes
-✅ **Escalabilidade:** Funciona de 30 segundos a 60+ minutos
-✅ **Efetividade:** Valida processo ao invés de promessa
-
-**Pronto para Mente Leve: Implementação**
+**Insight:** Estrutura Ã© FRACTAL. NÃ£o perde essÃªncia em nenhuma escala.
 
 ---
 
+## ConclusÃ£o
+
+**Leveza CÃ­clica nÃ£o Ã© um mÃ©todo inventado.**
+
+**Ã‰ a estrutura natural que Gaby usa em cada aula.**
+
+âœ… **AnÃ¡lise completa:** 58 transcriÃ§Ãµes (100% cobertura)
+âœ… **PadrÃµes validados:** 95%+ consistÃªncia estrutural
+âœ… **Aplicabilidade:** 12 tipos de aula diferentes
+âœ… **Escalabilidade:** Funciona de 30 segundos a 60+ minutos
+âœ… **Efetividade:** Valida processo ao invÃ©s de promessa
+
+**Pronto para NamaSer: ImplementaÃ§Ã£o**
+
 ---
 
-## 🎯 APLICAÇÃO PRÁTICA PARA MENTE LEVE
+---
 
-### Template de Roteiro (Baseado em Método LC + 6 Insights)
+## ðŸŽ¯ APLICAÃ‡ÃƒO PRÃTICA PARA NamaSer
+
+### Template de Roteiro (Baseado em MÃ©todo LC + 6 Insights)
 
 ```
-ESTRUTURA UNIVERSAL MENTE LEVE:
+ESTRUTURA UNIVERSAL NamaSer:
 
-ABERTURA (Gancho sensorial com respiração):
-├─ Saudação coloquial
-├─ Dor/Contexto do avatar
-└─ "Você sabe como...?"
+ABERTURA (Gancho sensorial com respiraÃ§Ã£o):
+â”œâ”€ SaudaÃ§Ã£o coloquial
+â”œâ”€ Dor/Contexto do avatar
+â””â”€ "VocÃª sabe como...?"
 
-FUNDAÇÃO (Lógica + Dualidade + Validação):
-├─ Causa raiz (por que acontece)
-├─ Oferta de opções (2+ caminhos)
-├─ Dualidade corporal/emocional (se prática)
-└─ "E isso é ok porque..."
+FUNDAÃ‡ÃƒO (LÃ³gica + Dualidade + ValidaÃ§Ã£o):
+â”œâ”€ Causa raiz (por que acontece)
+â”œâ”€ Oferta de opÃ§Ãµes (2+ caminhos)
+â”œâ”€ Dualidade corporal/emocional (se prÃ¡tica)
+â””â”€ "E isso Ã© ok porque..."
 
-OBSERVAÇÃO (Convite ao processo com respiração):
-├─ Ação prática
-├─ Respiração acoplada (NUNCA separada)
-├─ "Sinta o que acontece..."
-└─ Validação contínua
+OBSERVAÃ‡ÃƒO (Convite ao processo com respiraÃ§Ã£o):
+â”œâ”€ AÃ§Ã£o prÃ¡tica
+â”œâ”€ RespiraÃ§Ã£o acoplada (NUNCA separada)
+â”œâ”€ "Sinta o que acontece..."
+â””â”€ ValidaÃ§Ã£o contÃ­nua
 
 ENCERRAMENTO (Ciclo lunar + Retorno):
-├─ Reafirma essência
-├─ Aplicação prática
-└─ "Para você. Seu ritmo. Seu tempo."
+â”œâ”€ Reafirma essÃªncia
+â”œâ”€ AplicaÃ§Ã£o prÃ¡tica
+â””â”€ "Para vocÃª. Seu ritmo. Seu tempo."
 ```
 
 ### Exemplo: Marina (Sobrecarregada) em 30 segundos
 
-**Lua Cheia (Energética):**
+**Lua Cheia (EnergÃ©tica):**
 ```
 ABERTURA (3seg):
-"Marina, você sabe como deixar de controlar tudo por um momento?"
+"Marina, vocÃª sabe como deixar de controlar tudo por um momento?"
 
-FUNDAÇÃO (8seg):
+FUNDAÃ‡ÃƒO (8seg):
 "Porque quando controlamos, esquecemos de respirar.
-Mas aqui você tem permissão para soltar.
-E sim, deixar ir é difícil. É ok."
+Mas aqui vocÃª tem permissÃ£o para soltar.
+E sim, deixar ir Ã© difÃ­cil. Ã‰ ok."
 
-OBSERVAÇÃO (10seg):
-"Na inspiração próxima, deixa os ombros caírem.
-Você pode manter o controle, ou deixar ir.
-Ambos são válidos. Apenas observe qual sente melhor."
+OBSERVAÃ‡ÃƒO (10seg):
+"Na inspiraÃ§Ã£o prÃ³xima, deixa os ombros caÃ­rem.
+VocÃª pode manter o controle, ou deixar ir.
+Ambos sÃ£o vÃ¡lidos. Apenas observe qual sente melhor."
 
 ENCERRAMENTO (9seg):
-"Para você: teste isso quando a ansiedade vier.
-Você não precisa controlar tudo.
-Seu ritmo. Sua resposta. Seu corpo já sabe"
+"Para vocÃª: teste isso quando a ansiedade vier.
+VocÃª nÃ£o precisa controlar tudo.
+Seu ritmo. Sua resposta. Seu corpo jÃ¡ sabe"
 
 TOTAL: 30 segundos = Estrutura LC completa
 ```
@@ -910,47 +910,48 @@ TOTAL: 30 segundos = Estrutura LC completa
 **Lua Nova (Introspectiva):**
 ```
 Mesmo tema, tom susurrante, respira mais lentamente,
-oferece mesma validação mas deixa mais silêncio
+oferece mesma validaÃ§Ã£o mas deixa mais silÃªncio
 entre as frases para processar.
 ```
 
 ---
 
-### Checklist: O Roteiro Segue Método LC?
+### Checklist: O Roteiro Segue MÃ©todo LC?
 
-- [ ] **ABERTURA:** Coloquial + contexto + respiração implícita
-- [ ] **FUNDAÇÃO:** Lógica encadeada + oferece opções + dualidade presente
-- [ ] **OBSERVAÇÃO:** Convida ao processo + respiração ACOPLADA + validação contínua
-- [ ] **ENCERRAMENTO:** Reafirma essência + aplicação prática + personaliza ("pra você")
-- [ ] **TOM:** Coloquial, não pedante | Estruturado, não aleatório | Sensorial, não vazio
-- [ ] **RESPIRAÇÃO:** Aparece em TODA instrução prática (nunca separada)
-- [ ] **OPOSIÇÕES:** Tem dualidade corporal/emocional (ativa + relaxa, força + leveza)
-- [ ] **VALIDAÇÃO:** Oferece 2+ opções | Normaliza fracasso | Sem culpa
-- [ ] **CICLO LUNAR:** Tom varia conforme fase (se aplicável)
-- [ ] **PERSONAGEM:** Reconhece avatar específico (dor/desejo/solução)
+- [ ] **ABERTURA:** Coloquial + contexto + respiraÃ§Ã£o implÃ­cita
+- [ ] **FUNDAÃ‡ÃƒO:** LÃ³gica encadeada + oferece opÃ§Ãµes + dualidade presente
+- [ ] **OBSERVAÃ‡ÃƒO:** Convida ao processo + respiraÃ§Ã£o ACOPLADA + validaÃ§Ã£o contÃ­nua
+- [ ] **ENCERRAMENTO:** Reafirma essÃªncia + aplicaÃ§Ã£o prÃ¡tica + personaliza ("pra vocÃª")
+- [ ] **TOM:** Coloquial, nÃ£o pedante | Estruturado, nÃ£o aleatÃ³rio | Sensorial, nÃ£o vazio
+- [ ] **RESPIRAÃ‡ÃƒO:** Aparece em TODA instruÃ§Ã£o prÃ¡tica (nunca separada)
+- [ ] **OPOSIÃ‡Ã•ES:** Tem dualidade corporal/emocional (ativa + relaxa, forÃ§a + leveza)
+- [ ] **VALIDAÃ‡ÃƒO:** Oferece 2+ opÃ§Ãµes | Normaliza fracasso | Sem culpa
+- [ ] **CICLO LUNAR:** Tom varia conforme fase (se aplicÃ¡vel)
+- [ ] **PERSONAGEM:** Reconhece avatar especÃ­fico (dor/desejo/soluÃ§Ã£o)
 
 **Score:**
-- 10/10 = Essência completa do Método LC
-- 8-9/10 = Método LC bem estruturado
-- 6-7/10 = Método LC presente mas incompleto
+- 10/10 = EssÃªncia completa do MÃ©todo LC
+- 8-9/10 = MÃ©todo LC bem estruturado
+- 6-7/10 = MÃ©todo LC presente mas incompleto
 - <6/10 = Revisar antes de publicar
 
 ---
 
-## 📊 Validação do Método LC
+## ðŸ“Š ValidaÃ§Ã£o do MÃ©todo LC
 
-| Elemento | Validação | Confiança |
+| Elemento | ValidaÃ§Ã£o | ConfianÃ§a |
 |----------|-----------|-----------|
-| Presença em 58 aulas | 100% (todas as aulas) | ✅ UNIVERSAL |
-| Padrão estrutural | 95%+ consistente | ✅ PREVISÍVEL |
-| Tipos de aula | 12 tipos diferentes | ✅ ADAPTÁVEL |
-| Escalabilidade | 1.7KB a 8.2KB | ✅ ESCALÁVEL |
-| Replicabilidade | Padrões claros e documentados | ✅ REPRODUZÍVEL |
-| Efetividade emocional | Valida ao invés de julgar | ✅ EFETIVO |
+| PresenÃ§a em 58 aulas | 100% (todas as aulas) | âœ… UNIVERSAL |
+| PadrÃ£o estrutural | 95%+ consistente | âœ… PREVISÃVEL |
+| Tipos de aula | 12 tipos diferentes | âœ… ADAPTÃVEL |
+| Escalabilidade | 1.7KB a 8.2KB | âœ… ESCALÃVEL |
+| Replicabilidade | PadrÃµes claros e documentados | âœ… REPRODUZÃVEL |
+| Efetividade emocional | Valida ao invÃ©s de julgar | âœ… EFETIVO |
 
 ---
 
 **Documento atualizado:** 11 de Fevereiro de 2026
-**Baseado em:** 58 transcrições (21 + 37 arquivos)
-**Validação:** 6 insights operacionais + checklist de aplicação
-**Status:** ✅ MÉTODO LC COMPLETO E PRONTO PARA IMPLEMENTAÇÃO**
+**Baseado em:** 58 transcriÃ§Ãµes (21 + 37 arquivos)
+**ValidaÃ§Ã£o:** 6 insights operacionais + checklist de aplicaÃ§Ã£o
+**Status:** âœ… MÃ‰TODO LC COMPLETO E PRONTO PARA IMPLEMENTAÃ‡ÃƒO**
+

@@ -1,4 +1,4 @@
-﻿# ðŸ§˜ Setup: Logo Gaby na PÃ¡gina Mente Leve
+﻿# ðŸ§˜ Setup: Logo Gaby na PÃ¡gina NamaSer
 
 ## VersÃµes Criadas
 
@@ -144,7 +144,7 @@ Se a sua logo tem fundo colorido, pode deixar mesmo assim que o CSS cuida do enc
 
 ```
 â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚  âœ§ Mente Leve          ðŸ§˜ [Logo Gaby] â”‚  â† Logo em cÃ­rculo
+â”‚  âœ§ NamaSer          ðŸ§˜ [Logo Gaby] â”‚  â† Logo em cÃ­rculo
 â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
 â”‚                                         â”‚
 â”‚         Seu Ritual DiÃ¡rio de PresenÃ§a   â”‚
@@ -259,4 +259,5 @@ Generated: 2026-02-14
 Theme: Light + Yoga Acolhedor
 Background: Branco âœ¨
 Logo: Gaby Drummond Integration Ready ðŸ§˜
+
 

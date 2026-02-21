@@ -3,13 +3,13 @@ version: 1.0.0
 title: "Marketing YOG - Sadhana Content Ops"
 short-title: "YOG"
 description: |
-  Adaptacao do Marketing OPES para o projeto Mente Leve / Sadhana.
+  Adaptacao do Marketing OPES para o projeto NamaSer / Sadhana.
   Foco: operacao editorial com voz da Gaby e publicacao manual.
 
   Pipeline: ideacao -> validacao CMO -> producao -> direcao visual -> distribuicao.
   Fora do escopo v1: publicacao automatica, credencials e integracoes integracao.
 
-author: "Projeto Mente Leve"
+author: "Projeto NamaSer"
 created: 2026-02-20
 slash_prefix: "MarketingYog"
 
@@ -97,4 +97,5 @@ workflows:
     file: workflows/weekly-marketing-cycle.md
     name: "Weekly Marketing Cycle"
     purpose: "Planejamento, execucao e metricas com feedback loop"
+
 

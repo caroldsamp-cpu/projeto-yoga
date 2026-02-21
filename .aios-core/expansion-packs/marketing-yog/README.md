@@ -1,6 +1,6 @@
 ﻿# marketing-yog
 
-Adaptacao do squad marketing-opes para o projeto Mente Leve/Sadhana.
+Adaptacao do squad marketing-opes para o projeto NamaSer/Sadhana.
 
 Status atual:
 - Clonado para `projeto-yoga`
@@ -19,3 +19,4 @@ Status atual:
 - integracoes externas de postagem
 - credenciais externas
 - qualquer automacao de postagem
+

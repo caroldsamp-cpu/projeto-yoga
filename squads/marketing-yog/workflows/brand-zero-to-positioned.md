@@ -1,4 +1,4 @@
-# Workflow: Brand Zero to Positioned - NamaSer
+﻿# Workflow: Brand Zero to Positioned - NamaSer
 
 **Workflow ID**: brand-zero-to-positioned
 **Version**: 1.0.0
@@ -13,7 +13,7 @@ Fluxo oficial para levar o projeto do "quase zero de presenca de marca" para uma
 Arquitetura de naming usada em todas as fases:
 - Curso/comunidade: `NamaSer`
 - Promessa/metodologia: `Construir seu Sadhana`
-- Nomes legados: `Comunidade de Yoga Online` e `Mente Leve`
+- Nomes legados: `NamaSer` e `NamaSer`
 
 ---
 
@@ -108,3 +108,4 @@ Depois de concluir este workflow:
 2. Rodar `daily-content` por peca planejada.
 3. Rodar `metrics-weekly` no fechamento da semana.
 4. Rodar `voice-calibration-weekly` para manter consistencia.
+
