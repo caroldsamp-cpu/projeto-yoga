@@ -37,11 +37,14 @@ Planejar 7 dias de conteudo em bloco para manter consistencia editorial semanal.
 
 1. Revisar semana anterior em `outputs/hubs/marketing/`.
 2. Consultar calendario em `data/platform-specs.yaml`.
-3. Aplicar lentes estrategicas de `data/strategic-minds.yaml` para priorizar ideias.
-4. Selecionar ideias do `data/content-map.yaml`.
-5. Montar plano por dia com tema, angulo e prova.
-6. Submeter para aprovacao da Gaby.
-7. Atualizar queue em `data/content-map.yaml`.
+3. Ler benchmark semanal em `docs/research/estrategia-comum-amanda-camila.md`.
+4. Ler prioridades de nicho em `docs/research/camila-zen/ranking-top-reels.md`.
+5. Ler padroes de estrategia/conversao em `docs/research/amanda-lourenco/ranking-top-reels.md`.
+6. Aplicar lentes estrategicas de `data/strategic-minds.yaml` para priorizar ideias.
+7. Selecionar ideias do `data/content-map.yaml`.
+8. Montar plano por dia com tema, angulo e prova.
+9. Submeter para aprovacao da Gaby.
+10. Atualizar queue em `data/content-map.yaml`.
 
 ---
 
@@ -55,6 +58,7 @@ Planejar 7 dias de conteudo em bloco para manter consistencia editorial semanal.
 
 - [ ] 7 ideias com prova pratica
 - [ ] Temas equilibrados na semana
+- [ ] Referencias de `docs/research` aplicadas (Camila = nicho, Amanda = estrategia)
 - [ ] Aprovacao humana registrada
 - [ ] Queue atualizada
 

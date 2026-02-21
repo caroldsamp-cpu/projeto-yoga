@@ -42,11 +42,16 @@ Gerar conteudo diario para Instagram (e variacao opcional por canal), pronto par
 1. Ler `data/content-map.yaml`
 2. Ler `data/platform-specs.yaml`
 3. Verificar tema e queue do dia
+4. Se formato for Reel, consultar referencias em:
+   - `docs/research/camila-zen/ranking-top-reels.md`
+   - `docs/research/amanda-lourenco/ranking-top-reels.md`
+   - `docs/research/estrategia-comum-amanda-camila.md`
 
 ### Step 2: Ideacao (@marketing-ideation-ig)
 
 1. Gerar Big Idea + 3 angulos
 2. Selecionar angulo (auto ou interativo)
+3. Para Reel, estruturar em 4 blocos (hook -> reframe -> pratica -> convite)
 
 ### Step 2.5: QA Gate - CMO Validation (@marketing-cmo)
 
@@ -64,7 +69,9 @@ Resultado:
 
 1. Escrever copy na voz da Gaby
 2. Aplicar checklist de voz e light copy
-3. Reescrever se falhar
+3. Se formato for Reel, preencher `templates/reels-script-data-driven.md`
+4. Se formato for Reel, passar em `checklists/reels-data-driven-gate.md`
+5. Reescrever se falhar
 
 ### Step 3.5: Direcao Visual (@marketing-designer)
 
@@ -98,6 +105,7 @@ Resultado:
 - [ ] CMO aprovou Big Idea
 - [ ] Conteudo final alinhado a voz da Gaby
 - [ ] Conteudo aprovado em checklist light copy
+- [ ] Se Reel, conteudo aprovado em `reels-data-driven-gate`
 - [ ] Versoes por canal sem copy-paste
 - [ ] Output salvo em `outputs/hubs/marketing/`
 - [ ] Publicacao manual registrada
