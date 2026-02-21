@@ -39,6 +39,12 @@
   --color-secondary-light: var(--color-gold-light);
   --color-text-primary: var(--color-text);
   --color-text-secondary: var(--color-text-light);
+  --color-action: #1B5A6B;
+  --color-action-hover: #2B6F82;
+  --color-focus-ring: #1B5A6B;
+  --color-success: #4E7A4A;
+  --color-warning: #9C6A2A;
+  --color-danger: #A4423D;
 
   /* ============================================
      TYPOGRAPHY TOKENS
@@ -163,6 +169,10 @@
   --transition-slow: 0.7s ease;
 
   --animation-fade-in: opacity 0.7s ease, transform 0.7s ease;
+  --motion-duration-fast: 180ms;
+  --motion-duration-medium: 320ms;
+  --motion-duration-slow: 700ms;
+  --motion-easing-standard: ease;
 
   /* ============================================
      BREAKPOINTS (Mobile First)
@@ -174,6 +184,17 @@
   --breakpoint-lg: 768px;    /* 48em */
   --breakpoint-xl: 1024px;   /* 64em */
   --breakpoint-2xl: 1280px;  /* 80em */
+
+  /* ============================================
+     INTERACTION & A11Y TOKENS (WCAG 2.2-ready)
+     ============================================ */
+
+  --focus-ring-size: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring: var(--focus-ring-size) solid var(--color-focus-ring);
+  --target-min-size: 24px;
+  --target-comfort-size: 44px;
+  --disabled-opacity: 0.55;
 }
 
 /* ============================================
@@ -244,9 +265,9 @@
 .p-lg { padding: var(--pad-lg); }
 .p-xl { padding: var(--pad-xl); }
 
-.m-sm { margin: var(--space-sm); }
-.m-md { margin: var(--space-md); }
-.m-lg { margin: var(--space-lg); }
+.m-sm { margin: var(--space-2); }
+.m-md { margin: var(--space-4); }
+.m-lg { margin: var(--space-6); }
 
 /* Border Utilities */
 .border {
@@ -275,4 +296,30 @@
 .transition-fast { transition: var(--transition-fast); }
 .transition-normal { transition: var(--transition-normal); }
 .transition-slow { transition: var(--transition-slow); }
+
+/* Accessibility Utilities */
+.focus-ring-visible:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.target-min {
+  min-width: var(--target-min-size);
+  min-height: var(--target-min-size);
+}
+
+.target-comfort {
+  min-width: var(--target-comfort-size);
+  min-height: var(--target-comfort-size);
+}
+
+/* Motion safety baseline */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 

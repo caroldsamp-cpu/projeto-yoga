@@ -3,8 +3,8 @@
 Design system extraÃ­do da apresentaÃ§Ã£o Sadhana. ReutilizÃ¡vel em qualquer projeto.
 
 **ExtraÃ­do de:** `docs/reposicionamento/index.html`
-**Data:** 14/02/2026
-**VersÃ£o:** 1.0.0
+**Data:** 21/02/2026
+**VersÃ£o:** 1.1.0
 
 ---
 
@@ -244,6 +244,24 @@ XL: 1024px  (desktop)
   // Aplicado em max-width: 640px
 }
 ```
+
+---
+
+## A11y e Interação (v1.1)
+
+Novos tokens em `tokens.css`:
+- `--color-action`, `--color-action-hover`
+- `--color-focus-ring`
+- `--focus-ring-size`, `--focus-ring-offset`, `--focus-ring`
+- `--target-min-size`, `--target-comfort-size`
+- `--disabled-opacity`
+
+Novas utilitárias:
+- `.focus-ring-visible`
+- `.target-min`
+- `.target-comfort`
+
+Também foi adicionado baseline para `prefers-reduced-motion`.
 
 ---
 

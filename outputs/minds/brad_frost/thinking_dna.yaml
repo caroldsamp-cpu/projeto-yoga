@@ -1,0 +1,72 @@
+﻿thinking_dna:
+  meta:
+    mind_name: "Brad Frost"
+    extracted_on: "2026-02-21"
+    confidence: "medium"
+  recognition_patterns:
+    instant_detection:
+      - domain: "UI architecture"
+        pattern: "inconsistência de componentes e estados"
+        accuracy: "8/10"
+        evidence: "aligns with atomic design reasoning"
+      - domain: "design delivery"
+        pattern: "ausência de token semântico como fonte de verdade"
+        accuracy: "8/10"
+        evidence: "prompt focado em tokens + versionamento"
+  primary_framework:
+    name: "Atomic Design"
+    creator: "Brad Frost"
+    purpose: "decompor e recompor interfaces para escalar com consistência"
+    steps:
+      - step: 1
+        name: "Atoms"
+        action: "definir primitives (cor, tipografia, espaçamento, controles básicos)"
+        output: "tokens + elementos base"
+      - step: 2
+        name: "Molecules"
+        action: "combinar atoms em blocos funcionais"
+        output: "componentes simples reutilizáveis"
+      - step: 3
+        name: "Organisms"
+        action: "compor moléculas em seções complexas"
+        output: "padrões de layout"
+      - step: 4
+        name: "Templates"
+        action: "definir estrutura sem conteúdo final"
+        output: "esqueleto de tela"
+      - step: 5
+        name: "Pages"
+        action: "validar template com conteúdo real e estados"
+        output: "interface pronta"
+    when_to_use: "projetos com múltiplas páginas/canais e necessidade de padronização"
+    when_NOT_to_use: "micro protótipo descartável sem intenção de manutenção"
+  decision_heuristics:
+    - id: "BF001"
+      name: "Token First"
+      rule: "SE um valor visual se repete em 2+ lugares ENTÃO virar token semântico"
+      rationale: "reduz drift visual"
+      exceptions: ["experimento temporário explicitamente marcado"]
+    - id: "BF002"
+      name: "State Completeness"
+      rule: "SE componente é interativo ENTÃO definir default/hover/focus/disabled"
+      rationale: "evita lacunas de UX"
+      exceptions: []
+    - id: "BF003"
+      name: "A11y by Default"
+      rule: "SE novo componente entra no sistema ENTÃO deve passar checklist WCAG base"
+      rationale: "evita dívida de acessibilidade"
+      exceptions: []
+  veto_heuristics:
+    - trigger: "SE componente novo duplica função existente com variação mínima"
+      action: "ENTÃO rejeitar e convergir"
+      reason: "evitar fragmentação do catálogo"
+    - trigger: "SE mudança quebra nomenclatura/tokens sem migração"
+      action: "ENTÃO bloquear release"
+      reason: "evitar breaking change silencioso"
+  handoff_triggers:
+    - trigger: "token semântico definido"
+      handoff_to: "design + frontend"
+      output: "documentação + exemplo"
+    - trigger: "alteração estrutural de componente"
+      handoff_to: "QA + produto"
+      output: "impacto + plano de rollout"

@@ -27,3 +27,8 @@ Thumbs.db
 .aios-core/local/
 .claude/settings.local.json
 .aios/install-log.txt
+.vercel-global/
+
+# Research media (local-only, do not push)
+docs/research/**/*-videos/
+docs/research/**/*.mp4

@@ -1,0 +1,20 @@
+﻿mind_dna_complete:
+  mind: "Brad Frost"
+  domain: "Design Systems"
+  created_on: "2026-02-21"
+  synthesis:
+    core_thesis: "Escala de produto depende de sistema de componentes + tokens + governança clara"
+    strategic_fit_for_project:
+      - "Padronizar Oráculo Sadhana com tokens semânticos"
+      - "Separar primitives e semântica no design system existente"
+      - "Aplicar estados de interação e a11y como requisito mínimo"
+      - "Integrar versão e changelog para evolução sem regressão"
+    imported_from_user_prompt:
+      - "Delta/versionamento semântico"
+      - "Validação WCAG 2.2"
+      - "Pacote multi-plataforma de tokens"
+      - "Métricas de adoção/qualidade"
+    immediate_adoption:
+      - "Adicionar tokens de foco/target/motion"
+      - "Atualizar página do Oráculo para usar token-first"
+      - "Documentar checklist de estados por componente"

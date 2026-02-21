@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oráculo do Sadhana - Preview V1.4</title>
+  <title>Oráculo do Sadhana - V2 Clean Editorial</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../design-system/tokens.css">
   <style>
     :root {
-      --bg: #fdf8f4;
-      --paper: #f7efe6;
-      --paper-2: #f3e8dc;
-      --ink: #3f3a36;
-      --ink-soft: #6a625c;
-      --line: #d9ccbe;
-      --ornament: #8f7551;
-      --title: #6f8562;
-      --primary: #1b5a6b;
+      --bg: var(--color-background);
+      --paper: #ffffff;
+      --paper-2: #f8f4ef;
+      --ink: var(--color-text-primary);
+      --ink-soft: var(--color-text-secondary);
+      --line: var(--color-border);
+      --ornament: #c4a882;
+      --title: var(--color-primary-light);
+      --primary: var(--color-action);
       --radius-xl: 24px;
       --radius-lg: 18px;
     }
@@ -33,8 +34,8 @@
       color: var(--ink);
       font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at 18% 8%, rgba(143,117,81,.12), transparent 40%),
-        radial-gradient(circle at 82% 0%, rgba(27,90,107,.09), transparent 38%),
+        radial-gradient(circle at 18% 8%, rgba(196,168,130,.09), transparent 40%),
+        radial-gradient(circle at 82% 0%, rgba(107,123,94,.10), transparent 38%),
         var(--bg);
     }
 
@@ -68,17 +69,28 @@
 
     button {
       border: 0;
-      border-radius: 12px;
+      border-radius: var(--radius-md);
+      min-width: var(--target-comfort-size);
+      min-height: var(--target-comfort-size);
       padding: 13px 18px;
       font-size: 15px;
       font-weight: 600;
       cursor: pointer;
-      transition: transform .18s ease;
+      transition: transform .18s ease, box-shadow .18s ease;
     }
 
-    .btn-primary { color: #fff; background: linear-gradient(135deg, var(--primary), #2b6f82); }
+    .btn-primary { color: #fff; background: linear-gradient(135deg, #2d6b54, #5a8a78); }
     .btn-secondary { color: var(--primary); background: #fff; border: 1px solid #e5dbcf; }
     button:hover { transform: translateY(-1px); }
+    button:focus-visible {
+      outline: var(--focus-ring);
+      outline-offset: var(--focus-ring-offset);
+    }
+    button:disabled {
+      opacity: var(--disabled-opacity);
+      cursor: not-allowed;
+      transform: none;
+    }
 
     .ritual {
       min-height: 52px;
@@ -154,14 +166,12 @@
     .card {
       min-height: clamp(420px, 62vh, 560px);
       text-align: left;
-      border-radius: 22px 22px 14px 14px;
+      border-radius: 12px;
       border: 1.5px solid var(--line);
-      box-shadow: inset 0 0 0 1px rgba(143,117,81,.15);
+      box-shadow: 0 16px 40px rgba(61,58,56,.08);
       padding: 22px 22px 20px;
       position: relative;
       background:
-        radial-gradient(circle at 100% 0%, rgba(143,117,81,.08), transparent 35%),
-        repeating-linear-gradient(0deg, rgba(0,0,0,.012) 0 1px, transparent 1px 4px),
         linear-gradient(180deg, var(--paper), var(--paper-2));
       overflow: hidden;
     }
@@ -194,7 +204,7 @@
     }
 
     .orn-mark {
-      display: none;
+      display: block;
       width: 92px;
       height: 16px;
     }
@@ -262,7 +272,7 @@
       font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 13px;
       font-weight: 300;
-      text-transform: uppercase;
+      text-transform: none;
       color: #9b8c7a;
       letter-spacing: .12em;
       display: none;
@@ -284,14 +294,14 @@
 <body>
   <main class="wrap">
     <h1>Oráculo do Sadhana</h1>
-    <p class="subtitle">Respira. Solta. Um gesto simples de presença.</p>
+    <p class="subtitle">Uma leitura curta para reorganizar o seu dia com presença.</p>
 
     <div class="actions">
       <button id="tirarCarta" class="btn-primary">Tirar carta</button>
       <button id="copiar" class="btn-secondary" disabled>Copiar carta</button>
     </div>
 
-    <div class="ritual" id="ritualStatus"></div>
+    <div class="ritual" id="ritualStatus" role="status" aria-live="polite"></div>
 
     <section class="card-frame" id="cardFrame" aria-live="polite">
       <article class="card">
@@ -405,6 +415,11 @@
 
     function copiarCarta() {
       const texto = `Oráculo do Sadhana\n\n${virtudeEl.textContent.toUpperCase()}\n\n${p1.textContent} ${p2.textContent} ${p3.textContent}`;
+      if (!navigator.clipboard || !navigator.clipboard.writeText) {
+        copiarBtn.textContent = "Não foi possível copiar";
+        setTimeout(() => { copiarBtn.textContent = "Copiar carta"; }, 1500);
+        return;
+      }
       navigator.clipboard.writeText(texto.trim());
       copiarBtn.textContent = "Copiado";
       setTimeout(() => { copiarBtn.textContent = "Copiar carta"; }, 1200);

@@ -185,6 +185,42 @@
       border: 1px solid var(--border);
     }
 
+    .ritual-gift {
+      margin-top: var(--space-5);
+      padding: var(--space-5);
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, rgba(94, 207, 216, 0.14), rgba(107, 123, 94, 0.1));
+      border: 1px solid var(--border);
+    }
+
+    .gift-title {
+      margin: 0 0 var(--space-2);
+      font-family: var(--font-serif);
+      color: var(--color-primary);
+      font-size: var(--font-size-h5);
+    }
+
+    .gift-copy {
+      margin: 0 0 var(--space-4);
+      font-size: var(--font-size-sm);
+      color: var(--text-light);
+    }
+
+    .gift-btn {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--color-primary);
+      color: var(--white);
+      padding: var(--space-3) var(--space-6);
+      border-radius: 999px;
+      font-weight: var(--font-weight-semibold);
+      font-size: var(--font-size-sm);
+    }
+
+    .gift-btn:hover {
+      opacity: 0.92;
+    }
+
     .video-note p {
       margin: 0 0 var(--space-3);
     }
@@ -299,6 +335,11 @@
 
       <p>Escolha um ritual e mantenha por 7 dias. Se falhar um dia, volte no outro. Sem culpa.</p>
       <p>Depois, registre como você se sentiu e acompanhe sua evolução ao longo do tempo.</p>
+      <div class="ritual-gift">
+        <h3 class="gift-title">Presente para o seu ritual diário</h3>
+        <p class="gift-copy">Antes de praticar, abra o Oráculo do Sadhana e receba uma mensagem do dia para usar como intenção da sua prática.</p>
+        <a class="gift-btn" href="https://oraculo-do-sadhana.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir Oráculo do Sadhana</a>
+      </div>
     </section>
 
     <section class="journal">

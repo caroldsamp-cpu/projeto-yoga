@@ -1,0 +1,18 @@
+﻿mind_name: "Brad Frost"
+mind_slug: "brad_frost"
+domain: "design systems"
+created_on: "2026-02-21"
+mode: "greenfield"
+source_summary:
+  total_sources: 3
+  tier_1_primary: 1
+  tier_2_secondary: 2
+  notes:
+    - "User-provided prompt (high signal for intended implementation style)"
+    - "Brad Frost known framework: Atomic Design (inferred from established public methodology)"
+    - "Local project assets: docs/design-system and Oráculo prototype"
+  limitations:
+    - "YouTube live transcript for dZOVH4tSqco not automatically retrievable in current run"
+quality_gate:
+  source_quality: "CONDITIONAL"
+  rationale: "Strong implementation brief + local artifacts, but missing full transcript corpus for stronger triangulation"
