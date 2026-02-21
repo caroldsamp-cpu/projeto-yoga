@@ -1,5 +1,5 @@
 ﻿name: marketing-yog
-version: 1.2.0
+version: 1.3.0
 title: "Marketing YOG - NamaSer Content Ops"
 short-title: "YOG"
 description: |
@@ -93,6 +93,31 @@ agents:
     role: "Analise semanal e ajustes no content map"
 
 tasks:
+  - id: icp-deep-dive
+    file: tasks/icp-deep-dive.md
+    name: "ICP Deep Dive"
+    purpose: "Definir ICP primario/secundario/anti-ICP com linguagem real"
+
+  - id: brand-core-system
+    file: tasks/brand-core-system.md
+    name: "Brand Core System"
+    purpose: "Fechar manifesto, posicionamento e arquitetura de naming"
+
+  - id: messaging-house
+    file: tasks/messaging-house.md
+    name: "Messaging House"
+    purpose: "Transformar estrategia de marca em sistema de mensagens operavel"
+
+  - id: editorial-engine-90d
+    file: tasks/editorial-engine-90d.md
+    name: "Editorial Engine 90d"
+    purpose: "Sair de zero conteudo para plano editorial de 90 dias"
+
+  - id: launch-readiness
+    file: tasks/launch-readiness.md
+    name: "Launch Readiness"
+    purpose: "Validar prontidao de marca e fechar primeira sprint de publicacao"
+
   - id: consult-board
     file: tasks/consult-board.md
     name: "Consult Board"
@@ -161,6 +186,10 @@ templates:
     name: "Voice QA Scorecard"
 
 checklists:
+  - id: brand-positioning-readiness
+    file: checklists/brand-positioning-readiness.md
+    name: "Brand Positioning Readiness"
+
   - id: board-decision-quality
     file: checklists/board-decision-quality.md
     name: "Board Decision Quality"
@@ -172,6 +201,11 @@ checklists:
     name: "Reels Data-Driven Gate"
 
 workflows:
+  - id: brand-zero-to-positioned
+    file: workflows/brand-zero-to-positioned.md
+    name: "Brand Zero to Positioned"
+    purpose: "Fluxo completo para sair do quase zero para marca posicionada e operacional"
+
   - id: board-consultation
     file: workflows/board-consultation.md
     name: "Board Consultation"

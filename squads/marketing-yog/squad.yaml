@@ -1,5 +1,5 @@
 ﻿name: "marketing-yog"
-version: "1.1.0"
+version: "1.3.0"
 description: "Squad de marketing de conteudo para o projeto-yoga com voz da Gaby e publicacao manual"
 author: "Projeto Yoga"
 license: "MIT"
@@ -22,6 +22,11 @@ components:
     - marketing-distribution.md
     - marketing-metrics.md
   tasks:
+    - icp-deep-dive.md
+    - brand-core-system.md
+    - messaging-house.md
+    - editorial-engine-90d.md
+    - launch-readiness.md
     - consult-board.md
     - evaluate-deal.md
     - daily-content.md
@@ -33,6 +38,7 @@ components:
     - trend-sniper.md
     - sobre-meu-humano.md
   workflows:
+    - brand-zero-to-positioned.md
     - board-consultation.md
     - daily-content-pipeline.md
     - story-sequence-pipeline.md
@@ -45,6 +51,7 @@ components:
     - story-sequence-output.md
     - voice-qa-scorecard.md
   checklists:
+    - brand-positioning-readiness.md
     - board-decision-quality.md
     - reels-data-driven-gate.md
     - voice-gate-gaby.md
@@ -58,6 +65,7 @@ keywords:
   - aios
   - squad
   - marketing
+  - namaser
   - yoga
   - sadhana
   - instagram

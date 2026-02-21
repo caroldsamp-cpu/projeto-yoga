@@ -13,6 +13,7 @@ Arquitetura de naming:
 
 ## Escopo v1
 
+- workflow estrategico: `brand-zero-to-positioned` (quase zero -> marca posicionada)
 - weekly-content-plan
 - daily-content
 - metrics-weekly
@@ -38,3 +39,4 @@ Arquitetura de naming:
 Arquivos legados OPES foram preservados para referencia em `squads/marketing-yog/.backup`.
 O squad ativo e definido por `squad.yaml` com componentes explicitos.
 Fluxo operacional multi-mente (Tay/Ogilvy/Malika/Rubin): `squads/marketing-yog/docs/fluxo-board-multimente-gaby.md`.
+Fluxo de base de marca: `squads/marketing-yog/workflows/brand-zero-to-positioned.md`.
