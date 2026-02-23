@@ -41,11 +41,13 @@ function normalizeComparable(value) {
 function readTranscript(filePath) {
   const buffer = fs.readFileSync(filePath);
   const utf8 = buffer.toString("utf8");
-  const mojibakeHits = (utf8.match(/[ÃÂ]/g) || []).length;
-  if (mojibakeHits > 16) {
-    return buffer.toString("latin1");
-  }
-  return utf8;
+  const latin1 = buffer.toString("latin1");
+
+  const utf8Mojibake = (utf8.match(/[ÃÂ]/g) || []).length;
+  const latin1Mojibake = (latin1.match(/[ÃÂ]/g) || []).length;
+
+  if (utf8Mojibake <= latin1Mojibake) return utf8;
+  return latin1;
 }
 
 function compactStutter(text) {
@@ -56,7 +58,7 @@ function compactStutter(text) {
 
 function stripNoiseArtifacts(text) {
   return text
-    .replace(/\b(ah|ahn|hum|uh|hmm|tipo|ne|né)\b(\s+\1\b){2,}/gi, "$1")
+    .replace(/\b(ah|ahn|hum|uh|hmm|tipo|ne|nÃƒÂ©)\b(\s+\1\b){2,}/gi, "$1")
     .replace(/\b(pra|para)\s+\1\b/gi, "$1")
     .replace(/\s{2,}/g, " ")
     .trim();
@@ -103,7 +105,7 @@ function isLowSignalSentence(sentence) {
   const tokens = s.split(" ").filter(Boolean);
   if (tokens.length < 4) return true;
 
-  const filler = new Set(["tipo", "ne", "né", "ah", "ahn", "hum", "uh", "hmm", "ta", "tá"]);
+  const filler = new Set(["tipo", "ne", "nÃƒÂ©", "ah", "ahn", "hum", "uh", "hmm", "ta", "tÃƒÂ¡"]);
   const fillerCount = tokens.filter((t) => filler.has(t)).length;
   if (fillerCount / tokens.length >= 0.5) return true;
 
@@ -166,14 +168,28 @@ function chunkSentences(sentences) {
 function parseFilename(fileName) {
   const base = fileName.replace(/\.txt$/i, "").trim();
   const normalized = normalizeComparable(base);
-  const match = normalized.match(/^modulo\s+(\d+)\s+-\s+(.+)$/i);
 
-  if (!match) {
-    return { moduleNumber: 0, lessonTitle: base };
+  const numericMatch = normalized.match(/^modulo\s+(\d+)\s+-\s+(.+)$/i);
+  const parts = base.split(/\s-\s/);
+  const titleOriginal = (parts.length > 1 ? parts.slice(1).join(" - ") : base).trim();
+
+  if (numericMatch) {
+    return { moduleNumber: Number(numericMatch[1]), lessonTitle: titleOriginal || numericMatch[2] };
   }
 
-  const titleOriginal = base.replace(/^M[oó]dulo\s+\d+\s+-\s+/i, "").trim();
-  return { moduleNumber: Number(match[1]), lessonTitle: titleOriginal || match[2] };
+  const textualMatch = normalized.match(/^modulo\s+([a-z]+)\s+-\s+(.+)$/i);
+  if (textualMatch) {
+    const label = textualMatch[1];
+    const map = {
+      analises: 90,
+      analise: 90,
+      bonus: 91,
+      extra: 92
+    };
+    return { moduleNumber: map[label] || 99, lessonTitle: titleOriginal || textualMatch[2] };
+  }
+
+  return { moduleNumber: 99, lessonTitle: base };
 }
 
 function loadTaxonomy() {

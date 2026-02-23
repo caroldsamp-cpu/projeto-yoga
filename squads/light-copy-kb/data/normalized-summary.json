@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-23T13:58:04.274Z",
+  "generated_at": "2026-02-23T20:30:14.033Z",
   "transcripts_count": 93,
   "chunk_count": 3581,
   "avg_chunk_chars": 787.1,
@@ -536,32 +536,32 @@
     {
       "file": "Módulo Análises - Análise de e-mail 01.txt",
       "chunks": 26,
-      "module_number": 0,
-      "lesson_title": "Módulo Análises - Análise de e-mail 01"
+      "module_number": 90,
+      "lesson_title": "Análise de e-mail 01"
     },
     {
       "file": "Módulo Análises - Análise de e-mail 02.txt",
       "chunks": 16,
-      "module_number": 0,
-      "lesson_title": "Módulo Análises - Análise de e-mail 02"
+      "module_number": 90,
+      "lesson_title": "Análise de e-mail 02"
     },
     {
       "file": "Módulo Análises - Análise de e-mail 03.txt",
       "chunks": 29,
-      "module_number": 0,
-      "lesson_title": "Módulo Análises - Análise de e-mail 03"
+      "module_number": 90,
+      "lesson_title": "Análise de e-mail 03"
     },
     {
       "file": "Módulo Análises - Análise de e-mail 04.txt",
       "chunks": 26,
-      "module_number": 0,
-      "lesson_title": "Módulo Análises - Análise de e-mail 04"
+      "module_number": 90,
+      "lesson_title": "Análise de e-mail 04"
     },
     {
       "file": "Módulo Análises - Reels.txt",
       "chunks": 38,
-      "module_number": 0,
-      "lesson_title": "Módulo Análises - Reels"
+      "module_number": 90,
+      "lesson_title": "Reels"
     }
   ]
 }
