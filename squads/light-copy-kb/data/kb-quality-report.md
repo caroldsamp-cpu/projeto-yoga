@@ -1,6 +1,6 @@
 # Light Copy KB Quality Report
 
-- Generated at: 2026-02-23T14:07:16.788Z
+- Generated at: 2026-02-23T14:30:47.842Z
 - Total chunks: 3581
 - Avg confidence: 0.535
 

@@ -12,6 +12,10 @@ const CHROMA_URL = process.env.CHROMA_URL || "http://localhost:8000";
 const CHUNK_COLLECTION = process.env.CHROMA_CHUNKS_COLLECTION || "light-copy-chunks";
 const LESSON_COLLECTION = process.env.CHROMA_LESSONS_COLLECTION || "light-copy-lessons";
 
+const args = process.argv.slice(2);
+const SYNC_MODE = args.includes("--sync");
+const DRY_RUN = args.includes("--dry-run");
+
 function toScalarMetadata(metadata) {
   const out = {};
   for (const [key, value] of Object.entries(metadata)) {
@@ -42,6 +46,48 @@ function batch(items, size) {
     out.push(items.slice(i, i + size));
   }
   return out;
+}
+
+async function getAllIds(collection) {
+  const ids = [];
+  const limit = 1000;
+  let offset = 0;
+
+  while (true) {
+    const page = await collection.get({ limit, offset, include: [] });
+    const pageIds = page?.ids || [];
+    if (!pageIds.length) break;
+    ids.push(...pageIds);
+    if (pageIds.length < limit) break;
+    offset += limit;
+  }
+
+  return ids;
+}
+
+async function deleteStaleIds(collection, desiredIds, label) {
+  const existingIds = await getAllIds(collection);
+  const desiredSet = new Set(desiredIds);
+  const staleIds = existingIds.filter((id) => !desiredSet.has(id));
+
+  if (!staleIds.length) {
+    console.log(`${label} sync: no stale ids`);
+    return;
+  }
+
+  console.log(`${label} sync: ${staleIds.length} stale ids detected`);
+
+  if (DRY_RUN) {
+    console.log(`${label} sync: dry-run enabled, skipping delete`);
+    return;
+  }
+
+  const groups = batch(staleIds, 500);
+  for (let i = 0; i < groups.length; i += 1) {
+    await collection.delete({ ids: groups[i] });
+  }
+
+  console.log(`${label} sync: deleted ${staleIds.length} stale ids`);
 }
 
 function buildLessonDocs(records) {
@@ -150,7 +196,13 @@ async function main() {
     console.log(`Lesson batches: ${i + 1}/${lessonBatches.length}`);
   }
 
+  if (SYNC_MODE) {
+    await deleteStaleIds(chunksCollection, chunkPayload.map((x) => x.id), "chunks");
+    await deleteStaleIds(lessonCollection, lessonDocs.map((x) => x.id), "lessons");
+  }
+
   console.log("Ingestion completed");
+  console.log(`Mode: ${SYNC_MODE ? "sync" : "upsert-only"}${DRY_RUN ? " (dry-run)" : ""}`);
   console.log(`Chroma URL: ${CHROMA_URL}`);
   console.log(`Chunk collection: ${CHUNK_COLLECTION}`);
   console.log(`Chunks upserted: ${chunkPayload.length}`);

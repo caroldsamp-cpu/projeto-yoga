@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "generated_for": "light-copy-kb",
+  "defaults": {
+    "top_k": 12,
+    "final_context_k": 5,
+    "min_confidence_score": 0.5,
+    "weights": {
+      "semantic_similarity": 0.75,
+      "metadata_match": 0.25
+    }
+  },
+  "profiles": {
+    "reels": {
+      "intent_priority": ["engagement", "attention", "conversion"],
+      "content_type_priority": ["reels", "stories", "ad"],
+      "preferred_chunk_types": ["story", "tactic", "cta"],
+      "preferred_techniques": ["curiosity_hook", "magnetic_opening", "logic_of_premises"]
+    },
+    "carousel": {
+      "intent_priority": ["attention", "authority", "engagement"],
+      "content_type_priority": ["carousel", "longform"],
+      "preferred_chunk_types": ["framework", "example", "concept"],
+      "preferred_techniques": ["logic_of_premises", "contrast_positioning", "authority_building"]
+    },
+    "email": {
+      "intent_priority": ["conversion", "engagement", "authority"],
+      "content_type_priority": ["email", "newsletter", "longform"],
+      "preferred_chunk_types": ["cta", "story", "framework"],
+      "preferred_techniques": ["magnetic_opening", "curiosity_hook", "authority_building"]
+    },
+    "landing_page": {
+      "intent_priority": ["conversion", "authority", "attention"],
+      "content_type_priority": ["landing_page", "vsl", "ad"],
+      "preferred_chunk_types": ["framework", "cta", "example"],
+      "preferred_techniques": ["authority_building", "logic_of_premises", "objection_killing"]
+    },
+    "vsl": {
+      "intent_priority": ["attention", "engagement", "conversion"],
+      "content_type_priority": ["vsl", "landing_page", "ad"],
+      "preferred_chunk_types": ["story", "framework", "cta"],
+      "preferred_techniques": ["magnetic_opening", "curiosity_hook", "logic_of_premises"]
+    },
+    "ad": {
+      "intent_priority": ["attention", "conversion", "engagement"],
+      "content_type_priority": ["ad", "reels", "stories"],
+      "preferred_chunk_types": ["cta", "tactic", "story"],
+      "preferred_techniques": ["magnetic_opening", "curiosity_hook", "contrast_positioning"]
+    }
+  },
+  "recommendation": {
+    "max_techniques": 5,
+    "minimum_signal_count": 2,
+    "fallback_techniques": ["logic_of_premises", "magnetic_opening", "curiosity_hook"]
+  }
+}
