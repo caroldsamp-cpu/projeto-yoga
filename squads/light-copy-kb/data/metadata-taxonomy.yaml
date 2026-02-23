@@ -1,0 +1,78 @@
+﻿# Light Copy metadata taxonomy (controlled vocabulary)
+
+version: 1.0.0
+
+techniques:
+  - name: logic_of_premises
+    aliases: ["premissa", "logica de premissas"]
+  - name: magnetic_opening
+    aliases: ["headline", "abertura", "redline"]
+  - name: objection_killing
+    aliases: ["objecoes", "quebra de objecao"]
+  - name: curiosity_hook
+    aliases: ["curiosidade", "hook"]
+  - name: authority_building
+    aliases: ["autoridade", "prova"]
+  - name: contrast_positioning
+    aliases: ["comparacao", "antes_depois"]
+
+literary_elements:
+  - aforismo
+  - antitese
+  - anafora
+  - hiperbole
+  - ironia
+  - paradoxo
+  - personificacao
+  - jogo_de_palavras
+  - setup_punchline
+  - triade_comica
+  - neologismo
+  - analogia
+
+persuasion_drivers:
+  - novelty
+  - social_proof
+  - urgency
+  - scarcity
+  - anticipation
+  - reciprocity
+  - authority
+  - community
+  - recognition
+  - enemy_in_common
+
+intents:
+  - attention
+  - engagement
+  - authority
+  - conversion
+  - retention
+
+content_types:
+  - reels
+  - stories
+  - carousel
+  - email
+  - landing_page
+  - vsl
+  - ad
+  - newsletter
+  - whatsapp
+  - longform
+
+audience_stages:
+  - cold
+  - warm
+  - hot
+  - customer
+
+chunk_types:
+  - concept
+  - framework
+  - example
+  - story
+  - tactic
+  - warning
+  - exercise
+  - cta

@@ -1,0 +1,46 @@
+﻿# Chroma config for Light Copy KB (structured-first pipeline)
+
+database:
+  name: light-copy-kb
+  type: persistent
+  path: ./data/chroma
+
+collections:
+  chunks:
+    name: light-copy-chunks
+    description: "Structured transcript chunks for semantic retrieval"
+    metadata_fields:
+      - source_file
+      - module_number
+      - lesson_title
+      - chunk_type
+      - techniques
+      - literary_elements
+      - persuasion_drivers
+      - content_types
+      - confidence_score
+
+  lessons:
+    name: light-copy-lessons
+    description: "Lesson-level summaries and canonical references"
+    metadata_fields:
+      - source_file
+      - module_number
+      - lesson_title
+      - primary_themes
+      - audience_stage
+
+embedding:
+  provider: default
+  model: default
+  distance: cosine
+
+search:
+  default_top_k: 8
+  hard_max_top_k: 20
+  min_confidence_score: 0.45
+  hybrid_rank:
+    semantic_weight: 0.75
+    metadata_weight: 0.25
+
+status: active

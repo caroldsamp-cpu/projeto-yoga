@@ -1,0 +1,267 @@
+{
+  "generated_at": "2026-02-23T13:49:45.001Z",
+  "total_chunks": 3658,
+  "avg_confidence": 0.513,
+  "distributions": {
+    "intent": [
+      {
+        "key": "attention",
+        "count": 1934
+      },
+      {
+        "key": "conversion",
+        "count": 954
+      },
+      {
+        "key": "engagement",
+        "count": 546
+      },
+      {
+        "key": "authority",
+        "count": 180
+      },
+      {
+        "key": "retention",
+        "count": 44
+      }
+    ],
+    "content_type": [
+      {
+        "key": "longform",
+        "count": 2613
+      },
+      {
+        "key": "vsl",
+        "count": 338
+      },
+      {
+        "key": "ad",
+        "count": 318
+      },
+      {
+        "key": "landing_page",
+        "count": 260
+      },
+      {
+        "key": "email",
+        "count": 79
+      },
+      {
+        "key": "stories",
+        "count": 55
+      },
+      {
+        "key": "whatsapp",
+        "count": 42
+      },
+      {
+        "key": "reels",
+        "count": 40
+      },
+      {
+        "key": "newsletter",
+        "count": 36
+      },
+      {
+        "key": "carousel",
+        "count": 6
+      }
+    ],
+    "chunk_type": [
+      {
+        "key": "concept",
+        "count": 1539
+      },
+      {
+        "key": "example",
+        "count": 497
+      },
+      {
+        "key": "story",
+        "count": 458
+      },
+      {
+        "key": "exercise",
+        "count": 332
+      },
+      {
+        "key": "cta",
+        "count": 255
+      },
+      {
+        "key": "framework",
+        "count": 241
+      },
+      {
+        "key": "warning",
+        "count": 206
+      },
+      {
+        "key": "tactic",
+        "count": 130
+      }
+    ]
+  },
+  "top_techniques_per_intent": {
+    "attention": [
+      {
+        "key": "logic_of_premises",
+        "count": 75
+      },
+      {
+        "key": "magnetic_opening",
+        "count": 32
+      },
+      {
+        "key": "contrast_positioning",
+        "count": 17
+      },
+      {
+        "key": "objection_killing",
+        "count": 15
+      },
+      {
+        "key": "curiosity_hook",
+        "count": 1
+      }
+    ],
+    "conversion": [
+      {
+        "key": "authority_building",
+        "count": 98
+      },
+      {
+        "key": "magnetic_opening",
+        "count": 58
+      },
+      {
+        "key": "curiosity_hook",
+        "count": 39
+      },
+      {
+        "key": "logic_of_premises",
+        "count": 35
+      },
+      {
+        "key": "objection_killing",
+        "count": 17
+      },
+      {
+        "key": "contrast_positioning",
+        "count": 11
+      }
+    ],
+    "engagement": [
+      {
+        "key": "curiosity_hook",
+        "count": 66
+      },
+      {
+        "key": "authority_building",
+        "count": 48
+      },
+      {
+        "key": "logic_of_premises",
+        "count": 19
+      },
+      {
+        "key": "magnetic_opening",
+        "count": 16
+      },
+      {
+        "key": "objection_killing",
+        "count": 7
+      },
+      {
+        "key": "contrast_positioning",
+        "count": 4
+      }
+    ],
+    "authority": [
+      {
+        "key": "authority_building",
+        "count": 158
+      },
+      {
+        "key": "logic_of_premises",
+        "count": 10
+      },
+      {
+        "key": "magnetic_opening",
+        "count": 6
+      },
+      {
+        "key": "contrast_positioning",
+        "count": 2
+      }
+    ],
+    "retention": [
+      {
+        "key": "logic_of_premises",
+        "count": 3
+      }
+    ]
+  },
+  "lessons_with_most_low_confidence_chunks": [
+    {
+      "key": "M5 - Mercado de trabalho para Copywriters",
+      "count": 124
+    },
+    {
+      "key": "M2 - Gatilhos Mentais História",
+      "count": 115
+    },
+    {
+      "key": "M4 - Vídeo de Vendas - VSL",
+      "count": 114
+    },
+    {
+      "key": "M1 - Associação Criativa",
+      "count": 83
+    },
+    {
+      "key": "M2 - Gatilhos Mentais - Jornada do Herói",
+      "count": 78
+    },
+    {
+      "key": "M1 - Processo de Criativo",
+      "count": 63
+    },
+    {
+      "key": "M2 - Oferta",
+      "count": 63
+    },
+    {
+      "key": "M5 - Como Captar Clientes",
+      "count": 62
+    },
+    {
+      "key": "M1 - Observação ativa",
+      "count": 56
+    },
+    {
+      "key": "M2 - Headlines e Subheadlines",
+      "count": 55
+    },
+    {
+      "key": "M2 - Estudo do avatar",
+      "count": 53
+    },
+    {
+      "key": "M3 - Elementos literários - Apelo ao cotidiano",
+      "count": 49
+    },
+    {
+      "key": "M4 - Anúncios",
+      "count": 49
+    },
+    {
+      "key": "M2 - Termômetro de aquecimento de público",
+      "count": 48
+    },
+    {
+      "key": "M2 - Estrutura de Texto",
+      "count": 47
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+    "name":  "light-copy-kb",
+    "version":  "1.0.0",
+    "description":  "Light Copy Knowledge Base Squad - Leandro Ladeira techniques",
+    "private":  true,
+    "scripts":  {
+                    "normalize":  "node scripts/normalize-transcripts.js",
+                    "ingest":  "node scripts/ingest-transcripts.js",
+                    "index":  "npm run normalize \u0026\u0026 npm run ingest \u0026\u0026 npm run analyze",
+                    "test":  "node scripts/test-queries.js",
+                    "analyze":  "node scripts/analyze-kb.js"
+                },
+    "dependencies":  {
+                         "chromadb":  "^1.4.0",
+                         "chromadb-default-embed":  "^2.14.0",
+                         "js-yaml":  "^4.1.0"
+                     }
+}

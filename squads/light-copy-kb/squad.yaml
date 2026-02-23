@@ -1,0 +1,43 @@
+﻿name: "light-copy-kb"
+version: "1.0.0"
+description: "Squad de Light Copy baseado nas tecnicas de Leandro Ladeira"
+author: "Projeto Yoga"
+license: "MIT"
+
+aios:
+  minVersion: "2.1.0"
+  type: squad
+
+components:
+  agents:
+    - marketing-copy-light-copy.md
+  tasks:
+    - rewrite-by-light-copy.md
+  workflows: []
+  templates:
+    - rewrite-output-template.md
+  checklists:
+    - light-copy-quality-gate.md
+  data:
+    - chroma-config.yaml
+    - schema-light-copy.json
+    - metadata-taxonomy.yaml
+    - indexing-strategy.md
+
+dependencies:
+  node: []
+  python:
+    - chromadb
+  squads:
+    - marketing-yog
+
+keywords:
+  - light-copy
+  - copywriting
+  - leandro-ladeira
+  - reescrita
+  - yoga
+  - conteudo
+
+status: "in-development"
+created_at: "2026-02-22"

@@ -1,0 +1,143 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Light Copy Structured Chunk",
+  "description": "Normalized record produced from raw transcript text",
+  "type": "object",
+  "required": [
+    "chunk_id",
+    "source_file",
+    "module_number",
+    "lesson_title",
+    "raw_text",
+    "clean_text",
+    "chunk_type",
+    "position",
+    "metadata"
+  ],
+  "properties": {
+    "chunk_id": {
+      "type": "string",
+      "description": "Stable id: module-lesson-slug + sequential chunk index"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "module_number": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "lesson_title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "raw_text": {
+      "type": "string",
+      "minLength": 10
+    },
+    "clean_text": {
+      "type": "string",
+      "minLength": 10
+    },
+    "chunk_type": {
+      "type": "string",
+      "enum": [
+        "concept",
+        "framework",
+        "example",
+        "story",
+        "tactic",
+        "warning",
+        "exercise",
+        "cta"
+      ]
+    },
+    "position": {
+      "type": "object",
+      "required": ["chunk_index", "start_char", "end_char"],
+      "properties": {
+        "chunk_index": { "type": "integer", "minimum": 0 },
+        "start_char": { "type": "integer", "minimum": 0 },
+        "end_char": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "techniques",
+        "literary_elements",
+        "persuasion_drivers",
+        "content_types",
+        "audience_stage",
+        "intent",
+        "confidence_score"
+      ],
+      "properties": {
+        "techniques": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "literary_elements": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "persuasion_drivers": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "content_types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "reels",
+              "stories",
+              "carousel",
+              "email",
+              "landing_page",
+              "vsl",
+              "ad",
+              "newsletter",
+              "whatsapp",
+              "longform"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "audience_stage": {
+          "type": "string",
+          "enum": [
+            "cold",
+            "warm",
+            "hot",
+            "customer"
+          ]
+        },
+        "intent": {
+          "type": "string",
+          "enum": [
+            "attention",
+            "engagement",
+            "authority",
+            "conversion",
+            "retention"
+          ]
+        },
+        "confidence_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
