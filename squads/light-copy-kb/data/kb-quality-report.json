@@ -1,38 +1,38 @@
 {
-  "generated_at": "2026-02-23T13:49:45.001Z",
-  "total_chunks": 3658,
-  "avg_confidence": 0.513,
+  "generated_at": "2026-02-23T14:07:16.788Z",
+  "total_chunks": 3581,
+  "avg_confidence": 0.535,
   "distributions": {
     "intent": [
       {
         "key": "attention",
-        "count": 1934
+        "count": 1876
       },
       {
         "key": "conversion",
-        "count": 954
+        "count": 946
       },
       {
         "key": "engagement",
-        "count": 546
+        "count": 535
       },
       {
         "key": "authority",
-        "count": 180
+        "count": 190
       },
       {
         "key": "retention",
-        "count": 44
+        "count": 34
       }
     ],
     "content_type": [
       {
         "key": "longform",
-        "count": 2613
+        "count": 3247
       },
       {
         "key": "vsl",
-        "count": 338
+        "count": 335
       },
       {
         "key": "ad",
@@ -40,41 +40,41 @@
       },
       {
         "key": "landing_page",
-        "count": 260
-      },
-      {
-        "key": "email",
-        "count": 79
-      },
-      {
-        "key": "stories",
-        "count": 55
+        "count": 262
       },
       {
         "key": "whatsapp",
-        "count": 42
+        "count": 89
+      },
+      {
+        "key": "email",
+        "count": 71
       },
       {
         "key": "reels",
-        "count": 40
+        "count": 65
+      },
+      {
+        "key": "stories",
+        "count": 54
       },
       {
         "key": "newsletter",
-        "count": 36
+        "count": 35
       },
       {
         "key": "carousel",
-        "count": 6
+        "count": 7
       }
     ],
     "chunk_type": [
       {
         "key": "concept",
-        "count": 1539
+        "count": 1514
       },
       {
         "key": "example",
-        "count": 497
+        "count": 481
       },
       {
         "key": "story",
@@ -82,23 +82,23 @@
       },
       {
         "key": "exercise",
-        "count": 332
-      },
-      {
-        "key": "cta",
-        "count": 255
+        "count": 328
       },
       {
         "key": "framework",
-        "count": 241
+        "count": 244
+      },
+      {
+        "key": "cta",
+        "count": 236
       },
       {
         "key": "warning",
-        "count": 206
+        "count": 194
       },
       {
         "key": "tactic",
-        "count": 130
+        "count": 126
       }
     ]
   },
@@ -106,11 +106,11 @@
     "attention": [
       {
         "key": "logic_of_premises",
-        "count": 75
+        "count": 71
       },
       {
         "key": "magnetic_opening",
-        "count": 32
+        "count": 28
       },
       {
         "key": "contrast_positioning",
@@ -128,45 +128,45 @@
     "conversion": [
       {
         "key": "authority_building",
-        "count": 98
+        "count": 92
       },
       {
         "key": "magnetic_opening",
-        "count": 58
-      },
-      {
-        "key": "curiosity_hook",
-        "count": 39
+        "count": 56
       },
       {
         "key": "logic_of_premises",
-        "count": 35
+        "count": 36
+      },
+      {
+        "key": "curiosity_hook",
+        "count": 36
       },
       {
         "key": "objection_killing",
-        "count": 17
+        "count": 19
       },
       {
         "key": "contrast_positioning",
-        "count": 11
+        "count": 12
       }
     ],
     "engagement": [
       {
         "key": "curiosity_hook",
-        "count": 66
+        "count": 62
       },
       {
         "key": "authority_building",
-        "count": 48
-      },
-      {
-        "key": "logic_of_premises",
-        "count": 19
+        "count": 42
       },
       {
         "key": "magnetic_opening",
-        "count": 16
+        "count": 15
+      },
+      {
+        "key": "logic_of_premises",
+        "count": 14
       },
       {
         "key": "objection_killing",
@@ -174,94 +174,94 @@
       },
       {
         "key": "contrast_positioning",
-        "count": 4
+        "count": 1
       }
     ],
     "authority": [
       {
         "key": "authority_building",
-        "count": 158
+        "count": 167
       },
       {
         "key": "logic_of_premises",
-        "count": 10
+        "count": 14
       },
       {
         "key": "magnetic_opening",
-        "count": 6
+        "count": 7
       },
       {
-        "key": "contrast_positioning",
-        "count": 2
+        "key": "objection_killing",
+        "count": 1
       }
     ],
     "retention": [
       {
         "key": "logic_of_premises",
-        "count": 3
+        "count": 2
       }
     ]
   },
   "lessons_with_most_low_confidence_chunks": [
     {
       "key": "M5 - Mercado de trabalho para Copywriters",
-      "count": 124
+      "count": 119
     },
     {
       "key": "M2 - Gatilhos Mentais História",
-      "count": 115
-    },
-    {
-      "key": "M4 - Vídeo de Vendas - VSL",
-      "count": 114
+      "count": 112
     },
     {
       "key": "M1 - Associação Criativa",
-      "count": 83
+      "count": 81
     },
     {
       "key": "M2 - Gatilhos Mentais - Jornada do Herói",
-      "count": 78
+      "count": 76
     },
     {
-      "key": "M1 - Processo de Criativo",
-      "count": 63
-    },
-    {
-      "key": "M2 - Oferta",
-      "count": 63
+      "key": "M4 - Vídeo de Vendas - VSL",
+      "count": 75
     },
     {
       "key": "M5 - Como Captar Clientes",
-      "count": 62
+      "count": 60
     },
     {
-      "key": "M1 - Observação ativa",
-      "count": 56
+      "key": "M1 - Processo de Criativo",
+      "count": 58
     },
     {
-      "key": "M2 - Headlines e Subheadlines",
-      "count": 55
+      "key": "M2 - Oferta",
+      "count": 57
     },
     {
       "key": "M2 - Estudo do avatar",
       "count": 53
     },
     {
-      "key": "M3 - Elementos literários - Apelo ao cotidiano",
-      "count": 49
+      "key": "M1 - Observação ativa",
+      "count": 52
     },
     {
       "key": "M4 - Anúncios",
       "count": 49
     },
     {
-      "key": "M2 - Termômetro de aquecimento de público",
-      "count": 48
+      "key": "M3 - Elementos literários - Apelo ao cotidiano",
+      "count": 47
     },
     {
-      "key": "M2 - Estrutura de Texto",
-      "count": 47
+      "key": "M2 - Headlines e Subheadlines",
+      "count": 45
+    },
+    {
+      "key": "M5 - Como cobrar",
+      "count": 43
+    },
+    {
+      "key": "M2 - Gatilhos Mentais Comunidade",
+      "count": 42
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-02-23T13:42:54.563Z",
+  "generated_at": "2026-02-23T13:58:04.274Z",
   "transcripts_count": 93,
-  "chunk_count": 3658,
-  "avg_chunk_chars": 789,
+  "chunk_count": 3581,
+  "avg_chunk_chars": 787.1,
   "output_jsonl": "data\\normalized-chunks.jsonl",
   "lessons": [
     {
@@ -19,19 +19,19 @@
     },
     {
       "file": "Módulo 01 - Observação ativa.txt",
-      "chunks": 58,
+      "chunks": 56,
       "module_number": 1,
       "lesson_title": "Observação ativa"
     },
     {
       "file": "Módulo 01 - Processo de Criativo.txt",
-      "chunks": 72,
+      "chunks": 70,
       "module_number": 1,
       "lesson_title": "Processo de Criativo"
     },
     {
       "file": "Módulo 02 - Briefing de Copy.txt",
-      "chunks": 44,
+      "chunks": 43,
       "module_number": 2,
       "lesson_title": "Briefing de Copy"
     },
@@ -43,31 +43,31 @@
     },
     {
       "file": "Módulo 02 - Estrutura de Texto.txt",
-      "chunks": 59,
+      "chunks": 57,
       "module_number": 2,
       "lesson_title": "Estrutura de Texto"
     },
     {
       "file": "Módulo 02 - Estudo do avatar.txt",
-      "chunks": 63,
+      "chunks": 62,
       "module_number": 2,
       "lesson_title": "Estudo do avatar"
     },
     {
       "file": "Módulo 02 - Gatilhos Mentais - Jornada do Herói.txt",
-      "chunks": 93,
+      "chunks": 92,
       "module_number": 2,
       "lesson_title": "Gatilhos Mentais - Jornada do Herói"
     },
     {
       "file": "Módulo 02 - Gatilhos Mentais - Novidade.txt",
-      "chunks": 24,
+      "chunks": 23,
       "module_number": 2,
       "lesson_title": "Gatilhos Mentais - Novidade"
     },
     {
       "file": "Módulo 02 - Gatilhos Mentais - Porque.txt",
-      "chunks": 32,
+      "chunks": 31,
       "module_number": 2,
       "lesson_title": "Gatilhos Mentais - Porque"
     },
@@ -85,13 +85,13 @@
     },
     {
       "file": "Módulo 02 - Gatilhos mentais A visão geral.txt",
-      "chunks": 17,
+      "chunks": 16,
       "module_number": 2,
       "lesson_title": "Gatilhos mentais A visão geral"
     },
     {
       "file": "Módulo 02 - Gatilhos Mentais Afeição.txt",
-      "chunks": 41,
+      "chunks": 39,
       "module_number": 2,
       "lesson_title": "Gatilhos Mentais Afeição"
     },
@@ -103,7 +103,7 @@
     },
     {
       "file": "Módulo 02 - Gatilhos Mentais Antecipação.txt",
-      "chunks": 52,
+      "chunks": 51,
       "module_number": 2,
       "lesson_title": "Gatilhos Mentais Antecipação"
     },
@@ -127,7 +127,7 @@
     },
     {
       "file": "Módulo 02 - Gatilhos Mentais Escassez.txt",
-      "chunks": 18,
+      "chunks": 17,
       "module_number": 2,
       "lesson_title": "Gatilhos Mentais Escassez"
     },
@@ -145,7 +145,7 @@
     },
     {
       "file": "Módulo 02 - Gatilhos Mentais História.txt",
-      "chunks": 126,
+      "chunks": 125,
       "module_number": 2,
       "lesson_title": "Gatilhos Mentais História"
     },
@@ -157,31 +157,31 @@
     },
     {
       "file": "Módulo 02 - Gatilhos Mentais Reconhecimento.txt",
-      "chunks": 30,
+      "chunks": 29,
       "module_number": 2,
       "lesson_title": "Gatilhos Mentais Reconhecimento"
     },
     {
       "file": "Módulo 02 - Gatilhos mentais Surpresa.txt",
-      "chunks": 20,
+      "chunks": 19,
       "module_number": 2,
       "lesson_title": "Gatilhos mentais Surpresa"
     },
     {
       "file": "Módulo 02 - Gatilhos Mentais Urgência.txt",
-      "chunks": 18,
+      "chunks": 17,
       "module_number": 2,
       "lesson_title": "Gatilhos Mentais Urgência"
     },
     {
       "file": "Módulo 02 - Headlines e Subheadlines.txt",
-      "chunks": 71,
+      "chunks": 67,
       "module_number": 2,
       "lesson_title": "Headlines e Subheadlines"
     },
     {
       "file": "Módulo 02 - Identificando e matando objeções.txt",
-      "chunks": 62,
+      "chunks": 61,
       "module_number": 2,
       "lesson_title": "Identificando e matando objeções"
     },
@@ -193,13 +193,13 @@
     },
     {
       "file": "Módulo 02 - Oferta.txt",
-      "chunks": 79,
+      "chunks": 78,
       "module_number": 2,
       "lesson_title": "Oferta"
     },
     {
       "file": "Módulo 02 - Reunião de Criação.txt",
-      "chunks": 47,
+      "chunks": 46,
       "module_number": 2,
       "lesson_title": "Reunião de Criação"
     },
@@ -217,7 +217,7 @@
     },
     {
       "file": "Módulo 02 - Termômetro de aquecimento de público.txt",
-      "chunks": 56,
+      "chunks": 54,
       "module_number": 2,
       "lesson_title": "Termômetro de aquecimento de público"
     },
@@ -253,25 +253,25 @@
     },
     {
       "file": "Módulo 03 - Elementos literários - Apelo ao cotidiano.txt",
-      "chunks": 61,
+      "chunks": 60,
       "module_number": 3,
       "lesson_title": "Elementos literários - Apelo ao cotidiano"
     },
     {
       "file": "Módulo 03 - Elementos literários - Autodepreciação.txt",
-      "chunks": 34,
+      "chunks": 33,
       "module_number": 3,
       "lesson_title": "Elementos literários - Autodepreciação"
     },
     {
       "file": "Módulo 03 - Elementos literários - Confiança extrema.txt",
-      "chunks": 41,
+      "chunks": 39,
       "module_number": 3,
       "lesson_title": "Elementos literários - Confiança extrema"
     },
     {
       "file": "Módulo 03 - Elementos literários - Desfecho inesperado.txt",
-      "chunks": 28,
+      "chunks": 27,
       "module_number": 3,
       "lesson_title": "Elementos literários - Desfecho inesperado"
     },
@@ -283,37 +283,37 @@
     },
     {
       "file": "Módulo 03 - Elementos literários - Gancho visual ou Metáfora visual.txt",
-      "chunks": 27,
+      "chunks": 26,
       "module_number": 3,
       "lesson_title": "Elementos literários - Gancho visual ou Metáfora visual"
     },
     {
       "file": "Módulo 03 - Elementos literários - Hipérbole.txt",
-      "chunks": 36,
+      "chunks": 35,
       "module_number": 3,
       "lesson_title": "Elementos literários - Hipérbole"
     },
     {
       "file": "Módulo 03 - Elementos literários - Jogo de palavras.txt",
-      "chunks": 23,
+      "chunks": 22,
       "module_number": 3,
       "lesson_title": "Elementos literários - Jogo de palavras"
     },
     {
       "file": "Módulo 03 - Elementos literários - Linguagem fantasiosa.txt",
-      "chunks": 35,
+      "chunks": 33,
       "module_number": 3,
       "lesson_title": "Elementos literários - Linguagem fantasiosa"
     },
     {
       "file": "Módulo 03 - Elementos literários - Linguagem Sensorial.txt",
-      "chunks": 31,
+      "chunks": 30,
       "module_number": 3,
       "lesson_title": "Elementos literários - Linguagem Sensorial"
     },
     {
       "file": "Módulo 03 - Elementos literários - Lista.txt",
-      "chunks": 31,
+      "chunks": 30,
       "module_number": 3,
       "lesson_title": "Elementos literários - Lista"
     },
@@ -331,25 +331,25 @@
     },
     {
       "file": "Módulo 03 - Elementos literários - Nonsense.txt",
-      "chunks": 26,
+      "chunks": 24,
       "module_number": 3,
       "lesson_title": "Elementos literários - Nonsense"
     },
     {
       "file": "Módulo 03 - Elementos literários - Onomatopeia.txt",
-      "chunks": 8,
+      "chunks": 7,
       "module_number": 3,
       "lesson_title": "Elementos literários - Onomatopeia"
     },
     {
       "file": "Módulo 03 - Elementos literários - Paródia.txt",
-      "chunks": 23,
+      "chunks": 22,
       "module_number": 3,
       "lesson_title": "Elementos literários - Paródia"
     },
     {
       "file": "Módulo 03 - Elementos literários - Personificação.txt",
-      "chunks": 17,
+      "chunks": 16,
       "module_number": 3,
       "lesson_title": "Elementos literários - Personificação"
     },
@@ -367,7 +367,7 @@
     },
     {
       "file": "Módulo 03 - Elementos literários - Sarcasmo, ironia e deboche.txt",
-      "chunks": 26,
+      "chunks": 24,
       "module_number": 3,
       "lesson_title": "Elementos literários - Sarcasmo, ironia e deboche"
     },
@@ -379,19 +379,19 @@
     },
     {
       "file": "Módulo 03 - Elementos literários - Tríade cômica.txt",
-      "chunks": 13,
+      "chunks": 11,
       "module_number": 3,
       "lesson_title": "Elementos literários - Tríade cômica"
     },
     {
       "file": "Módulo 03 - Encontrando Premissas.txt",
-      "chunks": 24,
+      "chunks": 23,
       "module_number": 3,
       "lesson_title": "Encontrando Premissas"
     },
     {
       "file": "Módulo 03 - Fundamentos da Lógica das Premissas.txt",
-      "chunks": 55,
+      "chunks": 54,
       "module_number": 3,
       "lesson_title": "Fundamentos da Lógica das Premissas"
     },
@@ -409,25 +409,25 @@
     },
     {
       "file": "Módulo 04 - Análise de Página de Vendas - 02.txt",
-      "chunks": 22,
+      "chunks": 21,
       "module_number": 4,
       "lesson_title": "Análise de Página de Vendas - 02"
     },
     {
       "file": "Módulo 04 - Análise de Página de Vendas - 03.txt",
-      "chunks": 19,
+      "chunks": 18,
       "module_number": 4,
       "lesson_title": "Análise de Página de Vendas - 03"
     },
     {
       "file": "Módulo 04 - Análise de Página de Vendas - 04.txt",
-      "chunks": 16,
+      "chunks": 15,
       "module_number": 4,
       "lesson_title": "Análise de Página de Vendas - 04"
     },
     {
       "file": "Módulo 04 - Análise de Página de Vendas - 05.txt",
-      "chunks": 17,
+      "chunks": 16,
       "module_number": 4,
       "lesson_title": "Análise de Página de Vendas - 05"
     },
@@ -445,25 +445,25 @@
     },
     {
       "file": "Módulo 04 - Análise de Vídeo de vendas VSL - 03.txt",
-      "chunks": 24,
+      "chunks": 23,
       "module_number": 4,
       "lesson_title": "Análise de Vídeo de vendas VSL - 03"
     },
     {
       "file": "Módulo 04 - Análise de Vídeo de vendas VSL - 04.txt",
-      "chunks": 64,
+      "chunks": 62,
       "module_number": 4,
       "lesson_title": "Análise de Vídeo de vendas VSL - 04"
     },
     {
       "file": "Módulo 04 - Anúncios.txt",
-      "chunks": 61,
+      "chunks": 59,
       "module_number": 4,
       "lesson_title": "Anúncios"
     },
     {
       "file": "Módulo 04 - Downsell.txt",
-      "chunks": 20,
+      "chunks": 19,
       "module_number": 4,
       "lesson_title": "Downsell"
     },
@@ -475,7 +475,7 @@
     },
     {
       "file": "Módulo 04 - Newsletter.txt",
-      "chunks": 30,
+      "chunks": 29,
       "module_number": 4,
       "lesson_title": "Newsletter"
     },
@@ -487,43 +487,43 @@
     },
     {
       "file": "Módulo 04 - Página de Vendas.txt",
-      "chunks": 51,
+      "chunks": 50,
       "module_number": 4,
       "lesson_title": "Página de Vendas"
     },
     {
       "file": "Módulo 04 - Upsell.txt",
-      "chunks": 36,
+      "chunks": 35,
       "module_number": 4,
       "lesson_title": "Upsell"
     },
     {
       "file": "Módulo 04 - Vídeo de Vendas - VSL.txt",
-      "chunks": 156,
+      "chunks": 155,
       "module_number": 4,
       "lesson_title": "Vídeo de Vendas - VSL"
     },
     {
       "file": "Módulo 05 - Como Captar Clientes.txt",
-      "chunks": 84,
+      "chunks": 82,
       "module_number": 5,
       "lesson_title": "Como Captar Clientes"
     },
     {
       "file": "Módulo 05 - Como cobrar.txt",
-      "chunks": 56,
+      "chunks": 55,
       "module_number": 5,
       "lesson_title": "Como cobrar"
     },
     {
       "file": "Módulo 05 - Como Escolher um bom Copywriter.txt",
-      "chunks": 26,
+      "chunks": 25,
       "module_number": 5,
       "lesson_title": "Como Escolher um bom Copywriter"
     },
     {
       "file": "Módulo 05 - Mercado de trabalho para Copywriters.txt",
-      "chunks": 140,
+      "chunks": 139,
       "module_number": 5,
       "lesson_title": "Mercado de trabalho para Copywriters"
     },
@@ -535,31 +535,31 @@
     },
     {
       "file": "Módulo Análises - Análise de e-mail 01.txt",
-      "chunks": 27,
+      "chunks": 26,
       "module_number": 0,
       "lesson_title": "Módulo Análises - Análise de e-mail 01"
     },
     {
       "file": "Módulo Análises - Análise de e-mail 02.txt",
-      "chunks": 17,
+      "chunks": 16,
       "module_number": 0,
       "lesson_title": "Módulo Análises - Análise de e-mail 02"
     },
     {
       "file": "Módulo Análises - Análise de e-mail 03.txt",
-      "chunks": 30,
+      "chunks": 29,
       "module_number": 0,
       "lesson_title": "Módulo Análises - Análise de e-mail 03"
     },
     {
       "file": "Módulo Análises - Análise de e-mail 04.txt",
-      "chunks": 28,
+      "chunks": 26,
       "module_number": 0,
       "lesson_title": "Módulo Análises - Análise de e-mail 04"
     },
     {
       "file": "Módulo Análises - Reels.txt",
-      "chunks": 39,
+      "chunks": 38,
       "module_number": 0,
       "lesson_title": "Módulo Análises - Reels"
     }
