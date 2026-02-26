@@ -1,20 +1,25 @@
 {
-    "name":  "light-copy-kb",
-    "version":  "1.0.0",
-    "description":  "Light Copy Knowledge Base Squad - Leandro Ladeira techniques",
-    "private":  true,
-    "scripts":  {
-                    "normalize":  "node scripts/normalize-transcripts.js",
-                    "ingest":  "node scripts/ingest-transcripts.js",
-                    "index":  "npm run normalize \u0026\u0026 npm run ingest:sync \u0026\u0026 npm run analyze",
-                    "test":  "node scripts/test-queries.js",
-                    "analyze":  "node scripts/analyze-kb.js",
-                    "ingest:sync":  "node scripts/ingest-transcripts.js --sync",
-                    "recommend":  "node scripts/recommend-techniques.js"
-                },
-    "dependencies":  {
-                         "chromadb":  "^1.4.0",
-                         "chromadb-default-embed":  "^2.14.0",
-                         "js-yaml":  "^4.1.0"
-                     }
+    "name": "light-copy-kb",
+    "version": "1.0.0",
+    "description": "Light Copy Knowledge Base Squad - Leandro Ladeira techniques",
+    "private": true,
+    "scripts": {
+        "normalize": "node scripts/normalize-transcripts.js",
+        "ingest": "node scripts/ingest-transcripts.js",
+        "index": "npm run normalize && npm run ingest:sync && npm run analyze",
+        "test": "node scripts/test-queries.js",
+        "analyze": "node scripts/analyze-kb.js",
+        "ingest:sync": "node scripts/ingest-transcripts.js --sync",
+        "recommend": "node scripts/recommend-techniques.js",
+        "enrich": "node scripts/enrich-techniques.js",
+        "enrich:dry": "node scripts/enrich-techniques.js --dry-run",
+        "enrich:resume": "node scripts/enrich-techniques.js --resume"
+    },
+    "dependencies": {
+        "@anthropic-ai/sdk": "^0.78.0",
+        "chromadb": "^1.4.0",
+        "chromadb-default-embed": "^2.14.0",
+        "dotenv": "^17.3.1",
+        "js-yaml": "^4.1.0"
+    }
 }
