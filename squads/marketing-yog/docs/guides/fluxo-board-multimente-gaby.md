@@ -1,4 +1,4 @@
-# Fluxo Board Multi-Mente com Handoff Gaby
+﻿# Fluxo Board Multi-Mente com Handoff Gaby
 
 ## Objetivo
 
@@ -14,10 +14,11 @@ Usar as lentes estrategicas de `tay + ogilvy + malika + rubin` sem perder o tom 
 ## Sequencia operacional (padrao)
 
 1. `@board-orchestrator`
-2. `@marketing-cmo`
-3. `@marketing-production`
-4. `@marketing-designer`
-5. `@marketing-distribution`
+2. `@marketing-theme-translator-gaby`
+3. `@marketing-cmo`
+4. `@marketing-production`
+5. `@marketing-designer`
+6. `@marketing-distribution`
 
 ## Lentes ativas por etapa
 
@@ -36,7 +37,17 @@ Output esperado:
 - `translation_to_gaby_tone`
 - `next_owner`
 
-### 2) CMO (quality gate)
+### 2) Theme Translator (adaptacao anti-plagio)
+
+Converte benchmark em roteiro autoral com contexto NamaSer:
+- preserva tema e mecanica de fala (sem copiar texto)
+- aplica metodo Construir seu Sadhana
+- calcula score de originalidade
+
+Se aprovado:
+- handoff para `@marketing-cmo`
+
+### 3) CMO (quality gate)
 
 Valida:
 - utilidade pratica
@@ -47,7 +58,7 @@ Valida:
 Se aprovado:
 - handoff para `@marketing-production`
 
-### 3) Production (voz final)
+### 4) Production (voz final)
 
 Traduz tudo para `voice-dna-gaby`:
 - linguagem simples
@@ -55,14 +66,14 @@ Traduz tudo para `voice-dna-gaby`:
 - convite leve
 - bloco de opcao (`se der... se nao...`)
 
-### 4) Designer (execucao visual)
+### 5) Designer (execucao visual)
 
 Aplica lens Malika sem perder identidade Gaby:
 - hierarquia clara
 - menos ruido
 - legibilidade acima de estetica
 
-### 5) Distribution (adaptacao por canal)
+### 6) Distribution (adaptacao por canal)
 
 Adapta para formato e canal sem distorcer:
 - mensagem central
@@ -89,6 +100,6 @@ Contexto: projeto-yoga, tom acolhedor, sem pressao comercial.
 
 ```
 @marketing-production
-Receber handoff do board/cmo e transformar em copy final na voz da Gaby.
+Receber handoff do theme-translator/cmo e transformar em copy final na voz da Gaby.
 Obrigatorio: acolhedor, humano, sem julgamento, com bloco "se der... se nao...".
 ```

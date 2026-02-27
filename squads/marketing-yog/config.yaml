@@ -72,6 +72,11 @@ agents:
     name: "Marketing Ideation - Instagram"
     role: "Ideacao nativa para Instagram no contexto NamaSer"
 
+
+  - id: marketing-theme-translator-gaby
+    file: agents/marketing-theme-translator-gaby.md
+    name: "Marketing Theme Translator Gaby"
+    role: "Traduz tema e mecanica de benchmarks para roteiro autoral NamaSer sem plagio"
   - id: marketing-production
     file: agents/marketing-production.md
     name: "Marketing Production"
@@ -193,6 +198,10 @@ checklists:
   - id: board-decision-quality
     file: checklists/board-decision-quality.md
     name: "Board Decision Quality"
+
+  - id: originalidade-anti-plagio
+    file: checklists/originalidade-anti-plagio.md
+    name: "Originalidade Anti-Plagio"
   - id: voice-gate-gaby
     file: checklists/voice-gate-gaby.md
     name: "Voice Gate Gaby"
@@ -242,4 +251,5 @@ data:
     file: data/decision-frameworks.yaml
     name: "Decision Frameworks"
     purpose: "Criterios de priorizacao e avaliacao de decisoes"
+
 

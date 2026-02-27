@@ -34,6 +34,11 @@ Consolidar analises de mentes estrategicas (Hormozi/Godin/Koe/Thiel/Tay/Ogilvy/M
 ## Task Routing (active)
 
 Use estas rotas para acionar tarefas do squad:
+- `*icp-deep-dive`
+- `*brand-core-system`
+- `*messaging-house`
+- `*editorial-engine-90d`
+- `*launch-readiness`
 - `*consult-board`
 - `*evaluate-deal`
 - `*strategic-review`
@@ -70,3 +75,4 @@ Use estas rotas para acionar tarefas do squad:
 
 - para estrategia editorial: `@marketing-cmo`
 - para execucao de copy: `@marketing-production`
+

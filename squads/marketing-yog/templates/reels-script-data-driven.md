@@ -1,57 +1,53 @@
-# Template: Reels Script (Data-Driven / NamaSer + Sadhana)
+﻿# Template: Reels Script (Data-Driven / NamaSer + Sadhana)
 
 ## Metadata
 
 - Tema:
 - Pilar:
 - Objetivo do Reel:
+- Duracao alvo (segundos): 60-90
 - Palavra-chave (opcional):
-- CTA principal:
+- Modo de fechamento: reflexao_contemplativa | convite_leve | acao_comunidade
+- CTA principal (opcional):
 - Entrega no direct (se houver):
 
-## 1) Hook (0-3s)
+## 1) Abertura (0-8s)
 
-Frase curta (até 12 palavras), baseada em dor/contraste:
+Frase curta e humana para abrir tensao real:
 
-`{{HOOK}}`
+`{{ABERTURA}}`
 
-## 2) Reframe (3-15s)
+## 2) Aprofundamento (8-40s)
 
 1. Validar dor sem julgamento.
-2. Retirar culpa.
-3. Apontar direção simples.
+2. Tirar culpa e trazer contexto.
+3. Construir narrativa com densidade (sem pressa).
 
 Texto:
 
-`{{REFRAME}}`
+`{{APROFUNDAMENTO}}`
 
-## 3) Prática (15-45s)
+## 3) Integracao Sadhana (40-55s)
 
-1. Dar 1 ação concreta.
-2. Definir duração.
-3. Explicar de forma simples.
-
-Texto:
-
-`{{PRACTICA}}`
-
-## 4) Convite / CTA (45-60s+)
-
-Convite sem pressão, com próximo passo claro.
+- Micropratica e opcional.
+- Pode ser reflexao guiada, enquadramento ou respiracao.
 
 Texto:
 
-`{{CTA}}`
+`{{INTEGRACAO_SADHANA}}`
+
+## 4) Fechamento (55-90s)
+
+- Padrao recomendado: reflexao contemplativa.
+- CTA explicito e opcional.
+
+Texto:
+
+`{{FECHAMENTO}}`
 
 ## 5) Caption (apoio)
 
-Estrutura:
-1. Linha 1: reforço do hook.
-2. Linha 2-4: aprofundamento da dor e reframe.
-3. Linha 5-8: prática resumida.
-4. Linha final: convite (comentário, direct ou link).
-
-Caption:
+Caption com continuidade do tom do video (sem tom comercial duro).
 
 `{{CAPTION}}`
 
@@ -59,4 +55,4 @@ Caption:
 
 - [ ] Passou no `checklists/voice-gate-gaby.md`
 - [ ] Passou no `checklists/reels-data-driven-gate.md`
-- [ ] Registrado em `outputs/hubs/marketing/YYYY-MM-DD.md`
+- [ ] Passou no `checklists/originalidade-anti-plagio.md`
