@@ -1,0 +1,64 @@
+squad:
+  name: formula-lancamento
+  version: 1.0.0
+  description: >
+    Squad baseado 100% nas transcrições do curso Fórmula de Lançamento (Érico Rocha / Hugo Rocha - Ignição Digital).
+    Toda sugestão é rastreável a uma aula específica do curso.
+    Nunca inventa fora do escopo das aulas.
+  domain: digital-product-launches
+  language: pt-BR
+
+  sources:
+    path: "C:/Users/carol/code/apps/apify-hotmart-transcriber-mvp/outputs/transcripts/Fórmula de Lançamento"
+    modules:
+      - "Base e Fundamentos"
+      - "Lançamento semente"
+      - "Lançamento clássico"
+    status: parcial  # Transcrições sendo adicionadas progressivamente
+
+  activation: "@formula-lancamento:{agent-name}"
+
+  orchestrator: fl-chief
+
+  agents:
+    - id: fl-chief
+      file: agents/fl-chief.md
+      role: Orchestrador — identifica em qual marco o usuário está e direciona pro agente certo
+      tier: orchestrator
+
+    - id: fl-alicerce
+      file: agents/fl-alicerce.md
+      role: Especialista em Alicerce — Nicho, Avatar, Roma, Árvore de Objeções
+      tier: 0
+
+    - id: fl-oferta
+      file: agents/fl-oferta.md
+      role: Especialista em Oferta — 6 elementos, Entregáveis, Preço, Garantia
+      tier: 1
+
+    - id: fl-lancamento-semente
+      file: agents/fl-lancamento-semente.md
+      role: Especialista em Lançamento Semente — 4 fases completas
+      tier: 1
+
+    - id: fl-lancamento-classico
+      file: agents/fl-lancamento-classico.md
+      role: Especialista em Lançamento Clássico — CPLs, Pré-Lançamento, Carrinho
+      tier: 1
+
+    - id: fl-conteudo
+      file: agents/fl-conteudo.md
+      role: Especialista em Conteúdo — Raiz, Nutela, CLI, Distribuição
+      tier: 2
+
+    - id: fl-copy
+      file: agents/fl-copy.md
+      role: Especialista em Copy — Script de Vendas, Gatilhos Mentais, Objeções
+      tier: 2
+
+  quality_rules:
+    - "Todo conselho deve ser rastreável a uma aula específica [SOURCE: Módulo > Aula]"
+    - "Nunca inventar estratégias fora do que o curso ensina"
+    - "Alertar quando o usuário quiser pular marcos da jornada"
+    - "Sempre mencionar em qual fase/marco da jornada a sugestão se aplica"
+    - "Se não souber responder com base nas aulas, dizer explicitamente"
