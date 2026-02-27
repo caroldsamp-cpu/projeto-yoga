@@ -1,6 +1,6 @@
-﻿# Backlog de Conteudo - NamaSer (Inicial)
+﻿# Backlog de Conteudo - NamaSer (v2 Realista)
 
-Data: 2026-02-21  
+Data: 2026-02-26  
 Workflow: `brand-zero-to-positioned`  
 Task: `editorial-engine-90d`
 
@@ -10,7 +10,7 @@ Task: `editorial-engine-90d`
 2. P2: boa aderencia, depende de prova complementar ou teste de linguagem.
 3. P3: exploratorio para teste de angulo/formatos.
 
-## 2) Backlog inicial priorizado (48 ideias)
+## 2) Banco de ideias priorizado (48 ideias)
 
 Regra de uso da coluna CTA:
 1. `Sem CTA` quando a peca for 100% consciencia/educacao.
@@ -67,28 +67,61 @@ Regra de uso da coluna CTA:
 | B47 | Conversao | Presenca | Carrossel | "Primeiros 14 dias no NamaSer" | "Expectativa real" | Sem CTA | DMs iniciadas | P1 |
 | B48 | Conversao | Comunidade | Reel | Convite final com manifesto curto | "Seu caminho de volta pra voce" | DM "entrada" | DMs com intencao | P1 |
 
-## 3) Distribuicao por fase e prioridade
+## 3) Backlog ativo para o ciclo de 90 dias (26 ideias)
 
-1. Aquecimento (B01-B12 + B35-B37 + B45): 16 ideias
-2. Consideracao (B13-B24 + B38-B40 + B46): 16 ideias
-3. Conversao (B25-B34 + B41-B44 + B47-B48): 16 ideias
+Objetivo da v2:
+1. Manter consistencia com capacidade atual (2 reels/semana).
+2. Priorizar ideias de maior impacto e menor friccao de producao.
+3. Deixar ideias nao essenciais em estacionamento para evitar sobrecarga.
+
+### 3.1 Aquecimento ativo (10)
+
+`B01, B02, B04, B05, B06, B07, B09, B10, B35, B37`
+
+### 3.2 Consideracao ativa (8)
+
+`B13, B15, B16, B17, B18, B20, B23, B38`
+
+### 3.3 Teste de convite ativo (8)
+
+`B25, B27, B28, B29, B30, B41, B42, B48`
+
+## 4) Estacionamento (22 ideias)
+
+Manter para reativacao apos ciclo piloto ou quando houver aumento real de capacidade:
+
+`B03, B08, B11, B12, B14, B19, B21, B22, B24, B26, B31, B32, B33, B34, B36, B39, B40, B43, B44, B45, B46, B47`
+
+## 5) Distribuicao por fase e prioridade (backlog ativo)
+
+1. Aquecimento: 10 ideias
+2. Consideracao: 8 ideias
+3. Conversao/Teste de convite: 8 ideias
 
 Prioridade:
-1. P1: 31 ideias
-2. P2: 14 ideias
-3. P3: 3 ideias
+1. P1: 22 ideias
+2. P2: 4 ideias
+3. P3: 0 ideias
 
-## 4) Sequencia recomendada de execucao (primeiras 4 semanas)
+## 6) Sequencia recomendada de execucao (primeiras 6 semanas)
 
-1. Semana 1: B01, B03, B05, B06, B07
-2. Semana 2: B02, B04, B08, B09, B10
-3. Semana 3: B13, B14, B15, B16, B17
-4. Semana 4: B18, B20, B21, B23, B24
+Cadencia base por semana:
+1. 2 reels
+2. Stories em 3 dias
+3. Carrossel apenas nas semanas pares
 
-## 5) Regra de iteracao quinzenal
+Sequencia:
+1. Semana 1: B01, B02, B05, B06
+2. Semana 2: B04, B07, B35, B10
+3. Semana 3: B09, B37, B13, B15
+4. Semana 4: B16, B18, B17, B20
+5. Semana 5: B23, B38, B25, B27
+6. Semana 6: B28, B30, B29, B41
+
+## 7) Regra de iteracao quinzenal
 
 1. Manter ideias com top 40% em 2 KPIs primarios.
 2. Reescrever ideias no bottom 30% em 2 KPIs primarios.
 3. Bloquear linguagem com percepcao de culpa/pressao.
 4. Levar ajuste para nova rodada com `metrics-weekly` + matriz de claims.
-
+5. Se a consistencia semanal cair abaixo de 80%, reduzir escopo (nao aumentar formatos).

@@ -1,15 +1,17 @@
 ﻿# Plano Editorial 90 Dias - NamaSer
 
-Data: 2026-02-21  
+Data: 2026-02-26  
 Workflow: `brand-zero-to-positioned`  
 Task: `editorial-engine-90d`
+Versao: v2 (realista)
 
 ## 1) Objetivo do ciclo
 
 Sair de zero operacao editorial consistente para um sistema de 90 dias que:
 1. Gere reconhecimento com linguagem de vida real.
 2. Aumente consciencia e maturidade do publico sobre o problema real.
-3. Teste formatos de convite/lancamento sem pressao comercial constante.
+3. Teste convites de forma leve, sem forcar lancamento.
+4. Priorize consistencia sobre volume.
 
 ## 2) Insumos usados (AIOS)
 
@@ -30,19 +32,19 @@ Sair de zero operacao editorial consistente para um sistema de 90 dias que:
 
 ### Fase 1 - Aquecimento (Dias 1-30)
 Objetivo:
-1. Aumentar alcance qualificado e salvar/compartilhar.
+1. Estabilizar consistencia semanal de publicacao.
 2. Fixar narrativa: yoga sem performance para vida real.
 
 Oferta editorial:
-1. Educacao simples + micropraticas.
+1. Educacao simples + micropraticas curtas.
 2. Conteudo de identificacao de dor (sem medo/culpa).
 
 CTA dominante (opcional por peca):
 1. Salvar, comentar palavra-chave, compartilhar com amiga.
 
 KPI foco:
-1. Saves por alcance.
-2. Compartilhamentos por alcance.
+1. Consistencia semanal publicada.
+2. Saves por reel.
 3. Comentarios qualificados.
 
 ### Fase 2 - Consideracao (Dias 31-60)
@@ -55,22 +57,22 @@ Oferta editorial:
 2. Provas de aplicacao (ritual, comunidade, constancia).
 
 CTA dominante (opcional por peca):
-1. DM para receber passo a passo.
+1. DM para receber passo simples.
 2. Resposta em enquete/stories.
 
 KPI foco:
-1. DMs iniciadas por peca.
+1. DMs qualificadas por semana.
 2. Replies em stories.
-3. Cliques para passo seguinte.
+3. Retencao de consistencia semanal.
 
 ### Fase 3 - Teste de convite/lancamento (Dias 61-90)
 Objetivo:
-1. Testar formatos de convite para entender melhor o modelo de lancamento.
+1. Testar convite pontual sem campanha pesada.
 2. Converter apenas publico com sinal claro de prontidao.
 
 Oferta editorial:
-1. Conteudo de consciencia + convites pontuais com contexto.
-2. Objeções respondidas.
+1. Conteudo de consciencia + convite contextual leve.
+2. Objecoes respondidas.
 3. Provas de jornada inicial.
 
 CTA dominante (opcional por peca):
@@ -78,23 +80,23 @@ CTA dominante (opcional por peca):
 2. "Quer o passo 1? Comenta PRESENCA".
 
 KPI foco:
-1. Cliques para pagina/contato de entrada.
-2. DMs com intencao de entrar.
-3. Conversoes em onboarding.
+1. DMs com intencao de entrar.
+2. Cliques para passo de entrada.
+3. Conversoes iniciais em onboarding.
 
 ## 5) Cadencia factivel (equipe atual)
 
 Cadencia semanal:
-1. 3 reels
-2. 1 carrossel
-3. 1 bloco de stories em 5 dias (3-7 stories por dia)
-4. 1 live quinzenal (a partir da semana 5)
+1. 2 reels
+2. 1 carrossel a cada 2 semanas
+3. 3 dias de stories por semana (2-5 stories por dia)
+4. Live opcional (maximo 1 por mes, apenas se houver energia)
 
 Volume estimado em 90 dias:
-1. 39 reels
-2. 13 carrosseis
-3. 65 blocos de stories
-4. 4 lives
+1. 26 reels
+2. 6-7 carrosseis
+3. 39 blocos de stories
+4. 0-3 lives (opcional)
 
 ## 6) Mapa de formatos por fase
 
@@ -107,19 +109,19 @@ Volume estimado em 90 dias:
 
 | Semana | Fase | Foco estrategico | Formatos chave | CTA (opcional) | KPI principal |
 |---|---|---|---|---|---|
-| 1 | Aquecimento | Dor de rotina real + identificacao | 3 reels + 1 carrossel + stories | Salvar e comentar PRESENCA | Saves/alcance |
-| 2 | Aquecimento | Falta de tempo e micropraticas | 3 reels + 1 carrossel + stories | Salvar para praticar depois | Saves/alcance |
-| 3 | Aquecimento | Yoga sem performance | 3 reels + 1 carrossel + stories | Compartilhar com amiga | Compartilhamentos/alcance |
-| 4 | Aquecimento | Respiracao para mente acelerada | 3 reels + 1 carrossel + stories | Comentar CALMA | Comentarios qualificados |
-| 5 | Consideracao | Metodo NamaSer em vida real | 3 reels + 1 carrossel + stories + live | DM "quero comecar" (pontual) | DMs iniciadas |
-| 6 | Consideracao | Ritmo e constancia sem culpa | 3 reels + 1 carrossel + stories | Sem CTA direto (awareness) | Replies stories |
-| 7 | Consideracao | Acolhimento e pertencimento | 3 reels + 1 carrossel + stories + live | DM para passo a passo (pontual) | DMs iniciadas |
-| 8 | Consideracao | Objeções: tempo, rotina, inseguranca | 3 reels + 1 carrossel + stories | "Te explico como funciona" (contextual) | Cliques p/ passo seguinte |
-| 9 | Teste de lancamento | Convite piloto para publico aquecido | 3 reels + 1 carrossel + stories | "Te mando caminho de entrada" | DMs com intencao |
-| 10 | Teste de lancamento | Provas e mini-jornadas de alunas | 3 reels + 1 carrossel + stories + live | Sem CTA direto (awareness) | Retencao + saves |
-| 11 | Teste de lancamento | FAQ de entrada e expectativas reais | 3 reels + 1 carrossel + stories | DM com duvida (quando surgir) | Cliques e DMs |
-| 12 | Teste de lancamento | Janela de convite com acolhimento | 3 reels + 1 carrossel + stories + live | "Entrar no NamaSer" (pontual) | Conversoes onboarding |
-| 13 | Teste de lancamento | Fechamento e continuidade | 3 reels + 1 carrossel + stories | Sem CTA direto (continuidade) | Retencao + replies |
+| 1 | Aquecimento | Dor de rotina real + identificacao | 2 reels + stories (3 dias) | Salvar e comentar PRESENCA | Consistencia + saves |
+| 2 | Aquecimento | Falta de tempo e micropraticas | 2 reels + carrossel + stories | Salvar para praticar depois | Saves por reel |
+| 3 | Aquecimento | Yoga sem performance | 2 reels + stories (3 dias) | Compartilhar com amiga | Compartilhamentos |
+| 4 | Aquecimento | Respiracao para mente acelerada | 2 reels + carrossel + stories | Comentar CALMA | Comentarios qualificados |
+| 5 | Consideracao | Metodo NamaSer em vida real | 2 reels + stories (3 dias) | DM "quero comecar" (pontual) | DMs qualificadas |
+| 6 | Consideracao | Ritmo e constancia sem culpa | 2 reels + carrossel + stories | Sem CTA direto | Replies stories |
+| 7 | Consideracao | Acolhimento e pertencimento | 2 reels + stories (3 dias) | DM para passo simples (pontual) | DMs qualificadas |
+| 8 | Consideracao | Objecoes: tempo, rotina, inseguranca | 2 reels + carrossel + stories | "Te explico como funciona" | Replies + DMs |
+| 9 | Teste de convite | Convite leve para publico aquecido | 2 reels + stories (3 dias) | "Te mando caminho de entrada" | DMs com intencao |
+| 10 | Teste de convite | Provas e mini-jornadas de alunas | 2 reels + carrossel + stories | Sem CTA direto | Saves + replies |
+| 11 | Teste de convite | FAQ de entrada e expectativas reais | 2 reels + stories (3 dias) | DM com duvida | DMs qualificadas |
+| 12 | Teste de convite | Janela curta de convite contextual | 2 reels + carrossel + stories | "Entrar no NamaSer" (pontual) | Conversoes iniciais |
+| 13 | Teste de convite | Fechamento e continuidade | 2 reels + stories (3 dias) | Sem CTA direto | Retencao de consistencia |
 
 ## 8) Blocos de conteudo e metricas por bloco
 
@@ -139,14 +141,14 @@ Volume estimado em 90 dias:
 2. Convite/CTA e opcional e entra apenas quando houver contexto.
 3. Toda peca deve usar claim aprovada ou em teste controlado.
 4. Sem urgencia agressiva, culpa ou promessa inflada.
-5. Toda semana deve ter pelo menos 1 peca de objecao e 1 de prova social.
+5. A cada 2 semanas deve haver pelo menos 1 peca de objecao e 1 de prova social.
 6. Revisao semanal via `metrics-weekly` e ajuste quinzenal da matriz de claims.
 
 ## 10) Rituais de execucao
 
-1. Segunda: definir 4 temas da semana e roteiros base.
-2. Terca a sexta: publicar feed e stories com consistencia.
-3. Quinta: preparar live (se semana com live).
+1. Segunda: definir 2 temas de reels e plano de stories (3 dias).
+2. Terca a sexta: publicar com consistencia realista.
+3. Quinta: preparar carrossel (na semana em que houver).
 4. Sexta: revisar metricas e decidir iteracoes da semana seguinte.
 
 ## 11) Checkpoint de aprovacao da task
