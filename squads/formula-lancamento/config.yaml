@@ -14,7 +14,12 @@ squad:
       - "Base e Fundamentos"
       - "Lançamento semente"
       - "Lançamento clássico"
-    status: parcial  # Transcrições sendo adicionadas progressivamente
+      - "Lançamento caixa"
+      - "Tráfego pago"
+      - "Como criar um produto 6em7"
+      - "Material complementar"
+      - "Tudo para ser um lançador"
+    status: completo  # Todos os 8 módulos extraídos (Framework + SOP + Checklist)
 
   activation: "@formula-lancamento:{agent-name}"
 

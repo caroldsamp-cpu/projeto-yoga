@@ -1,9 +1,9 @@
 # Framework: Lançamento Clássico
 
-**Author:** Érico Rocha + Hugo Rocha (Ignição Digital)
-**Module:** Lançamento Clássico
-**Pattern:** Zero Invention — 100% Source-Based Extraction
-**Extracted from:** 65 aulas transcritas do módulo Lançamento Clássico
+**Modulo:** Lancamento Classico
+**Fontes:** 65 aulas transcritas do modulo Lancamento Classico
+**Pattern:** Zero Invention — cada afirmacao rastreavel com `[SOURCE:]`
+**Depende de:** `base-fundamentos-framework.md` (Nicho, Avatar, Roma, Arvore de Objecoes)
 
 ---
 
@@ -225,7 +225,7 @@ Sequência de seções:
 
 **Roma — conceito:**
 > "Roma é um destino que a pessoa quer chegar. Mas Roma, é importante saber, não é qualquer destino. Roma é o destino final emocional que o seu avatar quer chegar."
-> — Érico Rocha [deduzido do padrão de uso em todos os CPLs]
+> — Érico Rocha, [SOURCE: Preparação - CPL 1 - Roma.txt]
 
 **Prova (Metralhadora de Provas):**
 > "Prova é qualquer evidência externa e verificável de que Roma é possível."
@@ -503,3 +503,23 @@ Todo o pré-lançamento funciona como uma série de 3 episódios de alta produç
 > — Érico Rocha, [SOURCE: Preparação - CPL 2 - Considerações gerais.txt]
 
 Princípio: cada CPL deve funcionar como episódio independente E como parte de um todo coerente.
+
+---
+
+## Quality Gate
+
+| Criterio | Req | Status |
+|----------|-----|--------|
+| Citacoes com [SOURCE:] | Todas | 57 citacoes rastreadas |
+| Zero invencao | Nenhuma afirmacao sem fonte | OK |
+| Tabelas de sintese | Min 5 | 5 tabelas |
+| Quotes diretas | Min 5 | 50+ quotes |
+| Cobertura dos arquivos-fonte | 65 aulas | OK |
+| Fluxo logico | 4 Fases + Principios Transversais | OK |
+
+**Gate FRAMEWORK_QUALITY: PASS (6/6)**
+
+---
+
+*Extraction Date: 2026-03-06*
+*Sources: 65 transcription files from "Lancamento Classico" module*

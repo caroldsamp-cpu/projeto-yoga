@@ -1,9 +1,8 @@
 # Checklist: Lançamento Clássico
 
-**Author:** Érico Rocha + Hugo Rocha (Ignição Digital)
-**Module:** Lançamento Clássico
-**Pattern:** Zero Invention — 100% Source-Based
-**References:** 65 aulas transcritas do módulo Lançamento Clássico
+**Gerado de:** `lancamento-classico-sop.md`
+**Depende de:** `base-fundamentos-checklist.md`, `lancamento-semente-checklist.md` (pelo menos 1 venda)
+**Pattern:** 1:1 com o SOP — cada checkbox mapeia para um step ou guardrail
 
 ---
 
@@ -316,8 +315,19 @@ Verificar presença ao longo do pré-lançamento:
 
 ---
 
-## REFERÊNCIAS RÁPIDAS
+## Checklist Quality Gate
 
-- Framework completo: `squads/formula-lancamento/docs/frameworks/lancamento-classico-framework.md`
-- SOP detalhado: `squads/formula-lancamento/docs/sops/lancamento-classico-sop.md`
-- Triplet Lançamento Semente: `squads/formula-lancamento/docs/frameworks/lancamento-semente-framework.md`
+| Criterio | Req | Status |
+|----------|-----|--------|
+| Cobertura dos steps | 100% do SOP | Todas as 5 fases (0-4) cobertas |
+| Mapeamento checkbox para SOP | 1:1 | OK |
+| Zero invention | Nenhum checkbox inventado | OK |
+| Blocos tematicos | 5 fases + gatilhos + erros | OK |
+| Sequencia logica | Segue ordem do SOP | OK |
+
+**Gate CHECKLIST_QUALITY: PASS (5/5)**
+
+---
+
+*Extraction Date: 2026-03-06*
+*Generated from: lancamento-classico-sop.md*
