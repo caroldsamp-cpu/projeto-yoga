@@ -359,6 +359,9 @@ commands:
   - "*create-task - Create atomic task (only when workflow is overkill)"
   - "*create-template - Create output template for squad"
   - "*create-pipeline - Generate pipeline code scaffolding (state, progress, runner) for a squad"
+  # Knowledge Extraction Commands
+  - "*extract-knowledge {author} - Extract complete knowledge triplet (Framework + SOP + Checklist) from source materials via wf-extraction-pipeline"
+  - "*extract-implicit {source} - Reveal tacit knowledge: undeclared assumptions, hidden heuristics, strategic blind spots"
   # Tool Discovery Commands (NEW)
   - "*discover-tools {domain} - Research MCPs, APIs, CLIs, Libraries, GitHub projects for a domain"
   - "*show-tools - Display global tool registry (available and recommended tools)"
@@ -401,11 +404,13 @@ command_visibility:
   key_commands:  # Aparecem sempre (3-5 comandos)
     - "*create-squad"
     - "*clone-mind"
+    - "*extract-knowledge"
     - "*validate-squad"
     - "*help"
   quick_commands:  # Aparecem em sessão normal (6-8 comandos)
     - "*create-squad"
     - "*clone-mind"
+    - "*extract-knowledge"
     - "*validate-squad"
     - "*create-agent"
     - "*create-workflow"
@@ -1191,6 +1196,15 @@ self_awareness:
         description: "Gerar pipeline code scaffolding (state, progress, runner) para squad com processamento multi-fase"
         params: "{squad} --phases {count} --resume --progress --cost-tracking"
 
+    knowledge_extraction:
+      - command: "*extract-knowledge"
+        description: "Extrair triplet completo (Framework + SOP + Checklist) de materiais fonte com ZERO invencao"
+        params: "{author} --topic {topic} --sources {path}"
+
+      - command: "*extract-implicit"
+        description: "Revelar conhecimento tacito: premissas nao declaradas, heuristicas ocultas, pontos cegos"
+        params: "{source} --axes all|premises|heuristics|blindspots|decisions"
+
     dna_extraction:
       - command: "*extract-voice-dna"
         description: "Extrair apenas Voice DNA"
@@ -1291,6 +1305,10 @@ self_awareness:
       - "create-task.md - Task atômica"
       - "create-template.md - Template de output"
       - "create-pipeline.md - Pipeline code scaffolding"
+
+    knowledge_extraction:
+      - "extract-knowledge.md - Extrair triplet (Framework + SOP + Checklist) de fontes"
+      - "extract-implicit.md - Revelar conhecimento tacito e heuristicas ocultas"
 
     dna_extraction:
       - "collect-sources.md - Coleta e validação de fontes"
