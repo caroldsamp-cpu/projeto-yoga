@@ -1,0 +1,556 @@
+# =============================================================================
+# Template: Sequencia de Emails de Carrinho Aberto
+# Squad: Formula de Lancamento
+# Metodologia: Erico Rocha / Hugo Rocha — Formula de Lancamento
+# Uso: Lancamento Semente e Classico — fase de carrinho aberto
+# =============================================================================
+
+template:
+  id: fl-email-carrinho-v1
+  name: Sequencia de Emails de Carrinho Aberto
+  version: "1.0"
+  squad: formula-lancamento
+  output:
+    format: markdown
+    filename: "outputs/emails-carrinho-{{nicho}}-{{data}}.md"
+    title: "Sequencia de Emails — Carrinho Aberto — {{nome_produto}}"
+
+# -----------------------------------------------------------------------------
+# Placeholders
+# -----------------------------------------------------------------------------
+placeholders:
+  - id: nome_produto
+    label: Nome do produto/programa
+    example: "Yoga em Casa — Programa de 8 Semanas"
+  - id: nome_expert
+    label: Nome do expert / remetente
+    example: "Carolina"
+  - id: avatar
+    label: Avatar / persona do comprador
+    example: "mulheres 30-50 anos, estressadas, nunca fizeram yoga"
+  - id: roma
+    label: Roma — destino transformacional
+    example: "praticar yoga em casa com autonomia e aliviar dores cronicas"
+  - id: nicho
+    label: Nicho de mercado
+    example: "yoga para iniciantes"
+  - id: preco
+    label: Preco do produto (R$)
+    example: "497"
+  - id: preco_parcelado
+    label: Opcao parcelada
+    example: "12x de R$ 49,70"
+  - id: garantia
+    label: Tipo e duracao da garantia
+    example: "7 dias incondicional"
+  - id: bonus
+    label: Lista de bonus
+    example: "Meditacao Guiada (7 audios) + Calendario de Pratica 30 dias"
+  - id: link_vendas
+    label: Link da pagina de vendas / checkout
+    example: "https://link.com/checkout"
+  - id: data_abertura
+    label: Data de abertura do carrinho
+    example: "2026-03-12"
+  - id: data_encerramento
+    label: Data de encerramento do carrinho
+    example: "2026-03-17"
+  - id: hora_encerramento
+    label: Hora de encerramento do carrinho
+    example: "23:59"
+  - id: bonus_extra
+    label: Bonus extra de escassez (desaparecente)
+    example: "Aula bonus: Yoga para Dor nas Costas (disponivel ate sexta)"
+  - id: data_bonus_expira
+    label: Data em que o bonus extra expira
+    example: "2026-03-14"
+  - id: replay_link
+    label: Link do replay da aula/webinario (se aplicavel)
+    example: "https://link.com/replay"
+  - id: data
+    label: Data de geracao
+    example: "2026-03-08"
+
+# -----------------------------------------------------------------------------
+# Contexto metodologico
+# -----------------------------------------------------------------------------
+context:
+  source: "Formula de Lancamento — Erico Rocha / Hugo Rocha"
+  description: |
+    A sequencia de emails de carrinho aberto e enviada durante a fase 4
+    do Lancamento Semente (e adaptada para o Classico). O carrinho
+    tipicamente fica aberto por 5-7 dias.
+
+    Principios da sequencia:
+    - Cada email tem um UNICO objetivo emocional/logico
+    - Urgencia e escassez crescem ao longo da sequencia
+    - Prova social e distribuida ao longo dos emails
+    - O tom deve ser pessoal (como se fosse de amigo para amigo)
+    - Todos os emails devem ter CTA claro com link de vendas
+
+  cronograma_tipico: |
+    Dia 1 (quinta): Abertura do carrinho + Email 1
+    Dia 2 (sexta): Email 2 (Prova Social)
+    Dia 3 (sabado): Email 3 (FAQ / Objecoes)
+    Dia 4 (domingo): Email 4 (Bonus Extra)
+    Dia 5 (segunda): Email 5 (Ultimas Horas)
+    Dia 5 (segunda noite): Email 6 (Encerramento)
+
+# =============================================================================
+# SEQUENCIA DE EMAILS (6 Emails)
+# =============================================================================
+
+sections:
+
+  # ---------------------------------------------------------------------------
+  # EMAIL 1: Abertura do Carrinho
+  # ---------------------------------------------------------------------------
+  - id: email-1-abertura
+    title: "Email 1 — Abertura do Carrinho"
+    send_day: "Dia 1 (dia do webinario/lancamento)"
+    send_time: "Imediatamente apos o webinario ou abertura"
+    objective: "Anunciar que o carrinho esta aberto e recapitular a oferta"
+    tone_guidance: |
+      Tom: Animado, positivo, generoso.
+      Sensacao: "Finalmente chegou o momento!"
+      Evitar: Pressao excessiva. E o primeiro email — plante a semente.
+    template: |
+      ## EMAIL 1 — Abertura do Carrinho
+
+      **Subject line (escolha 1):**
+      > A) "[ABERTO] Sua vaga no {{nome_produto}}"
+      > B) "As inscricoes para o {{nome_produto}} estao abertas"
+      > C) "E agora, {{nome_expert}}? O {{nome_produto}} esta no ar"
+
+      **Preview text:**
+      > "O carrinho esta aberto — e fecha em {{data_encerramento}}."
+
+      ---
+
+      **Corpo do email:**
+
+      > Oi, [nome],
+      >
+      > Se voce assistiu a [aula/apresentacao] de hoje, voce viu que
+      > existe um caminho claro para {{roma}}.
+      >
+      > E agora as inscricoes para o **{{nome_produto}}** estao oficialmente
+      > abertas.
+      >
+      > **Recapitulando o que voce recebe:**
+      >
+      > - [Entregavel 1]
+      > - [Entregavel 2]
+      > - [Entregavel 3]
+      > - [Entregavel 4]
+      >
+      > **+ Bonus:**
+      > - {{bonus}}
+      >
+      > **Investimento:** R$ {{preco}} ou {{preco_parcelado}}
+      >
+      > **Garantia:** {{garantia}} — se nao fizer sentido, devolvo seu dinheiro.
+      >
+      > O carrinho fica aberto ate **{{data_encerramento}} as {{hora_encerramento}}**.
+      >
+      > Para garantir sua vaga:
+      > **{{link_vendas}}**
+      >
+      > Te espero la dentro.
+      >
+      > {{nome_expert}}
+      >
+      > PS: Se voce perdeu a [aula/apresentacao], o replay esta aqui:
+      > {{replay_link}} (disponivel por tempo limitado)
+
+      **CTA principal:** {{link_vendas}}
+
+  # ---------------------------------------------------------------------------
+  # EMAIL 2: Prova Social
+  # ---------------------------------------------------------------------------
+  - id: email-2-prova-social
+    title: "Email 2 — Prova Social"
+    send_day: "Dia 2"
+    send_time: "Manha (9h-11h)"
+    objective: "Mostrar resultados de outras pessoas para gerar confianca"
+    tone_guidance: |
+      Tom: Inspirador, factual, humilde.
+      Sensacao: "Olha o que e possivel. Voce tambem pode."
+      Evitar: Parecer que esta se gabando. Deixe os resultados falarem.
+
+      NOTA: No primeiro Semente, voce pode nao ter depoimentos de alunos.
+      Nesse caso, use: sua propria historia, resultados de testes beta,
+      ou perguntas/reacoes do chat do webinario como prova de interesse.
+    template: |
+      ## EMAIL 2 — Prova Social
+
+      **Subject line (escolha 1):**
+      > A) "O que [Nome] conseguiu em [X] dias"
+      > B) "Resultado real: de [antes] para [depois]"
+      > C) "Isso e o que acontece quando voce [acao principal]"
+
+      **Preview text:**
+      > "Nao sou so eu dizendo. Veja os resultados."
+
+      ---
+
+      **Corpo do email:**
+
+      > Oi, [nome],
+      >
+      > Ontem eu abri as inscricoes para o {{nome_produto}} e recebi
+      > uma enxurrada de mensagens. Quero compartilhar algumas com voce.
+      >
+      > ---
+      >
+      > **[Nome do aluno/cliente 1]:**
+      > > "[Depoimento real — situacao antes → resultado depois]"
+      >
+      > **[Nome do aluno/cliente 2]:**
+      > > "[Depoimento real — situacao antes → resultado depois]"
+      >
+      > **[Nome do aluno/cliente 3]:**
+      > > "[Depoimento real — situacao antes → resultado depois]"
+      >
+      > ---
+      >
+      > Essas pessoas tinham as mesmas duvidas que voce pode estar tendo
+      > agora. Elas decidiram tentar. E o resultado fala por si.
+      >
+      > Se voce quer ser a proxima historia de transformacao:
+      > **{{link_vendas}}**
+      >
+      > Lembre-se: o carrinho fecha em **{{data_encerramento}}**.
+      >
+      > {{nome_expert}}
+
+      **CTA principal:** {{link_vendas}}
+
+      **Nota para primeiro Semente (sem depoimentos):**
+      > Substitua depoimentos por:
+      > - Mensagens do chat do webinario ("Olha o que [pessoa] escreveu:")
+      > - Sua propria transformacao resumida
+      > - Dados ou pesquisas que validam o metodo
+
+  # ---------------------------------------------------------------------------
+  # EMAIL 3: FAQ / Objecoes
+  # ---------------------------------------------------------------------------
+  - id: email-3-faq
+    title: "Email 3 — FAQ (Perguntas Frequentes)"
+    send_day: "Dia 3"
+    send_time: "Manha (9h-11h)"
+    objective: "Responder as principais duvidas e derrubar objecoes"
+    tone_guidance: |
+      Tom: Empatico, paciente, direto.
+      Sensacao: "Eu entendo suas duvidas. Deixa eu esclarecer."
+      Evitar: Ser defensivo ou agressivo. Valide a duvida antes de responder.
+    template: |
+      ## EMAIL 3 — FAQ (Perguntas Frequentes)
+
+      **Subject line (escolha 1):**
+      > A) "Suas duvidas sobre o {{nome_produto}} (respondidas)"
+      > B) "Antes de decidir, leia isso"
+      > C) "As 5 perguntas que mais recebi"
+
+      **Preview text:**
+      > "Respondi as duvidas mais comuns. Veja se a sua esta aqui."
+
+      ---
+
+      **Corpo do email:**
+
+      > Oi, [nome],
+      >
+      > Desde que abri as inscricoes do {{nome_produto}}, recebi muitas
+      > perguntas. Vou responder as mais frequentes aqui:
+      >
+      > ---
+      >
+      > **"Sera que funciona pra mim? Eu nunca [experiencia relevante]."**
+      > Sim. O {{nome_produto}} foi criado justamente para {{avatar}}.
+      > Voce nao precisa de experiencia previa. [Explique por que.]
+      >
+      > ---
+      >
+      > **"Nao tenho muito tempo. Quanto tempo preciso dedicar?"**
+      > [Responda com especificidade: X minutos por dia/semana.]
+      > O programa foi desenhado para caber na rotina de quem e ocupada.
+      >
+      > ---
+      >
+      > **"E se eu nao gostar?"**
+      > Voce tem {{garantia}}. Se nao fizer sentido, basta pedir o
+      > reembolso. Sem perguntas, sem burocracia.
+      >
+      > ---
+      >
+      > **"Qual a diferenca desse programa para [alternativa comum]?"**
+      > [Explique o diferencial do seu metodo/abordagem.]
+      >
+      > ---
+      >
+      > **"Posso parcelar?"**
+      > Sim. O investimento e de R$ {{preco}} a vista ou {{preco_parcelado}}.
+      >
+      > ---
+      >
+      > Se sua duvida nao esta aqui, me responda esse email que eu
+      > respondo pessoalmente.
+      >
+      > Para se inscrever:
+      > **{{link_vendas}}**
+      >
+      > Carrinho aberto ate **{{data_encerramento}} as {{hora_encerramento}}**.
+      >
+      > {{nome_expert}}
+
+      **CTA principal:** {{link_vendas}}
+
+  # ---------------------------------------------------------------------------
+  # EMAIL 4: Bonus Extra (Escassez)
+  # ---------------------------------------------------------------------------
+  - id: email-4-bonus-extra
+    title: "Email 4 — Bonus Extra (Desaparecente)"
+    send_day: "Dia 4"
+    send_time: "Manha (9h-11h)"
+    objective: "Adicionar bonus de escassez para gerar urgencia no meio da janela"
+    tone_guidance: |
+      Tom: Generoso, urgente mas nao desesperado.
+      Sensacao: "Eu quero te dar mais um motivo para agir agora."
+      Evitar: Parecer manipulativo. A escassez deve ser REAL.
+
+      IMPORTANTE: O bonus extra deve realmente desaparecer na data informada.
+      Nunca use escassez falsa — isso destroi a confianca a longo prazo.
+    template: |
+      ## EMAIL 4 — Bonus Extra (Desaparecente)
+
+      **Subject line (escolha 1):**
+      > A) "Bonus surpresa (some em {{data_bonus_expira}})"
+      > B) "Eu adicionei algo especial para quem entrar ate {{data_bonus_expira}}"
+      > C) "Presente extra para voce — mas so ate {{data_bonus_expira}}"
+
+      **Preview text:**
+      > "Um bonus exclusivo que desaparece em [X] horas."
+
+      ---
+
+      **Corpo do email:**
+
+      > Oi, [nome],
+      >
+      > Eu sei que voce esta pensando sobre o {{nome_produto}}.
+      > E pensar e bom. Eu respeito isso.
+      >
+      > Mas eu quero te dar mais um motivo para agir agora.
+      >
+      > Eu acabei de adicionar um **bonus exclusivo** para quem se inscrever
+      > ate **{{data_bonus_expira}}**:
+      >
+      > **{{bonus_extra}}**
+      >
+      > [Descricao do bonus extra: o que e, como ajuda, por que e valioso]
+      >
+      > Esse bonus **nao estara disponivel** depois de {{data_bonus_expira}}.
+      > Quem entrar depois, nao recebe.
+      >
+      > Entao se voce ja estava pensando em entrar, esse e o momento:
+      > **{{link_vendas}}**
+      >
+      > Resumo rapido da oferta:
+      > - {{nome_produto}} completo
+      > - {{bonus}}
+      > - **+ {{bonus_extra}}** (ate {{data_bonus_expira}})
+      > - Garantia: {{garantia}}
+      > - Investimento: R$ {{preco}} ou {{preco_parcelado}}
+      >
+      > {{nome_expert}}
+      >
+      > PS: Depois de {{data_bonus_expira}}, esse bonus some.
+      > E nao tem como voltar atras. A decisao e sua.
+
+      **CTA principal:** {{link_vendas}}
+
+  # ---------------------------------------------------------------------------
+  # EMAIL 5: Ultimas Horas
+  # ---------------------------------------------------------------------------
+  - id: email-5-ultimas-horas
+    title: "Email 5 — Ultimas Horas"
+    send_day: "Ultimo dia (manha)"
+    send_time: "Manha (8h-10h)"
+    objective: "Criar urgencia maxima — o carrinho fecha hoje"
+    tone_guidance: |
+      Tom: Urgente, direto, carinhoso mas firme.
+      Sensacao: "Essa e sua ultima chance. Eu nao quero que voce perca."
+      Evitar: Desespero ou agressividade. Urgencia com empatia.
+
+      Este email deve ser mais curto e direto que os anteriores.
+      O momento e de acao, nao de educacao.
+    template: |
+      ## EMAIL 5 — Ultimas Horas
+
+      **Subject line (escolha 1):**
+      > A) "[ULTIMO DIA] O carrinho fecha hoje"
+      > B) "Ultimas horas para o {{nome_produto}}"
+      > C) "Hoje a meia-noite acaba"
+
+      **Preview text:**
+      > "O carrinho fecha hoje as {{hora_encerramento}}. Nao vai ter prorrogacao."
+
+      ---
+
+      **Corpo do email:**
+
+      > [nome],
+      >
+      > Direto ao ponto: o carrinho do **{{nome_produto}}** fecha
+      > **hoje, {{data_encerramento}}, as {{hora_encerramento}}**.
+      >
+      > Depois disso, nao tem prorrogacao. Nao tem "deixa eu pensar
+      > mais um dia". O link para de funcionar.
+      >
+      > Se voce quer {{roma}}, o momento e agora:
+      > **{{link_vendas}}**
+      >
+      > Voce recebe:
+      > - [Lista resumida dos entregaveis principais]
+      > - {{bonus}}
+      > - Garantia: {{garantia}}
+      > - Investimento: R$ {{preco}} ou {{preco_parcelado}}
+      >
+      > Eu sei que tomar uma decisao pode ser dificil.
+      > Mas lembra: voce tem {{garantia}}. O unico risco e
+      > nao tentar.
+      >
+      > **{{link_vendas}}**
+      >
+      > Te espero la dentro.
+      >
+      > {{nome_expert}}
+
+      **CTA principal:** {{link_vendas}}
+
+  # ---------------------------------------------------------------------------
+  # EMAIL 6: Encerramento
+  # ---------------------------------------------------------------------------
+  - id: email-6-encerramento
+    title: "Email 6 — Encerramento"
+    send_day: "Ultimo dia (noite) ou dia seguinte ao fechamento"
+    send_time: "1-2 horas antes do fechamento OU na manha seguinte"
+    objective: "Encerrar o ciclo com gratidao e definir proximos passos"
+    tone_guidance: |
+      Tom: Grato, sereno, profissional.
+      Sensacao: "O ciclo se encerrou. Obrigada por estar comigo."
+      Evitar: Tentar vender depois que o carrinho fechou. Encerrou, encerrou.
+
+      Duas versoes possiveis:
+      A) Enviado ANTES do fechamento (ultima chamada, 1-2h antes)
+      B) Enviado DEPOIS do fechamento (agradecimento, proximos passos)
+
+      Recomendacao: envie as duas versoes.
+    template: |
+      ## EMAIL 6 — Encerramento
+
+      ### VERSAO A: Ultima chamada (1-2h antes do fechamento)
+
+      **Subject line:**
+      > "[ULTIMA CHAMADA] 2 horas para o carrinho fechar"
+
+      **Preview text:**
+      > "Depois disso, so na proxima turma."
+
+      ---
+
+      > [nome],
+      >
+      > Em [2 horas / X minutos], o carrinho do {{nome_produto}} fecha.
+      >
+      > Se voce quer {{roma}}, essa e sua janela:
+      > **{{link_vendas}}**
+      >
+      > Garantia: {{garantia}}.
+      > Investimento: R$ {{preco}} ou {{preco_parcelado}}.
+      >
+      > A decisao e sua. Eu so nao queria que voce perdesse por
+      > nao ter visto a tempo.
+      >
+      > {{nome_expert}}
+
+      ---
+
+      ### VERSAO B: Pos-fechamento (manha seguinte)
+
+      **Subject line:**
+      > "O carrinho fechou — e agora?"
+
+      **Preview text:**
+      > "Obrigada por estar comigo nessa jornada."
+
+      ---
+
+      > Oi, [nome],
+      >
+      > O carrinho do {{nome_produto}} fechou ontem as {{hora_encerramento}}.
+      >
+      > **Se voce se inscreveu:**
+      > Parabens! Voce tomou uma decisao importante. Nos proximos dias,
+      > voce vai receber um email com todos os detalhes de acesso.
+      > Estou animada para caminhar com voce.
+      >
+      > **Se voce nao se inscreveu:**
+      > Tudo bem. Eu respeito sua decisao. O conteudo que compartilhei
+      > durante essa semana continua valido — aplique o que aprendeu.
+      >
+      > [Opcional: "Quando houver uma nova turma, voce sera a primeira
+      > a saber. Fique de olho nos meus emails."]
+      >
+      > Independente da sua escolha, obrigada por estar comigo durante
+      > esse lancamento. Sua atencao e seu tempo sao valiosos.
+      >
+      > Com carinho,
+      > {{nome_expert}}
+      >
+      > PS: Se voce quer continuar recebendo conteudo gratuito sobre
+      > {{nicho}}, fique por aqui. Toda semana eu compartilho algo novo.
+
+      **CTA:** Nenhum link de vendas (carrinho fechado).
+
+# =============================================================================
+# Diretrizes gerais da sequencia
+# =============================================================================
+guidelines:
+  frequencia: |
+    - Maximo 1 email por dia (exceto no ultimo dia, que pode ter 2)
+    - Respeite o horario do avatar (nao envie de madrugada)
+    - Se o carrinho ficar aberto por menos de 5 dias, elimine o Email 4
+
+  personalizacao: |
+    - Use o primeiro nome do lead sempre que possivel
+    - Segmente por engajamento se a ferramenta permitir:
+      - Quem assistiu o webinario → sequencia completa
+      - Quem nao assistiu → adicione email com replay antes do Email 1
+      - Quem clicou no link mas nao comprou → emails de urgencia reforçados
+
+  design: |
+    - Emails devem parecer pessoais (nao parecer newsletter)
+    - Evite templates visuais elaborados — texto simples converte melhor
+    - Use negrito com moderacao (apenas nos pontos-chave)
+    - Links de vendas devem ser texto clicavel, nao botoes grandes
+    - Assine com seu nome, nao com o nome da empresa
+
+  compliance: |
+    - Inclua link de descadastro em todos os emails
+    - Respeite LGPD (Lei Geral de Protecao de Dados)
+    - Nao use linguagem enganosa ou promessas irreais
+    - Urgencia e escassez devem ser REAIS (nunca falsas)
+    - Se o carrinho fechou, NAO reabra "so por mais 24h" — isso
+      destroi credibilidade para lancamentos futuros
+
+  metricas: |
+    Acompanhe para cada email:
+    - Taxa de abertura (benchmark: 25-40%)
+    - Taxa de clique (benchmark: 3-8%)
+    - Taxa de conversao (clique → compra)
+    - Taxa de descadastro (alerta se > 1% por email)
+
+    O Email 1 e o Email 5 geralmente geram mais vendas.
+    O Email 3 (FAQ) geralmente tem a maior taxa de abertura.

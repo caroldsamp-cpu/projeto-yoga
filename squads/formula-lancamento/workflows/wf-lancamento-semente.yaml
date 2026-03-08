@@ -1,0 +1,976 @@
+# =============================================================================
+# WORKFLOW: Lancamento Semente (Seed Launch)
+# =============================================================================
+# Baseado 100% na metodologia Formula de Lancamento (Erico Rocha / Hugo Rocha)
+# Rastreavel as aulas do modulo "Lancamento Semente"
+# =============================================================================
+
+workflow:
+  id: wf-lancamento-semente
+  name: "Lancamento Semente — Da Lista a Primeira Venda"
+  version: "1.0.0"
+  description: >
+    Workflow completo para executar um Lancamento Semente: construir lista,
+    aquecer inscritos, executar webinario com script de vendas (7 partes),
+    abrir carrinho e realizar debriefing. O objetivo NAO e 6em7 — e validar
+    oferta, validar entrega e gerar testemunhos para o Lancamento Classico.
+  duration: "21-28 dias (D-14 captacao + webinario + 5 dias carrinho + debriefing)"
+  best_for:
+    - "Primeira venda de um produto digital"
+    - "Validacao de oferta antes de gravar produto completo"
+    - "Geracao de testemunhos para lancamento classico"
+    - "Expert que nunca lancou antes"
+  language: pt-BR
+  source: "[SOURCE: Modulo Lancamento Semente — Formula de Lancamento]"
+
+  squad: formula-lancamento
+  orchestrator: fl-chief
+
+# =============================================================================
+# PRE-REQUISITES (GATES DE ENTRADA)
+# =============================================================================
+
+  prerequisites:
+    - gate: GATE_ALICERCE
+      description: "Alicerce completo — nicho, avatar e Roma definidos"
+      validation_agent: fl-alicerce
+      required_artifacts:
+        - nicho_definido: "Nicho escolhido e validado"
+        - avatar_documentado: "Avatar com dores, desejos e vocabulario mapeados"
+        - roma_dsa: "Roma validada com criterios DSA (Destino, Simples, Atrativa)"
+        - arvore_objecoes: "Top 3-5 objecoes do avatar identificadas"
+      veto_if: "Qualquer artefato ausente — nao iniciar semente sem alicerce"
+      source: "[SOURCE: Base e Fundamentos]"
+
+    - gate: GATE_OFERTA
+      description: "Oferta montada com os 6 elementos"
+      validation_agent: fl-oferta
+      required_artifacts:
+        - entregaveis: "Lista clara do que o aluno recebe"
+        - preco: "Preco definido com comparavel (custo de NAO ter a Roma)"
+        - garantia: "Tipo de garantia definido"
+        - bonus: "Bonus definidos (se houver)"
+        - nome_produto: "Nome do produto definido"
+        - mecanismo_entrega: "Como o produto sera entregue (plataforma, formato)"
+      veto_if: "Entregaveis, preco ou garantia indefinidos"
+      source: "[SOURCE: Modulo Base e Fundamentos — Oferta]"
+
+    - gate: GATE_LISTA_MINIMA
+      description: "Minimo 100 leads na lista OU plano de captacao aprovado"
+      validation_agent: fl-lancamento-semente
+      conditions:
+        - "Lista existente >= 100 leads com email valido"
+        - "OU plano de captacao paga aprovado com orcamento definido"
+      veto_if: "Zero leads E zero plano de captacao paga"
+      note: >
+        "A maior parte da construcao da sua lista nao vai vindo do organico.
+        Nao confie a sua geracao de lista no organico."
+      source: "[SOURCE: Paga vs. Organica.txt]"
+
+# =============================================================================
+# AGENT ASSIGNMENTS
+# =============================================================================
+
+  agent_assignments:
+    fl-chief:
+      role: "Orquestrador geral — direciona para o agente certo em cada fase"
+      participates_in: [all_phases]
+      authority: "Pode vetar transicao entre fases se gate nao passar"
+
+    fl-alicerce:
+      role: "Valida pre-requisitos de nicho, avatar e Roma"
+      participates_in: [prerequisites, phase_0]
+      authority: "Veta inicio se alicerce incompleto"
+
+    fl-oferta:
+      role: "Valida e refina oferta antes do script"
+      participates_in: [prerequisites, phase_0]
+      authority: "Veta inicio se oferta sem entregaveis/preco/garantia"
+
+    fl-lancamento-semente:
+      role: "Agente principal — guia todas as 4 fases do semente"
+      participates_in: [all_phases]
+      authority: "Agente primario de execucao. Decide timing e sequencia."
+
+    fl-conteudo:
+      role: "Apoia criacao de conteudo de aquecimento e material de captacao"
+      participates_in: [phase_1, phase_2]
+      authority: "Consultivo — sugere conteudo alinhado a Roma"
+
+    fl-copy:
+      role: "Apoia criacao de copy para anuncios, emails e script de vendas"
+      participates_in: [phase_1, phase_2, phase_3, phase_4]
+      authority: "Consultivo — refina copy com gatilhos mentais"
+
+# =============================================================================
+# PHASES
+# =============================================================================
+
+  phases:
+
+    # =========================================================================
+    # PHASE 0: PRE-LANCAMENTO (Preparacao Tecnica e Script)
+    # =========================================================================
+    - id: phase_0
+      name: "Pre-Lancamento — Preparacao Tecnica e Script"
+      days: "D-21 a D-14"
+      duration_days: 7
+      tier: preparation
+      description: >
+        Preparar todos os elementos tecnicos e o script de vendas ANTES
+        de iniciar a captacao. Nada de improvisar na vespera.
+      agent: fl-lancamento-semente
+      support_agents: [fl-copy, fl-oferta]
+
+      tasks:
+        - id: t0.1
+          name: "Pesquisa com o avatar"
+          agent: fl-lancamento-semente
+          description: "Coletar dores, obstaculos e vocabulario real do avatar"
+          inputs:
+            - "Avatar documentado (do alicerce)"
+          outputs:
+            - "pesquisa-avatar.txt — respostas reais coletadas"
+          acceptance_criteria:
+            - "Minimo 5 respostas reais coletadas"
+            - "Vocabulario do avatar (nao do expert) documentado"
+            - "Top 3-5 objecoes identificadas na voz do avatar"
+          source: "[SOURCE: Pesquisa com o Avatar.txt]"
+
+        - id: t0.2
+          name: "Decisao sobre produto"
+          agent: fl-lancamento-semente
+          description: "Decidir se vende antes de gravar ou produto ja pronto"
+          inputs:
+            - "Oferta montada (do gate)"
+          outputs:
+            - "Decisao documentada + esquema do produto (modulos/aulas)"
+          acceptance_criteria:
+            - "Opcao escolhida: vender antes OU produto pronto"
+            - "Se vender antes: todos os modulos esquematizados com datas de entrega"
+            - "Se produto pronto: produto funcional e acessivel"
+          source: "[SOURCE: Introducao ao Lancamento Semente.txt]"
+
+        - id: t0.3
+          name: "Construcao do script de vendas (7 partes)"
+          agent: fl-copy
+          description: "Montar script completo seguindo as 7 partes obrigatorias"
+          inputs:
+            - "Roma (DSA) validada"
+            - "Pesquisa com avatar (t0.1)"
+            - "Oferta montada"
+          outputs:
+            - "script-vendas-semente.md — script completo e ensaiado"
+          acceptance_criteria:
+            - "Parte 1 — Roma (DSA): Destino + Simples + Atrativa"
+            - "Parte 2 — Prova: pelo menos 1 caso de resultado real"
+            - "Parte 3 — Historia: jornada do expert com conexao emocional"
+            - "Parte 4 — Conteudo: valor real conectado a Roma"
+            - "Parte 5 — Oferta: entregaveis + preco + garantia + bonus"
+            - "Parte 6 — Quebra de Objecoes: top 3-5 objecoes respondidas"
+            - "Parte 7 — CTA: instrucao clara + prazo de fechamento (terca)"
+            - "Script ensaiado pelo menos 1 vez em voz alta"
+          source: "[SOURCE: Estrutura Geral do Script de Vendas.txt]"
+
+        - id: t0.4
+          name: "Setup tecnico completo"
+          agent: fl-lancamento-semente
+          description: "Configurar e testar toda infraestrutura tecnica"
+          inputs:
+            - "Oferta montada"
+            - "Script de vendas pronto (t0.3)"
+          outputs:
+            - "Checklist tecnico validado"
+          acceptance_criteria:
+            - "Pagina de inscricao do webinario funcionando (formulario + tag)"
+            - "Plataforma de transmissao ao vivo configurada e testada"
+            - "Pagina de vendas funcionando com botao de compra"
+            - "Gateway de pagamento configurado e testado (compra teste feita)"
+            - "Sequencia de emails de aquecimento preparada"
+            - "Sequencia de emails de carrinho aberto preparada (sex, dom, ter)"
+            - "Anuncios de captacao criados e aprovados (se pago)"
+          source: "[SOURCE: Lancamento Semente — Preparacao Tecnica]"
+
+      checkpoints:
+        - id: cp0.1
+          name: "Gate de Prontidao Tecnica"
+          description: "Verificar se TUDO esta pronto antes de ligar captacao"
+          timing: "D-14 (antes de iniciar Fase 1)"
+          heuristics:
+            - "Script de vendas completo com 7 partes na sequencia correta"
+            - "Todas as paginas funcionando (inscricao, vendas, checkout)"
+            - "Compra teste realizada com sucesso no gateway"
+            - "Emails de aquecimento e carrinho redigidos e agendados"
+            - "Anuncios criados e aprovados (se usando pago)"
+          veto_conditions:
+            - "Script de vendas incompleto ou sem Roma"
+            - "Pagina de vendas ou checkout com erro"
+            - "Gateway de pagamento nao testado"
+            - "Zero emails preparados para aquecimento"
+          veto_action: "BLOQUEAR Fase 1 ate resolver. Nao iniciar captacao sem infraestrutura."
+          agent: fl-lancamento-semente
+
+      completion_signals:
+        - "Todos os 4 tasks com status completo"
+        - "Checkpoint cp0.1 aprovado sem vetos"
+        - "Data do webinario definida no calendario"
+
+      output_artifacts:
+        - "pesquisa-avatar.txt"
+        - "script-vendas-semente.md"
+        - "checklist-tecnico-validado.md"
+
+    # =========================================================================
+    # PHASE 1: CONSTRUCAO DA LISTA (D-14 ao Webinario)
+    # =========================================================================
+    - id: phase_1
+      name: "Construcao da Lista de Inscritos"
+      days: "D-14 a D-1"
+      duration_days: 14
+      tier: execution
+      description: >
+        Construir lista de inscritos para o webinario usando captacao paga
+        como canal principal e organico como bonus. Anunciar como
+        "aula ao vivo gratuita" — NUNCA como "lancamento semente".
+      agent: fl-lancamento-semente
+      support_agents: [fl-conteudo, fl-copy]
+
+      tasks:
+        - id: t1.1
+          name: "Ativar captacao paga"
+          agent: fl-lancamento-semente
+          description: "Ligar anuncios pagos para captar leads"
+          inputs:
+            - "Anuncios aprovados (t0.4)"
+            - "Pagina de inscricao funcionando (t0.4)"
+          outputs:
+            - "Campanhas ativas com metricas diarias"
+          acceptance_criteria:
+            - "Anuncios ativados no D-14"
+            - "Monitoramento diario de CPL (custo por lead)"
+            - "Ajustes de criativos feitos se CPL acima do esperado"
+            - "Orcamento diario definido e respeitado"
+          source: "[SOURCE: Paga vs. Organica.txt]"
+
+        - id: t1.2
+          name: "Ativar captacao organica (se aplicavel)"
+          agent: fl-conteudo
+          description: "Chamadas organicas nas plataformas onde tem audiencia"
+          inputs:
+            - "Audiencia existente (se houver)"
+          outputs:
+            - "Posts/stories de chamada para o webinario"
+          acceptance_criteria:
+            - "Chamadas postadas nas plataformas onde tem audiencia"
+            - "Iniciado no mesmo dia da captacao paga"
+            - "Expectativa calibrada: organico = bonus, nao principal"
+          conditional: "Apenas se tem audiencia existente. Zero audiencia = skip."
+          source: "[SOURCE: Paga vs. Organica.txt]"
+
+        - id: t1.3
+          name: "Monitoramento diario da lista"
+          agent: fl-lancamento-semente
+          description: "Acompanhar crescimento da lista e ajustar estrategia"
+          inputs:
+            - "Metricas de captacao (t1.1, t1.2)"
+          outputs:
+            - "Relatorio diario de leads captados"
+          acceptance_criteria:
+            - "Numero de leads acompanhado diariamente"
+            - "CPL monitorado e dentro do esperado"
+            - "Ajustes feitos se performance abaixo do esperado"
+
+      checkpoints:
+        - id: cp1.1
+          name: "Gate de Volume de Lista (D-7)"
+          description: "Verificar se lista esta crescendo no ritmo esperado"
+          timing: "D-7 (metade do periodo de captacao)"
+          heuristics:
+            - "Lista com pelo menos 50% da meta de inscritos"
+            - "CPL dentro do orcamento planejado"
+            - "Tendencia de crescimento consistente"
+            - "Taxa de conversao da pagina de inscricao >= 20%"
+          veto_conditions:
+            - "Zero leads captados apos 7 dias"
+            - "CPL 3x acima do planejado sem tendencia de queda"
+            - "Pagina de inscricao com taxa de conversao < 5%"
+          veto_action: "PAUSAR captacao. Revisar criativos, pagina de inscricao e segmentacao."
+          agent: fl-lancamento-semente
+
+        - id: cp1.2
+          name: "Gate de Lista Final (D-1)"
+          description: "Confirmar lista pronta para o webinario"
+          timing: "D-1 (vespera do webinario)"
+          heuristics:
+            - "Lista com minimo 100 inscritos (ideal: 200+)"
+            - "Emails de aquecimento enviados"
+            - "Inscritos lembrados de data, horario e link"
+            - "Plataforma de transmissao testada novamente"
+          veto_conditions:
+            - "Lista com menos de 30 inscritos"
+            - "Plataforma de transmissao nao funciona"
+            - "Link do webinario invalido"
+          veto_action: >
+            Se < 30 inscritos: avaliar adiamento.
+            Se problema tecnico: resolver ANTES do webinario, mesmo que na madrugada.
+          agent: fl-lancamento-semente
+
+      completion_signals:
+        - "Lista de inscritos construida com volume adequado"
+        - "Captacao paga executada por 14 dias"
+        - "Checkpoints cp1.1 e cp1.2 aprovados"
+        - "Todos os inscritos notificados sobre o webinario"
+
+      output_artifacts:
+        - "relatorio-captacao.md (leads totais, CPL, fonte paga vs organico)"
+        - "lista-inscritos (na plataforma de email/CRM)"
+
+    # =========================================================================
+    # PHASE 2: AQUECIMENTO (Semana do Webinario)
+    # =========================================================================
+    - id: phase_2
+      name: "Aquecimento dos Inscritos"
+      days: "D-7 a D-1"
+      duration_days: 7
+      tier: execution
+      description: >
+        Aquecer a lista para maximizar comparecimento no webinario.
+        Enviar notificacoes, dar gostinho do conteudo, construir
+        antecipacao e autoridade.
+      agent: fl-lancamento-semente
+      support_agents: [fl-conteudo, fl-copy]
+      note: "Fase 2 roda em paralelo com a segunda metade da Fase 1"
+
+      tasks:
+        - id: t2.1
+          name: "Sequencia de emails de aquecimento"
+          agent: fl-copy
+          description: "Enviar emails que constroem antecipacao e maximizam comparecimento"
+          inputs:
+            - "Lista de inscritos"
+            - "Conteudo do webinario (script)"
+          outputs:
+            - "Emails de aquecimento enviados"
+          acceptance_criteria:
+            - "Email 1 (D-7): Confirmacao de inscricao + o que esperar"
+            - "Email 2 (D-5): Conteudo amostra / gostinho do que vem"
+            - "Email 3 (D-3): Prova social ou historia do expert"
+            - "Email 4 (D-1): Lembrete final com link e horario"
+            - "Todos os emails com assunto atrativo e CTA para comparecer"
+          source: "[SOURCE: As 4 fases do Lancamento Semente.txt]"
+
+        - id: t2.2
+          name: "Conteudo de aquecimento nas redes"
+          agent: fl-conteudo
+          description: "Posts e stories que constroem autoridade e antecipacao"
+          inputs:
+            - "Roma definida"
+            - "Pesquisa com avatar (t0.1)"
+          outputs:
+            - "Conteudo de aquecimento publicado"
+          acceptance_criteria:
+            - "Conteudo conectado a Roma (nao conteudo aleatorio)"
+            - "Prova social compartilhada (se disponivel)"
+            - "Lembrete do webinario em cada post"
+          conditional: "Apenas se tem presenca ativa em redes sociais"
+
+        - id: t2.3
+          name: "Notificacoes de lembrete (D-1 e dia D)"
+          agent: fl-lancamento-semente
+          description: "Garantir que inscritos lembrem e compareçam"
+          inputs:
+            - "Lista de inscritos"
+            - "Data e horario do webinario"
+          outputs:
+            - "Notificacoes enviadas"
+          acceptance_criteria:
+            - "Lembrete D-1: email + WhatsApp/Telegram (se possivel)"
+            - "Lembrete dia D manha: 'Hoje a noite tem aula'"
+            - "Lembrete dia D 1h antes: 'Comeca em 1 hora'"
+            - "Lembrete dia D 15min antes: 'Ja estamos ao vivo'"
+
+      checkpoints:
+        - id: cp2.1
+          name: "Gate de Aquecimento Completo"
+          description: "Verificar se inscritos foram aquecidos antes do webinario"
+          timing: "D-0 (dia do webinario, antes da transmissao)"
+          heuristics:
+            - "Todos os emails de aquecimento enviados"
+            - "Taxa de abertura dos emails >= 30%"
+            - "Lembretes enviados (D-1 e dia D)"
+            - "Nenhum problema tecnico reportado pelos inscritos"
+            - "Link do webinario testado e funcional"
+          veto_conditions:
+            - "Zero emails de aquecimento enviados"
+            - "Link do webinario quebrado no dia D"
+            - "Plataforma de transmissao fora do ar"
+          veto_action: >
+            Se link quebrado: corrigir IMEDIATAMENTE e reenviar.
+            Se plataforma fora: ativar plano B (YouTube Live, Zoom, etc).
+            Se zero emails: enviar pelo menos 1 lembrete de urgencia.
+          agent: fl-lancamento-semente
+
+      completion_signals:
+        - "Todos os emails de aquecimento enviados"
+        - "Lembretes de dia D enviados"
+        - "Checkpoint cp2.1 aprovado"
+        - "Expert pronto e ensaiado para o webinario"
+
+      output_artifacts:
+        - "emails-aquecimento-enviados.md (registro dos envios)"
+        - "metricas-aquecimento.md (taxas de abertura, cliques)"
+
+    # =========================================================================
+    # PHASE 3: WEBINARIO / AULA AO VIVO (Dia D — Quinta-feira)
+    # =========================================================================
+    - id: phase_3
+      name: "Webinario — Execucao do Script de Vendas"
+      days: "D-0 (quinta-feira recomendado)"
+      duration_days: 1
+      tier: execution_critical
+      description: >
+        Executar o webinario ao vivo seguindo o script de vendas de 7 partes.
+        Para o publico e uma "aula ao vivo gratuita". Para voce e um script
+        de vendas. A oferta DEVE ser feita durante o webinario.
+      agent: fl-lancamento-semente
+      support_agents: [fl-copy]
+
+      tasks:
+        - id: t3.1
+          name: "Pre-webinario — checklist de ultima hora"
+          agent: fl-lancamento-semente
+          description: "Verificacoes finais antes de ir ao vivo"
+          inputs:
+            - "Script de vendas pronto"
+            - "Setup tecnico validado"
+          outputs:
+            - "Checklist pre-webinario OK"
+          acceptance_criteria:
+            - "Script impresso ou na tela (nao decorar)"
+            - "Plataforma de transmissao testada (som, video, tela)"
+            - "Link de compra testado e funcional"
+            - "Agua, ambiente silencioso, iluminacao OK"
+            - "Chat ao vivo configurado (se aplicavel)"
+            - "Gravacao ativada (backup)"
+
+        - id: t3.2
+          name: "Execucao do script de vendas (7 partes)"
+          agent: fl-lancamento-semente
+          description: "Executar o webinario seguindo a sequencia obrigatoria"
+          inputs:
+            - "Script de vendas (t0.3)"
+            - "Inscritos online"
+          outputs:
+            - "Webinario executado + gravacao"
+          acceptance_criteria:
+            - "Parte 1 — Roma (DSA): apresentada nos primeiros 2 minutos"
+            - "Parte 2 — Prova: apresentada logo apos a Roma"
+            - "Parte 3 — Historia: jornada do expert contada"
+            - "Parte 4 — Conteudo: valor real entregue (conectado a Roma)"
+            - "Parte 5 — Oferta: entregaveis + preco + garantia + bonus"
+            - "Parte 6 — Objecoes: top 3-5 objecoes respondidas"
+            - "Parte 7 — CTA: link de compra + prazo de fechamento (terca)"
+            - "Carrinho ABERTO ao final do webinario"
+          source: "[SOURCE: Estrutura Geral do Script de Vendas.txt]"
+
+        - id: t3.3
+          name: "Pos-webinario imediato"
+          agent: fl-lancamento-semente
+          description: "Acoes imediatas apos encerrar a transmissao"
+          inputs:
+            - "Webinario encerrado"
+          outputs:
+            - "Acoes pos-webinario executadas"
+          acceptance_criteria:
+            - "Email pos-webinario enviado (replay + link de compra)"
+            - "Primeiras vendas registradas e acompanhadas"
+            - "Duvidas do chat respondidas (se houve)"
+            - "Gravacao salva como backup"
+
+      checkpoints:
+        - id: cp3.1
+          name: "Gate Pre-Transmissao"
+          description: "Ultima verificacao antes de ir ao vivo"
+          timing: "D-0, 30 minutos antes do webinario"
+          heuristics:
+            - "Script na mao (impresso ou tela)"
+            - "Plataforma de transmissao funcionando"
+            - "Link de compra testado"
+            - "Gravacao ativada"
+            - "Expert pronto e calmo"
+          veto_conditions:
+            - "Link de compra ou checkout quebrado"
+            - "Plataforma de transmissao nao funciona"
+            - "Script de vendas perdido ou incompleto"
+          veto_action: >
+            Se checkout quebrado: ADIAR webinario e notificar inscritos.
+            Nao executar webinario sem poder vender.
+          agent: fl-lancamento-semente
+
+        - id: cp3.2
+          name: "Gate de Execucao do Script"
+          description: "Verificar se o script foi executado corretamente"
+          timing: "Imediatamente apos o webinario"
+          heuristics:
+            - "Todas as 7 partes do script executadas na ordem correta"
+            - "Roma apresentada nos primeiros 2 minutos"
+            - "Oferta foi feita (nao foi aula sem oferta)"
+            - "CTA dado com link claro"
+            - "Prazo de fechamento anunciado (terca)"
+            - "Carrinho aberto ao final"
+          veto_conditions:
+            - "Oferta NAO foi feita durante o webinario"
+            - "CTA NAO foi dado"
+            - "Carrinho NAO foi aberto"
+          veto_action: >
+            Se oferta nao foi feita: enviar email de oferta IMEDIATAMENTE
+            apos o webinario. Nao desperdicar o aquecimento.
+            ALERTA: "Isso nao e aula — e um script de vendas."
+          agent: fl-lancamento-semente
+
+      completion_signals:
+        - "Webinario executado com script completo (7 partes)"
+        - "Oferta feita e carrinho aberto"
+        - "Email pos-webinario enviado"
+        - "Checkpoints cp3.1 e cp3.2 aprovados"
+
+      output_artifacts:
+        - "gravacao-webinario (video/audio)"
+        - "metricas-webinario.md (comparecimento, duracao, pico de audiencia)"
+        - "vendas-durante-webinario.md (primeiras conversoes)"
+
+    # =========================================================================
+    # PHASE 4: CARRINHO ABERTO (Quinta -> Terca)
+    # =========================================================================
+    - id: phase_4
+      name: "Carrinho Aberto — Periodo de Vendas"
+      days: "D+0 (quinta) a D+5 (terca)"
+      duration_days: 5
+      tier: execution_critical
+      description: >
+        Periodo de carrinho aberto com sequencia de notificacoes
+        estrategicas. Escassez real: o carrinho FECHA na terca.
+        Nao prolongar.
+      agent: fl-lancamento-semente
+      support_agents: [fl-copy]
+
+      tasks:
+        - id: t4.1
+          name: "Notificacao 1 — Sexta-feira"
+          agent: fl-copy
+          description: "Email de carrinho aberto para quem nao comprou"
+          inputs:
+            - "Lista de inscritos que nao compraram"
+            - "Link da pagina de vendas"
+          outputs:
+            - "Email enviado"
+          acceptance_criteria:
+            - "Email enviado para todos que nao compraram"
+            - "Replay do webinario disponivel (se aplicavel)"
+            - "Link de compra claro e funcional"
+            - "Tom: oportunidade aberta, sem desespero"
+          source: "[SOURCE: As 4 fases do Lancamento Semente.txt]"
+
+        - id: t4.2
+          name: "Notificacao 2 — Domingo"
+          agent: fl-copy
+          description: "Lembrete de meio de semana"
+          inputs:
+            - "Lista de nao-compradores"
+          outputs:
+            - "Email enviado"
+          acceptance_criteria:
+            - "Email com prova social (se houver vendas/testemunhos)"
+            - "Reforco da Roma e beneficios"
+            - "Lembrete de que carrinho fecha terca"
+            - "Link de compra"
+          source: "[SOURCE: As 4 fases do Lancamento Semente.txt]"
+
+        - id: t4.3
+          name: "Notificacao 3 — Terca-feira (fechamento)"
+          agent: fl-copy
+          description: "Email de ultima chance — carrinho fecha hoje"
+          inputs:
+            - "Lista de nao-compradores"
+          outputs:
+            - "Email de fechamento enviado"
+          acceptance_criteria:
+            - "Tom de urgencia real: 'Hoje e o ultimo dia'"
+            - "Reforco da garantia (reduzir risco percebido)"
+            - "Quebra da ultima objecao"
+            - "CTA final claro"
+            - "Horario de fechamento especificado"
+          source: "[SOURCE: As 4 fases do Lancamento Semente.txt]"
+
+        - id: t4.4
+          name: "Fechar carrinho"
+          agent: fl-lancamento-semente
+          description: "Encerrar vendas pontualmente na terca"
+          inputs:
+            - "Horario de fechamento definido"
+          outputs:
+            - "Carrinho fechado + relatorio de vendas"
+          acceptance_criteria:
+            - "Carrinho realmente fechado no horario anunciado"
+            - "Pagina de vendas atualizada (carrinho encerrado)"
+            - "NAO prolongar o prazo (escassez real)"
+            - "Relatorio de vendas consolidado"
+
+      checkpoints:
+        - id: cp4.1
+          name: "Gate de Sequencia de Notificacoes"
+          description: "Verificar se as 3 notificacoes foram enviadas"
+          timing: "Terca-feira (antes de fechar carrinho)"
+          heuristics:
+            - "Notificacao sexta enviada"
+            - "Notificacao domingo enviada"
+            - "Notificacao terca enviada"
+            - "Todas com link de compra funcional"
+            - "Carrinho ainda aberto e funcional"
+          veto_conditions:
+            - "Nenhuma notificacao enviada durante o periodo"
+            - "Link de compra quebrado durante carrinho aberto"
+          veto_action: >
+            Se zero notificacoes: enviar ao menos a de fechamento (terca).
+            Se link quebrado: corrigir IMEDIATAMENTE e estender prazo em 24h.
+          agent: fl-lancamento-semente
+
+        - id: cp4.2
+          name: "Gate de Fechamento do Carrinho"
+          description: "Confirmar que carrinho foi fechado corretamente"
+          timing: "Terca-feira, apos horario de fechamento"
+          heuristics:
+            - "Carrinho fechado no horario anunciado"
+            - "Pagina de vendas atualizada"
+            - "Relatorio de vendas consolidado"
+            - "Numero de vendas registrado"
+            - "Faturamento total calculado"
+          veto_conditions:
+            - "Carrinho prolongado alem da terca sem motivo tecnico"
+            - "Vendas nao registradas ou perdidas"
+          veto_action: >
+            NUNCA prolongar carrinho por falta de vendas.
+            Escassez e real. Fechar e analisar no debriefing.
+          agent: fl-lancamento-semente
+
+      completion_signals:
+        - "3 notificacoes enviadas (sex, dom, ter)"
+        - "Carrinho fechado na terca no horario anunciado"
+        - "Relatorio de vendas consolidado"
+        - "Checkpoints cp4.1 e cp4.2 aprovados"
+
+      output_artifacts:
+        - "relatorio-vendas-semente.md (vendas, faturamento, taxa de conversao)"
+        - "emails-carrinho-enviados.md (registro dos 3 envios)"
+
+    # =========================================================================
+    # PHASE 5: POS-LANCAMENTO (Entrega + Debriefing)
+    # =========================================================================
+    - id: phase_5
+      name: "Pos-Lancamento — Entrega e Debriefing"
+      days: "D+6 a D+14"
+      duration_days: 7
+      tier: closure
+      description: >
+        Entregar o produto com over delivery, acompanhar alunos de perto,
+        coletar testemunhos e realizar debriefing completo. O debriefing
+        NAO e opcional — e tao importante quanto o lancamento.
+      agent: fl-lancamento-semente
+      support_agents: []
+
+      tasks:
+        - id: t5.1
+          name: "Onboarding e entrega do produto"
+          agent: fl-lancamento-semente
+          description: "Dar boas-vindas e iniciar entrega aos compradores"
+          inputs:
+            - "Lista de compradores"
+            - "Produto (esquematizado ou pronto)"
+          outputs:
+            - "Compradores com acesso e cronograma de entrega"
+          acceptance_criteria:
+            - "Boas-vindas enviadas com cronograma de entrega"
+            - "Acesso ao produto liberado (ou primeira entrega feita)"
+            - "Canal de comunicacao com alunos ativo (grupo, email)"
+            - "Cada aluno acompanhado de perto (turma pequena = vantagem)"
+
+        - id: t5.2
+          name: "Over delivery e acompanhamento"
+          agent: fl-lancamento-semente
+          description: "Entregar alem do prometido e acompanhar resultados"
+          inputs:
+            - "Alunos matriculados"
+          outputs:
+            - "Registro de progresso dos alunos"
+          acceptance_criteria:
+            - "Over delivery feito onde possivel (entregar alem do prometido)"
+            - "Metodo validado: esta funcionando para os alunos?"
+            - "Dificuldades dos alunos mapeadas para ajustar produto"
+            - "Feedback coletado de cada aluno"
+          source: "[SOURCE: Entrega do Produto Semente]"
+
+        - id: t5.3
+          name: "Coleta de testemunhos"
+          agent: fl-lancamento-semente
+          description: "Coletar testemunhos dos alunos que tiveram resultado"
+          inputs:
+            - "Alunos com progresso/resultado"
+          outputs:
+            - "testemunhos-semente.md"
+          acceptance_criteria:
+            - "Pelo menos 1 testemunho coletado (ideal: todos os alunos)"
+            - "Testemunhos especificos (nome, situacao, resultado)"
+            - "Formato: video preferivel, texto aceito"
+            - "Permissao de uso obtida"
+          note: "Testemunhos sao CRITICOS para o Lancamento Classico"
+
+        - id: t5.4
+          name: "Debriefing completo"
+          agent: fl-lancamento-semente
+          description: "Reservar dia inteiro para analisar o que deu certo e errado"
+          inputs:
+            - "Metricas de todas as fases"
+            - "Experiencia do lancamento"
+          outputs:
+            - "debriefing-semente.md"
+          acceptance_criteria:
+            - "1 dia inteiro reservado no calendario para debriefing"
+            - "Debriefing feito com cabeca fria (alguns dias apos fechamento)"
+            - "Para cada fase: O que deu certo? O que deu errado?"
+            - "Fase 1 (Lista): leads captados, CPL, fonte paga vs organico"
+            - "Fase 2 (Aquecimento): taxa de abertura, engajamento"
+            - "Fase 3 (Webinario): comparecimento, duracao, reacao do publico"
+            - "Fase 4 (Carrinho): vendas, taxa de conversao, faturamento"
+            - "Acoes de melhoria listadas para o proximo lancamento"
+            - "Documento preenchido com profundidade (nao 'nas coxas')"
+          source: "[SOURCE: Debriefing do seu Lancamento Semente.txt]"
+
+      checkpoints:
+        - id: cp5.1
+          name: "Gate de Entrega Validada"
+          description: "Verificar se produto esta sendo entregue e metodo funciona"
+          timing: "D+10 (4 dias apos inicio da entrega)"
+          heuristics:
+            - "Todos os compradores com acesso ao produto"
+            - "Pelo menos 1 aluno com progresso visivel"
+            - "Canal de comunicacao ativo e responsivo"
+            - "Over delivery realizado"
+          veto_conditions:
+            - "Compradores sem acesso ao produto"
+            - "Zero comunicacao com alunos apos a compra"
+            - "Produto nao entregue conforme prometido"
+          veto_action: "RESOLVER IMEDIATAMENTE. Entrega e prioridade absoluta."
+          agent: fl-lancamento-semente
+
+        - id: cp5.2
+          name: "Gate de Debriefing Completo"
+          description: "Verificar se debriefing foi feito com profundidade"
+          timing: "D+14 (fim da fase pos-lancamento)"
+          heuristics:
+            - "Debriefing realizado com dia reservado"
+            - "Todas as 4 fases analisadas (certo + errado)"
+            - "Metricas consolidadas (leads, comparecimento, vendas, faturamento)"
+            - "Acoes de melhoria documentadas"
+            - "Testemunhos coletados"
+            - "Decisao tomada: classico ou ajustar e relancar"
+          veto_conditions:
+            - "Debriefing nao realizado"
+            - "Debriefing superficial (sem metricas ou analise)"
+            - "Zero testemunhos coletados (se houve vendas)"
+          veto_action: >
+            BLOQUEAR transicao para o Lancamento Classico ate debriefing
+            completo. "Tao importante quanto executar e entender o que deu
+            certo e o que deu errado." [SOURCE: Debriefing.txt]
+          agent: fl-lancamento-semente
+
+        - id: cp5.3
+          name: "Gate Final — Pronto para Ciclos Evolutivos?"
+          description: "Decisao de proximo passo: classico ou ajustar semente"
+          timing: "Apos debriefing completo"
+          heuristics:
+            - "Pelo menos 1 venda realizada"
+            - "Debriefing completo e documentado"
+            - "Testemunhos coletados"
+            - "Licoes aprendidas documentadas"
+            - "Expert motivado e pronto para o proximo passo"
+          veto_conditions:
+            - "Debriefing nao realizado"
+            - "Expert quer repetir semente indefinidamente apos validar oferta"
+          veto_action: >
+            Se validou oferta (>=1 venda): TRANSITAR para Lancamento Classico.
+            "Nao se vicie no semente. Fez uma venda? Entre nos ciclos evolutivos."
+            [SOURCE: Ciclos Evolutivos.txt]
+            Se zero vendas: revisar debriefing, identificar causas, replanejar semente.
+          agent: fl-lancamento-semente
+          decision_tree:
+            vendas_gte_1:
+              action: "PASS — Iniciar planejamento do Lancamento Classico"
+              handoff_to: fl-lancamento-classico
+              heuristic_trigger: "LS_H001 (Detector de Vicio no Semente)"
+            vendas_zero:
+              action: "REVISAR — Analisar debriefing e replanejar semente"
+              handoff_to: fl-oferta
+              note: "Revisar oferta antes de relancar"
+
+      completion_signals:
+        - "Produto entregue a todos os compradores"
+        - "Testemunhos coletados"
+        - "Debriefing completo e documentado"
+        - "Decisao de proximo passo tomada"
+        - "Todos os checkpoints (cp5.1, cp5.2, cp5.3) aprovados"
+
+      output_artifacts:
+        - "testemunhos-semente.md"
+        - "debriefing-semente.md"
+        - "relatorio-final-semente.md (consolidado de todas as metricas)"
+
+# =============================================================================
+# QUALITY CHECKLIST (Validacao Geral do Workflow)
+# =============================================================================
+
+  quality_checklist:
+    - id: qc1
+      check: "Alicerce completo antes de iniciar"
+      responsible: fl-alicerce
+      mandatory: true
+
+    - id: qc2
+      check: "Oferta com entregaveis, preco e garantia definidos"
+      responsible: fl-oferta
+      mandatory: true
+
+    - id: qc3
+      check: "Script de vendas com 7 partes na ordem correta"
+      responsible: fl-copy
+      mandatory: true
+
+    - id: qc4
+      check: "Roma validada com criterios DSA"
+      responsible: fl-lancamento-semente
+      mandatory: true
+
+    - id: qc5
+      check: "Setup tecnico testado (paginas, checkout, emails)"
+      responsible: fl-lancamento-semente
+      mandatory: true
+
+    - id: qc6
+      check: "Captacao paga ativada (nao depender so de organico)"
+      responsible: fl-lancamento-semente
+      mandatory: true
+
+    - id: qc7
+      check: "Oferta feita durante o webinario (nao aula sem oferta)"
+      responsible: fl-lancamento-semente
+      mandatory: true
+
+    - id: qc8
+      check: "Carrinho fechado no prazo anunciado (escassez real)"
+      responsible: fl-lancamento-semente
+      mandatory: true
+
+    - id: qc9
+      check: "Debriefing realizado com profundidade"
+      responsible: fl-lancamento-semente
+      mandatory: true
+
+    - id: qc10
+      check: "Testemunhos coletados para uso no Lancamento Classico"
+      responsible: fl-lancamento-semente
+      mandatory: true
+
+    - id: qc11
+      check: "Decisao de proximo passo tomada (classico ou relancar)"
+      responsible: fl-chief
+      mandatory: true
+
+    - id: qc12
+      check: "Todo conselho rastreavel a aula especifica do curso"
+      responsible: fl-chief
+      mandatory: true
+
+# =============================================================================
+# ERROR HANDLING
+# =============================================================================
+
+  error_handling:
+    general_principle: >
+      "Feito e melhor que perfeito." Erros sao esperados no primeiro semente.
+      O importante e executar, aprender e documentar no debriefing.
+      [SOURCE: Os erros mais comuns no Lancamento Semente.txt]
+
+    scenarios:
+      - error: "Zero leads captados apos 7 dias"
+        severity: HIGH
+        action: "Pausar captacao. Revisar criativos, pagina e segmentacao."
+        agent: fl-lancamento-semente
+        escalate_to: fl-chief
+
+      - error: "Plataforma de transmissao fora do ar no dia D"
+        severity: CRITICAL
+        action: "Ativar plano B imediato (YouTube Live, Zoom, Google Meet)"
+        agent: fl-lancamento-semente
+        escalate_to: null
+        note: "Nao cancelar. Trocar de plataforma e avisar inscritos."
+
+      - error: "Gateway de pagamento nao funciona durante carrinho"
+        severity: CRITICAL
+        action: "Corrigir imediatamente. Se necessario, aceitar pagamento manual (Pix)."
+        agent: fl-lancamento-semente
+        escalate_to: fl-chief
+
+      - error: "Expert trava durante o webinario e nao faz oferta"
+        severity: HIGH
+        action: "Enviar email de oferta IMEDIATAMENTE apos o webinario."
+        agent: fl-copy
+        escalate_to: fl-lancamento-semente
+        note: "Oferta por email e melhor que nenhuma oferta."
+
+      - error: "Zero vendas apos fechar carrinho"
+        severity: MEDIUM
+        action: "NAO desistir. Debriefing detalhado + revisar oferta com fl-oferta."
+        agent: fl-lancamento-semente
+        escalate_to: fl-oferta
+        note: "Zero vendas no semente e dado, nao fracasso. Ajustar e relancar."
+
+      - error: "Expert quer prolongar carrinho alem da terca"
+        severity: MEDIUM
+        action: "BLOQUEAR. Escassez precisa ser real. Fechar e analisar."
+        agent: fl-lancamento-semente
+        escalate_to: null
+
+      - error: "Expert quer pular debriefing"
+        severity: HIGH
+        action: "BLOQUEAR transicao. Debriefing e obrigatorio."
+        agent: fl-lancamento-semente
+        heuristic: "LS_H005"
+
+      - error: "Expert quer repetir semente apos validar oferta"
+        severity: MEDIUM
+        action: "ALERTAR — transitar para Lancamento Classico."
+        agent: fl-lancamento-semente
+        heuristic: "LS_H001"
+
+# =============================================================================
+# WORKFLOW METADATA
+# =============================================================================
+
+  metadata:
+    created: "2026-03-08"
+    version: "1.0.0"
+    source: "Formula de Lancamento — Modulo Lancamento Semente (28 aulas)"
+    checklist_ref: "checklists/lancamento-semente-checklist.md"
+    agent_ref: "agents/fl-lancamento-semente.md"
+    related_workflows:
+      - "wf-lancamento-classico (proximo passo apos semente validado)"
+    total_duration: "21-28 dias"
+    phases_count: 6
+    checkpoints_count: 10
+    tasks_count: 18
+    heuristics_referenced:
+      - "LS_H001: Detector de Vicio no Semente"
+      - "LS_H002: Detector de Perfeccionismo"
+      - "LS_H003: Detector de Dependencia Organica"
+      - "LS_H004: Detector de Script Fora de Ordem"
+      - "LS_H005: Detector de Pulo do Debriefing"
+      - "LS_H006: Proposito Triplo"

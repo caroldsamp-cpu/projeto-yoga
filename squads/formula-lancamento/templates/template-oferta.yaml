@@ -1,0 +1,405 @@
+# =============================================================================
+# Template: Construcao de Oferta Completa
+# Squad: Formula de Lancamento
+# Metodologia: Erico Rocha / Hugo Rocha — Formula de Lancamento
+# Uso: Estruturar oferta para qualquer tipo de lancamento
+# =============================================================================
+
+template:
+  id: fl-oferta-v1
+  name: Construcao de Oferta Completa
+  version: "1.0"
+  squad: formula-lancamento
+  output:
+    format: markdown
+    filename: "outputs/oferta-{{nicho}}-{{data}}.md"
+    title: "Oferta — {{nome_produto}}"
+
+# -----------------------------------------------------------------------------
+# Placeholders
+# -----------------------------------------------------------------------------
+placeholders:
+  - id: nicho
+    label: Nicho de mercado
+    example: "yoga para iniciantes"
+  - id: avatar
+    label: Avatar / persona do comprador
+    example: "mulheres 30-50 anos, estressadas, nunca fizeram yoga"
+  - id: roma
+    label: Roma — destino transformacional
+    example: "praticar yoga em casa com autonomia e aliviar dores cronicas"
+  - id: nome_produto
+    label: Nome do produto/programa
+    example: "Yoga em Casa — Programa de 8 Semanas"
+  - id: tipo_produto
+    label: Tipo do produto
+    example: "curso online"
+    options:
+      - curso online
+      - mentoria em grupo
+      - mentoria individual
+      - programa de acompanhamento
+      - comunidade
+      - workshop
+  - id: preco
+    label: Preco do produto (R$)
+    example: "497"
+  - id: preco_parcelado
+    label: Opcao parcelada
+    example: "12x de R$ 49,70"
+  - id: garantia_tipo
+    label: Tipo de garantia
+    example: "incondicional"
+    options:
+      - incondicional
+      - condicional
+  - id: garantia_dias
+    label: Duracao da garantia em dias
+    example: "7"
+  - id: data
+    label: Data de criacao
+    example: "2026-03-08"
+
+# -----------------------------------------------------------------------------
+# Contexto metodologico
+# -----------------------------------------------------------------------------
+context:
+  source: "Formula de Lancamento — Erico Rocha / Hugo Rocha"
+  formula: |
+    P = O - R
+    Preco percebido = Oportunidade percebida - Risco percebido
+
+    Para tornar a oferta irresistivel:
+    - Aumente a Oportunidade percebida (entregaveis, bonus, transformacao)
+    - Diminua o Risco percebido (garantia, prova social, facilidade de pagamento)
+    - O Preco se torna irrelevante quando O >> R
+
+# =============================================================================
+# SECOES DA OFERTA
+# =============================================================================
+
+sections:
+
+  # ---------------------------------------------------------------------------
+  # SECAO 1: Nome da Oferta
+  # ---------------------------------------------------------------------------
+  - id: nome-oferta
+    title: "1. Nome da Oferta"
+    guidance: |
+      O nome do produto deve:
+      - Ser facil de lembrar e pronunciar
+      - Comunicar o resultado ou a transformacao
+      - Ter posicionamento claro (para quem e)
+      - Evitar jargoes tecnicos que o avatar nao entende
+
+      Formulas de nome eficazes:
+      - [Resultado] + [Formato]: "Yoga em Casa — Programa de 8 Semanas"
+      - [Metodo] + [Promessa]: "Metodo [Nome] — [Resultado em X tempo]"
+      - [Verbo] + [Objeto]: "Desperte Sua Pratica"
+
+      Posicionamento: uma frase que resume para quem e e o que faz.
+    template: |
+      ## 1. Nome da Oferta
+
+      **Nome do produto:** {{nome_produto}}
+
+      **Posicionamento (1 frase):**
+      > [O {{nome_produto}} e um {{tipo_produto}} para {{avatar}} que quer
+      > {{roma}}.]
+
+      **Tagline (opcional):**
+      > [Frase curta e memoravel que complementa o nome]
+
+  # ---------------------------------------------------------------------------
+  # SECAO 2: Entregaveis
+  # ---------------------------------------------------------------------------
+  - id: entregaveis
+    title: "2. Entregaveis"
+    guidance: |
+      Liste TUDO que o cliente recebe ao comprar. Seja especifico.
+
+      Para cada entregavel, defina:
+      - Nome claro
+      - Descricao curta (1-2 frases)
+      - Formato (video, PDF, ao vivo, etc.)
+      - Valor percebido individual (R$)
+      - Como contribui para {{roma}}
+
+      Tipos comuns de entregaveis:
+      - Modulos de conteudo (video-aulas)
+      - Material de apoio (PDFs, planilhas, checklists)
+      - Aulas ao vivo / Q&A
+      - Comunidade / grupo de suporte
+      - Acesso a ferramentas ou templates
+      - Certificado de conclusao
+
+      DICA: Quanto mais tangivel e especifico, maior o valor percebido.
+    template: |
+      ## 2. Entregaveis
+
+      | # | Entregavel | Descricao | Formato | Valor (R$) |
+      |---|-----------|-----------|---------|------------|
+      | 1 | [Nome do entregavel principal] | [O que e e como ajuda] | [video/PDF/ao vivo] | [valor] |
+      | 2 | [Nome do entregavel 2] | [O que e e como ajuda] | [video/PDF/ao vivo] | [valor] |
+      | 3 | [Nome do entregavel 3] | [O que e e como ajuda] | [video/PDF/ao vivo] | [valor] |
+      | 4 | [Nome do entregavel 4] | [O que e e como ajuda] | [video/PDF/ao vivo] | [valor] |
+      | 5 | [Nome do entregavel 5] | [O que e e como ajuda] | [video/PDF/ao vivo] | [valor] |
+
+      **Valor total dos entregaveis:** R$ [soma]
+
+  # ---------------------------------------------------------------------------
+  # SECAO 3: Preco
+  # ---------------------------------------------------------------------------
+  - id: preco
+    title: "3. Preco"
+    guidance: |
+      Formula: P = O - R (Preco = Oportunidade - Risco)
+
+      O preco deve ser justificado pelo valor entregue.
+      Sempre apresente o preco DEPOIS de empilhar o valor.
+
+      Estrategias de precificacao:
+      - Preco de lancamento (menor que o preco futuro)
+      - Ancoragem: mostre o valor total dos entregaveis antes
+      - Parcelamento: facilite o pagamento
+      - Comparacao: "menos que um cafe por dia"
+
+      Para Lancamento Semente (primeiro lancamento):
+      - Preco mais baixo (validacao, nao maximizacao)
+      - Justifique: "preco especial por ser a primeira turma"
+      - Objetivo: gerar resultados e depoimentos
+
+      Para Lancamento Classico (lancamentos posteriores):
+      - Preco pode ser maior (ja tem prova social)
+      - Use ancoragem mais agressiva
+    template: |
+      ## 3. Preco
+
+      **Ancoragem de valor:**
+      > Valor total dos entregaveis: R$ [soma_entregaveis]
+      > Valor total dos bonus: R$ [soma_bonus]
+      > **Valor total: R$ [soma_total]**
+
+      **Preco do produto:**
+      > **R$ {{preco}}**
+      > ou {{preco_parcelado}}
+
+      **Justificativa do preco:**
+      > [Por que esse preco? Conecte com o valor da transformacao]
+      > Exemplo: "Por menos de R$ [valor diario] por dia, voce tem acesso
+      > a [tudo que foi listado]."
+
+      **Comparacao de custo:**
+      > [Compare com algo que o avatar gasta sem pensar]
+      > Exemplo: "Menos do que voce gasta em [X] por mes."
+
+  # ---------------------------------------------------------------------------
+  # SECAO 4: Garantia
+  # ---------------------------------------------------------------------------
+  - id: garantia
+    title: "4. Garantia"
+    guidance: |
+      A garantia e o principal redutor de risco percebido.
+      Uma boa garantia pode ser mais poderosa que um desconto.
+
+      Tipos de garantia:
+
+      1. Incondicional (recomendada para lancamentos):
+         - "Se nao gostar, devolvo seu dinheiro. Sem perguntas."
+         - Prazo: 7 dias (minimo legal no Brasil) a 30 dias
+         - Reduz risco a zero para o comprador
+
+      2. Condicional:
+         - "Se voce aplicar o metodo por [X] dias e nao tiver resultado..."
+         - Requer prova de que a pessoa tentou
+         - Filtra compradores nao comprometidos
+
+      Recomendacao para Semente: garantia incondicional de 7 dias.
+      Recomendacao para Classico: pode estender para 15-30 dias.
+
+      IMPORTANTE: No Brasil, o CDC (Codigo de Defesa do Consumidor) garante
+      7 dias de arrependimento para compras online. Sua garantia pode ser
+      maior, nunca menor.
+    template: |
+      ## 4. Garantia
+
+      **Tipo:** {{garantia_tipo}}
+      **Duracao:** {{garantia_dias}} dias
+
+      **Texto da garantia:**
+      > [Se incondicional:]
+      > "Voce tem {{garantia_dias}} dias para experimentar o {{nome_produto}}.
+      > Se por qualquer motivo voce sentir que nao e para voce, basta enviar
+      > um email e eu devolvo 100% do seu investimento. Sem perguntas,
+      > sem burocracia."
+      >
+      > [Se condicional:]
+      > "Se voce aplicar o metodo por {{garantia_dias}} dias, seguir os
+      > passos e nao ver resultado, me mande um email mostrando que voce
+      > fez as atividades e eu devolvo seu dinheiro integralmente."
+
+      **Justificativa da garantia:**
+      > "Eu ofereco essa garantia porque eu confio no metodo. Se nao
+      > funcionar para voce, eu prefiro devolver o dinheiro."
+
+  # ---------------------------------------------------------------------------
+  # SECAO 5: Bonus
+  # ---------------------------------------------------------------------------
+  - id: bonus
+    title: "5. Bonus"
+    guidance: |
+      Bonus estrategicos servem para:
+      1. Aumentar a oportunidade percebida (mais valor)
+      2. Reduzir o risco percebido (facilitar a implementacao)
+      3. Criar urgencia (bonus por tempo limitado)
+
+      Tipos de bonus eficazes:
+      - Acelerador: ajuda a ter resultado mais rapido
+      - Facilitador: remove um obstaculo comum
+      - Complementar: adiciona uma dimensao extra ao resultado
+      - Escassez: disponivel apenas para quem comprar ate [data]
+
+      Regras para bonus:
+      - Cada bonus deve ter valor percebido proprio
+      - Nao adicione bonus sem relevancia so para "encher"
+      - 2-4 bonus e o ideal (mais que isso dilui o valor)
+      - Pelo menos 1 bonus deve ser "desaparecente" (gera urgencia)
+
+      DICA: O melhor bonus e aquele que resolve a principal objecao do avatar.
+    template: |
+      ## 5. Bonus
+
+      **Bonus 1 — [Nome do Bonus] (Acelerador)**
+      > - O que e: [Descricao]
+      > - Formato: [video/PDF/template/etc.]
+      > - Como ajuda: [Conexao com {{roma}}]
+      > - Valor: R$ [valor]
+
+      **Bonus 2 — [Nome do Bonus] (Facilitador)**
+      > - O que e: [Descricao]
+      > - Formato: [video/PDF/template/etc.]
+      > - Como ajuda: [Remove qual obstaculo]
+      > - Valor: R$ [valor]
+
+      **Bonus 3 — [Nome do Bonus] (Escassez / Desaparecente)**
+      > - O que e: [Descricao]
+      > - Formato: [video/PDF/template/etc.]
+      > - Disponivel ate: [data ou condicao]
+      > - Valor: R$ [valor]
+      > - NOTA: Esse bonus desaparece em [data]. Use como gatilho de urgencia.
+
+      **Valor total dos bonus:** R$ [soma_bonus]
+
+  # ---------------------------------------------------------------------------
+  # SECAO 6: Escada de Valor
+  # ---------------------------------------------------------------------------
+  - id: escada-valor
+    title: "6. Escada de Valor"
+    guidance: |
+      A escada de valor posiciona o produto no ecossistema completo.
+      Cada degrau leva o cliente mais perto da Roma, com mais
+      acompanhamento e maior investimento.
+
+      Estrutura tipica:
+      1. Entrada (gratuito ou muito barato) — gera lead e confianca
+      2. Core (produto principal) — entrega a transformacao
+      3. Premium (alto ticket) — acelera ou aprofunda o resultado
+
+      Para o Lancamento Semente, voce pode estar criando o produto Core.
+      Mas e importante pensar nos outros degraus desde o inicio.
+
+      Perguntas para definir a escada:
+      - O que vem ANTES do produto principal? (isca, mini-curso, ebook)
+      - O que vem DEPOIS? (mentoria, grupo VIP, consultoria)
+      - Qual e o proximo passo natural para quem termina o Core?
+    template: |
+      ## 6. Escada de Valor
+
+      ```
+      [Premium]  {{preco_premium}} ─── [Nome do produto premium]
+          ↑                              Resultado: [roma avancada]
+          |
+      [Core]     R$ {{preco}} ────── {{nome_produto}}  ← OFERTA ATUAL
+          ↑                              Resultado: {{roma}}
+          |
+      [Entrada]  R$ 0-XX ──────── [Nome do produto de entrada]
+                                     Resultado: [primeiro passo]
+      ```
+
+      **Degrau 1 — Entrada:**
+      > - Produto: [Nome]
+      > - Preco: R$ [valor] ou gratuito
+      > - Objetivo: Gerar lead, construir confianca, dar o primeiro resultado
+
+      **Degrau 2 — Core (OFERTA ATUAL):**
+      > - Produto: {{nome_produto}}
+      > - Preco: R$ {{preco}}
+      > - Objetivo: Entregar a transformacao principal ({{roma}})
+
+      **Degrau 3 — Premium:**
+      > - Produto: [Nome]
+      > - Preco: R$ [valor]
+      > - Objetivo: Acompanhamento proximo, resultados avancados
+
+  # ---------------------------------------------------------------------------
+  # SECAO 7: Resumo da Oferta
+  # ---------------------------------------------------------------------------
+  - id: resumo-oferta
+    title: "7. Resumo da Oferta"
+    guidance: |
+      O resumo da oferta e o "pitch de elevador" do produto.
+      Deve ser possivel ler em 30 segundos e entender tudo.
+
+      Usado em:
+      - Pagina de vendas (secao de resumo)
+      - Email de abertura de carrinho
+      - Script de vendas (Parte 6 - empilhamento)
+      - Anuncios de retargeting
+      - Bio de redes sociais durante lancamento
+
+      Formato: Um paragrafo coeso que conecta avatar + problema +
+      solucao + entregaveis + preco + garantia.
+    template: |
+      ## 7. Resumo da Oferta
+
+      **Pitch em 1 paragrafo:**
+      > O {{nome_produto}} e um {{tipo_produto}} criado para {{avatar}}
+      > que quer {{roma}}. Voce recebe [lista resumida de entregaveis
+      > principais] + [bonus principais]. O investimento e de apenas
+      > R$ {{preco}} (ou {{preco_parcelado}}) com garantia
+      > {{garantia_tipo}} de {{garantia_dias}} dias. Se nao fizer sentido
+      > para voce, basta pedir o reembolso.
+
+      **Stack visual (para pagina de vendas / slides):**
+      > - [Entregavel 1] .............. R$ [valor]
+      > - [Entregavel 2] .............. R$ [valor]
+      > - [Entregavel 3] .............. R$ [valor]
+      > - [Bonus 1] ................... R$ [valor]
+      > - [Bonus 2] ................... R$ [valor]
+      > - ─────────────────────────────────────
+      > - **Valor total:** R$ [soma]
+      > - ~~De R$ [soma]~~
+      > - **Por apenas R$ {{preco}}**
+      > - ou {{preco_parcelado}}
+      > - Garantia {{garantia_tipo}} de {{garantia_dias}} dias
+
+# =============================================================================
+# Checklist de validacao da oferta
+# =============================================================================
+validation_checklist:
+  - id: nome-claro
+    check: "O nome do produto e claro, memoravel e comunica o resultado?"
+  - id: entregaveis-especificos
+    check: "Os entregaveis sao especificos e tangiveis (nao vagos)?"
+  - id: preco-justificado
+    check: "O preco esta ancorado no valor e justificado?"
+  - id: garantia-presente
+    check: "A garantia esta claramente definida e respeita o CDC (min. 7 dias)?"
+  - id: bonus-relevantes
+    check: "Os bonus sao relevantes e resolvem objecoes reais do avatar?"
+  - id: escada-valor-definida
+    check: "A escada de valor esta mapeada (entrada, core, premium)?"
+  - id: resumo-completo
+    check: "O resumo da oferta pode ser lido em 30 segundos e entendido?"
+  - id: formula-aplicada
+    check: "A formula P=O-R esta aplicada (oportunidade alta, risco baixo)?"

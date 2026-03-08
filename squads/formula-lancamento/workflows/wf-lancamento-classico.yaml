@@ -1,0 +1,1148 @@
+# wf-lancamento-classico.yaml
+#
+# Workflow completo para execucao de um Lancamento Classico
+# baseado na Formula de Lancamento (Erico Rocha / Hugo Rocha).
+#
+# "Quanto mais voce for fiel a estrutura, mais chance de ter resultado."
+# -- Formula de Lancamento, Modulo Lancamento Classico
+
+# ============================================================
+# WORKFLOW HEADER
+# ============================================================
+
+metadata:
+  id: wf-lancamento-classico
+  name: "Lancamento Classico — Workflow Completo"
+  version: "1.0.0"
+  created: "2026-03-08"
+  squad: formula-lancamento
+  category: launch-execution
+  language: pt-BR
+
+  description: |
+    Workflow de execucao completa de um Lancamento Classico conforme a
+    Formula de Lancamento. Cobre as 4 fases: Aquecimento, CLI (Construcao
+    de Lista de Inscritos), Pre-Lancamento (3 CPLs) e Lancamento (Carrinho
+    Aberto). Inclui pos-lancamento com debriefing e analise R2X.
+
+    O Lancamento Classico e o motor dos ciclos evolutivos rumo ao 6em7.
+    Diferente do Semente (validacao), aqui o objetivo e escala com
+    estrutura completa, CPLs altamente scriptados e Efeito Tsunami.
+
+  duration: "45-60 dias (ciclo completo)"
+  best_for:
+    - "Lancadores que ja fizeram pelo menos 1 Lancamento Semente com venda"
+    - "Ciclos evolutivos rumo ao 6em7"
+    - "Escala de produto digital ja validado"
+    - "Relancamentos com audiencia existente"
+
+  source_modules:
+    - "Lancamento Classico (65 aulas)"
+    - "Base e Fundamentos"
+    - "Trafego Pago"
+    - "Como criar um produto 6em7"
+
+# ============================================================
+# PRE-REQUISITES (GATES DE ENTRADA)
+# ============================================================
+
+prerequisites:
+  gates:
+    - id: PRE_01
+      name: "Lancamento Semente realizado"
+      description: "Ter feito ao menos 1 Lancamento Semente com pelo menos 1 venda"
+      type: hard_block
+      validation: "Confirmar com usuario se ja fez semente e teve vendas"
+      source: "[SOURCE: Planejamento - Pre-Requisitos.txt]"
+      agent: fl-chief
+
+    - id: PRE_02
+      name: "Lista minima de leads"
+      description: "Lista de pelo menos 1000 leads qualificados (email ou WhatsApp)"
+      type: soft_block
+      validation: "Verificar tamanho da lista atual. Abaixo de 1000, recomendar CLI agressiva antes"
+      override_reason: "Nicho premium com ticket alto pode lancar com lista menor"
+      agent: fl-lancamento-classico
+
+    - id: PRE_03
+      name: "Orcamento para trafego pago"
+      description: "Budget definido para anuncios durante CLI e lancamento"
+      type: soft_block
+      validation: "Confirmar valor disponivel. Minimo recomendado: 3-5x o preco do produto"
+      agent: fl-chief
+
+    - id: PRE_04
+      name: "Alicerce completo"
+      description: "Nicho, Avatar, Roma e Arvore de Objecoes definidos"
+      type: hard_block
+      validation: "Verificar se docs/frameworks/base-fundamentos-framework.md esta preenchido"
+      agent: fl-alicerce
+
+    - id: PRE_05
+      name: "Oferta estruturada"
+      description: "6 elementos da oferta definidos: entregaveis, preco, garantia, bonus, nome, mecanismo unico"
+      type: hard_block
+      validation: "Verificar se oferta foi construida com @fl-oferta"
+      agent: fl-oferta
+
+    - id: PRE_06
+      name: "Infraestrutura tecnica"
+      description: "Pagina de captura, email marketing, gateway de pagamento, area de membros"
+      type: hard_block
+      validation: "Checklist tecnico aprovado"
+      agent: fl-lancamento-classico
+
+  on_gate_failure:
+    hard_block: "Interromper workflow. Direcionar para o agente responsavel pelo gate."
+    soft_block: "Alertar risco, permitir override com justificativa documentada."
+
+# ============================================================
+# AGENT ASSIGNMENTS
+# ============================================================
+
+agent_assignments:
+  orchestrator: fl-chief
+  phase_owners:
+    fase_1_aquecimento: fl-conteudo
+    fase_2_cli: fl-lancamento-classico
+    fase_3_pre_lancamento: fl-lancamento-classico
+    fase_4_lancamento: fl-lancamento-classico
+    fase_5_pos_lancamento: fl-chief
+
+  support_agents:
+    copy_cpls: fl-copy
+    copy_video_vendas: fl-copy
+    copy_emails: fl-copy
+    conteudo_aquecimento: fl-conteudo
+    alicerce_objecoes: fl-alicerce
+    oferta_ajustes: fl-oferta
+
+  escalation_path:
+    - fl-lancamento-classico
+    - fl-chief
+
+# ============================================================
+# PHASE 1: AQUECIMENTO DE LANCAMENTO
+# ============================================================
+
+phases:
+  - id: fase_1_aquecimento
+    name: "Aquecimento de Lancamento"
+    tier: preparation
+    days: "D-45 a D-22"
+    duration: "14-22 dias"
+    agent: fl-conteudo
+    support: [fl-lancamento-classico]
+
+    description: |
+      Conteudos estrategicos de valor para gerar interesse no evento
+      (serie de CPLs). Todo conteudo deve pavimentar curiosidade para
+      o evento sem revelar o que sera vendido. O objetivo e ativar a
+      audiencia e preparar o terreno para a CLI.
+
+    tasks:
+      - id: AQ_01
+        name: "Definir formato e canal"
+        description: "Escolher canal principal (Instagram, YouTube, email) e formato (lives, posts, stories, videos)"
+        agent: fl-conteudo
+        deliverable: "Documento com canal + formato + frequencia definidos"
+        duration: "1 dia"
+
+      - id: AQ_02
+        name: "Criar calendario de conteudo"
+        description: "Montar agenda de conteudos do aquecimento com temas e datas"
+        agent: fl-conteudo
+        deliverable: "Calendario editorial de aquecimento (14-22 dias)"
+        duration: "1-2 dias"
+        depends_on: [AQ_01]
+
+      - id: AQ_03
+        name: "Produzir conteudos de aquecimento"
+        description: "Criar conteudos que pavimentam curiosidade para o evento. Conteudo Raiz (autoridade) + Nutela (alcance)"
+        agent: fl-conteudo
+        deliverable: "Conteudos produzidos e agendados"
+        duration: "12-18 dias"
+        depends_on: [AQ_02]
+
+      - id: AQ_04
+        name: "Plantar sementes de antecipacao"
+        description: "Mencionar que algo grande esta chegando sem revelar detalhes. Gatilho de curiosidade."
+        agent: fl-conteudo
+        deliverable: "Posts e stories de antecipacao publicados"
+        duration: "Continuo durante aquecimento"
+
+    checkpoints:
+      - id: AQ_CK01
+        name: "Checkpoint de engajamento"
+        timing: "D-30 (meio do aquecimento)"
+        heuristics:
+          - "Engajamento nos conteudos esta acima da media historica?"
+          - "Audiencia esta respondendo aos sinais de antecipacao?"
+          - "Pelo menos 3 conteudos publicados com boa recepcao?"
+        veto_conditions:
+          - "Engajamento abaixo de 50% da media — reavaliar formato/canal"
+          - "Zero respostas a antecipacao — reavaliar posicionamento"
+
+    completion_signals:
+      - "Calendario de aquecimento 100% executado"
+      - "Engajamento confirmado acima da media"
+      - "Audiencia demonstra curiosidade sobre o evento"
+
+    output_artifacts:
+      - "calendario-aquecimento.md"
+      - "metricas-aquecimento.md"
+
+  # ============================================================
+  # PHASE 2: CLI — CONSTRUCAO DE LISTA DE INSCRITOS
+  # ============================================================
+
+  - id: fase_2_cli
+    name: "Construcao de Lista de Inscritos (CLI)"
+    tier: list_building
+    days: "D-30 a D-7 (paralela as fases 1 e 3)"
+    duration: "21-30 dias"
+    agent: fl-lancamento-classico
+    support: [fl-conteudo, fl-copy]
+
+    description: |
+      Construcao de lista de inscritos para o EVENTO (nao para o produto).
+      A pessoa se inscreve para assistir a serie de CPLs. Modalidades
+      organica e paga rodando em paralelo. A CLI e a fase que determina
+      o tamanho do lancamento.
+
+    tasks:
+      - id: CLI_01
+        name: "Criar pagina de captura do evento"
+        description: "Landing page onde a pessoa se inscreve para assistir os CPLs. Copy focada no EVENTO, nao no produto."
+        agent: fl-copy
+        deliverable: "Pagina de captura pronta e testada"
+        duration: "2-3 dias"
+        rules:
+          - "A pessoa se inscreve no EVENTO, nao no produto"
+          - "Copy focada na transformacao que os CPLs vao entregar"
+          - "Headline prometendo conteudo gratuito de valor"
+
+      - id: CLI_02
+        name: "Configurar sequencia de emails de confirmacao"
+        description: "Emails automaticos apos inscricao: confirmacao + lembrete + aquecimento pre-CPL"
+        agent: fl-copy
+        deliverable: "Sequencia de 3-5 emails configurada na ferramenta"
+        duration: "1-2 dias"
+        depends_on: [CLI_01]
+
+      - id: CLI_03
+        name: "Planejar CLI organica"
+        description: "Usar ativos existentes: Instagram, Facebook, YouTube, email list, WhatsApp"
+        agent: fl-lancamento-classico
+        deliverable: "Plano de CLI organica com canais, frequencia e CTAs"
+        duration: "1 dia"
+        strategies:
+          - "Posts com CTA para pagina de captura"
+          - "Stories com link direto"
+          - "Email para base existente convidando pro evento"
+          - "Parcerias e co-marketing"
+
+      - id: CLI_04
+        name: "Planejar CLI paga"
+        description: "Campanhas de trafego pago em Meta (Facebook/Instagram) e Google para pagina de captura"
+        agent: fl-lancamento-classico
+        deliverable: "Plano de midia com orcamento, publicos e criativos"
+        duration: "2-3 dias"
+        depends_on: [CLI_01]
+        elements:
+          - "Definir orcamento diario e total"
+          - "Criar publicos (lookalike, interesses, remarketing)"
+          - "Produzir criativos (video curto + imagem + carrossel)"
+          - "Configurar pixel e tracking"
+
+      - id: CLI_05
+        name: "Executar campanhas de CLI"
+        description: "Rodar campanhas organicas e pagas simultaneamente. Otimizar diariamente."
+        agent: fl-lancamento-classico
+        deliverable: "Campanhas rodando com relatorios diarios"
+        duration: "14-25 dias (continuo)"
+        depends_on: [CLI_03, CLI_04]
+
+      - id: CLI_06
+        name: "Monitorar e otimizar CPL (Custo Por Lead)"
+        description: "Acompanhar metricas diarias: CPL, taxa de conversao, custo total. Otimizar criativos e publicos."
+        agent: fl-lancamento-classico
+        deliverable: "Dashboard de metricas atualizado"
+        duration: "Continuo"
+        depends_on: [CLI_05]
+
+    checkpoints:
+      - id: CLI_CK01
+        name: "Checkpoint de lista — meio do periodo"
+        timing: "D-18 (metade da CLI)"
+        heuristics:
+          - "Ritmo de inscricoes esta no caminho para atingir meta?"
+          - "CPL (Custo Por Lead) esta dentro do aceitavel para o nicho?"
+          - "Taxa de abertura dos emails de confirmacao acima de 40%?"
+        veto_conditions:
+          - "Lista abaixo de 30% da meta com menos de 50% do tempo — aumentar orcamento ou revisar criativos"
+          - "CPL acima de 3x o benchmark do nicho — pausar e revisar"
+
+      - id: CLI_CK02
+        name: "Checkpoint de lista — pre-CPL"
+        timing: "D-8 (vespera do Pre-Lancamento)"
+        heuristics:
+          - "Lista atingiu pelo menos 80% da meta?"
+          - "Sequencia de emails funcionando (deliverability OK)?"
+          - "Inscritos estao engajados (abrindo emails, clicando)?"
+        veto_conditions:
+          - "Lista abaixo de 500 inscritos — considerar adiar lancamento"
+          - "Taxa de bounce de email acima de 10% — limpar lista antes"
+
+    completion_signals:
+      - "Meta de inscritos atingida ou dentro de 80% aceitavel"
+      - "Sequencia de emails de confirmacao funcionando"
+      - "Campanhas pagas com CPL otimizado"
+      - "Base limpa e segmentada pronta para receber CPLs"
+
+    output_artifacts:
+      - "relatorio-cli-final.md"
+      - "lista-inscritos-segmentada.csv"
+      - "metricas-trafego-pago.md"
+
+  # ============================================================
+  # PHASE 3: PRE-LANCAMENTO (3 CPLs)
+  # ============================================================
+
+  - id: fase_3_pre_lancamento
+    name: "Pre-Lancamento — 3 CPLs + Efeito Tsunami"
+    tier: pre_launch
+    days: "D-7 a D-0"
+    duration: "7-10 dias"
+    agent: fl-lancamento-classico
+    support: [fl-copy, fl-conteudo, fl-alicerce]
+
+    description: |
+      Os 3 Conteudos de Pre-Lancamento (CPLs) sao o coracao do Lancamento
+      Classico. Sao conteudos altamente scriptados — nunca improvisados.
+      CPL1 e CPL2 sao interdependentes (mesmo arquetipo), CPL3 e independente.
+      Apos os CPLs, o Efeito Tsunami prepara a abertura do carrinho.
+
+    tasks:
+      # --- ESCOLHA DE ARQUETIPOS ---
+      - id: CPL_00
+        name: "Escolher arquetipos dos CPLs"
+        description: |
+          Definir qual par de arquetipos usar para CPL1+CPL2 (interdependentes)
+          e qual arquetipo para CPL3 (independente).
+          Opcoes CPL1+CPL2: (A) Oportunidade/Amplificada, (B) Jeito Errado/Certo.
+          Opcoes CPL3: (1) P&R, (2) Amostra, (3) Indice/Mapa.
+        agent: fl-lancamento-classico
+        deliverable: "Arquetipos definidos e documentados"
+        duration: "1 dia"
+        recommendation: "Primeiro classico: Opcao A + Opcao 1 (mais simples de scriptar)"
+
+      # --- CPL1 ---
+      - id: CPL_01
+        name: "Scriptar CPL1"
+        description: |
+          Montar script completo do CPL1 seguindo estrutura:
+          Roma > Prova (metralhadora) > Historia > Conteudo (arquetipo) >
+          Gatilhos Mentais > Objecoes > Antecipacao > Fechamento
+        agent: fl-lancamento-classico
+        support: [fl-copy]
+        deliverable: "Script completo do CPL1 pronto para gravacao"
+        duration: "2-3 dias"
+        depends_on: [CPL_00]
+        rules:
+          - "NUNCA vender no CPL1"
+          - "Nao basta nao estar vendendo — tem que PARECER que nao esta vendendo"
+          - "Antecipacao para CPL2 e mandatoria"
+          - "Ler script 5-7 vezes no espelho antes de gravar"
+        source: "[SOURCE: Arquetipos do CPL1 e 2 - Erro comum.txt]"
+
+      - id: CPL_01_GRAVAR
+        name: "Gravar e publicar CPL1"
+        description: "Gravar CPL1 seguindo script. Publicar na pagina do evento e notificar lista."
+        agent: fl-lancamento-classico
+        deliverable: "CPL1 gravado, editado, publicado e notificado"
+        duration: "1-2 dias"
+        depends_on: [CPL_01]
+        timing: "D-7"
+
+      # --- CPL2 ---
+      - id: CPL_02
+        name: "Scriptar CPL2"
+        description: |
+          Montar script completo do CPL2 seguindo estrutura:
+          Roma > Prova (NOVAS, nunca as mesmas) > Revisao CPL1 >
+          Conteudo (2a parte arquetipo) > Oferta semeada > Fechamento
+        agent: fl-lancamento-classico
+        support: [fl-copy]
+        deliverable: "Script completo do CPL2 pronto para gravacao"
+        duration: "2-3 dias"
+        depends_on: [CPL_00]
+        rules:
+          - "Provas NOVAS — nunca exatamente as mesmas do CPL1"
+          - "Oferta semeada: plantar semente sem entrar a fundo"
+          - "Desapego com comprometimento — nao soar desesperado"
+          - "Antecipacao para CPL3 e mandatoria"
+        source: "[SOURCE: Preparacao - CPL 2 - Oferta.txt]"
+
+      - id: CPL_02_GRAVAR
+        name: "Gravar e publicar CPL2"
+        description: "Gravar CPL2 seguindo script. Publicar e notificar lista."
+        agent: fl-lancamento-classico
+        deliverable: "CPL2 gravado, editado, publicado e notificado"
+        duration: "1-2 dias"
+        depends_on: [CPL_02, CPL_01_GRAVAR]
+        timing: "D-5"
+
+      # --- ATUALIZAR ARVORE DE OBJECOES ---
+      - id: CPL_OBJ
+        name: "Atualizar arvore de objecoes"
+        description: |
+          Pre-requisito para scriptar CPL3. Coletar objecoes novas vindas
+          dos comentarios do CPL1 e CPL2. Atualizar a arvore.
+        agent: fl-alicerce
+        deliverable: "Arvore de objecoes atualizada com objecoes pos-CPL1/CPL2"
+        duration: "1 dia"
+        depends_on: [CPL_01_GRAVAR, CPL_02_GRAVAR]
+        source: "[SOURCE: Preparacao - CPL 3 - Pre-Requisito para escolher o arquetipo.txt]"
+
+      # --- CPL3 ---
+      - id: CPL_03
+        name: "Scriptar CPL3"
+        description: |
+          Montar script completo do CPL3 seguindo estrutura:
+          Roma (recap serie) > Prova + Prova Social > Conteudo (arquetipo independente) >
+          Oferta completa (30-50% do CPL3) > Instrucao de Matricula > Fechamento
+        agent: fl-lancamento-classico
+        support: [fl-copy, fl-alicerce]
+        deliverable: "Script completo do CPL3 pronto para gravacao"
+        duration: "2-3 dias"
+        depends_on: [CPL_OBJ]
+        rules:
+          - "30-50% do CPL3 dedicado a apresentacao completa da oferta"
+          - "Introduzir gatilho da escassez"
+          - "Matar objecoes restantes da arvore atualizada"
+          - "Instrucoes explicitas de matricula: como, onde, quando"
+          - "Antecipacao para abertura do carrinho"
+
+      - id: CPL_03_GRAVAR
+        name: "Gravar e publicar CPL3"
+        description: "Gravar CPL3 seguindo script. Publicar e notificar lista."
+        agent: fl-lancamento-classico
+        deliverable: "CPL3 gravado, editado, publicado e notificado"
+        duration: "1-2 dias"
+        depends_on: [CPL_03]
+        timing: "D-3"
+
+      # --- COMUNIDADE DE LANCAMENTO ---
+      - id: CPL_COM
+        name: "Gerenciar comunidade de lancamento"
+        description: |
+          Manter comunidade ativa durante os CPLs (Telegram, WhatsApp ou Facebook Group).
+          Responder duvidas, coletar objecoes, gerar prova social.
+        agent: fl-lancamento-classico
+        deliverable: "Comunidade ativa com engajamento monitorado"
+        duration: "Continuo durante fase 3"
+        timing: "D-7 a D-0"
+
+      # --- EFEITO TSUNAMI ---
+      - id: TSU_01
+        name: "Planejar Efeito Tsunami"
+        description: |
+          O tsunami e a garrafa de champanhe — quanto mais sacudir, mais
+          explosiva a abertura. Definir mecanismos de escassez REAIS:
+          tempo, vagas, bonus exclusivos, diferenca de preco.
+        agent: fl-lancamento-classico
+        support: [fl-copy]
+        deliverable: "Plano do Efeito Tsunami com mecanismos e timeline"
+        duration: "1 dia"
+        depends_on: [CPL_03]
+        rules:
+          - "TODA escassez comunicada deve ser REAL. Integridade."
+          - "Tsunami so potencializa o que ja e atrativo — nao corrige oferta fraca"
+          - "Formato principalmente escrito (emails + pagina dedicada)"
+        source: "[SOURCE: Preparacao - Efeito Tsunami - Consideracoes gerais.txt]"
+
+      - id: TSU_02
+        name: "Executar Efeito Tsunami"
+        description: |
+          Executar sequencia de comunicacoes do tsunami nos 1-3 dias antes
+          da abertura do carrinho. Emails, posts, stories, lives.
+        agent: fl-lancamento-classico
+        support: [fl-copy]
+        deliverable: "Sequencia tsunami executada"
+        duration: "1-3 dias"
+        depends_on: [TSU_01, CPL_03_GRAVAR]
+        timing: "D-3 a D-0"
+
+    checkpoints:
+      - id: CPL_CK01
+        name: "Checkpoint pos-CPL1"
+        timing: "D-6 (apos publicacao do CPL1)"
+        heuristics:
+          - "Taxa de visualizacao do CPL1 acima de 30% dos inscritos?"
+          - "Engajamento nos comentarios? Perguntas sendo feitas?"
+          - "Objecoes aparecendo nos comentarios (sinal positivo)?"
+        veto_conditions:
+          - "Menos de 10% de visualizacao — problema de notificacao ou entrega"
+          - "Zero engajamento — revisar conteudo antes de prosseguir"
+
+      - id: CPL_CK02
+        name: "Checkpoint pos-CPL2"
+        timing: "D-4 (apos publicacao do CPL2)"
+        heuristics:
+          - "Retencao de audiencia do CPL1 para CPL2 acima de 60%?"
+          - "Perguntas sobre a oferta comecando a surgir?"
+          - "Prova social se formando na comunidade?"
+        veto_conditions:
+          - "Queda de audiencia acima de 60% — investigar causa antes do CPL3"
+          - "Audiencia hostil ou desengajada — reavaliar posicionamento"
+
+      - id: CPL_CK03
+        name: "Checkpoint pos-CPL3 e pre-abertura"
+        timing: "D-1 (vespera da abertura do carrinho)"
+        heuristics:
+          - "Todos os 3 CPLs publicados e notificados?"
+          - "Arvore de objecoes atualizada pos-CPL1/CPL2?"
+          - "Efeito Tsunami em execucao?"
+          - "Pagina de vendas pronta com video de vendas?"
+          - "Gateway de pagamento testado?"
+          - "Emails de carrinho programados?"
+        veto_conditions:
+          - "Video de vendas nao finalizado — NAO abrir carrinho"
+          - "Gateway de pagamento nao testado — NAO abrir carrinho"
+          - "Pagina de vendas com erros — corrigir antes de abrir"
+
+    completion_signals:
+      - "3 CPLs gravados, publicados e notificados"
+      - "Arvore de objecoes atualizada pos-CPLs"
+      - "Efeito Tsunami executado"
+      - "Comunidade de lancamento ativa"
+      - "Audiencia aquecida e esperando abertura"
+
+    output_artifacts:
+      - "script-cpl1.md"
+      - "script-cpl2.md"
+      - "script-cpl3.md"
+      - "arvore-objecoes-atualizada.md"
+      - "plano-tsunami.md"
+      - "metricas-cpls.md"
+
+  # ============================================================
+  # PHASE 4: LANCAMENTO — CARRINHO ABERTO
+  # ============================================================
+
+  - id: fase_4_lancamento
+    name: "Lancamento — Abertura do Carrinho"
+    tier: launch
+    days: "D0 a D+7"
+    duration: "1 a 7 dias"
+    agent: fl-lancamento-classico
+    support: [fl-copy, fl-conteudo]
+
+    description: |
+      O carrinho abre com o Efeito Tsunami ja em andamento. A pagina de
+      vendas com o video de vendas e o ativo central. Notificacoes
+      intensivas por todos os canais. Possibilidade de Efeito W no meio
+      para reativar vendas. Fechamento do carrinho com escassez maxima.
+
+    tasks:
+      # --- VIDEO DE VENDAS ---
+      - id: VV_01
+        name: "Scriptar Video de Vendas"
+        description: |
+          Construir script completo do video de vendas seguindo estrutura:
+          Promessa > Prova > Historia > Oferta > Objecoes > Preco > Garantia > CTA.
+          O video deve conter TUDO que a pessoa precisa para decidir comprar,
+          mesmo se nunca viu os CPLs.
+        agent: fl-lancamento-classico
+        support: [fl-copy]
+        deliverable: "Script completo do video de vendas"
+        duration: "3-5 dias"
+        timing: "Iniciar em paralelo com CPLs (D-10 a D-5)"
+        rules:
+          - "Video deve funcionar standalone — como se a pessoa nunca viu os CPLs"
+          - "Sequencia de preco: custo de NAO fazer > preco real > comparacao > fatiamento > bonus > garantia"
+          - "Tom: comprometimento sem desespero. Desapego real."
+          - "Duracao: falar tudo que precisa e nada que nao precisa"
+        source: "[SOURCE: Lancamento Classico - Video de Vendas]"
+
+      - id: VV_02
+        name: "Gravar Video de Vendas"
+        description: "Gravar video seguindo script. Editar com grafismos, provas e depoimentos."
+        agent: fl-lancamento-classico
+        deliverable: "Video de vendas finalizado"
+        duration: "2-3 dias"
+        depends_on: [VV_01]
+
+      - id: VV_03
+        name: "Montar pagina de vendas"
+        description: "Construir pagina de vendas com video, copy de suporte, FAQ, depoimentos, CTA e botao de compra."
+        agent: fl-lancamento-classico
+        support: [fl-copy]
+        deliverable: "Pagina de vendas publicada e testada"
+        duration: "2-3 dias"
+        depends_on: [VV_02]
+
+      # --- ABERTURA DO CARRINHO ---
+      - id: LC_01
+        name: "Abertura do carrinho"
+        description: |
+          Momento de abertura com todas as notificacoes disparadas simultaneamente.
+          Email principal + post + stories + WhatsApp + live de abertura opcional.
+        agent: fl-lancamento-classico
+        deliverable: "Carrinho aberto, notificacoes disparadas"
+        duration: "D0"
+        depends_on: [VV_03, TSU_02]
+        timing: "D0"
+
+      # --- EMAILS DE CARRINHO ---
+      - id: LC_02
+        name: "Email de abertura"
+        description: "Email principal anunciando que as inscricoes estao abertas. Link direto para pagina de vendas."
+        agent: fl-copy
+        deliverable: "Email de abertura enviado"
+        timing: "D0 (imediato na abertura)"
+
+      - id: LC_03
+        name: "Email de prova social"
+        description: "Email com depoimentos e resultados de alunos. Reforcar que outros ja estao comprando."
+        agent: fl-copy
+        deliverable: "Email de prova social enviado"
+        timing: "D+1 a D+2"
+
+      - id: LC_04
+        name: "Email de FAQ / Objecoes"
+        description: "Email respondendo as duvidas mais frequentes. Matar objecoes restantes."
+        agent: fl-copy
+        deliverable: "Email de FAQ enviado"
+        timing: "D+3 a D+4"
+
+      - id: LC_05
+        name: "Email de last call"
+        description: "Email final avisando que o carrinho fecha em X horas. Escassez maxima (real)."
+        agent: fl-copy
+        deliverable: "Email de last call enviado"
+        timing: "D+6 ou ultimo dia"
+
+      # --- EFEITO W (OPCIONAL) ---
+      - id: LC_W01
+        name: "Avaliar necessidade de Efeito W"
+        description: |
+          Se vendas desaceleraram no meio do periodo (padrao U ou J),
+          considerar ativar Efeito W: bonus novo, mudanca de garantia,
+          abertura de parcelamento via financiadora.
+        agent: fl-lancamento-classico
+        deliverable: "Decisao documentada: ativar W sim/nao + mecanismo escolhido"
+        timing: "D+3 (meio do carrinho)"
+        optional: true
+        triggers:
+          - "Vendas desaceleraram significativamente apos D+1"
+          - "Padrao de vendas em U (vendas so no inicio)"
+          - "Meta de faturamento abaixo de 50% no meio do periodo"
+
+      - id: LC_W02
+        name: "Executar Efeito W"
+        description: "Implementar o mecanismo escolhido e comunicar para a lista."
+        agent: fl-lancamento-classico
+        support: [fl-copy]
+        deliverable: "Efeito W executado e comunicado"
+        depends_on: [LC_W01]
+        optional: true
+        options:
+          - "Bonus novo adicionado a oferta"
+          - "Mudanca/melhoria de garantia"
+          - "Abertura de parcelamento via financiadora"
+
+      # --- REMARKETING ---
+      - id: LC_RM01
+        name: "Configurar campanhas de remarketing"
+        description: "Anuncios de remarketing para quem visitou a pagina de vendas e nao comprou."
+        agent: fl-lancamento-classico
+        deliverable: "Campanhas de remarketing ativas"
+        timing: "D0 a D+7"
+        depends_on: [LC_01]
+
+      # --- FECHAMENTO DO CARRINHO ---
+      - id: LC_CLOSE
+        name: "Fechamento do carrinho"
+        description: |
+          Encerrar inscricoes no horario exato comunicado. Enviar email de
+          encerramento. Desativar botao de compra. Redirecionar pagina para
+          lista de espera do proximo lancamento.
+        agent: fl-lancamento-classico
+        deliverable: "Carrinho fechado, pagina redirecionada"
+        timing: "D+7 (ou data definida)"
+        rules:
+          - "Fechar EXATAMENTE no horario comunicado — integridade"
+          - "Nao estender prazo — escassez deve ser real"
+          - "Redirecionar para lista de espera do proximo ciclo"
+
+    checkpoints:
+      - id: LC_CK01
+        name: "Checkpoint D0 — abertura"
+        timing: "D0 (primeiras 6 horas)"
+        heuristics:
+          - "Pagina de vendas carregando sem erros?"
+          - "Gateway de pagamento processando corretamente?"
+          - "Emails sendo entregues (nao caindo em spam)?"
+          - "Primeiras vendas acontecendo?"
+        veto_conditions:
+          - "Pagina fora do ar — emergencia tecnica, corrigir imediato"
+          - "Gateway rejeitando pagamentos — pausar e corrigir"
+          - "Emails em bounce massivo — ativar canal alternativo"
+
+      - id: LC_CK02
+        name: "Checkpoint de meio de carrinho"
+        timing: "D+3"
+        heuristics:
+          - "Vendas acumuladas estao em qual % da meta?"
+          - "Padrao de vendas: J invertido (bom), U (ok), J (ruim)?"
+          - "Objecoes nao resolvidas aparecendo?"
+          - "Efeito W necessario?"
+        veto_conditions:
+          - "Zero vendas ate D+3 — problema grave, investigar urgente"
+
+      - id: LC_CK03
+        name: "Checkpoint pre-fechamento"
+        timing: "D+6 (vespera do fechamento)"
+        heuristics:
+          - "Meta de faturamento atingida ou proxima?"
+          - "Todos os emails de carrinho foram enviados?"
+          - "Email de last call programado?"
+          - "Pagina de lista de espera pronta para redirect?"
+        veto_conditions:
+          - "Redirect pos-fechamento nao configurado — configurar antes de fechar"
+
+    completion_signals:
+      - "Todas as vendas processadas e confirmadas"
+      - "Carrinho fechado no horario exato"
+      - "Pagina redirecionada para lista de espera"
+      - "Alunos receberam acesso ao produto"
+      - "Relatorio de vendas consolidado"
+
+    output_artifacts:
+      - "script-video-vendas.md"
+      - "emails-carrinho/"
+      - "relatorio-vendas-d0.md"
+      - "relatorio-vendas-final.md"
+      - "metricas-remarketing.md"
+
+  # ============================================================
+  # PHASE 5: POS-LANCAMENTO
+  # ============================================================
+
+  - id: fase_5_pos_lancamento
+    name: "Pos-Lancamento — Debriefing e R2X"
+    tier: post_launch
+    days: "D+8 a D+21"
+    duration: "7-14 dias"
+    agent: fl-chief
+    support: [fl-lancamento-classico]
+
+    description: |
+      Debriefing completo do lancamento. Analise de metricas, R2X
+      (retorno sobre investimento), documentacao de aprendizados e
+      preparacao do proximo ciclo evolutivo. O pos-lancamento e o
+      que transforma um lancamento isolado em uma maquina de escala.
+
+    tasks:
+      - id: POS_01
+        name: "Consolidar metricas do lancamento"
+        description: |
+          Reunir todos os numeros: inscritos, visualizacoes CPLs, vendas,
+          faturamento, CPL, CPA, ROI, taxa de conversao por etapa.
+        agent: fl-chief
+        deliverable: "Dashboard de metricas do lancamento"
+        duration: "1-2 dias"
+
+      - id: POS_02
+        name: "Analise R2X"
+        description: |
+          Calcular retorno sobre investimento do lancamento.
+          R2X = Faturamento / Investimento Total.
+          Decompor por canal de aquisicao.
+        agent: fl-chief
+        deliverable: "Relatorio R2X detalhado"
+        duration: "1 dia"
+        depends_on: [POS_01]
+        formula: |
+          R2X = Faturamento Bruto / (Trafego + Ferramentas + Producao + Outros)
+          Meta minimo: R2X >= 2 (para cada R$1 investido, R$2 de retorno)
+          Meta saudavel: R2X >= 5
+          Meta 6em7: Depende do ticket e volume
+
+      - id: POS_03
+        name: "Debriefing qualitativo"
+        description: |
+          Analise qualitativa: o que funcionou, o que nao funcionou,
+          o que repetir, o que mudar. Feedback da equipe e dos alunos.
+        agent: fl-chief
+        deliverable: "Documento de debriefing com lessons learned"
+        duration: "1-2 dias"
+        depends_on: [POS_01]
+        analysis_areas:
+          - "Qualidade dos CPLs (engajamento, retencao)"
+          - "Efetividade do Efeito Tsunami"
+          - "Performance do Video de Vendas (taxa de conversao)"
+          - "Qualidade dos emails de carrinho"
+          - "Eficiencia do trafego pago"
+          - "Objecoes nao resolvidas que surgiram"
+          - "Problemas tecnicos durante o lancamento"
+
+      - id: POS_04
+        name: "Documentar aprendizados para proximo ciclo"
+        description: |
+          Criar documento de referencia para o proximo lancamento classico.
+          O que ajustar nos CPLs, na oferta, no tsunami, no video de vendas.
+        agent: fl-chief
+        deliverable: "Playbook atualizado para proximo ciclo"
+        duration: "1-2 dias"
+        depends_on: [POS_02, POS_03]
+
+      - id: POS_05
+        name: "Onboarding dos novos alunos"
+        description: |
+          Garantir que todos os compradores receberam acesso, boas-vindas
+          e orientacao inicial. Primeira impressao do produto.
+        agent: fl-lancamento-classico
+        deliverable: "Alunos onboardados e satisfeitos"
+        duration: "3-5 dias"
+
+      - id: POS_06
+        name: "Planejar proximo ciclo evolutivo"
+        description: |
+          Definir data e estrategia do proximo lancamento. Ciclo evolutivo:
+          cada lancamento deve ser melhor que o anterior.
+        agent: fl-chief
+        deliverable: "Plano do proximo ciclo com data e ajustes"
+        duration: "1 dia"
+        depends_on: [POS_04]
+
+    checkpoints:
+      - id: POS_CK01
+        name: "Checkpoint de debriefing"
+        timing: "D+14"
+        heuristics:
+          - "Todas as metricas consolidadas?"
+          - "R2X calculado e documentado?"
+          - "Lessons learned documentadas?"
+          - "Alunos onboardados com sucesso?"
+        veto_conditions:
+          - "Debriefing incompleto — nao planejar proximo ciclo sem analise"
+
+    completion_signals:
+      - "Dashboard de metricas completo"
+      - "R2X calculado e analisado"
+      - "Debriefing qualitativo documentado"
+      - "Alunos onboardados"
+      - "Proximo ciclo evolutivo planejado"
+
+    output_artifacts:
+      - "dashboard-metricas-lancamento.md"
+      - "relatorio-r2x.md"
+      - "debriefing-lancamento.md"
+      - "playbook-proximo-ciclo.md"
+
+# ============================================================
+# QUALITY CHECKLIST — LANCAMENTO CLASSICO COMPLETO
+# ============================================================
+
+quality_checklist:
+  pre_launch_readiness:
+    - id: QC_01
+      check: "Lancamento Semente ja realizado com pelo menos 1 venda"
+      phase: prerequisites
+      severity: hard_block
+
+    - id: QC_02
+      check: "Alicerce completo (Nicho, Avatar, Roma, Arvore de Objecoes)"
+      phase: prerequisites
+      severity: hard_block
+
+    - id: QC_03
+      check: "Oferta estruturada com 6 elementos"
+      phase: prerequisites
+      severity: hard_block
+
+    - id: QC_04
+      check: "Lista de inscritos com minimo de 1000 leads"
+      phase: fase_2_cli
+      severity: soft_block
+
+    - id: QC_05
+      check: "Pagina de captura do evento testada e funcionando"
+      phase: fase_2_cli
+      severity: hard_block
+
+  cpl_quality:
+    - id: QC_06
+      check: "Arquetipos CPL1+CPL2 interdependentes escolhidos"
+      phase: fase_3_pre_lancamento
+      severity: hard_block
+
+    - id: QC_07
+      check: "CPL1 scriptado — nao improvisado"
+      phase: fase_3_pre_lancamento
+      severity: hard_block
+
+    - id: QC_08
+      check: "CPL1 nao vende — nem parece que esta vendendo"
+      phase: fase_3_pre_lancamento
+      severity: hard_block
+
+    - id: QC_09
+      check: "CPL2 usa provas NOVAS (nunca as mesmas do CPL1)"
+      phase: fase_3_pre_lancamento
+      severity: hard_block
+
+    - id: QC_10
+      check: "CPL2 semeia oferta de leve — nao entra a fundo"
+      phase: fase_3_pre_lancamento
+      severity: hard_block
+
+    - id: QC_11
+      check: "Arvore de objecoes atualizada antes de scriptar CPL3"
+      phase: fase_3_pre_lancamento
+      severity: hard_block
+
+    - id: QC_12
+      check: "CPL3 dedica 30-50% a apresentacao completa da oferta"
+      phase: fase_3_pre_lancamento
+      severity: hard_block
+
+    - id: QC_13
+      check: "CPL3 inclui instrucoes explicitas de matricula"
+      phase: fase_3_pre_lancamento
+      severity: hard_block
+
+  launch_quality:
+    - id: QC_14
+      check: "Toda escassez comunicada e REAL"
+      phase: fase_4_lancamento
+      severity: hard_block
+
+    - id: QC_15
+      check: "Video de vendas funciona standalone (sem depender dos CPLs)"
+      phase: fase_4_lancamento
+      severity: hard_block
+
+    - id: QC_16
+      check: "Video de vendas segue sequencia de preco completa"
+      phase: fase_4_lancamento
+      severity: hard_block
+
+    - id: QC_17
+      check: "Gateway de pagamento testado antes da abertura"
+      phase: fase_4_lancamento
+      severity: hard_block
+
+    - id: QC_18
+      check: "Emails de carrinho programados (abertura, prova social, FAQ, last call)"
+      phase: fase_4_lancamento
+      severity: hard_block
+
+    - id: QC_19
+      check: "Carrinho fecha EXATAMENTE no horario comunicado"
+      phase: fase_4_lancamento
+      severity: hard_block
+
+    - id: QC_20
+      check: "Tom da copy: comprometimento sem desespero"
+      phase: fase_4_lancamento
+      severity: hard_block
+
+  post_launch_quality:
+    - id: QC_21
+      check: "Metricas consolidadas e R2X calculado"
+      phase: fase_5_pos_lancamento
+      severity: soft_block
+
+    - id: QC_22
+      check: "Debriefing qualitativo documentado"
+      phase: fase_5_pos_lancamento
+      severity: soft_block
+
+    - id: QC_23
+      check: "Alunos onboardados e com acesso"
+      phase: fase_5_pos_lancamento
+      severity: hard_block
+
+    - id: QC_24
+      check: "Proximo ciclo evolutivo planejado"
+      phase: fase_5_pos_lancamento
+      severity: soft_block
+
+# ============================================================
+# ERROR HANDLING
+# ============================================================
+
+error_handling:
+  technical_failures:
+    - scenario: "Pagina de vendas fora do ar durante abertura"
+      severity: critical
+      action: "Pausar todas as notificacoes. Corrigir imediato. Comunicar transparentemente."
+      agent: fl-lancamento-classico
+      escalation: fl-chief
+
+    - scenario: "Gateway de pagamento rejeitando transacoes"
+      severity: critical
+      action: "Ativar gateway backup. Comunicar via email que estao trabalhando na solucao."
+      agent: fl-lancamento-classico
+      escalation: fl-chief
+
+    - scenario: "Emails caindo em spam"
+      severity: high
+      action: "Ativar canal alternativo (WhatsApp, Telegram). Reenviar via dominio diferente."
+      agent: fl-lancamento-classico
+
+    - scenario: "Video de vendas nao carrega"
+      severity: high
+      action: "Trocar host do video. Oferecer link alternativo. Considerar versao texto da pagina."
+      agent: fl-lancamento-classico
+
+  strategic_failures:
+    - scenario: "CPL1 com engajamento muito baixo (menos de 10% dos inscritos)"
+      severity: high
+      action: "Investigar entrega. Testar notificacao alternativa. Considerar refazer CPL1 se ainda ha tempo."
+      agent: fl-lancamento-classico
+
+    - scenario: "Zero vendas nas primeiras 24h de carrinho"
+      severity: critical
+      action: "Investigar: pagina OK? Gateway OK? Preco adequado? Oferta alinhada? Comunidade engajada?"
+      agent: fl-lancamento-classico
+      escalation: fl-chief
+
+    - scenario: "Vendas muito abaixo da meta no meio do carrinho"
+      severity: medium
+      action: "Ativar Efeito W. Reforcar comunicacao. Adicionar bonus ou ajustar parcelamento."
+      agent: fl-lancamento-classico
+
+    - scenario: "Tsunami nao gerando efeito esperado"
+      severity: medium
+      action: "Verificar se escassez e percebida como real. Aumentar frequencia de comunicacao."
+      agent: fl-lancamento-classico
+
+  process_failures:
+    - scenario: "CPL3 scriptado sem atualizar arvore de objecoes"
+      severity: high
+      action: "BLOQUEAR publicacao. Atualizar arvore primeiro. Revisar script do CPL3."
+      agent: fl-alicerce
+
+    - scenario: "Escassez falsa comunicada"
+      severity: critical
+      action: "BLOQUEAR imediato. Corrigir comunicacao. Integridade e inegociavel."
+      agent: fl-lancamento-classico
+      escalation: fl-chief
+
+    - scenario: "Carrinho estendido alem do prazo comunicado"
+      severity: critical
+      action: "BLOQUEAR. Fechar carrinho imediato. Escassez deve ser real. Comunicar erro se necessario."
+      agent: fl-lancamento-classico
+
+# ============================================================
+# HEURISTICS INDEX (CROSS-REFERENCE)
+# ============================================================
+
+heuristics_index:
+  from_agent: "fl-lancamento-classico"
+  active_heuristics:
+    - id: LC_H001
+      name: "Detector de Pre-Requisito"
+      applies_to: [prerequisites]
+    - id: LC_H002
+      name: "Detector de Venda no CPL1"
+      applies_to: [fase_3_pre_lancamento, CPL_01]
+    - id: LC_H003
+      name: "Detector de CPL sem Script"
+      applies_to: [fase_3_pre_lancamento, CPL_01, CPL_02, CPL_03]
+    - id: LC_H004
+      name: "Detector de Escassez Falsa"
+      applies_to: [fase_3_pre_lancamento, fase_4_lancamento, TSU_01, TSU_02]
+    - id: LC_H005
+      name: "Detector de Oferta Pesada no CPL2"
+      applies_to: [fase_3_pre_lancamento, CPL_02]
+    - id: LC_H006
+      name: "Detector de Provas Repetidas"
+      applies_to: [fase_3_pre_lancamento, CPL_02]
+    - id: LC_H007
+      name: "Detector de CPL3 sem Arvore Atualizada"
+      applies_to: [fase_3_pre_lancamento, CPL_03]
+    - id: LC_H008
+      name: "Detector de Desespero"
+      applies_to: [fase_3_pre_lancamento, fase_4_lancamento]
+
+# ============================================================
+# TIMELINE SUMMARY
+# ============================================================
+
+timeline_summary:
+  total_duration: "45-60 dias"
+  phases_overlap: |
+    Fases 1 e 2 rodam em paralelo durante boa parte do periodo.
+    A fase 3 e sequencial (CPLs em ordem).
+    Video de Vendas (fase 4) e scriptado em paralelo com CPLs.
+    Fase 5 comeca apos fechamento do carrinho.
+
+  milestones:
+    - day: "D-45"
+      event: "Inicio do aquecimento + CLI"
+    - day: "D-30"
+      event: "CLI paga ativa. Aquecimento a todo vapor."
+    - day: "D-18"
+      event: "Checkpoint de lista — metade do periodo CLI"
+    - day: "D-10"
+      event: "Inicio da scriptagem dos CPLs e Video de Vendas"
+    - day: "D-8"
+      event: "Checkpoint pre-CPL — lista pronta?"
+    - day: "D-7"
+      event: "CPL1 publicado. Pre-Lancamento comeca."
+    - day: "D-5"
+      event: "CPL2 publicado."
+    - day: "D-3"
+      event: "CPL3 publicado. Efeito Tsunami inicia."
+    - day: "D-1"
+      event: "Checkpoint pre-abertura. Tudo pronto?"
+    - day: "D0"
+      event: "ABERTURA DO CARRINHO"
+    - day: "D+3"
+      event: "Checkpoint meio de carrinho. Efeito W?"
+    - day: "D+6"
+      event: "Last call. Escassez maxima."
+    - day: "D+7"
+      event: "FECHAMENTO DO CARRINHO"
+    - day: "D+14"
+      event: "Debriefing e R2X completos"
+    - day: "D+21"
+      event: "Proximo ciclo evolutivo planejado"
+
+# ============================================================
+# REFERENCES
+# ============================================================
+
+references:
+  source_modules:
+    - "Formula de Lancamento — Lancamento Classico (65 aulas)"
+    - "Formula de Lancamento — Base e Fundamentos"
+    - "Formula de Lancamento — Trafego Pago"
+
+  agents:
+    - "fl-chief — Orchestrador do squad"
+    - "fl-alicerce — Nicho, Avatar, Roma, Arvore de Objecoes"
+    - "fl-oferta — 6 elementos da oferta"
+    - "fl-lancamento-classico — Especialista em Lancamento Classico"
+    - "fl-conteudo — Conteudo Raiz, Nutela, CLI"
+    - "fl-copy — Script de Vendas, Gatilhos Mentais"
+
+  related_workflows:
+    - "wf-lancamento-semente.yaml (prerequisite)"
+
+  key_sources:
+    - "[SOURCE: 4 fases do Lancamento Classico.txt]"
+    - "[SOURCE: Planejamento - Pre-Requisitos.txt]"
+    - "[SOURCE: Arquetipos do CPL1 e 2 - Erro comum.txt]"
+    - "[SOURCE: Preparacao - CPL 2 - Oferta.txt]"
+    - "[SOURCE: Preparacao - CPL 2 - Consideracoes gerais.txt]"
+    - "[SOURCE: Preparacao - CPL 3 - Pre-Requisito para escolher o arquetipo.txt]"
+    - "[SOURCE: Preparacao - CPL 3 - Oferta.txt]"
+    - "[SOURCE: Preparacao - Efeito Tsunami - Consideracoes gerais.txt]"
+    - "[SOURCE: Preparacao - Conteudo de Pre-Lancamento - Gravado.txt]"

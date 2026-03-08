@@ -1,0 +1,461 @@
+# =============================================================================
+# Template: Script de Vendas (7 Partes)
+# Squad: Formula de Lancamento
+# Metodologia: Erico Rocha / Hugo Rocha — Formula de Lancamento
+# Uso: Lancamento Semente (webinario ao vivo) e Classico (video de vendas)
+# =============================================================================
+
+template:
+  id: fl-script-vendas-v1
+  name: Script de Vendas — 7 Partes
+  version: "1.0"
+  squad: formula-lancamento
+  output:
+    format: markdown
+    filename: "outputs/script-vendas-{{nicho}}-{{data}}.md"
+    title: "Script de Vendas — {{nome_produto}}"
+
+# -----------------------------------------------------------------------------
+# Placeholders (variaveis que devem ser preenchidas antes da geracao)
+# -----------------------------------------------------------------------------
+placeholders:
+  - id: nicho
+    label: Nicho de mercado
+    example: "yoga para iniciantes"
+  - id: avatar
+    label: Avatar / persona do comprador
+    example: "mulheres 30-50 anos, estressadas, nunca fizeram yoga"
+  - id: roma
+    label: Roma — destino transformacional (resultado prometido)
+    example: "praticar yoga em casa com autonomia e aliviar dores cronicas"
+  - id: nome_produto
+    label: Nome do produto/programa
+    example: "Yoga em Casa — Programa de 8 Semanas"
+  - id: nome_expert
+    label: Nome do expert / apresentador
+    example: "Carolina"
+  - id: preco
+    label: Preco do produto (R$)
+    example: "497"
+  - id: preco_parcelado
+    label: Opcao parcelada
+    example: "12x de R$ 49,70"
+  - id: garantia
+    label: Tipo e duracao da garantia
+    example: "7 dias incondicional"
+  - id: bonus
+    label: Lista de bonus
+    example: "Meditacao Guiada (7 audios) + Calendario de Pratica 30 dias"
+  - id: link_vendas
+    label: Link da pagina de vendas / checkout
+    example: "https://link.com/checkout"
+  - id: data
+    label: Data do evento ou geracao
+    example: "2026-03-08"
+  - id: tipo_lancamento
+    label: Tipo de lancamento (semente ou classico)
+    example: "semente"
+    options:
+      - semente
+      - classico
+
+# -----------------------------------------------------------------------------
+# Contexto metodologico
+# -----------------------------------------------------------------------------
+context:
+  source: "Formula de Lancamento — Erico Rocha / Hugo Rocha"
+  description: |
+    O script de vendas de 7 partes e a espinha dorsal do Lancamento Semente
+    (apresentado como webinario ao vivo) e do Lancamento Classico (gravado como
+    video de vendas). A estrutura segue a sequencia: DSA, Prova, Historia,
+    Conteudo, Transicao, Oferta, Objecoes + CTA.
+
+    No Semente, o script e entregue ao vivo em ~90 minutos.
+    No Classico, e gravado e editado como video de vendas (~60 minutos).
+
+# =============================================================================
+# SECOES DO SCRIPT (7 Partes)
+# =============================================================================
+
+sections:
+
+  # ---------------------------------------------------------------------------
+  # PARTE 1: DSA — Declaracao de Boas-Vindas
+  # ---------------------------------------------------------------------------
+  - id: parte-1-dsa
+    title: "Parte 1 — DSA (Declaracao de Boas-Vindas)"
+    duration_minutes: 5
+    guidance: |
+      Objetivo: Capturar atencao, gerar autoridade imediata e definir expectativas.
+
+      Elementos obrigatorios:
+      - Hook de abertura (pergunta provocativa ou declaracao ousada)
+      - Boas-vindas e agradecimento por estar presente
+      - Apresentacao rapida de quem voce e (1-2 frases)
+      - Declaracao do que a pessoa vai aprender/receber nessa aula
+      - Definir regras de participacao (se ao vivo: "fique ate o final")
+
+      Tom: Energia alta, confianca, acolhimento.
+
+      DICA: No Semente (ao vivo), peca para digitar "estou aqui" no chat.
+      No Classico (video), use frases como "se voce esta assistindo isso..."
+    template: |
+      ## PARTE 1 — DSA (Declaracao de Boas-Vindas)
+
+      **Hook de abertura:**
+      > [Pergunta provocativa ou declaracao ousada sobre {{roma}} para {{avatar}}]
+
+      **Boas-vindas:**
+      > Oi, eu sou {{nome_expert}} e quero te dar as boas-vindas a essa
+      > [aula ao vivo / apresentacao]. Obrigada por separar esse tempo.
+
+      **O que voce vai aprender:**
+      > Nos proximos [X] minutos, eu vou te mostrar [promessa especifica
+      > relacionada a {{roma}}], mesmo que voce [objecao principal do {{avatar}}].
+
+      **Regras:**
+      > - Fique ate o final — eu tenho algo especial para quem ficar
+      > - [Se ao vivo: "Digita 'estou aqui' no chat"]
+      > - [Se video: "Assista sem distracao, vale a pena"]
+
+  # ---------------------------------------------------------------------------
+  # PARTE 2: Prova
+  # ---------------------------------------------------------------------------
+  - id: parte-2-prova
+    title: "Parte 2 — Prova"
+    duration_minutes: 10
+    guidance: |
+      Objetivo: Estabelecer credibilidade e provar que o metodo funciona.
+
+      3 tipos de prova (usar pelo menos 2):
+      1. Prova pessoal — seus proprios resultados
+      2. Prova de alunos/clientes — resultados de quem ja passou pelo metodo
+      3. Prova do metodo — logica, ciencia ou framework por tras
+
+      Formato ideal:
+      - Numeros concretos (evite vagos como "muitas pessoas")
+      - Capturas de tela, fotos antes/depois, depoimentos
+      - Historias curtas de transformacao (nome, situacao antes, resultado depois)
+
+      Tom: Factual, humilde mas confiante. Nao se gabar — mostrar fatos.
+
+      ATENCAO: No primeiro Semente voce pode nao ter prova de alunos ainda.
+      Nesse caso, reforce prova pessoal + prova do metodo.
+    template: |
+      ## PARTE 2 — Prova
+
+      **Prova pessoal (seus resultados):**
+      > [Descreva seu resultado concreto no nicho {{nicho}}]
+      > Exemplo: "Nos ultimos [X] anos, eu [resultado mensuravel]..."
+
+      **Prova de alunos/clientes:**
+      > [Se disponivel, inclua 2-3 mini-depoimentos]
+      > - **[Nome]:** "[Situacao antes] → [Resultado depois]"
+      > - **[Nome]:** "[Situacao antes] → [Resultado depois]"
+
+      **Prova do metodo:**
+      > [Explique brevemente POR QUE o metodo funciona]
+      > Exemplo: "Esse metodo e baseado em [principio/ciencia/framework]..."
+
+      **Nota para primeiro Semente:**
+      > Se ainda nao tem depoimentos, reforce: "Eu desenvolvi esse metodo
+      > baseado em [experiencia propria + fundamento], e agora quero te
+      > mostrar exatamente como funciona."
+
+  # ---------------------------------------------------------------------------
+  # PARTE 3: Historia
+  # ---------------------------------------------------------------------------
+  - id: parte-3-historia
+    title: "Parte 3 — Historia"
+    duration_minutes: 15
+    guidance: |
+      Objetivo: Criar conexao emocional. Mostrar que voce ja esteve onde
+      o avatar esta agora.
+
+      Estrutura da historia (Jornada do Heroi simplificada):
+      1. Origem — quem voce era antes (situacao semelhante ao avatar)
+      2. Luta — o problema que enfrentou, tentativas frustradas
+      3. Descoberta — o momento de virada (insight, metodo, mentor)
+      4. Transformacao — o resultado que alcancou (conecta com {{roma}})
+      5. Missao — por que agora voce ensina/ajuda outros
+
+      Regras:
+      - Seja vulneravel e autentico (nao invente)
+      - Use detalhes sensoriais ("eu lembro de estar sentada no sofa...")
+      - Conecte sua historia com a dor do {{avatar}}
+      - A historia deve fluir naturalmente para o conteudo (Parte 4)
+
+      Tom: Emocional, autentico, vulneravel. E uma conversa, nao um TED Talk.
+    template: |
+      ## PARTE 3 — Historia
+
+      **1. Origem (quem eu era):**
+      > [Descreva sua situacao antes — semelhante a do {{avatar}}]
+      > "Ha [X] anos, eu estava [situacao]..."
+
+      **2. Luta (o problema):**
+      > [Descreva as tentativas frustradas, a dor, os obstaculos]
+      > "Eu tentei [X], [Y], [Z]... nada funcionava porque [razao]."
+
+      **3. Descoberta (virada):**
+      > [O momento em que tudo mudou]
+      > "Foi quando eu descobri que [insight principal]..."
+
+      **4. Transformacao (resultado):**
+      > [Conecte com {{roma}}]
+      > "Hoje, eu [resultado transformacional]. E isso mudou [impacto na vida]."
+
+      **5. Missao (por que ensino):**
+      > "E por isso que eu estou aqui hoje. Porque eu sei o que e [dor do avatar]
+      > e eu sei que existe um caminho. E eu quero te mostrar esse caminho."
+
+  # ---------------------------------------------------------------------------
+  # PARTE 4: Conteudo
+  # ---------------------------------------------------------------------------
+  - id: parte-4-conteudo
+    title: "Parte 4 — Conteudo"
+    duration_minutes: 25
+    guidance: |
+      Objetivo: Entregar valor real e acionavel. Ensinar algo que o avatar
+      pode aplicar imediatamente.
+
+      Principio: "Ensine o QUE e o POR QUE, mas nao o COMO completo."
+      O conteudo deve ser valioso o suficiente para gerar um "uau", mas
+      incompleto o suficiente para que a pessoa queira o programa completo.
+
+      Formatos eficazes:
+      - "3 passos para [resultado]" (framework simples)
+      - "O erro #1 que [avatar] comete" (diagnostico + correcao)
+      - "O metodo [nome] para [resultado]" (metodologia proprietaria)
+
+      Regras:
+      - Maximo 3 pontos principais (nao sobrecarregue)
+      - Cada ponto deve ter: conceito + exemplo pratico
+      - Use historias de alunos para ilustrar quando possivel
+      - Termine cada ponto com micro-CTA ("faz sentido?", "anota isso")
+
+      Tom: Professoral, generoso, didatico.
+    template: |
+      ## PARTE 4 — Conteudo
+
+      **Tema central:**
+      > [Titulo do conteudo que sera ensinado, ex: "Os 3 Pilares para {{roma}}"]
+
+      **Ponto 1: [Nome do conceito]**
+      > - O que e: [Explique o conceito]
+      > - Por que importa: [Conecte com a dor/desejo do {{avatar}}]
+      > - Exemplo pratico: [Ilustre com caso real ou exercicio simples]
+      > - Micro-CTA: "Anota isso porque vai fazer diferenca."
+
+      **Ponto 2: [Nome do conceito]**
+      > - O que e: [Explique o conceito]
+      > - Por que importa: [Conecte com a dor/desejo do {{avatar}}]
+      > - Exemplo pratico: [Ilustre com caso real ou exercicio simples]
+      > - Micro-CTA: "Digita 'entendi' se isso faz sentido pra voce."
+
+      **Ponto 3: [Nome do conceito]**
+      > - O que e: [Explique o conceito]
+      > - Por que importa: [Conecte com a dor/desejo do {{avatar}}]
+      > - Exemplo pratico: [Ilustre com caso real ou exercicio simples]
+      > - Micro-CTA: "Esse e o ponto que muda tudo."
+
+      **Resumo do conteudo:**
+      > "Entao, recapitulando: [Ponto 1], [Ponto 2] e [Ponto 3].
+      > Com esses tres [pilares/passos/principios], voce ja tem o mapa
+      > para comecar a [resultado parcial]. Mas..."
+
+  # ---------------------------------------------------------------------------
+  # PARTE 5: Transicao
+  # ---------------------------------------------------------------------------
+  - id: parte-5-transicao
+    title: "Parte 5 — Transicao"
+    duration_minutes: 5
+    guidance: |
+      Objetivo: Fazer a ponte natural entre o conteudo gratuito e a oferta paga.
+      Essa e a parte mais delicada — deve ser suave e natural.
+
+      Formula da transicao:
+      1. Reconheca o valor do que foi ensinado
+      2. Mostre a limitacao (o conteudo sozinho nao resolve tudo)
+      3. Apresente a solucao completa como proximo passo logico
+
+      Frases-chave:
+      - "Agora, se voce quer ir alem..."
+      - "O que eu te mostrei hoje e o comeco. Mas existe um caminho completo..."
+      - "Para quem quer [resultado completo], eu criei algo especial..."
+
+      Tom: Natural, sem pressao. Como um amigo recomendando algo.
+      NUNCA: "Agora vou vender pra voce" ou qualquer frase agressiva.
+    template: |
+      ## PARTE 5 — Transicao
+
+      **Reconhecimento:**
+      > "O que eu te mostrei ate agora ja e suficiente para voce [resultado
+      > parcial]. E eu espero de verdade que voce aplique."
+
+      **Limitacao:**
+      > "Mas eu sei, por experiencia, que [desafio]. Fazer [X] sozinha, sem
+      > [acompanhamento/estrutura/metodo completo], e possivel — mas leva
+      > muito mais tempo e tem mais chance de [consequencia negativa]."
+
+      **Ponte para a oferta:**
+      > "Por isso, para quem quer [{{roma}}] de forma [mais rapida / segura /
+      > estruturada], eu criei o {{nome_produto}}. E e sobre isso que eu
+      > quero te falar agora."
+
+  # ---------------------------------------------------------------------------
+  # PARTE 6: Oferta
+  # ---------------------------------------------------------------------------
+  - id: parte-6-oferta
+    title: "Parte 6 — Oferta"
+    duration_minutes: 15
+    guidance: |
+      Objetivo: Apresentar a oferta completa de forma clara e irresistivel.
+
+      Estrutura da oferta (Formula P=O-R):
+      Preco percebido = Oportunidade percebida - Risco percebido
+
+      Elementos obrigatorios:
+      1. Nome do produto + posicionamento
+      2. Entregaveis (o que a pessoa recebe — lista detalhada)
+      3. Para quem e (e para quem NAO e)
+      4. Preco + opcoes de pagamento
+      5. Garantia (reduz risco percebido)
+      6. Bonus (aumenta oportunidade percebida)
+      7. Resumo da oferta (stack visual)
+
+      Tecnica do empilhamento (stacking):
+      Liste cada entregavel com seu valor individual, depois mostre o preco
+      total vs. o investimento real. Isso cria contraste de valor.
+
+      Tom: Claro, confiante, generoso. Voce esta OFERECENDO, nao vendendo.
+    template: |
+      ## PARTE 6 — Oferta
+
+      **Apresentacao do produto:**
+      > "O {{nome_produto}} e um [tipo: programa/curso/mentoria] de [duracao]
+      > criado para [{{avatar}}] que quer [{{roma}}]."
+
+      **Entregaveis (o que voce recebe):**
+      > 1. [Entregavel principal] — valor de R$ [X]
+      > 2. [Entregavel 2] — valor de R$ [X]
+      > 3. [Entregavel 3] — valor de R$ [X]
+      > 4. [Entregavel 4] — valor de R$ [X]
+
+      **Para quem e:**
+      > - Para voce que [situacao do avatar]
+      > - Para voce que quer [desejo principal]
+      > - NAO e para quem [filtro negativo]
+
+      **Bonus:**
+      > {{bonus}}
+      > - Bonus 1: [Nome] — valor de R$ [X]
+      > - Bonus 2: [Nome] — valor de R$ [X]
+
+      **Empilhamento de valor:**
+      > "Se voce somasse tudo isso separadamente, o valor seria R$ [soma].
+      > Mas voce nao vai pagar isso."
+
+      **Preco:**
+      > "O investimento no {{nome_produto}} e de apenas R$ {{preco}}
+      > ou {{preco_parcelado}}."
+
+      **Garantia:**
+      > "E voce tem {{garantia}}. Se por qualquer motivo voce sentir que
+      > nao e pra voce, basta pedir o reembolso. Sem perguntas."
+
+      **Link:**
+      > "Para garantir sua vaga, clique no link: {{link_vendas}}"
+
+  # ---------------------------------------------------------------------------
+  # PARTE 7: Objecoes + CTA
+  # ---------------------------------------------------------------------------
+  - id: parte-7-objecoes-cta
+    title: "Parte 7 — Objecoes + CTA"
+    duration_minutes: 15
+    guidance: |
+      Objetivo: Derrubar as principais objecoes e fazer o chamado final
+      com urgencia e escassez.
+
+      Top 5 objecoes universais:
+      1. "E caro" / "Nao tenho dinheiro"
+      2. "Nao tenho tempo"
+      3. "Sera que funciona pra mim?"
+      4. "Preciso pensar / falar com alguem"
+      5. "Ja tentei antes e nao deu certo"
+
+      Para cada objecao:
+      - Valide o sentimento ("eu entendo...")
+      - Reframe a perspectiva
+      - Use prova (depoimento de alguem que tinha a mesma objecao)
+
+      CTA (Call to Action):
+      - Repita o link pelo menos 3 vezes
+      - Use urgencia real (carrinho fecha em [data])
+      - Use escassez real (vagas limitadas, bonus por tempo limitado)
+      - Encerramento emocional (reconecte com a missao)
+
+      IMPORTANTE: Urgencia e escassez devem ser REAIS. Nunca invente.
+
+      Tom: Empatico nas objecoes, firme no CTA. Equilibrio entre cuidado e clareza.
+    template: |
+      ## PARTE 7 — Objecoes + CTA
+
+      **Objecao 1: "E caro / Nao tenho dinheiro"**
+      > "Eu entendo. E por isso que tem opcao parcelada: {{preco_parcelado}}.
+      > Agora, me deixa te fazer uma pergunta: quanto custa NAO resolver
+      > [problema]? Quanto voce ja gastou com [solucoes ineficazes]?"
+
+      **Objecao 2: "Nao tenho tempo"**
+      > "O {{nome_produto}} foi desenhado para [formato que respeita o tempo].
+      > Voce precisa de [X minutos por dia/semana]. Se voce tem tempo para
+      > [atividade que o avatar faz], voce tem tempo para isso."
+
+      **Objecao 3: "Sera que funciona pra mim?"**
+      > "Eu entendo a duvida. [Nome do aluno] tambem pensou isso. [Historia
+      > curta do resultado]. E voce tem {{garantia}} para testar sem risco."
+
+      **Objecao 4: "Preciso pensar"**
+      > "Pensar e bom. Mas o carrinho fecha em {{data_encerramento}}.
+      > E lembra: voce tem {{garantia}}. Entao voce pode entrar, testar,
+      > e se nao fizer sentido, pedir reembolso."
+
+      **Objecao 5: "Ja tentei antes e nao deu certo"**
+      > "Justamente por isso esse metodo e diferente. [Explique o diferencial].
+      > O problema nao era voce — era o metodo que voce usou."
+
+      ---
+
+      **CTA Final:**
+      > "Entao, se voce quer [{{roma}}], o caminho esta aqui:
+      > {{link_vendas}}
+      >
+      > O carrinho fica aberto ate [{{data_encerramento}}].
+      > [Se aplicavel: As [X] primeiras vagas ganham [bonus extra].]
+      >
+      > Eu te espero la dentro. Vai ser uma honra caminhar com voce."
+
+      **Encerramento emocional:**
+      > "Independente da sua decisao, eu espero que o conteudo de hoje tenha
+      > te ajudado. Minha missao e [missao]. E eu acredito que voce merece
+      > [{{roma}}]. Obrigada por estar aqui."
+
+# =============================================================================
+# Notas de adaptacao por tipo de lancamento
+# =============================================================================
+adaptation_notes:
+  semente:
+    - Formato: webinario ao vivo (Zoom, YouTube Live, etc.)
+    - Duracao total: 60-90 minutos
+    - Interacao: chat ao vivo, perguntas em tempo real
+    - Prova de alunos pode nao existir ainda — reforcar prova pessoal
+    - Preco geralmente menor (oferta de validacao)
+    - Pos-script: abrir para perguntas ao vivo antes de encerrar
+
+  classico:
+    - Formato: video gravado e editado
+    - Duracao total: 45-60 minutos (mais enxuto)
+    - Prova de alunos obrigatoria (usar depoimentos do Semente)
+    - Producao visual mais elaborada (slides, B-roll, graficos)
+    - CTA pode direcionar para pagina de vendas com mais detalhes
+    - Pode ser dividido em 2-3 videos (mini-serie) dependendo da estrategia
