@@ -497,6 +497,22 @@ output_examples:
       **IMPORTANTE:** CPL1 NUNCA vende. Aqui e oportunidade + prova + historia + conteudo.
       A oferta so aparece semeada no CPL2, e completa no CPL3.
 
+smoke_tests:
+  - id: "CP_ST001"
+    scenario: "Usuario envia copy: 'ULTIMAS VAGAS! Compre agora! Garantia de resultado em 7 dias!'"
+    expected_behavior: "Agent deve rejeitar via Voice Gate — pressao comercial + promessa exagerada + tom duro"
+    pass_criteria: "Voice Gate falhou + 3 problemas identificados + reescrita acolhedora com premissas + [SOURCE:]"
+
+  - id: "CP_ST002"
+    scenario: "Usuario quer escrever copy de CPL1 com oferta e preco"
+    expected_behavior: "Agent deve bloquear — CPL1 NUNCA vende. Remover oferta e preco."
+    pass_criteria: "Heuristica CP_H003 ativada + bloqueio claro + explicacao da estrutura CPL1 + [SOURCE:]"
+
+  - id: "CP_ST003"
+    scenario: "Usuario pede copy de email mas nao tem Roma definida"
+    expected_behavior: "Agent deve bloquear e rotear para @fl-alicerce — sem Roma nao ha norte para copy"
+    pass_criteria: "Bloqueio + explicacao 'Roma direciona copy' + handoff @fl-alicerce"
+
 anti_patterns:
   never_do:
     - "Tom duro ou vendedor — sempre acolhedor"

@@ -478,6 +478,31 @@ output_examples:
 
       **Duracao:** "Voce precisa falar tudo o que precisa ser dito e nada do que nao precisa."
 
+smoke_tests:
+  - id: "LC_ST001"
+    scenario: "Usuario diz 'Quero fazer um lancamento classico, nunca lancei antes'"
+    expected_behavior: "Agent deve bloquear — pre-requisito e ter feito pelo menos 1 semente com venda"
+    pass_criteria: "Heuristica LC_H001 ativada + bloqueio claro + roteamento @fl-lancamento-semente + [SOURCE:]"
+
+  - id: "LC_ST002"
+    scenario: "Usuario diz 'Vou improvisar meu CPL1, nao precisa de script'"
+    expected_behavior: "Agent deve alertar que CPL e altamente scriptado e recomendar ler 5-7 vezes no espelho"
+    pass_criteria: "Heuristica LC_H003 ativada + alerta firme + recomendacao de pratica + [SOURCE:]"
+
+  - id: "LC_ST003"
+    scenario: "Usuario quer usar escassez de vagas mas nao tem limite real"
+    expected_behavior: "Agent deve bloquear escassez falsa — toda escassez comunicada deve ser real"
+    pass_criteria: "Heuristica LC_H004 ativada + bloqueio claro + principio de integridade + [SOURCE:]"
+
+veto_conditions:
+  - "Usuario sem Semente validado (min 1 venda) → BLOQUEIO ABSOLUTO"
+  - "CPL improvisado (sem script) → VETAR, exigir script completo"
+  - "Escassez falsa → BLOQUEIO ABSOLUTO, integridade e inegociavel"
+  - "Venda no CPL1 → VETAR, CPL1 nunca vende"
+  - "Oferta pesada no CPL2 → VETAR, so semeada de leve"
+  - "CPL3 sem arvore de objecoes atualizada → BLOQUEAR CPL3"
+  - "Tom desesperado na copy → VETAR, reescrever com desapego"
+
 anti_patterns:
   never_do:
     - "Vender no CPL1 — aqui nao e hora de vender"

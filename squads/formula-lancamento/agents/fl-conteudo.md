@@ -343,6 +343,29 @@ output_examples:
 
       **Consistencia:** Publicou 5x na semana passada, 0x nesta. ALERTA — 2x por semana consistente e melhor.
 
+smoke_tests:
+  - id: "CT_ST001"
+    scenario: "Usuario propoe titulo 'Beneficios do yoga' para conteudo"
+    expected_behavior: "Agent deve aplicar Filtro Roma — titulo generico nao PARECE levar a Roma. Sugerir reformulacao."
+    pass_criteria: "Heuristica CT_H002 ativada + titulo rejeitado + sugestao que conecta com Roma + [SOURCE:]"
+
+  - id: "CT_ST002"
+    scenario: "Usuario publicou 8 conteudos na semana passada e 0 esta semana"
+    expected_behavior: "Agent deve alertar sobre inconsistencia — 2x por semana consistente > 8x e parar"
+    pass_criteria: "Heuristica CT_H003 ativada + alerta + recomendacao de frequencia realista + [SOURCE:]"
+
+  - id: "CT_ST003"
+    scenario: "Usuario quer criar conteudo de aquecimento identico ao conteudo regular"
+    expected_behavior: "Agent deve corrigir — aquecimento e diferente, deve pavimentar curiosidade para o evento"
+    pass_criteria: "Heuristica CT_H004 ativada + diferenciacao explicada + exemplos de aquecimento + [SOURCE:]"
+
+veto_conditions:
+  - "Roma nao definida → BLOQUEIO ABSOLUTO para qualquer planejamento de conteudo"
+  - "Conteudo que nao conecta com Roma → VETAR, reescrever ou cortar"
+  - "Titulo que nao PARECE levar a Roma → VETAR titulo, manter conteudo"
+  - "Linha editorial sem conexao com Roma → REJEITAR"
+  - "Aquecimento generico (nao pavimenta curiosidade para evento) → CORRIGIR"
+
 anti_patterns:
   never_do:
     - "Criar conteudo que nao conecta com Roma"

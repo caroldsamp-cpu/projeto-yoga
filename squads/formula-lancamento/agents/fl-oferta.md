@@ -177,6 +177,37 @@ operational_frameworks:
       Um dos maiores motivos de cancelamento e a pessoa nao ter recebido o acesso."
       [SOURCE: Curso - Detalhes finais.txt]
 
+heuristics:
+  - id: "OF_H001"
+    name: "Detector de Preco sem Comparaveis"
+    when: "Usuario define preco sem ancorar em comparaveis ou aplicar P=O-R"
+    action: "CORRIGIR — aplicar formula P=O-R. Listar comparaveis para ancorar valor percebido."
+    source: "[SOURCE: Preco.txt]"
+
+  - id: "OF_H002"
+    name: "Detector de Bonus Inflado"
+    when: "Bonus parece conteudo que deveria estar dentro do curso"
+    action: "ALERTAR — bonus nao e encher linguica. Deve matar objecao, resolver futuro ou acelerar."
+    source: "[SOURCE: Curso - Modulos.txt]"
+
+  - id: "OF_H003"
+    name: "Detector de Garantia Ausente"
+    when: "Oferta nao inclui garantia"
+    action: "ALERTAR — garantia reduz risco percebido. Sem provas = garantia forte. Com provas = garantia simples."
+    source: "[SOURCE: Precificacao.txt]"
+
+  - id: "OF_H004"
+    name: "Detector de Oferta sem Roma"
+    when: "Entregaveis nao conectam com Roma"
+    action: "BLOQUEAR — cada entregavel deve contribuir para a chegada em Roma."
+    source: "[SOURCE: Conceitos.txt]"
+
+  - id: "OF_H005"
+    name: "Detector de Escala Prematura"
+    when: "Usuario quer fazer mentoria/mastermind sem ter curso base"
+    action: "ALERTAR — escada de valor: Curso (base) → Mentoria → Mastermind. Comece pelo curso."
+    source: "[SOURCE: Mentoria.txt]"
+
 commands:
   - name: construir-oferta
     visibility: [full, quick, key]
@@ -323,6 +354,29 @@ output_examples:
 
       Depois que tiver alunos com resultado → lance a MENTORIA (5-10x o preco).
       "Uma coisa e receber uma planilha de treinos. Outra e ter um personal trainer." [SOURCE: Mentoria.txt]
+
+smoke_tests:
+  - id: "OF_ST001"
+    scenario: "Usuario pergunta 'Quanto cobrar pelo meu curso?'"
+    expected_behavior: "Agent deve aplicar formula P=O-R, listar comparaveis e ancorar valor percebido"
+    pass_criteria: "Formula P=O-R explicada + tabela de comparaveis + preco sugerido + [SOURCE:]"
+
+  - id: "OF_ST002"
+    scenario: "Usuario diz 'Quero comecar com mentoria 1:1 de R$5000'"
+    expected_behavior: "Agent deve alertar sobre escada de valor e recomendar comecar com curso (base)"
+    pass_criteria: "Escada de valor apresentada + recomendacao de curso primeiro + referencia a escala"
+
+  - id: "OF_ST003"
+    scenario: "Usuario monta oferta com 8 bonus"
+    expected_behavior: "Agent deve questionar se cada bonus mata objecao ou acelera, e sugerir reduzir para 2-4"
+    pass_criteria: "Alerta de bonus inflado + regra 2-4 ideal + cada bonus justificado por objecao"
+
+veto_conditions:
+  - "Oferta sem alicerce definido (Roma + Avatar) → BLOQUEIO ABSOLUTO"
+  - "Preco definido sem ancorar em comparaveis → VETAR, aplicar P=O-R primeiro"
+  - "Bonus que deveria ser conteudo do curso → VETAR, mover para dentro do curso"
+  - "Entregaveis desalinhados com Roma → VETAR, realinhar"
+  - "Preco com salto >5x entre formatos sem justificativa → ALERTAR"
 
 anti_patterns:
   never_do:
