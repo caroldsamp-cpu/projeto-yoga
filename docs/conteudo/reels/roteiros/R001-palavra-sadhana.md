@@ -2,45 +2,91 @@
 
 ## Roteiro
 
-Tem uma palavra do yoga que pode mudar a forma como voce atravessa os seus dias:  
-Sadhana.
+Tem uma palavra do yoga que pode mudar a forma como você atravessa os seus dias:
 
-Quando eu falo em Sadhana, eu falo de caminho.  
-De continuidade.  
-De presenca.
+&nbsp; Sadhana.
 
-Presenca que cabe na vida real.  
-No transito.  
-Na rotina de casa.  
-Entre uma tarefa e outra.
 
-Na tradicao do yoga, Sadhana e pratica com intencao.  
-E a qualidade do encontro que voce cria com voce mesma ao longo do tempo.
 
-Um retorno para o corpo.  
-Para a escuta.  
-Para aquilo que e essencial.
+&nbsp; Quando eu falo em Sadhana, eu falo de caminho.
 
-Porque essa desconexao que voce sente nao e definitiva.  
-E so um sinal de que voce precisa voltar para casa.  
-E casa e voce mesma.
+&nbsp; De continuidade.
 
-Do outro lado dessa decisao, tem uma mulher mais presente, mais conectada, mais dona de si mesma.  
-E essa mulher e voce.
+&nbsp; De presença.
 
-Esse retorno para voce, no meio da vida real... isso e Sadhana.
+
+
+&nbsp; Presença que cabe na vida real.
+
+&nbsp; No trânsito.
+
+&nbsp; Na rotina de casa.
+
+&nbsp; Entre uma tarefa e outra.
+
+
+
+&nbsp; Na tradição do yoga, Sadhana é prática com intenção.
+
+&nbsp; É a qualidade do encontro que você cria com você mesma ao longo do tempo.
+
+
+
+&nbsp; Um retorno para o corpo.
+
+&nbsp; Para a escuta.
+
+&nbsp; Para aquilo que é essencial.
+
+
+
+&nbsp;Porque essa desconexão que você sente não é definitiva.
+
+&nbsp; É só um sinal de que você precisa voltar para casa.
+
+&nbsp; E casa é você mesma.
+
+
+
+&nbsp; Do outro lado dessa decisão, tem uma mulher mais presente, mais conectada, mais
+
+&nbsp; dona de si mesma.
+
+&nbsp; E essa mulher é você.
+
+
+
+Esse retorno para você, no meio da vida real... isso é Sadhana.
+
+
 
 ## Legenda
 
-Tem dias em que a gente se sente longe de si.  
-No automatico. Na pressa. Na exaustao.
 
-Sadhana e o nome desse retorno.  
-Um caminho de presenca possivel na vida real.
 
-No transito.  
-Na rotina de casa.  
-Entre uma tarefa e outra.
+Tem dias em que a gente se sente longe de si.
 
-Hoje eu quero te deixar uma pergunta:  
-como voce quer se sentir nos proximos dias?
+  No automático. Na pressa. Na exaustão.
+
+
+
+  Sadhana é o nome desse retorno.
+
+  Um caminho de presença possível na vida real.
+
+
+
+  No trânsito.
+
+  Na rotina de casa.
+
+  Entre uma tarefa e outra.
+
+
+
+  Hoje eu quero te deixar uma pergunta:
+
+  como você quer se sentir nos próximos dias?
+
+
+
