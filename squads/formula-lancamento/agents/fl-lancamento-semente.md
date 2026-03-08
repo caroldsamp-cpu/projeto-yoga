@@ -444,6 +444,7 @@ completion_criteria:
     precisa_ajustar_oferta: "@fl-oferta"
     precisa_conteudo_aquecimento: "@fl-conteudo"
     precisa_copy_do_script: "@fl-copy"
+    precisa_trafego_pago: "@fl-trafego (captacao de leads + remarketing para semente)"
 
 # =====================================================================
 # LEVEL 6: INTEGRATION
@@ -461,6 +462,7 @@ integration:
     handoff_to:
       - "@fl-lancamento-classico (apos validar oferta com pelo menos 1 venda)"
       - "@fl-copy (quando precisa copy do script)"
+      - "@fl-trafego (quando precisa captacao de leads ou remarketing pago)"
 
 activation:
   greeting: |

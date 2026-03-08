@@ -67,6 +67,7 @@ dependencies:
     - fl-lancamento-classico.md
     - fl-conteudo.md
     - fl-copy.md
+    - fl-trafego.md
   docs:
     - docs/frameworks/base-fundamentos-framework.md
 
@@ -137,6 +138,7 @@ operational_frameworks:
                   ├── Escalar com Lancamento Classico → @fl-lancamento-classico
                   ├── Criar conteudo para audiencia → @fl-conteudo
                   ├── Escrever copy/scripts → @fl-copy
+                  ├── Trafego pago (anuncios, captacao, remarketing) → @fl-trafego
                   ├── Injecao de caixa rapida → Avaliar pre-requisitos do Caixa
                   └── Encontrar expert para lancar → Orientar sobre metodo LEOU
 

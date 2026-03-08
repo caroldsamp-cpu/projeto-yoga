@@ -22,6 +22,7 @@ Squad baseado 100% nas transcricoes do curso Formula de Lancamento (Erico Rocha 
 @formula-lancamento:fl-lancamento-classico # Escalar com CPLs
 @formula-lancamento:fl-conteudo           # Conteudo Raiz e Nutela
 @formula-lancamento:fl-copy              # Scripts e gatilhos mentais
+@formula-lancamento:fl-trafego           # Trafego pago (Meta + Google Ads)
 ```
 
 ---
@@ -44,12 +45,15 @@ graph TD
 
     T2 --> CONTEUDO[fl-conteudo<br/>Raiz, Nutela, CLI,<br/>Distribuicao]
     T2 --> COPY[fl-copy<br/>Script de Vendas,<br/>Gatilhos Mentais]
+    T2 --> TRAFEGO[fl-trafego<br/>Meta Ads, Google Ads,<br/>Captacao, Remarketing]
 
     ALIC -->|Alicerce pronto| OFERTA
     OFERTA -->|Oferta montada| SEMENTE
     SEMENTE -->|Validado| CLASSICO
     CLASSICO -.->|Suporte| CONTEUDO
     CLASSICO -.->|Suporte| COPY
+    SEMENTE -.->|Suporte| TRAFEGO
+    CLASSICO -.->|Suporte| TRAFEGO
 ```
 
 ---
@@ -65,6 +69,7 @@ graph TD
 | **fl-lancamento-classico** | Especialista em Lancamento Classico — CPLs, Pre-Lancamento, Carrinho | 1 | `@formula-lancamento:fl-lancamento-classico` |
 | **fl-conteudo** | Especialista em Conteudo — Raiz, Nutela, CLI, Distribuicao | 2 | `@formula-lancamento:fl-conteudo` |
 | **fl-copy** | Especialista em Copy — Script de Vendas, Gatilhos Mentais, Objecoes | 2 | `@formula-lancamento:fl-copy` |
+| **fl-trafego** | Especialista em Trafego Pago — Distribuicao, Captacao, Remarketing CPL, Remarketing Carrinho | 2 | `@formula-lancamento:fl-trafego` |
 
 ---
 

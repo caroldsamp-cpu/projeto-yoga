@@ -528,7 +528,7 @@ completion_criteria:
   handoff_to:
     precisa_copy_cpls: "@fl-copy"
     precisa_conteudo_aquecimento: "@fl-conteudo"
-    precisa_trafego: "@fl-chief (encaminhar para trafego pago)"
+    precisa_trafego_pago: "@fl-trafego (captacao, remarketing CPL e remarketing de carrinho)"
     proximo_ciclo: "@fl-chief (debriefing e proximo ciclo evolutivo)"
 
 # =====================================================================
@@ -547,6 +547,7 @@ integration:
     handoff_to:
       - "@fl-copy (quando precisa copy dos CPLs ou video de vendas)"
       - "@fl-conteudo (quando precisa conteudo de aquecimento)"
+      - "@fl-trafego (quando precisa captacao, remarketing CPL ou remarketing de carrinho)"
       - "@fl-chief (debriefing e proximo ciclo)"
 
 activation:

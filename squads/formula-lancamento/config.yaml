@@ -61,6 +61,11 @@ squad:
       role: Especialista em Copy — Script de Vendas, Gatilhos Mentais, Objeções
       tier: 2
 
+    - id: fl-trafego
+      file: agents/fl-trafego.md
+      role: Especialista em Tráfego Pago — Distribuição, Captação, Remarketing CPL, Remarketing Carrinho
+      tier: 2
+
   quality_rules:
     - "Todo conselho deve ser rastreável a uma aula específica [SOURCE: Módulo > Aula]"
     - "Nunca inventar estratégias fora do que o curso ensina"
