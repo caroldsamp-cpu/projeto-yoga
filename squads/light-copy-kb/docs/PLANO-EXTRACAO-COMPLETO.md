@@ -155,7 +155,7 @@ Fase 4: @fl-conteudo → valida alinhamento com calendario e publica
 | # | Modulo | Arquivos Fonte | Output Esperado | Status |
 |---|--------|---------------|----------------|--------|
 | 1.1 | M1 — Fundamentos Criativos | 4 transcricoes | framework + SOP + checklist | [x] |
-| 1.2 | M2 — Gatilhos Mentais & Copy | 30 transcricoes | framework + SOP + checklist | [ ] |
+| 1.2 | M2 — Gatilhos Mentais & Copy | 32 transcricoes | framework + SOP + checklist | [x] |
 | 1.3 | M3 — Elementos Literarios (Light Copy) | 31 transcricoes | framework + SOP + checklist | [ ] |
 | 1.4 | M4 — Aplicacao & Analises Praticas | 23 transcricoes (15 M4 + 8 analises) | framework + SOP + checklist | [ ] |
 
