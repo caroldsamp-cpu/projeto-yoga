@@ -1,0 +1,125 @@
+config:
+  template: "arctic_frost"
+  tier: "enhanced"
+  lang: "pt-BR"
+
+nav:
+  brand: "NamaSer"
+  links:
+    - label: "Metodo"
+      href: "#expertise"
+    - label: "Beneficios"
+      href: "#proof"
+    - label: "Para quem e"
+      href: "#stack"
+    - label: "Duvidas"
+      href: "#faq"
+  cta:
+    label: "Quero comecar"
+    href: "#cta"
+
+hero:
+  eyebrow:
+    number: "01"
+    label: "Sadhana na Vida Real"
+  name: "NamaSer por Gaby Drummond"
+  labels:
+    - "Yoga sem performance"
+    - "Presenca no dia real"
+    - "Constancia com acolhimento"
+  description: "Seu corpo pode ser o lugar da sua paz. No NamaSer, voce constroi seu Sadhana com praticas possiveis, no seu ritmo, mesmo nos dias corridos."
+  cta_primary:
+    label: "Quero comecar minha jornada"
+    href: "#cta"
+  cta_secondary:
+    label: "Ver como funciona"
+    href: "#expertise"
+
+photo:
+  url: "gaby-hero.jpg"
+  alt: "Gaby Drummond"
+  treatment: "cinematic"
+
+proof:
+  eyebrow:
+    number: "02"
+    label: "Sinais Reais"
+  items:
+    - number: "55"
+      suffix: ""
+      label: "Leads pesquisadas para guiar a estrategia"
+    - number: "80"
+      suffix: "+"
+      label: "Praticas disponiveis para diferentes ritmos"
+    - number: "700"
+      suffix: ""
+      label: "Leads warm no ecossistema da marca"
+    - number: "1"
+      suffix: "a"
+      label: "Pratica ja pode trazer leveza e presenca"
+
+expertise:
+  eyebrow:
+    number: "03"
+    label: "Como Funciona"
+  cards:
+    - title: "Sadhana na vida real"
+      description: "Voce nao precisa de dia perfeito para praticar. O caminho comeca com o que e possivel hoje."
+      featured: true
+      tags: ["presenca", "rotina real", "sem culpa"]
+    - title: "Metodo de continuidade"
+      description: "Regular, abrir espaco, expandir e integrar: um ciclo para sair do excesso e voltar para voce."
+      tags: ["constancia", "ritmo", "clareza"]
+    - title: "Acolhimento de verdade"
+      description: "Suporte para iniciantes e para quem esta recomeçando, sem comparacao e sem performance."
+      tags: ["acolhimento", "iniciante", "seguranca"]
+    - title: "Comunidade que sustenta"
+      description: "Voce pratica acompanhada por mulheres com desafios parecidos, com pertencimento e incentivo real."
+      tags: ["comunidade", "pertencimento"]
+
+quote:
+  eyebrow:
+    number: "04"
+    label: "Mensagem Central"
+  text: "Constancia simples transforma mais que intensidade ocasional. No NamaSer, voce volta para voce, no meio da vida real."
+  attribution:
+    name: "Gaby Drummond"
+    role: "Fundadora NamaSer"
+
+stack:
+  eyebrow:
+    number: "05"
+    label: "Para Quem E"
+  heading: "Clareza antes de entrar"
+  items:
+    - name: "Para voce que vive sobrecarregada"
+      detail: "Quer desacelerar mente e corpo sem depender de longas janelas de tempo."
+    - name: "Para voce que e iniciante ou insegura"
+      detail: "Busca um caminho acolhedor para comecar sem medo de nao dar conta."
+    - name: "Para voce que quer constancia real"
+      detail: "Quer manter pratica no dia a dia sem perfeccionismo e sem culpa."
+    - name: "Nao e para performance"
+      detail: "Aqui o foco nao e exibicao de postura; e presenca aplicavel a vida real."
+
+cta:
+  eyebrow:
+    number: "06"
+    label: "Proximo Passo"
+  heading: "Quer construir seu Sadhana com leveza?"
+  description: "Comece com o primeiro passo possivel para o seu momento e conheca o caminho de entrada no NamaSer."
+  primary:
+    label: "Quero comecar agora"
+    href: "#"
+  secondary:
+    label: "Falar no WhatsApp"
+    href: "#"
+
+footer:
+  copyright: "auto"
+  links:
+    - label: "Instagram"
+      href: "https://www.instagram.com/"
+    - label: "YouTube"
+      href: "https://www.youtube.com/"
+    - label: "Suporte"
+      href: "mailto:gabydrummondsyoga@gmail.com"

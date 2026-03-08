@@ -1,0 +1,201 @@
+config:
+  template: "arctic_frost"
+  tier: "enhanced"
+  lang: "pt-BR"
+
+theme_overrides:
+  global_colors:
+    bg:
+      deep: "#F8FCFE"
+      base: "#F2F8FC"
+      surface: "#FFFFFF"
+      elevated: "#ECF5FB"
+    accent:
+      primary: "#2EA8D9"
+      soft: "#1E88B5"
+      glow: "rgba(46, 168, 217, 0.14)"
+      glow_md: "rgba(46, 168, 217, 0.2)"
+      glow_hi: "rgba(46, 168, 217, 0.28)"
+    text:
+      primary: "#123042"
+      secondary: "#3F6175"
+      muted: "#62859A"
+      faint: "#86A6B8"
+    border:
+      default: "rgba(46, 168, 217, 0.14)"
+      hover: "rgba(46, 168, 217, 0.25)"
+  typography_heading_font: "'Geist', 'Inter', system-ui"
+
+nav:
+  brand: "NamaSer"
+  links:
+    - label: "Metodo"
+      href: "#expertise"
+    - label: "Beneficios"
+      href: "#beneficios"
+    - label: "Depoimentos"
+      href: "#depoimentos"
+    - label: "Duvidas"
+      href: "#faq"
+    - label: "Oferta"
+      href: "#cta"
+  cta:
+    label: "Comecar agora"
+    href: "#cta"
+
+hero:
+  eyebrow:
+    number: "01"
+    label: "Yoga para vida real"
+  name: "NamaSer por Gaby Drummond"
+  labels:
+    - "Sem performance"
+    - "Com acolhimento"
+    - "Com consistencia leve"
+  description: "Seu corpo pode ser o lugar da sua paz. O NamaSer foi criado para mulheres que vivem na correria e querem voltar para si com praticas guiadas, curtas e profundas."
+  cta_primary:
+    label: "Entrar por R$ 138,00"
+    href: "https://pay.hotmart.com/V79262413F?bid=1763378946585"
+  cta_secondary:
+    label: "Falar no WhatsApp"
+    href: "https://wa.me/553198531960"
+
+photo:
+  url: "gaby-hero.jpg"
+  alt: "Gaby praticando yoga ao ar livre"
+  treatment: "clean"
+
+proof:
+  eyebrow:
+    number: "02"
+    label: "Visao geral"
+  items:
+    - number: "80"
+      suffix: "+"
+      label: "Praticas disponiveis na plataforma"
+    - number: "12"
+      suffix: "m"
+      label: "Media de duracao de muitas praticas"
+    - number: "2"
+      suffix: ""
+      label: "Bonus oficiais inclusos"
+    - number: "138"
+      suffix: "R$"
+      label: "Acesso anual ao NamaSer"
+
+expertise:
+  eyebrow:
+    number: "03"
+    label: "Metodo Leveza Ciclica"
+  cards:
+    - title: "1. Regular"
+      description: "Respiracao, aterramento e intencao para sair do modo alerta e entrar no momento presente."
+      featured: true
+      tags: ["seguranca interna", "presenca"]
+    - title: "2. Abrir espaco"
+      description: "Mobilizacoes suaves para soltar tensoes acumuladas no corpo sem forcar posturas."
+      tags: ["alivio corporal", "fluidez"]
+    - title: "3. Expandir"
+      description: "Fluxos guiados conforme sua energia do dia, com forca leve e estabilidade."
+      tags: ["forca suave", "ritmo real"]
+    - title: "4. Integrar"
+      description: "Respiracao, alongamentos e pausa para consolidar a pratica no seu cotidiano."
+      tags: ["calmaria", "continuidade"]
+
+benefits:
+  eyebrow:
+    number: "04"
+    label: "O que voce sente na pratica"
+  heading: "Beneficios percebidos no corpo e na mente"
+  items:
+    - title: "Desacelera a mente"
+      description: "Acalma o excesso de pensamentos e traz mais clareza para decidir com menos ruido interno."
+    - title: "Alivia tensoes fisicas"
+      description: "Ajuda a reduzir rigidez em ombros, lombar e quadris com movimentos seguros e progressivos."
+    - title: "Constancia sem culpa"
+      description: "Voce consegue manter a pratica porque ela cabe na vida real, sem cobrancas de perfeicao."
+    - title: "Mais energia ao longo do dia"
+      description: "Quando o corpo respira melhor, voce ganha vitalidade para rotina, trabalho e relacoes."
+    - title: "Reconexao com voce"
+      description: "A pratica te devolve para seu centro, fortalecendo autopercepcao e autorrespeito."
+    - title: "Comunidade acolhedora"
+      description: "Voce pratica com mulheres em desafios parecidos, com suporte humano e direcionamento."
+
+quote:
+  eyebrow:
+    number: "05"
+    label: "Mensagem"
+  text: "Talvez voce nao precise de mais uma exigencia. Talvez precise de um retorno para voce, no meio da vida real. Isso tambem e Sadhana."
+  attribution:
+    name: "Gaby Drummond"
+    role: "Fundadora do NamaSer"
+
+stack:
+  eyebrow:
+    number: "06"
+    label: "Para quem e"
+  heading: "Se voce se identifica com isso, o NamaSer e para voce"
+  items:
+    - name: "Nunca praticou yoga"
+      detail: "Voce encontra orientacao para iniciar com seguranca, sem comparacao e sem pressa."
+    - name: "Ja tentou e nao sustentou"
+      detail: "A proposta aqui e constancia possivel: pratica adaptada ao seu ritmo real."
+    - name: "Sente sobrecarga mental"
+      detail: "As aulas ajudam a regular o sistema nervoso e a criar pausas no meio do dia."
+    - name: "Quer um caminho de autocuidado"
+      detail: "Sem formula magica: so pratica consistente, orientada e com profundidade."
+
+testimonials:
+  eyebrow:
+    number: "07"
+    label: "Depoimentos"
+  heading: "O que alunas relatam depois de praticar com a Gaby"
+  items:
+    - author: "Julia Paes"
+      text: "Com a Gaby, reencontrei o yoga de um jeito profundo e possivel. A pratica virou um ponto de retorno para mim."
+    - author: "Maria Eduarda Cunha"
+      text: "Eu achava que yoga nao era para mim. Hoje tenho mais consciencia corporal e mais presenca no dia a dia."
+    - author: "Manuela Moss"
+      text: "A confianca que nasce no tapete transborda para vida. E uma transformacao interna muito real."
+    - author: "Kariny Silva"
+      text: "Sai da primeira aula com sensacao de presente. Toda pratica me devolve folego e alinhamento."
+
+faq:
+  eyebrow:
+    number: "08"
+    label: "Duvidas frequentes"
+  heading: "Tudo que voce precisa saber antes de entrar"
+  items:
+    - question: "Posso entrar mesmo sendo iniciante?"
+      answer: "Sim. O NamaSer foi estruturado para iniciantes e para quem esta recomecando, com orientacoes claras e adaptacoes."
+    - question: "Quanto tempo por dia eu preciso?"
+      answer: "Depende da sua rotina. Ha praticas curtas e praticas longas. Muitas alunas conseguem manter com 10 a 20 minutos."
+    - question: "Por quanto tempo tenho acesso?"
+      answer: "Seu acesso e de 1 ano completo ao conteudo da plataforma."
+    - question: "Quais bonus estao inclusos?"
+      answer: "Desafio Rituais Sadhana e Reset Mental, para te ajudar na constancia e na regulacao emocional."
+    - question: "Tem garantia?"
+      answer: "Sim, garantia incondicional de 7 dias apos a compra."
+
+cta:
+  eyebrow:
+    number: "09"
+    label: "Oferta"
+  heading: "Comece hoje seu retorno para voce"
+  description: "Acesso anual ao NamaSer por R$ 138,00. Inclui Desafio Rituais Sadhana + Reset Mental. Compra direta no checkout."
+  primary:
+    label: "Quero entrar agora por R$ 138,00"
+    href: "https://pay.hotmart.com/V79262413F?bid=1763378946585"
+  secondary:
+    label: "Ainda tenho duvidas"
+    href: "https://wa.me/553198531960"
+
+footer:
+  copyright: "auto"
+  links:
+    - label: "Instagram"
+      href: "https://www.instagram.com/"
+    - label: "YouTube"
+      href: "https://www.youtube.com/"
+    - label: "Suporte"
+      href: "mailto:gabydrummondsyoga@gmail.com"
