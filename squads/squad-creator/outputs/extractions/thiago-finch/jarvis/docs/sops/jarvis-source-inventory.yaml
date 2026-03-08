@@ -1,0 +1,23 @@
+author_name: "Thiago Finch"
+topic: "jarvis"
+mode: "triplet"
+fidelity_status: "validated_with_real_transcript"
+sources:
+  - path: "C:/Users/carol/code/apps/apify-hotmart-transcriber-mvp/outputs/transcripts/jarvis finch/Hi_a9G3YrW0.whisper.small.txt"
+    type: "transcript"
+    coverage_notes:
+      - "Primary and real transcript indicated by user."
+      - "Contains the full narrative about Jarvis/MegaBrain architecture and operation."
+gates:
+  source_coverage:
+    status: "PASS"
+    rationale:
+      - "Topic has multiple explicit mentions."
+      - "Process, examples and setup details are present."
+  source_fidelity:
+    status: "PASS"
+    rationale:
+      - "User confirmed this is the real transcript."
+next_action: []
+citation_ledger: "squads/squad-creator/outputs/extractions/thiago-finch/jarvis/docs/sops/jarvis-citation-ledger-v2.md"
+strict_mode: true

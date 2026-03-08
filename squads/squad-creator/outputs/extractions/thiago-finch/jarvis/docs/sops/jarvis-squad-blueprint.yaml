@@ -1,0 +1,79 @@
+name: "jarvis-rag-extraction-blueprint"
+author: "Thiago Finch"
+topic: "jarvis"
+status: "validated_with_real_transcript"
+citation_mode: "strict_v2_sentence_ledger"
+
+goal:
+  primary: "Extract and implement the RAG build method described in source."
+  secondary:
+    - "Preserve conclave/orchestration layer."
+    - "Preserve clone/DNA extension concepts."
+
+phases:
+  - id: P1
+    name: "Context problem framing"
+    outputs:
+      - "problem-statement.md"
+      - "context-criteria.md"
+    success:
+      - "Model context limitation documented"
+      - "Business-context constraints explicit"
+
+  - id: P2
+    name: "Ingestion + labeling"
+    outputs:
+      - "connectors-config.yaml"
+      - "labeling-rules.yaml"
+    success:
+      - "All required channels mapped"
+      - "Speaker/entity labels defined"
+
+  - id: P3
+    name: "Pipeline + retrieval"
+    outputs:
+      - "pipeline-spec.md"
+      - "retrieval-guardrails.md"
+    success:
+      - "Source attribution in output"
+      - "Recurring sync configured"
+
+  - id: P4
+    name: "Conclave and clone extensions"
+    outputs:
+      - "orchestration-map.yaml"
+      - "clone-layer-notes.md"
+    success:
+      - "Conclave routing rules active"
+      - "Core RAG remains source-grounded"
+
+roles:
+  - role: "ingestion-worker"
+    responsibilities:
+      - "Collect from channels"
+      - "Persist raw + processed artifacts"
+  - role: "retrieval-validator"
+    responsibilities:
+      - "Verify traceable answers"
+      - "Reject unsourced statements"
+  - role: "conclave-orchestrator"
+    responsibilities:
+      - "Route tasks across agent layers"
+      - "Escalate to quality gate checks"
+
+quality_gates:
+  - gate: "G1_source_coverage"
+    criteria:
+      - "Topic mentions and process evidence present"
+      - "50+ traceable citations in ledger"
+  - gate: "G2_rag_core"
+    criteria:
+      - "Context criteria implemented"
+      - "Pipeline active"
+      - "Traceable retrieval output"
+  - gate: "G3_extensions"
+    criteria:
+      - "Conclave integrated without breaking RAG grounding"
+      - "Clone/DNA layers documented as extension, not replacement"
+
+
