@@ -161,13 +161,13 @@ phases:
       - proxima_acao: "debriefing em 24h"
 
     veto_conditions:
-      - "Stories nao conectam com Roma → DEVOLVER para Phase 3"
-      - "Conflito com calendario → AJUSTAR datas"
+      - "Stories nao conectam com Roma → AJUSTAR internamente (reescrever pontos de conexao dentro desta fase)"
+      - "Conflito com calendario → AJUSTAR datas internamente"
 
     checkpoint:
       gate: "Alinhamento com Roma + calendario confirmado?"
       pass_action: "Publicar + agendar debriefing 24h"
-      fail_action: "Devolver para fase anterior com feedback"
+      fail_action: "Ajustar internamente nesta fase ate passar (fluxo unidirecional)"
 
   phase_5:
     name: "Debriefing (24h apos publicacao)"
@@ -204,11 +204,12 @@ phases:
 # =====================================================================
 
 global_rules:
-  - "Fluxo unidirecional: Phase 1 → 2 → 3 → 4 → 5 (nao volta)"
-  - "Excecao: veto em Phase 4 pode devolver para Phase 3 (unica vez)"
-  - "Zero gap de tempo entre handoffs — cada fase entrega outputs para a proxima"
+  - "Fluxo unidirecional: Phase 1 → 2 → 3 → 4 → 5 (sem retorno entre fases)"
+  - "Zero gap de tempo entre handoffs de Phases 1-4 — cada fase entrega outputs para a proxima"
+  - "Phase 5 (Debriefing) e uma fase deferred — executada 24h apos Phase 4 (aguarda metricas reais)"
   - "Voice Gate (se configurado) se aplica em todas as fases de escrita"
   - "Todos os [SOURCE:] devem ser mantidos nas anotacoes"
+  - "Quantidade de stories e parametrizavel — min recomendado 15, mas pode ser menor se usuario especificar"
 
 estimated_duration:
   phase_1: "10-15 min"

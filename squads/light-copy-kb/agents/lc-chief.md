@@ -365,9 +365,9 @@ integration:
   workflow_integration:
     position_in_flow: "Entry point do squad Light Copy"
     handoff_from:
-      - "@fl-chief (quando FL precisa de copy light ou stories)"
-      - "@fl-conteudo (quando precisa de stories com dispositivos)"
-      - "@fl-copy (quando precisa de Light Copy avancado)"
+      - "@fl-chief (cross-squad: quando FL precisa de diagnostico LC ou routing)"
+      - "@fl-conteudo (cross-squad: quando precisa de stories com dispositivos)"
+      - "@fl-copy (cross-squad: quando precisa de Light Copy avancado)"
       - "Usuario direto (ativacao @lc-chief)"
     handoff_to:
       - "@lc-rewriter (texto escrito)"

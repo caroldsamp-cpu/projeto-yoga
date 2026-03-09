@@ -201,10 +201,10 @@ Fase 4: @fl-conteudo → valida alinhamento com calendario e publica
 
 | # | Acao | Comando | Status |
 |---|------|---------|--------|
-| 5.1 | Validar squad Light Copy completo | `*validate-squad light-copy-kb` | [ ] |
-| 5.2 | Validar handoffs bilaterais FL ↔ LC | Revisao manual | [ ] |
-| 5.3 | Smoke tests dos 3 agentes | Quality gate SC_AGT_001 | [ ] |
-| 5.4 | Testar workflow cross-squad end-to-end | Cenario: "5 stories para aquecimento classico" | [ ] |
+| 5.1 | Validar squad Light Copy completo | `*validate-squad light-copy-kb` | [x] |
+| 5.2 | Validar handoffs bilaterais FL ↔ LC | Revisao manual | [x] |
+| 5.3 | Smoke tests dos 3 agentes | Quality gate SC_AGT_001 | [x] |
+| 5.4 | Testar workflow cross-squad end-to-end | Cenario: "5 stories para aquecimento classico" | [x] |
 
 ---
 

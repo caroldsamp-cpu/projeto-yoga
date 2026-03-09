@@ -486,6 +486,7 @@ integration:
     position_in_flow: "Executor de texto escrito no squad Light Copy"
     handoff_from:
       - "@lc-chief (roteamento por formato = texto)"
+      - "@fl-chief (cross-squad: quando FL precisa de Light Copy avancado)"
       - "@fl-copy (quando precisa de Light Copy puro sem FL)"
       - "Usuario direto (ativacao @lc-rewriter)"
     handoff_to:
