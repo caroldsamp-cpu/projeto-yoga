@@ -1,34 +1,173 @@
-﻿# Light Copy metadata taxonomy (controlled vocabulary)
+# Light Copy + Stories 10x metadata taxonomy (controlled vocabulary)
 
-version: 1.0.0
+version: 2.0.0
+updated: "2026-03-09"
 
 techniques:
   - name: logic_of_premises
-    aliases: ["premissa", "logica de premissas"]
+    aliases: ["premissa", "logica de premissas", "cadeia de premissas"]
   - name: magnetic_opening
     aliases: ["headline", "abertura", "redline"]
   - name: objection_killing
     aliases: ["objecoes", "quebra de objecao"]
   - name: curiosity_hook
-    aliases: ["curiosidade", "hook"]
+    aliases: ["curiosidade", "hook", "loop de curiosidade"]
   - name: authority_building
     aliases: ["autoridade", "prova"]
   - name: contrast_positioning
     aliases: ["comparacao", "antes_depois"]
+  - name: briefing_copy
+    aliases: ["briefing", "planejamento de copy", "10 campos"]
+  - name: big_idea
+    aliases: ["bigadia", "ideia central unica"]
+  - name: estructura_3cs
+    aliases: ["contexto conteudo cta", "3Cs"]
 
+# 25 elementos literarios (alinhados com @lc-rewriter EL01-EL25)
 literary_elements:
-  - aforismo
-  - antitese
-  - anafora
-  - hiperbole
-  - ironia
-  - paradoxo
-  - personificacao
-  - jogo_de_palavras
-  - setup_punchline
-  - triade_comica
-  - neologismo
-  - analogia
+  - id: EL01
+    name: linguagem_fantasiosa
+    aliases: ["fantasia", "imaginacao"]
+  - id: EL02
+    name: narrativa_real
+    aliases: ["storytelling", "historia real"]
+  - id: EL03
+    name: pergunta_retorica
+    aliases: ["retorica", "pergunta provocativa"]
+  - id: EL04
+    name: metafora
+    aliases: ["analogia", "comparacao poetica"]
+  - id: EL05
+    name: contraste
+    aliases: ["justaposicao", "antitese"]
+  - id: EL06
+    name: humor_ironia
+    aliases: ["ironia", "sarcasmo", "comedia"]
+  - id: EL07
+    name: ritmo_cadencia
+    aliases: ["ritmo", "frases curtas longas"]
+  - id: EL08
+    name: inversao_expectativa
+    aliases: ["twist", "surpresa"]
+  - id: EL09
+    name: dialogo_simulado
+    aliases: ["conversa", "dialogo"]
+  - id: EL10
+    name: enumeracao_estrategica
+    aliases: ["lista", "enumeracao"]
+  - id: EL11
+    name: onomatopeia_sensorial
+    aliases: ["sensorial", "sinestesia"]
+  - id: EL12
+    name: repeticao_anafora
+    aliases: ["anafora", "repeticao intencional"]
+  - id: EL13
+    name: hiperbole_controlada
+    aliases: ["exagero", "hiperbole"]
+  - id: EL14
+    name: personificacao
+    aliases: ["antropomorfismo"]
+  - id: EL15
+    name: cliffhanger
+    aliases: ["loop aberto", "suspense"]
+  - id: EL16
+    name: citacao_autoridade
+    aliases: ["citacao", "referencia"]
+  - id: EL17
+    name: confissao_vulnerabilidade
+    aliases: ["vulnerabilidade", "confissao"]
+  - id: EL18
+    name: referencia_cultural
+    aliases: ["cultura pop", "referencia"]
+  - id: EL19
+    name: antitese
+    aliases: ["opostos", "tensao"]
+  - id: EL20
+    name: gradacao_climax
+    aliases: ["climax", "crescendo"]
+  - id: EL21
+    name: eufemismo_litotes
+    aliases: ["suavizar", "eufemismo"]
+  - id: EL22
+    name: pleonasmo_estrategico
+    aliases: ["enfase", "pleonasmo"]
+  - id: EL23
+    name: sinestesia
+    aliases: ["mistura sentidos"]
+  - id: EL24
+    name: metonimia_sinedoque
+    aliases: ["parte pelo todo"]
+  - id: EL25
+    name: universo_cognitivo
+    aliases: ["campo semantico", "universo"]
+
+# 37 dispositivos de engenharia social S10X (alinhados com @lc-stories D01-D39)
+s10x_devices:
+  group_A_combustivel:
+    - {id: D01, name: combustivel_extra, aliases: ["combustivel", "extra"]}
+    - {id: D02, name: caixinha_por_tema, aliases: ["caixinha tema"]}
+    - {id: D03, name: caixinha_geral, aliases: ["caixinha geral", "pergunte qualquer coisa"]}
+    - {id: D04, name: engajamento_puro, aliases: ["engajamento", "puro"]}
+  group_B_identidade:
+    - {id: D05, name: identidade_comunicador, aliases: ["identidade pessoal"]}
+    - {id: D06, name: identidade_produto, aliases: ["identidade marca"]}
+    - {id: D07, name: identidade_consumidor, aliases: ["identidade aluno"]}
+  group_C_prova_social:
+    - {id: D08, name: print_resultado, aliases: ["print", "screenshot resultado"]}
+    - {id: D09, name: conversa_sem_privacidade, aliases: ["print DM", "conversa publica"]}
+    - {id: D10, name: cultura_resultados, aliases: ["resultados", "hall of fame"]}
+  group_D_lancamento:
+    - {id: D10b, name: ansiedade_abertura, aliases: ["ansiedade", "countdown"]}
+    - {id: D11, name: abertura_carrinho, aliases: ["abertura", "carrinho aberto"]}
+  group_E_interacao:
+    - {id: D12, name: desafio_gincana, aliases: ["desafio", "gincana", "competicao"]}
+    - {id: D13, name: inbox_lucrativo, aliases: ["inbox", "DM lucrativo"]}
+  group_F_humor:
+    - {id: D14, name: piada_interna, aliases: ["piada", "inside joke"]}
+    - {id: D15, name: psicologia_reversa, aliases: ["reversa", "nao faca isso"]}
+  group_G_narrativa:
+    - {id: D16, name: antes_depois, aliases: ["transformacao", "before after"]}
+    - {id: D17, name: bastidores, aliases: ["backstage", "behind the scenes"]}
+    - {id: D18, name: embate, aliases: ["debate", "confronto"]}
+    - {id: D19, name: vida_familia, aliases: ["pessoal", "familia"]}
+  group_H_crescimento:
+    - {id: D20, name: peca_compartilhamento, aliases: ["compartilhe", "repost"]}
+    - {id: D21, name: nomes_esquisitos, aliases: ["nomes", "naming criativo"]}
+    - {id: D22, name: espetacularizacao, aliases: ["espetaculo", "show"]}
+  group_I_curiosidade:
+    - {id: D23, name: voce_sabia, aliases: ["curiosidade", "fato"]}
+    - {id: D24, name: micro_influencia, aliases: ["micro influencer"]}
+    - {id: D25, name: presente_dificil, aliases: ["presente", "gift"]}
+    - {id: D26, name: resposta_escondida, aliases: ["escondida", "hidden"]}
+    - {id: D27, name: tarja_curiosidade, aliases: ["tarja", "blur"]}
+  group_J_formatos:
+    - {id: D28, name: resumo, aliases: ["summary", "recap"]}
+    - {id: D29, name: sete_erros, aliases: ["7 erros", "erros comuns"]}
+    - {id: D30, name: diario, aliases: ["diary", "day in the life"]}
+    - {id: D31, name: critica, aliases: ["review", "opiniao"]}
+    - {id: D32, name: demonstracao_curta, aliases: ["demo", "tutorial rapido"]}
+    - {id: D33, name: enquete_curiosidade_real, aliases: ["enquete", "poll real"]}
+    - {id: D34, name: link_oculto, aliases: ["link escondido", "link sutil"]}
+    - {id: D35, name: indicacao_pretenciosa, aliases: ["peca ajuda", "indicacao"]}
+    - {id: D36, name: levante_mao, aliases: ["raise hand", "quem aqui"]}
+    - {id: D37, name: desabafo, aliases: ["vent", "desabafo emocional"]}
+    - {id: D38, name: historia_gancho, aliases: ["gancho", "hook story"]}
+    - {id: D39, name: bi_apurado, aliases: ["BI", "inteligencia"]}
+
+# Tipos de sequencia S10X
+sequence_types:
+  - {id: SEQ01, name: engajamento_puro, ratio: "90%", cadence: "alta ou baixa"}
+  - {id: SEQ02, name: consciencia_produto, ratio: "90%", cadence: "baixa"}
+  - {id: SEQ03, name: caixinha_por_tema, ratio: "90%", cadence: "baixa"}
+  - {id: SEQ04, name: caixinha_geral, ratio: "90%", cadence: "baixa"}
+  - {id: SEQ05, name: venda_digital, ratio: "10%", cadence: "alta"}
+  - {id: SEQ06, name: venda_fisico, ratio: "10%", cadence: "alta"}
+  - {id: SEQ07, name: aquecimento_pico, ratio: "10%", cadence: "SEMPRE alta"}
+  - {id: SEQ08, name: pre_abertura, ratio: "10%", cadence: "SEMPRE alta"}
+  - {id: SEQ09, name: publicidade, ratio: "variavel", cadence: "baixa"}
+  - {id: SEQ10, name: promocao_parceiro, ratio: "variavel", cadence: "baixa"}
+  - {id: SEQ11, name: evento, ratio: "variavel", cadence: "alta"}
+  - {id: SEQ12, name: divulgacao_conteudo, ratio: "variavel", cadence: "baixa"}
 
 persuasion_drivers:
   - novelty
@@ -60,6 +199,9 @@ content_types:
   - newsletter
   - whatsapp
   - longform
+  - order_bump
+  - upsell
+  - downsell
 
 audience_stages:
   - cold
@@ -76,3 +218,5 @@ chunk_types:
   - warning
   - exercise
   - cta
+  - device
+  - sequence

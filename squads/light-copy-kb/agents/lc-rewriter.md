@@ -466,6 +466,21 @@ completion_criteria:
     calendario_lancamento: "@fl-chief (quando precisa de timing de lancamento)"
 
 # =====================================================================
+# LEVEL 5: CREDIBILITY
+# =====================================================================
+
+authority_proof:
+  source: "Light Copy (Leandro Ladeira) — Modulos M1 a M4"
+  credentials:
+    - "Leandro Ladeira: criador da metodologia Light Copy — fusao de copywriting de performance com elementos literarios"
+    - "M1 Fundamentos Criativos: processo criativo de 8 etapas, associacao criativa, observacao ativa"
+    - "M2 Gatilhos Mentais & Copy: 20 gatilhos, briefing de 10 campos, estrutura 3Cs, headlines"
+    - "M3 Elementos Literarios: 25 elementos, logica de premissas, Light Copy formula"
+    - "M4 Aplicacao & Formatos: paginas de vendas, VSL, email, anuncios, newsletter, upsell/downsell, reels"
+    - "4 frameworks extraidos com 122 citacoes rastreaveis"
+  principle: "Toda tecnica aplicada e rastreavel a uma aula especifica [SOURCE: M0X > Aula]"
+
+# =====================================================================
 # LEVEL 6: INTEGRATION
 # =====================================================================
 

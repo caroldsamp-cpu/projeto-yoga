@@ -1,0 +1,84 @@
+squad:
+  name: light-copy-kb
+  version: 1.1.0
+  description: >
+    Squad baseado 100% nas transcricoes dos cursos Light Copy (Leandro Ladeira) e Stories 10x
+    (Leandro Ladeira + Ruy Guimaraes + Vitor Albuquerque). Toda sugestao e rastreavel a uma
+    aula especifica do curso. Nunca inventa fora do escopo das aulas.
+  domain: copywriting-and-instagram-stories
+  language: pt-BR
+
+  sources:
+    light_copy:
+      path: "C:/Users/carol/code/apps/apify-hotmart-transcriber-mvp/outputs/transcripts/Light Copy"
+      modules:
+        - "M1 — Fundamentos Criativos"
+        - "M2 — Gatilhos Mentais & Copy"
+        - "M3 — Elementos Literarios"
+        - "M4 — Aplicacao & Formatos"
+      total_transcripts: 101
+      status: completo
+    stories_10x:
+      path: "C:/Users/carol/code/apps/apify-hotmart-transcriber-mvp/outputs/transcripts/Stories 10x"
+      modules:
+        - "S10X-Core — Metodo + 37 Dispositivos"
+        - "S10X-Operacional — Estrategia + Execucao"
+      total_transcripts: 32
+      status: completo
+
+  activation: "@light-copy-kb:{agent-name}"
+
+  orchestrator: lc-chief
+
+  agents:
+    - id: lc-chief
+      file: agents/lc-chief.md
+      role: Orchestrador — diagnostica necessidade e roteia para agente LC correto
+      tier: orchestrator
+
+    - id: lc-rewriter
+      file: agents/lc-rewriter.md
+      role: Especialista em Reescrita — Light Copy M1-M4 (premissas, elementos literarios, gatilhos)
+      tier: 1
+
+    - id: lc-stories
+      file: agents/lc-stories.md
+      role: Estrategista Stories — S10X Core + Operacional (37 dispositivos, 12 sequencias, SPIN)
+      tier: 1
+
+  cross_squad_integrations:
+    - squad: formula-lancamento
+      type: bilateral
+      handoffs:
+        - from: "@fl-conteudo"
+          to: "@lc-stories"
+          when: "Precisa criar stories com dispositivos para aquecimento"
+        - from: "@fl-copy"
+          to: "@lc-rewriter"
+          when: "Precisa de Light Copy avancado com premissas"
+        - from: "@lc-stories"
+          to: "@fl-conteudo"
+          when: "Precisa saber fase do lancamento"
+        - from: "@lc-rewriter"
+          to: "@fl-copy"
+          when: "Precisa script de vendas para aplicar Light Copy"
+
+  quality_rules:
+    - "Todo conselho deve ser rastreavel a uma aula especifica [SOURCE: Modulo > Aula]"
+    - "Nunca inventar tecnicas fora do que os cursos ensinam"
+    - "Light Copy = Performance (M2) x Logica de Premissas (M3) x Elementos Literarios (M3) — os 3 juntos"
+    - "S10X = Comunidade, nao views. Dispositivos sao psicologia humana, nao hacks de algoritmo"
+    - "Se nao souber responder com base nas aulas, dizer explicitamente"
+    - "Regra 90/10: 90% engajamento, 10% venda nas sequencias de stories"
+
+  knowledge_base:
+    triplets:
+      total: 6
+      frameworks: 6
+      sops: 6
+      checklists: 7
+    rag_pipeline:
+      chunks: 3581
+      database: chromadb
+      status: indexed
+    cited_quotes: 146

@@ -1,6 +1,6 @@
-﻿name: "light-copy-kb"
-version: "1.0.0"
-description: "Squad de Light Copy baseado nas tecnicas de Leandro Ladeira"
+name: "light-copy-kb"
+version: "1.1.0"
+description: "Squad de Light Copy (M1-M4) + Stories 10x (37 dispositivos) baseado nas tecnicas de Leandro Ladeira"
 author: "Projeto Yoga"
 license: "MIT"
 
@@ -10,14 +10,22 @@ aios:
 
 components:
   agents:
-    - marketing-copy-light-copy.md
-  tasks:
-    - rewrite-by-light-copy.md
-  workflows: []
+    - lc-chief.md
+    - lc-rewriter.md
+    - lc-stories.md
+  tasks: []
+  workflows:
+    - wf-stories-para-lancamento.yaml
   templates:
     - rewrite-output-template.md
   checklists:
     - light-copy-quality-gate.md
+    - light-copy-m1-fundamentos-checklist.md
+    - light-copy-m2-gatilhos-checklist.md
+    - light-copy-m3-premissas-checklist.md
+    - light-copy-m4-formatos-checklist.md
+    - stories-10x-core-checklist.md
+    - stories-10x-operacional-checklist.md
   data:
     - chroma-config.yaml
     - schema-light-copy.json
@@ -30,14 +38,20 @@ dependencies:
     - chromadb
   squads:
     - marketing-yog
+    - formula-lancamento
 
 keywords:
   - light-copy
   - copywriting
   - leandro-ladeira
+  - stories-10x
+  - dispositivos
+  - premissas
+  - elementos-literarios
+  - instagram-stories
   - reescrita
   - yoga
-  - conteudo
 
-status: "in-development"
+status: "operational"
 created_at: "2026-02-22"
+updated_at: "2026-03-09"

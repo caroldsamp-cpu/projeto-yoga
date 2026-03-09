@@ -505,7 +505,7 @@ completion_criteria:
     - "Ultimo story com CTA final"
     - "Min 5 dispositivos na sequencia"
     - "CTAs distribuidos (nao so no final)"
-    - "Min 15 stories (recomendado)"
+    - "Min stories por tipo: Aquecimento/Pre-Abertura=15, Engajamento=10, Caixinha=8, Divulgacao=6 (parametrizavel)"
     - "Copy escrita para cada story"
     - "Dispositivos mapeados por story"
 
@@ -521,6 +521,21 @@ completion_criteria:
     copy_lancamento_fl: "@fl-copy (quando e copy de lancamento)"
     calendario_lancamento: "@fl-chief (quando precisa de timing do lancamento)"
     conteudo_fl: "@fl-conteudo (quando stories precisa alinhar com conteudo de lancamento)"
+
+# =====================================================================
+# LEVEL 5: CREDIBILITY
+# =====================================================================
+
+authority_proof:
+  source: "Stories 10x (Leandro Ladeira + Ruy Guimaraes + Vitor Albuquerque)"
+  credentials:
+    - "Leandro Ladeira: criador do metodo S10X — 37 dispositivos de engenharia social para Instagram Stories"
+    - "Ruy Guimaraes: co-instrutor, especialista em operacoes de trafego e crescimento"
+    - "Vitor Albuquerque: co-instrutor, especialista em automacoes e perpetuo"
+    - "S10X-Core: metodo completo com 37 dispositivos, 12 tipos de sequencia, 4 fontes de temas"
+    - "S10X-Operacional: SPIN Selling adaptado, crescimento por impulsionamento, perpetuo, automacoes"
+    - "2 frameworks extraidos com 24 citacoes rastreaveis"
+  principle: "Todo dispositivo e tecnica e rastreavel a uma aula especifica [SOURCE: S10X-Core/Operacional > Aula]"
 
 # =====================================================================
 # LEVEL 6: INTEGRATION

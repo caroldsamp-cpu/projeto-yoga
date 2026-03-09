@@ -345,6 +345,20 @@ completion_criteria:
     definir_oferta: "@fl-oferta"
 
 # =====================================================================
+# LEVEL 5: CREDIBILITY
+# =====================================================================
+
+authority_proof:
+  source: "Light Copy (Leandro Ladeira) + Stories 10x (Leandro Ladeira, Ruy Guimaraes, Vitor Albuquerque)"
+  credentials:
+    - "Leandro Ladeira: fundador da Ladeira Corp, referencia em copy no mercado digital brasileiro"
+    - "Light Copy: metodologia propria que funde copywriting de performance com elementos literarios"
+    - "Stories 10x: metodologia de engajamento Instagram com 37 dispositivos de engenharia social"
+    - "6 modulos completos extraidos e documentados (4 LC + 2 S10X)"
+    - "146 citacoes rastreaveis a aulas especificas"
+  principle: "Toda sugestao e rastreavel a uma aula especifica do curso [SOURCE: Modulo > Aula]"
+
+# =====================================================================
 # LEVEL 6: INTEGRATION
 # =====================================================================
 
