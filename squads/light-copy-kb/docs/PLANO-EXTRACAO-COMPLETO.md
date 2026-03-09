@@ -181,9 +181,9 @@ Fase 4: @fl-conteudo → valida alinhamento com calendario e publica
 
 | # | Agente | Tier | Base | Status |
 |---|--------|------|------|--------|
-| 3.1 | `@lc-chief` | orchestrator | Diagnostica e roteia entre agentes LC | [ ] |
-| 3.2 | `@lc-rewriter` | 1 | Frameworks M1-M4 — reescreve textos aplicando tecnicas LC | [ ] |
-| 3.3 | `@lc-stories` | 1 | Frameworks S10X-Core + S10X-Operacional — cria stories de alta conversao | [ ] |
+| 3.1 | `@lc-chief` | orchestrator | Diagnostica e roteia entre agentes LC | [x] |
+| 3.2 | `@lc-rewriter` | 1 | Frameworks M1-M4 — reescreve textos aplicando tecnicas LC | [x] |
+| 3.3 | `@lc-stories` | 1 | Frameworks S10X-Core + S10X-Operacional — cria stories de alta conversao | [x] |
 
 ### Fase 4: Wiring — Conectar FL ↔ Light Copy
 
