@@ -171,8 +171,8 @@ Fase 4: @fl-conteudo → valida alinhamento com calendario e publica
 
 | # | Modulo | Arquivos Fonte | Output Esperado | Status |
 |---|--------|---------------|----------------|--------|
-| 2.1 | S10X-Core — Metodo + 37 Dispositivos | ~14 transcricoes | framework + SOP + checklist | [ ] |
-| 2.2 | S10X-Operacional — Estrategia + Execucao | ~18 transcricoes | framework + SOP + checklist | [ ] |
+| 2.1 | S10X-Core — Metodo + 37 Dispositivos | ~14 transcricoes | framework + SOP + checklist | [x] |
+| 2.2 | S10X-Operacional — Estrategia + Execucao | ~18 transcricoes | framework + SOP + checklist | [x] |
 
 ### Fase 3: Criar Agentes do Squad Light Copy
 
