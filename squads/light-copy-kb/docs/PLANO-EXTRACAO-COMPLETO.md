@@ -189,13 +189,13 @@ Fase 4: @fl-conteudo → valida alinhamento com calendario e publica
 
 | # | Acao | Arquivo | Status |
 |---|------|---------|--------|
-| 4.1 | Declarar handoff_to `@lc-stories` em `@fl-conteudo` | `fl-conteudo.md` | [ ] |
-| 4.2 | Declarar handoff_to `@lc-rewriter` em `@fl-copy` | `fl-copy.md` | [ ] |
-| 4.3 | Declarar handoff_from FL em `@lc-stories` | `lc-stories.md` | [ ] |
-| 4.4 | Declarar handoff_from FL em `@lc-rewriter` | `lc-rewriter.md` | [ ] |
-| 4.5 | Atualizar `@fl-chief` routing para incluir LC | `fl-chief.md` | [ ] |
-| 4.6 | Atualizar `config.yaml` e `README.md` do LC | squad config | [ ] |
-| 4.7 | Criar workflow `wf-stories-para-lancamento` | `workflows/` | [ ] |
+| 4.1 | Declarar handoff_to `@lc-stories` em `@fl-conteudo` | `fl-conteudo.md` | [x] |
+| 4.2 | Declarar handoff_to `@lc-rewriter` em `@fl-copy` | `fl-copy.md` | [x] |
+| 4.3 | Declarar handoff_from FL em `@lc-stories` | `lc-stories.md` | [x] |
+| 4.4 | Declarar handoff_from FL em `@lc-rewriter` | `lc-rewriter.md` | [x] |
+| 4.5 | Atualizar `@fl-chief` routing para incluir LC | `fl-chief.md` | [x] |
+| 4.6 | Atualizar `config.yaml` e `README.md` do LC | squad config | [x] |
+| 4.7 | Criar workflow `wf-stories-para-lancamento` | `workflows/` | [x] |
 
 ### Fase 5: Validacao
 

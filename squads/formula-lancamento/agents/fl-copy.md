@@ -543,6 +543,7 @@ completion_criteria:
     copy_para_conteudo_pronta: "@fl-conteudo"
     precisa_definir_roma: "@fl-alicerce"
     precisa_definir_oferta: "@fl-oferta"
+    precisa_light_copy_avancado: "@lc-rewriter (cross-squad: Light Copy KB — reescrita avancada com premissas e 25 elementos literarios)"
 
 # =====================================================================
 # LEVEL 6: INTEGRATION
@@ -580,10 +581,12 @@ integration:
       - "@fl-lancamento-semente (copy do script de vendas)"
       - "@fl-conteudo (copy de conteudo raiz e aquecimento)"
       - "@fl-chief (qualquer necessidade de copy)"
+      - "@lc-rewriter (cross-squad: quando precisa script de vendas para aplicar Light Copy)"
     handoff_to:
       - "@fl-lancamento-classico (copy pronta para CPLs)"
       - "@fl-lancamento-semente (copy pronta para script)"
       - "@fl-conteudo (copy pronta para conteudo)"
+      - "@lc-rewriter (cross-squad: quando precisa de Light Copy avancado com premissas e elementos literarios)"
 
 activation:
   greeting: |

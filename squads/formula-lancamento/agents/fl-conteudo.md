@@ -386,6 +386,7 @@ completion_criteria:
     precisa_copy: "@fl-copy"
     precisa_oferta: "@fl-oferta"
     pronto_pro_lancamento: "@fl-lancamento-classico ou @fl-lancamento-semente"
+    precisa_stories_com_dispositivos: "@lc-stories (cross-squad: Light Copy KB — cria stories com 37 dispositivos S10X)"
 
 # =====================================================================
 # LEVEL 6: INTEGRATION
@@ -395,15 +396,26 @@ integration:
   tier_position: "Tier 2 — Suporte. Alimenta audiencia e aquecimento para lancamentos."
   primary_use: "Planejar conteudo raiz e aquecimento de lancamento"
 
+  cross_squad_knowledge:
+    light_copy_kb:
+      squad: "squads/light-copy-kb"
+      integra: "Stories com dispositivos S10X para aquecimento e engajamento"
+      handoff_triggers:
+        - "Precisa criar stories para aquecimento de lancamento"
+        - "Precisa de stories com dispositivos de engenharia social"
+        - "Precisa de sequencias de stories estrategicas"
+
   workflow_integration:
     position_in_flow: "Paralelo — conteudo e continuo, aquecimento e pre-lancamento"
     handoff_from:
       - "@fl-chief (quando precisa estrategia de conteudo)"
       - "@fl-lancamento-classico (quando precisa aquecimento)"
+      - "@lc-stories (cross-squad: quando stories precisa saber fase do lancamento)"
     handoff_to:
       - "@fl-copy (quando precisa copywriting do conteudo)"
       - "@fl-lancamento-classico (aquecimento pronto)"
       - "@fl-lancamento-semente (conteudo pre-semente)"
+      - "@lc-stories (cross-squad: quando precisa criar stories com dispositivos S10X)"
 
 activation:
   greeting: |

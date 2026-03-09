@@ -1,0 +1,219 @@
+# wf-stories-para-lancamento.yaml
+# Workflow cross-squad: Formula de Lancamento ↔ Light Copy KB
+# Cria stories de aquecimento/lancamento com dispositivos S10X + Light Copy
+
+name: "Stories para Lancamento"
+id: wf-stories-para-lancamento
+version: "1.0.0"
+created: "2026-03-09"
+
+description: |
+  Workflow que conecta o squad Formula de Lancamento (QUANDO postar, calendario, fases)
+  com o squad Light Copy KB (COMO criar stories com dispositivos e COMO escrever copy).
+
+  Cenario tipico: "Preciso de 5 stories de aquecimento para meu lancamento classico"
+
+trigger:
+  manual: true
+  auto_triggers:
+    - "stories de aquecimento"
+    - "stories para lancamento"
+    - "stories pre-abertura"
+    - "stories para carrinho"
+
+squads_envolvidos:
+  - "squads/formula-lancamento"
+  - "squads/light-copy-kb"
+
+# =====================================================================
+# FASES DO WORKFLOW
+# =====================================================================
+
+phases:
+  phase_1:
+    name: "Contexto do Lancamento"
+    executor: "@fl-conteudo"
+    squad: "formula-lancamento"
+    description: "Define o contexto do lancamento para orientar os stories"
+
+    inputs:
+      - "Tipo de lancamento (classico, semente, caixa)"
+      - "Fase atual (aquecimento, CPLs, carrinho, pos-lancamento)"
+      - "Avatar definido"
+      - "Roma definida"
+
+    outputs:
+      - fase_lancamento: "qual fase e objetivo"
+      - avatar: "perfil do publico"
+      - roma: "transformacao desejada"
+      - calendario: "quando publicar, quantos dias"
+      - tom_obrigatorio: "restricoes de tom/voz"
+
+    veto_conditions:
+      - "Roma nao definida → BLOQUEAR (voltar para @fl-alicerce)"
+      - "Oferta nao definida → BLOQUEAR (voltar para @fl-oferta)"
+      - "Tipo de lancamento nao definido → BLOQUEAR"
+
+    checkpoint:
+      gate: "Todos os outputs preenchidos?"
+      pass_action: "Passar outputs para Phase 2"
+      fail_action: "Solicitar informacoes faltantes"
+
+  phase_2:
+    name: "Criacao de Sequencia com Dispositivos"
+    executor: "@lc-stories"
+    squad: "light-copy-kb"
+    description: "Cria a sequencia de stories usando dispositivos S10X"
+
+    inputs_from_phase_1:
+      - fase_lancamento
+      - avatar
+      - roma
+      - calendario
+      - tom_obrigatorio
+
+    execution:
+      - "Definir tema baseado em fase_lancamento + avatar"
+      - "Selecionar tipo de sequencia (SEQ07 Aquecimento ou SEQ08 Pre-Abertura)"
+      - "Definir cadencia (SEMPRE alta para aquecimento/pre-abertura)"
+      - "Criar estrutura de stories com dispositivos mapeados"
+      - "Garantir CTA no primeiro story"
+      - "Garantir min 5 dispositivos"
+      - "Garantir min 15 stories"
+
+    outputs:
+      - sequencia_bruta: "stories com dispositivos identificados (copy rascunho)"
+      - mapa_dispositivos: "qual dispositivo em qual story"
+      - ctas_distribuidos: "onde estao os CTAs"
+
+    veto_conditions:
+      - "Menos de 5 dispositivos → REESCREVER"
+      - "Primeiro story sem CTA → ADICIONAR CTA"
+      - "Cadencia baixa para aquecimento → CORRIGIR para alta"
+      - "Tipo errado de sequencia para a fase → CORRIGIR"
+
+    checkpoint:
+      gate: "Sequencia com 5+ dispositivos + CTA no primeiro?"
+      pass_action: "Passar para Phase 3"
+      fail_action: "Reescrever stories ate atingir minimo"
+
+  phase_3:
+    name: "Aplicacao de Light Copy"
+    executor: "@lc-rewriter"
+    squad: "light-copy-kb"
+    description: "Aplica tecnicas Light Copy no copy de cada story"
+
+    inputs_from_phase_2:
+      - sequencia_bruta
+      - mapa_dispositivos
+
+    inputs_from_phase_1:
+      - avatar
+      - roma
+      - tom_obrigatorio
+
+    execution:
+      - "Para cada story: identificar onde aplicar premissas"
+      - "Inserir elementos literarios (min 3 na sequencia)"
+      - "Aplicar gatilhos mentais sutis (nao forcados)"
+      - "Manter dispositivos intactos"
+      - "Respeitar tom_obrigatorio (Voice Gate se aplicavel)"
+      - "Edicao final — cortar excesso"
+
+    outputs:
+      - sequencia_finalizada: "stories com Light Copy aplicado"
+      - tecnicas_anotadas: "quais tecnicas LC usadas por story"
+
+    veto_conditions:
+      - "Copy parece vendedora/forcada → REESCREVER com premissas"
+      - "Zero elementos literarios → ADICIONAR min 3"
+      - "Dispositivos removidos pela reescrita → RESTAURAR"
+      - "Tom nao respeita restricoes de fase 1 → AJUSTAR"
+
+    checkpoint:
+      gate: "Light Copy aplicado + dispositivos preservados + tom correto?"
+      pass_action: "Passar para Phase 4"
+      fail_action: "Ajustar copy mantendo dispositivos"
+
+  phase_4:
+    name: "Validacao e Publicacao"
+    executor: "@fl-conteudo"
+    squad: "formula-lancamento"
+    description: "Valida alinhamento com calendario do lancamento e publica"
+
+    inputs_from_phase_3:
+      - sequencia_finalizada
+      - tecnicas_anotadas
+
+    inputs_from_phase_1:
+      - calendario
+      - fase_lancamento
+
+    execution:
+      - "Verificar alinhamento com calendario de lancamento"
+      - "Verificar que stories leva avatar mais perto de Roma"
+      - "Confirmar cadencia e datas de publicacao"
+      - "Publicar sequencia"
+
+    outputs:
+      - sequencia_publicada: "stories publicados"
+      - data_publicacao: "quando foi publicado"
+      - proxima_acao: "debriefing em 24h"
+
+    veto_conditions:
+      - "Stories nao conectam com Roma → DEVOLVER para Phase 3"
+      - "Conflito com calendario → AJUSTAR datas"
+
+    checkpoint:
+      gate: "Alinhamento com Roma + calendario confirmado?"
+      pass_action: "Publicar + agendar debriefing 24h"
+      fail_action: "Devolver para fase anterior com feedback"
+
+  phase_5:
+    name: "Debriefing (24h apos publicacao)"
+    executor: "@lc-stories"
+    squad: "light-copy-kb"
+    description: "Analisa resultados e decide repetir/ajustar/descartar"
+
+    inputs:
+      - sequencia_publicada
+      - "Views primeiro e ultimo story"
+      - "Respostas no inbox"
+      - "Cliques em links (se aplicavel)"
+
+    execution:
+      - "Calcular taxa de retencao"
+      - "Avaliar volume de inbox"
+      - "Decisao: REPETIR + AMPLIFICAR / REPETIR COM AJUSTES / DESCARTAR"
+      - "Se repetir: agendar proxima data"
+      - "Se amplificar: definir formato (Reels, ads, podcast)"
+      - "Identificar leads quentes no inbox → SPIN"
+
+    outputs:
+      - debriefing_report: "metricas + decisao"
+      - leads_quentes: "lista de leads para SPIN"
+      - aprendizado: "o que funcionou/nao funcionou"
+
+    checkpoint:
+      gate: "Debriefing completo com decisao tomada?"
+      pass_action: "Workflow completo. Proxima iteracao se aplicavel."
+      fail_action: "Completar metricas faltantes"
+
+# =====================================================================
+# REGRAS GLOBAIS
+# =====================================================================
+
+global_rules:
+  - "Fluxo unidirecional: Phase 1 → 2 → 3 → 4 → 5 (nao volta)"
+  - "Excecao: veto em Phase 4 pode devolver para Phase 3 (unica vez)"
+  - "Zero gap de tempo entre handoffs — cada fase entrega outputs para a proxima"
+  - "Voice Gate (se configurado) se aplica em todas as fases de escrita"
+  - "Todos os [SOURCE:] devem ser mantidos nas anotacoes"
+
+estimated_duration:
+  phase_1: "10-15 min"
+  phase_2: "30-45 min"
+  phase_3: "20-30 min"
+  phase_4: "10-15 min"
+  phase_5: "10 min (24h apos publicacao)"
+  total: "~1.5h + 24h espera para debriefing"

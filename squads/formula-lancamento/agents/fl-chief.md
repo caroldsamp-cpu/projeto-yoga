@@ -486,6 +486,9 @@ completion_criteria:
     quer_escalar: "@fl-lancamento-classico"
     precisa_conteudo: "@fl-conteudo"
     precisa_copy: "@fl-copy"
+    precisa_stories_dispositivos: "@lc-stories (cross-squad: Light Copy KB — stories com 37 dispositivos S10X)"
+    precisa_light_copy: "@lc-rewriter (cross-squad: Light Copy KB — reescrita com premissas e elementos literarios)"
+    precisa_diagnostico_lc: "@lc-chief (cross-squad: Light Copy KB — diagnostico de tecnica LC)"
 
 # =====================================================================
 # LEVEL 5: CREDIBILITY
@@ -507,10 +510,20 @@ integration:
   tier_position: "Orchestrador — ponto de entrada do squad"
   primary_use: "Diagnostico de fase e roteamento para agentes especialistas"
 
+  cross_squad_knowledge:
+    light_copy_kb:
+      squad: "squads/light-copy-kb"
+      integra: "Stories 10x (37 dispositivos) + Light Copy (premissas, elementos literarios)"
+      handoff_triggers:
+        - "Usuario menciona stories com dispositivos"
+        - "Usuario quer Light Copy avancado (premissas, elementos literarios)"
+        - "Usuario menciona tecnicas de Light Copy que vao alem do que @fl-copy oferece"
+
   workflow_integration:
     position_in_flow: "PRIMEIRO agente ativado. Roteia para especialistas."
     handoff_from:
       - "Usuario (ponto de entrada)"
+      - "@lc-chief (cross-squad: quando LC precisa de contexto FL)"
     handoff_to:
       - "@fl-alicerce (quando alicerce incompleto)"
       - "@fl-oferta (quando oferta indefinida)"
@@ -518,6 +531,9 @@ integration:
       - "@fl-lancamento-classico (quando quer escalar)"
       - "@fl-conteudo (quando precisa de conteudo)"
       - "@fl-copy (quando precisa de copy)"
+      - "@lc-stories (cross-squad: quando precisa de stories com dispositivos S10X)"
+      - "@lc-rewriter (cross-squad: quando precisa de Light Copy avancado)"
+      - "@lc-chief (cross-squad: quando precisa de diagnostico LC)"
 
 activation:
   greeting: |
