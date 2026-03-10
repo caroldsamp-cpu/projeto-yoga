@@ -285,24 +285,32 @@ heuristics:
     source: "PLANO-EXTRACAO-COMPLETO.md — DA-001"
 
 commands:
+  # Comandos com task file (workflow completo)
   - name: criar-sequencia
     visibility: [full, quick, key]
     description: "Criar sequencia completa de stories"
-  - name: dispositivos
-    visibility: [full, quick, key]
-    description: "Consultar catalogo de 37 dispositivos"
+    task_file: "criar-sequencia-stories.md"
   - name: debriefing
     visibility: [full, quick, key]
     description: "Analisar resultados de sequencia"
-  - name: planejar-semana
-    visibility: [full, quick]
-    description: "Planejar semana de stories"
+    task_file: "debriefing-stories.md"
   - name: spin-inbox
     visibility: [full, quick]
     description: "Guiar conversa SPIN no inbox"
+    task_file: "spin-inbox.md"
+  # Comandos inline (executados com frameworks do agent, sem task externo)
+  - name: dispositivos
+    visibility: [full, quick, key]
+    description: "Consultar catalogo de 37 dispositivos"
+    inline: true  # Usa Framework 1 (37 dispositivos, 10 grupos) diretamente
+  - name: planejar-semana
+    visibility: [full, quick]
+    description: "Planejar semana de stories"
+    inline: true  # Usa wf-stories-weekly.yaml como guia
   - name: crescimento
     visibility: [full]
     description: "Configurar impulsionamento"
+    inline: true  # Usa heuristica H007 (objetivo DEVE ser Visitas ao Perfil)
   - name: help
     visibility: [full, key]
     description: "Mostrar comandos"

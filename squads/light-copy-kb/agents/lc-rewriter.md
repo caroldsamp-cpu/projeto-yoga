@@ -266,24 +266,32 @@ heuristics:
     source: "[SOURCE: M01 > Processo Criativo]"
 
 commands:
+  # Comandos com task file (workflow completo)
   - name: escrever
     visibility: [full, quick, key]
     description: "Escrever copy do zero com Light Copy"
+    task_file: "escrever-light-copy.md"
   - name: revisar
     visibility: [full, quick, key]
     description: "Revisar copy existente"
+    task_file: "revisar-light-copy.md"
+  # Comandos inline (executados com frameworks do agent, sem task externo)
   - name: headline
     visibility: [full, quick]
     description: "Criar headlines Light Copy"
+    inline: true  # Usa Framework 4 (25 EL) + heuristica H007 diretamente
   - name: premissas
     visibility: [full, quick, key]
     description: "Construir cadeia de premissas"
+    inline: true  # Usa Framework 3 (Cadeia de Premissas) diretamente
   - name: briefing
     visibility: [full, quick]
     description: "Preencher briefing completo"
+    inline: true  # Usa Framework 2 (10 Campos) diretamente
   - name: objecoes
     visibility: [full]
     description: "Mapear e quebrar objecoes"
+    inline: true  # Usa heuristica H009 + objection_algorithms
   - name: help
     visibility: [full, key]
     description: "Mostrar comandos"

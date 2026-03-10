@@ -1,17 +1,21 @@
-# wf-stories-para-lancamento.yaml
-# Workflow cross-squad: Formula de Lancamento ↔ Light Copy KB
+# Workflow: Stories para Lancamento
+# Cross-squad: Formula de Lancamento ↔ Light Copy KB
 # Cria stories de aquecimento/lancamento com dispositivos S10X + Light Copy
 
-name: "Stories para Lancamento"
 id: wf-stories-para-lancamento
-version: "1.0.0"
-created: "2026-03-09"
-
-description: |
+name: "Stories para Lancamento"
+version: "2.0.0"
+duration: "~1.5h + 24h espera para debriefing"
+description: >
   Workflow que conecta o squad Formula de Lancamento (QUANDO postar, calendario, fases)
   com o squad Light Copy KB (COMO criar stories com dispositivos e COMO escrever copy).
-
   Cenario tipico: "Preciso de 5 stories de aquecimento para meu lancamento classico"
+
+best_for:
+  - "Stories de aquecimento pre-lancamento"
+  - "Stories para abertura de carrinho"
+  - "Stories de CPL (Conteudo Pre-Lancamento)"
+  - "Stories pos-lancamento (depoimentos, resultados)"
 
 trigger:
   manual: true
@@ -25,16 +29,36 @@ squads_envolvidos:
   - "squads/formula-lancamento"
   - "squads/light-copy-kb"
 
-# =====================================================================
-# FASES DO WORKFLOW
-# =====================================================================
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASES
+# ═══════════════════════════════════════════════════════════════════════════════
 
 phases:
-  phase_1:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-1:
+    id: contexto_lancamento
     name: "Contexto do Lancamento"
+    estimated_time: "10-15min"
     executor: "@fl-conteudo"
     squad: "formula-lancamento"
-    description: "Define o contexto do lancamento para orientar os stories"
+    description: >
+      Define o contexto do lancamento para orientar os stories.
+      Extrai tipo, fase, avatar, roma, calendario e restricoes de tom.
+
+    tasks:
+      - task: "Identificar tipo de lancamento (classico, semente, caixa)"
+        cognitive_type: classification
+        executor: "@fl-conteudo"
+      - task: "Mapear fase atual (aquecimento, CPLs, carrinho, pos-lancamento)"
+        cognitive_type: analysis
+        executor: "@fl-conteudo"
+      - task: "Confirmar avatar e roma definidos"
+        cognitive_type: validation
+        executor: "@fl-conteudo"
+      - task: "Definir calendario e restricoes de tom"
+        cognitive_type: planning
+        executor: "@fl-conteudo"
 
     inputs:
       - "Tipo de lancamento (classico, semente, caixa)"
@@ -49,145 +73,224 @@ phases:
       - calendario: "quando publicar, quantos dias"
       - tom_obrigatorio: "restricoes de tom/voz"
 
-    veto_conditions:
-      - "Roma nao definida → BLOQUEAR (voltar para @fl-alicerce)"
-      - "Oferta nao definida → BLOQUEAR (voltar para @fl-oferta)"
-      - "Tipo de lancamento nao definido → BLOQUEAR"
-
     checkpoint:
-      gate: "Todos os outputs preenchidos?"
-      pass_action: "Passar outputs para Phase 2"
-      fail_action: "Solicitar informacoes faltantes"
+      name: "Launch Context Validation"
+      criteria:
+        - "Tipo de lancamento definido"
+        - "Fase atual identificada"
+        - "Avatar completo (nao generico)"
+        - "Roma no formato 'De X para Y em Z tempo'"
+        - "Calendario com datas concretas"
+      approval: "Todos os outputs preenchidos antes de prosseguir"
 
-  phase_2:
+    veto_conditions:
+      - condition: "Roma nao definida"
+        action: "BLOQUEAR — voltar para @fl-alicerce (pre-requisito)"
+      - condition: "Oferta nao definida"
+        action: "BLOQUEAR — voltar para @fl-oferta (pre-requisito)"
+      - condition: "Tipo de lancamento nao definido"
+        action: "BLOQUEAR — sem tipo nao ha direcao"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-2:
+    id: sequencia_dispositivos
     name: "Criacao de Sequencia com Dispositivos"
+    estimated_time: "30-45min"
     executor: "@lc-stories"
     squad: "light-copy-kb"
-    description: "Cria a sequencia de stories usando dispositivos S10X"
+    description: >
+      Cria a sequencia de stories usando dispositivos S10X.
+      Seleciona tipo de sequencia adequado para a fase do lancamento.
 
-    inputs_from_phase_1:
-      - fase_lancamento
-      - avatar
-      - roma
-      - calendario
-      - tom_obrigatorio
+    tasks:
+      - task: "Definir tema baseado em fase_lancamento + avatar"
+        cognitive_type: synthesis
+        executor: "@lc-stories"
+      - task: "Selecionar tipo de sequencia (SEQ07 Aquecimento ou SEQ08 Pre-Abertura)"
+        cognitive_type: classification
+        executor: "@lc-stories"
+      - task: "Definir cadencia (SEMPRE alta para aquecimento/pre-abertura)"
+        cognitive_type: planning
+        executor: "@lc-stories"
+      - task: "Criar estrutura de stories com dispositivos mapeados"
+        cognitive_type: creative_generation
+        executor: "@lc-stories"
+      - task: "Garantir CTA no primeiro story + min 5 dispositivos + min 15 stories"
+        cognitive_type: validation
+        executor: "@lc-stories"
 
-    execution:
-      - "Definir tema baseado em fase_lancamento + avatar"
-      - "Selecionar tipo de sequencia (SEQ07 Aquecimento ou SEQ08 Pre-Abertura)"
-      - "Definir cadencia (SEMPRE alta para aquecimento/pre-abertura)"
-      - "Criar estrutura de stories com dispositivos mapeados"
-      - "Garantir CTA no primeiro story"
-      - "Garantir min 5 dispositivos"
-      - "Garantir min 15 stories"
+    inputs:
+      - "fase_lancamento (Phase 1)"
+      - "avatar (Phase 1)"
+      - "roma (Phase 1)"
+      - "calendario (Phase 1)"
+      - "tom_obrigatorio (Phase 1)"
 
     outputs:
       - sequencia_bruta: "stories com dispositivos identificados (copy rascunho)"
       - mapa_dispositivos: "qual dispositivo em qual story"
       - ctas_distribuidos: "onde estao os CTAs"
 
-    veto_conditions:
-      - "Menos de 5 dispositivos → REESCREVER"
-      - "Primeiro story sem CTA → ADICIONAR CTA"
-      - "Cadencia baixa para aquecimento → CORRIGIR para alta"
-      - "Tipo errado de sequencia para a fase → CORRIGIR"
-
     checkpoint:
-      gate: "Sequencia com 5+ dispositivos + CTA no primeiro?"
-      pass_action: "Passar para Phase 3"
-      fail_action: "Reescrever stories ate atingir minimo"
+      name: "Sequence Structure Validation"
+      criteria:
+        - "Min 5 dispositivos diferentes aplicados"
+        - "CTA presente no primeiro story"
+        - "Min 15 stories (parametrizavel pelo usuario)"
+        - "Tipo de sequencia correto para fase do lancamento"
+        - "Cadencia alta para aquecimento/pre-abertura"
 
-  phase_3:
+    veto_conditions:
+      - condition: "Menos de 5 dispositivos"
+        action: "REESCREVER — sequencia pobre demais"
+      - condition: "Primeiro story sem CTA"
+        action: "ADICIONAR CTA — regra S10X inviolavel"
+      - condition: "Cadencia baixa para aquecimento"
+        action: "CORRIGIR para alta — aquecimento exige cadencia alta"
+      - condition: "Tipo errado de sequencia para a fase"
+        action: "CORRIGIR — selecionar tipo adequado"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-3:
+    id: light_copy
     name: "Aplicacao de Light Copy"
+    estimated_time: "20-30min"
     executor: "@lc-rewriter"
     squad: "light-copy-kb"
-    description: "Aplica tecnicas Light Copy no copy de cada story"
+    description: >
+      Aplica tecnicas Light Copy no copy de cada story.
+      Insere premissas, elementos literarios e gatilhos sutis.
+      Mantem dispositivos intactos.
 
-    inputs_from_phase_2:
-      - sequencia_bruta
-      - mapa_dispositivos
+    tasks:
+      - task: "Identificar onde aplicar premissas em cada story"
+        cognitive_type: analysis
+        executor: "@lc-rewriter"
+      - task: "Inserir elementos literarios (min 3 na sequencia)"
+        cognitive_type: creative_generation
+        executor: "@lc-rewriter"
+      - task: "Aplicar gatilhos mentais sutis (nao forcados)"
+        cognitive_type: creative_generation
+        executor: "@lc-rewriter"
+      - task: "Verificar dispositivos intactos + tom_obrigatorio respeitado"
+        cognitive_type: validation
+        executor: "@lc-rewriter"
+      - task: "Edicao final — cortar excesso"
+        cognitive_type: editing
+        executor: "@lc-rewriter"
 
-    inputs_from_phase_1:
-      - avatar
-      - roma
-      - tom_obrigatorio
-
-    execution:
-      - "Para cada story: identificar onde aplicar premissas"
-      - "Inserir elementos literarios (min 3 na sequencia)"
-      - "Aplicar gatilhos mentais sutis (nao forcados)"
-      - "Manter dispositivos intactos"
-      - "Respeitar tom_obrigatorio (Voice Gate se aplicavel)"
-      - "Edicao final — cortar excesso"
+    inputs:
+      - "sequencia_bruta (Phase 2)"
+      - "mapa_dispositivos (Phase 2)"
+      - "avatar (Phase 1)"
+      - "roma (Phase 1)"
+      - "tom_obrigatorio (Phase 1)"
 
     outputs:
       - sequencia_finalizada: "stories com Light Copy aplicado"
       - tecnicas_anotadas: "quais tecnicas LC usadas por story"
 
-    veto_conditions:
-      - "Copy parece vendedora/forcada → REESCREVER com premissas"
-      - "Zero elementos literarios → ADICIONAR min 3"
-      - "Dispositivos removidos pela reescrita → RESTAURAR"
-      - "Tom nao respeita restricoes de fase 1 → AJUSTAR"
-
     checkpoint:
-      gate: "Light Copy aplicado + dispositivos preservados + tom correto?"
-      pass_action: "Passar para Phase 4"
-      fail_action: "Ajustar copy mantendo dispositivos"
+      name: "Light Copy Quality Check"
+      criteria:
+        - "Min 3 elementos literarios aplicados na sequencia"
+        - "Premissas integradas (nao listadas)"
+        - "Dispositivos preservados (nenhum removido pela reescrita)"
+        - "Tom respeita restricoes de Phase 1"
+        - "Copy nao parece vendedora/forcada"
 
-  phase_4:
+    veto_conditions:
+      - condition: "Copy parece vendedora/forcada"
+        action: "REESCREVER com premissas — Light Copy esquece a venda primeiro"
+      - condition: "Zero elementos literarios"
+        action: "ADICIONAR min 3 EL"
+      - condition: "Dispositivos removidos pela reescrita"
+        action: "RESTAURAR — dispositivos sao intocaveis"
+      - condition: "Tom nao respeita restricoes de Phase 1"
+        action: "AJUSTAR tom internamente nesta fase"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-4:
+    id: validacao_publicacao
     name: "Validacao e Publicacao"
+    estimated_time: "10-15min"
     executor: "@fl-conteudo"
     squad: "formula-lancamento"
-    description: "Valida alinhamento com calendario do lancamento e publica"
+    description: >
+      Valida alinhamento com calendario do lancamento e publica.
+      Confirma que stories levam avatar mais perto de Roma.
 
-    inputs_from_phase_3:
-      - sequencia_finalizada
-      - tecnicas_anotadas
+    tasks:
+      - task: "Verificar alinhamento com calendario de lancamento"
+        cognitive_type: validation
+        executor: "@fl-conteudo"
+      - task: "Verificar que stories conectam avatar com Roma"
+        cognitive_type: evaluation
+        executor: "@fl-conteudo"
+      - task: "Confirmar cadencia e datas de publicacao"
+        cognitive_type: planning
+        executor: "@fl-conteudo"
+      - task: "Publicar sequencia"
+        cognitive_type: execution
+        executor: "human"
 
-    inputs_from_phase_1:
-      - calendario
-      - fase_lancamento
-
-    execution:
-      - "Verificar alinhamento com calendario de lancamento"
-      - "Verificar que stories leva avatar mais perto de Roma"
-      - "Confirmar cadencia e datas de publicacao"
-      - "Publicar sequencia"
+    inputs:
+      - "sequencia_finalizada (Phase 3)"
+      - "tecnicas_anotadas (Phase 3)"
+      - "calendario (Phase 1)"
+      - "fase_lancamento (Phase 1)"
 
     outputs:
       - sequencia_publicada: "stories publicados"
       - data_publicacao: "quando foi publicado"
       - proxima_acao: "debriefing em 24h"
 
-    veto_conditions:
-      - "Stories nao conectam com Roma → AJUSTAR internamente (reescrever pontos de conexao dentro desta fase)"
-      - "Conflito com calendario → AJUSTAR datas internamente"
-
     checkpoint:
-      gate: "Alinhamento com Roma + calendario confirmado?"
-      pass_action: "Publicar + agendar debriefing 24h"
-      fail_action: "Ajustar internamente nesta fase ate passar (fluxo unidirecional)"
+      name: "Launch Alignment Validation"
+      criteria:
+        - "Stories conectam com Roma do avatar"
+        - "Calendario de publicacao confirmado"
+        - "Cadencia correta para fase do lancamento"
+      approval: "Alinhamento confirmado antes de publicar"
 
-  phase_5:
-    name: "Debriefing (24h apos publicacao)"
+    veto_conditions:
+      - condition: "Stories nao conectam com Roma"
+        action: "AJUSTAR internamente — reescrever pontos de conexao dentro desta fase"
+      - condition: "Conflito com calendario"
+        action: "AJUSTAR datas internamente"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-5:
+    id: debriefing
+    name: "Debriefing"
+    estimated_time: "10min"
     executor: "@lc-stories"
     squad: "light-copy-kb"
-    description: "Analisa resultados e decide repetir/ajustar/descartar"
+    deferred: true
+    deferred_note: "Executada 24h apos Phase 4 — aguarda metricas reais do Instagram"
+    description: >
+      Analisa resultados da sequencia publicada e decide repetir/ajustar/descartar.
+      Identifica leads quentes no inbox para SPIN.
+
+    tasks:
+      - task: "Calcular taxa de retencao (views primeiro vs ultimo story)"
+        cognitive_type: analysis
+        executor: "@lc-stories"
+      - task: "Avaliar volume e qualidade de inbox"
+        cognitive_type: evaluation
+        executor: "@lc-stories"
+      - task: "Decidir: REPETIR+AMPLIFICAR / REPETIR COM AJUSTES / DESCARTAR"
+        cognitive_type: evaluation
+        executor: "@lc-stories"
+      - task: "Identificar leads quentes no inbox para SPIN"
+        cognitive_type: classification
+        executor: "@lc-stories"
 
     inputs:
-      - sequencia_publicada
+      - "sequencia_publicada (Phase 4)"
       - "Views primeiro e ultimo story"
       - "Respostas no inbox"
       - "Cliques em links (se aplicavel)"
-
-    execution:
-      - "Calcular taxa de retencao"
-      - "Avaliar volume de inbox"
-      - "Decisao: REPETIR + AMPLIFICAR / REPETIR COM AJUSTES / DESCARTAR"
-      - "Se repetir: agendar proxima data"
-      - "Se amplificar: definir formato (Reels, ads, podcast)"
-      - "Identificar leads quentes no inbox → SPIN"
 
     outputs:
       - debriefing_report: "metricas + decisao"
@@ -195,26 +298,71 @@ phases:
       - aprendizado: "o que funcionou/nao funcionou"
 
     checkpoint:
-      gate: "Debriefing completo com decisao tomada?"
-      pass_action: "Workflow completo. Proxima iteracao se aplicavel."
-      fail_action: "Completar metricas faltantes"
+      name: "Debriefing Completion"
+      criteria:
+        - "Retencao calculada"
+        - "Decisao tomada (repetir/ajustar/descartar)"
+        - "Leads quentes identificados e encaminhados"
+        - "Aprendizados documentados"
 
-# =====================================================================
-# REGRAS GLOBAIS
-# =====================================================================
+    veto_conditions:
+      - condition: "Metricas insuficientes (menos de 24h)"
+        action: "ADIAR — aguardar metricas completas"
+      - condition: "Debriefing sem decisao"
+        action: "BLOQUEAR — toda analise precisa de acao"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# GLOBAL RULES
+# ═══════════════════════════════════════════════════════════════════════════════
 
 global_rules:
-  - "Fluxo unidirecional: Phase 1 → 2 → 3 → 4 → 5 (sem retorno entre fases)"
-  - "Zero gap de tempo entre handoffs de Phases 1-4 — cada fase entrega outputs para a proxima"
-  - "Phase 5 (Debriefing) e uma fase deferred — executada 24h apos Phase 4 (aguarda metricas reais)"
-  - "Voice Gate (se configurado) se aplica em todas as fases de escrita"
-  - "Todos os [SOURCE:] devem ser mantidos nas anotacoes"
-  - "Quantidade de stories e parametrizavel — min recomendado 15, mas pode ser menor se usuario especificar"
+  unidirectional: true
+  unidirectional_note: "Phase 1 → 2 → 3 → 4 → 5 sem retorno entre fases. Ajustes sao feitos DENTRO da fase atual."
+  zero_gap: true
+  zero_gap_scope: "Phases 1-4 (handoff imediato entre fases)"
+  deferred_phases: ["PHASE-5"]
+  deferred_note: "Phase 5 executa 24h apos Phase 4 para aguardar metricas reais"
+  voice_gate: "Todas as fases de escrita aplicam Voice Gate do squad"
+  source_tracking: "Todos os [SOURCE:] devem ser mantidos nas anotacoes"
+  story_count_rule: "Quantidade de stories e parametrizavel — min recomendado 15, mas pode ser menor se usuario especificar"
 
-estimated_duration:
-  phase_1: "10-15 min"
-  phase_2: "30-45 min"
-  phase_3: "20-30 min"
-  phase_4: "10-15 min"
-  phase_5: "10 min (24h apos publicacao)"
-  total: "~1.5h + 24h espera para debriefing"
+# ═══════════════════════════════════════════════════════════════════════════════
+# AGENTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+agents:
+  primary:
+    - agent: "@fl-conteudo"
+      phases: ["PHASE-1", "PHASE-4"]
+    - agent: "@lc-stories"
+      phases: ["PHASE-2", "PHASE-5"]
+    - agent: "@lc-rewriter"
+      phases: ["PHASE-3"]
+  secondary:
+    - agent: "@lc-chief"
+      when: "Routing ou diagnostico estrategico de Light Copy"
+    - agent: "@fl-chief"
+      when: "Routing ou diagnostico estrategico de lancamento"
+  human:
+    - role: "usuario"
+      when: "Publicacao no Instagram (Phase 4)"
+  cross_squad:
+    formula_lancamento: ["@fl-conteudo", "@fl-chief"]
+    light_copy_kb: ["@lc-stories", "@lc-rewriter", "@lc-chief"]
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# METADATA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+metadata:
+  version: "2.0.0"
+  framework: "Formula de Lancamento (Erico Rocha) + Light Copy M1-M4 + Stories 10x (Leandro Ladeira)"
+  created: "2026-03-09"
+  updated: "2026-03-10"
+  squad: "light-copy-kb"
+  cross_squad: "formula-lancamento"
+  triggers:
+    - "stories de aquecimento"
+    - "stories para lancamento"
+    - "stories pre-abertura"
+    - "stories para carrinho"
