@@ -1,6 +1,16 @@
 # Quality Gate - Light Copy Rewrite
 
-**Checklist de validação para reescritas:**
+**Version:** 1.0.0
+**Squad:** light-copy-kb
+**Checklist de validacao para reescritas Light Copy.**
+
+## Como usar
+
+1. Aplique este checklist a TODA copy produzida ou revisada pelo squad
+2. Items em "Veto Conditions" sao bloqueantes — copy nao passa sem resolver
+3. Score minimo para aprovacao: 8/10
+
+---
 
 ## Antes da Reescrita
 
@@ -32,4 +42,4 @@
 
 ---
 
-**Status:** Template - aguardando aulas para validar critérios
+**Status:** Operational — criterios validados contra M1-M4 + S10X

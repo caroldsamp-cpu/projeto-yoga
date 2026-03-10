@@ -115,7 +115,7 @@ phases:
       - task: "Criar estrutura de stories com dispositivos mapeados"
         cognitive_type: creative_generation
         executor: "@lc-stories"
-      - task: "Garantir CTA no primeiro story + min 5 dispositivos + min 15 stories"
+      - task: "Garantir CTA no primeiro story + min 5 dispositivos + quantidade de stories conforme usuario (default 15, min 4)"
         cognitive_type: validation
         executor: "@lc-stories"
 
@@ -136,7 +136,7 @@ phases:
       criteria:
         - "Min 5 dispositivos diferentes aplicados"
         - "CTA presente no primeiro story"
-        - "Min 15 stories (parametrizavel pelo usuario)"
+        - "Quantidade de stories conforme usuario (default 15, aceita micro de 4-6)"
         - "Tipo de sequencia correto para fase do lancamento"
         - "Cadencia alta para aquecimento/pre-abertura"
 
@@ -324,7 +324,7 @@ global_rules:
   deferred_note: "Phase 5 executa 24h apos Phase 4 para aguardar metricas reais"
   voice_gate: "Todas as fases de escrita aplicam Voice Gate do squad"
   source_tracking: "Todos os [SOURCE:] devem ser mantidos nas anotacoes"
-  story_count_rule: "Quantidade de stories e parametrizavel — min recomendado 15, mas pode ser menor se usuario especificar"
+  story_count_rule: "Quantidade de stories PARAMETRIZAVEL pelo usuario. Escalas: Micro=4-6, Padrao=8-10, Estendida=15+. Default depende do tipo de sequencia, mas usuario pode escolher qualquer escala."
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # AGENTS

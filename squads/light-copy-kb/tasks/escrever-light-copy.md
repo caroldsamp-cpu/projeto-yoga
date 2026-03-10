@@ -186,7 +186,7 @@ executor: "@lc-rewriter"
 precondition: "Copy completa escrita no Step 4"
 output: "Copy editada + diff mostrando cortes"
 guardrails:
-  - "Corte MINIMO de 30% — se copy tem 1000 palavras, versao final <= 700"
+  - "Corte MINIMO de 30% — formula: (word_count_original - word_count_final) / word_count_original * 100 >= 30"
   - "Cortar adjetivos desnecessarios primeiro"
   - "Cortar frases que nao avancem a Big Idea"
   - "Manter premissas intactas"
@@ -290,6 +290,14 @@ Respondi: "Otimo. Voce esta no lugar certo."
 ```
 
 ---
+
+## Voice Gate (Obrigatorio)
+
+Antes de entregar, validar contra `squads/marketing-yog/checklists/voice-gate-gaby.md`:
+- [ ] Tom acolhedor (nao vendedor)?
+- [ ] Usa power words da Gaby (respira, observa, sente, presenca)?
+- [ ] Sem promessa exagerada?
+- [ ] Fechamento com convite leve?
 
 ## Completion Criteria
 

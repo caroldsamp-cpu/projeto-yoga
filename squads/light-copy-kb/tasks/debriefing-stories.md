@@ -88,8 +88,8 @@ output: "Analise de retencao + engagement rate"
 guardrails:
   - "Retencao = views story N / views story 1 * 100"
   - "Engagement = (respostas + cliques + reacoes) / views * 100"
-  - "Drop rate aceitavel: 30-50% entre story 1 e ultimo"
-  - "Drop > 50% entre 2 stories consecutivos = problema"
+  - "Drop-off aceitavel: 30-50% entre story 1 e ultimo"
+  - "Drop-off > 50% entre 2 stories consecutivos = problema (investigar causa)"
 decision_rule: "IF dados suficientes THEN calcular ELSE estimar com o disponivel"
 ```
 

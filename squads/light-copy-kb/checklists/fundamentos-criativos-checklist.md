@@ -5,6 +5,7 @@
 **SOP base:** `sops/fundamentos-criativos-sop.md`
 **Framework base:** `frameworks/fundamentos-criativos-framework.md`
 **Extrator:** @squad-chief via *extract-knowledge
+**Version:** 1.0.0
 **Data:** 2026-03-08
 
 ---

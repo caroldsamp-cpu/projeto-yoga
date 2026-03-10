@@ -228,6 +228,10 @@ cycle:
     Este workflow e ciclico — Phase 4 (debriefing) alimenta Phase 1 (temas)
     da proxima semana. O ciclo se repete indefinidamente.
   feedback_loop: "Phase 4 outputs → Phase 1 inputs (proxima semana)"
+  feedback_format:
+    debriefing_diario: "Relatorio por sequencia (retencao, engagement, decisao REPETIR/AJUSTAR/DESCARTAR)"
+    resumo_semanal: "Top 3 stories + 3 aprendizados + hot leads + recomendacoes"
+    passthrough: "Phase 1 recebe: resumo_semanal como input 'Debriefing da semana anterior'"
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # GLOBAL RULES

@@ -513,7 +513,7 @@ completion_criteria:
     - "Ultimo story com CTA final"
     - "Min 5 dispositivos na sequencia"
     - "CTAs distribuidos (nao so no final)"
-    - "Min stories por tipo: Aquecimento/Pre-Abertura=15, Engajamento=10, Caixinha=8, Divulgacao=6 (parametrizavel)"
+    - "Stories por tipo (PARAMETRIZAVEL pelo usuario): Aquecimento/Pre-Abertura=15, Engajamento=10, Caixinha=8, Divulgacao=6, Micro=4-6. Se usuario pedir menos, respeitar — qualidade > quantidade."
     - "Copy escrita para cada story"
     - "Dispositivos mapeados por story"
 
@@ -526,6 +526,7 @@ completion_criteria:
 
   handoff_to:
     texto_escrito: "@lc-rewriter (quando precisa de texto, nao stories)"
+    light_copy_aplicado: "@lc-rewriter (quando sequencia de venda precisa de premissas + elementos literarios)"
     copy_lancamento_fl: "@fl-copy (quando e copy de lancamento)"
     calendario_lancamento: "@fl-chief (quando precisa de timing do lancamento)"
     conteudo_fl: "@fl-conteudo (quando stories precisa alinhar com conteudo de lancamento)"
@@ -552,6 +553,17 @@ authority_proof:
 integration:
   tier_position: "Tier 1 — Especialista em Stories Instagram com dispositivos S10X"
   primary_use: "Criar sequencias de Instagram Stories de alta conversao usando 37 dispositivos"
+
+  voice_gate:
+    source: "squads/marketing-yog/checklists/voice-gate-gaby.md"
+    voice_dna: "squads/marketing-yog/data/voice-dna-gaby.yaml"
+    rule: "TODA sequencia de stories DEVE passar pelo Voice Gate da Gaby antes de entregar"
+    quick_check:
+      - "Tom acolhedor (nao vendedor, nao agressivo)?"
+      - "Frases simples e conversacionais?"
+      - "Usa power words da Gaby: respira, observa, sente, presenca?"
+      - "Sem promessa exagerada?"
+      - "Fechamento com convite leve (nao pressao)?"
 
   cross_squad_knowledge:
     formula_lancamento:

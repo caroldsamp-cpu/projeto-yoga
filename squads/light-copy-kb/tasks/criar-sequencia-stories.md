@@ -27,7 +27,7 @@ acceptance_criteria:
   - "Min 5 dispositivos diferentes (D01-D39) aplicados"
   - "CTA no primeiro story (enquete, caixinha, inbox) — OBRIGATORIO"
   - "Regra 90/10 respeitada (se nao e venda, 0% venda)"
-  - "Min stories conforme tipo: Aquecimento=15, Engajamento=10, Caixinha=8, Divulgacao=6"
+  - "Stories conforme tipo (PARAMETRIZAVEL pelo usuario): Aquecimento=15, Engajamento=10, Caixinha=8, Divulgacao=6, Micro=4-6. Se usuario pedir menos, respeitar."
   - "Cada story com texto + dispositivo identificado"
   - "Cadencia correta para o tipo de sequencia"
 ```
@@ -150,7 +150,7 @@ output: "Sequencia completa de stories (texto + dispositivo + visual hint)"
 guardrails:
   - "Cada story deve ter: texto + dispositivo identificado + visual hint"
   - "Copy primeiro, dispositivo depois (nao forcar dispositivo no texto)"
-  - "Min stories por tipo: Aquecimento=15, Engajamento=10, Caixinha=8, Divulgacao=6"
+  - "Stories por tipo (PARAMETRIZAVEL): Aquecimento=15, Engajamento=10, Caixinha=8, Divulgacao=6, Micro=4-6. Usuario pode especificar quantidade — respeitar."
   - "Ultimo story deve ter CTA final (link, inbox, ou reminder)"
 decision_rule: "IF min_stories atingido AND dispositivos >= 5 AND CTA_first AND CTA_last THEN prosseguir ELSE completar"
 ```
@@ -253,6 +253,14 @@ cta_last_story: "inbox"
 ```
 
 ---
+
+## Voice Gate (Obrigatorio)
+
+Antes de entregar, validar contra `squads/marketing-yog/checklists/voice-gate-gaby.md`:
+- [ ] Tom acolhedor da Gaby (nao agressivo, nao vendedor)?
+- [ ] Frases simples e conversacionais?
+- [ ] Sem promessa exagerada?
+- [ ] Fechamento com convite leve?
 
 ## Completion Criteria
 

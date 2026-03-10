@@ -12,7 +12,7 @@ task_name: "SPIN Inbox"
 status: active
 responsible_executor: "@lc-stories"
 execution_type: Agent
-estimated_time: "15-30min"
+estimated_time: "15-30min (S: 3-5min, P: 3-5min, I: 3-5min, N: 2-3min, Hook: 2-5min)"
 input:
   - "Nome/perfil do lead"
   - "Mensagem inicial do lead (DM recebida)"
@@ -58,7 +58,7 @@ executor: "@lc-stories"
 precondition: "Lead enviou DM"
 output: "Classificacao: HOT / WARM / COLD + contexto"
 guardrails:
-  - "Usar LC_ST_H009: texto longo > objecoes > perguntas > emojis"
+  - "Triagem de leads (LC_ST_H009): Texto longo > Objecoes especificas > Perguntas sobre produto > Emojis genericos (BAIXA)"
   - "Lead HOT: perguntou sobre produto/preco/disponibilidade"
   - "Lead WARM: respondeu stories, fez pergunta generica"
   - "Lead COLD: so mandou emoji ou resposta curta"
@@ -197,7 +197,7 @@ decision_rule: "IF comprou THEN pedir comprovante | IF hesitou THEN oferecer inc
 **Pos-oferta:**
 | Resposta do lead | Acao |
 |-----------------|------|
-| Comprou | "Parabens! Me manda o comprovante que te libero [bonus]" |
+| Comprou | "Parabens! Me manda o print do comprovante que te libero [bonus]" |
 | Hesitou | "Sem pressao! Que tal [bonus/call/trial] pra voce experimentar?" |
 | Disse NAO | "Tranquilo! Se mudar de ideia, me chama. Tamo junto!" |
 | Sumiu | Esperar 24h, mandar 1 follow-up leve, depois parar |

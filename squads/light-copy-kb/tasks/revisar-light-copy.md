@@ -39,7 +39,7 @@ acceptance_criteria:
 |-----------|--------|
 | Copy original nao fornecida | BLOQUEAR — nao ha o que revisar |
 | Copy com menos de 20 palavras | REJEITAR — muito curta para diagnostico completo |
-| Copy em idioma nao-portugues sem aviso | ALERTAR — confirmar se deve revisar em outro idioma |
+| Copy em idioma nao-portugues sem aviso | ALERTAR (nao bloqueia) — confirmar com usuario se deve revisar em outro idioma; se sim, prosseguir |
 | Usuario pediu "so corrigir portugues" | REDIRECIONAR — nao e funcao de Light Copy, sugerir corretor |
 
 ---
@@ -238,6 +238,14 @@ Metodos tradicionais ignoram que seu corpo tem memoria de 10+ anos sentado. [P3]
 ```
 
 ---
+
+## Voice Gate (Obrigatorio)
+
+Antes de entregar, validar contra `squads/marketing-yog/checklists/voice-gate-gaby.md`:
+- [ ] Tom acolhedor (nao vendedor)?
+- [ ] Power words da Gaby presentes?
+- [ ] Sem promessa exagerada?
+- [ ] Fechamento com convite leve?
 
 ## Completion Criteria
 

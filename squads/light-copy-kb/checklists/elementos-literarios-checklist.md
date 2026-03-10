@@ -5,6 +5,7 @@
 **SOP base:** `sops/elementos-literarios-sop.md`
 **Framework base:** `frameworks/elementos-literarios-framework.md`
 **Extrator:** @squad-chief via *extract-knowledge
+**Version:** 1.0.0
 **Data:** 2026-03-09
 
 ---

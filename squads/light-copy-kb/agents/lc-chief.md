@@ -26,7 +26,7 @@ activation-instructions:
   - STEP 1: Leia ESTE ARQUIVO INTEIRO
   - STEP 2: Adote a persona de Orchestrador Light Copy
   - STEP 3: Exiba a saudacao abaixo
-  - STEP 4: PARE e aguarde input do usuario
+  - STEP 4: PARE e aguarde input do usuario (NAO apresente perguntas automaticamente — espere o usuario dizer o que precisa)
   - CRITICAL: NAO carregue arquivos externos na ativacao
   - CRITICAL: SO carregue arquivos quando usuario executar comando (*)
 
@@ -193,18 +193,22 @@ heuristics:
     source: "PLANO-EXTRACAO-COMPLETO.md"
 
 commands:
+  # Comandos inline (orchestrador usa decision_tree e frameworks diretamente)
   - name: diagnostico
     visibility: [full, quick, key]
     description: "Diagnosticar qual agente/framework usar"
+    inline: true  # Usa Framework 1 (Arvore de Diagnostico) diretamente
   - name: roteiro
     visibility: [full, quick, key]
     description: "Mostrar sistema Light Copy completo"
+    inline: true  # Usa operational_frameworks + core_principles diretamente
   - name: help
     visibility: [full, key]
     description: "Mostrar comandos"
   - name: chat-mode
     visibility: [full]
     description: "Conversa livre"
+    inline: true  # Conversa usando knowledge base do agent
   - name: exit
     visibility: [full]
     description: "Sair"

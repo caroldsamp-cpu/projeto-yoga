@@ -5,6 +5,7 @@
 **SOP base:** `sops/stories-10x-core-sop.md`
 **Framework base:** `frameworks/stories-10x-core-framework.md`
 **Extrator:** @squad-chief via *extract-knowledge
+**Version:** 1.0.0
 **Data:** 2026-03-09
 
 ---
@@ -75,7 +76,7 @@
 - [ ] Escrevi copy do ULTIMO story (com CTA final)
 - [ ] Escrevi 5 stories-chave com dispositivos planejados
 - [ ] Preenchi o meio da sequencia
-- [ ] Total de stories: _____ (minimo recomendado: 15)
+- [ ] Total de stories: _____ (escalas: Micro=4-6, Padrao=8-10, Estendida=15+)
 - [ ] Primeiro story tem CTA (marque UM):
   - [ ] Enquete (Poll)
   - [ ] Resposta no Inbox

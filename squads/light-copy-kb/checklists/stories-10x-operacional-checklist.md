@@ -5,6 +5,7 @@
 **SOP base:** `sops/stories-10x-operacional-sop.md`
 **Framework base:** `frameworks/stories-10x-operacional-framework.md`
 **Extrator:** @squad-chief via *extract-knowledge
+**Version:** 1.0.0
 **Data:** 2026-03-09
 
 ---

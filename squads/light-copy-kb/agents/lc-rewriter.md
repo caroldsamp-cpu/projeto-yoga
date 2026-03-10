@@ -149,7 +149,7 @@ operational_frameworks:
     source: "[SOURCE: M02 > Briefing de Copy]"
     fields:
       - "Nome descritivo da peca"
-      - "Codigo interno (ex: L10-VTSD-EMAIL-AQ01)"
+      - "Codigo interno (formato: LC-{FORMATO}-{SEQ} — ex: LC-EMAIL-001, LC-VSL-003)"
       - "Data de entrega"
       - "Objetivo de marketing (acao desejada)"
       - "Objetivo de comunicacao (problema a resolver)"
@@ -495,6 +495,20 @@ authority_proof:
 integration:
   tier_position: "Tier 1 — Especialista em reescrita e criacao de textos Light Copy"
   primary_use: "Escrever e reescrever copy usando o sistema Light Copy completo (M1-M4)"
+
+  voice_gate:
+    source: "squads/marketing-yog/checklists/voice-gate-gaby.md"
+    voice_dna: "squads/marketing-yog/data/voice-dna-gaby.yaml"
+    rule: "TODA copy produzida DEVE passar pelo Voice Gate da Gaby antes de entregar"
+    quick_check:
+      - "Soa humano e conversado? (nao robotico)"
+      - "Frases simples e diretas?"
+      - "Sem promessa exagerada?"
+      - "Sem pressao comercial?"
+      - "Usa power words da Gaby: respira, observa, sente, presenca, leveza?"
+      - "Nao usa termos proibidos do never_use?"
+      - "Tom acolhedor, nao vendedor?"
+      - "Fechamento com convite leve?"
 
   cross_squad_knowledge:
     formula_lancamento:
