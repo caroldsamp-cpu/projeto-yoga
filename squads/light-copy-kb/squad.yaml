@@ -1,5 +1,5 @@
 name: "light-copy-kb"
-version: "1.1.0"
+version: "2.0.0"
 description: "Squad de Light Copy (M1-M4) + Stories 10x (37 dispositivos) baseado nas tecnicas de Leandro Ladeira"
 author: "Projeto Yoga"
 license: "MIT"
@@ -13,9 +13,16 @@ components:
     - lc-chief.md
     - lc-rewriter.md
     - lc-stories.md
-  tasks: []
+  tasks:
+    - escrever-light-copy.md
+    - revisar-light-copy.md
+    - criar-sequencia-stories.md
+    - debriefing-stories.md
+    - spin-inbox.md
   workflows:
     - wf-stories-para-lancamento.yaml
+    - wf-rewrite-pipeline.yaml
+    - wf-stories-weekly.yaml
   templates:
     - rewrite-output-template.md
   checklists:
@@ -54,4 +61,4 @@ keywords:
 
 status: "operational"
 created_at: "2026-02-22"
-updated_at: "2026-03-09"
+updated_at: "2026-03-10"

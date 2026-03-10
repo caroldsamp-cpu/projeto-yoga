@@ -1,0 +1,301 @@
+# Workflow: Pipeline de Reescrita Light Copy
+# Fluxo completo de criacao/revisao de copy usando metodologia LC M1-M4
+
+id: wf-rewrite-pipeline
+name: "Pipeline de Reescrita Light Copy"
+version: "1.0.0"
+duration: "1-3h"
+description: >
+  Workflow de 5 fases para criar ou reescrever copy usando Light Copy.
+  Segue o ciclo: Briefing → Premissas → Escrita → Edicao → Quality Gate.
+  Fluxo unidirecional — nenhuma fase retorna a anterior.
+
+best_for:
+  - "Criacao de copy do zero (*escrever)"
+  - "Revisao completa de copy existente (*revisar)"
+  - "Producao de pecas de lancamento (cross-squad com FL)"
+  - "Copy para qualquer formato: email, reels, ad, LP, VSL, carousel"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+phases:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-1:
+    id: briefing
+    name: "Briefing + Big Idea"
+    estimated_time: "15-30min"
+    executor: "@lc-rewriter"
+    description: >
+      Preencher briefing completo com 10 campos.
+      Big Idea e o campo mais critico — sem Big Idea, nao ha direcao.
+
+    tasks:
+      - task: "Elicitar contexto (objetivo, avatar, formato, produto)"
+        cognitive_type: elicitation
+        executor: "@lc-rewriter"
+      - task: "Preencher 10 campos do briefing"
+        cognitive_type: synthesis
+        executor: "@lc-rewriter"
+      - task: "Definir Big Idea unica"
+        cognitive_type: creative_generation
+        executor: "@lc-rewriter"
+
+    inputs:
+      - "Objetivo de marketing"
+      - "Avatar + temperatura (frio/morno/quente/cliente)"
+      - "Formato desejado"
+      - "Produto/servico"
+
+    outputs:
+      - "Briefing completo (10/10 campos)"
+      - "Big Idea em 1 frase"
+
+    checkpoint:
+      name: "Briefing Validation"
+      criteria:
+        - "10/10 campos preenchidos"
+        - "Big Idea definida e unica (nao generica)"
+        - "Temperatura do publico identificada"
+      approval: "Apresentar briefing ao usuario para validacao"
+
+    veto_conditions:
+      - condition: "Big Idea ausente"
+        action: "BLOQUEAR — definir Big Idea antes de prosseguir"
+      - condition: "Objetivo de marketing nao claro"
+        action: "BLOQUEAR — voltar a elicitacao"
+      - condition: "Big Idea tenta falar de tudo"
+        action: "BLOQUEAR — 'Se voce quer falar de tudo, nao fala de nada'"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-2:
+    id: premissas
+    name: "Cadeia de Premissas"
+    estimated_time: "15-20min"
+    executor: "@lc-rewriter"
+    description: >
+      Construir cadeia de premissas logicas que sustentam a Big Idea.
+      Premissa != Promessa. Se parece promessa, reformular.
+
+    tasks:
+      - task: "Construir 3-5 premissas conectadas logicamente"
+        cognitive_type: reasoning
+        executor: "@lc-rewriter"
+      - task: "Validar cada premissa (Curiosa, Factual, Aferivel, Especifica)"
+        cognitive_type: evaluation
+        executor: "@lc-rewriter"
+      - task: "Formular conclusao logica inevitavel"
+        cognitive_type: reasoning
+        executor: "@lc-rewriter"
+
+    inputs:
+      - "Briefing validado (Phase 1)"
+      - "Big Idea"
+
+    outputs:
+      - "Cadeia de 3-5 premissas"
+      - "Conclusao logica"
+      - "Checklist de validacao por premissa"
+
+    checkpoint:
+      name: "Premise Chain Validation"
+      criteria:
+        - "Min 3 premissas"
+        - "Cada premissa passa 4+ dos 5 criterios (Curiosa, Factual, Aferivel, Especifica, Irrefutavel)"
+        - "Conclusao e consequencia logica das premissas (nao salto)"
+
+    veto_conditions:
+      - condition: "Premissa baseada em promessa vazia"
+        action: "REJEITAR — reformular como fato verificavel"
+      - condition: "Conclusao nao decorre das premissas"
+        action: "BLOQUEAR — refazer cadeia logica"
+      - condition: "Menos de 3 premissas"
+        action: "BLOQUEAR — adicionar premissas"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-3:
+    id: escrita
+    name: "Escrita com Elementos Literarios"
+    estimated_time: "30-60min"
+    executor: "@lc-rewriter"
+    description: >
+      Escrever copy aplicando processo criativo de 8 etapas.
+      Integrar premissas no corpo (nao listar). Aplicar min 3 elementos literarios.
+
+    tasks:
+      - task: "Brainstorm divergente — gerar 5+ versoes de headline"
+        cognitive_type: creative_generation
+        executor: "@lc-rewriter"
+      - task: "Brainstorm convergente — selecionar melhor headline"
+        cognitive_type: evaluation
+        executor: "@lc-rewriter"
+      - task: "Escrever copy completa com estrutura 3Cs"
+        cognitive_type: creative_generation
+        executor: "@lc-rewriter"
+      - task: "Aplicar min 3 elementos literarios (EL01-EL25)"
+        cognitive_type: creative_generation
+        executor: "@lc-rewriter"
+      - task: "Integrar premissas no corpo do texto"
+        cognitive_type: synthesis
+        executor: "@lc-rewriter"
+
+    inputs:
+      - "Briefing validado (Phase 1)"
+      - "Cadeia de premissas (Phase 2)"
+
+    outputs:
+      - "Copy completa (versao pre-edicao)"
+      - "Lista de elementos literarios aplicados"
+      - "Headline selecionada + alternativas"
+
+    checkpoint:
+      name: "Copy Structure Validation"
+      criteria:
+        - "Estrutura 3Cs presente (Contexto + Conteudo + CTA)"
+        - "Min 3 elementos literarios identificados"
+        - "Premissas integradas no corpo (nao listadas)"
+        - "Headline usa curiosidade + especificidade"
+        - "Tom alinhado com temperatura do publico"
+
+    veto_conditions:
+      - condition: "Copy sem CTA"
+        action: "BLOQUEAR — toda peca precisa de CTA"
+      - condition: "Copy sem estrutura 3Cs"
+        action: "BLOQUEAR — reescrever com estrutura"
+      - condition: "Zero elementos literarios"
+        action: "BLOQUEAR — adicionar min 3 EL"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-4:
+    id: edicao
+    name: "Edicao 30%"
+    estimated_time: "15-20min"
+    executor: "@lc-rewriter"
+    description: >
+      Cortar minimo 30% do texto. Edicao e obrigatoria — nao e opcional.
+      Priorizar corte: adjetivos > aquecimento > repeticoes > transicoes.
+
+    tasks:
+      - task: "Contar palavras da versao original"
+        cognitive_type: analysis
+        executor: "@lc-rewriter"
+      - task: "Cortar adjetivos genericos e frases de aquecimento"
+        cognitive_type: editing
+        executor: "@lc-rewriter"
+      - task: "Aplicar teste 'se tirasse, a copy perde algo?'"
+        cognitive_type: evaluation
+        executor: "@lc-rewriter"
+      - task: "Verificar corte >= 30%"
+        cognitive_type: analysis
+        executor: "@lc-rewriter"
+
+    inputs:
+      - "Copy completa (Phase 3)"
+
+    outputs:
+      - "Copy editada"
+      - "Word count: original vs final"
+      - "Percentual de corte"
+      - "Lista do que foi cortado e por que"
+
+    checkpoint:
+      name: "Edit Validation"
+      criteria:
+        - "word_count_final <= word_count_original * 0.7"
+        - "Premissas intactas apos corte"
+        - "CTA intacto apos corte"
+        - "Estrutura 3Cs preservada"
+
+    veto_conditions:
+      - condition: "Corte < 30% sem justificativa"
+        action: "BLOQUEAR — continuar cortando"
+      - condition: "Premissa cortada acidentalmente"
+        action: "RESTAURAR — premissas sao intocaveis"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-5:
+    id: quality_gate
+    name: "Quality Gate + Entrega"
+    estimated_time: "10-15min"
+    executor: "@lc-rewriter"
+    description: >
+      Aplicar todas as 10 heuristicas como quality gate final.
+      Gerar metadata YAML e entregar peca completa.
+
+    tasks:
+      - task: "Aplicar 10 heuristicas (H001-H010) como checklist final"
+        cognitive_type: evaluation
+        executor: "@lc-rewriter"
+      - task: "Gerar metadata YAML (taxonomy-aligned)"
+        cognitive_type: classification
+        executor: "@lc-rewriter"
+      - task: "Formatar entrega: copy + briefing + metadata"
+        cognitive_type: formatting
+        executor: "@lc-rewriter"
+
+    inputs:
+      - "Copy editada (Phase 4)"
+      - "Briefing (Phase 1)"
+
+    outputs:
+      - "Copy final"
+      - "Briefing completo"
+      - "Metadata YAML"
+      - "Score final (0-10)"
+
+    checkpoint:
+      name: "Final Quality Gate"
+      criteria:
+        - "H001 PASS: Briefing presente"
+        - "H002 PASS: Big Idea definida"
+        - "H003 PASS: Premissas (nao promessas)"
+        - "H004 PASS: Min 3 elementos literarios"
+        - "H005 PASS: Estrutura 3Cs"
+        - "H006 PASS: Temperatura correta"
+        - "H007 PASS: Headline forte"
+        - "H008 PASS: Formato correto"
+        - "H009 PASS: Objecoes tratadas"
+        - "H010 PASS: Edicao 30% aplicada"
+
+    veto_conditions:
+      - condition: "Qualquer heuristica CRITICAL falhou"
+        action: "AJUSTAR nesta fase — corrigir antes de entregar"
+      - condition: "Score < 7/10"
+        action: "ALERTAR usuario — entregar com observacoes"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# GLOBAL RULES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+global_rules:
+  unidirectional: true
+  unidirectional_note: "Nenhuma fase retorna a anterior. Ajustes sao feitos DENTRO da fase atual."
+  zero_gap: true
+  zero_gap_note: "Handoff entre fases e imediato — output de uma fase e input da proxima."
+  voice_gate: "Todas as fases de escrita aplicam Voice Gate do squad"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# AGENTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+agents:
+  primary: "@lc-rewriter"
+  secondary: "@lc-chief"
+  cross_squad:
+    - agent: "@fl-copy"
+      when: "Copy e para lancamento (FL precisa de Light Copy avancado)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# METADATA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+metadata:
+  version: "1.0.0"
+  framework: "Light Copy M1-M4 (Leandro Ladeira)"
+  created: "2026-03-10"
+  squad: "light-copy-kb"
+  triggers:
+    - "*escrever (via escrever-light-copy.md)"
+    - "*revisar (via revisar-light-copy.md)"

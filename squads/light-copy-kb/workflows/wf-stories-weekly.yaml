@@ -1,0 +1,276 @@
+# Workflow: Planejamento Semanal de Stories
+# Ciclo semanal de stories: geracao de temas → criacao → publicacao → debriefing
+
+id: wf-stories-weekly
+name: "Planejamento Semanal de Stories"
+version: "1.0.0"
+duration: "2-4h (distribuidas na semana) + debriefings diarios"
+description: >
+  Workflow de 4 fases para planejar e executar uma semana de stories.
+  Ciclo: Temas → Sequencias → Publicacao → Debriefing.
+  Debriefing alimenta proxima semana (ciclo continuo).
+
+best_for:
+  - "Planejamento semanal de stories (*planejar-semana)"
+  - "Manutencao de consistencia de publicacao"
+  - "Construcao de comunidade via stories (90/10)"
+  - "Geracao de leads via inbox lucrativo"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+phases:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-1:
+    id: temas
+    name: "Geracao de Temas"
+    estimated_time: "30-45min"
+    executor: "@lc-stories"
+    day: "Segunda/Domingo (planejamento)"
+    description: >
+      Gerar temas para a semana usando as 4 fontes de temas.
+      Mix de tipos: 90% engajamento + 10% venda.
+
+    tasks:
+      - task: "Revisar debriefing da semana anterior (se disponivel)"
+        cognitive_type: analysis
+        executor: "@lc-stories"
+      - task: "Gerar temas usando 4 fontes: Categorias, Identificacao, Urgencia Oculta, Livre"
+        cognitive_type: creative_generation
+        executor: "@lc-stories"
+      - task: "Classificar temas por tipo de sequencia (SEQ01-12)"
+        cognitive_type: classification
+        executor: "@lc-stories"
+      - task: "Montar calendario semanal com mix 90/10"
+        cognitive_type: planning
+        executor: "@lc-stories"
+
+    inputs:
+      - "Debriefing da semana anterior (se disponivel)"
+      - "Calendario de lancamento (se em periodo FL)"
+      - "5 categorias de conteudo do perfil"
+      - "Sequencias que funcionaram anteriormente"
+
+    outputs:
+      - "5-7 temas mapeados para a semana"
+      - "Tipo de sequencia por tema (SEQ01-12)"
+      - "Calendario semanal: dia → tema → tipo"
+      - "Mix 90/10 validado"
+
+    checkpoint:
+      name: "Weekly Theme Validation"
+      criteria:
+        - "Min 5 temas para a semana"
+        - "Mix 90/10 respeitado (max 1 sequencia de venda por semana)"
+        - "Nao repetir mesmo tipo 2 dias seguidos"
+        - "Se em lancamento FL, incluir sequencias alinhadas"
+      approval: "Apresentar calendario ao usuario"
+
+    veto_conditions:
+      - condition: "Mais de 2 sequencias de venda na semana"
+        action: "REJEITAR — viola regra 90/10"
+      - condition: "Zero variacao de tipo (todo dia o mesmo)"
+        action: "ALERTAR — variar para nao cansar audiencia"
+      - condition: "Nenhum tema de engajamento"
+        action: "BLOQUEAR — semana sem engajamento e semana perdida"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-2:
+    id: criacao
+    name: "Criacao de Sequencias"
+    estimated_time: "1-2h"
+    executor: "@lc-stories"
+    day: "Seg-Sex (criacao diaria ou batch)"
+    description: >
+      Criar sequencias de stories para cada dia usando dispositivos S10X.
+      Pode ser feito em batch (toda semana de uma vez) ou diariamente.
+
+    tasks:
+      - task: "Criar sequencia do dia (via criar-sequencia-stories.md)"
+        cognitive_type: creative_generation
+        executor: "@lc-stories"
+      - task: "Aplicar Light Copy se necessario (via @lc-rewriter)"
+        cognitive_type: creative_generation
+        executor: "@lc-rewriter"
+      - task: "Validar dispositivos e CTA"
+        cognitive_type: evaluation
+        executor: "@lc-stories"
+
+    inputs:
+      - "Calendario semanal (Phase 1)"
+      - "Tema do dia"
+      - "Tipo de sequencia"
+
+    outputs:
+      - "Sequencia completa por dia (stories + dispositivos + visual hints)"
+      - "CTA do primeiro story definido"
+
+    checkpoint:
+      name: "Sequence Quality Check"
+      criteria:
+        - "Min 5 dispositivos por sequencia"
+        - "CTA no primeiro story"
+        - "Min stories conforme tipo"
+        - "Se sequencia de venda: premissas presentes"
+
+    veto_conditions:
+      - condition: "CTA ausente no primeiro story"
+        action: "BLOQUEAR — adicionar CTA antes de publicar"
+      - condition: "Menos de 5 dispositivos"
+        action: "BLOQUEAR — sequencia pobre"
+      - condition: "Sequencia de venda sem premissas"
+        action: "HANDOFF para @lc-rewriter — precisa de cadeia de premissas"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-3:
+    id: publicacao
+    name: "Publicacao + Monitoramento"
+    estimated_time: "15min/dia"
+    executor: "usuario (human)"
+    day: "Diariamente"
+    description: >
+      Usuario publica stories e monitora interacoes em tempo real.
+      Responder DMs prioritarios usando triagem LC_ST_H009.
+
+    tasks:
+      - task: "Publicar sequencia do dia no Instagram"
+        cognitive_type: execution
+        executor: "human"
+      - task: "Monitorar interacoes (DMs, enquetes, caixinhas)"
+        cognitive_type: monitoring
+        executor: "human"
+      - task: "Responder DMs prioritarios (texto longo > objecoes > perguntas)"
+        cognitive_type: communication
+        executor: "human"
+        support: "@lc-stories (*spin-inbox para leads HOT)"
+
+    inputs:
+      - "Sequencia criada (Phase 2)"
+
+    outputs:
+      - "Stories publicados"
+      - "Interacoes registradas"
+      - "Hot leads identificados"
+
+    checkpoint:
+      name: "Publication Confirmation"
+      criteria:
+        - "Sequencia publicada na ordem planejada"
+        - "DMs respondidos dentro de 4h"
+
+    veto_conditions:
+      - condition: "Publicar fora de ordem"
+        action: "ALERTAR — sequencia foi pensada em ordem"
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  PHASE-4:
+    id: debriefing
+    name: "Debriefing Diario/Semanal"
+    estimated_time: "15-30min/dia"
+    executor: "@lc-stories"
+    day: "Diariamente (24h apos publicacao) + resumo semanal"
+    deferred: true
+    deferred_note: "Executa 24h apos cada publicacao para metricas completas"
+    description: >
+      Analisar resultados de cada sequencia publicada.
+      Decisao por story: REPETIR / AJUSTAR / DESCARTAR.
+      Resumo semanal alimenta Phase 1 da proxima semana.
+
+    tasks:
+      - task: "Coletar metricas (via debriefing-stories.md)"
+        cognitive_type: analysis
+        executor: "@lc-stories"
+      - task: "Classificar stories: REPETIR / AJUSTAR / DESCARTAR"
+        cognitive_type: evaluation
+        executor: "@lc-stories"
+      - task: "Identificar hot leads para SPIN inbox"
+        cognitive_type: classification
+        executor: "@lc-stories"
+      - task: "Compilar resumo semanal (sexta/sabado)"
+        cognitive_type: synthesis
+        executor: "@lc-stories"
+
+    inputs:
+      - "Stories publicados (Phase 3)"
+      - "Metricas do Instagram Insights"
+      - "DMs recebidos"
+
+    outputs:
+      - "Debriefing diario por sequencia"
+      - "Hot leads classificados"
+      - "Resumo semanal com top stories + aprendizados"
+      - "Input para Phase 1 da proxima semana"
+
+    checkpoint:
+      name: "Weekly Summary"
+      criteria:
+        - "Todas as sequencias publicadas tem debriefing"
+        - "Hot leads encaminhados para SPIN"
+        - "Top 3 stories da semana identificados"
+        - "3+ aprendizados documentados"
+        - "Recomendacoes para proxima semana"
+
+    veto_conditions:
+      - condition: "Criar nova sequencia sem debriefing da anterior"
+        action: "ALERTAR — recomendado debriefing antes de criar nova"
+      - condition: "Zero debriefings na semana"
+        action: "BLOQUEAR proxima semana — sem dados nao ha melhoria"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CYCLE RULES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+cycle:
+  type: "weekly_recurring"
+  note: >
+    Este workflow e ciclico — Phase 4 (debriefing) alimenta Phase 1 (temas)
+    da proxima semana. O ciclo se repete indefinidamente.
+  feedback_loop: "Phase 4 outputs → Phase 1 inputs (proxima semana)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# GLOBAL RULES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+global_rules:
+  unidirectional: true
+  unidirectional_note: "Dentro da semana, fluxo e unidirecional. Entre semanas, Phase 4 alimenta Phase 1."
+  zero_gap: true
+  zero_gap_scope: "Phases 1-2 (planejamento e criacao sao consecutivos)"
+  deferred_phases: ["PHASE-4"]
+  deferred_note: "Phase 4 executa 24h apos cada publicacao"
+  rule_90_10: "Max 10% das sequencias semanais sao de venda"
+  voice_gate: "Todas as fases de escrita aplicam Voice Gate do squad"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# AGENTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+agents:
+  primary: "@lc-stories"
+  secondary:
+    - agent: "@lc-rewriter"
+      when: "Sequencias de venda precisam de premissas e Light Copy"
+    - agent: "@lc-chief"
+      when: "Debriefing indica problema estrategico"
+  human:
+    - role: "usuario"
+      when: "Phase 3 — publicacao e monitoramento"
+  cross_squad:
+    - agent: "@fl-conteudo"
+      when: "Semana alinhada com calendario de lancamento FL"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# METADATA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+metadata:
+  version: "1.0.0"
+  framework: "Stories 10x (Leandro Ladeira + Ruy Guimaraes)"
+  created: "2026-03-10"
+  squad: "light-copy-kb"
+  triggers:
+    - "*planejar-semana (via @lc-stories)"
+    - "*criar-sequencia (via criar-sequencia-stories.md)"
+    - "*debriefing (via debriefing-stories.md)"
