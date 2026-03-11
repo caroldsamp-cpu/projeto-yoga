@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NamaSer — Construa seu Sadhana com constância simples</title>
+  <meta name="description" content="NamaSer: yoga na vida real para mulheres que querem presença e leveza sem mudar toda a rotina. Ritual diário + 5 trilhas + comunidade.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-primary: #FDFBF7;
+      --bg-secondary: #F5F0EB;
+      --bg-accent: #EDE8DF;
+      --bg-guarantee: #F0EDE8;
+      --text-primary: #2D2926;
+      --text-secondary: #6B5E54;
+      --accent: #7C8B6F;
+      --accent-hover: #6A7A5E;
+      --accent-light: rgba(124, 139, 111, 0.1);
+      --lavender: #B8A9C4;
+      --border: #E8E0D6;
+      --shadow-sm: 0 4px 24px rgba(45, 41, 38, 0.06);
+      --shadow-md: 0 8px 32px rgba(45, 41, 38, 0.10);
+      --radius-btn: 12px;
+      --radius-card: 16px;
+      --radius-lg: 24px;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* ========== UTILITIES ========== */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    @media (min-width: 640px) { .container { padding: 0 24px; } }
+    @media (min-width: 1024px) { .container { padding: 0 32px; } }
+
+    .overline {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    .text-center { text-align: center; }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 16px 40px;
+      border-radius: var(--radius-btn);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+      min-height: 48px;
+      text-align: center;
+    }
+    .btn-primary:hover {
+      transform: scale(1.02);
+      box-shadow: var(--shadow-md);
+      background: var(--accent-hover);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--accent);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 10px 24px;
+      border-radius: var(--radius-btn);
+      border: 1.5px solid var(--accent);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s var(--ease);
+    }
+    .btn-outline:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .micro-text {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-top: 12px;
+    }
+
+    /* ========== SCROLL REVEAL ========== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========== NAV ========== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(253, 251, 247, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+    }
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .nav .btn-outline { display: none; }
+    @media (min-width: 640px) {
+      .nav .btn-outline { display: inline-block; }
+    }
+
+    /* ========== S1: HERO ========== */
+    .hero {
+      padding: 120px 0 64px;
+      background: var(--bg-primary);
+    }
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-content { text-align: center; max-width: 640px; }
+    .hero-headline {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+    .hero-sub {
+      font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .hero-img {
+      width: 100%;
+      max-width: 560px;
+      aspect-ratio: 3/2;
+      background: var(--bg-secondary);
+      border-radius: var(--radius-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      padding: 24px;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+    @media (min-width: 1024px) {
+      .hero-inner {
+        flex-direction: row;
+        text-align: left;
+      }
+      .hero-content { text-align: left; flex: 1; }
+      .hero-img { flex: 1; max-width: 480px; }
+    }
+
+    /* ========== S2: DOR ========== */
+    .dor { padding: 64px 0; }
+    .dor-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin: 32px 0;
+    }
+    @media (min-width: 640px) {
+      .dor-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .dor-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 24px;
+      font-size: 1rem;
+      color: var(--text-primary);
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .dor-transition {
+      font-family: var(--font-serif);
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      color: var(--text-primary);
+      text-align: center;
+      margin-top: 40px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+
+    /* ========== S3: REFRAME ========== */
+    .reframe {
+      background: var(--bg-secondary);
+      padding: 80px 0;
+    }
+    .reframe-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 400;
+      line-height: 1.3;
+      text-align: center;
+      color: var(--text-primary);
+      max-width: 720px;
+      margin: 0 auto 24px;
+    }
+    .reframe-text {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      color: var(--text-secondary);
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ========== S4: PARA QUEM ========== */
+    .para-quem { padding: 64px 0; }
+    .check-list { list-style: none; margin: 32px 0; }
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 14px 0;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: var(--text-primary);
+    }
+    .check-list li + li { border-top: 1px solid var(--border); }
+    .check-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--accent-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 14px;
+      margin-top: 2px;
+    }
+
+    /* ========== S5: COMO FUNCIONA ========== */
+    .como-funciona { padding: 64px 0; }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin: 32px 0;
+    }
+    @media (min-width: 768px) {
+      .steps-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .step-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 32px;
+      text-align: center;
+      transition: transform 0.15s var(--ease), box-shadow 0.15s var(--ease);
+    }
+    .step-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .step-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .step-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+    .step-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .steps-proof {
+      text-align: center;
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin-top: 24px;
+    }
+
+    /* ========== S6: O QUE VOCE RECEBE ========== */
+    .conteudo { padding: 64px 0; }
+
+    .ritual-block {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      margin-bottom: 40px;
+    }
+    .ritual-block h3 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      margin-bottom: 28px;
+    }
+    .ritual-items { display: flex; flex-direction: column; gap: 24px; }
+    .ritual-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .ritual-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+    .ritual-item h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .ritual-item p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .trilhas-block { margin-bottom: 40px; }
+    .trilhas-block > h3 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .accordion-item {
+      border-top: 1px solid var(--border);
+    }
+    .accordion-item:last-child { border-bottom: 1px solid var(--border); }
+    .accordion-header {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      transition: color 0.2s;
+    }
+    .accordion-header:hover { color: var(--accent); }
+    .accordion-chevron {
+      font-size: 1.25rem;
+      transition: transform 0.3s var(--ease);
+      color: var(--text-secondary);
+    }
+    .accordion-item.open .accordion-chevron { transform: rotate(180deg); }
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+    .accordion-body-inner {
+      padding: 0 0 20px;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .accordion-body-inner .trilha-desc {
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+    .accordion-body-inner .trilha-modulos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .modulo-tag {
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    @media (min-width: 640px) {
+      .bonus-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .bonus-card {
+      background: #fff;
+      border: 1.5px solid var(--accent);
+      border-radius: var(--radius-card);
+      padding: 24px;
+    }
+    .bonus-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .bonus-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .summary-bar {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-card);
+      padding: 24px 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 32px;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    .summary-bar span { white-space: nowrap; }
+
+    /* ========== S7: DEPOIMENTOS ========== */
+    .depoimentos {
+      background: var(--bg-secondary);
+      padding: 64px 0;
+    }
+    .depo-carousel {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 8px 0 16px;
+      margin: 32px 0;
+    }
+    .depo-carousel::-webkit-scrollbar { height: 4px; }
+    .depo-carousel::-webkit-scrollbar-track { background: var(--border); border-radius: 2px; }
+    .depo-carousel::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+    .depo-card {
+      flex: 0 0 85%;
+      max-width: 400px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 32px;
+      scroll-snap-align: start;
+    }
+    @media (min-width: 768px) {
+      .depo-card { flex: 0 0 340px; }
+    }
+    .depo-card .depo-text {
+      font-style: italic;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+    .depo-card .depo-author {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+    .depo-card .depo-author strong { color: var(--text-primary); font-weight: 500; }
+
+    .video-placeholder {
+      max-width: 640px;
+      margin: 32px auto;
+      aspect-ratio: 16/9;
+      background: var(--bg-accent);
+      border-radius: var(--radius-card);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border: 1px solid var(--border);
+    }
+    .play-btn {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .play-btn::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 12px 0 12px 20px;
+      border-color: transparent transparent transparent #fff;
+      margin-left: 4px;
+    }
+    .video-placeholder p { font-size: 0.875rem; color: var(--text-secondary); }
+
+    .depo-stat {
+      text-align: center;
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      color: var(--text-primary);
+      max-width: 560px;
+      margin: 32px auto;
+      line-height: 1.6;
+    }
+
+    /* ========== S8: GABY ========== */
+    .gaby { padding: 64px 0; }
+    .gaby-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+    }
+    .gaby-img {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 6/7;
+      background: var(--bg-secondary);
+      border-radius: var(--radius-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      text-align: center;
+      padding: 24px;
+      border: 1px solid var(--border);
+    }
+    .gaby-text { max-width: 520px; }
+    .gaby-text p {
+      font-size: clamp(1rem, 2vw, 1.1rem);
+      line-height: 1.7;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+    @media (min-width: 1024px) {
+      .gaby-inner { flex-direction: row-reverse; }
+      .gaby-img { flex-shrink: 0; }
+      .gaby-text { flex: 1; }
+    }
+
+    /* ========== S9: PRICING ========== */
+    .pricing { padding: 64px 0; }
+    .pricing-card {
+      max-width: 560px;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+    @media (min-width: 640px) {
+      .pricing-card { padding: 48px 48px; }
+    }
+    .pricing-card .section-title { margin-bottom: 24px; }
+    .pricing-features {
+      list-style: none;
+      text-align: left;
+      margin: 24px 0 32px;
+    }
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 8px 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .pricing-features .pf-check {
+      color: var(--accent);
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .price-main {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .price-alt {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+    }
+    .pricing-card .btn-primary {
+      width: 100%;
+      font-size: 1.1rem;
+      padding: 18px;
+    }
+
+    /* ========== S10: GARANTIA ========== */
+    .garantia {
+      background: var(--bg-guarantee);
+      padding: 56px 0;
+      text-align: center;
+    }
+    .garantia-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.5rem;
+    }
+    .garantia p {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ========== S11: FAQ ========== */
+    .faq { padding: 64px 0; }
+    .faq-list { max-width: 720px; margin: 32px auto 0; }
+
+    /* ========== S12: CTA FINAL ========== */
+    .cta-final {
+      background: linear-gradient(180deg, var(--bg-secondary), var(--bg-accent));
+      padding: 80px 0;
+      text-align: center;
+    }
+    .cta-final-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 400;
+      line-height: 1.3;
+      max-width: 640px;
+      margin: 0 auto 20px;
+    }
+    .cta-final-text {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: var(--text-primary);
+      color: rgba(255,255,255,0.7);
+      padding: 40px 0;
+      text-align: center;
+      font-size: 0.875rem;
+      line-height: 1.8;
+    }
+    .footer-logo {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .footer a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer a:hover { color: #fff; }
+
+    /* ========== MOBILE CTA ========== */
+    @media (max-width: 639px) {
+      .btn-primary { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <a href="#" class="nav-logo">NamaSer</a>
+      <a href="#pricing" class="btn-outline">Começar meu Sadhana</a>
+    </div>
+  </nav>
+
+  <!-- S1: HERO -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content reveal">
+          <p class="overline">Yoga na vida real. Sem performance.</p>
+          <h1 class="hero-headline">Construa seu Sadhana<br>com constância simples</h1>
+          <p class="hero-sub">Um ritual diário de presença para mulheres que querem leveza e calma — sem mudar toda a rotina.</p>
+          <a href="#pricing" class="btn-primary">Quero conhecer o NamaSer</a>
+          <p class="micro-text">Sem compromisso. Descubra no seu tempo.</p>
+        </div>
+        <div class="hero-img reveal" style="transition-delay: 0.15s;">
+          Foto da Gaby em prática real, ambiente claro, natureza da Serra, luz natural
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S2: DOR -->
+  <section class="dor" id="dor">
+    <div class="container text-center">
+      <p class="overline reveal">Você se reconhece?</p>
+      <div class="dor-grid">
+        <div class="dor-card reveal">"A mente não para. Nem pra dormir."</div>
+        <div class="dor-card reveal" style="transition-delay: 0.1s;">"Começo algo e paro. Começo e paro."</div>
+        <div class="dor-card reveal" style="transition-delay: 0.2s;">"Queria um momento só meu no dia."</div>
+        <div class="dor-card reveal" style="transition-delay: 0.3s;">"Sei que preciso desacelerar, mas como?"</div>
+      </div>
+      <p class="dor-transition reveal">Se você sentiu isso, você não está sozinha.<br>E não precisa mudar tudo para mudar algo.</p>
+    </div>
+  </section>
+
+  <!-- S3: REFRAME -->
+  <section class="reframe" id="reframe">
+    <div class="container">
+      <p class="reframe-quote reveal">"Constância simples transforma mais que intensidade ocasional."</p>
+      <p class="reframe-text reveal">Você não precisa de uma hora no tapete. Não precisa ser flexível. Não precisa parar tudo. Precisa de um caminho possível — e alguém que caminhe com você.</p>
+    </div>
+  </section>
+
+  <!-- S4: PARA QUEM -->
+  <section class="para-quem" id="para-quem">
+    <div class="container">
+      <h2 class="section-title reveal">O NamaSer é para você se...</h2>
+      <ul class="check-list">
+        <li class="reveal">
+          <span class="check-icon">✓</span>
+          <span>Você tem a vida corrida e quer um ponto de presença no meio do dia</span>
+        </li>
+        <li class="reveal" style="transition-delay: 0.1s;">
+          <span class="check-icon">✓</span>
+          <span>Você quer começar yoga mas não sabe por onde (e tem medo de não dar conta)</span>
+        </li>
+        <li class="reveal" style="transition-delay: 0.2s;">
+          <span class="check-icon">✓</span>
+          <span>Você já praticou mas não conseguiu manter e quer um caminho com estrutura e acolhimento</span>
+        </li>
+        <li class="reveal" style="transition-delay: 0.3s;">
+          <span class="check-icon">✓</span>
+          <span>Você busca leveza e calma sem precisar revolucionar sua rotina</span>
+        </li>
+        <li class="reveal" style="transition-delay: 0.4s;">
+          <span class="check-icon">✓</span>
+          <span>Você quer pertencer a um espaço onde não precisa provar nada</span>
+        </li>
+      </ul>
+      <div class="text-center reveal">
+        <a href="#pricing" class="btn-primary">Sim, isso faz sentido pra mim</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5: COMO FUNCIONA -->
+  <section class="como-funciona" id="como-funciona">
+    <div class="container text-center">
+      <h2 class="section-title reveal">Como funciona o NamaSer</h2>
+      <p class="section-subtitle reveal">Seu caminho em 3 passos simples</p>
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-number">1</div>
+          <h3>Comece pelo Desafio Sadhana</h3>
+          <p>Escolha 1 ritual de 3-5 min e pratique por 7 dias. Sem tapete, sem roupa especial.</p>
+        </div>
+        <div class="step-card reveal" style="transition-delay: 0.1s;">
+          <div class="step-number">2</div>
+          <h3>Siga o Caminho de 30 dias</h3>
+          <p>Um guia leve com no máximo 2 aulas por semana, no seu tempo.</p>
+        </div>
+        <div class="step-card reveal" style="transition-delay: 0.2s;">
+          <div class="step-number">3</div>
+          <h3>Evolua no seu ritmo</h3>
+          <p>5 trilhas completas pra quando você quiser ir mais fundo.</p>
+        </div>
+      </div>
+      <p class="steps-proof reveal">47% das alunas sentem leveza na primeira prática.</p>
+    </div>
+  </section>
+
+  <!-- S6: O QUE VOCE RECEBE -->
+  <section class="conteudo" id="conteudo">
+    <div class="container">
+      <h2 class="section-title text-center reveal">O que está dentro do NamaSer</h2>
+
+      <!-- Bloco 1: Ritual -->
+      <div class="ritual-block reveal">
+        <h3>Seu ponto de presença diário</h3>
+        <div class="ritual-items">
+          <div class="ritual-item">
+            <div class="ritual-icon">✦</div>
+            <div>
+              <h4>Desafio Sadhana — 7 dias de ritual</h4>
+              <p>Escolha 1 dos 5 rituais de 3-5 min. A vida real é o seu tapete.</p>
+            </div>
+          </div>
+          <div class="ritual-item">
+            <div class="ritual-icon">↗</div>
+            <div>
+              <h4>Caminho dos Primeiros 30 Dias</h4>
+              <p>Guia leve: no máximo 2 aulas por semana. Com carta de boas-vindas da Gaby.</p>
+            </div>
+          </div>
+          <div class="ritual-item">
+            <div class="ritual-icon">✴</div>
+            <div>
+              <h4>Oráculo do Sadhana</h4>
+              <p>Uma carta reflexiva por dia para usar como intenção da sua prática.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloco 2: Trilhas -->
+      <div class="trilhas-block reveal">
+        <h3>Quando quiser ir mais fundo — 5 Trilhas de Yoga</h3>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Fundação do Sadhana</span>
+            <span class="accordion-chevron">▾</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p class="trilha-desc">Aprenda a trazer presença para sua vida diária.</p>
+              <div class="trilha-modulos">
+                <span class="modulo-tag">Comece por Aqui — 5 aulas</span>
+                <span class="modulo-tag">Para Quem Nunca Praticou — 8 aulas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Sadhana Minguante & Nova</span>
+            <span class="accordion-chevron">▾</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p class="trilha-desc">Práticas mais suaves e introspectivas.</p>
+              <div class="trilha-modulos">
+                <span class="modulo-tag">Lua Minguante — 9 aulas</span>
+                <span class="modulo-tag">Lua Nova — 5 aulas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Sadhana Crescente & Cheia</span>
+            <span class="accordion-chevron">▾</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p class="trilha-desc">Práticas mais dinâmicas e expansivas.</p>
+              <div class="trilha-modulos">
+                <span class="modulo-tag">Lua Crescente — 11 aulas</span>
+                <span class="modulo-tag">Lua Cheia — 9 aulas</span>
+                <span class="modulo-tag">Tutorial Posturas — 12 aulas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Respiração & Presença</span>
+            <span class="accordion-chevron">▾</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p class="trilha-desc">Aprofunde seus momentos de presença.</p>
+              <div class="trilha-modulos">
+                <span class="modulo-tag">Pranayamas — 9 aulas</span>
+                <span class="modulo-tag">Meditações Guiadas — 10 aulas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>Evolução do Sadhana</span>
+            <span class="accordion-chevron">▾</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">
+              <p class="trilha-desc">Quando Sadhana vira identidade, a profundidade.</p>
+              <div class="trilha-modulos">
+                <span class="modulo-tag">Ao Vivo — 10 aulas</span>
+                <span class="modulo-tag">Bônus — 6+ aulas</span>
+                <span class="modulo-tag">Teóricas — 2 aulas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloco 3: Bonus -->
+      <div class="bonus-grid reveal">
+        <div class="bonus-card">
+          <h4>🎧 Reset Mental</h4>
+          <p>Meditações curtas no Spotify pra ouvir ao acordar, antes de dormir ou no meio do dia.</p>
+        </div>
+        <div class="bonus-card">
+          <h4>🚪 Entrada Sadhana</h4>
+          <p>Aula especial de boas-vindas: o que é Sadhana, prática guiada de presença e seu desafio de 7 dias.</p>
+        </div>
+      </div>
+
+      <!-- Resumo -->
+      <div class="summary-bar reveal">
+        <span>✦ Ritual diário 3-5 min</span>
+        <span>✦ 5 trilhas · 96+ aulas</span>
+        <span>✦ Oráculo do Sadhana</span>
+        <span>✦ Reset Mental</span>
+        <span>✦ Comunidade</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7: DEPOIMENTOS -->
+  <section class="depoimentos" id="depoimentos">
+    <div class="container">
+      <p class="overline text-center reveal">O que dizem as alunas</p>
+      <h2 class="section-title text-center reveal">Mulheres reais, transformações reais</h2>
+
+      <div class="depo-carousel">
+        <div class="depo-card">
+          <p class="depo-text">"Desde que comecei o Sadhana, encontrei um momento de calma que não sabia que existia no meu dia. Mesmo com duas crianças e trabalho, 5 minutos mudam tudo."</p>
+          <p class="depo-author"><strong>— Nome da Aluna</strong><br>Mãe de 2, trabalha em tempo integral</p>
+        </div>
+        <div class="depo-card">
+          <p class="depo-text">"Nunca achei que fosse conseguir manter uma prática. A Gaby me mostrou que constância não é sobre ser perfeita — é sobre voltar. E eu voltei."</p>
+          <p class="depo-author"><strong>— Nome da Aluna</strong><br>Começou do zero, sem experiência</p>
+        </div>
+        <div class="depo-card">
+          <p class="depo-text">"O Oráculo virou meu ritual favorito. Toda manhã, antes de tudo, eu abro a carta do dia. É como se a Gaby estivesse ali comigo."</p>
+          <p class="depo-author"><strong>— Nome da Aluna</strong><br>Pratica há 3 meses</p>
+        </div>
+      </div>
+
+      <div class="video-placeholder reveal">
+        <div class="play-btn"></div>
+        <p>Assista o que as alunas sentem após começar</p>
+      </div>
+
+      <p class="depo-stat reveal">32 mulheres já praticam com a Gaby na Serra.<br>Agora você pode praticar de onde estiver.</p>
+
+      <div class="text-center reveal">
+        <a href="#pricing" class="btn-primary">Quero fazer parte</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- S8: GABY -->
+  <section class="gaby" id="gaby">
+    <div class="container">
+      <div class="gaby-inner">
+        <div class="gaby-img reveal">
+          Foto da Gaby em ambiente natural, sorrindo, luz natural, acolhedora — NÃO postura de yoga
+        </div>
+        <div class="gaby-text reveal">
+          <p class="overline">Quem vai caminhar com você</p>
+          <h2 class="section-title">Gaby Drummond</h2>
+          <p>Eu não ensino yoga perfeito. Eu pratico yoga real — no meio da vida, com tudo acontecendo.</p>
+          <p>São mais de 10 anos guiando mulheres como você a encontrar presença onde parecia impossível.</p>
+          <p>O NamaSer nasceu dos aulões na Serra Gaúcha, onde 32 mulheres já descobriram que constância simples muda tudo. Agora, esse caminho chega até você, onde você estiver.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S9: PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="pricing-card reveal">
+        <p class="overline">Seu caminho começa aqui</p>
+        <h2 class="section-title">NamaSer</h2>
+        <ul class="pricing-features">
+          <li><span class="pf-check">✓</span> 5 trilhas completas</li>
+          <li><span class="pf-check">✓</span> 11 módulos · 96+ aulas</li>
+          <li><span class="pf-check">✓</span> Desafio Sadhana (rituais de 3-5 min por 7 dias)</li>
+          <li><span class="pf-check">✓</span> Caminho guiado dos primeiros 30 dias</li>
+          <li><span class="pf-check">✓</span> Oráculo do Sadhana (carta reflexiva diária)</li>
+          <li><span class="pf-check">✓</span> Reset Mental (meditações no Spotify)</li>
+          <li><span class="pf-check">✓</span> Comunidade de alunas</li>
+          <li><span class="pf-check">✓</span> Acesso imediato à plataforma</li>
+        </ul>
+        <p class="price-main">12x de R$14,27</p>
+        <p class="price-alt">ou R$138 à vista</p>
+        <a href="#" class="btn-primary">Começar meu Sadhana</a>
+        <p class="micro-text">Pagamento seguro · Acesso imediato</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S10: GARANTIA -->
+  <section class="garantia" id="garantia">
+    <div class="container">
+      <div class="reveal">
+        <div class="garantia-icon">🛡</div>
+        <h2 class="section-title">60 dias para sentir</h2>
+        <p>Se em 60 dias você sentir que o NamaSer não é o caminho certo pra você, devolvemos 100% do seu investimento. Sem perguntas, sem burocracia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S11: FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2 class="section-title text-center reveal">Perguntas que você pode estar se fazendo</h2>
+      <div class="faq-list">
+
+        <div class="accordion-item reveal">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>"Não tenho tempo para yoga."</span>
+            <span class="accordion-chevron">▾</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">Seu Sadhana começa com um ritual de 3-5 minutos por dia. Sem tapete, sem roupa especial. As aulas de yoga são o complemento, quando sobrar tempo.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item reveal" style="transition-delay: 0.05s;">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>"Não sei se vou conseguir manter."</span>
+            <span class="accordion-chevron">▾</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">O foco não é intensidade. É constância simples, no seu ritmo, sem culpa. Sem metas impossíveis.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item reveal" style="transition-delay: 0.1s;">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>"Nunca fiz yoga. Vou conseguir?"</span>
+            <span class="accordion-chevron">▾</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">O NamaSer foi desenhado para acolher iniciantes. Sem performance, sem comparação. Cada prática tem adaptações e você vai no seu tempo.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item reveal" style="transition-delay: 0.15s;">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>"Como funciona a plataforma?"</span>
+            <span class="accordion-chevron">▾</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">Você recebe acesso imediato após a inscrição. Escolhe sua trilha, aperta play e pratica. Simples assim. E se tiver dúvida, estamos aqui.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item reveal" style="transition-delay: 0.2s;">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>"E se eu não gostar?"</span>
+            <span class="accordion-chevron">▾</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">Você tem 60 dias de garantia. Se não fizer sentido, devolvemos 100% — sem perguntas.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item reveal" style="transition-delay: 0.25s;">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>"É só aula gravada?"</span>
+            <span class="accordion-chevron">▾</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-body-inner">Muito mais. Tem o Desafio Sadhana (ritual de 3-5 min), Oráculo diário, Reset Mental no Spotify, caminho guiado de 30 dias, comunidade e 5 trilhas completas de yoga.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- S12: CTA FINAL -->
+  <section class="cta-final" id="cta-final">
+    <div class="container">
+      <div class="reveal">
+        <p class="cta-final-quote">"Seu caminho de volta para você começa com um passo simples."</p>
+        <p class="cta-final-text">Se fez sentido o que você leu até aqui, eu te espero no NamaSer.</p>
+        <a href="#pricing" class="btn-primary">Começar meu Sadhana</a>
+        <p class="micro-text">12x de R$14,27 · Garantia de 60 dias</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-logo">NamaSer</p>
+      <p><a href="#">Termos de uso</a> · <a href="#">Política de privacidade</a></p>
+      <p><a href="#">Fale comigo no WhatsApp</a></p>
+      <p style="margin-top: 12px;">© 2026 NamaSer por Gaby Drummond</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Accordion
+    function toggleAccordion(btn) {
+      const item = btn.parentElement;
+      const body = item.querySelector('.accordion-body');
+      const isOpen = item.classList.contains('open');
+
+      // Close all siblings in same parent
+      const siblings = item.parentElement.querySelectorAll('.accordion-item');
+      siblings.forEach(s => {
+        s.classList.remove('open');
+        s.querySelector('.accordion-body').style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    }
+
+    // Scroll Reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
