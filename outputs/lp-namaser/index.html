@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NamaSer — Construa seu Sadhana com constância simples</title>
+  <title>NamaSer | Construa seu Sadhana com constância simples</title>
   <meta name="description" content="NamaSer: yoga na vida real para mulheres que querem presença e leveza sem mudar toda a rotina. Ritual diário + 5 trilhas + comunidade.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,10 +19,10 @@
       --bg-guarantee: #F0EDE8;
       --text-primary: #2D2926;
       --text-secondary: #6B5E54;
-      --accent: #7C8B6F;
-      --accent-hover: #6A7A5E;
-      --accent-light: rgba(124, 139, 111, 0.1);
-      --lavender: #B8A9C4;
+      --accent: #1A6B6A;
+      --accent-hover: #145655;
+      --accent-light: rgba(26, 107, 106, 0.08);
+      --lavender: #9ED5DB;
       --border: #E8E0D6;
       --shadow-sm: 0 4px 24px rgba(45, 41, 38, 0.06);
       --shadow-md: 0 8px 32px rgba(45, 41, 38, 0.10);
@@ -58,7 +58,7 @@
     .overline {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+      font-size: clamp(0.95rem, 1.8vw, 1.1rem);
       color: var(--accent);
       letter-spacing: 0.05em;
       margin-bottom: 12px;
@@ -172,6 +172,20 @@
     .hero {
       padding: 120px 0 64px;
       background: var(--bg-primary);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('img/reframe-gaby.jpg') center/cover no-repeat;
+      opacity: 0.04;
+      z-index: 0;
+    }
+    .hero > * {
+      position: relative;
+      z-index: 1;
     }
     .hero-inner {
       display: flex;
@@ -196,65 +210,248 @@
     }
     .hero-img {
       width: 100%;
-      max-width: 560px;
-      aspect-ratio: 3/2;
+      max-width: 400px;
+      aspect-ratio: 3/4;
       background: var(--bg-secondary);
       border-radius: var(--radius-card);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-secondary);
-      font-size: 0.875rem;
-      padding: 24px;
-      text-align: center;
-      border: 1px solid var(--border);
+      overflow: hidden;
     }
     @media (min-width: 1024px) {
       .hero-inner {
         flex-direction: row;
         text-align: left;
+        align-items: center;
       }
       .hero-content { text-align: left; flex: 1; }
-      .hero-img { flex: 1; max-width: 480px; }
+      .hero-img { flex-shrink: 0; width: 420px; max-width: 420px; }
     }
 
-    /* ========== S2: DOR ========== */
-    .dor { padding: 64px 0; }
-    .dor-grid {
+    /* ========== S2: TRANSFORMAÇÃO ========== */
+    .transformacao {
+      padding: 72px 0;
+      background: var(--bg-primary);
+    }
+    .transf-columns {
       display: grid;
       grid-template-columns: 1fr;
+      gap: 32px;
+      margin: 40px 0;
+    }
+    @media (min-width: 768px) {
+      .transf-columns {
+        grid-template-columns: 1fr auto 1fr;
+        gap: 0;
+        align-items: stretch;
+      }
+    }
+    .transf-col {
+      display: flex;
+      flex-direction: column;
       gap: 16px;
-      margin: 32px 0;
     }
-    @media (min-width: 640px) {
-      .dor-grid { grid-template-columns: 1fr 1fr; }
+    .transf-col-header {
+      font-family: var(--font-serif);
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      font-weight: 400;
+      margin-bottom: 8px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
     }
-    .dor-card {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-card);
-      padding: 24px;
+    .transf-col--antes .transf-col-header {
+      color: var(--text-secondary);
+    }
+    .transf-col--depois .transf-col-header {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .transf-item {
       font-size: 1rem;
-      color: var(--text-primary);
-      font-style: italic;
-      line-height: 1.5;
+      line-height: 1.6;
+      padding: 16px 20px;
+      border-radius: 12px;
+      transition: transform 0.2s var(--ease);
     }
-    .dor-transition {
+    .transf-item:hover {
+      transform: translateX(4px);
+    }
+    .transf-col--antes .transf-item {
+      background: #fff;
+      color: var(--text-secondary);
+      font-style: italic;
+      border: 1px solid var(--border);
+    }
+    .transf-col--depois .transf-item {
+      background: var(--accent-light);
+      color: var(--text-primary);
+      font-weight: 500;
+      border: 1px solid rgba(26, 107, 106, 0.15);
+    }
+    .transf-divider {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      .transf-divider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 32px 0;
+      }
+      .transf-divider-line {
+        width: 1px;
+        flex: 1;
+        background: linear-gradient(180deg, transparent, var(--accent), transparent);
+      }
+      .transf-divider-arrow {
+        color: var(--accent);
+        margin: 12px 0;
+      }
+    }
+    .transf-bottom {
       font-family: var(--font-serif);
       font-size: clamp(1.1rem, 2.5vw, 1.3rem);
       color: var(--text-primary);
       text-align: center;
-      margin-top: 40px;
+      margin-top: 48px;
       max-width: 560px;
       margin-left: auto;
       margin-right: auto;
       line-height: 1.5;
     }
 
+    /* ========== BG IMAGE OVERLAY (reusable) ========== */
+    .bg-image-section {
+      position: relative;
+      overflow: hidden;
+    }
+    .bg-image-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.08;
+      z-index: 0;
+    }
+    .bg-image-section > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ========== SADHANA CONCEPT ========== */
+    .sadhana-concept {
+      padding: 80px 0;
+      background: var(--bg-secondary);
+      position: relative;
+    }
+    .sadhana-wave {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .sadhana-wave-top {
+      top: -1px;
+    }
+    .sadhana-wave-bottom {
+      bottom: -1px;
+      transform: rotate(180deg);
+    }
+    .sadhana-wave svg {
+      display: block;
+      width: 100%;
+      height: 48px;
+    }
+    .sadhana-wave svg path {
+      fill: var(--bg-primary);
+    }
+    .sadhana-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .sadhana-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+      }
+    }
+    .sadhana-img {
+      width: 100%;
+      min-height: 320px;
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .sadhana-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media (min-width: 768px) {
+      .sadhana-img {
+        min-height: unset;
+        height: 100%;
+      }
+    }
+    .sadhana-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .sadhana-word {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 12vw, 5rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+      line-height: 1;
+      position: relative;
+      display: inline-block;
+    }
+    .sadhana-word::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--lavender), transparent);
+      border-radius: 2px;
+    }
+    .sadhana-origin {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+    .sadhana-meaning {
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      line-height: 1.6;
+      color: var(--text-primary);
+      margin-bottom: 24px;
+    }
+    .sadhana-text > p {
+      font-size: clamp(1rem, 2vw, 1.1rem);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
     /* ========== S3: REFRAME ========== */
     .reframe {
       background: var(--bg-secondary);
       padding: 80px 0;
+    }
+    .reframe::before {
+      background-image: url('img/hero-gaby.jpg');
     }
     .reframe-quote {
       font-family: var(--font-serif);
@@ -398,11 +595,28 @@
       line-height: 1.5;
     }
 
-    .trilhas-block { margin-bottom: 40px; }
-    .trilhas-block > h3 {
+    .trilhas-block { margin-bottom: 48px; }
+    .trilhas-header {
+      margin-bottom: 28px;
+    }
+    .trilhas-header h3 {
       font-family: var(--font-serif);
-      font-size: 1.3rem;
-      margin-bottom: 20px;
+      font-size: clamp(1.3rem, 3vw, 1.6rem);
+      margin-bottom: 12px;
+    }
+    .trilhas-header p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      max-width: 640px;
+    }
+    .trilhas-img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      object-position: center 77%;
+      border-radius: var(--radius-card);
+      margin-bottom: 28px;
     }
 
     .accordion-item {
@@ -462,32 +676,58 @@
       border-radius: 20px;
     }
 
+    .bonus-section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.3rem, 3vw, 1.6rem);
+      text-align: center;
+      margin: 56px 0 32px;
+    }
     .bonus-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 16px;
+      gap: 24px;
       margin-bottom: 32px;
     }
-    @media (min-width: 640px) {
-      .bonus-grid { grid-template-columns: 1fr 1fr; }
+    @media (min-width: 768px) {
+      .bonus-grid { grid-template-columns: 1fr 1fr 1fr; }
     }
     .bonus-card {
       background: #fff;
-      border: 1.5px solid var(--accent);
+      border: 1px solid var(--border);
       border-radius: var(--radius-card);
-      padding: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+    .bonus-card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .bonus-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .bonus-card-body {
+      padding: 20px 24px 24px;
     }
     .bonus-card h4 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--accent);
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-primary);
       margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
     .bonus-card p {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: var(--text-secondary);
       line-height: 1.5;
     }
@@ -503,12 +743,32 @@
       font-size: 0.9rem;
       color: var(--text-secondary);
     }
-    .summary-bar span { white-space: nowrap; }
+    .summary-bar span {
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .summary-bar svg { flex-shrink: 0; color: var(--accent); }
 
     /* ========== S7: DEPOIMENTOS ========== */
     .depoimentos {
       background: var(--bg-secondary);
       padding: 64px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .depoimentos::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('img/trilhas-gaby.jpg') center/cover no-repeat;
+      opacity: 0.04;
+      z-index: 0;
+    }
+    .depoimentos > * {
+      position: relative;
+      z-index: 1;
     }
     .depo-carousel {
       display: flex;
@@ -589,40 +849,197 @@
       line-height: 1.6;
     }
 
+    /* ========== MÉTODO LC ========== */
+    .metodo-lc {
+      padding: 64px 0;
+      background: var(--bg-secondary);
+      position: relative;
+      overflow: hidden;
+    }
+    .metodo-lc::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('img/metodo-gaby.jpg') center/cover no-repeat;
+      opacity: 0.05;
+      z-index: 0;
+    }
+    .metodo-lc > * {
+      position: relative;
+      z-index: 1;
+    }
+    .metodo-lc-intro {
+      max-width: 640px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+    .metodo-lc-intro p {
+      font-size: clamp(1rem, 2vw, 1.1rem);
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .lc-phases {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    @media (min-width: 640px) { .lc-phases { grid-template-columns: 1fr 1fr; } }
+    .lc-phase {
+      background: #fff;
+      border-radius: var(--radius-card);
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .lc-phase::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--accent);
+      opacity: 0.6;
+    }
+    .lc-phase-number {
+      font-family: var(--font-serif);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .lc-phase h3 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      font-weight: 400;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+    }
+    .lc-phase p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .lc-feeling {
+      font-style: italic;
+      margin-top: 12px;
+      font-size: 0.875rem;
+      color: var(--accent);
+    }
+
     /* ========== S8: GABY ========== */
-    .gaby { padding: 64px 0; }
-    .gaby-inner {
-      display: flex;
-      flex-direction: column;
+    .gaby { padding: 80px 0; }
+    .gaby-layout {
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 40px;
-      align-items: center;
     }
     .gaby-img {
       width: 100%;
-      max-width: 400px;
-      aspect-ratio: 6/7;
+      min-height: 320px;
       background: var(--bg-secondary);
       border-radius: var(--radius-card);
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--text-secondary);
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       text-align: center;
-      padding: 24px;
+      padding: 16px;
       border: 1px solid var(--border);
     }
-    .gaby-text { max-width: 520px; }
-    .gaby-text p {
-      font-size: clamp(1rem, 2vw, 1.1rem);
-      line-height: 1.7;
-      color: var(--text-primary);
-      margin-bottom: 16px;
+    .gaby-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-    @media (min-width: 1024px) {
-      .gaby-inner { flex-direction: row-reverse; }
-      .gaby-img { flex-shrink: 0; }
-      .gaby-text { flex: 1; }
+    .gaby-pullquote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      font-style: italic;
+      color: var(--accent);
+      line-height: 1.5;
+      margin-bottom: 24px;
+      padding-left: 20px;
+      border-left: 3px solid var(--accent);
+    }
+    .gaby-text p {
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      line-height: 1.75;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+    }
+    .gaby-credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .gaby-credentials span {
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    @media (min-width: 768px) {
+      .gaby-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+      }
+      .gaby-img {
+        min-height: unset;
+        height: 100%;
+      }
+    }
+
+    /* ========== CTA BRIDGE (Gaby → Pricing) ========== */
+    .cta-bridge {
+      background: var(--accent);
+      padding: 56px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-bridge::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('img/tapete-gaby.jpg') center/cover no-repeat;
+      opacity: 0.08;
+      z-index: 0;
+    }
+    .cta-bridge > * {
+      position: relative;
+      z-index: 1;
+    }
+    .cta-bridge-text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.3rem, 3.5vw, 2rem);
+      font-weight: 400;
+      line-height: 1.4;
+      color: #fff;
+      max-width: 640px;
+      margin: 0 auto 28px;
+    }
+    .cta-bridge .btn-light {
+      display: inline-block;
+      background: #fff;
+      color: var(--accent);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 16px 40px;
+      border-radius: var(--radius-btn);
+      text-decoration: none;
+      transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+    }
+    .cta-bridge .btn-light:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     }
 
     /* ========== S9: PRICING ========== */
@@ -656,9 +1073,10 @@
     }
     .pricing-features .pf-check {
       color: var(--accent);
-      font-weight: 600;
       flex-shrink: 0;
-      margin-top: 1px;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
     }
     .price-main {
       font-family: var(--font-serif);
@@ -692,7 +1110,7 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto 20px;
-      font-size: 1.5rem;
+      color: var(--accent);
     }
     .garantia p {
       font-size: clamp(1rem, 2vw, 1.125rem);
@@ -711,6 +1129,20 @@
       background: linear-gradient(180deg, var(--bg-secondary), var(--bg-accent));
       padding: 80px 0;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('img/bio-gaby.jpg') center/cover no-repeat;
+      opacity: 0.06;
+      z-index: 0;
+    }
+    .cta-final > * {
+      position: relative;
+      z-index: 1;
     }
     .cta-final-quote {
       font-family: var(--font-serif);
@@ -759,7 +1191,7 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="container">
-      <a href="#" class="nav-logo">NamaSer</a>
+      <a href="#" class="nav-logo"><img src="img/logo-gaby.png" alt="Gaby Drummond Yoga" style="height: 40px; width: auto;"></a>
       <a href="#pricing" class="btn-outline">Começar meu Sadhana</a>
     </div>
   </nav>
@@ -771,28 +1203,45 @@
         <div class="hero-content reveal">
           <p class="overline">Yoga na vida real. Sem performance.</p>
           <h1 class="hero-headline">Construa seu Sadhana<br>com constância simples</h1>
-          <p class="hero-sub">Um ritual diário de presença para mulheres que querem leveza e calma — sem mudar toda a rotina.</p>
+          <p class="hero-sub">Um ritual diário de presença para mulheres que querem leveza e calma. Sem mudar toda a rotina.</p>
           <a href="#pricing" class="btn-primary">Quero conhecer o NamaSer</a>
           <p class="micro-text">Sem compromisso. Descubra no seu tempo.</p>
         </div>
         <div class="hero-img reveal" style="transition-delay: 0.15s;">
-          Foto da Gaby em prática real, ambiente claro, natureza da Serra, luz natural
+          <img src="img/hero-gaby.jpg" alt="Gaby Drummond em namastê, sorrindo com luz natural" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-card);">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- S2: DOR -->
-  <section class="dor" id="dor">
-    <div class="container text-center">
-      <p class="overline reveal">Você se reconhece?</p>
-      <div class="dor-grid">
-        <div class="dor-card reveal">"A mente não para. Nem pra dormir."</div>
-        <div class="dor-card reveal" style="transition-delay: 0.1s;">"Começo algo e paro. Começo e paro."</div>
-        <div class="dor-card reveal" style="transition-delay: 0.2s;">"Queria um momento só meu no dia."</div>
-        <div class="dor-card reveal" style="transition-delay: 0.3s;">"Sei que preciso desacelerar, mas como?"</div>
+  <!-- S2: TRANSFORMAÇÃO -->
+  <section class="transformacao" id="transformacao">
+    <div class="container">
+      <p class="overline text-center reveal">Você se reconhece?</p>
+      <div class="transf-columns">
+        <div class="transf-col transf-col--antes reveal">
+          <p class="transf-col-header">Hoje você sente...</p>
+          <div class="transf-item">A mente não para. Nem pra dormir.</div>
+          <div class="transf-item">Começa algo e para. Começa e para.</div>
+          <div class="transf-item">Queria um momento só seu no dia.</div>
+          <div class="transf-item">Sabe que precisa desacelerar, mas não sabe como.</div>
+        </div>
+
+        <div class="transf-divider">
+          <div class="transf-divider-line"></div>
+          <div class="transf-divider-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+          <div class="transf-divider-line"></div>
+        </div>
+
+        <div class="transf-col transf-col--depois reveal" style="transition-delay: 0.15s;">
+          <p class="transf-col-header">Com o NamaSer...</p>
+          <div class="transf-item">Um ritual simples que acalma antes mesmo de começar.</div>
+          <div class="transf-item">Um caminho com estrutura que te mantém na prática.</div>
+          <div class="transf-item">Minutos de presença que mudam a textura do dia.</div>
+          <div class="transf-item">Alguém que caminha com você, no seu ritmo.</div>
+        </div>
       </div>
-      <p class="dor-transition reveal">Se você sentiu isso, você não está sozinha.<br>E não precisa mudar tudo para mudar algo.</p>
+      <p class="transf-bottom reveal">Você não precisa mudar tudo para mudar algo.</p>
     </div>
   </section>
 
@@ -800,7 +1249,38 @@
   <section class="reframe" id="reframe">
     <div class="container">
       <p class="reframe-quote reveal">"Constância simples transforma mais que intensidade ocasional."</p>
-      <p class="reframe-text reveal">Você não precisa de uma hora no tapete. Não precisa ser flexível. Não precisa parar tudo. Precisa de um caminho possível — e alguém que caminhe com você.</p>
+      <p class="reframe-text reveal">Você não precisa de uma hora no tapete. Não precisa ser flexível. Não precisa parar tudo. Precisa de um caminho possível. E de alguém que caminhe com você.</p>
+    </div>
+  </section>
+
+  <!-- SADHANA: O QUE É -->
+  <section class="sadhana-concept" id="sadhana">
+    <div class="sadhana-wave sadhana-wave-top">
+      <svg viewBox="0 0 1200 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,48 C200,16 400,0 600,24 C800,48 1000,16 1200,0 L1200,48 Z"/>
+      </svg>
+    </div>
+    <div class="sadhana-wave sadhana-wave-bottom">
+      <svg viewBox="0 0 1200 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,48 C200,16 400,0 600,24 C800,48 1000,16 1200,0 L1200,48 Z"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 40px;">
+        <p class="sadhana-word">Sadhana</p>
+        <p class="sadhana-origin">do sânscrito · prática diária consciente</p>
+      </div>
+      <div class="sadhana-layout">
+        <div class="sadhana-img reveal">
+          <img src="img/reframe-gaby.jpg" alt="Gaby Drummond em pranayama com flores">
+        </div>
+        <div class="sadhana-text reveal" style="transition-delay: 0.1s;">
+          <p class="sadhana-meaning">Sadhana é o compromisso gentil que você faz consigo mesma de reservar um momento do dia para voltar ao corpo, à respiração, à presença.</p>
+          <p>Não é sobre performance. Não é sobre duração. É sobre constância. Um ritual pequeno, repetido com intenção, que ao longo do tempo transforma por dentro. Silenciosamente, profundamente.</p>
+          <p>Pode ser uma respiração ao acordar. Um alongamento antes de dormir. Três minutos de silêncio no meio do caos. O seu Sadhana é o que cabe na sua vida e ainda assim te devolve a você mesma.</p>
+          <p><em>O NamaSer existe para te ajudar a construir e sustentar o seu.</em></p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -810,28 +1290,66 @@
       <h2 class="section-title reveal">O NamaSer é para você se...</h2>
       <ul class="check-list">
         <li class="reveal">
-          <span class="check-icon">✓</span>
+          <span class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
           <span>Você tem a vida corrida e quer um ponto de presença no meio do dia</span>
         </li>
         <li class="reveal" style="transition-delay: 0.1s;">
-          <span class="check-icon">✓</span>
+          <span class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
           <span>Você quer começar yoga mas não sabe por onde (e tem medo de não dar conta)</span>
         </li>
         <li class="reveal" style="transition-delay: 0.2s;">
-          <span class="check-icon">✓</span>
+          <span class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
           <span>Você já praticou mas não conseguiu manter e quer um caminho com estrutura e acolhimento</span>
         </li>
         <li class="reveal" style="transition-delay: 0.3s;">
-          <span class="check-icon">✓</span>
+          <span class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
           <span>Você busca leveza e calma sem precisar revolucionar sua rotina</span>
         </li>
         <li class="reveal" style="transition-delay: 0.4s;">
-          <span class="check-icon">✓</span>
+          <span class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
           <span>Você quer pertencer a um espaço onde não precisa provar nada</span>
         </li>
       </ul>
       <div class="text-center reveal">
         <a href="#pricing" class="btn-primary">Sim, isso faz sentido pra mim</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTODO LEVEZA CÍCLICA -->
+  <section class="metodo-lc" id="metodo">
+    <div class="container">
+      <div class="metodo-lc-intro reveal">
+        <p class="overline">O ritmo interno que guia cada prática</p>
+        <h2 class="section-title">Método Leveza Cíclica</h2>
+        <p>Nascido da forma como a Gaby conduz cada aula há anos. Não é um método inventado. É o padrão natural que aparece em toda prática dela. Quatro movimentos que seu corpo reconhece e pede.</p>
+      </div>
+
+      <div class="lc-phases">
+        <div class="lc-phase reveal">
+          <p class="lc-phase-number">Movimento 1</p>
+          <h3>Regular</h3>
+          <p>O início do seu ciclo interno. Antes de qualquer postura, você desacelera: respiração consciente, olhos fechados, aterramento suave. O sistema nervoso sai do modo alerta.</p>
+          <p class="lc-feeling">"Finalmente parei. Estou aqui."</p>
+        </div>
+        <div class="lc-phase reveal" style="transition-delay: 0.1s;">
+          <p class="lc-phase-number">Movimento 2</p>
+          <h3>Abrir Espaço</h3>
+          <p>Com mobilizações suaves e respiração que acompanha o movimento, o corpo solta o que estava preso: tensão nos ombros, peito apertado, rigidez silenciosa.</p>
+          <p class="lc-feeling">"Eu posso abrir espaço pra mim."</p>
+        </div>
+        <div class="lc-phase reveal" style="transition-delay: 0.2s;">
+          <p class="lc-phase-number">Movimento 3</p>
+          <h3>Expandir</h3>
+          <p>O corpo entra no fluxo natural. As práticas seguem a energia do dia e as fases da lua. A força surge leve, estável, viva. Uma potência que não endurece.</p>
+          <p class="lc-feeling">"Não preciso forçar. O movimento me leva."</p>
+        </div>
+        <div class="lc-phase reveal" style="transition-delay: 0.3s;">
+          <p class="lc-phase-number">Movimento 4</p>
+          <h3>Integrar</h3>
+          <p>Depois do movimento, o retorno. Alongamentos restaurativos, respirações que desaceleram, silêncio. O corpo assimila. A prática transborda para o resto do dia.</p>
+          <p class="lc-feeling">"Saio mais leve, mais presente… diferente de como cheguei."</p>
+        </div>
       </div>
     </div>
   </section>
@@ -865,39 +1383,52 @@
   <!-- S6: O QUE VOCE RECEBE -->
   <section class="conteudo" id="conteudo">
     <div class="container">
-      <h2 class="section-title text-center reveal">O que está dentro do NamaSer</h2>
+      <p class="overline text-center reveal">O que está dentro do NamaSer</p>
+      <h2 class="section-title text-center reveal">Um sistema de presença diária, não só aulas</h2>
+      <p class="section-subtitle text-center reveal">Tudo começa com um ritual pequeno. As trilhas de yoga sustentam e aprofundam o caminho.</p>
 
-      <!-- Bloco 1: Ritual -->
+      <!-- BLOCO PRINCIPAL: Sistema de Presença -->
       <div class="ritual-block reveal">
-        <h3>Seu ponto de presença diário</h3>
+        <h3>Seu caminho de presença</h3>
         <div class="ritual-items">
           <div class="ritual-item">
-            <div class="ritual-icon">✦</div>
+            <div class="ritual-icon">1</div>
             <div>
-              <h4>Desafio Sadhana — 7 dias de ritual</h4>
-              <p>Escolha 1 dos 5 rituais de 3-5 min. A vida real é o seu tapete.</p>
+              <h4>Entrada Sadhana</h4>
+              <p>Aula de boas-vindas: entenda o que é Sadhana, faça sua primeira prática guiada e receba seu desafio de 7 dias.</p>
             </div>
           </div>
           <div class="ritual-item">
-            <div class="ritual-icon">↗</div>
+            <div class="ritual-icon">2</div>
             <div>
-              <h4>Caminho dos Primeiros 30 Dias</h4>
-              <p>Guia leve: no máximo 2 aulas por semana. Com carta de boas-vindas da Gaby.</p>
+              <h4>Desafio Sadhana · 7 dias</h4>
+              <p>Escolha 1 dos 5 rituais de 3-5 min e pratique por 7 dias. Sem tapete, sem roupa especial. A vida real é o seu tapete.</p>
             </div>
           </div>
           <div class="ritual-item">
-            <div class="ritual-icon">✴</div>
+            <div class="ritual-icon">3</div>
             <div>
               <h4>Oráculo do Sadhana</h4>
-              <p>Uma carta reflexiva por dia para usar como intenção da sua prática.</p>
+              <p>Uma carta reflexiva por dia para usar como intenção. Nas aulas presenciais, todo dia uma aluna recebe a sua. Agora você também tem a versão digital.</p>
+            </div>
+          </div>
+          <div class="ritual-item">
+            <div class="ritual-icon">4</div>
+            <div>
+              <h4>Caminho dos Primeiros 30 Dias</h4>
+              <p>Um guia leve, semana a semana: no máximo 2 aulas por semana, combinando ritual + trilhas. Com carta de boas-vindas da Gaby.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Bloco 2: Trilhas -->
+      <!-- TRILHAS: Conteúdo principal que sustenta o caminho -->
       <div class="trilhas-block reveal">
-        <h3>Quando quiser ir mais fundo — 5 Trilhas de Yoga</h3>
+        <div class="trilhas-header">
+          <h3>5 Trilhas de Yoga · 11 módulos · 96+ aulas</h3>
+          <p>As trilhas são a fundação do NamaSer. Elas alimentam seu ritual e aprofundam sua prática. De iniciante a avançado, dos dias suaves aos dias de potência.</p>
+        </div>
+        <img src="img/trilhas-gaby.jpg" alt="Gaby em postura de yoga avançada" class="trilhas-img">
 
         <div class="accordion-item">
           <button class="accordion-header" onclick="toggleAccordion(this)">
@@ -908,8 +1439,8 @@
             <div class="accordion-body-inner">
               <p class="trilha-desc">Aprenda a trazer presença para sua vida diária.</p>
               <div class="trilha-modulos">
-                <span class="modulo-tag">Comece por Aqui — 5 aulas</span>
-                <span class="modulo-tag">Para Quem Nunca Praticou — 8 aulas</span>
+                <span class="modulo-tag">Comece por Aqui · 5 aulas</span>
+                <span class="modulo-tag">Para Quem Nunca Praticou · 8 aulas</span>
               </div>
             </div>
           </div>
@@ -922,10 +1453,10 @@
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
-              <p class="trilha-desc">Práticas mais suaves e introspectivas.</p>
+              <p class="trilha-desc">Práticas mais suaves e introspectivas, alinhadas aos ciclos da lua.</p>
               <div class="trilha-modulos">
-                <span class="modulo-tag">Lua Minguante — 9 aulas</span>
-                <span class="modulo-tag">Lua Nova — 5 aulas</span>
+                <span class="modulo-tag">Lua Minguante · 9 aulas</span>
+                <span class="modulo-tag">Lua Nova · 5 aulas</span>
               </div>
             </div>
           </div>
@@ -940,9 +1471,9 @@
             <div class="accordion-body-inner">
               <p class="trilha-desc">Práticas mais dinâmicas e expansivas.</p>
               <div class="trilha-modulos">
-                <span class="modulo-tag">Lua Crescente — 11 aulas</span>
-                <span class="modulo-tag">Lua Cheia — 9 aulas</span>
-                <span class="modulo-tag">Tutorial Posturas — 12 aulas</span>
+                <span class="modulo-tag">Lua Crescente · 11 aulas</span>
+                <span class="modulo-tag">Lua Cheia · 9 aulas</span>
+                <span class="modulo-tag">Tutorial Posturas · 12 aulas</span>
               </div>
             </div>
           </div>
@@ -957,8 +1488,8 @@
             <div class="accordion-body-inner">
               <p class="trilha-desc">Aprofunde seus momentos de presença.</p>
               <div class="trilha-modulos">
-                <span class="modulo-tag">Pranayamas — 9 aulas</span>
-                <span class="modulo-tag">Meditações Guiadas — 10 aulas</span>
+                <span class="modulo-tag">Pranayamas · 9 aulas</span>
+                <span class="modulo-tag">Meditações Guiadas · 10 aulas</span>
               </div>
             </div>
           </div>
@@ -971,36 +1502,54 @@
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
-              <p class="trilha-desc">Quando Sadhana vira identidade, a profundidade.</p>
+              <p class="trilha-desc">Oficinas ao vivo, conteúdos bônus e aulas teóricas.</p>
               <div class="trilha-modulos">
-                <span class="modulo-tag">Ao Vivo — 10 aulas</span>
-                <span class="modulo-tag">Bônus — 6+ aulas</span>
-                <span class="modulo-tag">Teóricas — 2 aulas</span>
+                <span class="modulo-tag">Ao Vivo · 10 aulas</span>
+                <span class="modulo-tag">Bônus · 6+ aulas</span>
+                <span class="modulo-tag">Teóricas · 2 aulas</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Bloco 3: Bonus -->
+      <!-- BÔNUS -->
+      <h3 class="bonus-section-title reveal">E você ainda recebe de bônus:</h3>
       <div class="bonus-grid reveal">
         <div class="bonus-card">
-          <h4>🎧 Reset Mental</h4>
-          <p>Meditações curtas no Spotify pra ouvir ao acordar, antes de dormir ou no meio do dia.</p>
+          <img src="img/tapete-gaby.jpg" alt="Preparando o tapete de yoga" class="bonus-card-img">
+          <span class="bonus-badge">Bônus</span>
+          <div class="bonus-card-body">
+            <h4>Desafio Sadhana</h4>
+            <p>7 dias de ritual. 5 opções de 3-5 min. Seu primeiro passo pra criar constância sem esforço.</p>
+          </div>
         </div>
         <div class="bonus-card">
-          <h4>🚪 Entrada Sadhana</h4>
-          <p>Aula especial de boas-vindas: o que é Sadhana, prática guiada de presença e seu desafio de 7 dias.</p>
+          <img src="img/reset-gaby.jpg" alt="Gaby em namastê close" class="bonus-card-img">
+          <span class="bonus-badge">Bônus</span>
+          <div class="bonus-card-body">
+            <h4>Reset Mental</h4>
+            <p>Meditações curtas no Spotify pra ouvir ao acordar, antes de dormir ou quando a mente está cheia demais.</p>
+          </div>
+        </div>
+        <div class="bonus-card">
+          <img src="img/oraculo-gaby.jpg" alt="Gaby em conexão com a luz" class="bonus-card-img">
+          <span class="bonus-badge">Bônus</span>
+          <div class="bonus-card-body">
+            <h4>Oráculo do Sadhana</h4>
+            <p>Uma carta reflexiva digital por dia. Nas aulas presenciais, cada aluna recebe a sua. Agora você também.</p>
+          </div>
         </div>
       </div>
 
-      <!-- Resumo -->
+      <!-- Diferenciais -->
       <div class="summary-bar reveal">
-        <span>✦ Ritual diário 3-5 min</span>
-        <span>✦ 5 trilhas · 96+ aulas</span>
-        <span>✦ Oráculo do Sadhana</span>
-        <span>✦ Reset Mental</span>
-        <span>✦ Comunidade</span>
+        <span><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4l-6.4 4.8 2.4-7.2-6-4.8h7.6z"/></svg> Yoga que se adapta à sua vida real</span>
+        <span><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4l-6.4 4.8 2.4-7.2-6-4.8h7.6z"/></svg> Vários estilos de yoga</span>
+        <span><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4l-6.4 4.8 2.4-7.2-6-4.8h7.6z"/></svg> Guias completos pra praticar com segurança</span>
+        <span><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4l-6.4 4.8 2.4-7.2-6-4.8h7.6z"/></svg> Comunidade exclusiva de mulheres</span>
+        <span><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4l-6.4 4.8 2.4-7.2-6-4.8h7.6z"/></svg> Suporte acolhedor e personalizado</span>
+        <span><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4l-6.4 4.8 2.4-7.2-6-4.8h7.6z"/></svg> Reconexão consigo mesma</span>
       </div>
     </div>
   </section>
@@ -1013,23 +1562,39 @@
 
       <div class="depo-carousel">
         <div class="depo-card">
-          <p class="depo-text">"Desde que comecei o Sadhana, encontrei um momento de calma que não sabia que existia no meu dia. Mesmo com duas crianças e trabalho, 5 minutos mudam tudo."</p>
-          <p class="depo-author"><strong>— Nome da Aluna</strong><br>Mãe de 2, trabalha em tempo integral</p>
+          <p class="depo-text">"O reencontro com o yoga que essa professora maravilhosa me proporcionou é inestimável para mim, tirou-me de momentos solitários e me deu um novo rumo em direção a mim mesma. Aprendi que yoga é bem mais do que apenas uma atividade, é um mergulho."</p>
+          <p class="depo-author"><strong>— Júlia Paes</strong></p>
         </div>
         <div class="depo-card">
-          <p class="depo-text">"Nunca achei que fosse conseguir manter uma prática. A Gaby me mostrou que constância não é sobre ser perfeita — é sobre voltar. E eu voltei."</p>
-          <p class="depo-author"><strong>— Nome da Aluna</strong><br>Começou do zero, sem experiência</p>
+          <p class="depo-text">"A prática guiada pela Gaby chega a ser muito mais gratificante e sensacional, não só pela didática para ensinar os movimentos, mas também pela leveza e sutileza que ela leva e conduz a prática."</p>
+          <p class="depo-author"><strong>— Miguel Ângelo</strong></p>
         </div>
         <div class="depo-card">
-          <p class="depo-text">"O Oráculo virou meu ritual favorito. Toda manhã, antes de tudo, eu abro a carta do dia. É como se a Gaby estivesse ali comigo."</p>
-          <p class="depo-author"><strong>— Nome da Aluna</strong><br>Pratica há 3 meses</p>
+          <p class="depo-text">"Praticar parecia ser algo muito distante pra mim. Nunca fui muito flexível. Fiz uma aula experimental com Gaby e me descobri dentro da prática. Hoje, consigo viver o aqui e o agora deixando de lado tudo aquilo que não pertence ao presente."</p>
+          <p class="depo-author"><strong>— Maria Eduarda Cunha</strong></p>
+        </div>
+        <div class="depo-card">
+          <p class="depo-text">"Desde que eu comecei a praticar yoga com a Gaby, é como se uma chave tivesse virado na minha vida. Lá é apenas onde começa. A partir do momento que a prática termina, eu levo toda essa força e coragem para a minha vida."</p>
+          <p class="depo-author"><strong>— Manuela Moss</strong></p>
+        </div>
+        <div class="depo-card">
+          <p class="depo-text">"Saí da primeira aula como se tivesse ganhado um presente muito especial. Essa sensação é recorrente a cada aula e o retorno que a prática trouxe foi de respirar mais vida! A Gaby é espetacular na condução e no cuidado com cada um de seus alunos. Ela é luz!"</p>
+          <p class="depo-author"><strong>— Kariny Silva</strong></p>
+        </div>
+        <div class="depo-card">
+          <p class="depo-text">"São ensinamentos que fazem sentido na aula, mas que podemos usar em qualquer momento da vida. Por exemplo, nunca me esqueci da fala da Gaby: 'leveza externa e força interna'."</p>
+          <p class="depo-author"><strong>— Enio</strong></p>
+        </div>
+        <div class="depo-card">
+          <p class="depo-text">"Com o yoga eu me conectei comigo mesma de um jeito que nunca havia acontecido. Minha evolução vai muito além do visível de posturas desafiadoras, ela é interna, grandiosa e acima de tudo, muito poderosa."</p>
+          <p class="depo-author"><strong>— Ana Luíza Sales</strong></p>
         </div>
       </div>
 
-      <div class="video-placeholder reveal">
+      <a href="https://www.youtube.com/watch?v=1_Vt0ycUvYo" target="_blank" rel="noopener" class="video-placeholder reveal" style="text-decoration: none; display: block; max-width: 640px; margin: 32px auto; cursor: pointer;">
         <div class="play-btn"></div>
         <p>Assista o que as alunas sentem após começar</p>
-      </div>
+      </a>
 
       <p class="depo-stat reveal">32 mulheres já praticam com a Gaby na Serra.<br>Agora você pode praticar de onde estiver.</p>
 
@@ -1042,18 +1607,39 @@
   <!-- S8: GABY -->
   <section class="gaby" id="gaby">
     <div class="container">
-      <div class="gaby-inner">
+      <p class="overline text-center reveal">Quem vai caminhar com você</p>
+      <h2 class="section-title text-center reveal" style="margin-bottom: 48px;">Prazer, eu sou a Gaby Drummond.</h2>
+
+      <div class="gaby-layout">
         <div class="gaby-img reveal">
-          Foto da Gaby em ambiente natural, sorrindo, luz natural, acolhedora — NÃO postura de yoga
+          <img src="img/bio-gaby.jpg" alt="Gaby Drummond com mãos no coração" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
         </div>
+
         <div class="gaby-text reveal">
-          <p class="overline">Quem vai caminhar com você</p>
-          <h2 class="section-title">Gaby Drummond</h2>
-          <p>Eu não ensino yoga perfeito. Eu pratico yoga real — no meio da vida, com tudo acontecendo.</p>
-          <p>São mais de 10 anos guiando mulheres como você a encontrar presença onde parecia impossível.</p>
-          <p>O NamaSer nasceu dos aulões na Serra Gaúcha, onde 32 mulheres já descobriram que constância simples muda tudo. Agora, esse caminho chega até você, onde você estiver.</p>
+          <p class="gaby-pullquote">"Leveza não é um luxo distante: é um caminho possível, real, cotidiano."</p>
+          <p>Mineira, pisciana e completamente apaixonada por tudo o que devolve presença ao corpo: seja um alongar lento ao acordar, um café tomado sem pressa ou aquela respiração que parece abrir espaço por dentro.</p>
+          <p>Carrego comigo um sonho sincero: compartilhar, da forma mais leve e profunda possível, tudo o que o yoga me ensinou e ainda me ensina todos os dias.</p>
+          <p>Mas, antes de qualquer diploma, existia uma versão minha que achava que yoga "não era pra mim". Eu vivia no automático, sempre acelerada, sempre com mil coisas na cabeça… e talvez você conheça bem essa sensação.</p>
+          <p>Até que um dia, eu precisei respirar de verdade. Dei uma chance à prática e, sem perceber, dei uma chance a mim mesma.</p>
+          <p>Foi ali, naquela quietude que eu achava impossível, que algo se alinhou. Meu corpo desacelerou, meus dias ganharam pausa, e eu descobri que leveza não é um luxo distante: é um caminho possível, real, cotidiano.</p>
+          <p>Quando senti essa transformação acontecer de dentro pra fora, entendi que não queria guardar isso só pra mim. Quis guiar outras mulheres de volta ao próprio corpo, ao próprio ritmo, ao próprio lugar de verdade.</p>
+          <p><em>Seja bem-vinda ao nosso espaço de reconexão.<br>Um passo de cada vez, no seu tempo, no seu ritmo.</em></p>
+
+          <div class="gaby-credentials">
+            <span>Formada YinYang Vinyasa · Edson Ramos</span>
+            <span>Educação Física · UFMG</span>
+            <span>Centenas de alunas guiadas</span>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CTA BRIDGE -->
+  <section class="cta-bridge">
+    <div class="container reveal">
+      <p class="cta-bridge-text">Você já conhece o caminho.<br>Agora é sobre dar o primeiro passo.</p>
+      <a href="#pricing" class="btn-light">Quero começar meu Sadhana</a>
     </div>
   </section>
 
@@ -1064,14 +1650,14 @@
         <p class="overline">Seu caminho começa aqui</p>
         <h2 class="section-title">NamaSer</h2>
         <ul class="pricing-features">
-          <li><span class="pf-check">✓</span> 5 trilhas completas</li>
-          <li><span class="pf-check">✓</span> 11 módulos · 96+ aulas</li>
-          <li><span class="pf-check">✓</span> Desafio Sadhana (rituais de 3-5 min por 7 dias)</li>
-          <li><span class="pf-check">✓</span> Caminho guiado dos primeiros 30 dias</li>
-          <li><span class="pf-check">✓</span> Oráculo do Sadhana (carta reflexiva diária)</li>
-          <li><span class="pf-check">✓</span> Reset Mental (meditações no Spotify)</li>
-          <li><span class="pf-check">✓</span> Comunidade de alunas</li>
-          <li><span class="pf-check">✓</span> Acesso imediato à plataforma</li>
+          <li><span class="pf-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> 5 trilhas completas</li>
+          <li><span class="pf-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> 11 módulos · 96+ aulas</li>
+          <li><span class="pf-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Desafio Sadhana (rituais de 3-5 min por 7 dias)</li>
+          <li><span class="pf-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Caminho guiado dos primeiros 30 dias</li>
+          <li><span class="pf-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Oráculo do Sadhana (carta reflexiva diária)</li>
+          <li><span class="pf-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Reset Mental (meditações no Spotify)</li>
+          <li><span class="pf-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Comunidade de alunas</li>
+          <li><span class="pf-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Acesso imediato à plataforma</li>
         </ul>
         <p class="price-main">12x de R$14,27</p>
         <p class="price-alt">ou R$138 à vista</p>
@@ -1085,7 +1671,7 @@
   <section class="garantia" id="garantia">
     <div class="container">
       <div class="reveal">
-        <div class="garantia-icon">🛡</div>
+        <div class="garantia-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
         <h2 class="section-title">60 dias para sentir</h2>
         <p>Se em 60 dias você sentir que o NamaSer não é o caminho certo pra você, devolvemos 100% do seu investimento. Sem perguntas, sem burocracia.</p>
       </div>
@@ -1144,7 +1730,7 @@
             <span class="accordion-chevron">▾</span>
           </button>
           <div class="accordion-body">
-            <div class="accordion-body-inner">Você tem 60 dias de garantia. Se não fizer sentido, devolvemos 100% — sem perguntas.</div>
+            <div class="accordion-body-inner">Você tem 60 dias de garantia. Se não fizer sentido, devolvemos 100%. Sem perguntas.</div>
           </div>
         </div>
 
@@ -1166,6 +1752,7 @@
   <section class="cta-final" id="cta-final">
     <div class="container">
       <div class="reveal">
+        <img src="img/cta-gaby.jpg" alt="Gaby em reverência" style="width: 96px; height: 96px; object-fit: cover; border-radius: 50%; margin: 0 auto 24px; display: block; border: 3px solid var(--accent);">
         <p class="cta-final-quote">"Seu caminho de volta para você começa com um passo simples."</p>
         <p class="cta-final-text">Se fez sentido o que você leu até aqui, eu te espero no NamaSer.</p>
         <a href="#pricing" class="btn-primary">Começar meu Sadhana</a>
@@ -1177,7 +1764,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p class="footer-logo">NamaSer</p>
+      <p class="footer-logo"><img src="img/logo-gaby.png" alt="Gaby Drummond Yoga" style="height: 48px; width: auto; margin: 0 auto;"></p>
       <p><a href="#">Termos de uso</a> · <a href="#">Política de privacidade</a></p>
       <p><a href="#">Fale comigo no WhatsApp</a></p>
       <p style="margin-top: 12px;">© 2026 NamaSer por Gaby Drummond</p>
