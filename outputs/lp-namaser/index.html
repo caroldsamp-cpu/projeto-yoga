@@ -478,7 +478,18 @@
     }
 
     /* ========== S4: PARA QUEM ========== */
-    .para-quem { padding: 64px 0; }
+    .para-quem {
+      padding: 64px 0;
+      background: var(--bg-secondary);
+    }
+    .para-quem .section-title {
+      margin-bottom: 8px;
+    }
+    .para-quem-subtitle {
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
     .para-quem-layout {
       display: grid;
       grid-template-columns: 1fr;
@@ -487,145 +498,177 @@
     @media (min-width: 768px) {
       .para-quem-layout {
         grid-template-columns: 1fr 1fr;
-        gap: 56px;
+        gap: 48px;
         align-items: center;
       }
     }
     .para-quem-img {
-      border-radius: var(--radius-card);
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      max-height: 480px;
     }
     .para-quem-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 20%;
+      object-position: center 60%;
+      display: block;
+      max-height: 480px;
     }
-    .check-list { list-style: none; margin: 24px 0; }
+    .check-list { list-style: none; margin: 0; }
     .check-list li {
       display: flex;
       align-items: flex-start;
-      gap: 16px;
-      padding: 14px 0;
-      font-size: 1.05rem;
-      line-height: 1.5;
-      color: var(--text-primary);
+      gap: 14px;
+      padding: 12px 0;
+      font-size: 1rem;
+      line-height: 1.55;
+      color: var(--text-secondary);
     }
-    .check-list li + li { border-top: 1px solid var(--border); }
     .check-icon {
       flex-shrink: 0;
-      width: 24px;
-      height: 24px;
-      background: var(--accent-light);
-      border-radius: 50%;
+      width: 20px;
+      height: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--accent);
-      font-size: 14px;
-      margin-top: 2px;
+      margin-top: 3px;
+    }
+    .para-quem-cta {
+      margin-top: 36px;
     }
 
     /* ========== S5: COMO FUNCIONA ========== */
-    .como-funciona { padding: 64px 0; }
+    .como-funciona {
+      padding: 72px 0;
+      background: var(--bg-secondary);
+    }
     .steps-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
-      margin: 32px 0;
+      margin: 36px 0;
+      counter-reset: step;
     }
     @media (min-width: 768px) {
       .steps-grid { grid-template-columns: repeat(3, 1fr); }
     }
     .step-card {
-      background: #fff;
-      border: 1px solid var(--border);
+      background: var(--bg-primary);
       border-radius: var(--radius-card);
-      padding: 32px;
-      text-align: center;
-      transition: transform 0.15s var(--ease), box-shadow 0.15s var(--ease);
+      padding: 36px 28px 32px;
+      text-align: left;
+      position: relative;
+      box-shadow: 0 2px 16px rgba(45, 41, 38, 0.04);
     }
-    .step-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-sm);
+    .step-card::before {
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 28px;
+      right: 28px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent), var(--lavender), transparent);
+      opacity: 0.4;
     }
     .step-number {
-      width: 48px;
-      height: 48px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      background: var(--accent);
-      color: #fff;
+      background: var(--accent-light);
+      color: var(--accent);
       font-family: var(--font-serif);
-      font-size: 1.25rem;
+      font-size: 1rem;
+      font-weight: 500;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 20px;
+      margin-bottom: 20px;
     }
     .step-card h3 {
       font-family: var(--font-serif);
       font-size: 1.15rem;
       font-weight: 400;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .step-card p {
       font-size: 0.95rem;
       color: var(--text-secondary);
-      line-height: 1.5;
+      line-height: 1.6;
     }
     .steps-proof {
       text-align: center;
       color: var(--accent);
       font-size: 0.95rem;
-      margin-top: 24px;
+      margin-top: 28px;
+      font-family: var(--font-serif);
     }
 
     /* ========== S6: O QUE VOCE RECEBE ========== */
-    .conteudo { padding: 64px 0; }
+    .conteudo {
+      padding: 72px 0;
+      background: var(--bg-primary);
+    }
+    .conteudo-intro {
+      max-width: 640px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+    .conteudo-intro .section-subtitle {
+      margin-bottom: 0;
+    }
 
-    .ritual-block {
+    .ritual-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    @media (min-width: 640px) {
+      .ritual-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .ritual-card {
       background: var(--bg-secondary);
-      border-radius: var(--radius-lg);
-      padding: 40px 32px;
-      margin-bottom: 40px;
+      border-radius: var(--radius-card);
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
     }
-    .ritual-block h3 {
-      font-family: var(--font-serif);
-      font-size: 1.3rem;
-      margin-bottom: 28px;
+    .ritual-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--accent);
+      opacity: 0.6;
     }
-    .ritual-items { display: flex; flex-direction: column; gap: 24px; }
-    .ritual-item {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-    .ritual-icon {
-      flex-shrink: 0;
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: var(--accent-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-    }
-    .ritual-item h4 {
-      font-size: 1rem;
+    .ritual-card-number {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
       font-weight: 600;
-      margin-bottom: 4px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
     }
-    .ritual-item p {
-      font-size: 0.95rem;
+    .ritual-card h4 {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+    .ritual-card p {
+      font-size: 0.9rem;
       color: var(--text-secondary);
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .trilhas-block { margin-bottom: 48px; }
     .trilhas-header {
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
     .trilhas-header h3 {
       font-family: var(--font-serif);
@@ -635,8 +678,30 @@
     .trilhas-header p {
       font-size: 1rem;
       color: var(--text-secondary);
-      line-height: 1.6;
+      line-height: 1.7;
       max-width: 640px;
+      margin-bottom: 16px;
+    }
+    .trilhas-stats {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .trilhas-stat {
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .trilhas-stat strong {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 400;
     }
     .trilhas-img {
       width: 100%;
@@ -648,28 +713,64 @@
     }
 
     .accordion-item {
-      border-top: 1px solid var(--border);
+      background: var(--bg-secondary);
+      border-radius: var(--radius-card);
+      margin-bottom: 8px;
+      overflow: hidden;
+      position: relative;
     }
-    .accordion-item:last-child { border-bottom: 1px solid var(--border); }
+    .accordion-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--accent);
+      opacity: 0.4;
+      transition: opacity 0.2s;
+    }
+    .accordion-item.open::before { opacity: 1; }
     .accordion-header {
       width: 100%;
       background: none;
       border: none;
-      padding: 20px 0;
+      padding: 18px 20px 18px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
       text-align: left;
       font-family: var(--font-sans);
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 500;
       color: var(--text-primary);
       transition: color 0.2s;
+      gap: 12px;
     }
     .accordion-header:hover { color: var(--accent); }
+    .accordion-header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .accordion-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      opacity: 0.7;
+    }
     .accordion-chevron {
-      font-size: 1.25rem;
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: transform 0.3s var(--ease);
       color: var(--text-secondary);
     }
@@ -680,7 +781,7 @@
       transition: max-height 0.3s ease-in-out;
     }
     .accordion-body-inner {
-      padding: 0 0 20px;
+      padding: 0 24px 20px;
       color: var(--text-secondary);
       font-size: 0.95rem;
       line-height: 1.6;
@@ -782,7 +883,7 @@
     /* ========== S7: DEPOIMENTOS ========== */
     .depoimentos {
       background: var(--bg-secondary);
-      padding: 64px 0;
+      padding: 72px 0;
       position: relative;
       overflow: hidden;
     }
@@ -812,28 +913,52 @@
     .depo-carousel::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
     .depo-card {
       flex: 0 0 85%;
-      max-width: 400px;
+      max-width: 380px;
       background: #fff;
-      border: 1px solid var(--border);
       border-radius: var(--radius-card);
-      padding: 32px;
+      padding: 32px 28px 24px;
       scroll-snap-align: start;
+      position: relative;
+      box-shadow: 0 2px 16px rgba(45, 41, 38, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+    .depo-card::before {
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 28px;
+      right: 28px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent), var(--lavender), transparent);
+      opacity: 0.4;
     }
     @media (min-width: 768px) {
       .depo-card { flex: 0 0 340px; }
     }
-    .depo-card .depo-text {
-
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 16px;
-      color: var(--text-primary);
+    .depo-quote-mark {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      line-height: 1;
+      color: var(--accent);
+      opacity: 0.15;
+      margin-bottom: -4px;
     }
-    .depo-card .depo-author {
-      font-size: 0.875rem;
+    .depo-card .depo-text {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: auto;
+      padding-bottom: 16px;
       color: var(--text-secondary);
     }
-    .depo-card .depo-author strong { color: var(--text-primary); font-weight: 500; }
+    .depo-card .depo-author {
+      font-size: 0.8rem;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .depo-card .depo-author strong { font-weight: 600; }
 
     .video-placeholder {
       max-width: 640px;
@@ -951,10 +1076,12 @@
       line-height: 1.6;
     }
     .lc-feeling {
-
-      margin-top: 12px;
-      font-size: 0.875rem;
+      margin-top: 16px;
+      font-size: 0.9rem;
       color: var(--accent);
+      font-family: var(--font-serif);
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
     }
 
     /* ========== S8: GABY ========== */
@@ -998,6 +1125,16 @@
       line-height: 1.75;
       color: var(--text-secondary);
       margin-bottom: 14px;
+    }
+    .gaby-highlight {
+      font-family: var(--font-serif);
+      font-size: clamp(1.05rem, 2.2vw, 1.15rem);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding: 16px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin: 8px 0;
     }
     .gaby-credentials {
       display: flex;
@@ -1071,33 +1208,56 @@
     }
 
     /* ========== S9: PRICING ========== */
-    .pricing { padding: 64px 0; }
+    .pricing { padding: 72px 0; }
     .pricing-card {
       max-width: 560px;
       margin: 0 auto;
-      background: #fff;
-      border: 1px solid var(--border);
+      background: var(--bg-primary);
       border-radius: var(--radius-lg);
       padding: 40px 32px;
-      box-shadow: var(--shadow-sm);
+      box-shadow: 0 4px 32px rgba(45, 41, 38, 0.08);
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 32px;
+      right: 32px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), var(--lavender), transparent);
+      opacity: 0.4;
     }
     @media (min-width: 640px) {
       .pricing-card { padding: 48px 48px; }
     }
-    .pricing-card .section-title { margin-bottom: 24px; }
+    .pricing-card .section-title { margin-bottom: 8px; }
+    .pricing-tagline {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+    }
+    .pricing-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--border);
+      margin: 0 auto 24px;
+    }
     .pricing-features {
       list-style: none;
       text-align: left;
-      margin: 24px 0 32px;
+      margin: 0 0 32px;
     }
     .pricing-features li {
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      padding: 8px 0;
+      padding: 7px 0;
       font-size: 0.95rem;
       line-height: 1.4;
+      color: var(--text-secondary);
     }
     .pricing-features .pf-check {
       color: var(--accent);
@@ -1106,8 +1266,14 @@
       display: flex;
       align-items: center;
     }
+    .price-block {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-card);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
     .price-original {
-      font-size: 1rem;
+      font-size: 0.9rem;
       color: var(--text-secondary);
       margin-bottom: 4px;
     }
@@ -1118,13 +1284,13 @@
       display: inline-block;
       background: var(--accent-light);
       color: var(--accent);
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 600;
-      padding: 4px 16px;
+      padding: 3px 14px;
       border-radius: 20px;
       margin-top: 8px;
-      margin-bottom: 24px;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
     .price-main {
       font-family: var(--font-serif);
@@ -1135,7 +1301,6 @@
     .price-alt {
       font-size: 1rem;
       color: var(--text-secondary);
-      margin-bottom: 28px;
     }
     .pricing-card .btn-primary {
       width: 100%;
@@ -1145,26 +1310,38 @@
 
     /* ========== S10: GARANTIA ========== */
     .garantia {
-      background: var(--bg-guarantee);
-      padding: 56px 0;
-      text-align: center;
+      padding: 48px 0;
+      background: var(--bg-secondary);
+    }
+    .garantia-inner {
+      max-width: 560px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
     }
     .garantia-icon {
-      width: 56px;
-      height: 56px;
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: var(--accent-light);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 20px;
       color: var(--accent);
+      margin-top: 2px;
     }
-    .garantia p {
-      font-size: clamp(1rem, 2vw, 1.125rem);
+    .garantia-text h2 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .garantia-text p {
+      font-size: 0.95rem;
       color: var(--text-secondary);
-      max-width: 560px;
-      margin: 0 auto;
       line-height: 1.7;
     }
 
@@ -1192,18 +1369,27 @@
       position: relative;
       z-index: 1;
     }
+    .cta-final-breath {
+      font-family: var(--font-serif);
+      font-size: 0.9rem;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      margin-bottom: 24px;
+      opacity: 0.7;
+    }
     .cta-final-quote {
       font-family: var(--font-serif);
-      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
       font-weight: 400;
-      line-height: 1.3;
-      max-width: 640px;
+      line-height: 1.4;
+      max-width: 580px;
       margin: 0 auto 20px;
     }
     .cta-final-text {
-      font-size: clamp(1rem, 2vw, 1.125rem);
+      font-size: clamp(1rem, 2vw, 1.1rem);
       color: var(--text-secondary);
       margin-bottom: 32px;
+      line-height: 1.7;
     }
 
     /* ========== FOOTER ========== */
@@ -1337,32 +1523,36 @@
   <!-- S4: PARA QUEM -->
   <section class="para-quem" id="para-quem">
     <div class="container">
-      <h2 class="section-title reveal">O NamaSer é para você se...</h2>
       <div class="para-quem-layout">
         <div class="reveal">
+          <p class="overline">Yoga na vida real</p>
+          <h2 class="section-title" style="margin-bottom: 8px;">O NamaSer é para você se...</h2>
+          <p class="para-quem-subtitle">Sem performance. Sem cobrança. No seu tempo.</p>
           <ul class="check-list">
             <li>
-              <span class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-              <span>Você tem a vida corrida e quer um ponto de presença no meio do dia</span>
+              <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+              <span>Tem a vida corrida e quer um ponto de presença no meio do dia</span>
             </li>
             <li>
-              <span class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-              <span>Você quer começar yoga mas não sabe por onde (e tem medo de não dar conta)</span>
+              <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+              <span>Quer começar yoga mas não sabe por onde — e tem medo de não dar conta</span>
             </li>
             <li>
-              <span class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-              <span>Você já praticou mas não conseguiu manter e quer um caminho com estrutura e acolhimento</span>
+              <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+              <span>Já praticou mas não conseguiu manter e quer um caminho com estrutura e acolhimento</span>
             </li>
             <li>
-              <span class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-              <span>Você busca leveza e calma sem precisar revolucionar sua rotina</span>
+              <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+              <span>Busca leveza e calma sem precisar revolucionar sua rotina</span>
             </li>
             <li>
-              <span class="check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-              <span>Você quer pertencer a um espaço onde não precisa provar nada</span>
+              <span class="check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+              <span>Quer pertencer a um espaço onde não precisa provar nada</span>
             </li>
           </ul>
-          <a href="#pricing" class="btn-primary">Sim, isso faz sentido pra mim</a>
+          <div class="para-quem-cta">
+            <a href="#pricing" class="btn-primary">Sim, isso faz sentido pra mim</a>
+          </div>
         </div>
         <div class="para-quem-img reveal" style="transition-delay: 0.1s;">
           <img src="img/paraquem-gaby.jpg" alt="Gaby Drummond em pose de roda no parque">
@@ -1438,57 +1628,53 @@
   <!-- S6: O QUE VOCE RECEBE -->
   <section class="conteudo" id="conteudo">
     <div class="container">
-      <p class="overline text-center reveal">O que está dentro do NamaSer</p>
-      <h2 class="section-title text-center reveal">Um sistema de presença diária, não só aulas</h2>
-      <p class="section-subtitle text-center reveal">Tudo começa com um ritual pequeno. As trilhas de yoga sustentam e aprofundam o caminho.</p>
+      <div class="conteudo-intro">
+        <p class="overline reveal">O que está dentro do NamaSer</p>
+        <h2 class="section-title reveal">Presença diária, não só aulas</h2>
+        <p class="section-subtitle reveal">Tudo começa com um ritual pequeno. As trilhas sustentam e aprofundam o caminho.</p>
+      </div>
 
       <!-- BLOCO PRINCIPAL: Sistema de Presença -->
-      <div class="ritual-block reveal">
-        <h3>Seu caminho de presença</h3>
-        <div class="ritual-items">
-          <div class="ritual-item">
-            <div class="ritual-icon">1</div>
-            <div>
-              <h4>Entrada Sadhana</h4>
-              <p>Aula de boas-vindas: entenda o que é Sadhana, faça sua primeira prática guiada e receba seu desafio de 7 dias.</p>
-            </div>
-          </div>
-          <div class="ritual-item">
-            <div class="ritual-icon">2</div>
-            <div>
-              <h4>Desafio Sadhana · 7 dias</h4>
-              <p>Escolha 1 dos 5 rituais de 3-5 min e pratique por 7 dias. Sem tapete, sem roupa especial. A vida real é o seu tapete.</p>
-            </div>
-          </div>
-          <div class="ritual-item">
-            <div class="ritual-icon">3</div>
-            <div>
-              <h4>Oráculo do Sadhana</h4>
-              <p>Uma carta reflexiva por dia para usar como intenção. Nas aulas presenciais, todo dia uma aluna recebe a sua. Agora você também tem a versão digital.</p>
-            </div>
-          </div>
-          <div class="ritual-item">
-            <div class="ritual-icon">4</div>
-            <div>
-              <h4>Caminho dos Primeiros 30 Dias</h4>
-              <p>Um guia leve, semana a semana: no máximo 2 aulas por semana, combinando ritual + trilhas. Com carta de boas-vindas da Gaby.</p>
-            </div>
-          </div>
+      <div class="ritual-grid">
+        <div class="ritual-card reveal">
+          <p class="ritual-card-number">Chegada</p>
+          <h4>Entrada Sadhana</h4>
+          <p>Aula de boas-vindas: entenda o que é Sadhana, faça sua primeira prática guiada de presença e escolha seu ritual para os próximos 7 dias.</p>
+        </div>
+        <div class="ritual-card reveal" style="transition-delay: 0.05s;">
+          <p class="ritual-card-number">Semana 1</p>
+          <h4>Desafio Sadhana · 7 dias</h4>
+          <p>5 rituais de 3-5 min para momentos reais do seu dia. Escolha 1 e pratique por 7 dias. Sem tapete, sem roupa especial. A vida real é o seu tapete.</p>
+        </div>
+        <div class="ritual-card reveal" style="transition-delay: 0.1s;">
+          <p class="ritual-card-number">Primeiros 30 dias</p>
+          <h4>Caminho Guiado</h4>
+          <p>Semana a semana, no máximo 2 aulas por semana, combinando ritual + trilhas. Com carta de boas-vindas da Gaby e mensagens para te acompanhar.</p>
+        </div>
+        <div class="ritual-card reveal" style="transition-delay: 0.15s;">
+          <p class="ritual-card-number">Seu ritmo</p>
+          <h4>Trilhas + Comunidade</h4>
+          <p>5 trilhas completas de yoga, Oráculo do Sadhana com carta reflexiva diária e uma comunidade de alunas que praticam juntas.</p>
         </div>
       </div>
 
       <!-- TRILHAS: Conteúdo principal que sustenta o caminho -->
       <div class="trilhas-block reveal">
         <div class="trilhas-header">
-          <h3>5 Trilhas de Yoga · 11 módulos · 96+ aulas</h3>
-          <p>As trilhas são a fundação do NamaSer. Elas alimentam seu ritual e aprofundam sua prática. De iniciante a avançado, dos dias suaves aos dias de potência.</p>
+          <h3>As trilhas que sustentam seu caminho</h3>
+          <p>De iniciante a avançado, dos dias suaves aos dias de potência. Cada trilha segue o ritmo do seu corpo e as fases da lua.</p>
+          <div class="trilhas-stats">
+            <span class="trilhas-stat"><strong>5</strong> trilhas</span>
+            <span class="trilhas-stat"><strong>11</strong> módulos</span>
+            <span class="trilhas-stat"><strong>96+</strong> aulas</span>
+          </div>
         </div>
         <img src="img/trilhas-gaby.jpg" alt="Gaby em postura de yoga avançada" class="trilhas-img">
 
         <div class="accordion-item">
           <button class="accordion-header" onclick="toggleAccordion(this)">
-            <span>Fundação do Sadhana</span>
-            <span class="accordion-chevron">▾</span>
+            <span class="accordion-header-left"><span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c0-8-6-11-6-15a6 6 0 0 1 12 0c0 4-6 7-6 15z"/></svg></span><span>Fundação do Sadhana</span></span>
+            <span class="accordion-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -1503,8 +1689,8 @@
 
         <div class="accordion-item">
           <button class="accordion-header" onclick="toggleAccordion(this)">
-            <span>Sadhana Minguante & Nova</span>
-            <span class="accordion-chevron">▾</span>
+            <span class="accordion-header-left"><span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span><span>Sadhana Minguante & Nova</span></span>
+            <span class="accordion-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -1519,8 +1705,8 @@
 
         <div class="accordion-item">
           <button class="accordion-header" onclick="toggleAccordion(this)">
-            <span>Sadhana Crescente & Cheia</span>
-            <span class="accordion-chevron">▾</span>
+            <span class="accordion-header-left"><span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg></span><span>Sadhana Crescente & Cheia</span></span>
+            <span class="accordion-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -1536,8 +1722,8 @@
 
         <div class="accordion-item">
           <button class="accordion-header" onclick="toggleAccordion(this)">
-            <span>Respiração & Presença</span>
-            <span class="accordion-chevron">▾</span>
+            <span class="accordion-header-left"><span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-1.5 3-4 5-4 8a4 4 0 0 0 8 0c0-3-2.5-5-4-8z"/><path d="M4 20c2-2 5-3 8-3s6 1 8 3"/></svg></span><span>Respiração & Presença</span></span>
+            <span class="accordion-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -1552,8 +1738,8 @@
 
         <div class="accordion-item">
           <button class="accordion-header" onclick="toggleAccordion(this)">
-            <span>Evolução do Sadhana</span>
-            <span class="accordion-chevron">▾</span>
+            <span class="accordion-header-left"><span class="accordion-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2H22l-6 4.8 2.4 7.2L12 16.4l-6.4 4.8 2.4-7.2-6-4.8h7.6z"/></svg></span><span>Evolução do Sadhana</span></span>
+            <span class="accordion-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
           </button>
           <div class="accordion-body">
             <div class="accordion-body-inner">
@@ -1612,46 +1798,43 @@
   <!-- S7: DEPOIMENTOS -->
   <section class="depoimentos" id="depoimentos">
     <div class="container">
-      <p class="overline text-center reveal">O que dizem as alunas</p>
-      <h2 class="section-title text-center reveal">Mulheres reais, transformações reais</h2>
+      <p class="overline text-center reveal">Quem já pratica com a Gaby</p>
+      <h2 class="section-title text-center reveal">Vozes reais, transformações reais</h2>
 
       <div class="depo-carousel">
         <div class="depo-card">
-          <p class="depo-text">"O reencontro com o yoga que essa professora maravilhosa me proporcionou é inestimável para mim, tirou-me de momentos solitários e me deu um novo rumo em direção a mim mesma. Aprendi que yoga é bem mais do que apenas uma atividade, é um mergulho."</p>
+          <p class="depo-quote-mark">"</p>
+          <p class="depo-text">O reencontro com o yoga que essa professora maravilhosa me proporcionou é inestimável para mim, tirou-me de momentos solitários e me deu um novo rumo em direção a mim mesma. Aprendi que yoga é bem mais do que apenas uma atividade, é um mergulho.</p>
           <p class="depo-author"><strong>— Júlia Paes</strong></p>
         </div>
         <div class="depo-card">
-          <p class="depo-text">"A prática guiada pela Gaby chega a ser muito mais gratificante e sensacional, não só pela didática para ensinar os movimentos, mas também pela leveza e sutileza que ela leva e conduz a prática."</p>
-          <p class="depo-author"><strong>— Miguel Ângelo</strong></p>
-        </div>
-        <div class="depo-card">
-          <p class="depo-text">"Praticar parecia ser algo muito distante pra mim. Nunca fui muito flexível. Fiz uma aula experimental com Gaby e me descobri dentro da prática. Hoje, consigo viver o aqui e o agora deixando de lado tudo aquilo que não pertence ao presente."</p>
+          <p class="depo-quote-mark">"</p>
+          <p class="depo-text">Praticar parecia ser algo muito distante pra mim. Nunca fui muito flexível. Fiz uma aula experimental com Gaby e me descobri dentro da prática. Hoje, consigo viver o aqui e o agora deixando de lado tudo aquilo que não pertence ao presente.</p>
           <p class="depo-author"><strong>— Maria Eduarda Cunha</strong></p>
         </div>
         <div class="depo-card">
-          <p class="depo-text">"Desde que eu comecei a praticar yoga com a Gaby, é como se uma chave tivesse virado na minha vida. Lá é apenas onde começa. A partir do momento que a prática termina, eu levo toda essa força e coragem para a minha vida."</p>
+          <p class="depo-quote-mark">"</p>
+          <p class="depo-text">Desde que eu comecei a praticar yoga com a Gaby, é como se uma chave tivesse virado na minha vida. Lá é apenas onde começa. A partir do momento que a prática termina, eu levo toda essa força e coragem para a minha vida.</p>
           <p class="depo-author"><strong>— Manuela Moss</strong></p>
         </div>
         <div class="depo-card">
-          <p class="depo-text">"Saí da primeira aula como se tivesse ganhado um presente muito especial. Essa sensação é recorrente a cada aula e o retorno que a prática trouxe foi de respirar mais vida! A Gaby é espetacular na condução e no cuidado com cada um de seus alunos. Ela é luz!"</p>
+          <p class="depo-quote-mark">"</p>
+          <p class="depo-text">Saí da primeira aula como se tivesse ganhado um presente muito especial. Essa sensação é recorrente a cada aula e o retorno que a prática trouxe foi de respirar mais vida! A Gaby é espetacular na condução e no cuidado com cada um de seus alunos. Ela é luz!</p>
           <p class="depo-author"><strong>— Kariny Silva</strong></p>
         </div>
         <div class="depo-card">
-          <p class="depo-text">"São ensinamentos que fazem sentido na aula, mas que podemos usar em qualquer momento da vida. Por exemplo, nunca me esqueci da fala da Gaby: 'leveza externa e força interna'."</p>
-          <p class="depo-author"><strong>— Enio</strong></p>
-        </div>
-        <div class="depo-card">
-          <p class="depo-text">"Com o yoga eu me conectei comigo mesma de um jeito que nunca havia acontecido. Minha evolução vai muito além do visível de posturas desafiadoras, ela é interna, grandiosa e acima de tudo, muito poderosa."</p>
+          <p class="depo-quote-mark">"</p>
+          <p class="depo-text">Com o yoga eu me conectei comigo mesma de um jeito que nunca havia acontecido. Minha evolução vai muito além do visível de posturas desafiadoras, ela é interna, grandiosa e acima de tudo, muito poderosa.</p>
           <p class="depo-author"><strong>— Ana Luíza Sales</strong></p>
         </div>
       </div>
 
       <a href="https://www.youtube.com/watch?v=1_Vt0ycUvYo" target="_blank" rel="noopener" class="video-placeholder reveal" style="text-decoration: none; display: block; max-width: 640px; margin: 32px auto; cursor: pointer;">
         <div class="play-btn"></div>
-        <p>Assista o que as alunas sentem após começar</p>
+        <p>Assista o que as alunas sentem</p>
       </a>
 
-      <p class="depo-stat reveal">32 mulheres já praticam com a Gaby na Serra.<br>Agora você pode praticar de onde estiver.</p>
+      <p class="depo-stat reveal">32 alunas já praticam com a Gaby na Serra.<br>Agora você pode praticar de onde estiver.</p>
 
       <div class="text-center reveal">
         <a href="#pricing" class="btn-primary">Quero fazer parte</a>
@@ -1674,8 +1857,8 @@
           <p class="gaby-pullquote">"Leveza não é um luxo distante: é um caminho possível, real, cotidiano."</p>
           <p>Mineira, pisciana e completamente apaixonada por tudo o que devolve presença ao corpo: seja um alongar lento ao acordar, um café tomado sem pressa ou aquela respiração que parece abrir espaço por dentro.</p>
           <p>Carrego comigo um sonho sincero: compartilhar, da forma mais leve e profunda possível, tudo o que o yoga me ensinou e ainda me ensina todos os dias.</p>
-          <p>Mas, antes de qualquer diploma, existia uma versão minha que achava que yoga "não era pra mim". Eu vivia no automático, sempre acelerada, sempre com mil coisas na cabeça… e talvez você conheça bem essa sensação.</p>
-          <p>Até que um dia, eu precisei respirar de verdade. Dei uma chance à prática e, sem perceber, dei uma chance a mim mesma.</p>
+          <p>Mas, antes de qualquer diploma, existia uma versão minha que achava que yoga "não era pra mim". Eu vivia no automático, sempre acelerada, sempre com mil coisas na cabeça... e talvez você conheça bem essa sensação.</p>
+          <p class="gaby-highlight">Até que um dia, eu precisei respirar de verdade. Dei uma chance à prática e, sem perceber, dei uma chance a mim mesma.</p>
           <p>Foi ali, naquela quietude que eu achava impossível, que algo se alinhou. Meu corpo desacelerou, meus dias ganharam pausa, e eu descobri que leveza não é um luxo distante: é um caminho possível, real, cotidiano.</p>
           <p>Quando senti essa transformação acontecer de dentro pra fora, entendi que não queria guardar isso só pra mim. Quis guiar outras mulheres de volta ao próprio corpo, ao próprio ritmo, ao próprio lugar de verdade.</p>
           <p>Seja bem-vinda ao nosso espaço de reconexão.<br>Um passo de cada vez, no seu tempo, no seu ritmo.</p>
@@ -1704,6 +1887,8 @@
       <div class="pricing-card reveal">
         <p class="overline">Seu caminho começa aqui</p>
         <h2 class="section-title">NamaSer</h2>
+        <p class="pricing-tagline">Tudo que você precisa para construir presença no seu dia.</p>
+        <div class="pricing-divider"></div>
         <ul class="pricing-features">
           <li><span class="pf-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> 5 trilhas completas</li>
           <li><span class="pf-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> 11 módulos · 96+ aulas</li>
@@ -1714,10 +1899,12 @@
           <li><span class="pf-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Comunidade de alunas</li>
           <li><span class="pf-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Acesso imediato à plataforma</li>
         </ul>
-        <p class="price-original">De <s>R$197</s></p>
-        <p class="price-main">12x de R$14,27</p>
-        <p class="price-alt">ou R$138 à vista</p>
-        <p class="price-promo">Condição especial</p>
+        <div class="price-block">
+          <p class="price-original">De <s>R$197</s></p>
+          <p class="price-main">12x de R$14,27</p>
+          <p class="price-alt">ou R$138 à vista</p>
+          <p class="price-promo">Condição especial</p>
+        </div>
         <a href="#" class="btn-primary">Começar meu Sadhana</a>
         <p class="micro-text">Pagamento seguro · Acesso imediato</p>
       </div>
@@ -1727,10 +1914,12 @@
   <!-- S10: GARANTIA -->
   <section class="garantia" id="garantia">
     <div class="container">
-      <div class="reveal">
-        <div class="garantia-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-        <h2 class="section-title">15 dias para sentir</h2>
-        <p>Se em 15 dias você sentir que o NamaSer não é o caminho certo pra você, devolvemos 100% do seu investimento. Sem perguntas, sem burocracia.</p>
+      <div class="garantia-inner reveal">
+        <div class="garantia-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div class="garantia-text">
+          <h2>15 dias para sentir</h2>
+          <p>Se o NamaSer não fizer sentido pra você, devolvemos 100% do investimento. Sem perguntas. Porque respeitar seu tempo faz parte do caminho.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1787,7 +1976,7 @@
             <span class="accordion-chevron">▾</span>
           </button>
           <div class="accordion-body">
-            <div class="accordion-body-inner">Você tem 15 dias de garantia. Se não fizer sentido, devolvemos 100%. Sem perguntas.</div>
+            <div class="accordion-body-inner">Você tem 15 dias de garantia. Se não fizer sentido, devolvemos 100%. Sem perguntas. E se quiser experimentar antes, <a href="https://www.youtube.com/watch?v=Vjl6jAu4zNI" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: underline;">assista uma aula gratuita aqui</a>.</div>
           </div>
         </div>
 
@@ -1809,9 +1998,10 @@
   <section class="cta-final" id="cta-final">
     <div class="container">
       <div class="reveal">
-        <img src="img/cta-gaby.jpg" alt="Gaby em reverência" style="width: 96px; height: 96px; object-fit: cover; border-radius: 50%; margin: 0 auto 24px; display: block; border: 3px solid var(--accent);">
-        <p class="cta-final-quote">"Seu caminho de volta para você começa com um passo simples."</p>
-        <p class="cta-final-text">Se fez sentido o que você leu até aqui, eu te espero no NamaSer.</p>
+        <p class="cta-final-breath">respire</p>
+        <img src="img/cta-gaby.jpg" alt="Gaby em reverência" style="width: 88px; height: 88px; object-fit: cover; border-radius: 50%; margin: 0 auto 28px; display: block; border: 2px solid var(--accent); opacity: 0.9;">
+        <p class="cta-final-quote">Seu caminho de volta para você começa com um passo simples.</p>
+        <p class="cta-final-text">Se algo aqui fez sentido, eu te espero no NamaSer.<br>Um passo de cada vez. No seu tempo.</p>
         <a href="#pricing" class="btn-primary">Começar meu Sadhana</a>
         <p class="micro-text"><s>R$197</s> por 12x de R$14,27 · Garantia de 15 dias</p>
       </div>
