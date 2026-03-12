@@ -164,9 +164,15 @@
       color: var(--accent);
       text-decoration: none;
     }
-    .nav .btn-outline { display: none; }
+    .nav .btn-outline {
+      font-size: 0.75rem;
+      padding: 8px 14px;
+    }
     @media (min-width: 640px) {
-      .nav .btn-outline { display: inline-block; }
+      .nav .btn-outline {
+        font-size: 0.875rem;
+        padding: 10px 24px;
+      }
     }
 
     /* ========== S1: HERO ========== */
@@ -1414,9 +1420,26 @@
     }
     .footer a:hover { color: #fff; }
 
-    /* ========== MOBILE CTA ========== */
+    /* ========== MOBILE ADJUSTMENTS ========== */
     @media (max-width: 639px) {
       .btn-primary { width: 100%; }
+
+      /* #3: Hero padding menor no mobile */
+      .hero { padding: 88px 0 48px; }
+
+      /* #4: Trilhas imagem menor no mobile */
+      .trilhas-img { height: 220px; }
+
+      /* #5: Gaby imagem menor no mobile */
+      .gaby-img { min-height: 240px; }
+
+      /* #7: Carousel cards mais flexiveis em telas pequenas */
+      .depo-card { flex: 0 0 88%; max-width: none; }
+    }
+
+    /* #6: Bonus grid 2 colunas no tablet antes de 3 */
+    @media (min-width: 640px) and (max-width: 767px) {
+      .bonus-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
