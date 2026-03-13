@@ -139,15 +139,87 @@
       margin-top: 12px;
     }
 
-    /* ========== SCROLL REVEAL ========== */
+    /* ========== PAPER GRAIN TEXTURE (per-section) ========== */
+    .grain::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.20;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+    }
+    .grain { position: relative; }
+    .grain > * { position: relative; z-index: 3; }
+
+    /* ========== WAVE DIVIDERS ========== */
+    .wave-divider {
+      position: relative;
+      width: 100%;
+      height: 48px;
+      overflow: hidden;
+      line-height: 0;
+      margin-top: -1px;
+    }
+    .wave-divider svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .wave-divider--flip {
+      transform: scaleY(-1);
+      margin-bottom: -1px;
+      margin-top: 0;
+    }
+
+    /* ========== SCROLL REVEAL (variadas) ========== */
     .reveal {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+      transform: translateY(24px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
     }
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-32px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(32px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+    .reveal-scale.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* ========== HOVER BREATHING (cards) ========== */
+    .card-breathe {
+      transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+    }
+    .card-breathe:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(45, 41, 38, 0.10);
     }
 
     /* ========== NAV ========== */
@@ -187,7 +259,7 @@
 
     /* ========== S1: HERO ========== */
     .hero {
-      padding: 120px 0 64px;
+      padding: 120px 0 40px;
       background: var(--bg-primary);
       position: relative;
       overflow: hidden;
@@ -470,7 +542,7 @@
     /* ========== S3: REFRAME ========== */
     .reframe {
       background: var(--bg-secondary);
-      padding: 80px 0;
+      padding: 32px 0;
     }
     .reframe::before {
       background-image: url('img/hero-gaby.jpg');
@@ -498,7 +570,7 @@
     /* ========== S4: PARA QUEM ========== */
     .para-quem {
       padding: 64px 0;
-      background: var(--bg-secondary);
+      background: var(--bg-primary);
     }
     .para-quem .section-title {
       margin-bottom: 8px;
@@ -563,7 +635,7 @@
     /* ========== S5: COMO FUNCIONA ========== */
     .como-funciona {
       padding: 72px 0;
-      background: var(--bg-secondary);
+      background: var(--bg-primary);
     }
     .steps-grid {
       display: grid;
@@ -576,9 +648,10 @@
       .steps-grid { grid-template-columns: repeat(3, 1fr); }
     }
     .step-card {
-      background: var(--bg-primary);
+      background: #fff;
       border-radius: var(--radius-card);
       padding: 36px 28px 32px;
+      box-shadow: var(--shadow-sm);
       text-align: left;
       position: relative;
       box-shadow: 0 2px 16px rgba(45, 41, 38, 0.04);
@@ -629,7 +702,7 @@
     /* ========== S6: O QUE VOCE RECEBE ========== */
     .conteudo {
       padding: 72px 0;
-      background: var(--bg-primary);
+      background: var(--bg-secondary);
     }
     .conteudo-intro {
       max-width: 640px;
@@ -650,9 +723,10 @@
       .ritual-grid { grid-template-columns: 1fr 1fr; }
     }
     .ritual-card {
-      background: var(--bg-secondary);
+      background: #fff;
       border-radius: var(--radius-card);
       padding: 28px 24px;
+      box-shadow: var(--shadow-sm);
       position: relative;
       overflow: hidden;
     }
@@ -734,8 +808,9 @@
     }
 
     .accordion-item {
-      background: var(--bg-secondary);
+      background: #fff;
       border-radius: var(--radius-card);
+      box-shadow: 0 2px 12px rgba(45, 41, 38, 0.05);
       margin-bottom: 8px;
       overflow: hidden;
       position: relative;
@@ -883,8 +958,9 @@
     }
 
     .summary-bar {
-      background: var(--bg-secondary);
+      background: var(--bg-accent);
       border-radius: var(--radius-card);
+      border: 1px solid var(--border);
       padding: 24px 32px;
       display: flex;
       flex-wrap: wrap;
@@ -903,22 +979,10 @@
 
     /* ========== S7: DEPOIMENTOS ========== */
     .depoimentos {
-      background: var(--bg-secondary);
+      background: var(--bg-primary);
       padding: 72px 0;
       position: relative;
       overflow: hidden;
-    }
-    .depoimentos::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url('img/trilhas-gaby.jpg') center/cover no-repeat;
-      opacity: 0.04;
-      z-index: 0;
-    }
-    .depoimentos > * {
-      position: relative;
-      z-index: 1;
     }
     .depo-carousel {
       display: flex;
@@ -1109,7 +1173,7 @@
     }
 
     /* ========== S8: GABY ========== */
-    .gaby { padding: 80px 0; }
+    .gaby { padding: 80px 0; background: var(--bg-secondary); }
     .gaby-layout {
       display: grid;
       grid-template-columns: 1fr;
@@ -1191,7 +1255,7 @@
       padding: 56px 0;
       text-align: center;
       position: relative;
-      overflow: hidden;
+      overflow: visible;
     }
     .cta-bridge::before {
       content: '';
@@ -1336,7 +1400,7 @@
     /* ========== S10: GARANTIA ========== */
     .garantia {
       padding: 48px 0;
-      background: var(--bg-secondary);
+      background: var(--bg-accent);
     }
     .garantia-inner {
       max-width: 560px;
@@ -1492,11 +1556,11 @@
   </section>
 
   <!-- S2: TRANSFORMAÇÃO -->
-  <section class="transformacao" id="transformacao">
+  <section class="transformacao grain" id="transformacao">
     <div class="container">
       <p class="overline text-center reveal">Você se reconhece?</p>
       <div class="transf-columns">
-        <div class="transf-col transf-col--antes reveal">
+        <div class="transf-col transf-col--antes reveal-left">
           <p class="transf-col-header">Hoje você sente...</p>
           <div class="transf-item">A mente não para. Nem pra dormir.</div>
           <div class="transf-item">Começa algo e para. Começa e para.</div>
@@ -1510,7 +1574,7 @@
           <div class="transf-divider-line"></div>
         </div>
 
-        <div class="transf-col transf-col--depois reveal" style="transition-delay: 0.15s;">
+        <div class="transf-col transf-col--depois reveal-right" style="transition-delay: 0.15s;">
           <p class="transf-col-header">Com o NamaSer...</p>
           <div class="transf-item">Um ritual simples que acalma antes mesmo de começar.</div>
           <div class="transf-item">Um caminho com estrutura, mas sem cobrança.</div>
@@ -1523,9 +1587,9 @@
   </section>
 
   <!-- S3: REFRAME -->
-  <section class="reframe" id="reframe">
+  <section class="reframe grain" id="reframe">
     <div class="container">
-      <p class="reframe-quote reveal">"O importante é o processo, não o resultado."</p>
+      <p class="reframe-quote reveal-scale">"O importante é o processo, não o resultado."</p>
       <p class="reframe-text reveal">Você não precisa de uma hora no tapete. Não precisa ser flexível. Não precisa parar tudo. Precisa apenas de um caminho possível. E de alguém caminhando com você.</p>
     </div>
   </section>
@@ -1548,10 +1612,10 @@
         <p class="sadhana-origin">do sânscrito · prática diária consciente</p>
       </div>
       <div class="sadhana-layout">
-        <div class="sadhana-img reveal">
+        <div class="sadhana-img reveal-left">
           <img src="img/reframe-gaby.jpg" alt="Gaby Drummond em pranayama com flores">
         </div>
-        <div class="sadhana-text reveal" style="transition-delay: 0.1s;">
+        <div class="sadhana-text reveal-right" style="transition-delay: 0.1s;">
           <p class="sadhana-meaning">Sabe quando você consegue parar por um instante e só respirar? Sadhana é isso. O compromisso gentil de reservar esse momento todo dia. Voltar ao corpo, à respiração, à presença.</p>
           <p>Performance não importa aqui. Duração também não. O que importa é a constância. Um ritual pequeno, repetido com intenção, que ao longo do tempo transforma por dentro. Silenciosamente, profundamente.</p>
           <p>Quando o mundo fica barulhento, a prática te devolve presença. Quando tudo parece demais, a respiração abre espaço. Quando a rotina pesa, o possível já é suficiente.</p>
@@ -1564,7 +1628,7 @@
   </section>
 
   <!-- S4: PARA QUEM -->
-  <section class="para-quem" id="para-quem">
+  <section class="para-quem grain" id="para-quem">
     <div class="container">
       <div class="para-quem-layout">
         <div class="reveal">
@@ -1596,7 +1660,7 @@
             <a href="#pricing" class="btn-primary">Sim, isso faz sentido pra mim</a>
           </div>
         </div>
-        <div class="para-quem-img reveal" style="transition-delay: 0.1s;">
+        <div class="para-quem-img reveal-right" style="transition-delay: 0.1s;">
           <img src="img/paraquem-gaby.jpg" alt="Gaby Drummond em pose de roda no parque">
         </div>
       </div>
@@ -1604,7 +1668,7 @@
   </section>
 
   <!-- MÉTODO LEVEZA CÍCLICA -->
-  <section class="metodo-lc" id="metodo">
+  <section class="metodo-lc grain" id="metodo">
     <div class="container">
       <div class="metodo-lc-intro reveal">
         <p class="overline">O ritmo interno que guia cada prática</p>
@@ -1613,25 +1677,25 @@
       </div>
 
       <div class="lc-phases">
-        <div class="lc-phase reveal">
+        <div class="lc-phase card-breathe reveal">
           <p class="lc-phase-number">Movimento 1</p>
           <h3>Regular</h3>
           <p>Antes de qualquer postura, você desacelera. Deixa os olhos fecharem. Observa a respiração chegando. Apenas isso. O corpo entende que está seguro.</p>
           <p class="lc-feeling">"Finalmente parei. Estou aqui."</p>
         </div>
-        <div class="lc-phase reveal" style="transition-delay: 0.1s;">
+        <div class="lc-phase card-breathe reveal" style="transition-delay: 0.1s;">
           <p class="lc-phase-number">Movimento 2</p>
           <h3>Abrir Espaço</h3>
           <p>Com mobilizações suaves e respiração que acompanha o movimento, o corpo solta o que estava preso: tensão nos ombros, peito apertado, rigidez silenciosa.</p>
           <p class="lc-feeling">"Eu posso abrir espaço pra mim."</p>
         </div>
-        <div class="lc-phase reveal" style="transition-delay: 0.2s;">
+        <div class="lc-phase card-breathe reveal" style="transition-delay: 0.2s;">
           <p class="lc-phase-number">Movimento 3</p>
           <h3>Expandir</h3>
           <p>O corpo entra no fluxo natural. As práticas seguem a energia do dia e as fases da lua. Não há expansão sem desconforto. Mas a força que surge é leve, estável, viva. Uma potência que não endurece.</p>
           <p class="lc-feeling">"Não preciso forçar. O movimento me leva."</p>
         </div>
-        <div class="lc-phase reveal" style="transition-delay: 0.3s;">
+        <div class="lc-phase card-breathe reveal" style="transition-delay: 0.3s;">
           <p class="lc-phase-number">Movimento 4</p>
           <h3>Integrar</h3>
           <p>Depois do movimento, o retorno. Alongamentos restaurativos, respirações que desaceleram, silêncio. O corpo assimila. A prática transborda para o resto do dia.</p>
@@ -1642,22 +1706,22 @@
   </section>
 
   <!-- S5: COMO FUNCIONA -->
-  <section class="como-funciona" id="como-funciona">
+  <section class="como-funciona grain" id="como-funciona">
     <div class="container text-center">
       <h2 class="section-title reveal">Seu caminho dentro do NamaSer</h2>
       <p class="section-subtitle reveal">Você começa assim</p>
       <div class="steps-grid">
-        <div class="step-card reveal">
+        <div class="step-card card-breathe reveal">
           <div class="step-number">1</div>
           <h3>Seu primeiro passo: Desafio Sadhana</h3>
           <p>Escolha 1 ritual de 3-5 min e pratique por 7 dias. Sem tapete, sem roupa especial.</p>
         </div>
-        <div class="step-card reveal" style="transition-delay: 0.1s;">
+        <div class="step-card card-breathe reveal" style="transition-delay: 0.1s;">
           <div class="step-number">2</div>
           <h3>Depois, o Caminho Guiado de 30 dias</h3>
           <p>Um guia leve com no máximo 2 aulas por semana, no seu tempo.</p>
         </div>
-        <div class="step-card reveal" style="transition-delay: 0.2s;">
+        <div class="step-card card-breathe reveal" style="transition-delay: 0.2s;">
           <div class="step-number">3</div>
           <h3>Evolua no seu ritmo</h3>
           <p>5 trilhas completas pra quando você quiser ir mais fundo.</p>
@@ -1668,7 +1732,7 @@
   </section>
 
   <!-- S6: O QUE VOCE RECEBE -->
-  <section class="conteudo" id="conteudo">
+  <section class="conteudo grain" id="conteudo">
     <div class="container">
       <div class="conteudo-intro">
         <p class="overline reveal">O que está dentro do NamaSer</p>
@@ -1678,22 +1742,22 @@
 
       <!-- BLOCO PRINCIPAL: Sistema de Presença -->
       <div class="ritual-grid">
-        <div class="ritual-card reveal">
+        <div class="ritual-card card-breathe reveal">
           <p class="ritual-card-number">Chegada</p>
           <h4>Entrada Sadhana</h4>
           <p>Aula de boas-vindas onde eu te explico o que é Sadhana, a gente faz sua primeira prática juntas e você escolhe seu ritual pros próximos 7 dias.</p>
         </div>
-        <div class="ritual-card reveal" style="transition-delay: 0.05s;">
+        <div class="ritual-card card-breathe reveal" style="transition-delay: 0.05s;">
           <p class="ritual-card-number">Semana 1</p>
           <h4>Desafio Sadhana · 7 dias</h4>
           <p>5 rituais de 3-5 min para momentos reais do seu dia. Escolha 1 e pratique por 7 dias. Sem tapete, sem roupa especial. A vida real é o seu tapete.</p>
         </div>
-        <div class="ritual-card reveal" style="transition-delay: 0.1s;">
+        <div class="ritual-card card-breathe reveal" style="transition-delay: 0.1s;">
           <p class="ritual-card-number">Primeiros 30 dias</p>
           <h4>Caminho Guiado</h4>
           <p>Semana a semana, no máximo 2 aulas por semana, combinando ritual + trilhas. Com carta de boas-vindas minha e mensagens pra te acompanhar no caminho.</p>
         </div>
-        <div class="ritual-card reveal" style="transition-delay: 0.15s;">
+        <div class="ritual-card card-breathe reveal" style="transition-delay: 0.15s;">
           <p class="ritual-card-number">Seu ritmo</p>
           <h4>Trilhas + Comunidade</h4>
           <p>5 trilhas completas de yoga, Oráculo do Sadhana com carta reflexiva diária e uma comunidade de alunas que praticam juntas.</p>
@@ -1799,7 +1863,7 @@
       <!-- BÔNUS -->
       <h3 class="bonus-section-title reveal">E você ainda recebe de bônus:</h3>
       <div class="bonus-grid reveal">
-        <div class="bonus-card">
+        <div class="bonus-card card-breathe">
           <img src="img/tapete-gaby.jpg" alt="Preparando o tapete de yoga" class="bonus-card-img">
           <span class="bonus-badge">Bônus</span>
           <div class="bonus-card-body">
@@ -1807,7 +1871,7 @@
             <p>7 dias de ritual. 5 opções de 3-5 min. Seu primeiro passo pra criar constância sem esforço.</p>
           </div>
         </div>
-        <div class="bonus-card">
+        <div class="bonus-card card-breathe">
           <img src="img/reset-gaby.jpg" alt="Gaby em namastê close" class="bonus-card-img">
           <span class="bonus-badge">Bônus</span>
           <div class="bonus-card-body">
@@ -1815,7 +1879,7 @@
             <p>Meditações curtas no Spotify pra ouvir ao acordar, antes de dormir ou quando a mente está cheia demais.</p>
           </div>
         </div>
-        <div class="bonus-card">
+        <div class="bonus-card card-breathe">
           <img src="img/oraculo-gaby.jpg" alt="Gaby em conexão com a luz" class="bonus-card-img">
           <span class="bonus-badge">Bônus</span>
           <div class="bonus-card-body">
@@ -1838,7 +1902,7 @@
   </section>
 
   <!-- S7: DEPOIMENTOS -->
-  <section class="depoimentos" id="depoimentos">
+  <section class="depoimentos grain" id="depoimentos">
     <div class="container">
       <p class="overline text-center reveal">Quem já pratica comigo</p>
       <h2 class="section-title text-center reveal">O que elas sentem depois da prática</h2>
@@ -1894,17 +1958,17 @@
   </section>
 
   <!-- S8: GABY -->
-  <section class="gaby" id="gaby">
+  <section class="gaby grain" id="gaby">
     <div class="container">
       <p class="overline text-center reveal">Quem vai caminhar com você</p>
       <h2 class="section-title text-center reveal" style="margin-bottom: 48px;">Prazer, eu sou a Gaby Drummond.</h2>
 
       <div class="gaby-layout">
-        <div class="gaby-img reveal">
+        <div class="gaby-img reveal-left">
           <img src="img/bio-gaby.jpg" alt="Gaby Drummond com mãos no coração" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
         </div>
 
-        <div class="gaby-text reveal">
+        <div class="gaby-text reveal-right">
           <p>Mineira, pisciana e completamente apaixonada por tudo o que devolve presença ao corpo. Carrego comigo um sonho simples: compartilhar, da forma mais leve possível, tudo o que o yoga me ensinou e ainda me ensina.</p>
           <p>Mas, antes de qualquer diploma, existia uma versão minha que achava que yoga "não era pra mim". Eu vivia no automático, sempre acelerada, sempre com mil coisas na cabeça... e talvez você conheça bem essa sensação.</p>
           <p class="gaby-highlight">Até que um dia, eu precisei respirar de verdade. Dei uma chance à prática e, sem perceber, dei uma chance a mim mesma.</p>
@@ -1924,16 +1988,16 @@
 
   <!-- CTA BRIDGE -->
   <section class="cta-bridge">
-    <div class="container reveal">
+    <div class="container reveal-scale">
       <p class="cta-bridge-text">A vida é aqui e agora.<br>O primeiro passo também.</p>
       <a href="#pricing" class="btn-light">Construir meu Sadhana</a>
     </div>
   </section>
 
   <!-- S9: PRICING -->
-  <section class="pricing" id="pricing">
+  <section class="pricing grain" id="pricing">
     <div class="container">
-      <div class="pricing-card reveal">
+      <div class="pricing-card reveal-scale">
         <p class="overline">Seu caminho começa aqui</p>
         <h2 class="section-title">NamaSer</h2>
         <p class="pricing-tagline">Yoga, respiração, presença, comunidade e acompanhamento. Tudo num só lugar.</p>
@@ -1963,7 +2027,7 @@
   </section>
 
   <!-- S10: GARANTIA -->
-  <section class="garantia" id="garantia">
+  <section class="garantia grain" id="garantia">
     <div class="container">
       <div class="garantia-inner reveal">
         <div class="garantia-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
@@ -1976,7 +2040,7 @@
   </section>
 
   <!-- S11: FAQ -->
-  <section class="faq" id="faq">
+  <section class="faq grain" id="faq">
     <div class="container">
       <h2 class="section-title text-center reveal">Talvez você esteja se perguntando</h2>
       <div class="faq-list">
@@ -2107,7 +2171,19 @@
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+
+    // Scroll Gradient - background warms as you scroll
+    const root = document.documentElement;
+    const startH = 37, startS = 40, startL = 98;  // #FDFBF7
+    const endH = 33, endS = 28, endL = 93;          // warm sand
+    window.addEventListener('scroll', () => {
+      const pct = Math.min(window.scrollY / (document.body.scrollHeight - window.innerHeight), 1);
+      const h = startH + (endH - startH) * pct;
+      const s = startS + (endS - startS) * pct;
+      const l = startL + (endL - startL) * pct;
+      root.style.setProperty('--bg-primary', `hsl(${h}, ${s}%, ${l}%)`);
+    }, { passive: true });
   </script>
 </body>
 </html>
