@@ -586,29 +586,33 @@
 
     /* ========== PAUSA: PONTO DE PRESENÇA ========== */
     .pausa-section {
-      padding: 80px 0;
+      padding: 96px 0;
       background: var(--bg-secondary);
       text-align: center;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
     }
     .pausa-container {
       max-width: 560px;
       margin: 0 auto;
       padding: 0 24px;
+      width: 100%;
     }
     .pausa-mirror {
       font-family: var(--font-sans);
       font-size: var(--text-sm);
       font-weight: 300;
       color: var(--text-secondary);
-      line-height: 1.8;
-      margin-bottom: 48px;
+      line-height: 2;
+      margin-bottom: 40px;
     }
     .pausa-ritual {
-      margin-bottom: 48px;
+      margin-bottom: 40px;
     }
     .pausa-ritual-line {
       font-family: var(--font-serif);
-      font-size: var(--text-base);
+      font-size: var(--text-lg);
       font-weight: 400;
       color: var(--text-secondary);
       line-height: 1.5;
@@ -616,11 +620,12 @@
       margin-bottom: 12px;
     }
     .pausa-ritual-line.pausa-destaque {
-      font-size: var(--text-3xl);
-      font-weight: 500;
+      font-size: var(--text-display);
+      font-weight: 400;
       color: var(--accent);
-      margin-top: 24px;
-      margin-bottom: 24px;
+      margin-top: 32px;
+      margin-bottom: 32px;
+      letter-spacing: 0.06em;
     }
     .pausa-ritual-line.pausa-after {
       font-size: var(--text-xl);
@@ -635,25 +640,12 @@
       margin-bottom: 32px;
       font-style: italic;
     }
-    .pausa-separator {
-      width: 40px;
-      height: 1px;
-      background: var(--border);
-      margin: 0 auto 48px;
-    }
-    /* Botão com textura grain */
-    .btn-grain {
-      position: relative;
-      overflow: hidden;
-    }
-    .btn-grain::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.12;
-      border-radius: inherit;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+    .pausa-dots {
+      font-size: var(--text-sm);
+      color: var(--accent);
+      letter-spacing: 0.6em;
+      margin: 0 auto 40px;
+      opacity: 0.5;
     }
 
     /* ========== S4: PARA QUEM ========== */
@@ -1725,20 +1717,20 @@
         É assim que a gente faz tudo. Café rápido. Banho rápido. Dia rápido.
       </p>
 
-      <div class="pausa-separator reveal"></div>
+      <p class="pausa-dots reveal">...</p>
 
-      <div class="pausa-ritual reveal" style="transition-delay: 0.15s;">
-        <span class="pausa-ritual-line">Percebeu a pressa?</span>
-        <span class="pausa-ritual-line pausa-destaque">pare.</span>
-        <span class="pausa-ritual-line pausa-after">Refaça. Devagar.</span>
+      <div class="pausa-ritual">
+        <span class="pausa-ritual-line reveal" style="transition-delay: 0.1s;">Percebeu a pressa?</span>
+        <span class="pausa-ritual-line pausa-destaque reveal" style="transition-delay: 0.25s;">pare.</span>
+        <span class="pausa-ritual-line pausa-after reveal" style="transition-delay: 0.4s;">Refaça. Devagar.</span>
       </div>
 
-      <p class="pausa-closing reveal" style="transition-delay: 0.25s;">
+      <p class="pausa-closing reveal" style="transition-delay: 0.5s;">
         Esse é um dos rituais do NamaSer.
       </p>
 
-      <div class="reveal" style="transition-delay: 0.3s;">
-        <a href="#pricing" class="btn-outline btn-grain">Quero viver sem pressa</a>
+      <div class="reveal" style="transition-delay: 0.55s;">
+        <a href="#pricing" class="btn-outline">Quero viver sem pressa</a>
       </div>
     </div>
   </section>
