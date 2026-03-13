@@ -597,7 +597,7 @@
     }
     .pausa-mirror {
       font-family: var(--font-sans);
-      font-size: var(--text-base);
+      font-size: var(--text-sm);
       font-weight: 300;
       color: var(--text-secondary);
       line-height: 1.8;
@@ -608,23 +608,28 @@
     }
     .pausa-ritual-line {
       font-family: var(--font-serif);
-      font-size: var(--text-xl);
+      font-size: var(--text-base);
       font-weight: 400;
-      color: var(--text-primary);
+      color: var(--text-secondary);
       line-height: 1.5;
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
     .pausa-ritual-line.pausa-destaque {
-      font-size: var(--text-2xl);
+      font-size: var(--text-3xl);
+      font-weight: 500;
       color: var(--accent);
-      margin-top: 16px;
-      margin-bottom: 16px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+    .pausa-ritual-line.pausa-after {
+      font-size: var(--text-xl);
+      color: var(--text-primary);
     }
     .pausa-closing {
       font-family: var(--font-sans);
       font-size: var(--text-sm);
-      font-weight: 400;
+      font-weight: 300;
       color: var(--text-secondary);
       line-height: 1.7;
       margin-bottom: 32px;
@@ -635,6 +640,20 @@
       height: 1px;
       background: var(--border);
       margin: 0 auto 48px;
+    }
+    /* Botão com textura grain */
+    .btn-grain {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-grain::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.12;
+      border-radius: inherit;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
     }
 
     /* ========== S4: PARA QUEM ========== */
@@ -1699,7 +1718,7 @@
   </section>
 
   <!-- PAUSA: PONTO DE PRESENÇA -->
-  <section class="pausa-section" id="pausa">
+  <section class="pausa-section grain" id="pausa">
     <div class="pausa-container">
       <p class="pausa-mirror reveal">
         Você chegou até aqui lendo rápido, né?<br>
@@ -1709,10 +1728,9 @@
       <div class="pausa-separator reveal"></div>
 
       <div class="pausa-ritual reveal" style="transition-delay: 0.15s;">
-        <span class="pausa-ritual-line">Sempre que perceber que está</span>
-        <span class="pausa-ritual-line">fazendo algo com pressa...</span>
+        <span class="pausa-ritual-line">Percebeu a pressa?</span>
         <span class="pausa-ritual-line pausa-destaque">pare.</span>
-        <span class="pausa-ritual-line">E refaça. Devagar.</span>
+        <span class="pausa-ritual-line pausa-after">Refaça. Devagar.</span>
       </div>
 
       <p class="pausa-closing reveal" style="transition-delay: 0.25s;">
@@ -1720,7 +1738,7 @@
       </p>
 
       <div class="reveal" style="transition-delay: 0.3s;">
-        <a href="#pricing" class="btn-outline">Quero viver sem pressa</a>
+        <a href="#pricing" class="btn-outline btn-grain">Quero viver sem pressa</a>
       </div>
     </div>
   </section>
