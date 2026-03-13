@@ -592,6 +592,20 @@
       min-height: 70vh;
       display: flex;
       align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .pausa-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('img/reframe-gaby.jpg') center/cover no-repeat;
+      opacity: 0.06;
+      z-index: 0;
+    }
+    .pausa-section > * {
+      position: relative;
+      z-index: 1;
     }
     .pausa-container {
       max-width: 560px;
