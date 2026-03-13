@@ -586,12 +586,9 @@
 
     /* ========== PAUSA: PONTO DE PRESENÇA ========== */
     .pausa-section {
-      padding: 96px 0;
-      background: var(--bg-secondary);
+      padding: 56px 0;
+      background: var(--bg-accent);
       text-align: center;
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
       position: relative;
       overflow: hidden;
     }
@@ -600,7 +597,7 @@
       position: absolute;
       inset: 0;
       background: url('img/reframe-gaby.jpg') center/cover no-repeat;
-      opacity: 0.06;
+      opacity: 0.05;
       z-index: 0;
     }
     .pausa-section > * {
@@ -608,60 +605,32 @@
       z-index: 1;
     }
     .pausa-container {
-      max-width: 520px;
+      max-width: 600px;
       margin: 0 auto;
       padding: 0 24px;
-      width: 100%;
-      text-align: left;
     }
-    .pausa-mirror {
+    .pausa-lead {
       font-family: var(--font-sans);
       font-size: var(--text-sm);
       font-weight: 300;
       color: var(--text-secondary);
-      line-height: 2.2;
-      margin-bottom: 40px;
+      line-height: 1.9;
+      margin-bottom: 24px;
     }
-    .pausa-ritual {
-      margin-bottom: 40px;
-    }
-    .pausa-ritual-line {
+    .pausa-destaque {
       font-family: var(--font-serif);
-      font-size: var(--text-lg);
-      font-weight: 300;
-      color: var(--text-secondary);
-      line-height: 1.5;
-      display: block;
-      margin-bottom: 12px;
-    }
-    .pausa-ritual-line.pausa-destaque {
-      font-size: var(--text-display);
+      font-size: var(--text-3xl);
       font-weight: 400;
       color: var(--text-primary);
-      margin-top: 36px;
-      margin-bottom: 36px;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.1em;
+      margin-bottom: 24px;
     }
-    .pausa-ritual-line.pausa-after {
-      font-size: var(--text-xl);
-      font-weight: 300;
-      color: var(--text-primary);
-    }
-    .pausa-closing {
-      font-family: var(--font-sans);
-      font-size: var(--text-xs);
-      font-weight: 300;
+    .pausa-body {
+      font-family: var(--font-serif);
+      font-size: var(--text-lg);
+      font-weight: 400;
       color: var(--text-secondary);
       line-height: 1.7;
-      margin-bottom: 32px;
-      letter-spacing: 0.08em;
-    }
-    .pausa-dots {
-      font-size: var(--text-sm);
-      color: var(--text-secondary);
-      letter-spacing: 0.6em;
-      margin-bottom: 40px;
-      opacity: 0.35;
     }
 
     /* ========== S4: PARA QUEM ========== */
@@ -1725,32 +1694,6 @@
     </div>
   </section>
 
-  <!-- PAUSA: PONTO DE PRESENÇA -->
-  <section class="pausa-section grain" id="pausa">
-    <div class="pausa-container">
-      <p class="pausa-mirror reveal">
-        Você chegou até aqui lendo rápido, né?<br>
-        É assim que a gente faz tudo. Café rápido. Banho rápido. Dia rápido.
-      </p>
-
-      <p class="pausa-dots reveal">...</p>
-
-      <div class="pausa-ritual">
-        <span class="pausa-ritual-line reveal" style="transition-delay: 0.1s;">Percebeu a pressa?</span>
-        <span class="pausa-ritual-line pausa-destaque reveal" style="transition-delay: 0.25s;">pare.</span>
-        <span class="pausa-ritual-line pausa-after reveal" style="transition-delay: 0.4s;">Refaça. Devagar.</span>
-      </div>
-
-      <p class="pausa-closing reveal" style="transition-delay: 0.5s;">
-        Esse é um dos rituais do NamaSer.
-      </p>
-
-      <div class="reveal" style="transition-delay: 0.55s;">
-        <a href="#pricing" class="btn-outline">Quero viver sem pressa</a>
-      </div>
-    </div>
-  </section>
-
   <!-- S4: PARA QUEM -->
   <section class="para-quem grain" id="para-quem">
     <div class="container">
@@ -2115,6 +2058,15 @@
     <div class="container reveal-scale">
       <p class="cta-bridge-text">A vida é aqui e agora.<br>O primeiro passo também.</p>
       <a href="#pricing" class="btn-light">Construir meu Sadhana</a>
+    </div>
+  </section>
+
+  <!-- PAUSA: PONTO DE PRESENÇA -->
+  <section class="pausa-section grain" id="pausa">
+    <div class="pausa-container">
+      <p class="pausa-lead reveal">A gente faz tudo rápido. Café rápido. Anda rápido. Conversa rápida. E quando tudo é rápido, a gente esquece de sentir.</p>
+      <p class="pausa-destaque reveal" style="transition-delay: 0.1s;">devagar.</p>
+      <p class="pausa-body reveal" style="transition-delay: 0.2s;">Um corpo que desacelera. Uma voz interna que volta a ser ouvida.</p>
     </div>
   </section>
 
