@@ -1212,6 +1212,24 @@
       scrollbar-width: none;
     }
     .vozes-cards-row::-webkit-scrollbar { display: none; }
+    .vozes-slide {
+      position: relative;
+    }
+    .vozes-slide::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 48px;
+      height: calc(100% - 12px);
+      background: linear-gradient(to right, transparent, var(--bg-accent));
+      pointer-events: none;
+      z-index: 1;
+      border-radius: 0 12px 12px 0;
+    }
+    .vozes-slide.scrolled-end::after {
+      opacity: 0;
+    }
     .voz-card {
       flex: 0 0 calc((100% - 32px) / 3);
       scroll-snap-align: start;
@@ -2377,6 +2395,7 @@
         <button class="vozes-dot" data-slide="1" aria-label="Pergunta 2"></button>
         <button class="vozes-dot" data-slide="2" aria-label="Pergunta 3"></button>
       </div>
+      <p class="vozes-card-counter" id="vozesCounter">deslize para ver mais depoimentos</p>
 
       <div class="text-center reveal" style="margin-top: 40px;">
         <a href="#pricing" class="btn-primary">Quero fechar minhas abas mentais</a>
@@ -2603,7 +2622,8 @@
           vozesPergunta.innerHTML = vozesSlides[idx].dataset.pergunta;
           vozesPergunta.classList.remove('fade-out');
         }, 300);
-        // Reset card scroll to start
+        // Reset card scroll and fade hint
+        vozesSlides.forEach(s => s.classList.remove('scrolled-end'));
         const row = vozesSlides[idx].querySelector('.vozes-cards-row');
         if (row) row.scrollTo({ left: 0, behavior: 'smooth' });
       }
@@ -2637,10 +2657,14 @@
       }, { threshold: 0.3 });
       vozesObserver.observe(document.getElementById('vozes'));
 
-      // Pause autoplay when interacting with cards
+      // Fade hint + pause autoplay when interacting
       vozesSlides.forEach(slide => {
         const row = slide.querySelector('.vozes-cards-row');
         if (row) {
+          row.addEventListener('scroll', () => {
+            const atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 20;
+            slide.classList.toggle('scrolled-end', atEnd);
+          }, { passive: true });
           row.addEventListener('pointerdown', stopAutoplay);
           row.addEventListener('pointerup', () => setTimeout(startAutoplay, 3000));
         }
