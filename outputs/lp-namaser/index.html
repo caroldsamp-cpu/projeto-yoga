@@ -584,6 +584,86 @@
       line-height: 1.7;
     }
 
+    /* ========== RESPIRA: PONTO DE PRESENÇA ========== */
+    .respira-section {
+      padding: 96px 0;
+      background: var(--bg-primary);
+      text-align: center;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .respira-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+    .respira-ring {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(26, 107, 106, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: respira-pulse 10s ease-in-out infinite;
+    }
+    .respira-word {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 400;
+      color: var(--text-primary);
+      letter-spacing: 0.08em;
+      animation: respira-pulse 10s ease-in-out infinite;
+    }
+    .respira-instruction {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      font-weight: 300;
+      color: var(--text-secondary);
+      letter-spacing: 0.15em;
+      margin-top: 24px;
+      height: 24px;
+      transition: opacity 0.8s ease;
+    }
+    .respira-counter {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      color: var(--accent);
+      opacity: 0.5;
+      margin-top: 16px;
+      letter-spacing: 0.2em;
+    }
+    .respira-reveal {
+      margin-top: 40px;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+      pointer-events: none;
+    }
+    .respira-reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .respira-reveal p {
+      font-family: var(--font-serif);
+      font-size: var(--text-lg);
+      color: var(--text-secondary);
+      line-height: 1.6;
+      max-width: 480px;
+      margin: 0 auto 24px;
+    }
+    @keyframes respira-pulse {
+      0%   { transform: scale(1);    opacity: 0.85; }
+      40%  { transform: scale(1.08); opacity: 1; }
+      100% { transform: scale(1);    opacity: 0.85; }
+    }
+
     /* ========== S4: PARA QUEM ========== */
     .para-quem {
       padding: 64px 0;
@@ -1645,6 +1725,21 @@
     </div>
   </section>
 
+  <!-- RESPIRA: PONTO DE PRESENÇA -->
+  <section class="respira-section" id="respira">
+    <div class="respira-container">
+      <div class="respira-ring">
+        <span class="respira-word">respira</span>
+      </div>
+      <p class="respira-instruction" id="respira-instruction">inspira...</p>
+      <p class="respira-counter" id="respira-counter"></p>
+      <div class="respira-reveal" id="respira-reveal">
+        <p>Isso que você sentiu agora? É o começo de tudo.</p>
+        <a href="#pricing" class="btn-outline">Quero sentir isso todo dia</a>
+      </div>
+    </div>
+  </section>
+
   <!-- S4: PARA QUEM -->
   <section class="para-quem grain" id="para-quem">
     <div class="container">
@@ -2190,6 +2285,60 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+
+    // Respira: Ponto de Presença
+    (function() {
+      const section = document.getElementById('respira');
+      const instruction = document.getElementById('respira-instruction');
+      const counter = document.getElementById('respira-counter');
+      const reveal = document.getElementById('respira-reveal');
+      if (!section) return;
+
+      let cycle = 0;
+      const totalCycles = 3;
+      let intervalId = null;
+      let started = false;
+
+      function runBreathCycle() {
+        if (cycle >= totalCycles) {
+          clearInterval(intervalId);
+          instruction.style.opacity = '0';
+          counter.style.opacity = '0';
+          setTimeout(() => { reveal.classList.add('show'); }, 600);
+          return;
+        }
+        // Inspira (4s)
+        instruction.textContent = 'inspira...';
+        instruction.style.opacity = '1';
+        counter.textContent = (cycle + 1) + ' de ' + totalCycles;
+
+        setTimeout(() => {
+          // Solta (6s)
+          instruction.textContent = 'solta...';
+        }, 4000);
+
+        setTimeout(() => {
+          cycle++;
+          if (cycle < totalCycles) runBreathCycle();
+          else {
+            instruction.style.opacity = '0';
+            counter.style.opacity = '0';
+            setTimeout(() => { reveal.classList.add('show'); }, 600);
+          }
+        }, 10000);
+      }
+
+      const respiraObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !started) {
+            started = true;
+            runBreathCycle();
+          }
+        });
+      }, { threshold: 0.5 });
+
+      respiraObserver.observe(section);
+    })();
 
     // Scroll Gradient - background warms as you scroll
     const root = document.documentElement;
