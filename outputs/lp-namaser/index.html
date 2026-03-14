@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NamaSer | Construa seu Sadhana com constância simples</title>
   <meta name="description" content="NamaSer: yoga na vida real para mulheres que querem presença e leveza sem mudar toda a rotina. Ritual diário + 5 trilhas + comunidade.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 4c-1.5 3-2 6-2 9s.5 5 2 7c1.5-2 2-4 2-7s-.5-6-2-9z' fill='%231A6B6A' opacity='.9'/%3E%3Cpath d='M10.5 8c.5 3.5 2 6.5 4 8.5 1-2.5 1-5 0-7.5s-2.5-4-4-5.5z' fill='%231A6B6A' opacity='.7'/%3E%3Cpath d='M21.5 8c-.5 3.5-2 6.5-4 8.5-1-2.5-1-5 0-7.5s2.5-4 4-5.5z' fill='%231A6B6A' opacity='.7'/%3E%3Cpath d='M6 13c1.5 3 4 5.5 6.5 7-.5-2.5-1.5-5-3.5-7S7 11 6 13z' fill='%231A6B6A' opacity='.5'/%3E%3Cpath d='M26 13c-1.5 3-4 5.5-6.5 7 .5-2.5 1.5-5 3.5-7s2-2 3-3z' fill='%231A6B6A' opacity='.5'/%3E%3Cpath d='M16 20c-2 1-4 3-5 5h10c-1-2-3-4-5-5z' fill='%231A6B6A' opacity='.3'/%3E%3Ccircle cx='16' cy='14' r='1.5' fill='%239ED5DB'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -1214,22 +1215,42 @@
     }
     .voz-card {
       flex: 0 0 calc((100% - 32px) / 3);
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 12px;
-      padding: 20px 18px 14px;
-      border: 1px solid rgba(232, 224, 214, 0.6);
+      background: #fff;
+      border-radius: var(--radius-card);
+      padding: 28px 24px 20px;
+      border: none;
+      box-shadow: 0 2px 16px rgba(45, 41, 38, 0.05);
       min-height: 120px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      position: relative;
+      transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+    }
+    .voz-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(45, 41, 38, 0.10);
+    }
+    .voz-card::before {
+      content: '\201C';
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      line-height: 1;
+      color: var(--accent);
+      opacity: 0.12;
+      position: absolute;
+      top: 14px;
+      left: 20px;
     }
     .voz-text {
       font-family: var(--font-sans);
       font-size: var(--text-xs);
       font-weight: 300;
       color: var(--text-secondary);
-      line-height: 1.65;
-      margin-bottom: 10px;
+      line-height: 1.7;
+      margin-bottom: auto;
+      padding-bottom: 14px;
+      padding-top: 8px;
       font-style: italic;
     }
     .voz-name {
@@ -1238,6 +1259,8 @@
       font-weight: 500;
       color: var(--accent);
       letter-spacing: 0.03em;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
     }
     .vozes-nav {
       display: flex;
@@ -1291,7 +1314,7 @@
       .vozes { padding: 40px 0; }
       .voz-card {
         flex: 0 0 100%;
-        padding: 16px 14px 12px;
+        padding: 24px 20px 16px;
         min-height: 100px;
       }
       .vozes-cards-row { padding: 4px 0 12px; gap: 12px; }
@@ -2164,25 +2187,25 @@
 
       <!-- BÔNUS -->
       <h3 class="bonus-section-title reveal">E você ainda recebe de bônus:</h3>
-      <div class="bonus-grid reveal">
-        <div class="bonus-card card-breathe">
-          <img src="img/tapete-gaby.jpg" alt="Preparando o tapete de yoga" class="bonus-card-img">
+      <div class="bonus-grid">
+        <div class="bonus-card card-breathe reveal">
+          <img src="img/tapete-gaby.jpg" alt="Preparando o tapete de yoga" class="bonus-card-img" loading="lazy">
           <span class="bonus-badge">Bônus</span>
           <div class="bonus-card-body">
             <h4>Desafio Sadhana</h4>
             <p>7 dias de ritual. 5 opções de 3-5 min. Seu primeiro passo pra criar constância sem esforço.</p>
           </div>
         </div>
-        <div class="bonus-card card-breathe">
-          <img src="img/reset-gaby.jpg" alt="Gaby em namastê close" class="bonus-card-img">
+        <div class="bonus-card card-breathe reveal" style="transition-delay: 0.1s;">
+          <img src="img/reset-gaby.jpg" alt="Gaby em namastê close" class="bonus-card-img" loading="lazy">
           <span class="bonus-badge">Bônus</span>
           <div class="bonus-card-body">
             <h4>Reset Mental</h4>
             <p>Meditações curtas no Spotify pra ouvir ao acordar, antes de dormir ou quando a mente está cheia demais.</p>
           </div>
         </div>
-        <div class="bonus-card card-breathe">
-          <img src="img/oraculo-gaby.jpg" alt="Gaby em conexão com a luz" class="bonus-card-img">
+        <div class="bonus-card card-breathe reveal" style="transition-delay: 0.2s;">
+          <img src="img/oraculo-gaby.jpg" alt="Gaby em conexão com a luz" class="bonus-card-img" loading="lazy">
           <span class="bonus-badge">Bônus</span>
           <div class="bonus-card-body">
             <h4>Oráculo do Sadhana</h4>
