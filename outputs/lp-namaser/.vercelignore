@@ -1,0 +1,13 @@
+# Development files — never deploy to production
+ss.js
+package.json
+package-lock.json
+node_modules/
+.vercel/
+
+# Development screenshots
+v5-desktop-1.png
+v5-desktop-2-scrolled.png
+v5-mobile-1.png
+v5-mobile-2-scrolled.png
+design-system/

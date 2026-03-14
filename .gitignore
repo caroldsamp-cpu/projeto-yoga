@@ -32,3 +32,11 @@ Thumbs.db
 # Research media (local-only, do not push)
 docs/research/**/*-videos/
 docs/research/**/*.mp4
+
+# LP namaser — dev artifacts (never commit)
+outputs/lp-namaser/ss.js
+outputs/lp-namaser/package.json
+outputs/lp-namaser/package-lock.json
+outputs/lp-namaser/.vercel/
+outputs/lp-namaser/v5-*.png
+outputs/lp-namaser/design-system/
