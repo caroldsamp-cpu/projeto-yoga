@@ -1,0 +1,99 @@
+/* ============================================================
+   NAMASER DESIGN SYSTEM — TOKENS
+   Extracted from LP v5. Single source of truth for all pages.
+   ============================================================ */
+
+:root {
+
+  /* ---- COLORS: Background ---- */
+  --bg-primary:    #FDFBF7;
+  --bg-secondary:  #F5F0EB;
+  --bg-accent:     #EDE8DF;
+  --bg-guarantee:  #F0EDE8;
+
+  /* ---- COLORS: Text ---- */
+  --text-primary:   #2D2926;
+  --text-secondary: #6B5E54;
+
+  /* ---- COLORS: Brand ---- */
+  --accent:        #1A6B6A;
+  --accent-hover:  #145655;
+  --accent-light:  rgba(26, 107, 106, 0.08);
+  --lavender:      #9ED5DB;
+
+  /* ---- COLORS: Borders ---- */
+  --border:        #E8E0D6;
+  --border-strong: #C8B9A8;
+
+  /* ---- COLORS: Neutral ---- */
+  --white: #fff;
+
+  /* ---- SHADOWS ---- */
+  --shadow-sm: 0 4px 24px rgba(45, 41, 38, 0.06);
+  --shadow-md: 0 8px 32px rgba(45, 41, 38, 0.10);
+  --shadow-xs: 0 2px 16px rgba(45, 41, 38, 0.04);
+  --shadow-lg: 0 12px 40px rgba(45, 41, 38, 0.10);
+
+  /* ---- BORDER RADIUS ---- */
+  --radius-sm:   8px;
+  --radius-btn:  12px;
+  --radius-card: 16px;
+  --radius-pill: 20px;
+  --radius-lg:   24px;
+  --radius-full: 100px;
+
+  /* ---- TYPOGRAPHY: Families ---- */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:  'Inter', -apple-system, sans-serif;
+
+  /* ---- TYPOGRAPHY: Scale (8 levels) ---- */
+  --text-xs:      0.9rem;
+  --text-sm:      1.05rem;
+  --text-base:    1.25rem;
+  --text-lg:      clamp(1.1rem, 2.5vw, 1.3rem);
+  --text-xl:      clamp(1.7rem, 4vw, 2.2rem);
+  --text-2xl:     clamp(1.5rem, 4vw, 2.2rem);
+  --text-3xl:     clamp(2rem, 5vw, 3.5rem);
+  --text-display: clamp(3rem, 12vw, 5rem);
+
+  /* ---- SPACING (4px base) ---- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+  --space-20: 80px;
+
+  /* ---- LAYOUT ---- */
+  --container-max: 1120px;
+  --container-narrow: 720px;
+  --container-tight: 640px;
+  --container-card: 560px;
+
+  /* ---- ANIMATION ---- */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast:   0.2s;
+  --duration-normal: 0.3s;
+  --duration-slow:   0.5s;
+  --duration-reveal: 0.7s;
+
+  /* ---- Z-INDEX ---- */
+  --z-base:    1;
+  --z-grain:   2;
+  --z-content: 3;
+  --z-nav:     100;
+
+  /* ---- GRAIN TEXTURE (reusable data URI) ---- */
+  --grain-texture: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+
+  /* ---- GRADIENTS ---- */
+  --gradient-accent-line: linear-gradient(90deg, var(--accent), var(--lavender), transparent);
+  --gradient-accent-text: linear-gradient(135deg, var(--accent) 0%, var(--lavender) 100%);
+}
