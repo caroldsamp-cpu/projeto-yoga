@@ -25,7 +25,7 @@
       --accent-light: rgba(26, 107, 106, 0.08);
       --lavender: #9ED5DB;
       --border: #E8E0D6;
-      --border-strong: var(--border-strong);
+      --border-strong: #C8B9A8;
       --white: #fff;
       --shadow-sm: 0 4px 24px rgba(45, 41, 38, 0.06);
       --shadow-md: 0 8px 32px rgba(45, 41, 38, 0.10);
@@ -257,7 +257,7 @@
       background: rgba(253, 251, 247, 0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(232, 224, 214, 0.4);
-      padding: 8px 0;
+      padding: 4px 0;
     }
     .nav .container {
       display: flex;
@@ -285,6 +285,50 @@
         font-size: var(--text-sm);
         padding: 10px 24px;
       }
+    }
+    /* iPad fixes */
+    @media (min-width: 640px) and (max-width: 1023px) {
+      .nav { padding: 4px 0; }
+      .nav-logo img { height: 40px !important; }
+      .nav .btn-outline { font-size: 0.75rem; padding: 6px 14px; }
+      /* Reduzir espaço entre hero e transformação */
+      .hero { padding: 100px 0 0 !important; }
+      .hero-inner { gap: 24px !important; }
+      .transformacao { padding: 24px 0 48px !important; }
+      /* Cards: fonte menor pra não quebrar linha */
+      .transf-item { font-size: 0.82rem !important; padding: 12px 16px !important; }
+      /* Pricing: botão mais compacto */
+      .pricing-card .btn-primary { width: auto !important; font-size: 1rem !important; padding: 14px 40px !important; }
+    }
+
+    /* ========== MOBILE FIXES ========== */
+    @media (max-width: 639px) {
+      /* 1. Overline menor no mobile */
+      .overline { font-size: 0.85rem; letter-spacing: 0.1em; }
+
+      /* 2. Hero: colado na seção seguinte (!important pra vencer cascade) */
+      .hero { padding: 80px 0 16px !important; }
+      .hero::before { opacity: 0.015 !important; }
+      .hero-inner { gap: 16px !important; }
+      .hero-img { aspect-ratio: 4/5 !important; max-width: 320px !important; }
+      .hero-headline { font-size: 1.5rem !important; margin-bottom: 14px !important; }
+      .hero-sub { font-size: 0.95rem !important; margin-bottom: 20px !important; }
+      .micro-text { font-size: 0.85rem; }
+
+      /* 3. Transformação: bg diferente, colado no hero */
+      .transformacao { padding: 20px 0 40px !important; background: var(--bg-secondary) !important; }
+      .transf-col-header { text-align: center; margin-bottom: 4px; }
+      .transf-columns { margin: 16px 0; gap: 24px; }
+      /* Cards: fonte menor pra não quebrar linha */
+      .transf-item { font-size: 0.82rem !important; padding: 14px 16px !important; }
+
+      /* 4. Summary bar: horizontal com wrap, nunca vertical */
+      .summary-bar { flex-direction: row !important; flex-wrap: wrap; justify-content: center; gap: 8px 0; }
+      .summary-bar span { border-right: 1px solid var(--border-strong) !important; border-bottom: none !important; padding: 4px 10px !important; font-size: 0.7rem; }
+      .summary-bar span:last-child { border-right: none !important; }
+
+      /* 5. btn-light: fonte menor pra não quebrar linha */
+      .cta-bridge .btn-light { font-size: 0.78rem; padding: 11px 18px; white-space: nowrap; }
     }
 
     /* ========== S1: HERO ========== */
@@ -376,17 +420,31 @@
       gap: 32px;
       margin: 40px 0;
     }
-    @media (min-width: 768px) {
-      .transf-columns {
-        grid-template-columns: 1fr auto 1fr;
-        gap: 0;
-        align-items: stretch;
-      }
-    }
     .transf-col {
       display: flex;
       flex-direction: column;
       gap: 16px;
+    }
+    @media (min-width: 768px) {
+      .transf-columns {
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: auto repeat(4, 1fr);
+        gap: 16px 0;
+        align-items: stretch;
+      }
+      .transf-col {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: 1 / -1;
+        gap: 16px;
+      }
+      .transf-divider {
+        grid-row: 1 / -1;
+      }
+      .transf-item {
+        display: flex;
+        align-items: center;
+      }
     }
     .transf-col-header {
       font-family: var(--font-serif);
@@ -713,14 +771,13 @@
       .para-quem-layout {
         grid-template-columns: 1fr 1fr;
         gap: 48px;
-        align-items: center;
+        align-items: stretch;
       }
     }
     .para-quem-img {
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow-md);
-      max-height: 480px;
     }
     .para-quem-img img {
       width: 100%;
@@ -728,7 +785,6 @@
       object-fit: cover;
       object-position: center 60%;
       display: block;
-      max-height: 480px;
     }
     .check-list { list-style: none; margin: 0; }
     .check-list li {
@@ -890,6 +946,7 @@
     .trilhas-header h3 {
       font-family: var(--font-serif);
       font-size: var(--text-xl);
+      color: var(--text-secondary);
       margin-bottom: 12px;
     }
     .trilhas-header p {
@@ -1027,6 +1084,7 @@
     .bonus-section-title {
       font-family: var(--font-serif);
       font-size: var(--text-xl);
+      color: var(--text-secondary);
       text-align: center;
       margin: 56px 0 32px;
     }
@@ -1106,11 +1164,7 @@
       .summary-bar { gap: 12px 0; }
       .summary-bar span { padding: 0 12px; font-size: 0.8rem; }
     }
-    @media (max-width: 480px) {
-      .summary-bar { flex-direction: column; align-items: center; gap: 10px; }
-      .summary-bar span { border-right: none; border-bottom: 1px solid var(--text-secondary); padding: 0 0 10px 0; }
-      .summary-bar span:last-child { border-bottom: none; padding-bottom: 0; }
-    }
+    /* 480px vertical override removed — mobile fixes handle horizontal wrap */
 
     /* ========== S7: DEPOIMENTOS ========== */
     .depoimentos {
@@ -2316,7 +2370,7 @@
           <p class="gaby-highlight">Até que um dia, eu precisei respirar de verdade. Dei uma chance à prática e, sem perceber, dei uma chance a mim mesma.</p>
           <p>Foi ali, naquela quietude que eu achava impossível, que algo se alinhou. Meu corpo desacelerou, meus dias ganharam pausa, e eu descobri um caminho que não exigia ser outra pessoa.</p>
           <p>Quando senti essa transformação acontecer de dentro pra fora, entendi que não queria guardar isso só pra mim. Quis guiar outras mulheres de volta ao próprio corpo, ao próprio ritmo, ao próprio lugar de verdade.</p>
-          <p>Seja bem-vinda a esse espaço de reconexão.<br>Um passo de cada vez, no seu tempo, no seu ritmo.</p>
+          <p>Seja bem-vinda a esse espaço de reconexão.</p>
 
           <div class="gaby-credentials">
             <span>Formada pela escola YinYang Vinyasa, com Edson Ramos</span>
