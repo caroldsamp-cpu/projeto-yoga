@@ -59,7 +59,7 @@
       --bg-accent: #EDE8DF;
       --bg-guarantee: #F0EDE8;
       --text-primary: #2D2926;
-      --text-secondary: #6B5E54;
+      --text-secondary: #5D5145;
       --accent: #1A6B6A;
       --accent-hover: #145655;
       --accent-light: rgba(26, 107, 106, 0.08);
@@ -98,6 +98,21 @@
 
     img { max-width: 100%; height: auto; display: block; }
     picture { display: block; width: 100%; height: 100%; }
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      background: var(--accent);
+      color: var(--white);
+      padding: 8px 16px;
+      border-radius: var(--radius-btn);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      z-index: 1000;
+      transition: top 0.2s;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 16px; }
 
     /* ========== UTILITIES ========== */
     .container {
@@ -1383,16 +1398,27 @@
       margin-top: 20px;
     }
     .vozes-dot {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .vozes-dot::after {
+      content: '';
       width: 8px;
       height: 8px;
       border-radius: 50%;
       background: var(--border);
-      border: none;
-      cursor: pointer;
       transition: background 0.3s var(--ease), transform 0.3s var(--ease);
       padding: 0;
     }
-    .vozes-dot.active {
+    .vozes-dot.active::after {
       background: var(--accent);
       transform: scale(1.3);
     }
@@ -1953,6 +1979,7 @@
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Pular para o conteúdo</a>
 
   <!-- NAV -->
   <nav class="nav">
@@ -1963,7 +1990,9 @@
   </nav>
 
   <!-- S1: HERO -->
-  <section class="hero" id="hero">
+  <section class="hero" id="hero" role="main" aria-label="Conteúdo principal">
+<!-- main-content anchor for skip navigation -->
+<span id="main-content"></span>
     <div class="container">
       <div class="hero-inner">
         <div class="hero-content reveal">
@@ -2423,7 +2452,7 @@
   </section>
 
   <!-- VOZES: Respostas reais do forms -->
-  <section class="vozes grain" id="vozes">
+  <section class="vozes grain" id="vozes" role="region" aria-roledescription="carousel" aria-label="Depoimentos de alunas">
     <div class="container">
       <p class="overline text-center reveal" style="margin-bottom: 0;">Um pouquinho do que elas sentem</p>
 
@@ -2438,7 +2467,7 @@
         <div class="vozes-slides-outer">
           <div class="vozes-slides-track" id="vozesTrack">
           <!-- Slide 1: Depois da prática eu me sinto... (12 cards) -->
-          <div class="vozes-slide" data-pergunta="&ldquo;Depois da prática eu me sinto...&rdquo;">
+          <div class="vozes-slide" role="tabpanel" aria-label="Depoimentos: Depois da prática eu me sinto" data-pergunta="&ldquo;Depois da prática eu me sinto...&rdquo;">
             <div class="vozes-cards-row">
               <div class="voz-card"><p class="voz-text">"Mais calma, costumo brincar que as 'abas abertas na mente' são fechadas consigo ficar mais presente no momento."</p><p class="voz-name">Marina F.</p></div>
               <div class="voz-card"><p class="voz-text">"Tomada por uma calma enorme. Me sinto em paz e feliz comigo mesma."</p><p class="voz-name">Ana Luiza S.</p></div>
@@ -2456,7 +2485,7 @@
           </div>
 
           <!-- Slide 2: O que acho especial na abordagem da Gaby é... (12 cards) -->
-          <div class="vozes-slide" data-pergunta="&ldquo;O que acho especial na abordagem da Gaby é...&rdquo;">
+          <div class="vozes-slide" role="tabpanel" aria-label="Depoimentos: O que acho especial na abordagem da Gaby" data-pergunta="&ldquo;O que acho especial na abordagem da Gaby é...&rdquo;">
             <div class="vozes-cards-row">
               <div class="voz-card"><p class="voz-text">"Humanização, carinho e o quanto ela sabe muito do que fala."</p><p class="voz-name">Ísis</p></div>
               <div class="voz-card"><p class="voz-text">"O que acho especial na abordagem da Gaby é a voz calma e a tranquilidade nas explicações, além da humanidade."</p><p class="voz-name">Maria Eduarda</p></div>
@@ -2474,7 +2503,7 @@
           </div>
 
           <!-- Slide 3: Se uma amiga perguntasse... (12 cards) -->
-          <div class="vozes-slide" data-pergunta="&ldquo;Se uma amiga perguntasse 'por que você faz yoga com a Gaby?', eu diria:&rdquo;">
+          <div class="vozes-slide" role="tabpanel" aria-label="Depoimentos: Por que voce faz yoga com a Gaby" data-pergunta="&ldquo;Se uma amiga perguntasse 'por que você faz yoga com a Gaby?', eu diria:&rdquo;">
             <div class="vozes-cards-row">
               <div class="voz-card"><p class="voz-text">"Eu digo sempre que é espetacular. Não adianta explicar, tem que experimentar pra entender a aula prática e a conexão."</p><p class="voz-name">Juliana R.</p></div>
               <div class="voz-card"><p class="voz-text">"Ela consegue mostrar o conforto no desconforto de uma forma tranquila."</p><p class="voz-name">Aline M.</p></div>
@@ -2497,10 +2526,10 @@
         </button>
       </div>
 
-      <div class="vozes-nav" id="vozesNav">
-        <button class="vozes-dot active" data-slide="0" aria-label="Pergunta 1"></button>
-        <button class="vozes-dot" data-slide="1" aria-label="Pergunta 2"></button>
-        <button class="vozes-dot" data-slide="2" aria-label="Pergunta 3"></button>
+      <div class="vozes-nav" id="vozesNav" role="tablist" aria-label="Perguntas dos depoimentos">
+        <button class="vozes-dot active" data-slide="0" role="tab" aria-selected="true" aria-label="Pergunta 1"></button>
+        <button class="vozes-dot" data-slide="1" role="tab" aria-selected="false" aria-label="Pergunta 2"></button>
+        <button class="vozes-dot" data-slide="2" role="tab" aria-selected="false" aria-label="Pergunta 3"></button>
       </div>
       <p class="vozes-card-counter" id="vozesCounter" style="display:none;"></p>
 
@@ -2698,7 +2727,18 @@
 
   <!-- SCRIPTS -->
   <script>
-    // Accordion
+    // Accordion (with ARIA)
+    // Initialize ARIA attributes on all accordion items
+    document.querySelectorAll('.accordion-item').forEach((item, idx) => {
+      const btn = item.querySelector('.accordion-header');
+      const body = item.querySelector('.accordion-body');
+      const panelId = 'accordion-panel-' + idx;
+      body.setAttribute('id', panelId);
+      body.setAttribute('role', 'region');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-controls', panelId);
+    });
+
     function toggleAccordion(btn) {
       const item = btn.parentElement;
       const body = item.querySelector('.accordion-body');
@@ -2709,11 +2749,13 @@
       siblings.forEach(s => {
         s.classList.remove('open');
         s.querySelector('.accordion-body').style.maxHeight = null;
+        s.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
       });
 
       if (!isOpen) {
         item.classList.add('open');
         body.style.maxHeight = body.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
       }
     }
 
@@ -2767,7 +2809,10 @@
         questionIdx = qIdx;
         pageIdx = 0;
         vozesTrack.style.transform = `translateX(-${qIdx * 100}%)`;
-        vozesDots.forEach((d, i) => d.classList.toggle('active', i === qIdx));
+        vozesDots.forEach((d, i) => {
+          d.classList.toggle('active', i === qIdx);
+          d.setAttribute('aria-selected', i === qIdx ? 'true' : 'false');
+        });
         // Fade pergunta
         vozesPergunta.classList.add('fade-out');
         setTimeout(() => {
@@ -2810,7 +2855,7 @@
           questionIdx--;
           const prevPages = getPagesForQuestion(questionIdx);
           vozesTrack.style.transform = `translateX(-${questionIdx * 100}%)`;
-          vozesDots.forEach((d, i) => d.classList.toggle('active', i === questionIdx));
+          vozesDots.forEach((d, i) => { d.classList.toggle('active', i === questionIdx); d.setAttribute('aria-selected', i === questionIdx ? 'true' : 'false'); });
           vozesPergunta.classList.add('fade-out');
           setTimeout(() => {
             vozesPergunta.innerHTML = vozesSlides[questionIdx].dataset.pergunta;
@@ -2820,7 +2865,7 @@
         } else {
           questionIdx = totalQuestions - 1;
           vozesTrack.style.transform = `translateX(-${questionIdx * 100}%)`;
-          vozesDots.forEach((d, i) => d.classList.toggle('active', i === questionIdx));
+          vozesDots.forEach((d, i) => { d.classList.toggle('active', i === questionIdx); d.setAttribute('aria-selected', i === questionIdx ? 'true' : 'false'); });
           vozesPergunta.classList.add('fade-out');
           setTimeout(() => {
             vozesPergunta.innerHTML = vozesSlides[questionIdx].dataset.pergunta;
