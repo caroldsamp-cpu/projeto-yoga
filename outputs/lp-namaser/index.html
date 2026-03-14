@@ -25,6 +25,8 @@
       --accent-light: rgba(26, 107, 106, 0.08);
       --lavender: #9ED5DB;
       --border: #E8E0D6;
+      --border-strong: var(--border-strong);
+      --white: #fff;
       --shadow-sm: 0 4px 24px rgba(45, 41, 38, 0.06);
       --shadow-md: 0 8px 32px rgba(45, 41, 38, 0.10);
       --radius-btn: 12px;
@@ -96,7 +98,7 @@
     .btn-primary {
       display: inline-block;
       background: var(--accent);
-      color: #fff;
+      color: var(--white);
       font-family: var(--font-sans);
       font-size: var(--text-sm);
       font-weight: 500;
@@ -153,7 +155,7 @@
     }
     .btn-outline:hover {
       background: var(--accent);
-      color: #fff;
+      color: var(--white);
     }
 
     .micro-text {
@@ -412,7 +414,7 @@
       transform: translateX(4px);
     }
     .transf-col--antes .transf-item {
-      background: #fff;
+      background: var(--white);
       color: var(--text-secondary);
 
       border: 1px solid var(--border);
@@ -769,7 +771,7 @@
       .steps-grid { grid-template-columns: repeat(3, 1fr); }
     }
     .step-card {
-      background: #fff;
+      background: var(--white);
       border-radius: var(--radius-card);
       padding: 36px 28px 32px;
       box-shadow: var(--shadow-sm);
@@ -844,7 +846,7 @@
       .ritual-grid { grid-template-columns: 1fr 1fr; }
     }
     .ritual-card {
-      background: #fff;
+      background: var(--white);
       border-radius: var(--radius-card);
       padding: 28px 24px;
       box-shadow: var(--shadow-sm);
@@ -929,7 +931,7 @@
     }
 
     .accordion-item {
-      background: #fff;
+      background: var(--white);
       border-radius: var(--radius-card);
       box-shadow: 0 2px 12px rgba(45, 41, 38, 0.05);
       margin-bottom: 8px;
@@ -1038,7 +1040,7 @@
       .bonus-grid { grid-template-columns: 1fr 1fr 1fr; }
     }
     .bonus-card {
-      background: #fff;
+      background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius-card);
       overflow: hidden;
@@ -1054,7 +1056,7 @@
       top: 12px;
       right: 12px;
       background: var(--accent);
-      color: #fff;
+      color: var(--white);
       font-size: var(--text-xs);
       font-weight: 600;
       letter-spacing: 0.1em;
@@ -1132,7 +1134,7 @@
     .depo-card {
       flex: 0 0 85%;
       max-width: 380px;
-      background: #fff;
+      background: var(--white);
       border-radius: var(--radius-card);
       padding: 32px 28px 24px;
       scroll-snap-align: start;
@@ -1231,7 +1233,7 @@
     }
     .voz-card {
       flex: 0 0 calc((100% - 32px) / 3);
-      background: #fff;
+      background: var(--white);
       border-radius: var(--radius-card);
       padding: 28px 24px 20px;
       border: none;
@@ -1375,7 +1377,7 @@
       height: 0;
       border-style: solid;
       border-width: 12px 0 12px 20px;
-      border-color: transparent transparent transparent #fff;
+      border-color: transparent transparent transparent var(--white);
       margin-left: 4px;
     }
     .video-placeholder p { font-size: var(--text-sm); color: var(--text-secondary); }
@@ -1430,7 +1432,7 @@
     }
     @media (min-width: 640px) { .lc-phases { grid-template-columns: 1fr 1fr; } }
     .lc-phase {
-      background: #fff;
+      background: var(--white);
       border-radius: var(--radius-card);
       padding: 32px 28px;
       border: 1px solid var(--border);
@@ -1522,8 +1524,8 @@
       color: var(--text-primary);
       line-height: 1.6;
       padding: 16px 0;
-      border-top: 1px solid #C8B9A8;
-      border-bottom: 1px solid #C8B9A8;
+      border-top: 1px solid var(--border-strong);
+      border-bottom: 1px solid var(--border-strong);
       margin: 8px 0;
     }
     .gaby-credentials {
@@ -1576,13 +1578,13 @@
       font-size: var(--text-2xl);
       font-weight: 400;
       line-height: 1.4;
-      color: #fff;
+      color: var(--white);
       max-width: 640px;
       margin: 0 auto 28px;
     }
     .cta-bridge .btn-light {
       display: inline-block;
-      background: #fff;
+      background: var(--white);
       color: var(--accent);
       font-family: var(--font-sans);
       font-size: var(--text-base);
@@ -1796,7 +1798,7 @@
     .footer-logo {
       font-family: var(--font-serif);
       font-size: var(--text-xl);
-      color: #fff;
+      color: var(--white);
       margin-bottom: 12px;
     }
     .footer a {
@@ -1804,7 +1806,7 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-    .footer a:hover { color: #fff; }
+    .footer a:hover { color: var(--white); }
 
     /* ========== MOBILE ADJUSTMENTS ========== */
     @media (max-width: 639px) {
