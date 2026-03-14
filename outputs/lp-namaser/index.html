@@ -5,7 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NamaSer | Construa seu Sadhana</title>
   <meta name="description" content="NamaSer: yoga na vida real para mulheres que querem presença e leveza sem mudar toda a rotina. Ritual diário + 5 trilhas + comunidade.">
+  <link rel="canonical" href="https://namaser.vercel.app/">
+
+  <!-- Open Graph — COPY PENDENTE: title e description aguardando squad Light Copy -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://namaser.vercel.app/">
+  <meta property="og:title" content="NamaSer | Construa seu Sadhana">
+  <meta property="og:description" content="NamaSer: yoga na vida real para mulheres que querem presença e leveza sem mudar toda a rotina. Ritual diário + 5 trilhas + comunidade.">
+  <meta property="og:image" content="https://namaser.vercel.app/img/og-namaser.jpg">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NamaSer | Construa seu Sadhana">
+  <meta name="twitter:description" content="NamaSer: yoga na vida real para mulheres que querem presença e leveza sem mudar toda a rotina.">
+  <meta name="twitter:image" content="https://namaser.vercel.app/img/og-namaser.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "NamaSer — Construa seu Sadhana",
+    "description": "Programa completo de yoga para a vida real. 5 trilhas, 90+ aulas. Construa seu Sadhana com Gaby Drummond.",
+    "provider": {
+      "@type": "Person",
+      "name": "Gaby Drummond",
+      "url": "https://www.instagram.com/gabydrummonds"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "138",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/InStock",
+      "url": "https://pay.hotmart.com/V79262413F?bid=1763378946585"
+    }
+  }
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 4c-1.5 3-2 6-2 9s.5 5 2 7c1.5-2 2-4 2-7s-.5-6-2-9z' fill='%239ED5DB' opacity='.95'/%3E%3Cpath d='M10.5 8c.5 3.5 2 6.5 4 8.5 1-2.5 1-5 0-7.5s-2.5-4-4-5.5z' fill='%239ED5DB' opacity='.75'/%3E%3Cpath d='M21.5 8c-.5 3.5-2 6.5-4 8.5-1-2.5-1-5 0-7.5s2.5-4 4-5.5z' fill='%239ED5DB' opacity='.75'/%3E%3Cpath d='M6 13c1.5 3 4 5.5 6.5 7-.5-2.5-1.5-5-3.5-7S7 11 6 13z' fill='%239ED5DB' opacity='.55'/%3E%3Cpath d='M26 13c-1.5 3-4 5.5-6.5 7 .5-2.5 1.5-5 3.5-7s2-2 3-3z' fill='%239ED5DB' opacity='.55'/%3E%3Cpath d='M16 20c-2 1-4 3-5 5h10c-1-2-3-4-5-5z' fill='%239ED5DB' opacity='.35'/%3E%3Ccircle cx='16' cy='14' r='1.5' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="preload" href="img/hero-gaby.webp" as="image" type="image/webp">
+  <link rel="preload" href="img/hero-gaby.jpg" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -1933,7 +1973,10 @@
           <p class="micro-text">Sem cobrança. Sem pressa.</p>
         </div>
         <div class="hero-img reveal" style="transition-delay: 0.15s;">
-          <img src="img/hero-gaby.jpg" alt="Gaby Drummond em namastê, sorrindo com luz natural" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-card);">
+          <picture>
+            <source srcset="img/hero-gaby.webp" type="image/webp">
+            <img src="img/hero-gaby.jpg" alt="Gaby Drummond em namastê, sorrindo com luz natural" width="1440" height="1799" fetchpriority="high" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-card);">
+          </picture>
         </div>
       </div>
     </div>
@@ -1997,7 +2040,10 @@
       </div>
       <div class="sadhana-layout">
         <div class="sadhana-img reveal-left">
-          <img src="img/reframe-gaby.jpg" alt="Gaby Drummond em pranayama com flores">
+          <picture>
+            <source srcset="img/reframe-gaby.webp" type="image/webp">
+            <img src="img/reframe-gaby.jpg" alt="Gaby Drummond em pranayama com flores" width="1200" height="1800" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="sadhana-text reveal-right" style="transition-delay: 0.1s;">
           <p class="sadhana-meaning">Sabe quando você consegue parar por um instante e só respirar? Sadhana é isso. O compromisso gentil de reservar esse momento todo dia. Voltar ao corpo, à respiração, à presença.</p>
@@ -2045,7 +2091,10 @@
           </div>
         </div>
         <div class="para-quem-img reveal-right" style="transition-delay: 0.1s;">
-          <img src="img/paraquem-gaby.jpg" alt="Gaby Drummond em pose de roda no parque">
+          <picture>
+            <source srcset="img/paraquem-gaby.webp" type="image/webp">
+            <img src="img/paraquem-gaby.jpg" alt="Gaby Drummond em pose de roda no parque" width="1200" height="1499" loading="lazy" decoding="async">
+          </picture>
         </div>
       </div>
     </div>
@@ -2146,7 +2195,10 @@
             <span class="trilhas-stat"><strong>90+</strong> aulas</span>
           </div>
         </div>
-        <img src="img/trilhas-gaby.jpg" alt="Gaby em postura de yoga avançada" class="trilhas-img">
+        <picture>
+          <source srcset="img/trilhas-gaby.webp" type="image/webp">
+          <img src="img/trilhas-gaby.jpg" alt="Gaby em postura de yoga avançada" class="trilhas-img" width="1200" height="800" loading="lazy" decoding="async">
+        </picture>
 
         <div class="accordion-item">
           <button class="accordion-header" onclick="toggleAccordion(this)">
@@ -2235,7 +2287,10 @@
       <h3 class="bonus-section-title reveal">E você ainda recebe de bônus:</h3>
       <div class="bonus-grid">
         <div class="bonus-card card-breathe reveal">
-          <img src="img/tapete-gaby.jpg" alt="Preparando o tapete de yoga" class="bonus-card-img" loading="lazy">
+          <picture>
+              <source srcset="img/tapete-gaby.webp" type="image/webp">
+              <img src="img/tapete-gaby.jpg" alt="Preparando o tapete de yoga" class="bonus-card-img" width="1200" height="1800" loading="lazy" decoding="async">
+            </picture>
           <span class="bonus-badge">Bônus</span>
           <div class="bonus-card-body">
             <h4>Desafio Sadhana</h4>
@@ -2243,7 +2298,10 @@
           </div>
         </div>
         <div class="bonus-card card-breathe reveal" style="transition-delay: 0.1s;">
-          <img src="img/reset-gaby.jpg" alt="Gaby em namastê close" class="bonus-card-img" loading="lazy">
+          <picture>
+              <source srcset="img/reset-gaby.webp" type="image/webp">
+              <img src="img/reset-gaby.jpg" alt="Gaby em namastê close" class="bonus-card-img" width="1200" height="1800" loading="lazy" decoding="async">
+            </picture>
           <span class="bonus-badge">Bônus</span>
           <div class="bonus-card-body">
             <h4>Reset Mental</h4>
@@ -2251,7 +2309,10 @@
           </div>
         </div>
         <div class="bonus-card card-breathe reveal" style="transition-delay: 0.2s;">
-          <img src="img/oraculo-gaby.jpg" alt="Gaby em conexão com a luz" class="bonus-card-img" loading="lazy">
+          <picture>
+              <source srcset="img/oraculo-gaby.webp" type="image/webp">
+              <img src="img/oraculo-gaby.jpg" alt="Gaby em conexão com a luz" class="bonus-card-img" width="1200" height="1800" loading="lazy" decoding="async">
+            </picture>
           <span class="bonus-badge">Bônus</span>
           <div class="bonus-card-body">
             <h4>Oráculo do Sadhana</h4>
@@ -2335,7 +2396,10 @@
 
       <div class="gaby-layout">
         <div class="gaby-img reveal-left">
-          <img src="img/bio-gaby.jpg" alt="Gaby Drummond com mãos no coração" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+          <picture>
+              <source srcset="img/bio-gaby.webp" type="image/webp">
+              <img src="img/bio-gaby.jpg" alt="Gaby Drummond com mãos no coração" width="1200" height="1800" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+            </picture>
         </div>
 
         <div class="gaby-text reveal-right">
@@ -2474,7 +2538,7 @@
           <p class="price-alt">ou R$138 à vista</p>
           <p class="price-promo">Preço de lançamento</p>
         </div>
-        <a href="https://pay.hotmart.com/V79262413F?bid=1763378946585" target="_blank" rel="noopener" class="btn-primary">Quero construir meu Sadhana</a>
+        <a href="https://pay.hotmart.com/V79262413F?bid=1763378946585" target="_blank" rel="noopener noreferrer" class="btn-primary">Quero construir meu Sadhana</a>
         <p class="micro-text">Pagamento seguro · Acesso imediato</p>
         <p class="micro-text" style="margin-top: 12px; font-style: italic;">Que esse espaço seja um convite para você fazer uma pausa, respirar fundo e cuidar de si.</p>
       </div>
@@ -2546,7 +2610,7 @@
             <span class="accordion-chevron">▾</span>
           </button>
           <div class="accordion-body">
-            <div class="accordion-body-inner">Você tem 15 dias de garantia. Se não fizer sentido, eu devolvo 100%. Sem perguntas. E se quiser experimentar antes, <a href="https://www.youtube.com/watch?v=Vjl6jAu4zNI" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: underline;">assista uma aula gratuita aqui</a>.</div>
+            <div class="accordion-body-inner">Você tem 15 dias de garantia. Se não fizer sentido, eu devolvo 100%. Sem perguntas. E se quiser experimentar antes, <a href="https://www.youtube.com/watch?v=Vjl6jAu4zNI" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: underline;">assista uma aula gratuita aqui</a>.</div>
           </div>
         </div>
 
@@ -2569,10 +2633,13 @@
     <div class="container">
       <div class="reveal">
         <p class="cta-final-breath">respire</p>
-        <img src="img/cta-gaby.jpg" alt="Gaby em reverência" style="width: 88px; height: 88px; object-fit: cover; border-radius: 50%; margin: 0 auto 28px; display: block; border: 2px solid var(--accent); opacity: 0.9;">
+        <picture>
+          <source srcset="img/cta-gaby.webp" type="image/webp">
+          <img src="img/cta-gaby.jpg" alt="Gaby em reverência" width="88" height="88" loading="lazy" decoding="async" style="width: 88px; height: 88px; object-fit: cover; border-radius: 50%; margin: 0 auto 28px; display: block; border: 2px solid var(--accent); opacity: 0.9;">
+        </picture>
         <p class="cta-final-quote">Seu corpo já sabe o caminho. Deixa ele te guiar.</p>
         <p class="cta-final-text">Se algo aqui fez sentido, eu te espero no NamaSer.<br>Um passo de cada vez. No seu tempo.</p>
-        <a href="https://pay.hotmart.com/V79262413F?bid=1763378946585" target="_blank" rel="noopener" class="btn-primary">Quero construir meu Sadhana</a>
+        <a href="https://pay.hotmart.com/V79262413F?bid=1763378946585" target="_blank" rel="noopener noreferrer" class="btn-primary">Quero construir meu Sadhana</a>
         <p class="micro-text"><s>R$197</s> por 12x de R$14,27 · Garantia de 15 dias</p>
       </div>
     </div>
@@ -2583,15 +2650,15 @@
     <div class="container">
       <p class="footer-logo"><img src="img/logo-gaby.svg" alt="Gaby Drummond Yoga" style="height: 100px; width: auto; margin: 0 auto; filter: brightness(0) invert(1);"></p>
       <div class="footer-social" style="display: flex; justify-content: center; gap: 20px; margin: 16px 0;">
-        <a href="https://www.instagram.com/gabydrummonds" target="_blank" rel="noopener" aria-label="Instagram" style="color: rgba(255,255,255,0.7); transition: color 0.2s;">
+        <a href="https://www.instagram.com/gabydrummonds" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: rgba(255,255,255,0.7); transition: color 0.2s;">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
         </a>
-        <a href="https://www.youtube.com/@gabydrummondyoga" target="_blank" rel="noopener" aria-label="YouTube" style="color: rgba(255,255,255,0.7); transition: color 0.2s;">
+        <a href="https://www.youtube.com/@gabydrummondyoga" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color: rgba(255,255,255,0.7); transition: color 0.2s;">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="4"/><polygon points="10,8 16,12 10,16" fill="currentColor" stroke="none"/></svg>
         </a>
       </div>
       <p><a href="#">Termos de uso</a> · <a href="#">Política de privacidade</a></p>
-      <p><a href="https://wa.me/553198531960" target="_blank" rel="noopener">Fale comigo no WhatsApp</a></p>
+      <p><a href="https://wa.me/553198531960" target="_blank" rel="noopener noreferrer">Fale comigo no WhatsApp</a></p>
       <p style="margin-top: 12px;">© 2026 NamaSer por Gaby Drummond</p>
     </div>
   </footer>
