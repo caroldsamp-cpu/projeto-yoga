@@ -1163,7 +1163,7 @@
 
     /* Vozes Section */
     .vozes {
-      background: var(--bg-accent);
+      background: var(--bg-secondary);
       padding: 72px 0;
       position: relative;
       overflow: hidden;
@@ -1204,35 +1204,16 @@
     }
     .vozes-cards-row {
       display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
       gap: 16px;
       padding: 4px 0 12px;
-      scrollbar-width: none;
+      transition: transform 0.45s var(--ease);
     }
-    .vozes-cards-row::-webkit-scrollbar { display: none; }
     .vozes-slide {
       position: relative;
-    }
-    .vozes-slide::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 48px;
-      height: calc(100% - 12px);
-      background: linear-gradient(to right, transparent, var(--bg-accent));
-      pointer-events: none;
-      z-index: 1;
-      border-radius: 0 12px 12px 0;
-    }
-    .vozes-slide.scrolled-end::after {
-      opacity: 0;
+      overflow: hidden;
     }
     .voz-card {
       flex: 0 0 calc((100% - 32px) / 3);
-      scroll-snap-align: start;
       background: rgba(255, 255, 255, 0.7);
       border-radius: 12px;
       padding: 20px 18px 14px;
@@ -1309,7 +1290,7 @@
     @media (max-width: 639px) {
       .vozes { padding: 40px 0; }
       .voz-card {
-        flex: 0 0 80%;
+        flex: 0 0 100%;
         padding: 16px 14px 12px;
         min-height: 100px;
       }
@@ -1317,7 +1298,8 @@
       .voz-text { font-size: 0.85rem; }
       .vozes-pergunta { font-size: 1rem; }
       .vozes-pergunta-wrapper { min-height: 2.8em; margin-bottom: 12px; }
-      .vozes-arrow { display: none; }
+      .vozes-arrow { width: 32px; height: 32px; }
+      .vozes-arrow svg { width: 18px; height: 18px; }
     }
     @media (min-width: 640px) and (max-width: 1023px) {
       .voz-card { flex: 0 0 calc((100% - 16px) / 2); }
@@ -2321,7 +2303,7 @@
         </button>
         <div class="vozes-slides-outer">
           <div class="vozes-slides-track" id="vozesTrack">
-          <!-- Slide 1: Depois da prática eu me sinto... (15 cards) -->
+          <!-- Slide 1: Depois da prática eu me sinto... (12 cards) -->
           <div class="vozes-slide" data-pergunta="&ldquo;Depois da prática eu me sinto...&rdquo;">
             <div class="vozes-cards-row">
               <div class="voz-card"><p class="voz-text">"Mais calma, costumo brincar que as 'abas abertas na mente' são fechadas. Consigo ficar mais presente no momento."</p><p class="voz-name">Marina F.</p></div>
@@ -2334,15 +2316,12 @@
               <div class="voz-card"><p class="voz-text">"Mais tranquila, segura, centrada e flexível."</p><p class="voz-name">Isabella D.</p></div>
               <div class="voz-card"><p class="voz-text">"Feliz, leve e ainda mais incentivada a viver com mais calma."</p><p class="voz-name">Juliana R.</p></div>
               <div class="voz-card"><p class="voz-text">"Renovada, que eu consigo, sou capaz e que a vida é maravilhosa."</p><p class="voz-name">Ana Luiza</p></div>
-              <div class="voz-card"><p class="voz-text">"Conectada comigo mesma e minha essência."</p><p class="voz-name">Anne M.</p></div>
+              <div class="voz-card"><p class="voz-text">"Conectada comigo mesmo e minha essência."</p><p class="voz-name">Anne M.</p></div>
               <div class="voz-card"><p class="voz-text">"Muito mais leve, com a mente mais organizada e muito mais preparado para a semana."</p><p class="voz-name">Henrique B.</p></div>
-              <div class="voz-card"><p class="voz-text">"Mentalmente tranquila, presente e com sensação de bem-estar."</p><p class="voz-name">Ana Laura</p></div>
-              <div class="voz-card"><p class="voz-text">"Relaxada, adquirindo mais flexibilidade e controlando minha ansiedade."</p><p class="voz-name">Taís G.</p></div>
-              <div class="voz-card"><p class="voz-text">"Mais leve, calma (e ao mesmo tempo energizada)."</p><p class="voz-name">Bárbara</p></div>
             </div>
           </div>
 
-          <!-- Slide 2: O que acho especial na abordagem da Gaby é... (15 cards) -->
+          <!-- Slide 2: O que acho especial na abordagem da Gaby é... (12 cards) -->
           <div class="vozes-slide" data-pergunta="&ldquo;O que acho especial na abordagem da Gaby é...&rdquo;">
             <div class="vozes-cards-row">
               <div class="voz-card"><p class="voz-text">"Humanização, carinho e o quanto ela sabe muito do que fala."</p><p class="voz-name">Ísis</p></div>
@@ -2357,13 +2336,10 @@
               <div class="voz-card"><p class="voz-text">"A leveza, domínio do que faz e o carisma. Acolhimento é tudo!"</p><p class="voz-name">Juliana R.</p></div>
               <div class="voz-card"><p class="voz-text">"A forma como ela trata tudo com leveza e o carinho conosco."</p><p class="voz-name">Mari P.</p></div>
               <div class="voz-card"><p class="voz-text">"O jeito de conduzir a aula, a sintonia com as fases da lua, o óleo essencial no final. Tudo é especial."</p><p class="voz-name">Matheus</p></div>
-              <div class="voz-card"><p class="voz-text">"A paciência, educação, energia e tranquilidade que transmite durante a prática."</p><p class="voz-name">Isabella D.</p></div>
-              <div class="voz-card"><p class="voz-text">"Carinho, atenção e leveza que ela tem para conduzir."</p><p class="voz-name">Anne M.</p></div>
-              <div class="voz-card"><p class="voz-text">"A leveza com que tudo é feito!"</p><p class="voz-name">Henrique B.</p></div>
             </div>
           </div>
 
-          <!-- Slide 3: Se uma amiga perguntasse... (15 cards) -->
+          <!-- Slide 3: Se uma amiga perguntasse... (12 cards) -->
           <div class="vozes-slide" data-pergunta="&ldquo;Se uma amiga perguntasse 'por que você faz yoga com a Gaby?', eu diria:&rdquo;">
             <div class="vozes-cards-row">
               <div class="voz-card"><p class="voz-text">"É espetacular. Não adianta explicar, tem que experimentar pra entender a aula prática e a conexão."</p><p class="voz-name">Juliana R.</p></div>
@@ -2375,12 +2351,9 @@
               <div class="voz-card"><p class="voz-text">"Ela torna as práticas acessíveis e torna o exercício ainda mais especial."</p><p class="voz-name">Isabella D.</p></div>
               <div class="voz-card"><p class="voz-text">"Quando pratico yoga com a Gaby, sinto que esse vira o meu momento de conexão comigo mesma."</p><p class="voz-name">Anne M.</p></div>
               <div class="voz-card"><p class="voz-text">"Ela é uma querida, as aulas são maravilhosas e as pessoas são super acolhedoras."</p><p class="voz-name">Milena R.</p></div>
-              <div class="voz-card"><p class="voz-text">"Foram as melhores aulas que já tive. As aulas adaptadas conforme as fases da lua garantem uma diversidade de experiências."</p><p class="voz-name">Henrique B.</p></div>
+              <div class="voz-card"><p class="voz-text">"Foram as melhores aulas que já tive. As aulas adaptadas conforme as fases da lua, além de especial, garantem uma diversidade de experiências."</p><p class="voz-name">Henrique B.</p></div>
               <div class="voz-card"><p class="voz-text">"Porque ela é super atenciosa, educada e transmite tranquilidade."</p><p class="voz-name">Bruna T.</p></div>
               <div class="voz-card"><p class="voz-text">"Ela conduz a prática de um jeito claro e acessível mesmo para quem não tem tanta experiência."</p><p class="voz-name">Sarah M.</p></div>
-              <div class="voz-card"><p class="voz-text">"Porque me faz me sentir muito melhor comigo mesma."</p><p class="voz-name">Maria Eduarda</p></div>
-              <div class="voz-card"><p class="voz-text">"É uma forma diferente de se conectar. Uma atividade ao ar livre que relaxa, te faz sentir bem e ainda conhece pessoas novas."</p><p class="voz-name">Mel C.</p></div>
-              <div class="voz-card"><p class="voz-text">"Porque ela é ótima, tem uma forma única de ensinar."</p><p class="voz-name">Natália</p></div>
             </div>
           </div>
           </div>
@@ -2395,7 +2368,7 @@
         <button class="vozes-dot" data-slide="1" aria-label="Pergunta 2"></button>
         <button class="vozes-dot" data-slide="2" aria-label="Pergunta 3"></button>
       </div>
-      <p class="vozes-card-counter" id="vozesCounter">deslize para ver mais depoimentos</p>
+      <p class="vozes-card-counter" id="vozesCounter" style="display:none;"></p>
 
       <div class="text-center reveal" style="margin-top: 40px;">
         <a href="#pricing" class="btn-primary">Quero fechar minhas abas mentais</a>
@@ -2602,48 +2575,108 @@
       root.style.setProperty('--bg-primary', `hsl(${h}, ${s}%, ${l}%)`);
     }, { passive: true });
 
-    // Vozes Carousel - Slide por pergunta, cards em fila horizontal
+    // Vozes Carousel - 3 cards por vez, passa todos antes de mudar pergunta
     const vozesTrack = document.getElementById('vozesTrack');
     const vozesDots = document.querySelectorAll('.vozes-dot');
     const vozesPergunta = document.getElementById('vozesPergunta');
     const vozesSlides = vozesTrack ? vozesTrack.querySelectorAll('.vozes-slide') : [];
 
     if (vozesTrack && vozesDots.length && vozesSlides.length) {
-      let vozesIdx = 0;
-      const totalSlides = vozesSlides.length;
+      let questionIdx = 0;
+      let pageIdx = 0;
+      const totalQuestions = vozesSlides.length;
 
-      function goToSlide(idx) {
-        vozesIdx = idx;
-        vozesTrack.style.transform = `translateX(-${idx * 100}%)`;
-        vozesDots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      function getCardsPerPage() {
+        if (window.innerWidth < 640) return 1;
+        if (window.innerWidth < 1024) return 2;
+        return 3;
+      }
+
+      // Calculate pages per question
+      function getPagesForQuestion(qIdx) {
+        const cards = vozesSlides[qIdx].querySelectorAll('.voz-card').length;
+        return Math.ceil(cards / getCardsPerPage());
+      }
+
+      function goToQuestion(qIdx) {
+        questionIdx = qIdx;
+        pageIdx = 0;
+        vozesTrack.style.transform = `translateX(-${qIdx * 100}%)`;
+        vozesDots.forEach((d, i) => d.classList.toggle('active', i === qIdx));
         // Fade pergunta
         vozesPergunta.classList.add('fade-out');
         setTimeout(() => {
-          vozesPergunta.innerHTML = vozesSlides[idx].dataset.pergunta;
+          vozesPergunta.innerHTML = vozesSlides[qIdx].dataset.pergunta;
           vozesPergunta.classList.remove('fade-out');
         }, 300);
-        // Reset card scroll and fade hint
-        vozesSlides.forEach(s => s.classList.remove('scrolled-end'));
-        const row = vozesSlides[idx].querySelector('.vozes-cards-row');
-        if (row) row.scrollTo({ left: 0, behavior: 'smooth' });
+        // Reset card page
+        const row = vozesSlides[qIdx].querySelector('.vozes-cards-row');
+        if (row) row.style.transform = 'translateX(0)';
+      }
+
+      function goToPage(pIdx) {
+        pageIdx = pIdx;
+        const row = vozesSlides[questionIdx].querySelector('.vozes-cards-row');
+        if (!row) return;
+        const card = row.querySelector('.voz-card');
+        if (!card) return;
+        const cpp = getCardsPerPage();
+        const gap = window.innerWidth < 640 ? 12 : 16;
+        const cardW = card.offsetWidth + gap;
+        const offset = pIdx * cpp * cardW;
+        row.style.transform = `translateX(-${offset}px)`;
+      }
+
+      function advance() {
+        const totalPages = getPagesForQuestion(questionIdx);
+        if (pageIdx < totalPages - 1) {
+          goToPage(pageIdx + 1);
+        } else if (questionIdx < totalQuestions - 1) {
+          goToQuestion(questionIdx + 1);
+        } else {
+          goToQuestion(0);
+        }
+      }
+
+      function retreat() {
+        if (pageIdx > 0) {
+          goToPage(pageIdx - 1);
+        } else if (questionIdx > 0) {
+          questionIdx--;
+          const prevPages = getPagesForQuestion(questionIdx);
+          vozesTrack.style.transform = `translateX(-${questionIdx * 100}%)`;
+          vozesDots.forEach((d, i) => d.classList.toggle('active', i === questionIdx));
+          vozesPergunta.classList.add('fade-out');
+          setTimeout(() => {
+            vozesPergunta.innerHTML = vozesSlides[questionIdx].dataset.pergunta;
+            vozesPergunta.classList.remove('fade-out');
+          }, 300);
+          goToPage(prevPages - 1);
+        } else {
+          questionIdx = totalQuestions - 1;
+          vozesTrack.style.transform = `translateX(-${questionIdx * 100}%)`;
+          vozesDots.forEach((d, i) => d.classList.toggle('active', i === questionIdx));
+          vozesPergunta.classList.add('fade-out');
+          setTimeout(() => {
+            vozesPergunta.innerHTML = vozesSlides[questionIdx].dataset.pergunta;
+            vozesPergunta.classList.remove('fade-out');
+          }, 300);
+          goToPage(getPagesForQuestion(questionIdx) - 1);
+        }
       }
 
       vozesDots.forEach(dot => {
-        dot.addEventListener('click', () => goToSlide(parseInt(dot.dataset.slide)));
+        dot.addEventListener('click', () => goToQuestion(parseInt(dot.dataset.slide)));
       });
 
-      document.querySelector('.vozes-prev').addEventListener('click', () => {
-        goToSlide(vozesIdx > 0 ? vozesIdx - 1 : totalSlides - 1);
-      });
-      document.querySelector('.vozes-next').addEventListener('click', () => {
-        goToSlide(vozesIdx < totalSlides - 1 ? vozesIdx + 1 : 0);
-      });
+      document.querySelector('.vozes-prev').addEventListener('click', retreat);
+      document.querySelector('.vozes-next').addEventListener('click', advance);
 
-      // Autoplay: switch pergunta every 12s when visible
+      // Autoplay: advance every 5s when visible
       let autoplay = null;
       function startAutoplay() {
         if (autoplay) return;
-        autoplay = setInterval(() => goToSlide((vozesIdx + 1) % totalSlides), 12000);
+        autoplay = setInterval(advance, 5000);
       }
       function stopAutoplay() {
         clearInterval(autoplay);
@@ -2657,27 +2690,20 @@
       }, { threshold: 0.3 });
       vozesObserver.observe(document.getElementById('vozes'));
 
-      // Fade hint + pause autoplay when interacting
-      vozesSlides.forEach(slide => {
-        const row = slide.querySelector('.vozes-cards-row');
-        if (row) {
-          row.addEventListener('scroll', () => {
-            const atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 20;
-            slide.classList.toggle('scrolled-end', atEnd);
-          }, { passive: true });
-          row.addEventListener('pointerdown', stopAutoplay);
-          row.addEventListener('pointerup', () => setTimeout(startAutoplay, 3000));
-        }
-      });
+      // Pause autoplay on interaction
+      document.querySelector('.vozes-prev').addEventListener('click', () => { stopAutoplay(); setTimeout(startAutoplay, 8000); });
+      document.querySelector('.vozes-next').addEventListener('click', () => { stopAutoplay(); setTimeout(startAutoplay, 8000); });
 
-      // Swipe on mobile to change pergunta (touch on outer area)
+      // Swipe on mobile
       let touchStartX = 0;
       vozesTrack.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
       vozesTrack.addEventListener('touchend', e => {
         const diff = touchStartX - e.changedTouches[0].clientX;
         if (Math.abs(diff) > 60) {
-          if (diff > 0 && vozesIdx < totalSlides - 1) goToSlide(vozesIdx + 1);
-          else if (diff < 0 && vozesIdx > 0) goToSlide(vozesIdx - 1);
+          if (diff > 0) advance();
+          else retreat();
+          stopAutoplay();
+          setTimeout(startAutoplay, 8000);
         }
       }, { passive: true });
     }
