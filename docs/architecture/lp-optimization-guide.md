@@ -104,7 +104,20 @@ Use este checklist ao construir uma LP do zero. Cada item deve ser implementado 
 - [ ] `prefers-reduced-motion` respeitado (desativar animacoes)
 - [ ] HTML semantico: header, main, section, footer, nav
 
-### 2.7 Conversao (CRO)
+### 2.7 Analytics & Rastreamento
+
+- [ ] Google Tag Manager (GTM) instalado no `<head>` + `<body>` (noscript)
+- [ ] Google Analytics (GA4) configurado como tag no GTM
+- [ ] CSP atualizado para permitir googletagmanager.com + google-analytics.com
+- [ ] Links UTM definidos para cada canal (Instagram, WhatsApp, YouTube, Email, QR Code)
+- [ ] Vanity URLs configuradas no vercel.json (`/instagram`, `/whatsapp`, etc.)
+- [ ] UTM passthrough para checkout: script que pega UTMs da URL e repassa pros links de compra
+- [ ] Hotmart recebe `src` param automaticamente (ex: `src=instagram-stories`)
+- [ ] sitemap.xml criado
+- [ ] robots.txt criado
+- [ ] Google Search Console verificado (manual)
+
+### 2.8 Conversao (CRO)
 
 - [ ] CTA sticky no header ou nav (sempre acessivel)
 - [ ] Minimo 3 CTAs distribuidos na pagina (hero, meio, final)
@@ -201,6 +214,17 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 | `13c11f8` | Fix: remover selos SVG (nao aprovados) |
 | `0b3bb20` | Style: preco/aula mais delicado |
 | `f99dcf6` | Fix: revert footer para claro + ajuste cor preco |
+| `a4d1fdb` | Copy: "Preco de lancamento" → "valor de pre-lancamento" + deadline abril |
+| `35f11d5` | Style: split pre-launch em pill + subtitle sutil |
+| `2d411ca` | Style: micro-copy CTA mais suave (#A89888) |
+| `31bcfbb` | Copy: "ate abril" → "ate o inicio de abril" |
+| `4bd4616` | Fix: nowrap no "R$1,50 por aula" |
+| `cc05a9e` | Copy: texto mais curto para caber em 1 linha mobile |
+| `a3264af` | Copy: pill "valor de pre-lancamento" |
+| `c813381` | Feat: GTM (GTM-PJRZ65PB), sitemap.xml, robots.txt, CSP atualizado |
+| `cd5aa61` | Feat: UTM passthrough para links Hotmart (src automatico) |
+| `be2fcfb` | Feat: vanity URLs (/instagram, /whatsapp, /youtube, /qr, /email) |
+| `a688a94` | Fix: husky hooks desabilitados (migracao AIOS→AIOX) |
 
 ### 4.2 Impacto em Numeros
 
@@ -215,6 +239,13 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 | Links protegidos | 0 `noreferrer` | 6/6 com `noreferrer` |
 | Touch targets dots | 8px | 44px |
 | Contraste text-secondary | 4.2:1 (falha) | 5.2:1 (WCAG AA) |
+| Google Tag Manager | ausente | GTM-PJRZ65PB ativo |
+| Google Analytics (GA4) | ausente | G-34SDRDQEE2 configurado |
+| sitemap.xml | ausente | criado |
+| robots.txt | ausente | criado |
+| UTM tracking | ausente | 6 links com vanity URLs + passthrough Hotmart |
+| Urgencia/deadline | "Preco de lancamento" (vago) | "valor de pre-lancamento · somente ate inicio de abril" |
+| Pre-commit hooks | quebrados (AIOS) | corrigidos |
 
 ### 4.3 Arquivos Modificados
 
@@ -222,6 +253,11 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 - `outputs/lp-namaser/vercel.json` — X-Frame-Options DENY
 - `outputs/lp-namaser/img/*.webp` — 14 imagens WebP criadas
 - `outputs/lp-namaser/img/og-namaser.jpg` — OG image 1200x630
+- `outputs/lp-namaser/sitemap.xml` — sitemap para Google
+- `outputs/lp-namaser/robots.txt` — permite crawlers
+- `docs/marketing/utm-links-namaser.md` — links UTM documentados
+- `.husky/pre-commit` — hook corrigido
+- `.husky/pre-push` — hook corrigido
 
 ---
 
@@ -231,9 +267,9 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 
 | Item | Opcoes Levantadas | Status |
 |------|-------------------|--------|
-| Countdown/deadline no preco | 1) So texto com data. 2) Tag visual sutil. 3) Timer suave em dias | Pendente |
-| Videos YouTube nos depoimentos | Existem no YouTube, avaliar embed | Pendente |
-| Numero real de alunas | Usar numero real (ex: "347 alunas") | Pendente — Gaby precisa informar |
+| Countdown/deadline no preco | Pill "valor de pre-lancamento" + "somente ate inicio de abril" | RESOLVIDO — urgencia real (pagina fecha em abril, lancamento maio) |
+| Videos YouTube nos depoimentos | Ja tem 1 na LP. Mais videos quando Gaby providenciar | Pendente — depende de conteudo |
+| Numero real de alunas | NamaSer tem ~10 alunas, numero baixo demais para exibir | Adiado — revisitar quando 50+ |
 
 ### 5.2 Melhorias Futuras (CRO)
 
@@ -244,7 +280,7 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 | Order bump Hotmart | Upsell 3/10 | "Kit Meditacao Guiada +R$27" no checkout — configurar na Hotmart |
 | Upsell pos-compra | Upsell 3/10 | Sessao individual com Gaby (R$197-297) — configurar na Hotmart |
 | Exit-intent popup | Urgencia 4/10 | Lead magnet "7 dias de yoga gratis" — requer email marketing |
-| Meta Pixel + Google Tag | Urgencia 4/10 | Remarketing para visitantes que nao compraram |
+| Meta Pixel | Urgencia 4/10 | Remarketing Facebook/Instagram (GTM ja instalado, so criar tag) |
 | Comparacao com alternativas | Proposta 7/10 | Diferenciar de YouTube gratis, apps como Calm/Down Dog |
 | Modelo assinatura | Upsell 3/10 | R$29,90/mes com aulas novas mensais — LTV maior |
 | Programa de indicacao | Upsell 3/10 | "Traga uma amiga e ganhe 1 mes gratis" |
@@ -255,7 +291,7 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 |------|-----------|
 | Self-host Google Fonts | Eliminar render-blocking externo |
 | Accordion multiplos abertos | Permitir abrir varios itens simultaneamente |
-| Pre-commit hook | Corrigir hook quebrado pela migracao AIOS→AIOX |
+| ~~Pre-commit hook~~ | ~~RESOLVIDO (a688a94)~~ |
 | Lighthouse formal | Rodar Lighthouse antes/depois e documentar scores |
 
 ---
@@ -272,6 +308,11 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 | Autoplay 8s (nao desativar) | Stakeholder preferiu manter autoplay, so aumentar intervalo |
 | Title tag "Yoga e presenca para a vida real" | Equilibrio entre tom da marca + SEO keyword "yoga" |
 | Copy via squad Light Copy | Constraint: @dev nunca cria texto, squad LC produz, Gaby aprova |
+| Urgencia: "valor de pre-lancamento" | Urgencia real — pagina fecha em abril, lancamento em maio. Sem countdown numerico. |
+| Numero de alunas: NAO incluir | NamaSer tem ~10 alunas, numero baixo. Revisitar quando 50+. |
+| Videos depoimento: aguardar | Ja tem 1. Mais quando Gaby providenciar. |
+| Selos pagamento: REMOVIDO (2a vez) | SVGs ficaram ruins. Micro-copy "Pagamento seguro" e suficiente. |
+| Deploy: Vercel CLI manual | Auto-deploy do GitHub nao estava funcionando. Deploy via `vercel deploy --prod`. |
 
 ---
 
@@ -294,7 +335,16 @@ O EP-11 seguiu este fluxo:
 12. @dev + @ux — Implementou polish UX (11.6)
 13. @devops (Gage) — Push + deploy
 14. Iteracoes de ajuste fino (footer, preco, selos) com aprovacao do stakeholder
-15. @architect (Aria) — Este documento
+15. @architect (Aria) — Documento formal de otimizacao
+--- Dia 2 (15/03/2026) ---
+16. @ux (Uma) — Urgencia: pill "valor de pre-lancamento" + deadline abril
+17. @ux (Uma) — Ajustes finos: micro-copy suave, preco/aula delicado
+18. @ux (Uma) — GTM + GA4 (G-34SDRDQEE2) + CSP atualizado
+19. @ux (Uma) — sitemap.xml + robots.txt
+20. @ux (Uma) — UTM passthrough para Hotmart checkout
+21. @ux (Uma) — Vanity URLs (/instagram, /whatsapp, /youtube, /qr, /email)
+22. @architect (Aria) — Atualizacao deste documento
+23. @devops — Fix hooks + deploy via Vercel CLI
 ```
 
 ### Constraints que funcionaram bem:
@@ -354,3 +404,4 @@ Para futuras analises, usar esta estrutura:
 
 *Documento gerado por Aria (@architect) — EP-11 NamaSer LP Optimization*
 *Baseado na analise de 14/03/2026 e implementacao de 14-15/03/2026*
+*Atualizado em 15/03/2026 com GTM, GA4, UTMs, vanity URLs, urgencia, deploy fixes*
