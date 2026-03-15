@@ -24,6 +24,8 @@
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=919349924221478&ev=PageView&noscript=1"/></noscript>
   <!-- End Meta Pixel -->
+  <!-- reCAPTCHA v3 (invisible) -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6Ldwh4ssAAAAANaHeN0slqqM_2C-TA9NbvR5InvA"></script>
   <title>NamaSer | Yoga e presença diária com Gaby Drummond</title>
   <meta name="description" content="Construa seu Sadhana com a Gaby. 5 trilhas de yoga, ritual diário e comunidade para mulheres que querem presença sem mudar toda a rotina. A partir de R$14,27/mês.">
   <link rel="canonical" href="https://namaser.vercel.app/">
@@ -141,6 +143,7 @@
       text-decoration: none;
     }
     .skip-link:focus { top: 16px; }
+    .grecaptcha-badge { visibility: hidden !important; }
 
     /* ========== UTILITIES ========== */
     .container {
@@ -2983,6 +2986,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button type="submit" style="font-family:var(--font-sans); font-size:1rem; font-weight:500; padding:14px; border-radius:var(--radius-btn); border:none; background:var(--accent); color:var(--white); cursor:pointer; transition:transform 0.2s,background 0.2s;" onmouseover="this.style.background='var(--accent-hover)'" onmouseout="this.style.background='var(--accent)'">Quero sentir</button>
       </form>
       <p style="font-size:0.8rem; color:#A89888; margin-top:12px; font-style:italic;">Sem spam. Só presença.</p>
+      <p style="font-size:0.6rem; color:#C8B9A8; margin-top:8px;">Protegido por reCAPTCHA. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:#C8B9A8;">Privacidade</a> e <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" style="color:#C8B9A8;">Termos</a>.</p>
     </div>
   </div>
 
@@ -3024,17 +3028,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       e.preventDefault();
       var email = document.getElementById('popupEmail').value;
       if (!email) return;
-      // Send to Google Forms silently
-      var formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdRJqQnovsihfBjU8FL4xbd4Bi1uN70RlxI3FoW4nzRp0ECZQ/formResponse';
-      fetch(formUrl + '?entry.1044917162=' + encodeURIComponent(email) + '&submit=Submit', {
-        method: 'POST',
-        mode: 'no-cors'
+      var btn = e.target.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+      // reCAPTCHA v3 validation
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6Ldwh4ssAAAAANaHeN0slqqM_2C-TA9NbvR5InvA', { action: 'lead_capture' }).then(function(token) {
+          // Send to Google Forms silently
+          var formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdRJqQnovsihfBjU8FL4xbd4Bi1uN70RlxI3FoW4nzRp0ECZQ/formResponse';
+          fetch(formUrl + '?entry.1044917162=' + encodeURIComponent(email) + '&submit=Submit', {
+            method: 'POST',
+            mode: 'no-cors'
+          });
+          // Track event
+          if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+          if (typeof gtag !== 'undefined') gtag('event', 'lead_capture', { method: 'exit_popup' });
+          // Redirect to /respire
+          window.location.href = '/respire';
+        });
       });
-      // Track event
-      if (typeof fbq !== 'undefined') fbq('track', 'Lead');
-      if (typeof gtag !== 'undefined') gtag('event', 'lead_capture', { method: 'exit_popup' });
-      // Redirect to /respire
-      window.location.href = '/respire';
     }
     // Close on backdrop click
     document.getElementById('exitPopup').addEventListener('click', function(e) {
