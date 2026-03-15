@@ -2993,6 +2993,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (popupShown || sessionStorage.getItem('popupDismissed')) return;
       popupShown = true;
       document.getElementById('exitPopup').style.display = 'block';
+      // Track popup shown
+      if (typeof gtag !== 'undefined') gtag('event', 'popup_shown', { event_category: 'lead_capture' });
+      if (typeof fbq !== 'undefined') fbq('trackCustom', 'PopupShown');
     }
     function closePopup() {
       document.getElementById('exitPopup').style.display = 'none';
