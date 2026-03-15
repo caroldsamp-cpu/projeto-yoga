@@ -1,4 +1,12 @@
 {
+  "redirects": [
+    { "source": "/instagram", "destination": "/?utm_source=instagram&utm_medium=bio", "permanent": false },
+    { "source": "/stories", "destination": "/?utm_source=instagram&utm_medium=stories", "permanent": false },
+    { "source": "/whatsapp", "destination": "/?utm_source=whatsapp&utm_medium=direto", "permanent": false },
+    { "source": "/youtube", "destination": "/?utm_source=youtube&utm_medium=descricao", "permanent": false },
+    { "source": "/email", "destination": "/?utm_source=email&utm_medium=lista", "permanent": false },
+    { "source": "/qr", "destination": "/?utm_source=qrcode&utm_medium=presencial", "permanent": false }
+  ],
   "headers": [
     {
       "source": "/(.*)",
