@@ -67,10 +67,17 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 4c-1.5 3-2 6-2 9s.5 5 2 7c1.5-2 2-4 2-7s-.5-6-2-9z' fill='%239ED5DB' opacity='.95'/%3E%3Cpath d='M10.5 8c.5 3.5 2 6.5 4 8.5 1-2.5 1-5 0-7.5s-2.5-4-4-5.5z' fill='%239ED5DB' opacity='.75'/%3E%3Cpath d='M21.5 8c-.5 3.5-2 6.5-4 8.5-1-2.5-1-5 0-7.5s2.5-4 4-5.5z' fill='%239ED5DB' opacity='.75'/%3E%3Cpath d='M6 13c1.5 3 4 5.5 6.5 7-.5-2.5-1.5-5-3.5-7S7 11 6 13z' fill='%239ED5DB' opacity='.55'/%3E%3Cpath d='M26 13c-1.5 3-4 5.5-6.5 7 .5-2.5 1.5-5 3.5-7s2-2 3-3z' fill='%239ED5DB' opacity='.55'/%3E%3Cpath d='M16 20c-2 1-4 3-5 5h10c-1-2-3-4-5-5z' fill='%239ED5DB' opacity='.35'/%3E%3Ccircle cx='16' cy='14' r='1.5' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="preload" href="img/hero-gaby.webp" as="image" type="image/webp">
   <link rel="preload" href="img/hero-gaby.jpg" as="image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Self-hosted fonts (eliminates render-blocking external requests) -->
   <style>
+    /* ========== SELF-HOSTED FONTS ========== */
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/inter-300.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/inter-400.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/inter-500.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/inter-600.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/playfair-400.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/playfair-500.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/playfair-600.woff2') format('woff2'); }
+
     /* ========== RESET & BASE ========== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -2792,15 +2799,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const body = item.querySelector('.accordion-body');
       const isOpen = item.classList.contains('open');
 
-      // Close all siblings in same parent
-      const siblings = item.parentElement.querySelectorAll('.accordion-item');
-      siblings.forEach(s => {
-        s.classList.remove('open');
-        s.querySelector('.accordion-body').style.maxHeight = null;
-        s.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
-      });
-
-      if (!isOpen) {
+      if (isOpen) {
+        item.classList.remove('open');
+        body.style.maxHeight = null;
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
         item.classList.add('open');
         body.style.maxHeight = body.scrollHeight + 'px';
         btn.setAttribute('aria-expanded', 'true');
