@@ -3031,7 +3031,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (e.clientY < 10 && !popupShown) showPopup();
     });
     // Mobile: scroll depth 40% + scroll up or 3s pause
-    if (window.innerWidth < 768) {
+    if ('ontouchstart' in window || window.innerWidth < 1024) {
       var maxScroll = 0;
       var pauseTimer = null;
       window.addEventListener('scroll', function() {
