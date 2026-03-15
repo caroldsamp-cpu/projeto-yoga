@@ -274,6 +274,7 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 | `901d5f8` | Google Search Console: tag de verificacao |
 | `dea1837` | Meta Pixel (919349924221478) + CSP atualizado |
 | `a8d0b76` | Fix: CSP removido (bloqueava Meta Pixel, Clarity, GA4) |
+| `8dd1b57` | Accordion multiplos abertos + self-host Google Fonts (WOFF2) |
 
 ### 4.2 Impacto em Numeros
 
@@ -299,6 +300,8 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 | Microsoft Clarity | ausente | ativo via GTM (gravacoes + heatmaps) |
 | Meta Pixel | ausente | 919349924221478 ativo (site + Hotmart API de Conversoes) |
 | CSP | restritivo (bloqueava trackers) | removido (outros headers mantidos) |
+| Google Fonts | externo (render-blocking) | self-hosted WOFF2, zero requests externos |
+| Accordion | fecha irmaos automaticamente | multiplos abertos simultaneamente |
 
 ### 4.3 Arquivos Modificados
 
@@ -329,11 +332,12 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 | Item | Nota da Analise | Descricao |
 |------|----------------|-----------|
 | Reordenar secoes | Funil 8/10 | Mostrar "Para Quem" (dor) ANTES do Reframe filosofico — testar com dados |
-| Tiers de preco | Pricing 6.5/10 | Considerar Basico/Completo/VIP — decisao de produto |
-| Order bump Hotmart | Upsell 3/10 | "Kit Meditacao Guiada +R$27" no checkout — configurar na Hotmart |
+| ~~Tiers de preco~~ | ~~Descartado~~ | ~~Decisao: manter 1 tier (R$138)~~ |
+| Order bump Hotmart | Upsell 3/10 | Produto complementar ~R$27 no checkout — ideias a definir com @pm baseado em materiais teoricos existentes |
 | Upsell pos-compra | Upsell 3/10 | Sessao individual com Gaby (R$197-297) — configurar na Hotmart |
-| Exit-intent popup | Urgencia 4/10 | Lead magnet "7 dias de yoga gratis" — requer email marketing |
-| Meta Pixel | Urgencia 4/10 | Remarketing Facebook/Instagram (GTM ja instalado, so criar tag) |
+| Exit-intent / Lead magnet | Urgencia 4/10 | Material gratuito para captura de email — ideias a definir com @pm baseado em materiais teoricos existentes |
+| ~~Meta Pixel~~ | ~~RESOLVIDO~~ | ~~Pixel instalado (919349924221478) + API de Conversoes Hotmart~~ |
+| ~~Meta Pixel~~ | ~~RESOLVIDO~~ | ~~Pixel instalado (919349924221478) + API de Conversoes Hotmart~~ |
 | Comparacao com alternativas | Proposta 7/10 | Diferenciar de YouTube gratis, apps como Calm/Down Dog |
 | Modelo assinatura | Upsell 3/10 | R$29,90/mes com aulas novas mensais — LTV maior |
 | Programa de indicacao | Upsell 3/10 | "Traga uma amiga e ganhe 1 mes gratis" |
@@ -342,10 +346,11 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 
 | Item | Descricao |
 |------|-----------|
-| Self-host Google Fonts | Eliminar render-blocking externo |
-| Accordion multiplos abertos | Permitir abrir varios itens simultaneamente |
+| ~~Self-host Google Fonts~~ | ~~RESOLVIDO (8dd1b57) — WOFF2 local~~ |
+| ~~Accordion multiplos abertos~~ | ~~RESOLVIDO (8dd1b57)~~ |
 | ~~Pre-commit hook~~ | ~~RESOLVIDO (a688a94)~~ |
-| Lighthouse formal | Rodar Lighthouse antes/depois e documentar scores |
+| Lighthouse formal | Rodar Lighthouse e documentar scores |
+| Dominio proprio | Apontar gabydrummondyoga.com.br para Vercel + verificar no Facebook BM |
 
 ---
 
@@ -402,6 +407,8 @@ O EP-11 seguiu este fluxo:
 21. @ux (Uma) — Vanity URLs (/instagram, /whatsapp, /youtube, /qr, /email)
 22. @architect (Aria) — Atualizacao deste documento
 23. @devops — Fix hooks + deploy via Vercel CLI
+24. @architect (Aria) — Accordion multiplos abertos + self-host fonts WOFF2
+25. @architect (Aria) — Atualizacao doc otimizacao (analytics, fonts, accordion, decisoes)
 ```
 
 ### Constraints que funcionaram bem:
