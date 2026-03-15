@@ -106,16 +106,62 @@ Use este checklist ao construir uma LP do zero. Cada item deve ser implementado 
 
 ### 2.7 Analytics & Rastreamento
 
-- [ ] Google Tag Manager (GTM) instalado no `<head>` + `<body>` (noscript)
-- [ ] Google Analytics (GA4) configurado como tag no GTM
-- [ ] CSP atualizado para permitir googletagmanager.com + google-analytics.com
-- [ ] Links UTM definidos para cada canal (Instagram, WhatsApp, YouTube, Email, QR Code)
-- [ ] Vanity URLs configuradas no vercel.json (`/instagram`, `/whatsapp`, etc.)
-- [ ] UTM passthrough para checkout: script que pega UTMs da URL e repassa pros links de compra
-- [ ] Hotmart recebe `src` param automaticamente (ex: `src=instagram-stories`)
-- [ ] sitemap.xml criado
-- [ ] robots.txt criado
-- [ ] Google Search Console verificado (manual)
+**Para que serve cada ferramenta:**
+
+| Ferramenta | Para que serve |
+|-----------|----------------|
+| **Google Tag Manager (GTM)** | Container central que gerencia todos os scripts de rastreamento. Em vez de colar cada script no HTML, tu gerencia tudo pelo painel do GTM sem mexer no codigo. |
+| **Google Analytics (GA4)** | Mostra quantas pessoas visitaram, de onde vieram, quanto tempo ficaram, quais secoes viram. Acessa em analytics.google.com → Relatorios. |
+| **Google Search Console** | Mostra como o Google ve teu site: quais buscas levam a ele, se tem erros de indexacao, quantas vezes apareceu nos resultados. Acessa em search.google.com/search-console. |
+| **Microsoft Clarity** | Grava sessoes de visitantes (tu ve exatamente o que eles fizeram no site) e gera mapas de calor (onde clicaram, ate onde rolaram). Gratuito. Acessa em clarity.microsoft.com. |
+| **Meta Pixel** | Rastreia visitantes que vieram do Instagram/Facebook. Permite criar publicos de remarketing (mostrar anuncios para quem ja visitou). Essencial para trafego pago. |
+| **UTMs** | Parametros no link que identificam de onde veio o visitante (instagram, whatsapp, youtube, etc.). O GA4 le automaticamente. |
+| **Vanity URLs** | Links curtos (/instagram, /whatsapp) que redirecionam para o link com UTM. Mais bonito para compartilhar. |
+| **UTM Passthrough** | Script que pega os UTMs da URL e repassa para o link de checkout (Hotmart). Assim tu sabe de onde veio cada venda. |
+| **sitemap.xml** | Arquivo que lista as paginas do site para o Google indexar mais rapido. |
+| **robots.txt** | Arquivo que diz aos buscadores "pode indexar este site". |
+
+**Checklist de implementacao:**
+
+- [ ] GTM instalado no `<head>` (script) + `<body>` (noscript)
+- [ ] GA4 configurado como Google tag no GTM (ID `G-XXXXX`)
+- [ ] GA4 tambem configurado na Hotmart (Configuracoes → Pixel → Google Analytics)
+- [ ] Google Search Console verificado (meta tag de verificacao no head)
+- [ ] Microsoft Clarity conectado via GTM (instalar pelo painel do Clarity)
+- [ ] Meta Pixel instalado no `<head>` (script fbevents.js + init + PageView)
+- [ ] Meta Pixel configurado na Hotmart (Configuracoes → Pixel → Facebook)
+- [ ] Hotmart com API de Conversoes (token de acesso) para rastrear compras server-side
+- [ ] Correspondencia avancada automatica ativada no Meta Pixel (Events Manager → Configuracoes)
+- [ ] Links UTM definidos para cada canal
+- [ ] Vanity URLs configuradas no vercel.json (redirects)
+- [ ] Script UTM passthrough no JS da pagina (repassa utm_source/medium/campaign pro checkout)
+- [ ] Hotmart recebe parametro `src` automaticamente (ex: `src=instagram-stories`)
+- [ ] sitemap.xml criado na raiz do projeto
+- [ ] robots.txt criado na raiz do projeto
+- [ ] CSP removido (incompativel com multiplos trackers — Meta Pixel, Clarity, GA4 usam muitos dominios)
+
+**Nota sobre CSP:** Content Security Policy e uma regra de seguranca que restringe quais scripts podem rodar na pagina. Para LPs com multiplos trackers (GTM, GA4, Meta Pixel, Clarity), o CSP bloqueia os scripts de rastreamento. Os outros headers de seguranca (X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy) continuam ativos e sao suficientes para uma LP estatica.
+
+**Links UTM prontos (vanity URLs):**
+
+| Canal | Link curto | Rastreia como |
+|-------|-----------|---------------|
+| Instagram bio | `namaser.vercel.app/instagram` | instagram / bio |
+| Instagram stories | `namaser.vercel.app/stories` | instagram / stories |
+| WhatsApp | `namaser.vercel.app/whatsapp` | whatsapp / direto |
+| YouTube | `namaser.vercel.app/youtube` | youtube / descricao |
+| Email | `namaser.vercel.app/email` | email / lista |
+| QR Code (presencial) | `namaser.vercel.app/qr` | qrcode / presencial |
+
+**Onde ver os dados:**
+
+| Dado | Onde ver |
+|------|---------|
+| Visitantes, origem, tempo no site | analytics.google.com → Relatorios → Aquisicao |
+| Gravacoes de sessao, mapa de calor | clarity.microsoft.com → Recordings / Heatmaps |
+| Buscas no Google, indexacao | search.google.com/search-console |
+| Publico para remarketing | business.facebook.com → Events Manager |
+| Origem de cada venda | Hotmart → Vendas → campo src |
 
 ### 2.8 Conversao (CRO)
 
@@ -225,6 +271,9 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 | `cd5aa61` | Feat: UTM passthrough para links Hotmart (src automatico) |
 | `be2fcfb` | Feat: vanity URLs (/instagram, /whatsapp, /youtube, /qr, /email) |
 | `a688a94` | Fix: husky hooks desabilitados (migracao AIOS→AIOX) |
+| `901d5f8` | Google Search Console: tag de verificacao |
+| `dea1837` | Meta Pixel (919349924221478) + CSP atualizado |
+| `a8d0b76` | Fix: CSP removido (bloqueava Meta Pixel, Clarity, GA4) |
 
 ### 4.2 Impacto em Numeros
 
@@ -246,6 +295,10 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 | UTM tracking | ausente | 6 links com vanity URLs + passthrough Hotmart |
 | Urgencia/deadline | "Preco de lancamento" (vago) | "valor de pre-lancamento · somente ate inicio de abril" |
 | Pre-commit hooks | quebrados (AIOS) | corrigidos |
+| Google Search Console | nao verificado | verificado e ativo |
+| Microsoft Clarity | ausente | ativo via GTM (gravacoes + heatmaps) |
+| Meta Pixel | ausente | 919349924221478 ativo (site + Hotmart API de Conversoes) |
+| CSP | restritivo (bloqueava trackers) | removido (outros headers mantidos) |
 
 ### 4.3 Arquivos Modificados
 
@@ -313,6 +366,10 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 | Videos depoimento: aguardar | Ja tem 1. Mais quando Gaby providenciar. |
 | Selos pagamento: REMOVIDO (2a vez) | SVGs ficaram ruins. Micro-copy "Pagamento seguro" e suficiente. |
 | Deploy: Vercel CLI manual | Auto-deploy do GitHub nao estava funcionando. Deploy via `vercel deploy --prod`. |
+| CSP removido | Meta Pixel, Clarity e GA4 usam muitos dominios dinamicos. CSP bloqueava todos. Outros headers de seguranca mantidos. |
+| Meta Pixel no site + Hotmart | Dupla cobertura: pixel no site (PageView) + Hotmart API de Conversoes (Purchase server-side). |
+| Verificacao de dominio BM: NAO | namaser.vercel.app e subdominio da Vercel, Facebook nao aceita verificacao. Resolver quando tiver dominio proprio. |
+| Numero de alunas: NAO incluir | NamaSer tem ~10 alunas. Numero baixo demais. Revisitar quando chegar a 50+. |
 
 ---
 
@@ -405,3 +462,4 @@ Para futuras analises, usar esta estrutura:
 *Documento gerado por Aria (@architect) — EP-11 NamaSer LP Optimization*
 *Baseado na analise de 14/03/2026 e implementacao de 14-15/03/2026*
 *Atualizado em 15/03/2026 com GTM, GA4, UTMs, vanity URLs, urgencia, deploy fixes*
+*Atualizado em 15/03/2026 com Meta Pixel, Clarity, Search Console, API de Conversoes Hotmart, CSP removal, guia completo de analytics*
