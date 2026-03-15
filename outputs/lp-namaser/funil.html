@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funil NamaSer | Visao Estrategica</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 4c-1.5 3-2 6-2 9s.5 5 2 7c1.5-2 2-4 2-7s-.5-6-2-9z' fill='%239ED5DB' opacity='.95'/%3E%3Ccircle cx='16' cy='14' r='1.5' fill='%23fff'/%3E%3C/svg%3E">
+  <style>
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/inter-300.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/inter-400.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/inter-500.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/inter-600.woff2') format('woff2'); }
+    @font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/playfair-400.woff2') format('woff2'); }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #FDFBF7;
+      --bg-warm: #F5F0EB;
+      --bg-card: #fff;
+      --text: #2D2926;
+      --text-secondary: #5D5145;
+      --text-soft: #A89888;
+      --accent: #1A6B6A;
+      --accent-light: rgba(26, 107, 106, 0.08);
+      --lavender: #9ED5DB;
+      --border: #E8E0D6;
+      --topo: #9ED5DB;
+      --meio: #1A6B6A;
+      --fundo: #C8956C;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 40px 24px;
+    }
+
+    .container { max-width: 900px; margin: 0 auto; }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .header-logo { height: 64px; margin-bottom: 24px; }
+    .header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .header p {
+      color: var(--text-soft);
+      font-size: 0.95rem;
+    }
+    .header .badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 12px;
+    }
+
+    /* Funnel visual */
+    .funnel {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 56px;
+    }
+    .funnel-stage {
+      position: relative;
+      padding: 32px;
+      border-radius: 16px;
+      margin-bottom: 2px;
+    }
+    .funnel-stage::after {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: var(--bg);
+      position: absolute;
+      bottom: -13px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      z-index: 1;
+    }
+    .funnel-stage:last-child::after { display: none; }
+
+    .stage-topo { background: rgba(158, 213, 219, 0.12); }
+    .stage-meio { background: rgba(26, 107, 106, 0.06); }
+    .stage-fundo { background: rgba(200, 149, 108, 0.1); }
+
+    .stage-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
+    }
+    .stage-topo .stage-label { color: #5BA8B0; }
+    .stage-meio .stage-label { color: var(--accent); }
+    .stage-fundo .stage-label { color: #B07D56; }
+
+    .stage-title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .stage-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .stage-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .stage-item .icon { font-size: 1rem; }
+
+    /* Arrow between stages */
+    .arrow {
+      text-align: center;
+      padding: 12px 0;
+      color: var(--border);
+      font-size: 1.2rem;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 48px;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--text);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Cards grid */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .card-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .card p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .card .url {
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-top: 8px;
+      word-break: break-all;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin-top: 8px;
+    }
+    th, td {
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      color: var(--text-soft);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+    td { color: var(--text-secondary); }
+    td code {
+      background: var(--accent-light);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      color: var(--accent);
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: var(--border);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 24px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg);
+    }
+    .timeline-item .date {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+    .timeline-item .desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* IDs box */
+    .ids-box {
+      background: var(--bg-warm);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 16px;
+    }
+    .ids-box p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+    }
+    .ids-box code {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      color: var(--text-soft);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 639px) {
+      body { padding: 24px 16px; }
+      .funnel-stage { padding: 20px; }
+      .stage-items { flex-direction: column; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <img src="img/logo-gaby.svg" alt="NamaSer" class="header-logo">
+    <h1>Funil NamaSer</h1>
+    <p>Visao estrategica do caminho da descoberta ate a conversao</p>
+    <span class="badge">Ativo desde 15/03/2026</span>
+  </div>
+
+  <!-- Funnel Visual -->
+  <div class="funnel">
+
+    <div class="funnel-stage stage-topo">
+      <div class="stage-label">Topo — Descoberta</div>
+      <div class="stage-title">Como as pessoas chegam</div>
+      <div class="stage-items">
+        <div class="stage-item"><span class="icon">📸</span> Instagram bio <code>/instagram</code></div>
+        <div class="stage-item"><span class="icon">📱</span> Stories <code>/stories</code></div>
+        <div class="stage-item"><span class="icon">💬</span> WhatsApp <code>/whatsapp</code></div>
+        <div class="stage-item"><span class="icon">🎬</span> YouTube <code>/youtube</code></div>
+        <div class="stage-item"><span class="icon">📧</span> Email <code>/email</code></div>
+        <div class="stage-item"><span class="icon">📱</span> QR Code <code>/qr</code></div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="funnel-stage stage-meio">
+      <div class="stage-label">Meio — Captura + Experiencia</div>
+      <div class="stage-title">Onde a conexao acontece</div>
+      <div class="stage-items">
+        <div class="stage-item"><span class="icon">🌿</span> Landing Page (18 secoes)</div>
+        <div class="stage-item"><span class="icon">✉️</span> Popup exit-intent (captura email)</div>
+        <div class="stage-item"><span class="icon">🧘</span> /respire (video respiracao 4min)</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="funnel-stage stage-fundo">
+      <div class="stage-label">Fundo — Conversao</div>
+      <div class="stage-title">O momento da decisao</div>
+      <div class="stage-items">
+        <div class="stage-item"><span class="icon">💳</span> Checkout Hotmart · 12x R$14,27</div>
+        <div class="stage-item"><span class="icon">🎯</span> UTM + src rastreados</div>
+        <div class="stage-item"><span class="icon">✨</span> Aluna NamaSer</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Links UTM -->
+  <div class="section">
+    <h2 class="section-title">Links por Canal</h2>
+    <table>
+      <thead>
+        <tr><th>Canal</th><th>Link curto</th><th>Rastreia como</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Instagram bio</td><td><code>namaser.vercel.app/instagram</code></td><td>instagram / bio</td></tr>
+        <tr><td>Instagram stories</td><td><code>namaser.vercel.app/stories</code></td><td>instagram / stories</td></tr>
+        <tr><td>WhatsApp</td><td><code>namaser.vercel.app/whatsapp</code></td><td>whatsapp / direto</td></tr>
+        <tr><td>YouTube</td><td><code>namaser.vercel.app/youtube</code></td><td>youtube / descricao</td></tr>
+        <tr><td>Email</td><td><code>namaser.vercel.app/email</code></td><td>email / lista</td></tr>
+        <tr><td>QR Code</td><td><code>namaser.vercel.app/qr</code></td><td>qrcode / presencial</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Jornada do Lead Magnet -->
+  <div class="section">
+    <h2 class="section-title">Jornada: /respire</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-label">Chegada</div>
+        <h3>Logo + breathing glow</h3>
+        <p>Calma e reconhecimento. A pessoa sabe que esta num espaco da Gaby.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Convite</div>
+        <h3>"Respira fundo. Eu te guio a partir daqui."</h3>
+        <p>Confianca e intimidade. A Gaby fala diretamente com ela.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Experiencia</div>
+        <h3>Video de respiracao (4 min)</h3>
+        <p>O corpo solta. Os ombros descem. A pessoa SENTE o que palavras nao explicam.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Semente</div>
+        <h3>"Isso que voce sentiu agora? Pode ser o comeco..."</h3>
+        <p>Desejo sutil. Nao e pitch, e possibilidade.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Proximo passo</div>
+        <h3>"Quero mais momentos assim"</h3>
+        <p>Botao soft (teal clarinho). Decisao natural, sem pressao.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Acolhimento</div>
+        <h3>"Te espero la dentro."</h3>
+        <p>Pertencimento. A Gaby esta do outro lado esperando.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rastreamento -->
+  <div class="section">
+    <h2 class="section-title">Rastreamento</h2>
+    <table>
+      <thead>
+        <tr><th>Ferramenta</th><th>O que rastreia</th><th>Onde ver</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Google Analytics (GA4)</td><td>Visitantes, origem, tempo, paginas</td><td>analytics.google.com</td></tr>
+        <tr><td>Google Tag Manager</td><td>Container de todos os scripts</td><td>tagmanager.google.com</td></tr>
+        <tr><td>Microsoft Clarity</td><td>Gravacoes de sessao, mapas de calor</td><td>clarity.microsoft.com</td></tr>
+        <tr><td>Meta Pixel</td><td>Visitantes do Instagram/Facebook</td><td>business.facebook.com</td></tr>
+        <tr><td>Search Console</td><td>Buscas no Google, indexacao</td><td>search.google.com/search-console</td></tr>
+        <tr><td>Hotmart (src)</td><td>Origem de cada venda</td><td>Hotmart → Vendas</td></tr>
+        <tr><td>Google Sheets</td><td>Emails capturados no popup</td><td>Google Sheets</td></tr>
+      </tbody>
+    </table>
+
+    <div class="ids-box">
+      <p>GTM: <code>GTM-PJRZ65PB</code></p>
+      <p>GA4: <code>G-34SDRDQEE2</code></p>
+      <p>Meta Pixel: <code>919349924221478</code></p>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="section">
+    <h2 class="section-title">Timeline do Lancamento</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="date">Agora → inicio abril</div>
+        <div class="desc">LP ativa com preco de pre-lancamento. Captura de leads via popup.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">Inicio de abril</div>
+        <div class="desc">Pagina fecha. Leads acumulados no Google Sheets.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">Abril</div>
+        <div class="desc">Preparacao do lancamento. Sequencia de emails para leads.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="date">Inicio de maio</div>
+        <div class="desc">Lancamento oficial. Preco novo (maior). Trafego pago.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Metricas -->
+  <div class="section">
+    <h2 class="section-title">Metricas a Acompanhar</h2>
+    <table>
+      <thead>
+        <tr><th>Metrica</th><th>Onde ver</th><th>Meta</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Visitantes/dia</td><td>GA4 → Tempo real</td><td>Baseline</td></tr>
+        <tr><td>Taxa de captura (popup)</td><td>Sheets / GA4</td><td>3-5%</td></tr>
+        <tr><td>Origem do trafego</td><td>GA4 → Aquisicao</td><td>Qual canal traz mais</td></tr>
+        <tr><td>Scroll depth</td><td>Clarity → Heatmaps</td><td>Ate onde vao</td></tr>
+        <tr><td>Vendas por origem</td><td>Hotmart → src</td><td>Qual canal vende</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Proximos passos -->
+  <div class="section">
+    <h2 class="section-title">Proximos Passos</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-label">Alta prioridade</div>
+        <h3>Sequencia de emails</h3>
+        <p>Configurar no MailerLite. Nutrir leads capturados ate o lancamento.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Media</div>
+        <h3>Order bump: Diario do Sadhana</h3>
+        <p>PDF 30 dias. R$27 no checkout. Custo zero de producao.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Media</div>
+        <h3>Dominio proprio</h3>
+        <p>gabydrummondyoga.com.br → Vercel. Verificar no Facebook BM.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Lancamento</div>
+        <h3>Trafego pago: Meta Ads</h3>
+        <p>Campanhas para o lancamento de maio. Pixel ja instalado.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Pos-lancamento</div>
+        <h3>Quiz de autoconhecimento</h3>
+        <p>App web interativo. Lead magnet com conversao 30-50% maior que PDF.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Pos-lancamento</div>
+        <h3>Guia Lunar NamaSer</h3>
+        <p>App web com fase da lua + pratica do dia. Visitas recorrentes.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Funil NamaSer · Ativo desde 15/03/2026</p>
+    <p>namaser.vercel.app</p>
+  </div>
+
+</div>
+
+</body>
+</html>
