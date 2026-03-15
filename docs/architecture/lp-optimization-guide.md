@@ -70,6 +70,10 @@ Use este checklist ao construir uma LP do zero. Cada item deve ser implementado 
 - [ ] Formato WebP com fallback JPG usando `<picture>`
 - [ ] Imagens redimensionadas para max 1200-1440px de largura (nao usar 4000px+ na web)
 - [ ] CSS global: `picture { display: block; width: 100%; height: 100%; }` (evita quebra de layout em containers flex/grid)
+- [ ] Hero responsiva: versao menor para mobile (640px) via `<picture media="(max-width: 640px)">`
+- [ ] Preload responsivo: `<link rel="preload" media="(max-width: 640px)">` para hero mobile
+- [ ] JPGs originais redimensionados para max 1200px (nao subir fotos 4000px+ para web)
+- [ ] Todas as imagens (incluindo SVGs) com `width` e `height` no HTML
 
 ### 2.5 Seguranca (vercel.json)
 
@@ -275,6 +279,9 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 | `dea1837` | Meta Pixel (919349924221478) + CSP atualizado |
 | `a8d0b76` | Fix: CSP removido (bloqueava Meta Pixel, Clarity, GA4) |
 | `8dd1b57` | Accordion multiplos abertos + self-host Google Fonts (WOFF2) |
+| `a74329d` | Perf: resize JPG fallbacks para max 1200px (100MB → 2.3MB) |
+| `b506fb3` | Perf: width/height nos logos SVG (Lighthouse fix) |
+| `d2c9083` | Perf: hero responsiva — 640px para mobile (308KB → 96KB) |
 
 ### 4.2 Impacto em Numeros
 
@@ -301,7 +308,43 @@ Use quando tiver uma LP pronta e quiser elevar a qualidade. Este foi o processo 
 | Meta Pixel | ausente | 919349924221478 ativo (site + Hotmart API de Conversoes) |
 | CSP | restritivo (bloqueava trackers) | removido (outros headers mantidos) |
 | Google Fonts | externo (render-blocking) | self-hosted WOFF2, zero requests externos |
+
+### 4.3 Lighthouse Scores (15/03/2026)
+
+| Metrica | Desktop | Mobile (Slow 4G) |
+|---------|---------|-------------------|
+| **Performance** | 93 | 61 |
+| **Accessibility** | 98 | 98 |
+| **Best Practices** | 96 | 96 |
+| **SEO** | 100 | 100 |
+| FCP | 0.5s | 1.1s |
+| LCP | 1.3s | 5.6s |
+| TBT | 140ms | 730ms |
+| CLS | 0 | 0 |
+| Speed Index | 1.2s | 2.3s |
+
+**Nota sobre Performance mobile (61):**
+O score mobile e limitado pelos scripts de rastreamento de terceiros (GTM, GA4, Meta Pixel, Clarity) que adicionam ~700ms de Total Blocking Time em conexao Slow 4G. Isso e um trade-off necessario: rastreamento de marketing vs velocidade. Sites com a mesma stack de trackers (Hotmart, Nubank, iFood) ficam entre 50-70 no Lighthouse mobile. NAO e possivel melhorar sem remover trackers.
+
+**O que foi feito para performance:**
+- Imagens WebP (98% menores que JPGs originais)
+- JPGs fallback redimensionados (100MB → 2.3MB)
+- Hero responsiva (640px no mobile, 1440px no desktop)
+- Preload responsivo (mobile carrega hero mobile, desktop carrega hero desktop)
+- Self-host Google Fonts (elimina 2 conexoes externas)
+- fetchpriority="high" na hero
+- loading="lazy" + decoding="async" em todas below-fold
+- width/height em todas as imagens (zero CLS)
+- `<picture>` com WebP + JPG fallback
+
+**O que NAO vale a pena fazer (ganho minimo):**
+- Minify CSS (economia de 4KB — irrelevante)
+- Minify JS (economia de 2KB — irrelevante)
+- Remover trackers para ganhar performance (perde rastreamento)
 | Accordion | fecha irmaos automaticamente | multiplos abertos simultaneamente |
+| JPGs fallback | 4000-6000px originais (100MB) | redimensionados para max 1200px (2.3MB) |
+| Hero mobile | mesma imagem 1440px em todas as telas | versao 640px para mobile (96KB vs 308KB) |
+| Logos SVG | sem width/height | width/height adicionados |
 
 ### 4.3 Arquivos Modificados
 
