@@ -2742,6 +2742,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- SCRIPTS -->
   <script>
+    // UTM passthrough to Hotmart checkout links
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const utmSource = params.get('utm_source');
+      const utmMedium = params.get('utm_medium');
+      const utmCampaign = params.get('utm_campaign');
+      if (utmSource) {
+        const src = utmMedium ? utmSource + '-' + utmMedium : utmSource;
+        document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function(link) {
+          var url = new URL(link.href);
+          url.searchParams.set('src', src);
+          if (utmSource) url.searchParams.set('utm_source', utmSource);
+          if (utmMedium) url.searchParams.set('utm_medium', utmMedium);
+          if (utmCampaign) url.searchParams.set('utm_campaign', utmCampaign);
+          link.href = url.toString();
+        });
+      }
+    })();
+
     // Accordion (with ARIA)
     // Initialize ARIA attributes on all accordion items
     document.querySelectorAll('.accordion-item').forEach((item, idx) => {
