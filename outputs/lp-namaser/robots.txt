@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://namaser.vercel.app/sitemap.xml
