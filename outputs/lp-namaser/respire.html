@@ -294,5 +294,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
+<script>
+// UTM passthrough to Hotmart checkout
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var utmSource = params.get('utm_source') || 'respire';
+  var utmMedium = params.get('utm_medium') || 'lead_magnet';
+  var src = utmMedium ? utmSource + '-' + utmMedium : utmSource;
+  document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function(link) {
+    var url = new URL(link.href);
+    url.searchParams.set('src', src);
+    url.searchParams.set('utm_source', utmSource);
+    url.searchParams.set('utm_medium', utmMedium);
+    link.href = url.toString();
+  });
+})();
+</script>
 </body>
 </html>
