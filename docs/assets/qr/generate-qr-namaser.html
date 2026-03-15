@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>QR Code NamaSer - Gerador</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f5f5f5;
+    font-family: sans-serif;
+  }
+  .controls {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .controls button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background: #0d7377;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .controls button:hover { background: #0a5c5f; }
+  .preview {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+
+<div class="controls">
+  <h2>QR Code NamaSer — Gerador para Impressão</h2>
+  <p>Link: <strong>https://namaser.vercel.app/qr</strong></p>
+  <button onclick="downloadPNG()">⬇️ Baixar PNG (alta resolução)</button>
+  <button onclick="downloadSVG()">⬇️ Baixar SVG (vetor)</button>
+</div>
+
+<div class="preview">
+  <canvas id="qrCanvas"></canvas>
+</div>
+
+<script>
+const QR_URL = 'https://namaser.vercel.app/qr';
+const QR_COLOR = '#5BC0C4';       // azul claro do QR
+const TITLE_COLOR = '#0d4f5a';    // azul escuro do título
+const TEXT_COLOR = '#0d4f5a';     // azul escuro do texto
+const BG_COLOR = '#ffffff';
+
+// Alta resolução para impressão (300 DPI para ~10cm = ~1200px)
+const CANVAS_WIDTH = 1200;
+const QR_SIZE = 580;
+const QR_X = (CANVAS_WIDTH - QR_SIZE) / 2;
+const QR_Y = 280;
+const CANVAS_HEIGHT = 1200;
+
+function generateQR() {
+  const qr = qrcode(0, 'M');
+  qr.addData(QR_URL);
+  qr.make();
+
+  const canvas = document.getElementById('qrCanvas');
+  canvas.width = CANVAS_WIDTH;
+  canvas.height = CANVAS_HEIGHT;
+  const ctx = canvas.getContext('2d');
+
+  // Background
+  ctx.fillStyle = BG_COLOR;
+  ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+  // Title "NamaSer"
+  ctx.fillStyle = TITLE_COLOR;
+  ctx.font = '400 90px "Playfair Display", Georgia, serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('NamaSer', CANVAS_WIDTH / 2, 160);
+
+  // Draw QR code
+  const moduleCount = qr.getModuleCount();
+  const cellSize = QR_SIZE / moduleCount;
+
+  for (let row = 0; row < moduleCount; row++) {
+    for (let col = 0; col < moduleCount; col++) {
+      if (qr.isDark(row, col)) {
+        ctx.fillStyle = QR_COLOR;
+        ctx.fillRect(
+          QR_X + col * cellSize,
+          QR_Y + row * cellSize,
+          cellSize + 0.5,
+          cellSize + 0.5
+        );
+      }
+    }
+  }
+
+  // Subtitle
+  ctx.fillStyle = TEXT_COLOR;
+  ctx.font = '400 42px "Playfair Display", Georgia, serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('Acesse sua leveza diária', CANVAS_WIDTH / 2, QR_Y + QR_SIZE + 100);
+}
+
+function downloadPNG() {
+  const canvas = document.getElementById('qrCanvas');
+  const link = document.createElement('a');
+  link.download = 'namaser-qr-leveza-diaria-print.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+}
+
+function downloadSVG() {
+  const qr = qrcode(0, 'M');
+  qr.addData(QR_URL);
+  qr.make();
+  const moduleCount = qr.getModuleCount();
+  const cellSize = QR_SIZE / moduleCount;
+
+  let svgParts = [];
+  svgParts.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${CANVAS_WIDTH}" height="${CANVAS_HEIGHT}" viewBox="0 0 ${CANVAS_WIDTH} ${CANVAS_HEIGHT}">`);
+  svgParts.push(`<rect width="100%" height="100%" fill="${BG_COLOR}"/>`);
+
+  // Title
+  svgParts.push(`<text x="${CANVAS_WIDTH/2}" y="160" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="400" font-size="90" fill="${TITLE_COLOR}">NamaSer</text>`);
+
+  // QR modules
+  for (let row = 0; row < moduleCount; row++) {
+    for (let col = 0; col < moduleCount; col++) {
+      if (qr.isDark(row, col)) {
+        const x = QR_X + col * cellSize;
+        const y = QR_Y + row * cellSize;
+        svgParts.push(`<rect x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${(cellSize+0.5).toFixed(2)}" height="${(cellSize+0.5).toFixed(2)}" fill="${QR_COLOR}"/>`);
+      }
+    }
+  }
+
+  // Subtitle
+  svgParts.push(`<text x="${CANVAS_WIDTH/2}" y="${QR_Y + QR_SIZE + 100}" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="42" fill="${TEXT_COLOR}">Acesse sua leveza diária</text>`);
+  svgParts.push('</svg>');
+
+  const svgContent = svgParts.join('\n');
+  const blob = new Blob([svgContent], { type: 'image/svg+xml' });
+  const link = document.createElement('a');
+  link.download = 'namaser-qr-leveza-diaria-print.svg';
+  link.href = URL.createObjectURL(blob);
+  link.click();
+}
+
+// Wait for Playfair Display to load before rendering
+document.fonts.ready.then(() => generateQR());
+</script>
+</body>
+</html>
