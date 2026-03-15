@@ -3025,19 +3025,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.addEventListener('mouseout', function(e) {
       if (e.clientY < 10 && !popupShown) showPopup();
     });
-    // Mobile: back/scroll up gesture after 30s on page
-    var mobileTimer = null;
+    // Mobile: scroll depth 40% + scroll up or 3s pause
     if (window.innerWidth < 768) {
-      mobileTimer = setTimeout(function() {
-        var lastScroll = window.scrollY;
-        window.addEventListener('scroll', function onScroll() {
-          if (window.scrollY < lastScroll - 100 && window.scrollY > 300) {
-            showPopup();
-            window.removeEventListener('scroll', onScroll);
-          }
-          lastScroll = window.scrollY;
-        });
-      }, 30000);
+      var maxScroll = 0;
+      var pauseTimer = null;
+      window.addEventListener('scroll', function() {
+        var scrollPct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+        if (scrollPct > maxScroll) maxScroll = scrollPct;
+        // Only activate after scrolling 40% of page
+        if (maxScroll < 0.4) return;
+        // Trigger on scroll up gesture
+        if (window.scrollY < maxScroll * (document.body.scrollHeight - window.innerHeight) - 150) {
+          showPopup();
+        }
+        // Trigger on 3s pause after 40%
+        clearTimeout(pauseTimer);
+        pauseTimer = setTimeout(function() {
+          if (maxScroll >= 0.4) showPopup();
+        }, 3000);
+      }, { passive: true });
     }
     // Submit to Google Forms + redirect
     function submitPopup(e) {
