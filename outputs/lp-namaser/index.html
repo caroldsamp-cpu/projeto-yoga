@@ -2971,5 +2971,72 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }, { passive: true });
     }
   </script>
+
+  <!-- Exit-Intent Popup -->
+  <div id="exitPopup" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(45,41,38,0.5); backdrop-filter:blur(4px); transition:opacity 0.3s;">
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:var(--bg-primary); border-radius:var(--radius-lg); padding:48px 32px; max-width:440px; width:calc(100% - 32px); text-align:center; box-shadow:0 16px 48px rgba(45,41,38,0.2);">
+      <button onclick="closePopup()" style="position:absolute; top:16px; right:16px; background:none; border:none; cursor:pointer; color:var(--text-secondary); font-size:1.2rem;" aria-label="Fechar">✕</button>
+      <p style="font-family:var(--font-serif); font-size:clamp(1.3rem,4vw,1.7rem); color:var(--text-primary); margin-bottom:12px; line-height:1.3;">Antes de voltar pra correria, respira comigo.</p>
+      <p style="font-size:0.95rem; color:var(--text-secondary); margin-bottom:24px; line-height:1.5;">Preparei uma prática curtinha de respiração pra você sentir no corpo o que palavras não explicam. São só alguns minutos.</p>
+      <form id="popupForm" onsubmit="submitPopup(event)" style="display:flex; flex-direction:column; gap:12px;">
+        <input type="email" id="popupEmail" placeholder="Seu melhor email" required style="font-family:var(--font-sans); font-size:1rem; padding:12px 16px; border:1px solid var(--border); border-radius:var(--radius-btn); background:var(--white); color:var(--text-primary); outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
+        <button type="submit" style="font-family:var(--font-sans); font-size:1rem; font-weight:500; padding:14px; border-radius:var(--radius-btn); border:none; background:var(--accent); color:var(--white); cursor:pointer; transition:transform 0.2s,background 0.2s;" onmouseover="this.style.background='var(--accent-hover)'" onmouseout="this.style.background='var(--accent)'">Quero sentir</button>
+      </form>
+      <p style="font-size:0.8rem; color:#A89888; margin-top:12px; font-style:italic;">Sem spam. Só presença.</p>
+    </div>
+  </div>
+
+  <script>
+    // Exit-Intent Popup
+    var popupShown = false;
+    function showPopup() {
+      if (popupShown || sessionStorage.getItem('popupDismissed')) return;
+      popupShown = true;
+      document.getElementById('exitPopup').style.display = 'block';
+    }
+    function closePopup() {
+      document.getElementById('exitPopup').style.display = 'none';
+      sessionStorage.setItem('popupDismissed', 'true');
+    }
+    // Desktop: mouse leaves viewport
+    document.addEventListener('mouseout', function(e) {
+      if (e.clientY < 10 && !popupShown) showPopup();
+    });
+    // Mobile: back/scroll up gesture after 30s on page
+    var mobileTimer = null;
+    if (window.innerWidth < 768) {
+      mobileTimer = setTimeout(function() {
+        var lastScroll = window.scrollY;
+        window.addEventListener('scroll', function onScroll() {
+          if (window.scrollY < lastScroll - 100 && window.scrollY > 300) {
+            showPopup();
+            window.removeEventListener('scroll', onScroll);
+          }
+          lastScroll = window.scrollY;
+        });
+      }, 30000);
+    }
+    // Submit to Google Forms + redirect
+    function submitPopup(e) {
+      e.preventDefault();
+      var email = document.getElementById('popupEmail').value;
+      if (!email) return;
+      // Send to Google Forms silently
+      var formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdRJqQnovsihfBjU8FL4xbd4Bi1uN70RlxI3FoW4nzRp0ECZQ/formResponse';
+      fetch(formUrl + '?entry.1044917162=' + encodeURIComponent(email) + '&submit=Submit', {
+        method: 'POST',
+        mode: 'no-cors'
+      });
+      // Track event
+      if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+      if (typeof gtag !== 'undefined') gtag('event', 'lead_capture', { method: 'exit_popup' });
+      // Redirect to /respire
+      window.location.href = '/respire';
+    }
+    // Close on backdrop click
+    document.getElementById('exitPopup').addEventListener('click', function(e) {
+      if (e.target === this) closePopup();
+    });
+  </script>
 </body>
 </html>

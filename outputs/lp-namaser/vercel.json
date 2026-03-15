@@ -1,4 +1,7 @@
 {
+  "rewrites": [
+    { "source": "/respire", "destination": "/respire.html" }
+  ],
   "redirects": [
     { "source": "/instagram", "destination": "/?utm_source=instagram&utm_medium=bio", "permanent": false },
     { "source": "/stories", "destination": "/?utm_source=instagram&utm_medium=stories", "permanent": false },
